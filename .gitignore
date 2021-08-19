@@ -1,0 +1,5 @@
+hugo.exe
+_bakkesmod_sdk/
+node_modules/
+public/
+resources/_gen/

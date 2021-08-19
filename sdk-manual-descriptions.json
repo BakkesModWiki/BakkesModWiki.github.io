@@ -1,0 +1,16 @@
+{
+    "Classes": {
+        "AIControllerWrapper": {
+            "Fields": {
+                "DoNothing": "Does Nothing"
+            }
+        },
+        "CanvasWrapper": {
+            "Fields": {
+                "SetPosition": {
+                    "Parameters": ["Sets the position of the canvas"]
+                }
+            }
+        }
+    }
+}
