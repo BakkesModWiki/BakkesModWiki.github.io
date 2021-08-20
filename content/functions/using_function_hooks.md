@@ -1,13 +1,11 @@
 ---
 title: Using Function Hooks
-tags: [Code Snippet, HookEvent]
-permalink: code_snippets_using_function_hooks.html
-folder: Code Snippet
+weight: 1
 ---
 
 Function hooks are a powerful part of BakkesMod. After a function is hooked, any time it is called by Rocket League, your code is called as well. 
 
-There are multiple types of hooks. First are the two simpler ones. `gameWrapper` will be accessible from any point in your code.
+There are multiple types of hooks. First are the two simpler ones. `gameWrapper` is a [GameWrapper](/bakkesmod_api/Classes/Wrappers/GameWrapper/) and will be accessible from any point in your code.
 ```cpp
 gameWrapper->HookEvent("Function TAGame.Car_TA.SetVehicleInput",
   [this](std::string eventName) { 
@@ -39,10 +37,10 @@ gameWrapper->HookEventWithCallerPost<CarWrapper>("Function TAGame.Car_TA.SetVehi
 
 The two WithCaller variants do the same thing, but let you know a bit more about what is using the function
 
-They provide a `caller` value which is obtained from the function's name. After `Function TAGame` there will be a class name ending in `_TA`. If the name matches a wrapper name, you can hook it as that wrapper. `Car_TA` becomes `CarWrapper` for example  
+They provide a `caller` value which is obtained from the function's name. After `Function TAGame` there will be a class name ending in `_TA`. If the name matches a wrapper name, you can hook it as that wrapper. `Car_TA` becomes [CarWrapper](/bakkesmod_api/Classes/Wrappers/GameObject/CarWrapper/) for example  
 They also provide a `void *` pointer. This points at the location of any parameters provided to the function. These aren't well documented, and are hard to guess, so feel free to ask about them if you think you need them
 
-Find functions with the [function scanner](function_scanner.html)
+Find functions with the [function scanner](/functions/function_scanner/)
 
 ---
 Written by ubelhj

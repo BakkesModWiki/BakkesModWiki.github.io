@@ -1,8 +1,5 @@
 ---
 title: Plugin Exclusive Logging
-tags: [Code Snippet]
-permalink: code_snippets_plugin_exclusive_logging.html
-folder: Code Snippet
 ---
 
 Want to see the console logging from just your plugin? Open a new PowerShell window and use this command  

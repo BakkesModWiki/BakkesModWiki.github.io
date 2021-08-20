@@ -1,9 +1,8 @@
 ---
 title: Using HttpWrapper
-tags: [Code Snippet, HTTPWrapper]
-permalink: code_snippets_using_http_wrapper.html
-folder: Code Snippet
 ---
+
+## [HttpWrapper](/bakkesmod_api/Classes/Wrappers/Http/HttpWrapper/)
 
 ## Sending a simple http request with a string body
 ```cpp

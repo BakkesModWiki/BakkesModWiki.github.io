@@ -1,8 +1,5 @@
 ---
 title: How CVars Work
-tags: [Code Snippet, CVarWrapper]
-permalink: code_snippets_how_cvars_work.html
-folder: Code Snippet
 ---
 
 In plugin onLoad(), registerCVar is called and the cvar will have default values

@@ -1,8 +1,5 @@
 ---
 title: Known Playlist IDs
-tags: [Code Snippet, GameSettingPlaylistWrapper]
-permalink: code_snippets_playlist_id.html
-folder: Code Snippet
 ---
 
 All (known) playlist IDs - 2020

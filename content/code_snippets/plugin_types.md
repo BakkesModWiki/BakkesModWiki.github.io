@@ -1,8 +1,5 @@
 ---
 title: Plugin Types
-tags: [Code Snippet]
-permalink: code_snippets_plugin_types.html
-folder: Code Snippet
 ---
 
 All Plugin Types

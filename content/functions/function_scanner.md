@@ -1,7 +1,6 @@
 ---
 title: Function Scanner
-tags: [HookEvent]
-permalink: function_scanner.html
+weight: 2
 ---
 
 Trying to hook an event but don't know what event to use? There's way more events out there than can be documented, so you can find one yourself with the function scanner
@@ -37,7 +36,7 @@ You can select any words you think are relevant and add them to the whitelist. A
 
 ## Hook the Function
 
-When you've found the right function, hook it using `gameWrapper->HookEvent()`. [Details here](code_snippets_using_function_hooks.html)
+When you've found the right function, hook it using `gameWrapper->HookEvent()`. [Details here](/functions/using_function_hooks/)
 
 Every time that function happens, your code will be run. This can be used to know when something important happens (a goal), get pointers to hard-to-find wrappers, or just be used to help you do something on a consistent timer. 
 
