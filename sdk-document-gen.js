@@ -192,7 +192,6 @@ _.each(foundDefs, (defTop, defTopName) => {
         } else if (defTopName === "Constants") {
             content = nunjucks.render("constant.md", itemData);
         } else if (defTopName === "Classes") {
-            console.log(JSON.stringify(itemData));
             content = nunjucks.render("class.md", itemData);
         }
         content = content.replace(/\\{/g, "{").replace(/\\}/g, "}");
