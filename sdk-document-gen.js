@@ -1,4 +1,4 @@
-const refreshLocalSdk = false;
+const refreshLocalSdk = true;
 //------
 
 const fs = require('fs');
@@ -168,7 +168,7 @@ _.each(files, file => {
             let currentPath = hugoBaseSdkPath + [...parentPath, parent].join("/");
             if (!fs.existsSync(currentPath)) {
                 fs.mkdirSync(currentPath);
-                fs.writeFileSync(currentPath + "/_index.md", "---\ngeekdocCollapseSection: true\nweight: 2\n---");
+                fs.writeFileSync(currentPath + "/_index.md", "---\ngeekdocCollapseSection: true\nweight: 2\ngeekdocProtected: true\n---");
             }
             parentPath.push(parent);
         });
@@ -188,7 +188,7 @@ _.each(foundDefs, (defTop, defTopName) => {
             let currentPath = hugoBaseSdkPath + [...parentPath].join("/");
             if (!fs.existsSync(currentPath)) {
                 fs.mkdirSync(currentPath);
-                fs.writeFileSync(currentPath + "/_index.md", "---\ngeekdocCollapseSection: true\nweight: 1\n---");
+                fs.writeFileSync(currentPath + "/_index.md", "---\ngeekdocCollapseSection: true\nweight: 1\ngeekdocProtected: true\n---");
             }
             fullPath = currentPath;
         });
