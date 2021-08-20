@@ -1,3 +1,6 @@
+const refreshLocalSdk = true;
+//------
+
 const fs = require('fs');
 const _ = require('lodash');
 const yaml = require('yaml');
@@ -20,28 +23,6 @@ function drillDescriptions(defs, manualDescLevel) {
         }
     });
 }
-function generateSidebarYml(buildStr, items, level) {
-    level = level || 1;
-
-    _.each(items, (item) => {
-        let currentStr = `${_.repeat("  ", level)}- title: ${item.title}\n`;
-        currentStr += `${_.repeat("  ", level+1)}output: web\n`;
-        if (!_.isUndefined(item["url"])) {
-            currentStr += `${_.repeat("  ", level+1)}url: ${item.url}\n`;
-        }
-        if (level === 1) {
-            currentStr += `${_.repeat("  ", level+1)}folderitems:\n`;
-            currentStr = generateSidebarYml(currentStr, item.subitems, level+1);
-        } else {
-            if (!_.isUndefined(item["subitems"])) {
-                currentStr += `${_.repeat("  ", level+1)}${level % 2 === 0 ? "subfolders" : "subfolderitems"}:\n`;
-                currentStr = generateSidebarYml(currentStr, item.subitems, level+1);
-            }
-        }
-        buildStr += currentStr;
-    })
-    return buildStr;
-}
 function getLinenumberHash(input, index, additionalLineOffset) {
     additionalLineOffset = additionalLineOffset || 0;
 
@@ -50,12 +31,14 @@ function getLinenumberHash(input, index, additionalLineOffset) {
     return `#L${lookAt.split("\n").length+additionalLineOffset}`
 }
 
-// if (fs.existsSync("_bakkesmod_sdk")) {
-//     fs.rmdirSync("_bakkesmod_sdk", {
-//         recursive: true
-//     });
-// }
-// child_process.execSync("git clone https://github.com/bakkesmodorg/BakkesModSDK.git ./_bakkesmod_sdk");
+if (refreshLocalSdk) {
+    if (fs.existsSync("_bakkesmod_sdk")) {
+        fs.rmdirSync("_bakkesmod_sdk", {
+            recursive: true
+        });
+    }
+    child_process.execSync("git clone https://github.com/bakkesmodorg/BakkesModSDK.git ./_bakkesmod_sdk");
+}
 
 let TagsToCreate = {};
 let foundDefs = {
@@ -65,11 +48,7 @@ let foundDefs = {
     Classes: {},
     Types: {},
 };
-let docsSidebar = `entries:
-- title: Docs Sidebar
-  product: BakkesMod API Docs
-  folders:
-`;
+const hugoBaseSdkPath = "content/bakkesmod_api/"
 let docsSidebarArray = [];
 
 let skipFiles = [
@@ -115,14 +94,9 @@ _.each(files, file => {
             });
             foundDefs.Enums[em.groups.EnumName] = {
                 GitHubPath: sdkGithubLink + getLinenumberHash(r, em.index),
+                Parents: ["Enums"],
                 Values: enumValuesMap
             };
-
-            docsSidebarArray.push({
-                parents: ["Enums"],
-                title: em.groups.EnumName,
-                url: `/${sdkLocation.join('_')}_${em.groups.EnumName}.html`
-            });
         });
     }
 
@@ -132,13 +106,9 @@ _.each(files, file => {
         _.each(constantMatches, cm => {
             foundDefs.Constants[cm.groups.ConstName] = {
                 GitHubPath: sdkGithubLink + getLinenumberHash(r, cm.index),
+                Parents: ["Constants"],
                 Value: cm.groups.ConstValue
             };
-            docsSidebarArray.push({
-                parents: ["Constants"],
-                title: cm.groups.ConstName,
-                url: `/${sdkLocation.join('_')}_${cm.groups.ConstName}.html`
-            });
         });
     }
 
@@ -152,6 +122,7 @@ _.each(files, file => {
         let classDefinition = {
             GitHubPath: sdkGithubLink + getLinenumberHash(r, classMatches[0].index),
             SuperClass: classMatches[0].groups.WrapperSuperClass,
+            Parents: ["Classes", ...sdkLocation],
             Fields: {}
         }
 
@@ -176,42 +147,44 @@ _.each(files, file => {
         });
 
         foundDefs.Classes[classMatches[0].groups.WrapperClass] = classDefinition;
-
-        // drillSdkSidebarLocations(docsSidebarObj, sdkLocation, 0, );
-        docsSidebarArray.push({
-            parents: ["Classes", ...sdkLocation],
-            title: classMatches[0].groups.WrapperClass,
-            url: `/${sdkLocation.join('_')}_${classMatches[0].groups.WrapperClass}.html`
-        });
     }
 
     //-- Sidebar
-    let builtSidebar = {subitems: {}};
     _.each(docsSidebarArray, arr => {
-
-        let lastObj = builtSidebar;
+        let parentPath = []
         _.each(arr.parents, (parent, i) => {
-            if (_.isUndefined(lastObj.subitems[parent])) {
-                lastObj.subitems[parent] = {
-                    title: parent,
-                    subitems: {}
-                };
+            let currentPath = hugoBaseSdkPath + [...parentPath, parent].join("/");
+            if (!fs.existsSync(currentPath)) {
+                fs.mkdirSync(currentPath);
+                fs.writeFileSync(currentPath + "/_index.md", "---\ngeekdocCollapseSection: true\nweight: 2\n---");
             }
-            lastObj = lastObj.subitems[parent];
+            parentPath.push(parent);
         });
-        lastObj.subitems[arr.title] = {
-            title: arr.title,
-            url: arr.url,
-        }
     });
-    if (file === "_bakkesmod_sdk/include/bakkesmod/wrappers/UniqueIDWrapper.h") {
-        sidebar = generateSidebarYml(docsSidebar, builtSidebar.subitems);
-        fs.writeFileSync("_data/sidebars/docs_sidebar.yml", sidebar);
-    }
-    // console.log(JSON.stringify(builtSidebar));
 
 });
 drillDescriptions(foundDefs, manualDescriptions);
 fs.writeFileSync("_bakkesmod_sdk_parsed_output.json", JSON.stringify(foundDefs));
 
-console.log(`Generation successful! Took ${((+(Date.now())) - timeStart) / 1000}s`)
+//-- Generate pages
+_.each(foundDefs, defTop => {
+    _.each(defTop, (itemData, itemName) => {
+        let parentPath = [];
+        let fullPath = "";
+        _.each(itemData.Parents, (parent, i) => {
+            parentPath.push(parent);
+            let currentPath = hugoBaseSdkPath + [...parentPath].join("/");
+            if (!fs.existsSync(currentPath)) {
+                fs.mkdirSync(currentPath);
+                fs.writeFileSync(currentPath + "/_index.md", "---\ngeekdocCollapseSection: true\nweight: 1\n---");
+            }
+            fullPath = currentPath;
+        });
+
+        // TODO: Generate Page contents here and insert in place of "test content" below
+        fs.writeFileSync(fullPath + `/${itemName}.md`, `---\ntitle: ${itemName}\nweight: 2\n---\nTest Content`);
+    });
+});
+
+
+console.log(`Generation successful! Took ${((+(Date.now())) - timeStart) / 1000}s`);
