@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sdkgen": "node ./sdk-document-gen.js",
-	"static": "hugo",
-	"run-server": "hugo server -D"
+	"static": "hugo -D",
+	"dev": "hugo server -D"
   },
   "repository": {
     "type": "git",

@@ -1,5 +1,5 @@
 baseURL = "http://localhost"
-title = "Geekdocs"
+title = "BakkesMod Programming Wiki"
 theme = "hugo-geekdoc"
 
 pluralizeListTitles = false
@@ -17,3 +17,9 @@ disablePathToLower = true
   [markup.tableOfContents]
     startLevel = 1
     endLevel = 9
+
+geekdocRepo = "https://github.com/SimpleAOB/BakkesModWiki-Hugo"
+geekdocEditPath = "edit/master/content"
+geekdocSearch = true
+geekdocSearchShowParent = true
+geekdocBackToTop = true
