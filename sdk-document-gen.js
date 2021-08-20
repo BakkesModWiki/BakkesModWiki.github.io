@@ -1,4 +1,4 @@
-const refreshLocalSdk = false;
+const refreshLocalSdk = true;
 //------
 
 const fs = require('fs');
