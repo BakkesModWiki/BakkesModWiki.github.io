@@ -1,8 +1,5 @@
 ---
 title: Setup your installs
-tags: [getting_started]
-permalink: getting_started.html
-folder: plugintutorial
 ---
 
 Trying to get into making plugins for the first time? There's some super useful tools out there! These steps should get you started on the path towards development.

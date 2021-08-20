@@ -1,8 +1,5 @@
 ---
 title: Starting a plugin
-tags: [getting_started]
-permalink: starting_a_plugin.html
-folder: plugintutorial
 ---
 
 It will assume you're using the template as linked in [Setting Up](getting_started.html). You can of course make a plugin without it, but it gives an easier basis to work off of. You can name it anything, but here we'll be using a demo plugin named CoolPlugin
@@ -15,7 +12,7 @@ At the top are two lines that are required for plugins, and allow you to call Ba
 #pragma once
 #include "bakkesmod/plugin/bakkesmodplugin.h"
 ```
-Next is the declaration of your class. Here you describe any functions you will be using. 
+Next is the declaration of your class. Here you describe any functions you will be using.
 `onLoad()` is automatically called by BakkesMod when the plugin is loaded, and `onUnload()` is called when it is unloaded
 ```cpp
 class CoolPlugin: public BakkesMod::Plugin::BakkesModPlugin
@@ -31,7 +28,7 @@ First it includes your header so it can define the functions described above
 #include "pch.h"
 #include "CoolPlugin.h"
 ```
-Next it declares the plugin. The string in "" will be used in the plugin manager to describe the plugin, but it needs to be a short description. Keep it to 1 or two words. You can also define a plugin version, although the template handles that automatically. Finally is the plugin type described in the linked page. If you don't know what it is, just use `PLUGINTYPE_FREEPLAY`. 
+Next it declares the plugin. The string in "" will be used in the plugin manager to describe the plugin, but it needs to be a short description. Keep it to 1 or two words. You can also define a plugin version, although the template handles that automatically. Finally is the plugin type described in the linked page. If you don't know what it is, just use `PLUGINTYPE_FREEPLAY`.
 https://discord.com/channels/862068148328857700/862077132922028083/862388590091960350 TODO REPLACEME
 ```cpp
 BAKKESMOD_PLUGIN(CoolPlugin, "Cool Plugin", plugin_version, PLUGINTYPE_FREEPLAY)
@@ -52,11 +49,11 @@ void CoolPlugin::onUnload() {
 }
 ```
 
-Now you've got a super basic plugin. Hit Build -> Build CoolPlugin or press ctrl + B to finalize the plugin. It will create `CoolPlugin.dll` in a `plugins/` folder next to your plugin source code. It will also move it into your bakkesmod folder if you are using the template. 
+Now you've got a super basic plugin. Hit Build -> Build CoolPlugin or press ctrl + B to finalize the plugin. It will create `CoolPlugin.dll` in a `plugins/` folder next to your plugin source code. It will also move it into your bakkesmod folder if you are using the template.
 
 Now open Rocket League and open the BakkesMod console with f6. Type `plugin load CoolPlugin` and you should see it load and say hello! If you unload it with `plugin unload CoolPlugin` you should see it say goodbye to you :cry:
 
-Next we'll make the plugin actually do something. We'll reverse engineer the `ballontop` command, which puts the ball on top of your car in freeplay. 
+Next we'll make the plugin actually do something. We'll reverse engineer the `ballontop` command, which puts the ball on top of your car in freeplay.
 In `CoolPlugin.h` add a new function
 ```cpp
 class CoolPlugin: public BakkesMod::Plugin::BakkesModPlugin
@@ -106,7 +103,7 @@ Vector carVelocity = car.GetVelocity();
 ball.SetVelocity(carVelocity);
 ```
 
-Next we'll actually move the ball. A Vector is a 3 dimensional point in space. The Z axis is up and down in Rocket League, so we can put the ball above the car by using the car's location and adding distance on the Z axis. 
+Next we'll actually move the ball. A Vector is a 3 dimensional point in space. The Z axis is up and down in Rocket League, so we can put the ball above the car by using the car's location and adding distance on the Z axis.
 ```cpp
 Vector carLocation = car.GetLocation();
 float ballRadius = ball.GetRadius();
@@ -114,7 +111,7 @@ ball.SetLocation(carLocation + Vector{0, 0, ballRadius * 2});
 ```
 
 We've now defined `CoolPlugin::ballOnTop()`
-In full: 
+In full:
 ```cpp
 void CoolPlugin::ballOnTop() {
   if (!gameWrapper->IsInFreeplay()) { return; }
@@ -137,10 +134,10 @@ void CoolPlugin::ballOnTop() {
 
 Now we need to call the function
 
-This can be done with a notifier. These can be called with a console command to activate your code. Here we'll define it as `CoolerBallOnTop` because Bakkes' `ballontop` is for the birds. 
-When it's called, it takes a vector (basically a list) of command arguments that were provided by the command. Here we don't care about those, so they are unused. 
+This can be done with a notifier. These can be called with a console command to activate your code. Here we'll define it as `CoolerBallOnTop` because Bakkes' `ballontop` is for the birds.
+When it's called, it takes a vector (basically a list) of command arguments that were provided by the command. Here we don't care about those, so they are unused.
 The code is called in a lambda `[](){}`. You can just copy the syntax here.
-Next is the notifier description, which does nothing, so it'll be `""`. 
+Next is the notifier description, which does nothing, so it'll be `""`.
 Finally is the permissions, which should usually be `PERMISSION_ALL`. If you want to restrict it you can use the list LINKED HERE
 ```cpp
 cvarManager->registerNotifier("CoolerBallOnTop", [this](std::vector<std::string> args) {
@@ -172,7 +169,7 @@ BAKKESMOD_PLUGIN(CoolPlugin, "Cool Plugin", plugin_version, PLUGINTYPE_FREEPLAY)
 
 void CoolPlugin::onLoad()
 {
-    
+
   cvarManager->log("Hello I'm CoolPlugin B)");
   cvarManager->registerNotifier("CoolerBallOnTop", [this](std::vector<std::string> args) {
     ballOnTop();

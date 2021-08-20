@@ -1,8 +1,5 @@
 ---
 title: Plugin Variables
-tags: [getting_started]
-permalink: plugin_variables.html
-folder: plugintutorial
 ---
 
 Next we will make your plugin alterable by a user. They might want to enable/disable the plugin, change how it acts, and pretty much infinite options. I'll be using a fairly simple plugin I've made as an example. I'll only be focusing on the settings, not the actual code that makes it work.
@@ -33,9 +30,9 @@ A user can use these by typing into the f6 console `cool_enabled 1` to enable co
 Now we've got the CVar. But what do we do with it? There's two good ways to use it. Either we can do something when the value is changed, or we can get the value from the CVar as we use the value
 
 First is `CVarWrapper.addOnValueChanged()`
-This creates a function that is called when the value is changed. Quite simple. The string simply is what the old value was. The CVarWrapper holds the new value.  
-The `[](){}` is called a lambda, and is basically just a helper function. We put `[this]` so we can access our global variables inside the lambda. `(std::string oldValue, CVarWrapper cvar)` are the values passed to the lambda by the `addOnValueChanged` function. Every time the value changes and the lambda is called, the code inside `{}` happens. 
-The most common use is to change the value of a global variable.  
+This creates a function that is called when the value is changed. Quite simple. The string simply is what the old value was. The CVarWrapper holds the new value.
+The `[](){}` is called a lambda, and is basically just a helper function. We put `[this]` so we can access our global variables inside the lambda. `(std::string oldValue, CVarWrapper cvar)` are the values passed to the lambda by the `addOnValueChanged` function. Every time the value changes and the lambda is called, the code inside `{}` happens.
+The most common use is to change the value of a global variable.
 If I had a variable `bool coolEnabled`, I could call `coolEnabled = cvar.getBoolValue();` inside the brackets to change its value
 ```cpp
 cvarManager->registerCvar("cool_enabled", "0", "Enable Cool", true, true, 0, true, 1)
