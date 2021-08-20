@@ -1,5 +1,6 @@
 ---
 title: Setup your installs
+weight: 1
 ---
 
 Trying to get into making plugins for the first time? There's some super useful tools out there! These steps should get you started on the path towards development.

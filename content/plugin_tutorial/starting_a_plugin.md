@@ -1,5 +1,6 @@
 ---
 title: Starting a plugin
+weight: 2
 ---
 
 It will assume you're using the template as linked in [Setting Up](getting_started.html). You can of course make a plugin without it, but it gives an easier basis to work off of. You can name it anything, but here we'll be using a demo plugin named CoolPlugin
