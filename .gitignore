@@ -4,3 +4,7 @@ node_modules/
 public/
 resources/_gen/
 _bakkesmod_sdk_parsed_output.json
+
+# Ignore all generated content except indexes
+content/bakkesmod_api/**/*.*
+# !content/bakkesmod_api/**/_index.md

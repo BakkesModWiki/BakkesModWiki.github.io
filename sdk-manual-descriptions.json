@@ -12,5 +12,8 @@
                 }
             }
         }
+    },
+    "Constants": {
+        "BAKKESMOD_PLUGIN_API_VERSION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac sem mauris. Sed magna mi, scelerisque pharetra congue in, pellentesque sed erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue mollis lectus, sed tincidunt ipsum elementum in. Nullam."
     }
 }
