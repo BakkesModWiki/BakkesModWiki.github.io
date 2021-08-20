@@ -18,8 +18,9 @@ disablePathToLower = true
     startLevel = 1
     endLevel = 9
 
-geekdocRepo = "https://github.com/SimpleAOB/BakkesModWiki-Hugo"
-geekdocEditPath = "edit/master/content"
-geekdocSearch = true
-geekdocSearchShowParent = true
-geekdocBackToTop = true
+[params]
+    geekdocRepo = "https://github.com/SimpleAOB/BakkesModWiki-Hugo"
+    geekdocEditPath = "blob/master/content"
+    geekdocSearch = true
+    geekdocSearchShowParent = true
+    geekdocBackToTop = true
