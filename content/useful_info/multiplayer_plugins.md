@@ -1,7 +1,5 @@
 ---
 title: Multiplayer Plugins
-tags: [Netcode]
-permalink: multiplayer_plugins.html
 ---
 
 Netcode plugins are a powerful way to handle asymmetrical multiplayer plugins. It can allow clients to control the match, when normally only the host can. This is much better described in this video by CinderBlock

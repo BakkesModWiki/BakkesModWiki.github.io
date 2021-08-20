@@ -1,7 +1,5 @@
 ---
 title: Crash Dumps
-tags: [Troubleshooting]
-permalink: crash_dumps.html
 ---
 
 Modding RL is finnicky. You're going to crash the game at some point. This will tell you how to learn from a crash and solve your issue. 
