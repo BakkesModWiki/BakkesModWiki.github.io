@@ -1,4 +1,4 @@
-const refreshLocalSdk = true;
+const refreshLocalSdk = false;
 //------
 
 const fs = require('fs');
@@ -191,6 +191,9 @@ _.each(foundDefs, (defTop, defTopName) => {
             content = nunjucks.render("enum.md", itemData);
         } else if (defTopName === "Constants") {
             content = nunjucks.render("constant.md", itemData);
+        } else if (defTopName === "Classes") {
+            console.log(JSON.stringify(itemData));
+            content = nunjucks.render("class.md", itemData);
         }
         content = content.replace(/\\{/g, "{").replace(/\\}/g, "}");
         fs.writeFileSync(fullPath + `/${itemName}.md`, content);
