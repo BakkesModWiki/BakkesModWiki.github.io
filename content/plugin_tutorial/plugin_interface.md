@@ -5,7 +5,7 @@ weight: 4
 
 This channel will go over creating a user-friendly interface. There's buttons, sliders, checkboxes, dropdowns, and all sorts of options. It also assumes you're using the template, as the template automatically includes the ImGui GUI library we'll be using. It will ignore the fact that there is some commented out code in `CoolPluginGUI.cpp`.
 
-Yet again we have the `CoolPlugin` from [Plugin Variables](plugin-variables.html) and we want to add a button to activate our cooler ball on top, a checkbox to enable cool, and a slider to choose the distance that the ball is placed from your car
+Yet again we have the `CoolPlugin` from [Plugin Variables](/plugin_tutorial/plugin-variables) and we want to add a button to activate our cooler ball on top, a checkbox to enable cool, and a slider to choose the distance that the ball is placed from your car
 
 First we need to extend a class and declare 3 functions in `CoolPlugin.h`
 

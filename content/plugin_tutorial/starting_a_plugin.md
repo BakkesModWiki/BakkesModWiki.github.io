@@ -3,7 +3,7 @@ title: Starting a plugin
 weight: 2
 ---
 
-It will assume you're using the template as linked in [Setting Up](getting_started.html). You can of course make a plugin without it, but it gives an easier basis to work off of. You can name it anything, but here we'll be using a demo plugin named CoolPlugin
+It will assume you're using the template as linked in [Setting Up](/plugin_tutorial/getting_started). You can of course make a plugin without it, but it gives an easier basis to work off of. You can name it anything, but here we'll be using a demo plugin named CoolPlugin
 
 The template has a lot of commented out code that is designed to help you learn how to use the syntax, but is ignored for the purposes of this tutorial
 
@@ -29,8 +29,7 @@ First it includes your header so it can define the functions described above
 #include "pch.h"
 #include "CoolPlugin.h"
 ```
-Next it declares the plugin. The string in "" will be used in the plugin manager to describe the plugin, but it needs to be a short description. Keep it to 1 or two words. You can also define a plugin version, although the template handles that automatically. Finally is the plugin type described in the linked page. If you don't know what it is, just use `PLUGINTYPE_FREEPLAY`.
-https://discord.com/channels/862068148328857700/862077132922028083/862388590091960350 TODO REPLACEME
+Next it declares the plugin. The string in "" will be used in the plugin manager to describe the plugin, but it needs to be a short description. Keep it to 1 or two words. You can also define a plugin version, although the template handles that automatically. Finally is the plugin type described [here](/code_snippets/plugin_types/). If you don't know what it is, just use `PLUGINTYPE_FREEPLAY`.
 ```cpp
 BAKKESMOD_PLUGIN(CoolPlugin, "Cool Plugin", plugin_version, PLUGINTYPE_FREEPLAY)
 ```
@@ -205,4 +204,4 @@ Finally build the plugin with ctrl + b. Then start freeplay, load the plugin wit
 You can find the final code here!
 [https://github.com/ubelhj/BakkesModStarterPlugin/tree/starter-tutorial](https://github.com/ubelhj/BakkesModStarterPlugin/tree/starter-tutorial)
 
-Now what if you wanted a user to be able to modify plugin behavior on the fly? [Next are Plugin Variables](plugin_variables.html)
+Now what if you wanted a user to be able to modify plugin behavior on the fly? [Next are Plugin Variables](/plugin_tutorial/plugin_variables)

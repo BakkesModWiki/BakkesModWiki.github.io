@@ -4,7 +4,7 @@ weight: 3
 ---
 
 Next we will make your plugin alterable by a user. They might want to enable/disable the plugin, change how it acts, and pretty much infinite options. I'll be using a fairly simple plugin I've made as an example. I'll only be focusing on the settings, not the actual code that makes it work.
-We'll continue the CoolPlugin from [Starting a Plugin](starting_a_plugin.html)
+We'll continue the CoolPlugin from [Starting a Plugin](/plugin_tutorial/starting_a_plugin/)
 
 We give the users control with the Console Variables, CVars. They allow a user to set a named variable's value, and for our code to know when those values are changed. These can be used to store string, int, bool, float, or color values
 
@@ -54,4 +54,4 @@ We can put together this knowledge to add to `CoolPlugin.cpp`
 [https://github.com/ubelhj/BakkesModStarterPlugin/blob/plugin-settings/CoolPlugin/CoolPlugin.cpp](https://github.com/ubelhj/BakkesModStarterPlugin/blob/plugin-settings/CoolPlugin/CoolPlugin.cpp)
 
 This isn't enough though. Who want to be changing an integer value with a console command? Gross. What if we had sliders? Checkboxes? Buttons?
-[Plugin Interface](plugin_interface.html)
+[Plugin Interface](/plugin_tutorial/plugin_interface)
