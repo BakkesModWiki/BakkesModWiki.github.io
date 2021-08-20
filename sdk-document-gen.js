@@ -1,4 +1,4 @@
-const refreshLocalSdk = true;
+const refreshLocalSdk = false;
 //------
 
 const fs = require('fs');
@@ -52,6 +52,7 @@ let foundDefs = {
 };
 const hugoBaseSdkPath = "content/bakkesmod_api/"
 let docsSidebarArray = [];
+let pathsMap = {};
 
 let skipFiles = [
     "_bakkesmod_sdk/include/bakkesmod/wrappers/arraywrapper.h"
@@ -100,6 +101,8 @@ _.each(files, file => {
                 Parents: ["Enums"],
                 Values: enumValuesMap
             };
+
+            pathsMap[em.groups.EnumName] = [...foundDefs.Enums[em.groups.EnumName].Parents, em.groups.EnumName].join("/")
         });
     }
 
@@ -113,6 +116,7 @@ _.each(files, file => {
                 Parents: ["Constants"],
                 Value: cm.groups.ConstValue
             };
+            pathsMap[cm.groups.ConstName] = [...foundDefs.Constants[cm.groups.ConstName].Parents, cm.groups.ConstName].join("/")
         });
     }
 
@@ -139,19 +143,22 @@ _.each(files, file => {
                 Parameters: []
             };
             if (cfd.groups.FieldParams.length > 0) {
-                let paramterMatches = [...cfd.groups.FieldParams.matchAll(tokenRegexes.fieldParams.Rgx)]
-                _.each(paramterMatches, pm => {
-                    fieldDefinition.Parameters.push({
-                        Keyword: pm.groups.Keyword,
-                        Type: pm.groups.Type,
-                        Name: pm.groups.Variable
+                _.each(cfd.groups.FieldParams.split(","), fp => {
+                    let paramterMatches = [...fp.matchAll(tokenRegexes.fieldParams.Rgx)]
+                    _.each(paramterMatches, pm => {
+                        fieldDefinition.Parameters.push({
+                            Keyword: pm.groups.Keyword,
+                            Type: pm.groups.Type,
+                            Name: pm.groups.Variable
+                        });
                     });
-                });
+                })
             }
             classDefinition.Fields[cfd.groups.FieldName] = fieldDefinition;
         });
 
         foundDefs.Classes[classMatches[0].groups.WrapperClass] = classDefinition;
+        pathsMap[classMatches[0].groups.WrapperClass] = [...foundDefs.Classes[classMatches[0].groups.WrapperClass].Parents, classMatches[0].groups.WrapperClass].join("/")
     }
 
     //-- Sidebar
@@ -187,6 +194,7 @@ _.each(foundDefs, (defTop, defTopName) => {
         });
 
         let content = "";
+        itemData.PathMap = pathsMap;
         if (defTopName === "Enums") {
             content = nunjucks.render("enum.md", itemData);
         } else if (defTopName === "Constants") {
