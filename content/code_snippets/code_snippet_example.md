@@ -1,4 +1,5 @@
 ---
+title: Code Snippet Example
 weight: 0
 ---
 
