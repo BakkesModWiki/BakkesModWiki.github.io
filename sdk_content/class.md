@@ -17,7 +17,7 @@ Super Class: [{{SuperClass}}](/bakkesmod_api/{{PathMap[SuperClass]}})
 
 {% endif %}
 
-{% for (FieldName, Field) in Fields %}
+{% for FieldName, Field in Fields %}
 ### [{{Field.Type | trim}}]({%if PathMap[Field.Type]%}/bakkesmod_api/{{PathMap[Field.Type]}}{%endif%})&nbsp;{{FieldName | trim}}()
 {%if Field.Description | length > 0 %}{{Field.Description}}{%else%}---{%endif%}
 {% if Field.Parameters | length > 0 %}
