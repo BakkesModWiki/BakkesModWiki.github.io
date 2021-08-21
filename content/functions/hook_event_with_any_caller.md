@@ -19,7 +19,6 @@ void GameWrapper::HookEventWithCaller(std::string eventName,
 ```
 
 And this for Post
-
 ```cpp
 template <typename T, typename std::enable_if<std::is_base_of<ObjectWrapper, T>::value>::type*>
 void GameWrapper::HookEventWithCallerPost(std::string eventName,
