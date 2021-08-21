@@ -21,8 +21,10 @@ jobs:
           hugo-version: 'latest'
           # extended: true
 
-      - name: Build
+      - name: Generate SDK
         run: node ./sdk-document-gen.js
+
+      - name: Build
         run: hugo -D
 
       - name: Deploy
