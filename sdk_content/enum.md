@@ -9,6 +9,6 @@ weight: 2
 ---
 
 {% endif %}
-{% for valueName, valueNumber in Values %}
+{% for in valueName, valueNumber in Values %}
 - {{valueName}} `= ({{valueNumber}})`
 {% endfor %}
