@@ -8,3 +8,4 @@ This is a temporary development repo for the new BakkesMod Programming Wiki!
 1. Generate the SDK documentation by running the command `npm run sdkgen`
 1. Run the dev server with `npm run dev`
 1. Build the static files (found at `./public`) with `npm run static`
+ 
