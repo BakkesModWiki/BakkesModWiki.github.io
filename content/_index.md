@@ -1,6 +1,6 @@
 ---
 title: Welcome to the BakkesMod Programming Wiki!
-description: Geekdoc is a simple Hugo theme for documentations. It is intentionally designed as a fast and lean theme and may not fit the requirements of complex projects. If a more feature-complete theme is required there are a lot of got alternatives out there.
+description: Welcome to the BakkesMod Programming Wiki! Find helpful code to get started and an API reference
 geekdocNav: false
 geekdocAlign: center
 geekdocAnchor: false
