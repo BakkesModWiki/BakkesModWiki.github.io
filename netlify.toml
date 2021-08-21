@@ -1,0 +1,3 @@
+[build]
+publish = "docs/public"
+command = "npm ci && npm sdkgen && hugo -D"
