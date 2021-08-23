@@ -188,8 +188,8 @@ _.each(foundDefs, (defTop, defTopName) => {
             let currentPath = hugoBaseSdkPath + [...parentPath].join("/");
             if (!fs.existsSync(currentPath)) {
                 fs.mkdirSync(currentPath);
-                fs.writeFileSync(currentPath + "/_index.md", "---\ngeekdocCollapseSection: true\nweight: 1\ngeekdocProtected: true\n---");
             }
+            fs.writeFileSync(currentPath + "/_index.md", "---\ngeekdocCollapseSection: true\nweight: 1\ngeekdocProtected: true\n---");
             fullPath = currentPath;
         });
 
