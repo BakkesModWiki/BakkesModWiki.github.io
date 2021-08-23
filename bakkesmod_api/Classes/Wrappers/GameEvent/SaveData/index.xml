@@ -2,15 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>BakkesMod Programming Wiki</title>
-    <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameEvent/SaveData/</link>
+    <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/SaveData/</link>
     <description>Recent content on BakkesMod Programming Wiki</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameEvent/SaveData/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/SaveData/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GameEditorSaveDataWrapper</title>
-      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameEvent/SaveData/GameEditorSaveDataWrapper/</link>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/SaveData/GameEditorSaveDataWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameEvent/SaveData/GameEditorSaveDataWrapper/</guid>
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/SaveData/GameEditorSaveDataWrapper/</guid>
       <description>View Implementation    Super Class: SaveDataWrapper
  UnrealStringWrapper GetLoadedSaveName()     
 TrainingEditorSaveDataWrapper GetTrainingData()     
@@ -21,10 +21,10 @@ void SetPlayerTeamNumber()        Parameter Type Description     newPlayerTeamN
     
     <item>
       <title>SaveDataWrapper</title>
-      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameEvent/SaveData/SaveDataWrapper/</link>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/SaveData/SaveDataWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameEvent/SaveData/SaveDataWrapper/</guid>
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/SaveData/SaveDataWrapper/</guid>
       <description>View Implementation    Super Class: ObjectWrapper
  UnrealStringWrapper GetDirectoryPath()     
 UnrealStringWrapper GetSaveType()     
@@ -36,10 +36,10 @@ void Init()</description>
     
     <item>
       <title>TrainingEditorSaveDataWrapper</title>
-      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameEvent/SaveData/TrainingEditorSaveDataWrapper/</link>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/SaveData/TrainingEditorSaveDataWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameEvent/SaveData/TrainingEditorSaveDataWrapper/</guid>
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/SaveData/TrainingEditorSaveDataWrapper/</guid>
       <description>View Implementation    Super Class: ObjectWrapper
  UnrealStringWrapper GetCode()     
 UnrealStringWrapper GetTM_Name()     

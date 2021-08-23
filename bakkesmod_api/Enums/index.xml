@@ -2,15 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>BakkesMod Programming Wiki</title>
-    <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Enums/</link>
+    <link>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/</link>
     <description>Recent content on BakkesMod Programming Wiki</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Enums/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://bakkesmodwiki.github.io/bakkesmod_api/Enums/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CARBODY</title>
-      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Enums/CARBODY/</link>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/CARBODY/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Enums/CARBODY/</guid>
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/CARBODY/</guid>
       <description>View Implementation   A list of car body IDs. This is really outdated (early 2017?), so you&#39;ll likely need to find or write a new one for any plugins you make. If you make one make a code snippet and we&#39;ll link to it from here
    CAR_BACKFIRE = (21)
   CAR_BREAKOUT = (22)
@@ -20,10 +20,10 @@
     
     <item>
       <title>OnlinePlatform</title>
-      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Enums/OnlinePlatform/</link>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/OnlinePlatform/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Enums/OnlinePlatform/</guid>
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/OnlinePlatform/</guid>
       <description>View Implementation   Ids for platforms players can be playing on
    OnlinePlatform_Unknown = (0)
   OnlinePlatform_Steam = (1)
@@ -40,10 +40,10 @@
     
     <item>
       <title>PRODUCTQUALITY</title>
-      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Enums/PRODUCTQUALITY/</link>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/PRODUCTQUALITY/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Enums/PRODUCTQUALITY/</guid>
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/PRODUCTQUALITY/</guid>
       <description>  View Implementation   Possible item rarities
    Common = (0)
   Uncommon = (1)
@@ -60,10 +60,10 @@
     
     <item>
       <title>ToastType</title>
-      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Enums/ToastType/</link>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/ToastType/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Enums/ToastType/</guid>
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/ToastType/</guid>
       <description>  View Implementation   Possible colors for Toasts.
 ToastType_Info is black, ToastType_OK is green, ToastType_Warning is orange, and ToastType_Error is red
    ToastType_Info = (0)
@@ -75,10 +75,10 @@ ToastType_Info is black, ToastType_OK is green, ToastType_Warning is orange, and
     
     <item>
       <title>TRADEHOLD</title>
-      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Enums/TRADEHOLD/</link>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/TRADEHOLD/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Enums/TRADEHOLD/</guid>
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/TRADEHOLD/</guid>
       <description>  View Implementation     TRADEHOLD_P2P = (-2)
   TRADEHOLD_ALL = (-1)
   TRADEHOLD_NONE = (0)
@@ -87,10 +87,10 @@ ToastType_Info is black, ToastType_OK is green, ToastType_Warning is orange, and
     
     <item>
       <title>UNLOCKMETHOD</title>
-      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Enums/UNLOCKMETHOD/</link>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/UNLOCKMETHOD/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Enums/UNLOCKMETHOD/</guid>
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/UNLOCKMETHOD/</guid>
       <description>  View Implementation   Ways an item can be earned
    Default = (0)
   Drop = (1)

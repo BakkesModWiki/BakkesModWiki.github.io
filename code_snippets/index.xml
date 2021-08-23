@@ -2,15 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Code Snippets on BakkesMod Programming Wiki</title>
-    <link>https://ubelhj.github.io/BakkesModWiki-Hugo/code_snippets/</link>
+    <link>https://bakkesmodwiki.github.io/code_snippets/</link>
     <description>Recent content in Code Snippets on BakkesMod Programming Wiki</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://ubelhj.github.io/BakkesModWiki-Hugo/code_snippets/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://bakkesmodwiki.github.io/code_snippets/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Code Snippet Example</title>
-      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/code_snippets/code_snippet_example/</link>
+      <link>https://bakkesmodwiki.github.io/code_snippets/code_snippet_example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/code_snippets/code_snippet_example/</guid>
+      <guid>https://bakkesmodwiki.github.io/code_snippets/code_snippet_example/</guid>
       <description>If you want to add a new snippet to the page, simply make a code snippet in this folder like this
 Give your snippet a unique name and send the pull request!
 The filename will be the name of the page, with _ replaced with spaces and automatic proper capitalization
@@ -25,19 +25,19 @@ becomes
     
     <item>
       <title>Creating an ImageWrapper</title>
-      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/code_snippets/creating_image_wrapper/</link>
+      <link>https://bakkesmodwiki.github.io/code_snippets/creating_image_wrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/code_snippets/creating_image_wrapper/</guid>
+      <guid>https://bakkesmodwiki.github.io/code_snippets/creating_image_wrapper/</guid>
       <description>Creating an ImageWrapper     You should use some kind of reference type that manages the memory. std::shared_ptr&amp;lt;ImageWrapper&amp;gt; is my recommendation. The constructor takes 3 arguments (2 are optional) The optional arguments are two bools that decide if the core will preload the images for use in the canvas\imgui. The ImageWrapper is a resource managing class. This means that you have to keep this object &amp;ldquo;alive&amp;rdquo; as long as you want to use the image.</description>
     </item>
     
     <item>
       <title>How CVars Work</title>
-      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/code_snippets/how_cvars_work/</link>
+      <link>https://bakkesmodwiki.github.io/code_snippets/how_cvars_work/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/code_snippets/how_cvars_work/</guid>
+      <guid>https://bakkesmodwiki.github.io/code_snippets/how_cvars_work/</guid>
       <description>In plugin onLoad(), registerCVar is called and the cvar will have default values
 cvar values are only changed when a config file is executed, or a console command is fired. It doesn&amp;rsquo;t magically &amp;ldquo;remember&amp;rdquo; values from previous runs or anything.
 On BM startup, it&amp;rsquo;ll execute plugins.cfg first to load all plugins, causing all cvars for these plugins to be created. Then once this is done it will execute config.cfg, which will set the actual saved value.</description>
@@ -45,20 +45,20 @@ On BM startup, it&amp;rsquo;ll execute plugins.cfg first to load all plugins, ca
     
     <item>
       <title>Known Playlist IDs</title>
-      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/code_snippets/playlist_id/</link>
+      <link>https://bakkesmodwiki.github.io/code_snippets/playlist_id/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/code_snippets/playlist_id/</guid>
+      <guid>https://bakkesmodwiki.github.io/code_snippets/playlist_id/</guid>
       <description>All (known) playlist IDs - 2020
 1: Duel 2: Doubles 3: Standard 4: Chaos 6: Private Match 7: Season 8: Exhibition 9: Training 10: Duel (Ranked) 11: Doubles (Ranked) 13: Standard (Ranked) 15: Snow Day 16: Rocket Labs 17: Hoops 18: Rumble 19: Workshop 20: Custom Training Editor 21: Custom Training 22: Tournament Match (Custom) 23: Dropshot 24: Local Match 26: External Match (Ranked) 27: Hoops (Ranked) 28: Rumble (Ranked) 29: Dropshot (Ranked) 30: Snow Day (Ranked) 31: Ghost Hunt 32: Beach Ball 33: Spike Rush 34: Tournament Match (Automatic) 35: Rocket Labs 37: Dropshot Rumble 38: Heatseeker 41: Boomer Ball 43: Heatseeker Doubles 44: Winter Breakaway 46: Gridiron 47: Super Cube 48: TacticalRumble Find the ID of the current playlist with</description>
     </item>
     
     <item>
       <title>Plugin Exclusive Logging</title>
-      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/code_snippets/plugin_exclusive_logging/</link>
+      <link>https://bakkesmodwiki.github.io/code_snippets/plugin_exclusive_logging/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/code_snippets/plugin_exclusive_logging/</guid>
+      <guid>https://bakkesmodwiki.github.io/code_snippets/plugin_exclusive_logging/</guid>
       <description>Want to see the console logging from just your plugin? Open a new PowerShell window and use this command
 It may require git for windows https://gitforwindows.org/
 Get-Content (-join($env:APPDATA, &amp;quot;\bakkesmod\bakkesmod\bakkesmod.log&amp;quot;)) -wait -tail 1 | select-string -pattern &amp;quot;PLUGIN_NAME&amp;quot;
@@ -67,20 +67,20 @@ Get-Content (-join($env:APPDATA, &amp;quot;\bakkesmod\bakkesmod\bakkesmod.log&am
     
     <item>
       <title>Plugin Types</title>
-      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/code_snippets/plugin_types/</link>
+      <link>https://bakkesmodwiki.github.io/code_snippets/plugin_types/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/code_snippets/plugin_types/</guid>
+      <guid>https://bakkesmodwiki.github.io/code_snippets/plugin_types/</guid>
       <description>All Plugin Types
 PLUGINTYPE_FREEPLAY = 0x01, // Does nothing  PLUGINTYPE_CUSTOM_TRAINING = 0x02, // see above  PLUGINTYPE_SPECTATOR = 0x04, // see above  PLUGINTYPE_BOTAI = 0x08, // see above  PLUGINTYPE_REPLAY = 0x10, // see above  PLUGINTYPE_THREADED = 0x20, // OnLoad is called in it&amp;#39;s own thread  PLUGINTYPE_THREADEDUNLOAD = 0x40 // Unload is called in it&amp;#39;s own thread </description>
     </item>
     
     <item>
       <title>Toasts</title>
-      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/code_snippets/toasts/</link>
+      <link>https://bakkesmodwiki.github.io/code_snippets/toasts/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/code_snippets/toasts/</guid>
+      <guid>https://bakkesmodwiki.github.io/code_snippets/toasts/</guid>
       <description>Toasts are cool little popups that show on the top right of your game
 These are useful for quick notifications that you want to disappear quickly
 First you need to enable them in f2 - Misc - Enable notifications
@@ -91,10 +91,10 @@ Make a toast pop up with GameWrapper.</description>
     
     <item>
       <title>Using HttpWrapper</title>
-      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/code_snippets/using_http_wrapper/</link>
+      <link>https://bakkesmodwiki.github.io/code_snippets/using_http_wrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/code_snippets/using_http_wrapper/</guid>
+      <guid>https://bakkesmodwiki.github.io/code_snippets/using_http_wrapper/</guid>
       <description>HttpWrapper    Sending a simple http request with a string body    CurlRequest req; req.url = &amp;#34;https://httpbin.org/anything&amp;#34;; req.body = &amp;#34;testing with body&amp;#34;; LOG(&amp;#34;sending body request&amp;#34;); HttpWrapper::SendCurlRequest(req, [this](int code, std::string result) { LOG(&amp;#34;Body result{}&amp;#34;, result); }); Perform an HTTP/S JSON request    CurlRequest req; req.url = &amp;#34;https://httpbin.org/anything&amp;#34;; req.body = R&amp;#34;T({ &amp;#34;userId&amp;#34;: 1, &amp;#34;id&amp;#34;: 1, &amp;#34;title&amp;#34;: &amp;#34;delectus aut autem&amp;#34;, &amp;#34;completed&amp;#34;: false })T&amp;#34;; HttpWrapper::SendCurlJsonRequest(req, [this](int code, std::string result) { LOG(&amp;#34;Json result{}&amp;#34;, result); }); Sending a file over HTTP/S    { CurlRequest req; req.</description>
     </item>
     

@@ -2,15 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>BakkesMod Programming Wiki</title>
-    <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/</link>
+    <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/</link>
     <description>Recent content on BakkesMod Programming Wiki</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>BallWrapper</title>
-      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/BallWrapper/</link>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/BallWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/BallWrapper/</guid>
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/BallWrapper/</guid>
       <description>View Implementation    Super Class: RBActorWrapper
  float GetLastTouchTime()     
 FXActorWrapper GetEndOfGameFXArchetype()     
@@ -21,10 +21,10 @@ void SetbAllowPlayerExplosionOverride()        Parameter Type Description     n
     
     <item>
       <title>BaseCameraWrapper</title>
-      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/BaseCameraWrapper/</link>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/BaseCameraWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/BaseCameraWrapper/</guid>
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/BaseCameraWrapper/</guid>
       <description>View Implementation    Super Class: ActorWrapper
  float GetDefaultFOV()     
 void SetDefaultFOV()        Parameter Type Description     newDefaultFOV  float &amp;mdash;    
@@ -34,10 +34,10 @@ void SetbLockedFOV()        Parameter Type Description     newbLockedFOV unsign
     
     <item>
       <title>BoostPickupWrapper</title>
-      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/BoostPickupWrapper/</link>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/BoostPickupWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/BoostPickupWrapper/</guid>
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/BoostPickupWrapper/</guid>
       <description>View Implementation    Super Class: VehiclePickupWrapper
  float GetBoostAmount()     
 void SetBoostAmount()        Parameter Type Description     newBoostAmount  float &amp;mdash;    
@@ -47,10 +47,10 @@ void SetBoostType()        Parameter Type Description     newBoostType unsigned
     
     <item>
       <title>CameraWrapper</title>
-      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/CameraWrapper/</link>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CameraWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/CameraWrapper/</guid>
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CameraWrapper/</guid>
       <description>View Implementation    Super Class: CameraXWrapper
  Vector GetLocation()     
 void SetLocation()        Parameter Type Description     location  Vector &amp;mdash;    
@@ -60,10 +60,10 @@ void SetRotation()        Parameter Type Description     rotation  Rotator &am
     
     <item>
       <title>CameraXWrapper</title>
-      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/CameraXWrapper/</link>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CameraXWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/CameraXWrapper/</guid>
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CameraXWrapper/</guid>
       <description>View Implementation    Super Class: BaseCameraWrapper
  Rotator GetPCDeltaRotation()     
 void SetPCDeltaRotation()        Parameter Type Description     newPCDeltaRotation  Rotator &amp;mdash;    
@@ -73,10 +73,10 @@ void SetOldControllerRotation()        Parameter Type Description     newOldCon
     
     <item>
       <title>CarWrapper</title>
-      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/CarWrapper/</link>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CarWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/CarWrapper/</guid>
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CarWrapper/</guid>
       <description>View Implementation    Super Class: VehicleWrapper
  bool IsBoostCheap()     
 void SetBoostCheap()        Parameter Type Description     b  bool &amp;mdash;    
@@ -86,10 +86,10 @@ void ForceBoost()        Parameter Type Description     force  bool &amp;mdash
     
     <item>
       <title>ClubDetailsWrapper</title>
-      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/ClubDetailsWrapper/</link>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/ClubDetailsWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/ClubDetailsWrapper/</guid>
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/ClubDetailsWrapper/</guid>
       <description>View Implementation    Super Class: ClubSettingsWrapper
  UniqueIDWrapper GetUniqueID()     
 UnrealStringWrapper GetName()     
@@ -103,10 +103,10 @@ StructArrayWrapper&amp;lt;ClubMember&amp;gt; GetMembers()</description>
     
     <item>
       <title>ClubSettingsWrapper</title>
-      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/ClubSettingsWrapper/</link>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/ClubSettingsWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/ClubSettingsWrapper/</guid>
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/ClubSettingsWrapper/</guid>
       <description>View Implementation    Super Class: ObjectWrapper
  UnrealStringWrapper GetClubName()     
 UnrealStringWrapper GetClubTag()     
@@ -116,10 +116,10 @@ int GetAccentColor()</description>
     
     <item>
       <title>FXActorWrapper</title>
-      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/FXActorWrapper/</link>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/FXActorWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/FXActorWrapper/</guid>
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/FXActorWrapper/</guid>
       <description>View Implementation    Super Class: ActorWrapper
  unsigned long GetbDeactivateWhenOwnerDestroyed()     
 void SetbDeactivateWhenOwnerDestroyed()        Parameter Type Description     newbDeactivateWhenOwnerDestroyed unsigned long &amp;mdash;    
@@ -129,10 +129,10 @@ void SetbAllowShadowCasting()        Parameter Type Description     newbAllowSh
     
     <item>
       <title>GoalWrapper</title>
-      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/GoalWrapper/</link>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/GoalWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/GoalWrapper/</guid>
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/GoalWrapper/</guid>
       <description>View Implementation    Super Class: ObjectWrapper
  ActorWrapper GetGoalOrientation()     
 void SetGoalOrientation()        Parameter Type Description     newGoalOrientation  ActorWrapper &amp;mdash;    
@@ -143,10 +143,10 @@ void SetTeamNum()        Parameter Type Description     newTeamNum unsigned ch
     
     <item>
       <title>PhysicalMaterialPropertyWrapper</title>
-      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/PhysicalMaterialPropertyWrapper/</link>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PhysicalMaterialPropertyWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/PhysicalMaterialPropertyWrapper/</guid>
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PhysicalMaterialPropertyWrapper/</guid>
       <description>View Implementation    Super Class: ObjectWrapper
  float GetTireFrictionScale()     
 void SetTireFrictionScale()        Parameter Type Description     newTireFrictionScale  float &amp;mdash;    
@@ -156,10 +156,10 @@ void SetbStickyWheels()        Parameter Type Description     newbStickyWheels 
     
     <item>
       <title>PlayerReplicationInfoWrapper</title>
-      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/PlayerReplicationInfoWrapper/</link>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PlayerReplicationInfoWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/PlayerReplicationInfoWrapper/</guid>
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PlayerReplicationInfoWrapper/</guid>
       <description>View Implementation    Super Class: ActorWrapper
  OnlinePlatform GetPlatform()     
 int GetScore()     
@@ -170,10 +170,10 @@ void SetDeaths()        Parameter Type Description     newDeaths  int &amp;mda
     
     <item>
       <title>PriWrapper</title>
-      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/PriWrapper/</link>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PriWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/PriWrapper/</guid>
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PriWrapper/</guid>
       <description>View Implementation    Super Class: PriXWrapper
  int GetMatchScore()     
 void SetMatchScore()        Parameter Type Description     newMatchScore  int &amp;mdash;    
@@ -183,10 +183,10 @@ void SetMatchGoals()        Parameter Type Description     newMatchGoals  int 
     
     <item>
       <title>PriXWrapper</title>
-      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/PriXWrapper/</link>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PriXWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/PriXWrapper/</guid>
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PriXWrapper/</guid>
       <description>View Implementation    Super Class: PlayerReplicationInfoWrapper
  void eventDestroyed()     
 void OnUniqueIdChanged()     
@@ -199,10 +199,10 @@ void SetPlayerTeam()        Parameter Type Description     NewTeam  TeamInfoWr
     
     <item>
       <title>RBActorWrapper</title>
-      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/RBActorWrapper/</link>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RBActorWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/RBActorWrapper/</guid>
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RBActorWrapper/</guid>
       <description>View Implementation    Super Class: ActorWrapper
  float GetMaxLinearSpeed()     
 void SetMaxLinearSpeed()        Parameter Type Description     newMaxLinearSpeed  float &amp;mdash;    
@@ -212,10 +212,10 @@ void SetMaxAngularSpeed()        Parameter Type Description     newMaxAngularSp
     
     <item>
       <title>TeamInfoWrapper</title>
-      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/TeamInfoWrapper/</link>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/TeamInfoWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/TeamInfoWrapper/</guid>
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/TeamInfoWrapper/</guid>
       <description>View Implementation    Super Class: ActorWrapper
  UnrealStringWrapper GetTeamName()     
 int GetSize()     
@@ -226,10 +226,10 @@ void SetScore()        Parameter Type Description     newScore  int &amp;mdash
     
     <item>
       <title>TeamWrapper</title>
-      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/TeamWrapper/</link>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/TeamWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/TeamWrapper/</guid>
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/TeamWrapper/</guid>
       <description>View Implementation    Super Class: TeamInfoWrapper
  LinearColor GetPrimaryColor()     
 LinearColor GetSecondaryColor()     
@@ -241,10 +241,10 @@ void SetColorBlindFontColor()        Parameter Type Description     newColorBli
     
     <item>
       <title>VehiclePickupWrapper</title>
-      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/VehiclePickupWrapper/</link>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/VehiclePickupWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/VehiclePickupWrapper/</guid>
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/VehiclePickupWrapper/</guid>
       <description>View Implementation    Super Class: ActorWrapper
  float GetRespawnDelay()     
 void SetRespawnDelay()        Parameter Type Description     newRespawnDelay  float &amp;mdash;    
@@ -254,10 +254,10 @@ void SetFXActorArchetype()        Parameter Type Description     newFXActorArch
     
     <item>
       <title>VehicleWrapper</title>
-      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/VehicleWrapper/</link>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/VehicleWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/VehicleWrapper/</guid>
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/VehicleWrapper/</guid>
       <description>View Implementation    Super Class: RBActorWrapper
  unsigned long GetbCanJump()     
 void SetbCanJump()        Parameter Type Description     newbCanJump unsigned long &amp;mdash;    
