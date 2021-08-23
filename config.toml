@@ -24,4 +24,4 @@ disablePathToLower = true
     geekdocSearch = true
     geekdocSearchShowParent = true
     geekdocBackToTop = true
-    geekdocOverwriteHTMLBase = true
+    relativeURLs = true
