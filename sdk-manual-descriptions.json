@@ -11,6 +11,14 @@
                     "Parameters": ["Sets the position of the canvas"]
                 }
             }
+        },
+        "BallWrapper": {
+            "Description": "Any ball in the match. There can be more than one!\n The best way to get the ball is by getting a [ServerWrapper](/bakkesmod_api/Classes/Wrappers/GameEvent/ServerWrapper) and calling [GetGameBalls\\(\\)](/bakkesmod_api/Classes/Wrappers/GameEvent/ServerWrapper/#arraywrapperltballwrappergtnbspgetgameballs)",
+            "Fields": {
+                "SetHitTeamNum": {
+                    "Parameters": ["Sets the ball to be touched by a team"]
+                }
+            }
         }
     },
     "Constants": {
