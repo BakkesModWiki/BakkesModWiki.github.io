@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BakkesMod Programming Wiki</title>
+    <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/</link>
+    <description>Recent content on BakkesMod Programming Wiki</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AIControllerWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/AIControllerWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/AIControllerWrapper/</guid>
+      <description>View Implementation    Super Class: ControllerWrapper
+ void DoNothing()    Does Nothing</description>
+    </item>
+    
+    <item>
+      <title>CanvasWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/CanvasWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/CanvasWrapper/</guid>
+      <description>View Implementation    void SetPosition()        Parameter Type Description     pos  Vector2 Sets the position of the canvas    
+Vector2F GetPositionFloat()     
+void SetColor()        Parameter Type Description     color  LinearColor &amp;mdash;    
+LinearColor GetColor()</description>
+    </item>
+    
+    <item>
+      <title>CareerStatsWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/CareerStatsWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/CareerStatsWrapper/</guid>
+      <description>View Implementation    _NODISCARD static std::vector&amp;lt;StatValue&amp;gt; GetStatValues()</description>
+    </item>
+    
+    <item>
+      <title>ControllerWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/ControllerWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/ControllerWrapper/</guid>
+      <description>View Implementation    Super Class: ActorWrapper
+ PlayerReplicationInfoWrapper GetPlayerReplicationInfo()</description>
+    </item>
+    
+    <item>
+      <title>CVarManagerWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/CVarManagerWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/CVarManagerWrapper/</guid>
+      <description>View Implementation    public: CVarManagerWrapper()     
+void executeCommand()     
+void registerNotifier()     
+bool removeNotifier()     
+CVarWrapper registerCvar()     
+bool removeCvar()     
+void log()     
+CVarWrapper getCvar()     
+std::string getBindStringForKey()</description>
+    </item>
+    
+    <item>
+      <title>CVarWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/CVarWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/CVarWrapper/</guid>
+      <description>View Implementation    public: CVarWrapper()     
+std::string getCVarName()     
+int getIntValue()     
+float getFloatValue()     
+bool getBoolValue()     
+LinearColor getColorValue()     
+std::string getStringValue()     
+std::string getDescription()     
+const std::string GetDefaultValue()</description>
+    </item>
+    
+    <item>
+      <title>GameWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameWrapper/</guid>
+      <description>View Implementation    GameWrapper(std::uintptr_t mem, long pluginType, std::type_index idx); GameWrapper()     
+bool IsInGame()     
+bool IsInOnlineGame()     
+bool IsInFreeplay()     
+bool IsInReplay()     
+bool IsInCustomTraining()     
+bool IsSpectatingInOnlineGame()     
+bool IsPaused()     
+bool IsUsingEpicVersion()</description>
+    </item>
+    
+    <item>
+      <title>GuiManagerWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GuiManagerWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GuiManagerWrapper/</guid>
+      <description>View Implementation    Super Class: ObjectWrapper
+ void* GetImGuiStyle()     
+std::tuple&amp;lt;int, ImFont*&amp;gt; LoadFont()     
+ImFont* GetFont()</description>
+    </item>
+    
+    <item>
+      <title>ImageWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/ImageWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/ImageWrapper/</guid>
+      <description>View Implementation    explicit ImageWrapper()     
+bool LoadForCanvas()     
+bool IsLoadedForCanvas()     
+void* GetCanvasTex()     
+void LoadForImGui()     
+bool IsLoadedForImGui()     
+void* GetImGuiTex()     
+std::string GetPath()     
+std::filesystem::path GetPathFs()</description>
+    </item>
+    
+    <item>
+      <title>MMRWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/MMRWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/MMRWrapper/</guid>
+      <description>View Implementation    Super Class: ObjectWrapper
+ explicit MMRNotifierToken()     
+public: CONSTRUCTORS()     
+bool IsSyncing()        Parameter Type Description     playerID  SteamID &amp;mdash;    
+bool IsSynced()        Parameter Type Description     playerID  SteamID &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>PluginManagerWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/PluginManagerWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/PluginManagerWrapper/</guid>
+      <description>View Implementation    Super Class: ObjectWrapper
+ public: CONSTRUCTORS()     
+std::vector&amp;lt;std::shared_ptr&amp;lt;BakkesMod::Plugin::LoadedPlugin&amp;gt;&amp;gt;* GetLoadedPlugins()</description>
+    </item>
+    
+    <item>
+      <title>ReplayServerWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/ReplayServerWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/ReplayServerWrapper/</guid>
+      <description>View Implementation    Super Class: ServerWrapper
+ public: ReplayServerWrapper()     
+ActorWrapper GetViewTarget()     
+ReplayWrapper GetReplay()     
+float GetReplayTimeElapsed()     
+int GetReplayFPS()     
+int GetCurrentReplayFrame()     
+void AddKeyFrame()        Parameter Type Description     frame  int &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>ReplayWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/ReplayWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/ReplayWrapper/</guid>
+      <description>View Implementation    Super Class: ServerWrapper
+ public: ReplayWrapper()     
+ActorWrapper GetViewTarget()     
+float GetReplayTimeElapsed()     
+int GetReplayFPS()     
+int GetCurrentReplayFrame()     
+void AddKeyFrame()        Parameter Type Description     frame  int &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>SettingsWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/SettingsWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/SettingsWrapper/</guid>
+      <description>View Implementation    ProfileCameraSettings GetCameraSettings()     
+CameraSave GetCameraSaveSettings()     
+std::map&amp;lt;std::string, std::string&amp;gt; GetPCBindings()     
+std::map&amp;lt;std::string, std::string&amp;gt; GetGamepadBindings()     
+std::vector&amp;lt;std::pair&amp;lt;std::string, std::string&amp;gt;&amp;gt; GetAllPCBindings()     
+std::vector&amp;lt;std::pair&amp;lt;std::string, std::string&amp;gt;&amp;gt; GetAllGamepadBindings()     
+GamepadSettings GetGamepadSettings()     
+VideoSettings GetVideoSettings()</description>
+    </item>
+    
+    <item>
+      <title>StructArrayWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/StructArrayWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/StructArrayWrapper/</guid>
+      <description>View Implementation    public: StructArrayWrapper()     
+int Count()     
+T Get()        Parameter Type Description     index  int &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>UniqueIDWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/UniqueIDWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/UniqueIDWrapper/</guid>
+      <description>View Implementation    UniqueIDWrapper(); UniqueIDWrapper()     
+static UniqueIDWrapper FromEpicAccountID()</description>
+    </item>
+    
+  </channel>
+</rss>

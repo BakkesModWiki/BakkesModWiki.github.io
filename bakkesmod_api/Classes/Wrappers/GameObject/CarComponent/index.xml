@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BakkesMod Programming Wiki</title>
+    <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/</link>
+    <description>Recent content on BakkesMod Programming Wiki</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AirControlComponentWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/AirControlComponentWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/AirControlComponentWrapper/</guid>
+      <description>View Implementation    Super Class: CarComponentWrapper
+ Rotator GetAirTorque()     
+void SetAirTorque()        Parameter Type Description     newAirTorque  Rotator &amp;mdash;    
+Rotator GetAirDamping()     
+void SetAirDamping()        Parameter Type Description     newAirDamping  Rotator &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>BoostWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/BoostWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/BoostWrapper/</guid>
+      <description>View Implementation    Super Class: CarComponentWrapper
+ float GetBoostConsumptionRate()     
+void SetBoostConsumptionRate()        Parameter Type Description     newBoostConsumptionRate  float &amp;mdash;    
+float GetMaxBoostAmount()     
+void SetMaxBoostAmount()        Parameter Type Description     newMaxBoostAmount  float &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>CarComponentWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/CarComponentWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/CarComponentWrapper/</guid>
+      <description>View Implementation    Super Class: ActorWrapper
+ FXActorWrapper GetFXActorArchetype()     
+void SetFXActorArchetype()        Parameter Type Description     newFXActorArchetype  FXActorWrapper &amp;mdash;    
+unsigned long GetbDisabled()     
+void SetbDisabled()        Parameter Type Description     newbDisabled unsigned long &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>DodgeComponentWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/DodgeComponentWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/DodgeComponentWrapper/</guid>
+      <description>View Implementation    Super Class: CarComponentWrapper
+ float GetDodgeInputThreshold()     
+void SetDodgeInputThreshold()        Parameter Type Description     newDodgeInputThreshold  float &amp;mdash;    
+float GetSideDodgeImpulse()     
+void SetSideDodgeImpulse()        Parameter Type Description     newSideDodgeImpulse  float &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>DoubleJumpComponentWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/DoubleJumpComponentWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/DoubleJumpComponentWrapper/</guid>
+      <description>View Implementation    Super Class: CarComponentWrapper
+ void SetJumpImpulse()        Parameter Type Description     newJumpImpulse  float &amp;mdash;    
+float GetImpulseScale()     
+void SetImpulseScale()        Parameter Type Description     newImpulseScale  float &amp;mdash;    
+void ApplyForces()        Parameter Type Description     ActiveTime  float &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>FlipCarComponentWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/FlipCarComponentWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/FlipCarComponentWrapper/</guid>
+      <description>View Implementation    Super Class: CarComponentWrapper
+ float GetFlipCarImpulse()     
+void SetFlipCarImpulse()        Parameter Type Description     newFlipCarImpulse  float &amp;mdash;    
+float GetFlipCarTorque()     
+void SetFlipCarTorque()        Parameter Type Description     newFlipCarTorque  float &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>JumpComponentWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/JumpComponentWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/JumpComponentWrapper/</guid>
+      <description>View Implementation    Super Class: CarComponentWrapper
+ float GetMinJumpTime()     
+void SetMinJumpTime()        Parameter Type Description     newMinJumpTime  float &amp;mdash;    
+float GetJumpImpulse()     
+void SetJumpImpulse()        Parameter Type Description     newJumpImpulse  float &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>PrimitiveComponentWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/PrimitiveComponentWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/PrimitiveComponentWrapper/</guid>
+      <description>View Implementation    Super Class: ObjectWrapper
+ unsigned char GetRBChannel()     
+void SetRBChannel()        Parameter Type Description     newRBChannel unsigned char &amp;mdash;    
+unsigned char GetRBDominanceGroup()     
+void SetRBDominanceGroup()        Parameter Type Description     newRBDominanceGroup unsigned char &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>VehicleSimWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/VehicleSimWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/VehicleSimWrapper/</guid>
+      <description>View Implementation    Super Class: ObjectWrapper
+ ArrayWrapper&amp;lt;WheelWrapper&amp;gt; GetWheels()     
+float GetDriveTorque()     
+void SetDriveTorque()        Parameter Type Description     newDriveTorque  float &amp;mdash;    
+float GetBrakeTorque()     
+void SetBrakeTorque()        Parameter Type Description     newBrakeTorque  float &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>WheelWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/WheelWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/WheelWrapper/</guid>
+      <description>View Implementation    Super Class: ObjectWrapper
+ float GetSteerFactor()     
+void SetSteerFactor()        Parameter Type Description     newSteerFactor  float &amp;mdash;    
+float GetWheelRadius()     
+void SetWheelRadius()        Parameter Type Description     newWheelRadius  float &amp;mdash;</description>
+    </item>
+    
+  </channel>
+</rss>

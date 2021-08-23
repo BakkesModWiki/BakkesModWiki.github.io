@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Useful Info on BakkesMod Programming Wiki</title>
+    <link>https://ubelhj.github.io/BakkesModWiki-Hugo/useful_info/</link>
+    <description>Recent content in Useful Info on BakkesMod Programming Wiki</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://ubelhj.github.io/BakkesModWiki-Hugo/useful_info/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Crash Dumps</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/useful_info/crash_dumps/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/useful_info/crash_dumps/</guid>
+      <description>Modding RL is finnicky. You&amp;rsquo;re going to crash the game at some point. This will tell you how to learn from a crash and solve your issue.
+Crashes are often logged in .dmp files. They are found at My Documents/My Games/rocketleague/TAGame/Logs
+Unfortunately sometimes there is no .dmp file. That often means you crashed in a non-game thread, like rendering or websockets. For those you might just need to do some logging to find out where you crashed</description>
+    </item>
+    
+    <item>
+      <title>Multiplayer Plugins</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/useful_info/multiplayer_plugins/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/useful_info/multiplayer_plugins/</guid>
+      <description>Netcode plugins are a powerful way to handle asymmetrical multiplayer plugins. It can allow clients to control the match, when normally only the host can. This is much better described in this video by CinderBlock
+https://youtu.be/jyFuN8k2uIs
+If you want to make your own netcode plugin, there&amp;rsquo;s a template for it just like normal plugins. It does all the setup shown in the above video automatically. Follow the README to install it</description>
+    </item>
+    
+    <item>
+      <title>Other Languages</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/useful_info/other_languages/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/useful_info/other_languages/</guid>
+      <description>There&amp;rsquo;s a couple super useful libraries that let you write plugins in other programming languages. We can&amp;rsquo;t really guarantee any tutorials in this server as we don&amp;rsquo;t have anyone with much experience in them. If you use them feel free to add help and make a pull request. You&amp;rsquo;re still welcome to ask for help with them in the discord, but most people here use the standard C++ library and it may be hard to get specific help</description>
+    </item>
+    
+    <item>
+      <title>Troubleshooting Bakkesmod</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/useful_info/troubleshooting_bakkesmod/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/useful_info/troubleshooting_bakkesmod/</guid>
+      <description>Made it here because your BakkesMod isn&amp;rsquo;t working? No worries, check this other wiki here
+https://bakkesmod.fandom.com/wiki/Troubleshooting</description>
+    </item>
+    
+    <item>
+      <title>Useful Links</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/useful_info/useful_links/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/useful_info/useful_links/</guid>
+      <description>Here&amp;rsquo;s some links that we couldn&amp;rsquo;t find a good place for
+Creating a .set file https://bakkesmod.fandom.com/wiki/Plugin_settings_files
+ImGui demo https://pthom.github.io/imgui_manual_online/manual/imgui_manual.html
+ImGui builder program https://github.com/Code-Building/ImGuiBuilder
+Useful game values (map size, boost locations, etc.) https://github.com/RLBot/RLBot/wiki/Useful-Game-Values
+UDK site for canvas. The BM CanvasWrapper has some of these features https://docs.unrealengine.com/udk/Three/CanvasTechnicalGuide.html
+CanvasWrapper library for improved tools https://github.com/CinderBlocc/RenderingTools</description>
+    </item>
+    
+  </channel>
+</rss>

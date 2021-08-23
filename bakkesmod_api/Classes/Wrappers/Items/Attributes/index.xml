@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BakkesMod Programming Wiki</title>
+    <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/Items/Attributes/</link>
+    <description>Recent content on BakkesMod Programming Wiki</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/Items/Attributes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ProductAttribute_AnimatedSkinLabelWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_AnimatedSkinLabelWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_AnimatedSkinLabelWrapper/</guid>
+      <description>View Implementation    Super Class: ProductAttributeWrapper
+ UnrealStringWrapper GetAnimatedLabel()</description>
+    </item>
+    
+    <item>
+      <title>ProductAttribute_BlueprintCostWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_BlueprintCostWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_BlueprintCostWrapper/</guid>
+      <description>View Implementation    Super Class: ProductAttributeWrapper
+ int GetCost()</description>
+    </item>
+    
+    <item>
+      <title>ProductAttribute_BlueprintWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_BlueprintWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_BlueprintWrapper/</guid>
+      <description>View Implementation    Super Class: ProductAttributeWrapper
+ int GetProductID()     
+int GetCachedBlueprintSeriesID()     
+UnrealStringWrapper GetSortLabel()</description>
+    </item>
+    
+    <item>
+      <title>ProductAttribute_BodyCompatibilityWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_BodyCompatibilityWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_BodyCompatibilityWrapper/</guid>
+      <description>View Implementation    Super Class: ProductAttributeWrapper
+ ArrayWrapper&amp;lt;ProductWrapper&amp;gt; GetCompatibleBodies()</description>
+    </item>
+    
+    <item>
+      <title>ProductAttribute_CertifiedWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_CertifiedWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_CertifiedWrapper/</guid>
+      <description>View Implementation    Super Class: ProductAttributeWrapper
+ std::string GetValueKeyName()     
+int GetStatId()     
+int GetStatValue()     
+UnrealStringWrapper GetSortLabel()     
+UnrealStringWrapper GetDescription()     
+UnrealStringWrapper GetRankLabel()     
+int GetRank()</description>
+    </item>
+    
+    <item>
+      <title>ProductAttribute_CurrencyWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_CurrencyWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_CurrencyWrapper/</guid>
+      <description>View Implementation    Super Class: ProductAttributeWrapper
+ int GetCurrencyID()     
+UnrealStringWrapper GetSortLabel()</description>
+    </item>
+    
+    <item>
+      <title>ProductAttribute_PaintedWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_PaintedWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_PaintedWrapper/</guid>
+      <description>View Implementation    Super Class: ProductAttributeWrapper
+ int GetPaintID()     
+UnrealStringWrapper GetSortLabel()</description>
+    </item>
+    
+    <item>
+      <title>ProductAttribute_QualityWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_QualityWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_QualityWrapper/</guid>
+      <description>View Implementation    Super Class: ProductAttributeWrapper
+ unsigned char GetQuality()     
+UnrealStringWrapper ProductQualityToString()        Parameter Type Description     InQuality unsigned char &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>ProductAttribute_SpecialEditionSettingsWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_SpecialEditionSettingsWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_SpecialEditionSettingsWrapper/</guid>
+      <description>View Implementation    Super Class: ProductAttributeWrapper
+ std::vector&amp;lt;SpecialEdition&amp;gt; GetEditions()</description>
+    </item>
+    
+    <item>
+      <title>ProductAttribute_SpecialEditionWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_SpecialEditionWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_SpecialEditionWrapper/</guid>
+      <description>View Implementation    Super Class: ProductAttributeWrapper
+ int GetEditionID()     
+UnrealStringWrapper GetSortLabel()     
+int GetOverrideProductID()        Parameter Type Description     ProductID  int &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>ProductAttribute_TeamEditionUploadWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_TeamEditionUploadWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_TeamEditionUploadWrapper/</guid>
+      <description>View Implementation    Super Class: ProductAttributeWrapper
+ ArrayWrapper&amp;lt;int&amp;gt; GetSupportedTeamEditions()</description>
+    </item>
+    
+    <item>
+      <title>ProductAttribute_TeamEditionWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_TeamEditionWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_TeamEditionWrapper/</guid>
+      <description>View Implementation    Super Class: ProductAttributeWrapper
+ int GetId()     
+UnrealStringWrapper GetSortLabel()</description>
+    </item>
+    
+    <item>
+      <title>ProductAttribute_UnlockMethodWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_UnlockMethodWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_UnlockMethodWrapper/</guid>
+      <description>View Implementation    Super Class: ProductAttributeWrapper
+ unsigned char GetUnlockMethod()</description>
+    </item>
+    
+    <item>
+      <title>ProductAttributeWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttributeWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttributeWrapper/</guid>
+      <description>View Implementation    Super Class: ObjectWrapper
+ std::string GetAttributeType()     
+std::string GetTypename()     
+UnrealStringWrapper GetLabel()</description>
+    </item>
+    
+  </channel>
+</rss>

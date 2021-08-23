@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BakkesMod Programming Wiki</title>
+    <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameEvent/</link>
+    <description>Recent content on BakkesMod Programming Wiki</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameEvent/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GameEditorWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameEvent/GameEditorWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameEvent/GameEditorWrapper/</guid>
+      <description>View Implementation    Super Class: ServerWrapper
+ int GetActiveRoundNumber()     
+void SetActiveRoundNumber()        Parameter Type Description     newActiveRoundNumber  int &amp;mdash;    
+int GetMaxRounds()     
+void SetMaxRounds()        Parameter Type Description     newMaxRounds  int &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>GameEventWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameEvent/GameEventWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameEvent/GameEventWrapper/</guid>
+      <description>View Implementation    Super Class: ActorWrapper
+ unsigned char GetGameMode()     
+void SetGameMode()        Parameter Type Description     newGameMode unsigned char &amp;mdash;    
+unsigned char GetReplicatedStateIndex()     
+void SetReplicatedStateIndex()        Parameter Type Description     newReplicatedStateIndex unsigned char &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>GameSettingPlaylistWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameEvent/GameSettingPlaylistWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameEvent/GameSettingPlaylistWrapper/</guid>
+      <description>View Implementation    Super Class: ObjectWrapper
+ UnrealStringWrapper GetTitle()     
+UnrealStringWrapper GetDescription()     
+int GetPlayerCount()     
+void SetPlayerCount()        Parameter Type Description     newPlayerCount  int &amp;mdash;    
+unsigned long GetbStandard()     
+void SetbStandard()        Parameter Type Description     newbStandard unsigned long &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>ReplayDirectorWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameEvent/ReplayDirectorWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameEvent/ReplayDirectorWrapper/</guid>
+      <description>View Implementation    Super Class: ActorWrapper
+ float GetSlomoPreScoreTime()     
+void SetSlomoPreScoreTime()        Parameter Type Description     newSlomoPreScoreTime  float &amp;mdash;    
+float GetSlomoPostScoreTime()     
+void SetSlomoPostScoreTime()        Parameter Type Description     newSlomoPostScoreTime  float &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>ReplaySoccarWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameEvent/ReplaySoccarWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameEvent/ReplaySoccarWrapper/</guid>
+      <description>View Implementation    Super Class: ReplayWrapper
+ int GetTeamSize()     
+void SetTeamSize()        Parameter Type Description     newTeamSize  int &amp;mdash;    
+int GetUnfairTeamSize()     
+void SetUnfairTeamSize()        Parameter Type Description     newUnfairTeamSize  int &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>ServerWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameEvent/ServerWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameEvent/ServerWrapper/</guid>
+      <description>View Implementation    Super Class: TeamGameEventWrapper
+ BallWrapper GetBall()     
+void SpawnCar()        Parameter Type Description     carBody  int &amp;mdash;    
+void SpawnBot()        Parameter Type Description     carBody  int &amp;mdash;    
+BallWrapper SpawnBall()        Parameter Type Description     position const Vector &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>TeamGameEventWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameEvent/TeamGameEventWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameEvent/TeamGameEventWrapper/</guid>
+      <description>View Implementation    Super Class: GameEventWrapper
+ ArrayWrapper&amp;lt;TeamWrapper&amp;gt; GetTeamArchetypes()     
+ArrayWrapper&amp;lt;TeamWrapper&amp;gt; GetTeams()     
+int GetMaxTeamSize()     
+void SetMaxTeamSize()        Parameter Type Description     newMaxTeamSize  int &amp;mdash;    
+int GetNumBots()     
+void SetNumBots()        Parameter Type Description     newNumBots  int &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>TrainingEditorWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/</guid>
+      <description>View Implementation    Super Class: GameEditorWrapper
+ float GetMinRoundTime()     
+void SetMinRoundTime()        Parameter Type Description     newMinRoundTime  float &amp;mdash;    
+float GetMaxRoundTime()     
+void SetMaxRoundTime()        Parameter Type Description     newMaxRoundTime  float &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>TutorialWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameEvent/TutorialWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/GameEvent/TutorialWrapper/</guid>
+      <description>View Implementation    Super Class: ServerWrapper
+ void Redo()     
+Vector GetCarSpawnLocation()     
+void SetCarSpawnLocation()        Parameter Type Description     v  Vector &amp;mdash;    
+Rotator GetCarSpawnRotation()     
+void SetCarSpawnRotation()        Parameter Type Description     v  Rotator &amp;mdash;</description>
+    </item>
+    
+  </channel>
+</rss>

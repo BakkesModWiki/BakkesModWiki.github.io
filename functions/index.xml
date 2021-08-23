@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Functions on BakkesMod Programming Wiki</title>
+    <link>https://ubelhj.github.io/BakkesModWiki-Hugo/functions/</link>
+    <description>Recent content in Functions on BakkesMod Programming Wiki</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://ubelhj.github.io/BakkesModWiki-Hugo/functions/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using Function Hooks</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/functions/using_function_hooks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/functions/using_function_hooks/</guid>
+      <description>Function hooks are a powerful part of BakkesMod. After a function is hooked, any time it is called by Rocket League, your code is called as well.
+There are multiple types of hooks. First are the two simpler ones. gameWrapper is a GameWrapper and will be accessible from any point in your code.
+gameWrapper-&amp;gt;HookEvent(&amp;#34;Function TAGame.Car_TA.SetVehicleInput&amp;#34;, [this](std::string eventName) { // Your Code here  // Call another function or just do your things here }); gameWrapper-&amp;gt;HookEventPost(&amp;#34;Function TAGame.</description>
+    </item>
+    
+    <item>
+      <title>Function Scanner</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/functions/function_scanner/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/functions/function_scanner/</guid>
+      <description>Trying to hook an event but don&amp;rsquo;t know what event to use? There&amp;rsquo;s way more events out there than can be documented, so you can find one yourself with the function scanner
+I highly recommend this video I made to understand how to use it, but there&amp;rsquo;s also a text guide below
+https://www.youtube.com/watch?v=gDZ1wWKE8aw
+Set the -dev option    On Steam:
+Right click the game and hit properties
+Then add the option</description>
+    </item>
+    
+    <item>
+      <title>Commonly Hooked Functions</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/functions/commonly_hooked_functions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/functions/commonly_hooked_functions/</guid>
+      <description>This is a list of functions that we use regularly, as well as when they fire. We&amp;rsquo;ll never be able to document them all but hopefully this helps. Hook them with Function Hooks
+&amp;quot;Function TAGame.Car_TA.SetVehicleInput&amp;quot; This event is called every physics tick while you are playing. This is 120 times per second. This can be highly useful but isn&amp;rsquo;t perfect. It doesn&amp;rsquo;t fire while spectating matches. While hosting a match it fires once per tick per car in the match.</description>
+    </item>
+    
+    <item>
+      <title>Hook Event With Any Caller</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/functions/hook_event_with_any_caller/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/functions/hook_event_with_any_caller/</guid>
+      <description>Add this to your plugin header and you can hook with caller for &amp;ldquo;anything&amp;rdquo;. This will do a blind cast, so make absolutely sure you&amp;rsquo;re hooking the right function or you will crash. There are no type checks here!
+template &amp;lt;typename T, typename std::enable_if&amp;lt;std::is_base_of&amp;lt;ObjectWrapper, T&amp;gt;::value&amp;gt;::type*&amp;gt; void GameWrapper::HookEventWithCaller(std::string eventName, std::function&amp;lt;void(T caller, void* params, std::string eventName)&amp;gt; callback) { auto wrapped_callback = [callback](ActorWrapper caller, void* params, std::string eventName) { callback(T(caller.memory_address), params, eventName); }; HookEventWithCaller&amp;lt;ActorWrapper&amp;gt;(eventName, wrapped_callback); } And this for Post</description>
+    </item>
+    
+  </channel>
+</rss>

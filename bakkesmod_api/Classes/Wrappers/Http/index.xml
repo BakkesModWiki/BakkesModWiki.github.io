@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BakkesMod Programming Wiki</title>
+    <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/Http/</link>
+    <description>Recent content on BakkesMod Programming Wiki</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/Http/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HttpWrapper</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/Http/HttpWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/bakkesmod_api/Classes/Wrappers/Http/HttpWrapper/</guid>
+      <description>View Implementation    static void SendCurlRequest()        Parameter Type Description     request_data  CurlRequest &amp;mdash;    
+static void SendCurlJsonRequest()        Parameter Type Description     request_data  CurlRequest &amp;mdash;</description>
+    </item>
+    
+  </channel>
+</rss>

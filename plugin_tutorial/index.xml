@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BakkesMod Programming Wiki</title>
+    <link>https://ubelhj.github.io/BakkesModWiki-Hugo/plugin_tutorial/</link>
+    <description>Recent content on BakkesMod Programming Wiki</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://ubelhj.github.io/BakkesModWiki-Hugo/plugin_tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setup your installs</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/plugin_tutorial/getting_started/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/plugin_tutorial/getting_started/</guid>
+      <description>Trying to get into making plugins for the first time? There&amp;rsquo;s some super useful tools out there! These steps should get you started on the path towards development.
+Note these instructions are designed for Windows 10 (and presumably 11). Rocket League is Windows exclusive, so this is the easiest way to develop for it. If you really want to use linux, it will be harder but may still be possible</description>
+    </item>
+    
+    <item>
+      <title>Starting a plugin</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/plugin_tutorial/starting_a_plugin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/plugin_tutorial/starting_a_plugin/</guid>
+      <description>It will assume you&amp;rsquo;re using the template as linked in Setting Up. You can of course make a plugin without it, but it gives an easier basis to work off of. You can name it anything, but here we&amp;rsquo;ll be using a demo plugin named CoolPlugin
+The template has a lot of commented out code that is designed to help you learn how to use the syntax, but is ignored for the purposes of this tutorial</description>
+    </item>
+    
+    <item>
+      <title>Plugin Variables</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/plugin_tutorial/plugin_variables/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/plugin_tutorial/plugin_variables/</guid>
+      <description>Next we will make your plugin alterable by a user. They might want to enable/disable the plugin, change how it acts, and pretty much infinite options. I&amp;rsquo;ll be using a fairly simple plugin I&amp;rsquo;ve made as an example. I&amp;rsquo;ll only be focusing on the settings, not the actual code that makes it work. We&amp;rsquo;ll continue the CoolPlugin from Starting a Plugin
+We give the users control with the Console Variables, CVars.</description>
+    </item>
+    
+    <item>
+      <title>Plugin Interface</title>
+      <link>https://ubelhj.github.io/BakkesModWiki-Hugo/plugin_tutorial/plugin_interface/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ubelhj.github.io/BakkesModWiki-Hugo/plugin_tutorial/plugin_interface/</guid>
+      <description>This channel will go over creating a user-friendly interface. There&amp;rsquo;s buttons, sliders, checkboxes, dropdowns, and all sorts of options. It also assumes you&amp;rsquo;re using the template, as the template automatically includes the ImGui GUI library we&amp;rsquo;ll be using. It will ignore the fact that there is some commented out code in CoolPluginGUI.cpp.
+Yet again we have the CoolPlugin from Plugin Variables and we want to add a button to activate our cooler ball on top, a checkbox to enable cool, and a slider to choose the distance that the ball is placed from your car</description>
+    </item>
+    
+  </channel>
+</rss>
