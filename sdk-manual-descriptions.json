@@ -22,6 +22,13 @@
         }
     },
     "Constants": {
-        "BAKKESMOD_PLUGIN_API_VERSION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac sem mauris. Sed magna mi, scelerisque pharetra congue in, pellentesque sed erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue mollis lectus, sed tincidunt ipsum elementum in. Nullam."
+        "BAKKESMOD_PLUGIN_API_VERSION": "Current plugin API Version",
+        "CONST_DegToUnrRot": "Multiply a degree (from 0-360°) by this value to get a rotation value to pass to a Rotator",
+        "CONST_PI_D": "The value of Pi as a double",
+        "CONST_PI_F": "The value of Pi as a float",
+        "CONST_RadToUnrRot": "Multiply a radian (from 0-2π) by this value to get a rotation value to pass to a Rotator",
+        "CONST_UnrRotToRad": "Multiply a rotation value from a Rotator by this value to get radians (from 0-2π)",
+        "LINMATH_H": "Useful matrix and linear algebra functions",
+        "quat_norm": "Used in linmath.h"
     }
 }
