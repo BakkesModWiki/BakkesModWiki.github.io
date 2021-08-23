@@ -35,7 +35,7 @@
         "CARBODY": "A list of car body IDs. This is really outdated (early 2017?), so you'll likely need to find or write a new one for any plugins you make. If you make one make a code snippet and we'll link to it from here",
         "OnlinePlatform": "Ids for platforms players can be playing on",
         "PRODUCTQUALITY": "Possible item rarities",
-        "ToastType": "Possible colors for [Toasts](/code_snippets/toasts/).\n`ToastType_Info` is black, `ToastType_OK` is green, `ToastType_Warning` is orange, and `ToastType_Error` is red",
+        "ToastType": "Possible colors for [Toasts](/code_snippets/toasts/).\n\n`ToastType_Info` is black, `ToastType_OK` is green, `ToastType_Warning` is orange, and `ToastType_Error` is red",
         "UNLOCKMETHOD": "Ways an item can be earned"
     }
 }

@@ -29,6 +29,10 @@ There are 7 parameters. The first two are required. They are
 
 If you want to have a custom image, load it in your onLoad() using [GameWrapper](/bakkesmod_api/Classes/Wrappers/GameWrapper/).LoadToastTexture(). Provide the function with a name for your toast, and the path to the image. Most likely you'll want it to be in the data folder.
 
+Toasts can be one of 4 colors based on the ToastType
+
+![https://cdn.discordapp.com/attachments/873081105090215957/879215077654417469/unknown.png](https://cdn.discordapp.com/attachments/873081105090215957/879215077654417469/unknown.png)
+
 I've made an example using CoolPlugin. I put this code in the onLoad() in CoolPlugin.cpp and cool.png in the `bakkesmod/data` folder
 ```cpp
 gameWrapper->LoadToastTexture("cool", gameWrapper->GetDataFolder() / "cool.png");
