@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BakkesMod Programming Wiki</title>
+    <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/</link>
+    <description>Recent content on BakkesMod Programming Wiki</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AttachmentPickup</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/AttachmentPickup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/AttachmentPickup/</guid>
+      <description>View Implementation    Base Class: RumblePickupComponentWrapper
+ void PickupEnd()     
+void PickupStart()</description>
+    </item>
+    
+    <item>
+      <title>BallCarSpringPickup</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/BallCarSpringPickup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/BallCarSpringPickup/</guid>
+      <description>View Implementation    Base Class: SpringPickup
+ void ScaleSpringMeshToLocation(Vector &amp;amp;NewLocation, Vector &amp;amp;TargetLocation)        Parameter Type Description     NewLocation Vector &amp;mdash;   TargetLocation Vector &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>BallFreezePickup</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/BallFreezePickup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/BallFreezePickup/</guid>
+      <description>View Implementation    Base Class: TargetedPickup
+ FXActorWrapper GetFreezeBreakFXArchetype()     
+void SetFreezeBreakFXArchetype(FXActorWrapper newFreezeBreakFXArchetype)        Parameter Type Description     newFreezeBreakFXArchetype FXActorWrapper &amp;mdash;    
+FXActorWrapper GetFreezeFXArchetype()     
+void SetFreezeFXArchetype(FXActorWrapper newFreezeFXArchetype)        Parameter Type Description     newFreezeFXArchetype FXActorWrapper &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>BallLassoPickup</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/BallLassoPickup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/BallLassoPickup/</guid>
+      <description>View Implementation    Base Class: SpringPickup
+ void ScaleSpringMeshToLocation(Vector &amp;amp;NewLocation, Vector &amp;amp;TargetLocation)        Parameter Type Description     NewLocation Vector &amp;mdash;   TargetLocation Vector &amp;mdash;    
+void DoSpring(unsigned long bFirstHit)        Parameter Type Description     bFirstHit unsigned long &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>BasketballPickup</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/BasketballPickup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/BasketballPickup/</guid>
+      <description>View Implementation    Base Class: RumblePickupComponentWrapper
+ Vector GetBallOffset()     
+void SetBallOffset(Vector newBallOffset)        Parameter Type Description     newBallOffset Vector &amp;mdash;    
+float GetAttachedBallMass()     
+void SetAttachedBallMass(float newAttachedBallMass)        Parameter Type Description     newAttachedBallMass float &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>BattarangPickup</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/BattarangPickup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/BattarangPickup/</guid>
+      <description>View Implementation    Base Class: BallLassoPickup
+ float GetSpinSpeed()     
+void SetSpinSpeed(float newSpinSpeed)        Parameter Type Description     newSpinSpeed float &amp;mdash;    
+float GetCurRotation()     
+void SetCurRotation(float newCurRotation)        Parameter Type Description     newCurRotation float &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>BoostModPickup</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/BoostModPickup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/BoostModPickup/</guid>
+      <description>View Implementation    Base Class: RumblePickupComponentWrapper
+ unsigned long GetbUnlimitedBoost()     
+void SetbUnlimitedBoost(unsigned long newbUnlimitedBoost)        Parameter Type Description     newbUnlimitedBoost unsigned long &amp;mdash;    
+float GetBoostStrength()     
+void SetBoostStrength(float newBoostStrength)        Parameter Type Description     newBoostStrength float &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>BoostOverridePickup</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/BoostOverridePickup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/BoostOverridePickup/</guid>
+      <description>View Implementation    Base Class: TargetedPickup
+ CarWrapper GetOtherCar()     
+void SetOtherCar(CarWrapper newOtherCar)        Parameter Type Description     newOtherCar CarWrapper &amp;mdash;    
+void PickupEnd()     
+void OnTargetChanged()     
+void PickupStart()</description>
+    </item>
+    
+    <item>
+      <title>CarSpeedPickup</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/CarSpeedPickup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/CarSpeedPickup/</guid>
+      <description>View Implementation    Base Class: RumblePickupComponentWrapper
+ float GetGravityScale()     
+void SetGravityScale(float newGravityScale)        Parameter Type Description     newGravityScale float &amp;mdash;    
+Vector GetAddedForce()     
+void SetAddedForce(Vector newAddedForce)        Parameter Type Description     newAddedForce Vector &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>DemolishPickup</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/DemolishPickup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/DemolishPickup/</guid>
+      <description>View Implementation    Base Class: RumblePickupComponentWrapper
+ unsigned char GetDemolishTarget()     
+void SetDemolishTarget(unsigned char newDemolishTarget)        Parameter Type Description     newDemolishTarget unsigned char &amp;mdash;    
+unsigned char GetDemolishSpeed()     
+void SetDemolishSpeed(unsigned char newDemolishSpeed)        Parameter Type Description     newDemolishSpeed unsigned char &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>GrapplingHookPickup</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/GrapplingHookPickup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/GrapplingHookPickup/</guid>
+      <description>View Implementation    Base Class: TargetedPickup
+ float GetImpulse()     
+void SetImpulse(float newImpulse)        Parameter Type Description     newImpulse float &amp;mdash;    
+float GetForce()     
+void SetForce(float newForce)        Parameter Type Description     newForce float &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>GravityPickup</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/GravityPickup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/GravityPickup/</guid>
+      <description>View Implementation    Base Class: RumblePickupComponentWrapper
+ float GetBallGravity()     
+void SetBallGravity(float newBallGravity)        Parameter Type Description     newBallGravity float &amp;mdash;    
+float GetRange()     
+void SetRange(float newRange)        Parameter Type Description     newRange float &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>HandbrakeOverridePickup</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/HandbrakeOverridePickup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/HandbrakeOverridePickup/</guid>
+      <description>View Implementation    Base Class: TargetedPickup
+ CarWrapper GetOtherCar()     
+void SetOtherCar(CarWrapper newOtherCar)        Parameter Type Description     newOtherCar CarWrapper &amp;mdash;    
+void PickupEnd()     
+void PickupStart()</description>
+    </item>
+    
+    <item>
+      <title>HitForcePickup</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/HitForcePickup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/HitForcePickup/</guid>
+      <description>View Implementation    Base Class: RumblePickupComponentWrapper
+ unsigned long GetbBallForce()     
+void SetbBallForce(unsigned long newbBallForce)        Parameter Type Description     newbBallForce unsigned long &amp;mdash;    
+unsigned long GetbCarForce()     
+void SetbCarForce(unsigned long newbCarForce)        Parameter Type Description     newbCarForce unsigned long &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>RumblePickupComponentWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/RumblePickupComponentWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/RumblePickupComponentWrapper/</guid>
+      <description>View Implementation    Base Class: CarComponentWrapper
+ UnrealStringWrapper GetPickupName()     
+unsigned long GetbHudIgnoreUseTime()     
+void SetbHudIgnoreUseTime(unsigned long newbHudIgnoreUseTime)        Parameter Type Description     newbHudIgnoreUseTime unsigned long &amp;mdash;    
+unsigned long GetbHasActivated()     
+void SetbHasActivated(unsigned long newbHasActivated)        Parameter Type Description     newbHasActivated unsigned long &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>SpringPickup</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/SpringPickup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/SpringPickup/</guid>
+      <description>View Implementation    Base Class: TargetedPickup
+ float GetForce()     
+void SetForce(float newForce)        Parameter Type Description     newForce float &amp;mdash;    
+float GetVerticalForce()     
+void SetVerticalForce(float newVerticalForce)        Parameter Type Description     newVerticalForce float &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>SwapperPickup</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/SwapperPickup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/SwapperPickup/</guid>
+      <description>View Implementation    Base Class: TargetedPickup
+ CarWrapper GetOtherCar()     
+void SetOtherCar(CarWrapper newOtherCar)        Parameter Type Description     newOtherCar CarWrapper &amp;mdash;    
+void PickupEnd()     
+void OnTargetChanged()     
+void PickupStart()</description>
+    </item>
+    
+    <item>
+      <title>TargetedPickup</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/TargetedPickup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/TargetedPickup/</guid>
+      <description>View Implementation    Base Class: RumblePickupComponentWrapper
+ unsigned long GetbCanTargetBall()     
+void SetbCanTargetBall(unsigned long newbCanTargetBall)        Parameter Type Description     newbCanTargetBall unsigned long &amp;mdash;    
+unsigned long GetbCanTargetCars()     
+void SetbCanTargetCars(unsigned long newbCanTargetCars)        Parameter Type Description     newbCanTargetCars unsigned long &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>TimeBombPickup</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/TimeBombPickup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/TimeBombPickup/</guid>
+      <description>View Implementation    Base Class: RumblePickupComponentWrapper
+ float GetRadius()     
+void SetRadius(float newRadius)        Parameter Type Description     newRadius float &amp;mdash;    
+float GetAlmostReadyDuration()     
+void SetAlmostReadyDuration(float newAlmostReadyDuration)        Parameter Type Description     newAlmostReadyDuration float &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>TornadoPickup</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/TornadoPickup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/TornadoPickup/</guid>
+      <description>View Implementation    Base Class: RumblePickupComponentWrapper
+ float GetHeight()     
+void SetHeight(float newHeight)        Parameter Type Description     newHeight float &amp;mdash;    
+float GetRadius()     
+void SetRadius(float newRadius)        Parameter Type Description     newRadius float &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>VelcroPickup</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/VelcroPickup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/VelcroPickup/</guid>
+      <description>View Implementation    Base Class: RumblePickupComponentWrapper
+ Vector GetBallOffset()     
+void SetBallOffset(Vector newBallOffset)        Parameter Type Description     newBallOffset Vector &amp;mdash;    
+unsigned long GetbUseRealOffset()     
+void SetbUseRealOffset(unsigned long newbUseRealOffset)        Parameter Type Description     newbUseRealOffset unsigned long &amp;mdash;</description>
+    </item>
+    
+  </channel>
+</rss>

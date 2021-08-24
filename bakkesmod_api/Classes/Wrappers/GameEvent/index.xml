@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BakkesMod Programming Wiki</title>
+    <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/</link>
+    <description>Recent content on BakkesMod Programming Wiki</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GameEditorWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/GameEditorWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/GameEditorWrapper/</guid>
+      <description>View Implementation    Base Class: ServerWrapper
+ int GetActiveRoundNumber()     
+void SetActiveRoundNumber(int newActiveRoundNumber)        Parameter Type Description     newActiveRoundNumber int &amp;mdash;    
+int GetMaxRounds()     
+void SetMaxRounds(int newMaxRounds)        Parameter Type Description     newMaxRounds int &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>GameEventWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/GameEventWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/GameEventWrapper/</guid>
+      <description>View Implementation    Base Class: ActorWrapper
+ unsigned char GetGameMode()     
+void SetGameMode(unsigned char newGameMode)        Parameter Type Description     newGameMode unsigned char &amp;mdash;    
+unsigned char GetReplicatedStateIndex()     
+void SetReplicatedStateIndex(unsigned char newReplicatedStateIndex)        Parameter Type Description     newReplicatedStateIndex unsigned char &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>GameSettingPlaylistWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/GameSettingPlaylistWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/GameSettingPlaylistWrapper/</guid>
+      <description>View Implementation    Base Class: ObjectWrapper
+ _NODISCARD bool IsNull() const     
+operator bool() const     
+UnrealStringWrapper GetTitle()     
+UnrealStringWrapper GetDescription()     
+int GetPlayerCount()     
+void SetPlayerCount(int newPlayerCount)        Parameter Type Description     newPlayerCount int &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>ReplayDirectorWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/ReplayDirectorWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/ReplayDirectorWrapper/</guid>
+      <description>View Implementation    Base Class: ActorWrapper
+ float GetSlomoPreScoreTime()     
+void SetSlomoPreScoreTime(float newSlomoPreScoreTime)        Parameter Type Description     newSlomoPreScoreTime float &amp;mdash;    
+float GetSlomoPostScoreTime()     
+void SetSlomoPostScoreTime(float newSlomoPostScoreTime)        Parameter Type Description     newSlomoPostScoreTime float &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>ReplaySoccarWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/ReplaySoccarWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/ReplaySoccarWrapper/</guid>
+      <description>View Implementation    Base Class: ReplayWrapper
+ int GetTeamSize()     
+void SetTeamSize(int newTeamSize)        Parameter Type Description     newTeamSize int &amp;mdash;    
+int GetUnfairTeamSize()     
+void SetUnfairTeamSize(int newUnfairTeamSize)        Parameter Type Description     newUnfairTeamSize int &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>ReplayWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/ReplayWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/ReplayWrapper/</guid>
+      <description>View Implementation    Base Class: ObjectWrapper
+ _NODISCARD bool IsNull() const     
+operator bool() const     
+UnrealStringWrapper GetReplayName()     
+int GetEngineVersion()     
+void SetEngineVersion(int newEngineVersion)        Parameter Type Description     newEngineVersion int &amp;mdash;    
+int GetLicenseeVersion()</description>
+    </item>
+    
+    <item>
+      <title>ServerWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/ServerWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/ServerWrapper/</guid>
+      <description>View Implementation    Base Class: TeamGameEventWrapper
+ BallWrapper GetBall()     
+void SpawnCar(int carBody, std::string name)        Parameter Type Description     carBody int &amp;mdash;   name std::string &amp;mdash;    
+void SpawnBot(int carBody, std::string name)        Parameter Type Description     carBody int &amp;mdash;   name std::string &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>TeamGameEventWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TeamGameEventWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TeamGameEventWrapper/</guid>
+      <description>View Implementation    Base Class: GameEventWrapper
+ ArrayWrapper GetTeamArchetypes()     
+ArrayWrapper GetTeams()     
+int GetMaxTeamSize()     
+void SetMaxTeamSize(int newMaxTeamSize)        Parameter Type Description     newMaxTeamSize int &amp;mdash;    
+int GetNumBots()     
+void SetNumBots(int newNumBots)        Parameter Type Description     newNumBots int &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>TrainingEditorWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/</guid>
+      <description>View Implementation    Base Class: GameEditorWrapper
+ float GetMinRoundTime()     
+void SetMinRoundTime(float newMinRoundTime)        Parameter Type Description     newMinRoundTime float &amp;mdash;    
+float GetMaxRoundTime()     
+void SetMaxRoundTime(float newMaxRoundTime)        Parameter Type Description     newMaxRoundTime float &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>TutorialWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TutorialWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TutorialWrapper/</guid>
+      <description>View Implementation    Base Class: ServerWrapper
+ void Redo()     
+Vector GetCarSpawnLocation()     
+void SetCarSpawnLocation(Vector v)        Parameter Type Description     v Vector &amp;mdash;    
+Rotator GetCarSpawnRotation()     
+void SetCarSpawnRotation(Rotator v)        Parameter Type Description     v Rotator &amp;mdash;</description>
+    </item>
+    
+  </channel>
+</rss>

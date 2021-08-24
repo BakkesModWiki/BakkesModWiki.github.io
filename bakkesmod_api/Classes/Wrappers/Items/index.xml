@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BakkesMod Programming Wiki</title>
+    <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/</link>
+    <description>Recent content on BakkesMod Programming Wiki</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ItemsWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/ItemsWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/ItemsWrapper/</guid>
+      <description>View Implementation    Base Class: ObjectWrapper
+ ItemsWrapper(const ItemsWrapper &amp;amp;other)        Parameter Type Description     other ItemsWrapper &amp;mdash;    
+ItemsWrapper operator=()        Parameter Type Description     rhs ItemsWrapper &amp;mdash;    
+~ItemsWrapper()     
+bool IsNull()</description>
+    </item>
+    
+    <item>
+      <title>LoadoutWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/LoadoutWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/LoadoutWrapper/</guid>
+      <description>View Implementation    Base Class: ObjectWrapper
+ _NODISCARD bool IsNull() const     
+operator bool() const     
+ArrayWrapper GetLoadout()     
+ArrayWrapper GetOnlineLoadout()     
+unsigned char GetPrimaryPaintColorId()     
+unsigned char GetAccentPaintColorId()     
+int GetPrimaryFinishId()     
+int GetAccentFinishId()</description>
+    </item>
+    
+    <item>
+      <title>OnlineProductWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/OnlineProductWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/OnlineProductWrapper/</guid>
+      <description>View Implementation    Base Class: ObjectWrapper
+ _NODISCARD bool IsNull() const     
+operator bool() const     
+std::string SeriesIdToSeriesName(int seriesID)        Parameter Type Description     seriesID int &amp;mdash;    
+int GetProductID()     
+int GetSeriesID()     
+int GetTradeHold()</description>
+    </item>
+    
+    <item>
+      <title>ProductSlotWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/ProductSlotWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/ProductSlotWrapper/</guid>
+      <description>View Implementation    Base Class: ObjectWrapper
+ _NODISCARD bool IsNull() const     
+operator bool() const     
+UnrealStringWrapper GetLabel()     
+UnrealStringWrapper GetPluralLabel()     
+UnrealStringWrapper GetDescription()     
+UnrealStringWrapper GetOnlineLabel()     
+int GetSlotIndex()</description>
+    </item>
+    
+    <item>
+      <title>ProductTemplateWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/ProductTemplateWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/ProductTemplateWrapper/</guid>
+      <description>View Implementation    Base Class: ObjectWrapper
+ _NODISCARD bool IsNull() const     
+operator bool() const     
+ProductSlotWrapper GetSlot()     
+unsigned char GetUnlockMethod()     
+unsigned char GetQuality()     
+ProductWrapper GetRequiredProduct()     
+unsigned long GetbLicensed()</description>
+    </item>
+    
+    <item>
+      <title>ProductTradeInWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/ProductTradeInWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/ProductTradeInWrapper/</guid>
+      <description>View Implementation    Base Class: ObjectWrapper
+ ArrayWrapper GetProducts()     
+_NODISCARD bool IsNull() const     
+operator bool() const</description>
+    </item>
+    
+    <item>
+      <title>ProductWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/ProductWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/ProductWrapper/</guid>
+      <description>View Implementation    Base Class: ProductTemplateWrapper
+ bool IsNull()     
+operator bool()     
+std::string GetAssetPackageName()     
+UnrealStringWrapper GetAssetPath()     
+UnrealStringWrapper GetLabel()     
+UnrealStringWrapper GetAsciiLabel()     
+UnrealStringWrapper GetLongLabel()     
+bool IsPaintable()     
+UnrealStringWrapper GetDisplayLabelSlot()</description>
+    </item>
+    
+    <item>
+      <title>TradeWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/TradeWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/TradeWrapper/</guid>
+      <description>View Implementation    Base Class: ObjectWrapper
+ Currency GetReceivingCurrency() const     
+Currency GetSendingCurrency() const     
+ArrayWrapper GetReceivingProducts()     
+ArrayWrapper GetSendingProducts()     
+UniqueIDWrapper GetTradingPlayer()     
+GUIDWrapper GetTradeGuid()     
+bool IsNull()     
+operator bool()</description>
+    </item>
+    
+  </channel>
+</rss>
