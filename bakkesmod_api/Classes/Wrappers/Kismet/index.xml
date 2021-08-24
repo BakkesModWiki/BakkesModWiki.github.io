@@ -54,7 +54,7 @@ float GetFloat()</description>
       <description>View Implementation    ArrayWrapper GetSequenceObjects()     
 ArrayWrapper GetNestedSequences()     
 int ActivateRemoteEvents(const std::string &amp;amp;remote_event_name) const        Parameter Type Description     remote_event_name const std::string &amp;amp; &amp;mdash;    
-SequenceVariableWrapper GetAllSequenceVariables()        Parameter Type Description     reqursive bool &amp;mdash;</description>
+SequenceVariableWrapper GetAllSequenceVariables(bool reqursive)        Parameter Type Description     reqursive bool &amp;mdash;</description>
     </item>
     
   </channel>

@@ -85,7 +85,7 @@ UnrealStringWrapper GetSortLabel()</description>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_QualityWrapper/</guid>
       <description>View Implementation    unsigned char GetQuality()     
-UnrealStringWrapper ProductQualityToString()        Parameter Type Description     InQuality unsigned char &amp;mdash;</description>
+UnrealStringWrapper ProductQualityToString(unsigned char InQuality)        Parameter Type Description     InQuality unsigned char &amp;mdash;</description>
     </item>
     
     <item>

@@ -12,7 +12,7 @@
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/ItemsWrapper/</guid>
       <description>View Implementation    ItemsWrapper(const ItemsWrapper &amp;amp;other)        Parameter Type Description     other ItemsWrapper &amp;mdash;    
-ItemsWrapper operator=()        Parameter Type Description     rhs ItemsWrapper &amp;mdash;    
+ItemsWrapper operator=(ItemsWrapper rhs)        Parameter Type Description     rhs ItemsWrapper &amp;mdash;    
 ~ItemsWrapper()     
 bool IsNull()     
 operator bool()</description>
@@ -85,7 +85,7 @@ unsigned long GetbLicensed()</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/ProductTradeInWrapper/</guid>
-      <description>View Implementation    ArrayWrapper GetProducts()     
+      <description>View Implementation    ArrayWrapper GetProducts() const     
 _NODISCARD bool IsNull() const     
 operator bool() const</description>
     </item>
@@ -117,8 +117,8 @@ UnrealStringWrapper GetDisplayLabelSlot()</description>
 Currency GetSendingCurrency() const     
 ArrayWrapper GetReceivingProducts()     
 ArrayWrapper GetSendingProducts()     
-UniqueIDWrapper GetTradingPlayer()     
-GUIDWrapper GetTradeGuid()     
+UniqueIDWrapper GetTradingPlayer() const     
+GUIDWrapper GetTradeGuid() const     
 bool IsNull()     
 operator bool()</description>
     </item>

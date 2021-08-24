@@ -67,10 +67,9 @@ float GetThrottleForce()</description>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/ArrayWrapper/</guid>
       <description>View Implementation    ArrayWrapper(const ArrayWrapper&amp;lt; T &amp;gt; &amp;amp;other)        Parameter Type Description     other ArrayWrapper &amp;mdash;    
-ArrayWrapper operator=()        Parameter Type Description     rhs ArrayWrapper &amp;mdash;    
+ArrayWrapper operator=(ArrayWrapper&amp;lt; T &amp;gt; rhs)        Parameter Type Description     rhs ArrayWrapper &amp;mdash;    
 ~ArrayWrapper()     
-int Count()     
-T Get(int index)        Parameter Type Description     index int &amp;mdash;</description>
+int Count()</description>
     </item>
     
     <item>
@@ -80,7 +79,7 @@ T Get(int index)        Parameter Type Description     index int &amp;mdash;</d
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/ArrayWrapperIterator/</guid>
       <description>View Implementation    size_t index     
-ArrayWrapper collection()</description>
+ArrayWrapper collection</description>
     </item>
     
     <item>
@@ -132,7 +131,7 @@ void DoSpring(unsigned long bFirstHit)        Parameter Type Description     bF
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/BallWrapper/</guid>
       <description>View Implementation    float GetLastTouchTime()     
-PredictionInfo PredictPosition()        Parameter Type Description     timeAhead float &amp;mdash;    
+PredictionInfo PredictPosition(float timeAhead)        Parameter Type Description     timeAhead float &amp;mdash;    
 FXActorWrapper GetEndOfGameFXArchetype()     
 void SetEndOfGameFXArchetype(FXActorWrapper newEndOfGameFXArchetype)        Parameter Type Description     newEndOfGameFXArchetype FXActorWrapper &amp;mdash;    
 unsigned long GetbAllowPlayerExplosionOverride()</description>
@@ -367,7 +366,7 @@ int GetAccentColor()</description>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/CVarManagerWrapper/</guid>
       <description>View Implementation    CVarManagerWrapper(const CVarManagerWrapper &amp;amp;other)        Parameter Type Description     other CVarManagerWrapper &amp;mdash;    
-CVarManagerWrapper operator=()        Parameter Type Description     rhs CVarManagerWrapper &amp;mdash;    
+CVarManagerWrapper operator=(CVarManagerWrapper rhs)        Parameter Type Description     rhs CVarManagerWrapper &amp;mdash;    
 ~CVarManagerWrapper()     
 void executeCommand(std::string command, bool log=true)        Parameter Type Description     command std::string &amp;mdash;   log bool &amp;mdash;</description>
     </item>
@@ -379,7 +378,7 @@ void executeCommand(std::string command, bool log=true)        Parameter Type D
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/CVarWrapper/</guid>
       <description>View Implementation    CVarWrapper(const CVarWrapper &amp;amp;other)        Parameter Type Description     other CVarWrapper &amp;mdash;    
-CVarWrapper operator=()        Parameter Type Description     rhs CVarWrapper &amp;mdash;    
+CVarWrapper operator=(CVarWrapper rhs)        Parameter Type Description     rhs CVarWrapper &amp;mdash;    
 ~CVarWrapper()     
 std::string getCVarName()     
 int getIntValue()</description>
@@ -650,7 +649,7 @@ void SendCurlJsonRequest(CurlRequest request_data, CurlRequestDoneStringReturn 
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/ImageWrapper/</guid>
       <description>View Implementation    ImageWrapper(const ImageWrapper &amp;amp;)=delete        Parameter Type Description     ImageWrapper &amp;mdash;     
-ImageWrapper operator=()        Parameter Type Description     ImageWrapper &amp;mdash;     
+ImageWrapper operator=(const ImageWrapper &amp;amp;)=delete        Parameter Type Description     ImageWrapper &amp;mdash;     
 ~ImageWrapper()     
 bool LoadForCanvas()     
 bool IsLoadedForCanvas()</description>
@@ -676,7 +675,7 @@ SampleHistoryWrapper GetOverUnderFrames()</description>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/ItemsWrapper/</guid>
       <description>View Implementation    ItemsWrapper(const ItemsWrapper &amp;amp;other)        Parameter Type Description     other ItemsWrapper &amp;mdash;    
-ItemsWrapper operator=()        Parameter Type Description     rhs ItemsWrapper &amp;mdash;    
+ItemsWrapper operator=(ItemsWrapper rhs)        Parameter Type Description     rhs ItemsWrapper &amp;mdash;    
 ~ItemsWrapper()     
 bool IsNull()     
 operator bool()</description>
@@ -982,7 +981,7 @@ UnrealStringWrapper GetSortLabel()</description>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_QualityWrapper/</guid>
       <description>View Implementation    unsigned char GetQuality()     
-UnrealStringWrapper ProductQualityToString()        Parameter Type Description     InQuality unsigned char &amp;mdash;</description>
+UnrealStringWrapper ProductQualityToString(unsigned char InQuality)        Parameter Type Description     InQuality unsigned char &amp;mdash;</description>
     </item>
     
     <item>
@@ -1082,7 +1081,7 @@ unsigned long GetbLicensed()</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/ProductTradeInWrapper/</guid>
-      <description>View Implementation    ArrayWrapper GetProducts()     
+      <description>View Implementation    ArrayWrapper GetProducts() const     
 _NODISCARD bool IsNull() const     
 operator bool() const</description>
     </item>
@@ -1137,7 +1136,7 @@ float GetSlomoDefendTime()</description>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/ReplayServerWrapper/</guid>
       <description>View Implementation    ReplayServerWrapper(const ReplayServerWrapper &amp;amp;other)        Parameter Type Description     other ReplayServerWrapper &amp;mdash;    
-ReplayServerWrapper operator=()        Parameter Type Description     rhs ReplayServerWrapper &amp;mdash;    
+ReplayServerWrapper operator=(ReplayServerWrapper rhs)        Parameter Type Description     rhs ReplayServerWrapper &amp;mdash;    
 ~ReplayServerWrapper()     
 ActorWrapper GetViewTarget()     
 ReplayWrapper GetReplay()</description>
@@ -1277,7 +1276,7 @@ float GetFloat()</description>
       <description>View Implementation    ArrayWrapper GetSequenceObjects()     
 ArrayWrapper GetNestedSequences()     
 int ActivateRemoteEvents(const std::string &amp;amp;remote_event_name) const        Parameter Type Description     remote_event_name const std::string &amp;amp; &amp;mdash;    
-SequenceVariableWrapper GetAllSequenceVariables()        Parameter Type Description     reqursive bool &amp;mdash;</description>
+SequenceVariableWrapper GetAllSequenceVariables(bool reqursive)        Parameter Type Description     reqursive bool &amp;mdash;</description>
     </item>
     
     <item>
@@ -1407,10 +1406,9 @@ void SetLastTickTime(double newLastTickTime)        Parameter Type Description 
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/StructArrayWrapper/</guid>
       <description>View Implementation    StructArrayWrapper(const StructArrayWrapper&amp;lt; T &amp;gt; &amp;amp;other)        Parameter Type Description     other StructArrayWrapper &amp;mdash;    
-StructArrayWrapper operator=()        Parameter Type Description     rhs StructArrayWrapper &amp;mdash;    
+StructArrayWrapper operator=(StructArrayWrapper&amp;lt; T &amp;gt; rhs)        Parameter Type Description     rhs StructArrayWrapper &amp;mdash;    
 ~StructArrayWrapper()     
-int Count()     
-T Get(int index)        Parameter Type Description     index int &amp;mdash;</description>
+int Count()</description>
     </item>
     
     <item>
@@ -1524,8 +1522,8 @@ Vector GetOffset()</description>
 Currency GetSendingCurrency() const     
 ArrayWrapper GetReceivingProducts()     
 ArrayWrapper GetSendingProducts()     
-UniqueIDWrapper GetTradingPlayer()     
-GUIDWrapper GetTradeGuid()     
+UniqueIDWrapper GetTradingPlayer() const     
+GUIDWrapper GetTradeGuid() const     
 bool IsNull()     
 operator bool()</description>
     </item>
@@ -1577,7 +1575,7 @@ void SetCarSpawnRotation(Rotator v)        Parameter Type Description     v Rot
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/UniqueIDWrapper/</guid>
       <description>View Implementation    UniqueIDWrapper(const UniqueIDWrapper &amp;amp;other)        Parameter Type Description     other UniqueIDWrapper &amp;mdash;    
-UniqueIDWrapper operator=()        Parameter Type Description     rhs UniqueIDWrapper &amp;mdash;    
+UniqueIDWrapper operator=(UniqueIDWrapper rhs)        Parameter Type Description     rhs UniqueIDWrapper &amp;mdash;    
 ~UniqueIDWrapper()     
 OnlinePlatform GetPlatform() const     
 std::string GetEpicAccountID() const</description>

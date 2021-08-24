@@ -12,7 +12,7 @@
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/BallWrapper/</guid>
       <description>View Implementation    float GetLastTouchTime()     
-PredictionInfo PredictPosition()        Parameter Type Description     timeAhead float &amp;mdash;    
+PredictionInfo PredictPosition(float timeAhead)        Parameter Type Description     timeAhead float &amp;mdash;    
 FXActorWrapper GetEndOfGameFXArchetype()     
 void SetEndOfGameFXArchetype(FXActorWrapper newEndOfGameFXArchetype)        Parameter Type Description     newEndOfGameFXArchetype FXActorWrapper &amp;mdash;    
 unsigned long GetbAllowPlayerExplosionOverride()</description>
