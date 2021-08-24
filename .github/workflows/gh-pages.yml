@@ -22,7 +22,7 @@ jobs:
           # extended: true
 
       - name: Build
-        run: npm ci && npm run get-doxygen && npm run sdkgen && hugo -b https://bakkesmodwiki.github.io/
+        run: sudo apt install libclang1-9 && sudo apt install libclang-cpp9 && npm ci && npm run get-doxygen && npm run sdkgen && hugo -b https://bakkesmodwiki.github.io/
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
