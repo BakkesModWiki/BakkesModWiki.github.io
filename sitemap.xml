@@ -34,6 +34,8 @@
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Modals/</loc>
   </url><url>
+    <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/</loc>
+  </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Core/</loc>
@@ -91,6 +93,8 @@
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CameraXWrapper/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/CanvasWrapper/</loc>
+  </url><url>
+    <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/CARBODY/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/CarComponentWrapper/</loc>
   </url><url>
@@ -176,6 +180,8 @@
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Engine/ObjectWrapper/</loc>
   </url><url>
+    <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/OnlinePlatform/</loc>
+  </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/OnlineProductWrapper/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Dbs/PaintDatabaseWrapper/</loc>
@@ -187,6 +193,10 @@
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/PlayerControllerWrapper/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PlayerReplicationInfoWrapper/</loc>
+  </url><url>
+    <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/Playlist/</loc>
+  </url><url>
+    <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/PlaylistCategory/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/PluginManagerWrapper/</loc>
   </url><url>
@@ -224,6 +234,8 @@
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttributeWrapper/</loc>
   </url><url>
+    <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/PRODUCTQUALITY/</loc>
+  </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/ProductSlotWrapper/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/ProductTemplateWrapper/</loc>
@@ -233,6 +245,8 @@
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/ProductWrapper/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RBActorWrapper/</loc>
+  </url><url>
+    <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/Region/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/ReplayDirectorWrapper/</loc>
   </url><url>
@@ -292,7 +306,11 @@
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/TimeBombPickup/</loc>
   </url><url>
+    <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/ToastType/</loc>
+  </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/TornadoPickup/</loc>
+  </url><url>
+    <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/TRADEHOLD/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/TradeWrapper/</loc>
   </url><url>
@@ -303,6 +321,8 @@
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TutorialWrapper/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/UniqueIDWrapper/</loc>
+  </url><url>
+    <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/UNLOCKMETHOD/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Engine/UnrealStringWrapper/</loc>
   </url><url>
