@@ -11,11 +11,11 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PerformanceStats/InputBufferGraphWrapper/</guid>
-      <description>View Implementation    Base Class: StatGraphWrapper
- SampleHistoryWrapper GetBuffer()     
+      <description>View Implementation    SampleHistoryWrapper GetBuffer()     
 void SetBuffer(SampleHistoryWrapper newBuffer)        Parameter Type Description     newBuffer SampleHistoryWrapper &amp;mdash;    
 SampleHistoryWrapper GetBufferTarget()     
-void SetBufferTarget(SampleHistoryWrapper newBufferTarget)        Parameter Type Description     newBufferTarget SampleHistoryWrapper &amp;mdash;</description>
+void SetBufferTarget(SampleHistoryWrapper newBufferTarget)        Parameter Type Description     newBufferTarget SampleHistoryWrapper &amp;mdash;    
+SampleHistoryWrapper GetOverUnderFrames()</description>
     </item>
     
     <item>
@@ -24,11 +24,11 @@ void SetBufferTarget(SampleHistoryWrapper newBufferTarget)        Parameter Typ
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PerformanceStats/NetStatGraphWrapper/</guid>
-      <description>View Implementation    Base Class: StatGraphWrapper
- SampleHistoryWrapper GetPacketsOut()     
+      <description>View Implementation    SampleHistoryWrapper GetPacketsOut()     
 void SetPacketsOut(SampleHistoryWrapper newPacketsOut)        Parameter Type Description     newPacketsOut SampleHistoryWrapper &amp;mdash;    
 SampleHistoryWrapper GetPacketsIn()     
-void SetPacketsIn(SampleHistoryWrapper newPacketsIn)        Parameter Type Description     newPacketsIn SampleHistoryWrapper &amp;mdash;</description>
+void SetPacketsIn(SampleHistoryWrapper newPacketsIn)        Parameter Type Description     newPacketsIn SampleHistoryWrapper &amp;mdash;    
+SampleHistoryWrapper GetLostPacketsOut()</description>
     </item>
     
     <item>
@@ -37,11 +37,11 @@ void SetPacketsIn(SampleHistoryWrapper newPacketsIn)        Parameter Type Desc
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PerformanceStats/PerfStatGraphWrapper/</guid>
-      <description>View Implementation    Base Class: StatGraphWrapper
- SampleHistoryWrapper GetFPS()     
+      <description>View Implementation    SampleHistoryWrapper GetFPS()     
 void SetFPS(SampleHistoryWrapper newFPS)        Parameter Type Description     newFPS SampleHistoryWrapper &amp;mdash;    
 SampleHistoryWrapper GetFrameTime()     
-void SetFrameTime(SampleHistoryWrapper newFrameTime)        Parameter Type Description     newFrameTime SampleHistoryWrapper &amp;mdash;</description>
+void SetFrameTime(SampleHistoryWrapper newFrameTime)        Parameter Type Description     newFrameTime SampleHistoryWrapper &amp;mdash;    
+SampleHistoryWrapper GetGameThreadTime()</description>
     </item>
     
     <item>
@@ -50,13 +50,13 @@ void SetFrameTime(SampleHistoryWrapper newFrameTime)        Parameter Type Desc
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PerformanceStats/SampleHistoryWrapper/</guid>
-      <description>View Implementation    Base Class: ObjectWrapper
- _NODISCARD bool IsNull() const     
+      <description>View Implementation    _NODISCARD bool IsNull() const     
 operator bool() const     
 SampleRecordSettingsWrapper GetRecordSettings()     
 void SetRecordSettings(SampleRecordSettingsWrapper newRecordSettings)        Parameter Type Description     newRecordSettings SampleRecordSettingsWrapper &amp;mdash;    
 UnrealStringWrapper GetTitle()     
-float GetYMin()</description>
+float GetYMin()     
+void SetYMin(float newYMin)        Parameter Type Description     newYMin float &amp;mdash;</description>
     </item>
     
     <item>
@@ -65,8 +65,7 @@ float GetYMin()</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PerformanceStats/SampleRecordSettingsWrapper/</guid>
-      <description>View Implementation    Base Class: ObjectWrapper
- _NODISCARD bool IsNull() const     
+      <description>View Implementation    _NODISCARD bool IsNull() const     
 operator bool() const     
 float GetMaxSampleAge()     
 void SetMaxSampleAge(float newMaxSampleAge)        Parameter Type Description     newMaxSampleAge float &amp;mdash;    
@@ -80,8 +79,7 @@ void SetRecordRate(float newRecordRate)        Parameter Type Description     n
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PerformanceStats/StartGraphSystemWrapper/</guid>
-      <description>View Implementation    Base Class: ObjectWrapper
- _NODISCARD bool IsNull() const     
+      <description>View Implementation    _NODISCARD bool IsNull() const     
 operator bool() const     
 float GetGraphSampleTime()     
 void SetGraphSampleTime(float newGraphSampleTime)        Parameter Type Description     newGraphSampleTime float &amp;mdash;    
@@ -95,8 +93,7 @@ void SetGraphLevel(unsigned char newGraphLevel)        Parameter Type Descripti
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PerformanceStats/StatGraphSystemWrapper/</guid>
-      <description>View Implementation    Base Class: ObjectWrapper
- _NODISCARD bool IsNull() const     
+      <description>View Implementation    _NODISCARD bool IsNull() const     
 operator bool() const     
 float GetGraphSampleTime()     
 void SetGraphSampleTime(float newGraphSampleTime)        Parameter Type Description     newGraphSampleTime float &amp;mdash;    
@@ -110,8 +107,7 @@ void SetGraphLevel(unsigned char newGraphLevel)        Parameter Type Descripti
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PerformanceStats/StatGraphWrapper/</guid>
-      <description>View Implementation    Base Class: ObjectWrapper
- _NODISCARD bool IsNull() const     
+      <description>View Implementation    _NODISCARD bool IsNull() const     
 operator bool() const     
 SampleRecordSettingsWrapper GetRecordSettings()     
 void SetRecordSettings(SampleRecordSettingsWrapper newRecordSettings)        Parameter Type Description     newRecordSettings SampleRecordSettingsWrapper &amp;mdash;    

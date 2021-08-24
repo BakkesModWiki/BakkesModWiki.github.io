@@ -11,8 +11,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/AIControllerWrapper/</guid>
-      <description>View Implementation    Base Class: ControllerWrapper
- void DoNothing()    Does Nothing</description>
+      <description>View Implementation    void DoNothing()    Does Nothing</description>
     </item>
     
     <item>
@@ -66,8 +65,7 @@ void DrawBox(Vector2 size)        Parameter Type Description     size Vector2 &
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/ControllerWrapper/</guid>
-      <description>View Implementation    Base Class: ActorWrapper
- PlayerReplicationInfoWrapper GetPlayerReplicationInfo()</description>
+      <description>View Implementation    PlayerReplicationInfoWrapper GetPlayerReplicationInfo()</description>
     </item>
     
     <item>
@@ -110,8 +108,7 @@ int getIntValue()</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GuiManagerWrapper/</guid>
-      <description>View Implementation    Base Class: ObjectWrapper
- CONSTRUCTORS(GuiManagerWrapper)        Parameter Type Description     GuiManagerWrapper &amp;mdash;     
+      <description>View Implementation    CONSTRUCTORS(GuiManagerWrapper)        Parameter Type Description     GuiManagerWrapper &amp;mdash;     
 void * GetImGuiStyle()     
 std::tuple&amp;lt; int, ImFont * &amp;gt; LoadFont(std::string name, std::string path, int size, const ImFontConfig *=nullptr, const ImWchar *=nullptr)        Parameter Type Description     name std::string &amp;mdash;   path std::string &amp;mdash;   size int &amp;mdash;   const ImFontConfig * &amp;mdash;    const ImWchar * &amp;mdash;</description>
     </item>
@@ -135,12 +132,12 @@ bool IsLoadedForCanvas()</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/MatchmakingWrapper/</guid>
-      <description>View Implementation    Base Class: ObjectWrapper
- _NODISCARD bool IsNull() const     
+      <description>View Implementation    _NODISCARD bool IsNull() const     
 operator bool() const     
 bool IsSearching()     
 int GetActiveViewTab()     
-void SetRegionSelection(Region region, bool bSelected)        Parameter Type Description     region Region &amp;mdash;   bSelected bool &amp;mdash;</description>
+void SetRegionSelection(Region region, bool bSelected)        Parameter Type Description     region Region &amp;mdash;   bSelected bool &amp;mdash;    
+void SetPlaylistSelection(Playlist playlist, bool bSelected)        Parameter Type Description     playlist Playlist &amp;mdash;   bSelected bool &amp;mdash;</description>
     </item>
     
     <item>
@@ -149,8 +146,7 @@ void SetRegionSelection(Region region, bool bSelected)        Parameter Type De
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/MMRWrapper/</guid>
-      <description>View Implementation    Base Class: ObjectWrapper
- CONSTRUCTORS(MMRWrapper)        Parameter Type Description     MMRWrapper &amp;mdash;     
+      <description>View Implementation    CONSTRUCTORS(MMRWrapper)        Parameter Type Description     MMRWrapper &amp;mdash;     
 bool IsSyncing(SteamID playerID)        Parameter Type Description     playerID SteamID &amp;mdash;    
 bool IsSynced(SteamID playerID, int playlistID)        Parameter Type Description     playerID SteamID &amp;mdash;   playlistID int &amp;mdash;</description>
     </item>
@@ -161,11 +157,11 @@ bool IsSynced(SteamID playerID, int playlistID)        Parameter Type Descripti
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/PlayerControllerWrapper/</guid>
-      <description>View Implementation    Base Class: ActorWrapper
- CarWrapper GetCar()     
+      <description>View Implementation    CarWrapper GetCar()     
 void SetCar(CarWrapper newCar)        Parameter Type Description     newCar CarWrapper &amp;mdash;    
 PriWrapper GetPRI()     
-void SetPRI(PriWrapper newPRI)        Parameter Type Description     newPRI PriWrapper &amp;mdash;</description>
+void SetPRI(PriWrapper newPRI)        Parameter Type Description     newPRI PriWrapper &amp;mdash;    
+ControllerInput GetVehicleInput()</description>
     </item>
     
     <item>
@@ -174,8 +170,7 @@ void SetPRI(PriWrapper newPRI)        Parameter Type Description     newPRI Pri
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/PluginManagerWrapper/</guid>
-      <description>View Implementation    Base Class: ObjectWrapper
- CONSTRUCTORS(PluginManagerWrapper)        Parameter Type Description     PluginManagerWrapper &amp;mdash;     
+      <description>View Implementation    CONSTRUCTORS(PluginManagerWrapper)        Parameter Type Description     PluginManagerWrapper &amp;mdash;     
 BakkesMod::Plugin::LoadedPlugin GetLoadedPlugins()</description>
     </item>
     
@@ -185,11 +180,11 @@ BakkesMod::Plugin::LoadedPlugin GetLoadedPlugins()</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/ReplayServerWrapper/</guid>
-      <description>View Implementation    Base Class: ServerWrapper
- ReplayServerWrapper(const ReplayServerWrapper &amp;amp;other)        Parameter Type Description     other ReplayServerWrapper &amp;mdash;    
+      <description>View Implementation    ReplayServerWrapper(const ReplayServerWrapper &amp;amp;other)        Parameter Type Description     other ReplayServerWrapper &amp;mdash;    
 ReplayServerWrapper operator=()        Parameter Type Description     rhs ReplayServerWrapper &amp;mdash;    
 ~ReplayServerWrapper()     
-ActorWrapper GetViewTarget()</description>
+ActorWrapper GetViewTarget()     
+ReplayWrapper GetReplay()</description>
     </item>
     
     <item>

@@ -11,11 +11,11 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/AirControlComponentWrapper/</guid>
-      <description>View Implementation    Base Class: CarComponentWrapper
- Rotator GetAirTorque()     
+      <description>View Implementation    Rotator GetAirTorque()     
 void SetAirTorque(Rotator newAirTorque)        Parameter Type Description     newAirTorque Rotator &amp;mdash;    
 Rotator GetAirDamping()     
-void SetAirDamping(Rotator newAirDamping)        Parameter Type Description     newAirDamping Rotator &amp;mdash;</description>
+void SetAirDamping(Rotator newAirDamping)        Parameter Type Description     newAirDamping Rotator &amp;mdash;    
+float GetThrottleForce()</description>
     </item>
     
     <item>
@@ -24,11 +24,11 @@ void SetAirDamping(Rotator newAirDamping)        Parameter Type Description    
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/BoostWrapper/</guid>
-      <description>View Implementation    Base Class: CarComponentWrapper
- float GetBoostConsumptionRate()     
+      <description>View Implementation    float GetBoostConsumptionRate()     
 void SetBoostConsumptionRate(float newBoostConsumptionRate)        Parameter Type Description     newBoostConsumptionRate float &amp;mdash;    
 float GetMaxBoostAmount()     
-void SetMaxBoostAmount(float newMaxBoostAmount)        Parameter Type Description     newMaxBoostAmount float &amp;mdash;</description>
+void SetMaxBoostAmount(float newMaxBoostAmount)        Parameter Type Description     newMaxBoostAmount float &amp;mdash;    
+float GetStartBoostAmount()</description>
     </item>
     
     <item>
@@ -37,8 +37,7 @@ void SetMaxBoostAmount(float newMaxBoostAmount)        Parameter Type Descripti
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/CarComponentWrapper/</guid>
-      <description>View Implementation    Base Class: ActorWrapper
- FXActorWrapper GetFXActorArchetype()     
+      <description>View Implementation    FXActorWrapper GetFXActorArchetype()     
 void SetFXActorArchetype(FXActorWrapper newFXActorArchetype)        Parameter Type Description     newFXActorArchetype FXActorWrapper &amp;mdash;    
 unsigned long GetbDisabled()     
 void SetbDisabled(unsigned long newbDisabled)        Parameter Type Description     newbDisabled unsigned long &amp;mdash;</description>
@@ -50,11 +49,11 @@ void SetbDisabled(unsigned long newbDisabled)        Parameter Type Description
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/DodgeComponentWrapper/</guid>
-      <description>View Implementation    Base Class: CarComponentWrapper
- float GetDodgeInputThreshold()     
+      <description>View Implementation    float GetDodgeInputThreshold()     
 void SetDodgeInputThreshold(float newDodgeInputThreshold)        Parameter Type Description     newDodgeInputThreshold float &amp;mdash;    
 float GetSideDodgeImpulse()     
-void SetSideDodgeImpulse(float newSideDodgeImpulse)        Parameter Type Description     newSideDodgeImpulse float &amp;mdash;</description>
+void SetSideDodgeImpulse(float newSideDodgeImpulse)        Parameter Type Description     newSideDodgeImpulse float &amp;mdash;    
+float GetSideDodgeImpulseMaxSpeedScale()</description>
     </item>
     
     <item>
@@ -63,8 +62,7 @@ void SetSideDodgeImpulse(float newSideDodgeImpulse)        Parameter Type Descr
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/DoubleJumpComponentWrapper/</guid>
-      <description>View Implementation    Base Class: CarComponentWrapper
- void SetJumpImpulse(float newJumpImpulse)        Parameter Type Description     newJumpImpulse float &amp;mdash;    
+      <description>View Implementation    void SetJumpImpulse(float newJumpImpulse)        Parameter Type Description     newJumpImpulse float &amp;mdash;    
 float GetImpulseScale()     
 void SetImpulseScale(float newImpulseScale)        Parameter Type Description     newImpulseScale float &amp;mdash;    
 void ApplyForces(float ActiveTime)        Parameter Type Description     ActiveTime float &amp;mdash;</description>
@@ -76,11 +74,11 @@ void ApplyForces(float ActiveTime)        Parameter Type Description     Active
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/FlipCarComponentWrapper/</guid>
-      <description>View Implementation    Base Class: CarComponentWrapper
- float GetFlipCarImpulse()     
+      <description>View Implementation    float GetFlipCarImpulse()     
 void SetFlipCarImpulse(float newFlipCarImpulse)        Parameter Type Description     newFlipCarImpulse float &amp;mdash;    
 float GetFlipCarTorque()     
-void SetFlipCarTorque(float newFlipCarTorque)        Parameter Type Description     newFlipCarTorque float &amp;mdash;</description>
+void SetFlipCarTorque(float newFlipCarTorque)        Parameter Type Description     newFlipCarTorque float &amp;mdash;    
+float GetFlipCarTime()</description>
     </item>
     
     <item>
@@ -89,11 +87,11 @@ void SetFlipCarTorque(float newFlipCarTorque)        Parameter Type Description
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/JumpComponentWrapper/</guid>
-      <description>View Implementation    Base Class: CarComponentWrapper
- float GetMinJumpTime()     
+      <description>View Implementation    float GetMinJumpTime()     
 void SetMinJumpTime(float newMinJumpTime)        Parameter Type Description     newMinJumpTime float &amp;mdash;    
 float GetJumpImpulse()     
-void SetJumpImpulse(float newJumpImpulse)        Parameter Type Description     newJumpImpulse float &amp;mdash;</description>
+void SetJumpImpulse(float newJumpImpulse)        Parameter Type Description     newJumpImpulse float &amp;mdash;    
+float GetJumpForce()</description>
     </item>
     
     <item>
@@ -102,12 +100,12 @@ void SetJumpImpulse(float newJumpImpulse)        Parameter Type Description    
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/PrimitiveComponentWrapper/</guid>
-      <description>View Implementation    Base Class: ObjectWrapper
- _NODISCARD bool IsNull() const     
+      <description>View Implementation    _NODISCARD bool IsNull() const     
 operator bool() const     
 unsigned char GetRBChannel()     
 void SetRBChannel(unsigned char newRBChannel)        Parameter Type Description     newRBChannel unsigned char &amp;mdash;    
-unsigned char GetRBDominanceGroup()</description>
+unsigned char GetRBDominanceGroup()     
+void SetRBDominanceGroup(unsigned char newRBDominanceGroup)        Parameter Type Description     newRBDominanceGroup unsigned char &amp;mdash;</description>
     </item>
     
     <item>
@@ -116,13 +114,13 @@ unsigned char GetRBDominanceGroup()</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/VehicleSimWrapper/</guid>
-      <description>View Implementation    Base Class: ObjectWrapper
- _NODISCARD bool IsNull() const     
+      <description>View Implementation    _NODISCARD bool IsNull() const     
 operator bool() const     
 ArrayWrapper GetWheels()     
 float GetDriveTorque()     
 void SetDriveTorque(float newDriveTorque)        Parameter Type Description     newDriveTorque float &amp;mdash;    
-float GetBrakeTorque()</description>
+float GetBrakeTorque()     
+void SetBrakeTorque(float newBrakeTorque)        Parameter Type Description     newBrakeTorque float &amp;mdash;</description>
     </item>
     
     <item>
@@ -131,8 +129,7 @@ float GetBrakeTorque()</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/WheelWrapper/</guid>
-      <description>View Implementation    Base Class: ObjectWrapper
- _NODISCARD bool IsNull() const     
+      <description>View Implementation    _NODISCARD bool IsNull() const     
 operator bool() const     
 float GetSteerFactor()     
 void SetSteerFactor(float newSteerFactor)        Parameter Type Description     newSteerFactor float &amp;mdash;    

@@ -11,8 +11,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Kismet/SequenceObjectWrapper/</guid>
-      <description>View Implementation    Base Class: ObjectWrapper
- _NODISCARD bool IsNull() const     
+      <description>View Implementation    _NODISCARD bool IsNull() const     
 operator bool() const     
 SequenceWrapper GetParentSequence()     
 UnrealStringWrapper GetObjName()     
@@ -26,8 +25,7 @@ UnrealStringWrapper GetObjComment()</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Kismet/SequenceOpWrapper/</guid>
-      <description>  View Implementation    Base Class: SequenceObjectWrapper
- </description>
+      <description>  View Implementation    </description>
     </item>
     
     <item>
@@ -36,8 +34,7 @@ UnrealStringWrapper GetObjComment()</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Kismet/SequenceVariableWrapper/</guid>
-      <description>View Implementation    Base Class: SequenceObjectWrapper
- std::string GetVarName()     
+      <description>View Implementation    std::string GetVarName()     
 bool IsInt()     
 bool IsFloat()     
 bool IsString()     
@@ -54,8 +51,7 @@ float GetFloat()</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Kismet/SequenceWrapper/</guid>
-      <description>View Implementation    Base Class: SequenceOpWrapper
- ArrayWrapper GetSequenceObjects()     
+      <description>View Implementation    ArrayWrapper GetSequenceObjects()     
 ArrayWrapper GetNestedSequences()     
 int ActivateRemoteEvents(const std::string &amp;amp;remote_event_name) const        Parameter Type Description     remote_event_name const std::string &amp;amp; &amp;mdash;    
 SequenceVariableWrapper GetAllSequenceVariables()        Parameter Type Description     reqursive bool &amp;mdash;</description>

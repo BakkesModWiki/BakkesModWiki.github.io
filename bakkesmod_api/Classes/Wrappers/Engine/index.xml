@@ -11,8 +11,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Engine/ActorWrapper/</guid>
-      <description>View Implementation    Base Class: ObjectWrapper
- Vector GetLocation()     
+      <description>View Implementation    Vector GetLocation()     
 void SetLocation(const Vector location)        Parameter Type Description     location Vector &amp;mdash;    
 Vector GetVelocity()     
 void SetVelocity(const Vector velocity)        Parameter Type Description     velocity Vector &amp;mdash;</description>
@@ -24,12 +23,12 @@ void SetVelocity(const Vector velocity)        Parameter Type Description     v
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Engine/EngineTAWrapper/</guid>
-      <description>View Implementation    Base Class: ObjectWrapper
- _NODISCARD bool IsNull() const     
+      <description>View Implementation    _NODISCARD bool IsNull() const     
 operator bool() const     
 unsigned long GetbEnableClientPrediction()     
 void SetbEnableClientPrediction(unsigned long newbEnableClientPrediction)        Parameter Type Description     newbEnableClientPrediction unsigned long &amp;mdash;    
-unsigned long GetbClientPhysicsUpdate()</description>
+unsigned long GetbClientPhysicsUpdate()     
+void SetbClientPhysicsUpdate(unsigned long newbClientPhysicsUpdate)        Parameter Type Description     newbClientPhysicsUpdate unsigned long &amp;mdash;</description>
     </item>
     
     <item>
@@ -47,8 +46,7 @@ unsigned long GetbClientPhysicsUpdate()</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Engine/UnrealStringWrapper/</guid>
-      <description>View Implementation    Base Class: ArrayWrapper&amp;lt; wchar_t &amp;gt;
- std::string ToString()     
+      <description>View Implementation    std::string ToString()     
 std::wstring ToWideString()     
 bool IsNull()     
 operator bool()</description>
@@ -60,8 +58,7 @@ operator bool()</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Engine/WorldInfoWrapper/</guid>
-      <description>View Implementation    Base Class: ActorWrapper
- float GetTimeDilation()     
+      <description>View Implementation    float GetTimeDilation()     
 float GetDemoPlayTimeDilation()     
 float GetTimeSeconds()     
 float GetRealTimeSeconds()     

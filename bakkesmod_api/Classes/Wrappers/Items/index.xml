@@ -11,11 +11,11 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/ItemsWrapper/</guid>
-      <description>View Implementation    Base Class: ObjectWrapper
- ItemsWrapper(const ItemsWrapper &amp;amp;other)        Parameter Type Description     other ItemsWrapper &amp;mdash;    
+      <description>View Implementation    ItemsWrapper(const ItemsWrapper &amp;amp;other)        Parameter Type Description     other ItemsWrapper &amp;mdash;    
 ItemsWrapper operator=()        Parameter Type Description     rhs ItemsWrapper &amp;mdash;    
 ~ItemsWrapper()     
-bool IsNull()</description>
+bool IsNull()     
+operator bool()</description>
     </item>
     
     <item>
@@ -24,8 +24,7 @@ bool IsNull()</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/LoadoutWrapper/</guid>
-      <description>View Implementation    Base Class: ObjectWrapper
- _NODISCARD bool IsNull() const     
+      <description>View Implementation    _NODISCARD bool IsNull() const     
 operator bool() const     
 ArrayWrapper GetLoadout()     
 ArrayWrapper GetOnlineLoadout()     
@@ -41,13 +40,13 @@ int GetAccentFinishId()</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/OnlineProductWrapper/</guid>
-      <description>View Implementation    Base Class: ObjectWrapper
- _NODISCARD bool IsNull() const     
+      <description>View Implementation    _NODISCARD bool IsNull() const     
 operator bool() const     
 std::string SeriesIdToSeriesName(int seriesID)        Parameter Type Description     seriesID int &amp;mdash;    
 int GetProductID()     
 int GetSeriesID()     
-int GetTradeHold()</description>
+int GetTradeHold()     
+std::string GetProductSeries()</description>
     </item>
     
     <item>
@@ -56,8 +55,7 @@ int GetTradeHold()</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/ProductSlotWrapper/</guid>
-      <description>View Implementation    Base Class: ObjectWrapper
- _NODISCARD bool IsNull() const     
+      <description>View Implementation    _NODISCARD bool IsNull() const     
 operator bool() const     
 UnrealStringWrapper GetLabel()     
 UnrealStringWrapper GetPluralLabel()     
@@ -72,8 +70,7 @@ int GetSlotIndex()</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/ProductTemplateWrapper/</guid>
-      <description>View Implementation    Base Class: ObjectWrapper
- _NODISCARD bool IsNull() const     
+      <description>View Implementation    _NODISCARD bool IsNull() const     
 operator bool() const     
 ProductSlotWrapper GetSlot()     
 unsigned char GetUnlockMethod()     
@@ -88,8 +85,7 @@ unsigned long GetbLicensed()</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/ProductTradeInWrapper/</guid>
-      <description>View Implementation    Base Class: ObjectWrapper
- ArrayWrapper GetProducts()     
+      <description>View Implementation    ArrayWrapper GetProducts()     
 _NODISCARD bool IsNull() const     
 operator bool() const</description>
     </item>
@@ -100,8 +96,7 @@ operator bool() const</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/ProductWrapper/</guid>
-      <description>View Implementation    Base Class: ProductTemplateWrapper
- bool IsNull()     
+      <description>View Implementation    bool IsNull()     
 operator bool()     
 std::string GetAssetPackageName()     
 UnrealStringWrapper GetAssetPath()     
@@ -118,8 +113,7 @@ UnrealStringWrapper GetDisplayLabelSlot()</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/TradeWrapper/</guid>
-      <description>View Implementation    Base Class: ObjectWrapper
- Currency GetReceivingCurrency() const     
+      <description>View Implementation    Currency GetReceivingCurrency() const     
 Currency GetSendingCurrency() const     
 ArrayWrapper GetReceivingProducts()     
 ArrayWrapper GetSendingProducts()     
