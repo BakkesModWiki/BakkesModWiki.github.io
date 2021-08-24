@@ -39,6 +39,21 @@ function GitHubLinkFromLocalPath(localPath) {
     return "https://github.com/bakkesmodorg/BakkesModSDK/blob/master/" + substrdPath;
 }
 
+function findXmlObjectById(obj, id) {
+    let foundObject = false;
+
+    _.each(obj, o => {
+        if (foundObject) return;
+        foundObject = o.$ ? (o.$.id === id ? o : false) : false;
+        if (foundObject) return;
+
+        if (_.isObjectLike(o)) {
+            foundObject = findXmlObjectById(o, id);
+        }
+    });
+    return foundObject;
+}
+
 function xml2jsPromiseWrapper(string) {
     return xml2js.parseStringPromise(string);
 }
@@ -148,6 +163,28 @@ async function main() {
                 defObject.Parents = ["Structs", ...sdkLocation],
                 foundDefs.Structs[item.name[0]] = defObject;
                 pathsMap[item.name[0]] = [...foundDefs.Structs[item.name[0]].Parents, item.name[0]].join("/")
+            } else if (item.$.kind === "file") {
+                if (item.member) {
+                    for (let i = 0; i < item.member.length; i++) {
+                        let mem = item.member[i];
+                        if (mem.$.kind === "enum") {
+                            let memberXml = await getXmlFromString(fs.readFileSync(`_doxygen/xml/${item.$.refid}.xml`));
+                            let foundObj = findXmlObjectById(memberXml, mem.$.refid);
+                            if (foundObj && foundObj.name[0].substring(0, 1) !== "@") { // Substring check due to some having no names https://github.com/bakkesmodorg/BakkesModSDK/blob/master/include/bakkesmod/plugin/bakkesmodsdk.h#L13
+                                let enumObj = {
+                                    EnumName: foundObj.name[0],
+                                    GitHubPath: GitHubLinkFromLocalPath(foundObj.location[0].$.file) + `#L${foundObj.location[0].$.line}`,
+                                    Parents: ["Enums"],
+                                    Values: {}
+                                }
+                                _.each(foundObj.enumvalue, ev => {
+                                    enumObj.Values[ev.name[0]] = ev.initializer[0]
+                                });
+                                foundDefs.Enums[foundObj.name[0]] = enumObj;
+                            }
+                        }
+                    }
+                }
             }
             resolve();
         }));
@@ -162,6 +199,9 @@ async function main() {
 
 function createHugoPages() {
     _.each(foundDefs, (defTop, defTopName) => {
+        if (fs.existsSync(hugoBaseSdkPath + defTopName)) {
+            fs.rmdirSync(hugoBaseSdkPath + defTopName, { recursive: true });
+        }
         _.each(defTop, (itemData, itemName) => {
             let parentPath = [];
             let fullPath = "";
