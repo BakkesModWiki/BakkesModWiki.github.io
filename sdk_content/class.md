@@ -1,6 +1,8 @@
 ---
 title: {{ ClassName }}
 weight: 2
+showEditOverride: false{% if BaseClass %}
+baseClass: "<a href=\"/bakkesmod_api/{{PathMap[BaseClass]}}\">{{BaseClass}}</a>"{% endif %}
 ---
 \{\{< button href="{{GitHubPath}}" target="_blank" >\}\}\{\{< icon "github" >\}\} View Implementation\{\{< /button >\}\}
 {% if Description | length > 0 %}
@@ -9,13 +11,6 @@ weight: 2
 {% endif %}
 
 ---
-
-{% if BaseClass %}
-Base Class: [{{BaseClass}}](/bakkesmod_api/{{PathMap[BaseClass]}})
-
----
-
-{% endif %}
 
 {% for FieldName, Field in Fields %}
 {% if PathMap[Field.Type] %}

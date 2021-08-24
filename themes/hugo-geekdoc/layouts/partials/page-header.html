@@ -20,6 +20,7 @@
 
 {{ $showBreadcrumb := (and (default true .Page.Params.GeekdocBreadcrumb) (default true .Site.Params.GeekdocBreadcrumb)) }}
 {{ $showEdit := (and ($.Scratch.Get "geekdocFilePath") $geekdocRepo $geekdocEditPath) }}
+{{ $showEditOverride := default true (.Page.Params.showEditOverride) }}
 <div class="gdoc-page__header flex flex-wrap
     {{ if $showBreadcrumb }} justify-between {{ else }} justify-end {{ end }}
     {{ if not $showEdit }} hidden-mobile {{ end }}
@@ -35,14 +36,16 @@
         </ol>
     </div>
     {{ end }}
-    {{ if $showEdit }}
-    <div>
-        <span class="editpage">
-            <svg class="icon gdoc_code"><use xlink:href="#gdoc_code"></use></svg>
-            <a href="{{ $geekdocRepo }}/{{ path.Join $geekdocEditPath ($.Scratch.Get "geekdocFilePath") }}" target="_blank">
-                View on GitHub
-            </a>
-        </span>
-    </div>
+    {{ if $showEditOverride }}
+        {{ if $showEdit }}
+        <div>
+            <span class="editpage">
+                <svg class="icon gdoc_code"><use xlink:href="#gdoc_code"></use></svg>
+                <a href="{{ $geekdocRepo }}/{{ path.Join $geekdocEditPath ($.Scratch.Get "geekdocFilePath") }}" target="_blank">
+                    View on GitHub
+                </a>
+            </span>
+        </div>
+        {{ end }}
     {{ end }}
 </div>
