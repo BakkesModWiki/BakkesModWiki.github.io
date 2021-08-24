@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "sdkgen": "node ./sdk-document-gen.js --unhandled-rejections=strict",
     "static": "hugo -D",
-    "dev": "hugo server -D"
+    "dev": "hugo server -D",
+    "get-doxygen": "curl https://www.doxygen.nl/files/doxygen-1.9.2.linux.bin.tar.gz | tar -xz"
   },
   "repository": {
     "type": "git",

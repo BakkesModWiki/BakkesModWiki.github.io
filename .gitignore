@@ -5,6 +5,7 @@ node_modules/
 public/
 resources/_gen/
 _bakkesmod_sdk_parsed_output.json
+/doxygen*
 
 # Ignore all generated content except indexes
 content/bakkesmod_api/**/*.*

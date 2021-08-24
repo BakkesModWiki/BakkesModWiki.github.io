@@ -64,7 +64,11 @@ async function main() {
         doxyFile = doxyFile.replace(/\{\{CURRENT_DIR\}\}/g, process.cwd());
 
         fs.writeFileSync("Doxyfile_2", doxyFile);
-        child_process.execSync(`"C:\\Program Files\\doxygen\\bin\\doxygen.exe" Doxyfile_2`);
+        if (process.platform === "win32") {
+            child_process.execSync(`"C:\\Program Files\\doxygen\\bin\\doxygen.exe" Doxyfile_2`);
+        } else {
+            child_process.execSync(`./doxygen-1.9.2/bin/doxygen Doxyfile_2`);
+        }
     }
 
     let doxygenIndex = await getXmlFromString(fs.readFileSync("_doxygen/xml/index.xml", "utf8"));

@@ -14,7 +14,7 @@ jobs:
         with:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
- 
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
@@ -22,7 +22,7 @@ jobs:
           # extended: true
 
       - name: Build
-        run: npm ci && npm run sdkgen && hugo -b https://bakkesmodwiki.github.io/
+        run: npm ci && npm run get-doxygen && npm run sdkgen && hugo -b https://bakkesmodwiki.github.io/
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
