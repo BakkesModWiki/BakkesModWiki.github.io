@@ -1,15 +1,23 @@
 const refreshLocalSdk = true;
+const hugoBaseSdkPath = "content/bakkesmod_api/"
 //------
 
 const fs = require('fs');
 const _ = require('lodash');
-const yaml = require('yaml');
-const glob = require('glob');
 const child_process = require('child_process');
 const nunjucks = require('nunjucks');
+const xml2js = require('xml2js');
 
 let timeStart = +(Date.now());
 nunjucks.configure("sdk_content");
+
+let pathsMap = {};
+let foundDefs = {
+    Enums: {},
+    Constants: {},
+    Classes: {},
+    Structs: {},
+};
 
 let manualDescriptions = JSON.parse(fs.readFileSync("sdk-manual-descriptions.json", "utf8"));
 function drillDescriptions(defs, manualDescLevel) {
@@ -25,186 +33,163 @@ function drillDescriptions(defs, manualDescLevel) {
         }
     });
 }
-function getLinenumberHash(input, index, additionalLineOffset) {
-    additionalLineOffset = additionalLineOffset || 0;
 
-    let lookAt = input.substring(0, index);
-    lookAt = lookAt.replace(/\r?\n/g, "\n");
-    return `#L${lookAt.split("\n").length+additionalLineOffset}`
+function GitHubLinkFromLocalPath(localPath) {
+    let substrdPath = localPath.substring(localPath.indexOf("/")+1);
+    return "https://github.com/bakkesmodorg/BakkesModSDK/blob/master/" + substrdPath;
 }
 
-if (refreshLocalSdk) {
-    if (fs.existsSync("_bakkesmod_sdk")) {
-        fs.rmdirSync("_bakkesmod_sdk", {
-            recursive: true
-        });
-    }
-    child_process.execSync("git clone https://github.com/bakkesmodorg/BakkesModSDK.git ./_bakkesmod_sdk");
+function xml2jsPromiseWrapper(string) {
+    return xml2js.parseStringPromise(string);
 }
 
-let TagsToCreate = {};
-let foundDefs = {
-    Enums: {},
-    Constants: {},
-    Functions: {},
-    Classes: {},
-    Types: {},
-};
-const hugoBaseSdkPath = "content/bakkesmod_api/"
-let docsSidebarArray = [];
-let pathsMap = {};
+async function getXmlFromString(string) {
+    return await xml2jsPromiseWrapper(string);
+}
 
-let skipFiles = [
-    "_bakkesmod_sdk/include/bakkesmod/wrappers/arraywrapper.h"
-];
-
-let files = glob.sync("_bakkesmod_sdk/include/bakkesmod/**/*.h");
-_.each(files, file => {
-    if (skipFiles.some(x => x === file)) {
-        return;
-    }
-    console.log(file);
-
-    let sdkGithubLink = file.substring(file.indexOf("/")+1);
-    let sdkLocation = sdkGithubLink.split("/").slice(2) //For tags
-    sdkLocation.pop();
-    _.each(sdkLocation, (name, i) => {
-        sdkLocation[i] = _.upperFirst(name);
-    })
-    sdkGithubLink = "https://github.com/bakkesmodorg/BakkesModSDK/blob/master/" + sdkGithubLink;
-
-    const tokenRegexes = {
-        defineConstants: {Rgx: /#define\s+(?<ConstName>\w+?)\s+?(?<ConstValue>[^\s].+?)\s*$/gm},
-        enumOutter: {Rgx: /enum\s+(?<EnumName>\w+?)[\s\n]+{(?<EnumInner>[\s\S]+?)}/gm},
-        enumInner: {Rgx: /^\s*?(?<EnumKey>\w+?)(?:\s*?=\s*?(?<EnumValue>(-)?\d+?))?\s*?(?:,)?\s*?$/gm},
-        comments: {Rgx: /\/\/.+/gm},
-        fieldParams: {Rgx: /^((?:(?<Keyword>\w+?)\s+?)?(?<Type>\w+?)\s+?(?<Variable>\w+?))$/gm},
-        fieldDefinition: {Rgx: /^\s+(?<FieldType>.+)\s+(?<FieldName>\w+)\((?<FieldParams>.*)\);(?:\s+\/\/.*)?$/gm},
-        wrapperClass: {Rgx: /class BAKKESMOD_PLUGIN_IMPORT (?<WrapperClass>\w+)(\s+:\s+public\s+(?<WrapperSuperClass>\S+))?[\s]+{/gm}
-    };
-
-    let r = fs.readFileSync(file, "utf8");
-    r = r.replace(tokenRegexes.comments.Rgx, ""); //Comments don't matter for our generation purposes
-
-    //-- Enums
-    let enumMatches = [...r.matchAll(tokenRegexes.enumOutter.Rgx)];
-    if (enumMatches.length > 0) {
-        _.each(enumMatches, em => {
-            let enumValues = [...em.groups.EnumInner.matchAll(tokenRegexes.enumInner.Rgx)];
-            let enumValuesMap = {};
-            _.each(enumValues, enumValue => {
-                enumValuesMap[enumValue.groups.EnumKey] = _.isUndefined(enumValue.groups.EnumValue) ? "" : enumValue.groups.EnumValue;
+async function main() {
+    if (refreshLocalSdk) {
+        if (fs.existsSync("_bakkesmod_sdk")) {
+            fs.rmdirSync("_bakkesmod_sdk", {
+                recursive: true
             });
-            foundDefs.Enums[em.groups.EnumName] = {
-                EnumName: em.groups.EnumName,
-                GitHubPath: sdkGithubLink + getLinenumberHash(r, em.index),
-                Parents: ["Enums"],
-                Values: enumValuesMap
-            };
+        }
+        if (fs.existsSync("_doxygen")) {
+            fs.rmdirSync("_doxygen", {
+                recursive: true
+            });
+        }
+        child_process.execSync("git clone https://github.com/bakkesmodorg/BakkesModSDK.git ./_bakkesmod_sdk");
+        let doxyFile = fs.readFileSync("Doxyfile", "utf8");
+        doxyFile = doxyFile.replace(/\{\{CURRENT_DIR\}\}/g, process.cwd());
 
-            pathsMap[em.groups.EnumName] = [...foundDefs.Enums[em.groups.EnumName].Parents, em.groups.EnumName].join("/")
-        });
+        fs.writeFileSync("Doxyfile_2", doxyFile);
+        child_process.execSync(`"C:\\Program Files\\doxygen\\bin\\doxygen.exe" Doxyfile_2`);
     }
 
-    //-- Constants
-    let constantMatches = [...r.matchAll(tokenRegexes.defineConstants.Rgx)]
-    if (constantMatches.length > 0) {
-        _.each(constantMatches, cm => {
-            foundDefs.Constants[cm.groups.ConstName] = {
-                ConstantName: cm.groups.ConstName,
-                GitHubPath: sdkGithubLink + getLinenumberHash(r, cm.index),
-                Parents: ["Constants"],
-                Value: cm.groups.ConstValue
-            };
-            pathsMap[cm.groups.ConstName] = [...foundDefs.Constants[cm.groups.ConstName].Parents, cm.groups.ConstName].join("/")
-        });
-    }
-
-    //-- Classes
-    let classMatches = [...r.matchAll(tokenRegexes.wrapperClass.Rgx)]
-    if (classMatches.length > 0) {
-        if (classMatches.length > 1) {
-            throw new Error(`Found multiple classes defined in the same file: ${file}`);
+    let doxygenIndex = await getXmlFromString(fs.readFileSync("_doxygen/xml/index.xml", "utf8"));
+    let allPromises = [];
+    _.each(doxygenIndex.doxygenindex.compound, item => {
+        let disallowedFilenameCharsRe = /[<>:"/\\|?*]/; //https://docs.microsoft.com/en-us/windows/win32/fileio/naming-a-file#naming-conventions
+        if (!!item.name[0].match(disallowedFilenameCharsRe)) {
+            return; // Soon-to-be File name contains illegal Windows path characters
         }
 
-        let classDefinition = {
-            ClassName: classMatches[0].groups.WrapperClass,
-            GitHubPath: sdkGithubLink + getLinenumberHash(r, classMatches[0].index),
-            SuperClass: classMatches[0].groups.WrapperSuperClass,
-            Parents: ["Classes", ...sdkLocation],
-            Fields: {}
-        }
+        allPromises.push(new Promise(async resolve => {
+            let itemData = await getXmlFromString(fs.readFileSync(`_doxygen/xml/${item.$.refid}.xml`));
+            let itemCompound = itemData.doxygen.compounddef[0];
+            let sdkGithubLink = itemCompound.location[0].$.file.substring(itemCompound.location[0].$.file.indexOf("/")+1);
+            let sdkLocation = sdkGithubLink.split("/").slice(2)
+            sdkLocation.pop();
+            _.each(sdkLocation, (name, i) => {
+                sdkLocation[i] = _.upperFirst(name);
+            })
+            sdkGithubLink = "https://github.com/bakkesmodorg/BakkesModSDK/blob/master/" + sdkGithubLink;
 
-        let classFieldDefinitions = [...r.matchAll(tokenRegexes.fieldDefinition.Rgx)]
-        _.each(classFieldDefinitions, cfd => {
-            let fieldDefinition = {
-                GitHubPath: sdkGithubLink + getLinenumberHash(r, cfd.index, 1),
-                Type: cfd.groups.FieldType,
-                Parameters: []
-            };
-            if (cfd.groups.FieldParams.length > 0) {
-                _.each(cfd.groups.FieldParams.split(","), fp => {
-                    let paramterMatches = [...fp.matchAll(tokenRegexes.fieldParams.Rgx)]
-                    _.each(paramterMatches, pm => {
-                        fieldDefinition.Parameters.push({
-                            Keyword: pm.groups.Keyword,
-                            Type: pm.groups.Type,
-                            Name: pm.groups.Variable
+            let defObject = {
+                ClassName: item.name[0],
+                GitHubPath: sdkGithubLink,
+                BaseClass: undefined,
+            }
+
+            if (item.$.kind === "class") {
+                if (_.has(itemCompound, "basecompoundref")) {
+                    defObject.BaseClass = itemCompound.basecompoundref[0]._;
+                }
+
+                defObject.Parents = ["Classes", ...sdkLocation],
+                defObject.Fields = {};
+                if (itemCompound.sectiondef) {
+                    _.each(itemCompound.sectiondef[0].memberdef, member => {
+                        let field = {
+                            SpecialProperties: {
+                                Kind: member.$.kind,
+                                Protection: member.$.prot,
+                                isStatic: member.$.static === "yes",
+                                isConstan: member.$.const === "yes",
+                                isExplicit: member.$.explicit === "yes",
+                                isInline: member.$.inline === "yes",
+                                isVirtual: member.$.virt !== "non-virtual"
+                            },
+                            Type: _.isString(member.type[0]) ? member.type[0] : member.type[0].ref[0]._,
+                            ArgsString: member.argsstring,
+                            Name: member.name[0],
+                            Params: [],
+                            GitHubPath: GitHubLinkFromLocalPath(member.location[0].$.file) + `#L${member.location[0].$.line}`
+                        };
+                        _.each(member.param, param => {
+                            let paramObj;
+                            if (_.isString(param.type[0])) {
+                                paramObj = {
+                                    Type: param.type[0],
+                                    Name: _.isUndefined(param.declname) ? "" : param.declname[0]
+                                }
+                            } else {
+                                paramObj = {
+                                    Type: param.type[0].ref[0]._,
+                                    TypeKeyword: _.has(param.type[0]._) && param.type[0]._ !== "&" ? param.type[0]._ : "",
+                                    AmpersandAstrisk: _.has(param.type[0]._) && (param.type[0]._ === "&" || param.type[0]._ === "*") ? param.type[0]._ : "",
+                                    Name: _.isUndefined(param.declname) ? "" : param.declname[0]
+                                }
+                            }
+                            field.Params.push(paramObj);
                         });
+                        defObject.Fields[member.name[0]] = field;
                     });
-                })
-            }
-            classDefinition.Fields[cfd.groups.FieldName] = fieldDefinition;
-        });
+                }
+                foundDefs.Classes[item.name[0]] = defObject;
+                pathsMap[item.name[0]] = [...foundDefs.Classes[item.name[0]].Parents, item.name[0]].join("/")
+            } else if (item.$.kind === "struct") {
 
-        foundDefs.Classes[classMatches[0].groups.WrapperClass] = classDefinition;
-        pathsMap[classMatches[0].groups.WrapperClass] = [...foundDefs.Classes[classMatches[0].groups.WrapperClass].Parents, classMatches[0].groups.WrapperClass].join("/")
-    }
-
-    //-- Sidebar
-    _.each(docsSidebarArray, arr => {
-        let parentPath = []
-        _.each(arr.parents, (parent, i) => {
-            let currentPath = hugoBaseSdkPath + [...parentPath, parent].join("/");
-            if (!fs.existsSync(currentPath)) {
-                fs.mkdirSync(currentPath);
-                fs.writeFileSync(currentPath + "/_index.md", "---\ngeekdocCollapseSection: true\nweight: 2\ngeekdocProtected: true\n---");
+                defObject.Parents = ["Structs", ...sdkLocation],
+                foundDefs.Structs[item.name[0]] = defObject;
+                pathsMap[item.name[0]] = [...foundDefs.Structs[item.name[0]].Parents, item.name[0]].join("/")
             }
-            parentPath.push(parent);
+            resolve();
+        }));
+    });
+    await Promise.all(allPromises);
+    drillDescriptions(foundDefs, manualDescriptions);
+    fs.writeFileSync("_bakkesmod_sdk_parsed_output.json", JSON.stringify(foundDefs));
+
+    createHugoPages();
+    cleanup();
+}
+
+function createHugoPages() {
+    _.each(foundDefs, (defTop, defTopName) => {
+        _.each(defTop, (itemData, itemName) => {
+            let parentPath = [];
+            let fullPath = "";
+            _.each(itemData.Parents, (parent, i) => {
+                parentPath.push(parent);
+                let currentPath = hugoBaseSdkPath + [...parentPath].join("/");
+                if (!fs.existsSync(currentPath)) {
+                    fs.mkdirSync(currentPath);
+                }
+                fs.writeFileSync(currentPath + "/_index.md", "---\ngeekdocCollapseSection: true\nweight: 1\ngeekdocProtected: true\n---");
+                fullPath = currentPath;
+            });
+
+            let content = "";
+            itemData.PathMap = pathsMap;
+            if (defTopName === "Enums") {
+                content = nunjucks.render("enum.md", itemData);
+            } else if (defTopName === "Constants") {
+                content = nunjucks.render("constant.md", itemData);
+            } else if (defTopName === "Classes") {
+                content = nunjucks.render("class.md", itemData);
+            }
+            content = content.replace(/\\{/g, "{").replace(/\\}/g, "}");
+            fs.writeFileSync(fullPath + `/${itemName}.md`, content);
         });
     });
+}
 
-});
-drillDescriptions(foundDefs, manualDescriptions);
-fs.writeFileSync("_bakkesmod_sdk_parsed_output.json", JSON.stringify(foundDefs));
+function cleanup() {
+    fs.unlinkSync("Doxyfile_2");
 
-//-- Generate pages
-_.each(foundDefs, (defTop, defTopName) => {
-    _.each(defTop, (itemData, itemName) => {
-        let parentPath = [];
-        let fullPath = "";
-        _.each(itemData.Parents, (parent, i) => {
-            parentPath.push(parent);
-            let currentPath = hugoBaseSdkPath + [...parentPath].join("/");
-            if (!fs.existsSync(currentPath)) {
-                fs.mkdirSync(currentPath);
-            }
-            fs.writeFileSync(currentPath + "/_index.md", "---\ngeekdocCollapseSection: true\nweight: 1\ngeekdocProtected: true\n---");
-            fullPath = currentPath;
-        });
+    console.log(`\n\nGeneration successful! Took ${((+(Date.now())) - timeStart) / 1000}s\n\n`);
+}
 
-        let content = "";
-        itemData.PathMap = pathsMap;
-        if (defTopName === "Enums") {
-            content = nunjucks.render("enum.md", itemData);
-        } else if (defTopName === "Constants") {
-            content = nunjucks.render("constant.md", itemData);
-        } else if (defTopName === "Classes") {
-            content = nunjucks.render("class.md", itemData);
-        }
-        content = content.replace(/\\{/g, "{").replace(/\\}/g, "}");
-        fs.writeFileSync(fullPath + `/${itemName}.md`, content);
-    });
-});
-
-console.log(`Generation successful! Took ${((+(Date.now())) - timeStart) / 1000}s`);
+main();

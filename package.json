@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sdkgen": "node ./sdk-document-gen.js",
+    "sdkgen": "node ./sdk-document-gen.js --unhandled-rejections=strict",
     "static": "hugo -D",
     "dev": "hugo server -D"
   },
@@ -23,6 +23,6 @@
     "glob": "^7.1.7",
     "lodash": "^4.17.21",
     "nunjucks": "^3.2.3",
-    "yaml": "^1.10.2"
+    "xml2js": "^0.4.23"
   }
 }

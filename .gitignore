@@ -1,5 +1,6 @@
 hugo.exe
 _bakkesmod_sdk/
+_doxygen/
 node_modules/
 public/
 resources/_gen/
