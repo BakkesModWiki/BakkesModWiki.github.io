@@ -44,7 +44,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/Playlist/</guid>
-      <description>  View Implementation     CASUAL_STANDARD = 0
+      <description>  View Implementation      CASUAL_STANDARD = 0
   CASUAL_DOUBLES = 1
   CASUAL_DUELS = 2
   CASUAL_CHAOS = 3
@@ -64,7 +64,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/PlaylistCategory/</guid>
-      <description>  View Implementation     CASUAL = 0
+      <description>  View Implementation      CASUAL = 0
   RANKED = 1
   EXTRAS = 2
   </description>
@@ -96,7 +96,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/Region/</guid>
-      <description>  View Implementation     USE = 0
+      <description>  View Implementation      USE = 0
   EU = 1
   USW = 2
   ASC = 3
@@ -130,7 +130,7 @@ ToastType_Info is black, ToastType_OK is green, ToastType_Warning is orange, and
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/TRADEHOLD/</guid>
-      <description>  View Implementation     TRADEHOLD_P2P = -2
+      <description>  View Implementation      TRADEHOLD_P2P = -2
   TRADEHOLD_ALL = -1
   TRADEHOLD_NONE = 0
   </description>
