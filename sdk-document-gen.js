@@ -11,6 +11,8 @@ const xml2js = require('xml2js');
 let timeStart = +(Date.now());
 nunjucks.configure("sdk_content");
 
+let excludeConstants = ["BAKKESMOD_PLUGIN", "BAKKESMOD_PLUGIN_EXPORT", "BAKKESMOD_PLUGIN_IMPORT", "BAKKESMOD_STANDARD_PLUGIN_STUFF", "CONSTRUCTORS", "PIMPL",
+    "GETH", "GETSETH"];
 let pathsMap = {};
 let foundDefs = {
     Enums: {},
@@ -181,6 +183,22 @@ async function main() {
                                     enumObj.Values[ev.name[0]] = ev.initializer[0]
                                 });
                                 foundDefs.Enums[foundObj.name[0]] = enumObj;
+                            }
+                        } else if (mem.$.kind === "define") {
+                            let memberXml = await getXmlFromString(fs.readFileSync(`_doxygen/xml/${item.$.refid}.xml`));
+                            let foundObj = findXmlObjectById(memberXml, mem.$.refid);
+                            if (foundObj) {
+                                if (foundObj.initializer) {
+                                    let constObj = {
+                                        ConstantName: foundObj.name[0],
+                                        GitHubPath: GitHubLinkFromLocalPath(foundObj.location[0].$.file) + `#L${foundObj.location[0].$.line}`,
+                                        Parents: ["Constants"],
+                                        Value: foundObj.initializer[0]
+                                    }
+                                    if (!excludeConstants.includes(foundObj.name[0])) {
+                                        foundDefs.Constants[foundObj.name[0]] = constObj;
+                                    }
+                                }
                             }
                         }
                     }
