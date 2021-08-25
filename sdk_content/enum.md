@@ -12,5 +12,5 @@ showEditOverride: false
 ---
 
 {% for valueName, valueNumber in Values %}
-- {{valueName}} `{{valueNumber}}`
+- {{valueName}} `{{valueNumber | safe}}`
 {% endfor %}
