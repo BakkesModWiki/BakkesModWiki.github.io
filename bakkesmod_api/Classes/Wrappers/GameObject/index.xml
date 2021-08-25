@@ -11,11 +11,10 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/BallWrapper/</guid>
-      <description>View Implementation    float GetLastTouchTime()     
+      <description>View Implementation   Any ball in the match. There can be more than one! The best way to get the ball is by getting a ServerWrapper and calling GetGameBalls()
+ float GetLastTouchTime()     
 PredictionInfo PredictPosition(float timeAhead)        Parameter Type Description     timeAhead float &amp;mdash;    
-FXActorWrapper GetEndOfGameFXArchetype()     
-void SetEndOfGameFXArchetype(FXActorWrapper newEndOfGameFXArchetype)        Parameter Type Description     newEndOfGameFXArchetype FXActorWrapper &amp;mdash;    
-unsigned long GetbAllowPlayerExplosionOverride()</description>
+FXActorWrapper GetEndOfGameFXArchetype()</description>
     </item>
     
     <item>

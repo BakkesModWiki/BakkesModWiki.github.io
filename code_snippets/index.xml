@@ -59,10 +59,8 @@ On BM startup, it&amp;rsquo;ll execute plugins.cfg first to load all plugins, ca
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/code_snippets/plugin_exclusive_logging/</guid>
-      <description>Want to see the console logging from just your plugin? Open a new PowerShell window and use this command
-It may require git for windows https://gitforwindows.org/
-Get-Content (-join($env:APPDATA, &amp;quot;\bakkesmod\bakkesmod\bakkesmod.log&amp;quot;)) -wait -tail 1 | select-string -pattern &amp;quot;PLUGIN_NAME&amp;quot;
- Written by @Broadway#9247</description>
+      <description>Want to see the console logging from just your plugin? Open a new PowerShell window and use this command (It may require git for windows https://gitforwindows.org/)
+Get-Content (-join($env:APPDATA, &amp;quot;\bakkesmod\bakkesmod\bakkesmod.log&amp;quot;)) -wait -tail 1 | select-string -pattern &amp;quot;PLUGIN_NAME&amp;quot; </description>
     </item>
     
     <item>

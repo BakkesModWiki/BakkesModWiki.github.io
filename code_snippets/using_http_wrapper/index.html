@@ -10880,7 +10880,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">CurlRequest</span> <span class="n">req</span><span class="p">;</span>
 <span class="n">req</span><span class="p">.</span><span class="n">url</span> <span class="o">=</span> <span class="s">&#34;https://httpbin.org/anything&#34;</span><span class="p">;</span>
 <span class="n">req</span><span class="p">.</span><span class="n">body</span> <span class="o">=</span> <span class="s">&#34;testing with body&#34;</span><span class="p">;</span>
- 
+
 <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;sending body request&#34;</span><span class="p">);</span>
 <span class="n">HttpWrapper</span><span class="o">::</span><span class="n">SendCurlRequest</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="kt">int</span> <span class="n">code</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">result</span><span class="p">)</span>
 <span class="p">{</span>
@@ -10901,7 +10901,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
     <span class="s">&#34;title&#34;</span><span class="o">:</span> <span class="s">&#34;delectus aut autem&#34;</span><span class="p">,</span>
     <span class="s">&#34;completed&#34;</span><span class="o">:</span> <span class="nb">false</span>
 <span class="p">})</span><span class="n">T</span><span class="s">&#34;;</span>
- 
+
 <span class="n">HttpWrapper</span><span class="o">::</span><span class="n">SendCurlJsonRequest</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="kt">int</span> <span class="n">code</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">result</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;Json result{}&#34;</span><span class="p">,</span> <span class="n">result</span><span class="p">);</span>
@@ -10917,7 +10917,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <span class="n">CurlRequest</span> <span class="n">req</span><span class="p">;</span>
 <span class="n">req</span><span class="p">.</span><span class="n">url</span> <span class="o">=</span> <span class="s">&#34;https://httpbin.org/anything&#34;</span><span class="p">;</span>
 <span class="n">req</span><span class="p">.</span><span class="n">body</span> <span class="o">=</span> <span class="s">&#34;testing body with file output&#34;</span><span class="p">;</span>
- 
+
 <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;sending file output body request&#34;</span><span class="p">);</span>
 <span class="n">HttpWrapper</span><span class="o">::</span><span class="n">SendCurlRequest</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="sa">L</span><span class="s">&#34;file_output_test.txt&#34;</span><span class="p">,</span> <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="kt">int</span> <span class="n">code</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">wstring</span> <span class="n">result</span><span class="p">)</span>
 <span class="p">{</span>
@@ -10935,9 +10935,9 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <span class="n">req</span><span class="p">.</span><span class="n">progress_function</span> <span class="o">=</span> <span class="p">[](</span><span class="kt">double</span> <span class="n">file_size</span><span class="p">,</span> <span class="kt">double</span> <span class="n">downloaded</span><span class="p">,</span> <span class="p">...)</span>
 <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">file_size</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span>
-        <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;Download progress {:.2f}%&#34;</span><span class="p">,</span> <span class="n">downloaded</span> <span class="o">/</span> <span class="n">file_size</span> <span class="o">*</span> <span class="mi">100</span><span class="p">);</span> 
+        <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;Download progress {:.2f}%&#34;</span><span class="p">,</span> <span class="n">downloaded</span> <span class="o">/</span> <span class="n">file_size</span> <span class="o">*</span> <span class="mi">100</span><span class="p">);</span>
 <span class="p">};</span>
- 
+
 <span class="n">HttpWrapper</span><span class="o">::</span><span class="n">SendCurlRequest</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="kt">int</span> <span class="n">code</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">data</span><span class="p">,</span> <span class="n">size_t</span> <span class="n">size</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="n">std</span><span class="o">::</span><span class="n">ofstream</span> <span class="n">out_file</span> <span class="p">{</span><span class="s">&#34;test_image_raw.jpeg&#34;</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">ios_base</span><span class="o">::</span><span class="n">binary</span><span class="p">};</span>
@@ -10953,15 +10953,17 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
     </h2>
 </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">CurlRequest</span> <span class="n">req</span><span class="p">;</span>
 <span class="n">req</span><span class="p">.</span><span class="n">url</span> <span class="o">=</span> <span class="s">&#34;url&#34;</span><span class="p">;</span>
- 
+
 <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;sending raw output image download request&#34;</span><span class="p">);</span>
 <span class="n">HttpWrapper</span><span class="o">::</span><span class="n">SendCurlRequest</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="sa">L</span><span class="s">&#34;test_image.jpeg&#34;</span><span class="p">,</span> <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="kt">int</span> <span class="n">code</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">wstring</span> <span class="n">out_path</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;file image download code: {}&#34;</span><span class="p">,</span> <span class="n">code</span><span class="p">);</span>
 <span class="p">});</span>
-</code></pre></div><hr>
-<p>Written by Martinn</p>
-
+</code></pre></div>
+        
+        <hr>
+        <div>Written by <b>Martinn</b></div>
+        
     </article>
 
                 

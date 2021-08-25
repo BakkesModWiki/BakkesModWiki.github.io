@@ -140,11 +140,10 @@ void DoSpring(unsigned long bFirstHit)        Parameter Type Description     bF
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/BallWrapper/</guid>
-      <description>View Implementation    float GetLastTouchTime()     
+      <description>View Implementation   Any ball in the match. There can be more than one! The best way to get the ball is by getting a ServerWrapper and calling GetGameBalls()
+ float GetLastTouchTime()     
 PredictionInfo PredictPosition(float timeAhead)        Parameter Type Description     timeAhead float &amp;mdash;    
-FXActorWrapper GetEndOfGameFXArchetype()     
-void SetEndOfGameFXArchetype(FXActorWrapper newEndOfGameFXArchetype)        Parameter Type Description     newEndOfGameFXArchetype FXActorWrapper &amp;mdash;    
-unsigned long GetbAllowPlayerExplosionOverride()</description>
+FXActorWrapper GetEndOfGameFXArchetype()</description>
     </item>
     
     <item>
@@ -549,11 +548,8 @@ float GetFlipCarTime()</description>
       
       <guid>https://bakkesmodwiki.github.io/functions/function_scanner/</guid>
       <description>Trying to hook an event but don&amp;rsquo;t know what event to use? There&amp;rsquo;s way more events out there than can be documented, so you can find one yourself with the function scanner
-I highly recommend this video I made to understand how to use it, but there&amp;rsquo;s also a text guide below
-https://www.youtube.com/watch?v=gDZ1wWKE8aw
-Set the -dev option    On Steam:
-Right click the game and hit properties
-Then add the option</description>
+I highly recommend this video I made to understand how to use it, but there&amp;rsquo;s also a text guide below https://www.youtube.com/watch?v=gDZ1wWKE8aw
+Set the -dev option    On Steam: Right click the game and hit properties Then add the option On Epic: (They&amp;rsquo;ve moved this before so @ me if it&amp;rsquo;s in a new place)</description>
     </item>
     
     <item>
@@ -2325,10 +2321,8 @@ If you want to make your own netcode plugin, there&amp;rsquo;s a template for it
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/code_snippets/plugin_exclusive_logging/</guid>
-      <description>Want to see the console logging from just your plugin? Open a new PowerShell window and use this command
-It may require git for windows https://gitforwindows.org/
-Get-Content (-join($env:APPDATA, &amp;quot;\bakkesmod\bakkesmod\bakkesmod.log&amp;quot;)) -wait -tail 1 | select-string -pattern &amp;quot;PLUGIN_NAME&amp;quot;
- Written by @Broadway#9247</description>
+      <description>Want to see the console logging from just your plugin? Open a new PowerShell window and use this command (It may require git for windows https://gitforwindows.org/)
+Get-Content (-join($env:APPDATA, &amp;quot;\bakkesmod\bakkesmod\bakkesmod.log&amp;quot;)) -wait -tail 1 | select-string -pattern &amp;quot;PLUGIN_NAME&amp;quot; </description>
     </item>
     
     <item>

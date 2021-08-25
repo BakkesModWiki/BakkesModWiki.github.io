@@ -10868,34 +10868,36 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
         <p>Function hooks are a powerful part of BakkesMod. After a function is hooked, any time it is called by Rocket League, your code is called as well.</p>
 <p>There are multiple types of hooks. First are the two simpler ones. <code>gameWrapper</code> is a <a class="gdoc-markdown__link" href="/bakkesmod_api/Classes/Wrappers/GameWrapper/">GameWrapper</a> and will be accessible from any point in your code.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">HookEvent</span><span class="p">(</span><span class="s">&#34;Function TAGame.Car_TA.SetVehicleInput&#34;</span><span class="p">,</span>
-  <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">eventName</span><span class="p">)</span> <span class="p">{</span> 
+  <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">eventName</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// Your Code here
-</span><span class="c1"></span>    <span class="c1">// Call another function or just do your things here        
+</span><span class="c1"></span>    <span class="c1">// Call another function or just do your things here
 </span><span class="c1"></span><span class="p">});</span>
 
 <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">HookEventPost</span><span class="p">(</span><span class="s">&#34;Function TAGame.Car_TA.SetVehicleInput&#34;</span><span class="p">,</span>
-  <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">eventName</span><span class="p">)</span> <span class="p">{</span> 
-    <span class="c1">// Your Code here    
+  <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">eventName</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Your Code here
 </span><span class="c1"></span><span class="p">});</span>
-</code></pre></div><p><code>HookEvent</code> runs your code as the function is called<br>
-<code>HookEventPost</code> runs your code as the function is returned from<br>
+</code></pre></div><p><code>HookEvent</code> runs your code as the function is called
+<code>HookEventPost</code> runs your code as the function is returned from
 They return a <code>std::string</code> which is the name of the calling function. This is useful to differentiate what your caller is if you have multiple hooks calling the same code.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">HookEventWithCaller</span><span class="o">&lt;</span><span class="n">CarWrapper</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&#34;Function TAGame.Car_TA.SetVehicleInput&#34;</span><span class="p">,</span>
-  <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="n">CarWrapper</span> <span class="n">caller</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="n">params</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">eventname</span><span class="p">)</span> <span class="p">{</span> 
-    <span class="c1">// Your Code here  
+  <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="n">CarWrapper</span> <span class="n">caller</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="n">params</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">eventname</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Your Code here
 </span><span class="c1"></span><span class="p">});</span>
 
 <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">HookEventWithCallerPost</span><span class="o">&lt;</span><span class="n">CarWrapper</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&#34;Function TAGame.Car_TA.SetVehicleInput&#34;</span><span class="p">,</span>
-  <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="n">CarWrapper</span> <span class="n">caller</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="n">params</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">eventname</span><span class="p">)</span> <span class="p">{</span> 
-    <span class="c1">// Your Code here    
+  <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="n">CarWrapper</span> <span class="n">caller</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="n">params</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">eventname</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Your Code here
 </span><span class="c1"></span><span class="p">});</span>
 </code></pre></div><p>The two WithCaller variants do the same thing, but let you know a bit more about what is using the function</p>
-<p>They provide a <code>caller</code> value which is obtained from the function&rsquo;s name. After <code>Function TAGame</code> there will be a class name ending in <code>_TA</code>. If the name matches a wrapper name, you can hook it as that wrapper. <code>Car_TA</code> becomes <a class="gdoc-markdown__link" href="/bakkesmod_api/Classes/Wrappers/GameObject/CarWrapper/">CarWrapper</a> for example<br>
+<p>They provide a <code>caller</code> value which is obtained from the function&rsquo;s name. After <code>Function TAGame</code> there will be a class name ending in <code>_TA</code>. If the name matches a wrapper name, you can hook it as that wrapper. <code>Car_TA</code> becomes <a class="gdoc-markdown__link" href="/bakkesmod_api/Classes/Wrappers/GameObject/CarWrapper/">CarWrapper</a> for example
 They also provide a <code>void *</code> pointer. This points at the location of any parameters provided to the function. These aren&rsquo;t well documented, and are hard to guess, so feel free to ask about them if you think you need them</p>
 <p>Find functions with the <a class="gdoc-markdown__link" href="/functions/function_scanner/">function scanner</a></p>
-<hr>
-<p>Written by ubelhj</p>
 
+        
+        <hr>
+        <div>Written by <b>ubelhj</b></div>
+        
     </article>
 
                 
