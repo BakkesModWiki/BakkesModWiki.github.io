@@ -1,5 +1,7 @@
 ---
 title: How CVars Work
+author: Bakkes
+collaborators: ubelhj
 ---
 
 In plugin onLoad(), registerCVar is called and the cvar will have default values
@@ -39,5 +41,3 @@ if (!cvar) {
 }
 auto overlayEnableVar = cvar.setValue(enabledOverlay.get());
 ```
---- 
-Written by Bakkes, edited by ubelhj

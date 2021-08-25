@@ -1,8 +1,9 @@
 ---
 title: Crash Dumps
+author: ubelhj
 ---
 
-Modding RL is finnicky. You're going to crash the game at some point. This will tell you how to learn from a crash and solve your issue. 
+Modding RL is finnicky. You're going to crash the game at some point. This will tell you how to learn from a crash and solve your issue.
 
 Crashes are often logged in .dmp files. They are found at
 `My Documents/My Games/rocketleague/TAGame/Logs`
@@ -11,7 +12,7 @@ Unfortunately sometimes there is no .dmp file. That often means you crashed in a
 
 ![https://i.imgur.com/OkglN9o.png](https://i.imgur.com/OkglN9o.png)
 
-Make sure you have the exact version of the source code that crashed the game and the .pdb of that exact build loaded in a visual studio project. For this I highly recommend using git. Even for private projects, this can save you when you have to look back at old versions of code. Make a commit for the source code that you've uploaded to bakkesplugins.  
+Make sure you have the exact version of the source code that crashed the game and the .pdb of that exact build loaded in a visual studio project. For this I highly recommend using git. Even for private projects, this can save you when you have to look back at old versions of code. Make a commit for the source code that you've uploaded to bakkesplugins.
 
 Drag the .dmp over the visual studio window
 
@@ -57,6 +58,3 @@ Once you've found the issue, hit the red square up top
 ![https://cdn.discordapp.com/attachments/869661160834744390/869671714735411240/unknown.png](https://cdn.discordapp.com/attachments/869661160834744390/869671714735411240/unknown.png)
 
 Hopefully you've found your issue. If not, try adding many `cvarManager->log("");` in places where you're suspicious a crash may have happened. If a log doesn't happen that you expected to, you likely crashed before that statement. Debugging can be tedious, but hopefully the .dmp files can help
-
----
-By ubelhj

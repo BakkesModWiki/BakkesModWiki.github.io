@@ -1,5 +1,6 @@
 ---
 title: Known Playlist IDs
+author: CinderBlock
 ---
 
 All (known) playlist IDs - 2020
@@ -45,7 +46,7 @@ All (known) playlist IDs - 2020
 48: TacticalRumble
 ```
 
-Find the ID of the current playlist with 
+Find the ID of the current playlist with
 ```cpp
 ServerWrapper sw = gameWrapper->GetOnlineGame();
 if (!sw) return;
@@ -53,6 +54,3 @@ GameSettingPlaylistWrapper playlist = sw.GetPlaylist();
 if (!playlist) return;
 int playlistID = playlist.GetPlaylistId();
 ```
-
---- 
-Credit CinderBlock

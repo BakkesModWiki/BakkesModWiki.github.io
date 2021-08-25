@@ -4,5 +4,9 @@
     <article class="gdoc-markdown gdoc-markdown__align--{{ default "left" (.Page.Params.GeekdocAlign | lower) }}">
         <h1>{{ partial "title" . }}{{ if .Page.Params.baseClass }}&nbsp;:&nbsp;<small><i>{{.Page.Params.baseClass | safeHTML}}</i></small>{{end}}</h1>
         {{ partial "content" . }}
+        {{ if .Page.Params.author }}
+        <hr>
+        <div>Written by <b>{{ .Page.Params.author }}</b>{{ if .Page.Params.collaborators }}.&nbsp;<i>Collaborations from {{ .Page.Params.collaborators }}</i>{{ end }}</div>
+        {{ end }}
     </article>
 {{ end }}

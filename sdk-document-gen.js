@@ -24,8 +24,12 @@ let foundDefs = {
 let manualDescriptions = JSON.parse(fs.readFileSync("sdk-manual-descriptions.json", "utf8"));
 function drillDescriptions(defs, manualDescLevel) {
     _.each(manualDescLevel, (v, k) => {
+        if (k === "Description") {
+            defs["Description"] = v;
+            return;
+        }
         if (_.isUndefined(defs[k])) {
-            return
+            return;
         }
         if (!_.isString(v)) {
             return drillDescriptions(defs[k], v)
@@ -250,6 +254,16 @@ function createHugoPages() {
 
 function cleanup() {
     fs.unlinkSync("Doxyfile_2");
+    if (fs.existsSync("_bakkesmod_sdk")) {
+        fs.rmdirSync("_bakkesmod_sdk", {
+            recursive: true
+        });
+    }
+    if (fs.existsSync("_doxygen")) {
+        fs.rmdirSync("_doxygen", {
+            recursive: true
+        });
+    }
 
     console.log(`\n\nGeneration successful! Took ${((+(Date.now())) - timeStart) / 1000}s\n\n`);
 }

@@ -1,6 +1,7 @@
 ---
 title: Plugin Variables
 weight: 3
+author: ubelhj
 ---
 
 Next we will make your plugin alterable by a user. They might want to enable/disable the plugin, change how it acts, and pretty much infinite options. I'll be using a fairly simple plugin I've made as an example. I'll only be focusing on the settings, not the actual code that makes it work.

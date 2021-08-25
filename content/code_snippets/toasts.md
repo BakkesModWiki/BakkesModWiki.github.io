@@ -1,5 +1,6 @@
 ---
 title: Toasts
+author: ubelhj
 ---
 
 Toasts are cool little popups that show on the top right of your game
@@ -18,7 +19,7 @@ Now to the code
 
 Make a toast pop up with [GameWrapper](/bakkesmod_api/Classes/Wrappers/GameWrapper/)[.Toast()](https://github.com/bakkesmodorg/BakkesModSDK/blob/master/include/bakkesmod/wrappers/GameWrapper.h#L111)
 
-There are 7 parameters. The first two are required. They are 
+There are 7 parameters. The first two are required. They are
 1. The title, which is the word on top
 1. The text, which is the smaller text below
 1. The texture name which I'll explain in the next paragraph
@@ -50,8 +51,5 @@ For perspective, it's quite small but still legible
 
 ![https://cdn.discordapp.com/attachments/873081105090215957/879213832696909864/unknown.png](https://cdn.discordapp.com/attachments/873081105090215957/879213832696909864/unknown.png)
 
-Full code here  
+Full code here
 [https://github.com/ubelhj/BakkesModStarterPlugin/tree/toasts](https://github.com/ubelhj/BakkesModStarterPlugin/tree/toasts)
-
----
-Written by ubelhj

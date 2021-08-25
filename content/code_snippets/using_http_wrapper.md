@@ -1,5 +1,6 @@
 ---
 title: Using HttpWrapper
+author: Martinn
 ---
 
 ## [HttpWrapper](/bakkesmod_api/Classes/Wrappers/Http/HttpWrapper/)
@@ -9,7 +10,7 @@ title: Using HttpWrapper
 CurlRequest req;
 req.url = "https://httpbin.org/anything";
 req.body = "testing with body";
- 
+
 LOG("sending body request");
 HttpWrapper::SendCurlRequest(req, [this](int code, std::string result)
 {
@@ -26,7 +27,7 @@ req.body = R"T({
     "title": "delectus aut autem",
     "completed": false
 })T";
- 
+
 HttpWrapper::SendCurlJsonRequest(req, [this](int code, std::string result)
 {
     LOG("Json result{}", result);
@@ -38,23 +39,23 @@ HttpWrapper::SendCurlJsonRequest(req, [this](int code, std::string result)
 CurlRequest req;
 req.url = "https://httpbin.org/anything";
 req.body = "testing body with file output";
- 
+
 LOG("sending file output body request");
 HttpWrapper::SendCurlRequest(req, L"file_output_test.txt", [this](int code, std::wstring result)
 {
     LOG("sending file output body request: returned");
 });
 ```
-## Downloading a file with download progress callbacks and reading the raw downloaded data 
+## Downloading a file with download progress callbacks and reading the raw downloaded data
 ```cpp
 CurlRequest req;
 req.url = "url";
 req.progress_function = [](double file_size, double downloaded, ...)
 {
     if (file_size != 0)
-        LOG("Download progress {:.2f}%", downloaded / file_size * 100); 
+        LOG("Download progress {:.2f}%", downloaded / file_size * 100);
 };
- 
+
 HttpWrapper::SendCurlRequest(req, [this](int code, char* data, size_t size)
 {
     std::ofstream out_file {"test_image_raw.jpeg", std::ios_base::binary};
@@ -66,13 +67,10 @@ HttpWrapper::SendCurlRequest(req, [this](int code, char* data, size_t size)
 ```cpp
 CurlRequest req;
 req.url = "url";
- 
+
 LOG("sending raw output image download request");
 HttpWrapper::SendCurlRequest(req, L"test_image.jpeg", [this](int code, std::wstring out_path)
 {
     LOG("file image download code: {}", code);
 });
 ```
-
----
-Written by Martinn

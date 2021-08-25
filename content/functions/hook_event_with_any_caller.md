@@ -1,6 +1,7 @@
 ---
 title: Hook Event With Any Caller
 weight: 4
+author: Martinn
 ---
 
 Add this to your plugin header and you can hook with caller for "anything". This will do a blind cast, so make absolutely sure you're hooking the right function or you will crash. There are no type checks here!
@@ -31,6 +32,3 @@ void GameWrapper::HookEventWithCallerPost(std::string eventName,
     HookEventWithCallerPost<ActorWrapper>(eventName, wrapped_callback);
 }
 ```
-
----
-Written by Martinn

@@ -1,6 +1,7 @@
 ---
 title: Plugin Interface
 weight: 4
+author: ubelhj
 ---
 
 This channel will go over creating a user-friendly interface. There's buttons, sliders, checkboxes, dropdowns, and all sorts of options. It also assumes you're using the template, as the template automatically includes the ImGui GUI library we'll be using. It will ignore the fact that there is some commented out code in `CoolPluginGUI.cpp`.
