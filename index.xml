@@ -830,6 +830,24 @@ SampleHistoryWrapper GetLostPacketsOut()</description>
     </item>
     
     <item>
+      <title>NOTIFIER_PERMISSION</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/NOTIFIER_PERMISSION/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/NOTIFIER_PERMISSION/</guid>
+      <description>  View Implementation      PERMISSION_ALL = 0
+  PERMISSION_MENU = (1 &amp;lt;&amp;lt; 0)
+  PERMISSION_SOCCAR = (1 &amp;lt;&amp;lt; 1)
+  PERMISSION_FREEPLAY = (1 &amp;lt;&amp;lt; 2)
+  PERMISSION_CUSTOM_TRAINING = (1 &amp;lt;&amp;lt; 3)
+  PERMISSION_ONLINE = (1 &amp;lt;&amp;lt; 4)
+  PERMISSION_PAUSEMENU_CLOSED = (1 &amp;lt;&amp;lt; 5)
+  PERMISSION_REPLAY = (1 &amp;lt;&amp;lt; 6)
+  PERMISSION_OFFLINE = (1 &amp;lt;&amp;lt; 7)
+  </description>
+    </item>
+    
+    <item>
       <title>ObjectWrapper</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Engine/ObjectWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -978,6 +996,22 @@ void SetDeaths(int newDeaths)        Parameter Type Description     newDeaths i
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/PluginManagerWrapper/</guid>
       <description>View Implementation    CONSTRUCTORS(PluginManagerWrapper)        Parameter Type Description     PluginManagerWrapper &amp;mdash;     
 BakkesMod::Plugin::LoadedPlugin GetLoadedPlugins()</description>
+    </item>
+    
+    <item>
+      <title>PLUGINTYPE</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/PLUGINTYPE/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/PLUGINTYPE/</guid>
+      <description>  View Implementation      PLUGINTYPE_FREEPLAY = 0x01
+  PLUGINTYPE_CUSTOM_TRAINING = 0x02
+  PLUGINTYPE_SPECTATOR = 0x04
+  PLUGINTYPE_BOTAI = 0x08
+  PLUGINTYPE_REPLAY = 0x10
+  PLUGINTYPE_THREADED = 0x20
+  PLUGINTYPE_THREADEDUNLOAD = 0x40
+  </description>
     </item>
     
     <item>

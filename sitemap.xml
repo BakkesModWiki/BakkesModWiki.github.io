@@ -192,6 +192,8 @@
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PerformanceStats/NetStatGraphWrapper/</loc>
   </url><url>
+    <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/NOTIFIER_PERMISSION/</loc>
+  </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Engine/ObjectWrapper/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/OnlinePlatform/</loc>
@@ -213,6 +215,8 @@
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/PlaylistCategory/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/PluginManagerWrapper/</loc>
+  </url><url>
+    <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/PLUGINTYPE/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/PrimitiveComponentWrapper/</loc>
   </url><url>
