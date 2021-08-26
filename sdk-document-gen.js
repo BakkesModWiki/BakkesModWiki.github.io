@@ -114,13 +114,13 @@ async function main() {
             })
             sdkGithubLink = "https://github.com/bakkesmodorg/BakkesModSDK/blob/master/" + sdkGithubLink;
 
-            let defObject = {
-                ClassName: item.name[0],
-                GitHubPath: sdkGithubLink,
-                BaseClass: undefined,
-            }
-
             if (item.$.kind === "class") {
+                let defObject = {
+                    ClassName: item.name[0],
+                    GitHubPath: sdkGithubLink,
+                    BaseClass: undefined,
+                }
+
                 if (_.has(itemCompound, "basecompoundref")) {
                     defObject.BaseClass = itemCompound.basecompoundref[0]._;
                 }
@@ -166,34 +166,90 @@ async function main() {
                     });
                 }
                 foundDefs.Classes[item.name[0]] = defObject;
-                pathsMap[item.name[0]] = [...foundDefs.Classes[item.name[0]].Parents, item.name[0]].join("/")
+                pathsMap[item.name[0]] = [...foundDefs.Classes[item.name[0]].Parents, item.name[0]].join("/");
             } else if (item.$.kind === "struct") {
-
-                defObject.Parents = ["Structs", ...sdkLocation],
-                foundDefs.Structs[item.name[0]] = defObject;
-                pathsMap[item.name[0]] = [...foundDefs.Structs[item.name[0]].Parents, item.name[0]].join("/")
+                let members = {};
+                if (item.member) {
+                    for (let i = 0; i < item.member.length; i++) {
+                        let member = item.member[i];
+                        if (member.$.kind === "variable") {
+                            let memberXml = await getXmlFromString(fs.readFileSync(`_doxygen/xml/${item.$.refid}.xml`));
+                            let foundObj = findXmlObjectById(memberXml, member.$.refid);
+                            let memberObj = {
+                                GitHubPath: GitHubLinkFromLocalPath(foundObj.location[0].$.file) + `#L${foundObj.location[0].$.line}`,
+                                Kind: member.$.kind,
+                                Type: _.isString(foundObj.type[0]) ? foundObj.type[0] : foundObj.type[0].ref[0]._,
+                                Name: foundObj.name[0],
+                                DefinitionString: foundObj.definition[0],
+                                Value: foundObj.initializer ? foundObj.initializer[0].replace(/\s+?/g, " ") : "",
+                            };
+                            members[foundObj.name[0]] = memberObj;
+                        } else if (member.$.kind === "enum") {
+                            let memberXml = await getXmlFromString(fs.readFileSync(`_doxygen/xml/${item.$.refid}.xml`));
+                            let foundObj = findXmlObjectById(memberXml, member.$.refid);
+                            if (foundObj) { // Substring check due to some having no names https://github.com/bakkesmodorg/BakkesModSDK/blob/master/include/bakkesmod/plugin/bakkesmodsdk.h#L13
+                                if (foundObj.name[0].substring(0, 1) !== "@") {
+                                    let enumObj = {
+                                        Name: foundObj.name[0],
+                                        Kind: member.$.kind,
+                                        GitHubPath: GitHubLinkFromLocalPath(foundObj.location[0].$.file) + `#L${foundObj.location[0].$.line}`,
+                                        Values: {}
+                                    }
+                                    _.each(foundObj.enumvalue, ev => {
+                                        enumObj.Values[ev.name[0]] = ev.initializer ? (ev.initializer ? ev.initializer[0].replace(/\s+/g, " ") : "") : "";
+                                    });
+                                    members[foundObj.name[0]] = enumObj;
+                                } else {
+                                    console.log("Enum has no name!", member);
+                                }
+                            }
+                        } else if (member.$.kind === "enumvalue") {
+                            // Skip because this will be captured inside "enum" members
+                        } else {
+                            console.log(`Struct member type has no defined output "${member.$.kind}": ${member.$.refid}`);
+                        }
+                    }
+                }
+                if (Object.keys(members).length > 0) {
+                    let structObj = {
+                        StructName: item.name[0],
+                        GitHubPath: sdkGithubLink,
+                        Members: members
+                    };
+                    structObj.Parents = ["Structs", ...sdkLocation],
+                    foundDefs.Structs[item.name[0]] = structObj;
+                    pathsMap[item.name[0]] = [...foundDefs.Structs[item.name[0]].Parents, item.name[0]].join("/");
+                }
             } else if (item.$.kind === "file") {
                 if (item.member) {
                     for (let i = 0; i < item.member.length; i++) {
-                        let mem = item.member[i];
-                        if (mem.$.kind === "enum") {
+                        let member = item.member[i];
+                        if (member.$.kind === "enum") {
                             let memberXml = await getXmlFromString(fs.readFileSync(`_doxygen/xml/${item.$.refid}.xml`));
-                            let foundObj = findXmlObjectById(memberXml, mem.$.refid);
-                            if (foundObj && foundObj.name[0].substring(0, 1) !== "@") { // Substring check due to some having no names https://github.com/bakkesmodorg/BakkesModSDK/blob/master/include/bakkesmod/plugin/bakkesmodsdk.h#L13
-                                let enumObj = {
-                                    EnumName: foundObj.name[0],
-                                    GitHubPath: GitHubLinkFromLocalPath(foundObj.location[0].$.file) + `#L${foundObj.location[0].$.line}`,
-                                    Parents: ["Enums"],
-                                    Values: {}
+                            let foundObj = findXmlObjectById(memberXml, member.$.refid);
+                            if (foundObj) { // Substring check due to some having no names https://github.com/bakkesmodorg/BakkesModSDK/blob/master/include/bakkesmod/plugin/bakkesmodsdk.h#L13
+                                if (foundObj.name[0].substring(0, 1) !== "@") {
+                                    let enumObj = {
+                                        EnumName: foundObj.name[0],
+                                        GitHubPath: GitHubLinkFromLocalPath(foundObj.location[0].$.file) + `#L${foundObj.location[0].$.line}`,
+                                        Parents: ["Enums"],
+                                        Values: {}
+                                    }
+                                    _.each(foundObj.enumvalue, ev => {
+                                        enumObj.Values[ev.name[0]] = ev.initializer[0];
+                                    });
+                                    foundDefs.Enums[foundObj.name[0]] = enumObj;
+                                } else {
+                                    console.log("Enum has no name!", member);
                                 }
                                 _.each(foundObj.enumvalue, ev => {
                                     enumObj.Values[ev.name[0]] = ev.initializer[0]
                                 });
                                 foundDefs.Enums[foundObj.name[0]] = enumObj;
                             }
-                        } else if (mem.$.kind === "define") {
+                        } else if (member.$.kind === "define") {
                             let memberXml = await getXmlFromString(fs.readFileSync(`_doxygen/xml/${item.$.refid}.xml`));
-                            let foundObj = findXmlObjectById(memberXml, mem.$.refid);
+                            let foundObj = findXmlObjectById(memberXml, member.$.refid);
                             if (foundObj) {
                                 if (foundObj.initializer) {
                                     let constObj = {
