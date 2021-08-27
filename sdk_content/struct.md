@@ -12,7 +12,7 @@ showEditOverride: false
 ---
 {% for MemberName, Member in Members %}
 {% if PathMap[Member.Type] %}
-### [{{Member.Type | trim}}](/bakkesmod_api/{{PathMap[Member.Type]}})&nbsp;{{MemberName | trim}}{{Member.ArgsString}}
+### [{{Member.Type | trim}}]({{PathMap[Member.Type]}})&nbsp;{{MemberName | trim}}{{Member.ArgsString}}
 {% else %}
 ### {%if Member.Type %}{{Member.Type | trim}}&nbsp;{%endif%}{{MemberName | trim}}{{Member.ArgsString}}
 {% endif %}

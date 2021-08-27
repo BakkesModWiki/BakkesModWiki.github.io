@@ -14,7 +14,46 @@ nunjucks.configure("sdk_content");
 
 let excludeConstants = ["BAKKESMOD_PLUGIN", "BAKKESMOD_PLUGIN_EXPORT", "BAKKESMOD_PLUGIN_IMPORT", "BAKKESMOD_STANDARD_PLUGIN_STUFF", "CONSTRUCTORS", "PIMPL",
     "GETH", "GETSETH"];
-let pathsMap = {};
+let pathMapLocalReferenceBase = "/bakkesmod_api/"
+let pathsMap = {
+    "std::string": "https://www.cplusplus.com/reference/string/string/",
+    "void": "https://en.cppreference.com/w/cpp/language/types#Void_type",
+    "float": "https://en.cppreference.com/w/cpp/language/types#Floating-point_types",
+    "double": "https://en.cppreference.com/w/cpp/language/types#Floating-point_types",
+    "long double": "https://en.cppreference.com/w/cpp/language/types#Floating-point_types",
+    "bool": "https://en.cppreference.com/w/cpp/language/types#Boolean_type",
+    "char": "https://en.cppreference.com/w/cpp/language/types#Character_types",
+    "signed char": "https://en.cppreference.com/w/cpp/language/types#Character_types",
+    "unsigned char": "https://en.cppreference.com/w/cpp/language/types#Character_types",
+    "short": "https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types",
+    "short int": "https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types",
+    "signed short": "https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types",
+    "signed short int": "https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types",
+    "unsigned short": "https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types",
+    "unsigned short int": "https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types",
+    "int": "https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types",
+    "signed": "https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types",
+    "signed int": "https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types",
+    "unsigned": "https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types",
+    "unsigned int": "https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types",
+    "long": "https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types",
+    "long int": "https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types",
+    "signed long": "https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types",
+    "signed long int": "https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types",
+    "unsigned long": "https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types",
+    "unsigned long int": "https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types",
+    "long long": "https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types",
+    "long long int": "https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types",
+    "signed long long": "https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types",
+    "signed long long int": "https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types",
+    "unsigned long long": "https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types",
+    "unsigned long long int": "https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types",
+    "size_t": "https://en.cppreference.com/w/cpp/types/size_t",
+    "std::unique_ptr< Impl >": "https://en.cppreference.com/w/cpp/memory/unique_ptr",
+    "void *": "https://stackoverflow.com/a/31260836",
+    "std::wstring": "https://www.cplusplus.com/reference/string/wstring/",
+    "T": "https://www.cplusplus.com/doc/tutorial/functions2/#templates"
+};
 let foundDefs = {
     Enums: {},
     Constants: {},
@@ -166,7 +205,7 @@ async function main() {
                     });
                 }
                 foundDefs.Classes[item.name[0]] = defObject;
-                pathsMap[item.name[0]] = [...foundDefs.Classes[item.name[0]].Parents, item.name[0]].join("/");
+                pathsMap[item.name[0]] = pathMapLocalReferenceBase + [...foundDefs.Classes[item.name[0]].Parents, item.name[0]].join("/");
             } else if (item.$.kind === "struct") {
                 let members = {};
                 if (item.member) {
@@ -218,7 +257,7 @@ async function main() {
                     };
                     structObj.Parents = ["Structs", ...sdkLocation],
                     foundDefs.Structs[item.name[0]] = structObj;
-                    pathsMap[item.name[0]] = [...foundDefs.Structs[item.name[0]].Parents, item.name[0]].join("/");
+                    pathsMap[item.name[0]] = pathMapLocalReferenceBase + [...foundDefs.Structs[item.name[0]].Parents, item.name[0]].join("/");
                 }
             } else if (item.$.kind === "file") {
                 if (item.member) {
