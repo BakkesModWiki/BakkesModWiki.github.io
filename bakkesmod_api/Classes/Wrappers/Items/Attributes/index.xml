@@ -20,7 +20,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_BlueprintCostWrapper/</guid>
-      <description>View Implementation    int GetCost()</description>
+      <description>View Implementation    int&amp;nbsp; GetCost()</description>
     </item>
     
     <item>
@@ -29,8 +29,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_BlueprintWrapper/</guid>
-      <description>View Implementation    int GetProductID()     
-int GetCachedBlueprintSeriesID()     
+      <description>View Implementation    int&amp;nbsp; GetProductID()     
+int&amp;nbsp; GetCachedBlueprintSeriesID()     
 UnrealStringWrapper GetSortLabel()</description>
     </item>
     
@@ -49,13 +49,13 @@ UnrealStringWrapper GetSortLabel()</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_CertifiedWrapper/</guid>
-      <description>View Implementation    std::string GetValueKeyName()     
-int GetStatId()     
-int GetStatValue()     
+      <description>View Implementation    std::string&amp;nbsp; GetValueKeyName()     
+int&amp;nbsp; GetStatId()     
+int&amp;nbsp; GetStatValue()     
 UnrealStringWrapper GetSortLabel()     
 UnrealStringWrapper GetDescription()     
 UnrealStringWrapper GetRankLabel()     
-int GetRank()</description>
+int&amp;nbsp; GetRank()</description>
     </item>
     
     <item>
@@ -64,7 +64,7 @@ int GetRank()</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_CurrencyWrapper/</guid>
-      <description>View Implementation    int GetCurrencyID()     
+      <description>View Implementation    int&amp;nbsp; GetCurrencyID()     
 UnrealStringWrapper GetSortLabel()</description>
     </item>
     
@@ -74,7 +74,7 @@ UnrealStringWrapper GetSortLabel()</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_PaintedWrapper/</guid>
-      <description>View Implementation    int GetPaintID()     
+      <description>View Implementation    int&amp;nbsp; GetPaintID()     
 UnrealStringWrapper GetSortLabel()</description>
     </item>
     
@@ -84,8 +84,8 @@ UnrealStringWrapper GetSortLabel()</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_QualityWrapper/</guid>
-      <description>View Implementation    unsigned char GetQuality()     
-UnrealStringWrapper ProductQualityToString(unsigned char InQuality)        Parameter Type Description     InQuality unsigned char &amp;mdash;</description>
+      <description>View Implementation    unsigned char&amp;nbsp; GetQuality()     
+UnrealStringWrapper ProductQualityToString(unsigned char InQuality)        Parameter Type Description     InQuality unsigned char&amp;nbsp; &amp;mdash;</description>
     </item>
     
     <item>
@@ -103,9 +103,9 @@ UnrealStringWrapper ProductQualityToString(unsigned char InQuality)        Para
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_SpecialEditionWrapper/</guid>
-      <description>View Implementation    int GetEditionID()     
+      <description>View Implementation    int&amp;nbsp; GetEditionID()     
 UnrealStringWrapper GetSortLabel()     
-int GetOverrideProductID(int ProductID)        Parameter Type Description     ProductID int &amp;mdash;</description>
+int&amp;nbsp; GetOverrideProductID(int ProductID)        Parameter Type Description     ProductID int&amp;nbsp; &amp;mdash;</description>
     </item>
     
     <item>
@@ -123,7 +123,7 @@ int GetOverrideProductID(int ProductID)        Parameter Type Description     P
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_TeamEditionWrapper/</guid>
-      <description>View Implementation    int GetId()     
+      <description>View Implementation    int&amp;nbsp; GetId()     
 UnrealStringWrapper GetSortLabel()</description>
     </item>
     
@@ -133,7 +133,7 @@ UnrealStringWrapper GetSortLabel()</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_UnlockMethodWrapper/</guid>
-      <description>View Implementation    unsigned char GetUnlockMethod()</description>
+      <description>View Implementation    unsigned char&amp;nbsp; GetUnlockMethod()</description>
     </item>
     
     <item>
@@ -144,8 +144,8 @@ UnrealStringWrapper GetSortLabel()</description>
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttributeWrapper/</guid>
       <description>View Implementation    _NODISCARD bool IsNull() const     
 operator bool() const     
-std::string GetAttributeType()     
-std::string GetTypename()     
+std::string&amp;nbsp; GetAttributeType()     
+std::string&amp;nbsp; GetTypename()     
 UnrealStringWrapper GetLabel()</description>
     </item>
     

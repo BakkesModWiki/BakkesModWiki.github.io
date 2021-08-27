@@ -12,9 +12,9 @@
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Engine/ActorWrapper/</guid>
       <description>View Implementation    Vector GetLocation()     
-void SetLocation(const Vector location)        Parameter Type Description     location Vector &amp;mdash;    
+void&amp;nbsp; SetLocation(const Vector location)        Parameter Type Description     location Vector &amp;mdash;    
 Vector GetVelocity()     
-void SetVelocity(const Vector velocity)        Parameter Type Description     velocity Vector &amp;mdash;</description>
+void&amp;nbsp; SetVelocity(const Vector velocity)        Parameter Type Description     velocity Vector &amp;mdash;</description>
     </item>
     
     <item>
@@ -25,10 +25,10 @@ void SetVelocity(const Vector velocity)        Parameter Type Description     v
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Engine/EngineTAWrapper/</guid>
       <description>View Implementation    _NODISCARD bool IsNull() const     
 operator bool() const     
-unsigned long GetbEnableClientPrediction()     
-void SetbEnableClientPrediction(unsigned long newbEnableClientPrediction)        Parameter Type Description     newbEnableClientPrediction unsigned long &amp;mdash;    
-unsigned long GetbClientPhysicsUpdate()     
-void SetbClientPhysicsUpdate(unsigned long newbClientPhysicsUpdate)        Parameter Type Description     newbClientPhysicsUpdate unsigned long &amp;mdash;</description>
+unsigned long&amp;nbsp; GetbEnableClientPrediction()     
+void&amp;nbsp; SetbEnableClientPrediction(unsigned long newbEnableClientPrediction)        Parameter Type Description     newbEnableClientPrediction unsigned long&amp;nbsp; &amp;mdash;    
+unsigned long&amp;nbsp; GetbClientPhysicsUpdate()     
+void&amp;nbsp; SetbClientPhysicsUpdate(unsigned long newbClientPhysicsUpdate)        Parameter Type Description     newbClientPhysicsUpdate unsigned long&amp;nbsp; &amp;mdash;</description>
     </item>
     
     <item>
@@ -46,9 +46,9 @@ void SetbClientPhysicsUpdate(unsigned long newbClientPhysicsUpdate)        Para
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Engine/UnrealStringWrapper/</guid>
-      <description>View Implementation    std::string ToString()     
-std::wstring ToWideString()     
-bool IsNull()     
+      <description>View Implementation    std::string&amp;nbsp; ToString()     
+std::wstring&amp;nbsp; ToWideString()     
+bool&amp;nbsp; IsNull()     
 operator bool()</description>
     </item>
     
@@ -58,15 +58,15 @@ operator bool()</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Engine/WorldInfoWrapper/</guid>
-      <description>View Implementation    float GetTimeDilation()     
-float GetDemoPlayTimeDilation()     
-float GetTimeSeconds()     
-float GetRealTimeSeconds()     
-float GetRealDeltaSeconds()     
-float GetAudioTimeSeconds()     
-float GetDeltaSeconds()     
-float GetPauseDelay()     
-float GetRealTimeToUnPause()</description>
+      <description>View Implementation    float&amp;nbsp; GetTimeDilation()     
+float&amp;nbsp; GetDemoPlayTimeDilation()     
+float&amp;nbsp; GetTimeSeconds()     
+float&amp;nbsp; GetRealTimeSeconds()     
+float&amp;nbsp; GetRealDeltaSeconds()     
+float&amp;nbsp; GetAudioTimeSeconds()     
+float&amp;nbsp; GetDeltaSeconds()     
+float&amp;nbsp; GetPauseDelay()     
+float&amp;nbsp; GetRealTimeToUnPause()</description>
     </item>
     
   </channel>

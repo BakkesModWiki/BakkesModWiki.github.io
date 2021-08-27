@@ -14,7 +14,7 @@
       <description>View Implementation    ItemsWrapper(const ItemsWrapper &amp;amp;other)        Parameter Type Description     other ItemsWrapper &amp;mdash;    
 ItemsWrapper operator=(ItemsWrapper rhs)        Parameter Type Description     rhs ItemsWrapper &amp;mdash;    
 ~ItemsWrapper()     
-bool IsNull()     
+bool&amp;nbsp; IsNull()     
 operator bool()</description>
     </item>
     
@@ -28,10 +28,10 @@ operator bool()</description>
 operator bool() const     
 ArrayWrapper GetLoadout()     
 ArrayWrapper GetOnlineLoadout()     
-unsigned char GetPrimaryPaintColorId()     
-unsigned char GetAccentPaintColorId()     
-int GetPrimaryFinishId()     
-int GetAccentFinishId()</description>
+unsigned char&amp;nbsp; GetPrimaryPaintColorId()     
+unsigned char&amp;nbsp; GetAccentPaintColorId()     
+int&amp;nbsp; GetPrimaryFinishId()     
+int&amp;nbsp; GetAccentFinishId()</description>
     </item>
     
     <item>
@@ -42,11 +42,11 @@ int GetAccentFinishId()</description>
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/OnlineProductWrapper/</guid>
       <description>View Implementation    _NODISCARD bool IsNull() const     
 operator bool() const     
-std::string SeriesIdToSeriesName(int seriesID)        Parameter Type Description     seriesID int &amp;mdash;    
-int GetProductID()     
-int GetSeriesID()     
-int GetTradeHold()     
-std::string GetProductSeries()</description>
+std::string&amp;nbsp; SeriesIdToSeriesName(int seriesID)        Parameter Type Description     seriesID int&amp;nbsp; &amp;mdash;    
+int&amp;nbsp; GetProductID()     
+int&amp;nbsp; GetSeriesID()     
+int&amp;nbsp; GetTradeHold()     
+std::string&amp;nbsp; GetProductSeries()</description>
     </item>
     
     <item>
@@ -61,7 +61,7 @@ UnrealStringWrapper GetLabel()
 UnrealStringWrapper GetPluralLabel()     
 UnrealStringWrapper GetDescription()     
 UnrealStringWrapper GetOnlineLabel()     
-int GetSlotIndex()</description>
+int&amp;nbsp; GetSlotIndex()</description>
     </item>
     
     <item>
@@ -73,10 +73,10 @@ int GetSlotIndex()</description>
       <description>View Implementation    _NODISCARD bool IsNull() const     
 operator bool() const     
 ProductSlotWrapper GetSlot()     
-unsigned char GetUnlockMethod()     
-unsigned char GetQuality()     
+unsigned char&amp;nbsp; GetUnlockMethod()     
+unsigned char&amp;nbsp; GetQuality()     
 ProductWrapper GetRequiredProduct()     
-unsigned long GetbLicensed()</description>
+unsigned long&amp;nbsp; GetbLicensed()</description>
     </item>
     
     <item>
@@ -96,14 +96,14 @@ operator bool() const</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/ProductWrapper/</guid>
-      <description>View Implementation    bool IsNull()     
+      <description>View Implementation    bool&amp;nbsp; IsNull()     
 operator bool()     
-std::string GetAssetPackageName()     
+std::string&amp;nbsp; GetAssetPackageName()     
 UnrealStringWrapper GetAssetPath()     
 UnrealStringWrapper GetLabel()     
 UnrealStringWrapper GetAsciiLabel()     
 UnrealStringWrapper GetLongLabel()     
-bool IsPaintable()     
+bool&amp;nbsp; IsPaintable()     
 UnrealStringWrapper GetDisplayLabelSlot()</description>
     </item>
     
@@ -119,7 +119,7 @@ ArrayWrapper GetReceivingProducts()
 ArrayWrapper GetSendingProducts()     
 UniqueIDWrapper GetTradingPlayer() const     
 GUIDWrapper GetTradeGuid() const     
-bool IsNull()     
+bool&amp;nbsp; IsNull()     
 operator bool()</description>
     </item>
     

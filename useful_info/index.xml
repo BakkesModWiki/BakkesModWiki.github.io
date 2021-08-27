@@ -23,7 +23,7 @@ Unfortunately sometimes there is no .dmp file. That often means you crashed in a
       
       <guid>https://bakkesmodwiki.github.io/useful_info/multiplayer_plugins/</guid>
       <description>Netcode plugins are a powerful way to handle asymmetrical multiplayer plugins. It can allow clients to control the match, when normally only the host can. This is much better described in this video by CinderBlock
-https://youtu.be/jyFuN8k2uIs
+https://youtu.be/jyFuN8k2uIs&amp;nbsp;
 If you want to make your own netcode plugin, there&amp;rsquo;s a template for it just like normal plugins. It does all the setup shown in the above video automatically. Follow the README to install it</description>
     </item>
     
@@ -33,7 +33,7 @@ If you want to make your own netcode plugin, there&amp;rsquo;s a template for it
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/useful_info/other_languages/</guid>
-      <description>There&amp;rsquo;s a couple super useful libraries that let you write plugins in other programming languages. We can&amp;rsquo;t really guarantee any tutorials in this server as we don&amp;rsquo;t have anyone with much experience in them. If you use them feel free to add help and make a pull request. You&amp;rsquo;re still welcome to ask for help with them in the discord, but most people here use the standard C++ library and it may be hard to get specific help</description>
+      <description>There&amp;rsquo;s a couple super useful libraries that let you write plugins in other programming languages. We can&amp;rsquo;t really guarantee any tutorials in this server as we don&amp;rsquo;t have anyone with much experience in them. If you use them feel free to add help and make a pull request. You&amp;rsquo;re still welcome to ask for help with them in the discord&amp;nbsp;, but most people here use the standard C++ library and it may be hard to get specific help</description>
     </item>
     
     <item>
@@ -43,7 +43,7 @@ If you want to make your own netcode plugin, there&amp;rsquo;s a template for it
       
       <guid>https://bakkesmodwiki.github.io/useful_info/troubleshooting_bakkesmod/</guid>
       <description>Made it here because your BakkesMod isn&amp;rsquo;t working? No worries, check this other wiki here
-https://bakkesmod.fandom.com/wiki/Troubleshooting</description>
+https://bakkesmod.fandom.com/wiki/Troubleshooting&amp;nbsp;</description>
     </item>
     
     <item>
@@ -53,12 +53,12 @@ https://bakkesmod.fandom.com/wiki/Troubleshooting</description>
       
       <guid>https://bakkesmodwiki.github.io/useful_info/useful_links/</guid>
       <description>Here&amp;rsquo;s some links that we couldn&amp;rsquo;t find a good place for
-Creating a .set file https://bakkesmod.fandom.com/wiki/Plugin_settings_files
-ImGui demo https://pthom.github.io/imgui_manual_online/manual/imgui_manual.html
-ImGui builder program https://github.com/Code-Building/ImGuiBuilder
-Useful game values (map size, boost locations, etc.) https://github.com/RLBot/RLBot/wiki/Useful-Game-Values
-UDK site for canvas. The BM CanvasWrapper has some of these features https://docs.unrealengine.com/udk/Three/CanvasTechnicalGuide.html
-CanvasWrapper library for improved tools https://github.com/CinderBlocc/RenderingTools</description>
+Creating a .set file https://bakkesmod.fandom.com/wiki/Plugin_settings_files&amp;nbsp;
+ImGui demo https://pthom.github.io/imgui_manual_online/manual/imgui_manual.html&amp;nbsp;
+ImGui builder program https://github.com/Code-Building/ImGuiBuilder&amp;nbsp;
+Useful game values (map size, boost locations, etc.) https://github.com/RLBot/RLBot/wiki/Useful-Game-Values&amp;nbsp;
+UDK site for canvas. The BM CanvasWrapper has some of these features https://docs.unrealengine.com/udk/Three/CanvasTechnicalGuide.html&amp;nbsp;
+CanvasWrapper library for improved tools https://github.com/CinderBlocc/RenderingTools&amp;nbsp;</description>
     </item>
     
   </channel>

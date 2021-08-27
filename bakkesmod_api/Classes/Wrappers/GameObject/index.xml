@@ -12,8 +12,8 @@
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/BallWrapper/</guid>
       <description>View Implementation   Any ball in the match. There can be more than one! The best way to get the ball is by getting a ServerWrapper and calling GetGameBalls()
- float GetLastTouchTime()     
-PredictionInfo PredictPosition(float timeAhead)        Parameter Type Description     timeAhead float &amp;mdash;    
+ float&amp;nbsp; GetLastTouchTime()     
+PredictionInfo PredictPosition(float timeAhead)        Parameter Type Description     timeAhead float&amp;nbsp; &amp;mdash;    
 FXActorWrapper GetEndOfGameFXArchetype()</description>
     </item>
     
@@ -23,10 +23,10 @@ FXActorWrapper GetEndOfGameFXArchetype()</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/BaseCameraWrapper/</guid>
-      <description>View Implementation    float GetDefaultFOV()     
-void SetDefaultFOV(float newDefaultFOV)        Parameter Type Description     newDefaultFOV float &amp;mdash;    
-unsigned long GetbLockedFOV()     
-void SetbLockedFOV(unsigned long newbLockedFOV)        Parameter Type Description     newbLockedFOV unsigned long &amp;mdash;</description>
+      <description>View Implementation    float&amp;nbsp; GetDefaultFOV()     
+void&amp;nbsp; SetDefaultFOV(float newDefaultFOV)        Parameter Type Description     newDefaultFOV float&amp;nbsp; &amp;mdash;    
+unsigned long&amp;nbsp; GetbLockedFOV()     
+void&amp;nbsp; SetbLockedFOV(unsigned long newbLockedFOV)        Parameter Type Description     newbLockedFOV unsigned long&amp;nbsp; &amp;mdash;</description>
     </item>
     
     <item>
@@ -35,10 +35,10 @@ void SetbLockedFOV(unsigned long newbLockedFOV)        Parameter Type Descripti
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/BoostPickupWrapper/</guid>
-      <description>View Implementation    float GetBoostAmount()     
-void SetBoostAmount(float newBoostAmount)        Parameter Type Description     newBoostAmount float &amp;mdash;    
-unsigned char GetBoostType()     
-void SetBoostType(unsigned char newBoostType)        Parameter Type Description     newBoostType unsigned char &amp;mdash;</description>
+      <description>View Implementation    float&amp;nbsp; GetBoostAmount()     
+void&amp;nbsp; SetBoostAmount(float newBoostAmount)        Parameter Type Description     newBoostAmount float&amp;nbsp; &amp;mdash;    
+unsigned char&amp;nbsp; GetBoostType()     
+void&amp;nbsp; SetBoostType(unsigned char newBoostType)        Parameter Type Description     newBoostType unsigned char&amp;nbsp; &amp;mdash;</description>
     </item>
     
     <item>
@@ -48,9 +48,9 @@ void SetBoostType(unsigned char newBoostType)        Parameter Type Description
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CameraWrapper/</guid>
       <description>View Implementation    Vector GetLocation()     
-void SetLocation(Vector location)        Parameter Type Description     location Vector &amp;mdash;    
+void&amp;nbsp; SetLocation(Vector location)        Parameter Type Description     location Vector &amp;mdash;    
 Rotator GetRotation()     
-void SetRotation(Rotator rotation)        Parameter Type Description     rotation Rotator &amp;mdash;    
+void&amp;nbsp; SetRotation(Rotator rotation)        Parameter Type Description     rotation Rotator &amp;mdash;    
 ProfileCameraSettings GetCameraSettings()</description>
     </item>
     
@@ -61,9 +61,9 @@ ProfileCameraSettings GetCameraSettings()</description>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CameraXWrapper/</guid>
       <description>View Implementation    Rotator GetPCDeltaRotation()     
-void SetPCDeltaRotation(Rotator newPCDeltaRotation)        Parameter Type Description     newPCDeltaRotation Rotator &amp;mdash;    
+void&amp;nbsp; SetPCDeltaRotation(Rotator newPCDeltaRotation)        Parameter Type Description     newPCDeltaRotation Rotator &amp;mdash;    
 Rotator GetOldControllerRotation()     
-void SetOldControllerRotation(Rotator newOldControllerRotation)        Parameter Type Description     newOldControllerRotation Rotator &amp;mdash;    
+void&amp;nbsp; SetOldControllerRotation(Rotator newOldControllerRotation)        Parameter Type Description     newOldControllerRotation Rotator &amp;mdash;    
 Vector GetPCDeltaLocation()</description>
     </item>
     
@@ -73,10 +73,10 @@ Vector GetPCDeltaLocation()</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CarWrapper/</guid>
-      <description>View Implementation    bool IsBoostCheap()     
-void SetBoostCheap(bool b)        Parameter Type Description     b bool &amp;mdash;    
-void SetCarRotation(Rotator rotation)        Parameter Type Description     rotation Rotator &amp;mdash;    
-void ForceBoost(bool force)        Parameter Type Description     force bool &amp;mdash;</description>
+      <description>View Implementation    bool&amp;nbsp; IsBoostCheap()     
+void&amp;nbsp; SetBoostCheap(bool b)        Parameter Type Description     b bool&amp;nbsp; &amp;mdash;    
+void&amp;nbsp; SetCarRotation(Rotator rotation)        Parameter Type Description     rotation Rotator &amp;mdash;    
+void&amp;nbsp; ForceBoost(bool force)        Parameter Type Description     force bool&amp;nbsp; &amp;mdash;</description>
     </item>
     
     <item>
@@ -85,12 +85,12 @@ void ForceBoost(bool force)        Parameter Type Description     force bool &a
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/ClubDetailsWrapper/</guid>
-      <description>View Implementation    unsigned long long GetClubID()     
+      <description>View Implementation    unsigned long long&amp;nbsp; GetClubID()     
 SteamID GetOwnerPlayerID()     
 UniqueIDWrapper GetOwnerPlayerUniqueID()     
 UnrealStringWrapper GetMotD()     
-unsigned long GetbVerified()     
-unsigned long long GetLastUpdatedTime()     
+unsigned long&amp;nbsp; GetbVerified()     
+unsigned long long&amp;nbsp; GetLastUpdatedTime()     
 StructArrayWrapper GetMembers()</description>
     </item>
     
@@ -104,8 +104,8 @@ StructArrayWrapper GetMembers()</description>
 operator bool() const     
 UnrealStringWrapper GetClubName()     
 UnrealStringWrapper GetClubTag()     
-int GetPrimaryColor()     
-int GetAccentColor()</description>
+int&amp;nbsp; GetPrimaryColor()     
+int&amp;nbsp; GetAccentColor()</description>
     </item>
     
     <item>
@@ -114,10 +114,10 @@ int GetAccentColor()</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/FXActorWrapper/</guid>
-      <description>View Implementation    unsigned long GetbDeactivateWhenOwnerDestroyed()     
-void SetbDeactivateWhenOwnerDestroyed(unsigned long newbDeactivateWhenOwnerDestroyed)        Parameter Type Description     newbDeactivateWhenOwnerDestroyed unsigned long &amp;mdash;    
-unsigned long GetbAllowShadowCasting()     
-void SetbAllowShadowCasting(unsigned long newbAllowShadowCasting)        Parameter Type Description     newbAllowShadowCasting unsigned long &amp;mdash;</description>
+      <description>View Implementation    unsigned long&amp;nbsp; GetbDeactivateWhenOwnerDestroyed()     
+void&amp;nbsp; SetbDeactivateWhenOwnerDestroyed(unsigned long newbDeactivateWhenOwnerDestroyed)        Parameter Type Description     newbDeactivateWhenOwnerDestroyed unsigned long&amp;nbsp; &amp;mdash;    
+unsigned long&amp;nbsp; GetbAllowShadowCasting()     
+void&amp;nbsp; SetbAllowShadowCasting(unsigned long newbAllowShadowCasting)        Parameter Type Description     newbAllowShadowCasting unsigned long&amp;nbsp; &amp;mdash;</description>
     </item>
     
     <item>
@@ -129,9 +129,9 @@ void SetbAllowShadowCasting(unsigned long newbAllowShadowCasting)        Parame
       <description>View Implementation    _NODISCARD bool IsNull() const     
 operator bool() const     
 ActorWrapper GetGoalOrientation()     
-void SetGoalOrientation(ActorWrapper newGoalOrientation)        Parameter Type Description     newGoalOrientation ActorWrapper &amp;mdash;    
+void&amp;nbsp; SetGoalOrientation(ActorWrapper newGoalOrientation)        Parameter Type Description     newGoalOrientation ActorWrapper &amp;mdash;    
 ArrayWrapper GetOverrideGoalIndicatorOrientations()     
-unsigned char GetTeamNum()</description>
+unsigned char&amp;nbsp; GetTeamNum()</description>
     </item>
     
     <item>
@@ -142,10 +142,10 @@ unsigned char GetTeamNum()</description>
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PhysicalMaterialPropertyWrapper/</guid>
       <description>View Implementation    _NODISCARD bool IsNull() const     
 operator bool() const     
-float GetTireFrictionScale()     
-void SetTireFrictionScale(float newTireFrictionScale)        Parameter Type Description     newTireFrictionScale float &amp;mdash;    
-unsigned long GetbStickyWheels()     
-void SetbStickyWheels(unsigned long newbStickyWheels)        Parameter Type Description     newbStickyWheels unsigned long &amp;mdash;</description>
+float&amp;nbsp; GetTireFrictionScale()     
+void&amp;nbsp; SetTireFrictionScale(float newTireFrictionScale)        Parameter Type Description     newTireFrictionScale float&amp;nbsp; &amp;mdash;    
+unsigned long&amp;nbsp; GetbStickyWheels()     
+void&amp;nbsp; SetbStickyWheels(unsigned long newbStickyWheels)        Parameter Type Description     newbStickyWheels unsigned long&amp;nbsp; &amp;mdash;</description>
     </item>
     
     <item>
@@ -155,10 +155,10 @@ void SetbStickyWheels(unsigned long newbStickyWheels)        Parameter Type Des
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PlayerReplicationInfoWrapper/</guid>
       <description>View Implementation    OnlinePlatform GetPlatform()     
-int GetScore()     
-void SetScore(int newScore)        Parameter Type Description     newScore int &amp;mdash;    
-int GetDeaths()     
-void SetDeaths(int newDeaths)        Parameter Type Description     newDeaths int &amp;mdash;</description>
+int&amp;nbsp; GetScore()     
+void&amp;nbsp; SetScore(int newScore)        Parameter Type Description     newScore int&amp;nbsp; &amp;mdash;    
+int&amp;nbsp; GetDeaths()     
+void&amp;nbsp; SetDeaths(int newDeaths)        Parameter Type Description     newDeaths int&amp;nbsp; &amp;mdash;</description>
     </item>
     
     <item>
@@ -167,11 +167,11 @@ void SetDeaths(int newDeaths)        Parameter Type Description     newDeaths i
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PriWrapper/</guid>
-      <description>View Implementation    int GetMatchScore()     
-void SetMatchScore(int newMatchScore)        Parameter Type Description     newMatchScore int &amp;mdash;    
-int GetMatchGoals()     
-void SetMatchGoals(int newMatchGoals)        Parameter Type Description     newMatchGoals int &amp;mdash;    
-int GetMatchOwnGoals()</description>
+      <description>View Implementation    int&amp;nbsp; GetMatchScore()     
+void&amp;nbsp; SetMatchScore(int newMatchScore)        Parameter Type Description     newMatchScore int&amp;nbsp; &amp;mdash;    
+int&amp;nbsp; GetMatchGoals()     
+void&amp;nbsp; SetMatchGoals(int newMatchGoals)        Parameter Type Description     newMatchGoals int&amp;nbsp; &amp;mdash;    
+int&amp;nbsp; GetMatchOwnGoals()</description>
     </item>
     
     <item>
@@ -180,13 +180,13 @@ int GetMatchOwnGoals()</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PriXWrapper/</guid>
-      <description>View Implementation    void eventDestroyed()     
-void OnUniqueIdChanged()     
-void SetUniqueId(SteamID &amp;amp;PlayerUniqueId)        Parameter Type Description     PlayerUniqueId SteamID &amp;mdash;    
-void UnregisterPlayerFromSession()     
-void RegisterPlayerWithSession()     
-void OnTeamChanged()     
-void SetPlayerTeam(TeamInfoWrapper NewTeam)        Parameter Type Description     NewTeam TeamInfoWrapper &amp;mdash;</description>
+      <description>View Implementation    void&amp;nbsp; eventDestroyed()     
+void&amp;nbsp; OnUniqueIdChanged()     
+void&amp;nbsp; SetUniqueId(SteamID &amp;amp;PlayerUniqueId)        Parameter Type Description     PlayerUniqueId SteamID &amp;mdash;    
+void&amp;nbsp; UnregisterPlayerFromSession()     
+void&amp;nbsp; RegisterPlayerWithSession()     
+void&amp;nbsp; OnTeamChanged()     
+void&amp;nbsp; SetPlayerTeam(TeamInfoWrapper NewTeam)        Parameter Type Description     NewTeam TeamInfoWrapper &amp;mdash;</description>
     </item>
     
     <item>
@@ -195,11 +195,11 @@ void SetPlayerTeam(TeamInfoWrapper NewTeam)        Parameter Type Description  
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RBActorWrapper/</guid>
-      <description>View Implementation    float GetMaxLinearSpeed()     
-void SetMaxLinearSpeed(float newMaxLinearSpeed)        Parameter Type Description     newMaxLinearSpeed float &amp;mdash;    
-float GetMaxAngularSpeed()     
-void SetMaxAngularSpeed(float newMaxAngularSpeed)        Parameter Type Description     newMaxAngularSpeed float &amp;mdash;    
-unsigned long GetbDisableSleeping()</description>
+      <description>View Implementation    float&amp;nbsp; GetMaxLinearSpeed()     
+void&amp;nbsp; SetMaxLinearSpeed(float newMaxLinearSpeed)        Parameter Type Description     newMaxLinearSpeed float&amp;nbsp; &amp;mdash;    
+float&amp;nbsp; GetMaxAngularSpeed()     
+void&amp;nbsp; SetMaxAngularSpeed(float newMaxAngularSpeed)        Parameter Type Description     newMaxAngularSpeed float&amp;nbsp; &amp;mdash;    
+unsigned long&amp;nbsp; GetbDisableSleeping()</description>
     </item>
     
     <item>
@@ -209,10 +209,10 @@ unsigned long GetbDisableSleeping()</description>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/TeamInfoWrapper/</guid>
       <description>View Implementation    UnrealStringWrapper GetTeamName()     
-int GetSize()     
-void SetSize(int newSize)        Parameter Type Description     newSize int &amp;mdash;    
-int GetScore()     
-void SetScore(int newScore)        Parameter Type Description     newScore int &amp;mdash;</description>
+int&amp;nbsp; GetSize()     
+void&amp;nbsp; SetSize(int newSize)        Parameter Type Description     newSize int&amp;nbsp; &amp;mdash;    
+int&amp;nbsp; GetScore()     
+void&amp;nbsp; SetScore(int newScore)        Parameter Type Description     newScore int&amp;nbsp; &amp;mdash;</description>
     </item>
     
     <item>
@@ -224,9 +224,9 @@ void SetScore(int newScore)        Parameter Type Description     newScore int 
       <description>View Implementation    LinearColor GetPrimaryColor()     
 LinearColor GetSecondaryColor()     
 LinearColor GetFontColor()     
-void SetFontColor(LinearColor newFontColor)        Parameter Type Description     newFontColor LinearColor &amp;mdash;    
+void&amp;nbsp; SetFontColor(LinearColor newFontColor)        Parameter Type Description     newFontColor LinearColor &amp;mdash;    
 LinearColor GetColorBlindFontColor()     
-void SetColorBlindFontColor(LinearColor newColorBlindFontColor)        Parameter Type Description     newColorBlindFontColor LinearColor &amp;mdash;</description>
+void&amp;nbsp; SetColorBlindFontColor(LinearColor newColorBlindFontColor)        Parameter Type Description     newColorBlindFontColor LinearColor &amp;mdash;</description>
     </item>
     
     <item>
@@ -235,10 +235,10 @@ void SetColorBlindFontColor(LinearColor newColorBlindFontColor)        Paramete
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/VehiclePickupWrapper/</guid>
-      <description>View Implementation    float GetRespawnDelay()     
-void SetRespawnDelay(float newRespawnDelay)        Parameter Type Description     newRespawnDelay float &amp;mdash;    
+      <description>View Implementation    float&amp;nbsp; GetRespawnDelay()     
+void&amp;nbsp; SetRespawnDelay(float newRespawnDelay)        Parameter Type Description     newRespawnDelay float&amp;nbsp; &amp;mdash;    
 FXActorWrapper GetFXActorArchetype()     
-void SetFXActorArchetype(FXActorWrapper newFXActorArchetype)        Parameter Type Description     newFXActorArchetype FXActorWrapper &amp;mdash;    
+void&amp;nbsp; SetFXActorArchetype(FXActorWrapper newFXActorArchetype)        Parameter Type Description     newFXActorArchetype FXActorWrapper &amp;mdash;    
 FXActorWrapper GetFXActor()</description>
     </item>
     
@@ -248,10 +248,10 @@ FXActorWrapper GetFXActor()</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/VehicleWrapper/</guid>
-      <description>View Implementation    unsigned long GetbCanJump()     
-void SetbCanJump(unsigned long newbCanJump)        Parameter Type Description     newbCanJump unsigned long &amp;mdash;    
+      <description>View Implementation    unsigned long&amp;nbsp; GetbCanJump()     
+void&amp;nbsp; SetbCanJump(unsigned long newbCanJump)        Parameter Type Description     newbCanJump unsigned long&amp;nbsp; &amp;mdash;    
 VehicleSimWrapper GetVehicleSim()     
-void SetVehicleSim(VehicleSimWrapper newVehicleSim)        Parameter Type Description     newVehicleSim VehicleSimWrapper &amp;mdash;</description>
+void&amp;nbsp; SetVehicleSim(VehicleSimWrapper newVehicleSim)        Parameter Type Description     newVehicleSim VehicleSimWrapper &amp;mdash;</description>
     </item>
     
   </channel>

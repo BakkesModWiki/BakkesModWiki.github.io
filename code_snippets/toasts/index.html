@@ -11057,20 +11057,20 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <p>These are useful for quick notifications that you want to disappear quickly</p>
 <p>First you need to enable them in f2 - Misc - Enable notifications</p>
 <p><img src="https://cdn.discordapp.com/attachments/873081105090215957/879205725266649168/unknown.png" alt="enable notifications"  /></p>
-<p>Watch out though! Every user also has to enable this, so make sure your plugin page or <a class="gdoc-markdown__link" href="/plugin_tutorial/plugin_interface/">interface</a> is quite clear that this is necessary</p>
+<p>Watch out though! Every user also has to enable this, so make sure your plugin page or <a class="gdoc-markdown__link"  href="/plugin_tutorial/plugin_interface/">interface</a> is quite clear that this is necessary</p>
 <p>Now to the code</p>
-<p>Make a toast pop up with <a class="gdoc-markdown__link" href="/bakkesmod_api/Classes/Wrappers/GameWrapper/">GameWrapper</a><a class="gdoc-markdown__link" href="https://github.com/bakkesmodorg/BakkesModSDK/blob/master/include/bakkesmod/wrappers/GameWrapper.h#L111">.Toast()</a></p>
+<p>Make a toast pop up with <a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameWrapper/">GameWrapper</a><a class="gdoc-markdown__link" target="_blank" href="https://github.com/bakkesmodorg/BakkesModSDK/blob/master/include/bakkesmod/wrappers/GameWrapper.h#L111">.Toast()&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a></p>
 <p>There are 7 parameters. The first two are required. They are</p>
 <ol>
 <li>The title, which is the word on top</li>
 <li>The text, which is the smaller text below</li>
 <li>The texture name which I&rsquo;ll explain in the next paragraph</li>
 <li>The time to show the toast, which defaults to 3.5 seconds</li>
-<li>The <a class="gdoc-markdown__link" href="/bakkesmod_api/Enums/ToastType/">ToastType</a>, which chooses the color and defaults to black</li>
+<li>The <a class="gdoc-markdown__link"  href="/bakkesmod_api/Enums/ToastType/">ToastType</a>, which chooses the color and defaults to black</li>
 <li>The width in pixels. The toast automatically resizes to fit your text, so don&rsquo;t worry about these too much</li>
 <li>The height in pixels</li>
 </ol>
-<p>If you want to have a custom image, load it in your onLoad() using <a class="gdoc-markdown__link" href="/bakkesmod_api/Classes/Wrappers/GameWrapper/">GameWrapper</a>.LoadToastTexture(). Provide the function with a name for your toast, and the path to the image. Most likely you&rsquo;ll want it to be in the data folder.</p>
+<p>If you want to have a custom image, load it in your onLoad() using <a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameWrapper/">GameWrapper</a>.LoadToastTexture(). Provide the function with a name for your toast, and the path to the image. Most likely you&rsquo;ll want it to be in the data folder.</p>
 <p>Toasts can be one of 4 colors based on the ToastType</p>
 <p><img src="https://cdn.discordapp.com/attachments/873081105090215957/879215077654417469/unknown.png" alt="https://cdn.discordapp.com/attachments/873081105090215957/879215077654417469/unknown.png"  /></p>
 <p>I&rsquo;ve made an example using CoolPlugin. I put this code in the onLoad() in CoolPlugin.cpp and cool.png in the <code>bakkesmod/data</code> folder</p>
@@ -11084,7 +11084,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <p>For perspective, it&rsquo;s quite small but still legible</p>
 <p><img src="https://cdn.discordapp.com/attachments/873081105090215957/879213832696909864/unknown.png" alt="https://cdn.discordapp.com/attachments/873081105090215957/879213832696909864/unknown.png"  /></p>
 <p>Full code here
-<a class="gdoc-markdown__link" href="https://github.com/ubelhj/BakkesModStarterPlugin/tree/toasts">https://github.com/ubelhj/BakkesModStarterPlugin/tree/toasts</a></p>
+<a class="gdoc-markdown__link" target="_blank" href="https://github.com/ubelhj/BakkesModStarterPlugin/tree/toasts">https://github.com/ubelhj/BakkesModStarterPlugin/tree/toasts&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a></p>
 
         
         <hr>
@@ -11118,12 +11118,10 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
             </div>
         </main>
 
-        <footer class="gdoc-footer"  style="position: fixed;bottom: 0;left:0;right:0">
+        <footer class="gdoc-footer"  style="position: fixed;bottom: 0;left: 0;right: 0;">
     <div class="container flex">
         <div class="flex flex-wrap">
             <span class="gdoc-footer__item gdoc-footer__item--row">
-                Built with <a href="https://gohugo.io/" class="gdoc-footer__link">Hugo</a> and
-                <svg class="icon gdoc_heart"><use xlink:href="#gdoc_heart"></use></svg>
             </span>
             
             

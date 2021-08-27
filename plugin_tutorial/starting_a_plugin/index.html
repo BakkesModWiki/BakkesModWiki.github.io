@@ -11048,7 +11048,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 
     <article class="gdoc-markdown gdoc-markdown__align--left">
         <h1>Starting a plugin</h1>
-        <p>It will assume you&rsquo;re using the template as linked in <a class="gdoc-markdown__link" href="/plugin_tutorial/getting_started">Setting Up</a>. You can of course make a plugin without it, but it gives an easier basis to work off of. You can name it anything, but here we&rsquo;ll be using a demo plugin named CoolPlugin</p>
+        <p>It will assume you&rsquo;re using the template as linked in <a class="gdoc-markdown__link"  href="/plugin_tutorial/getting_started">Setting Up</a>. You can of course make a plugin without it, but it gives an easier basis to work off of. You can name it anything, but here we&rsquo;ll be using a demo plugin named CoolPlugin</p>
 <p>The template has a lot of commented out code that is designed to help you learn how to use the syntax, but is ignored for the purposes of this tutorial</p>
 <p>First we&rsquo;ll look at your <code>CoolPlugin.h</code> file. It describes any functions your code will use
 At the top are two lines that are required for plugins, and allow you to call BakkesMod SDK functions</p>
@@ -11065,7 +11065,7 @@ At the top are two lines that are required for plugins, and allow you to call Ba
 First it includes your header so it can define the functions described above</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&#34;pch.h&#34;</span><span class="cp">
 </span><span class="cp">#include</span> <span class="cpf">&#34;CoolPlugin.h&#34;</span><span class="cp">
-</span></code></pre></div><p>Next it declares the plugin. The string in &quot;&quot; will be used in the plugin manager to describe the plugin, but it needs to be a short description. Keep it to 1 or two words. You can also define a plugin version, although the template handles that automatically. Finally is the plugin type described <a class="gdoc-markdown__link" href="/code_snippets/plugin_types/">here</a>. If you don&rsquo;t know what it is, just use <code>PLUGINTYPE_FREEPLAY</code>.</p>
+</span></code></pre></div><p>Next it declares the plugin. The string in &quot;&quot; will be used in the plugin manager to describe the plugin, but it needs to be a short description. Keep it to 1 or two words. You can also define a plugin version, although the template handles that automatically. Finally is the plugin type described <a class="gdoc-markdown__link"  href="/code_snippets/plugin_types/">here</a>. If you don&rsquo;t know what it is, just use <code>PLUGINTYPE_FREEPLAY</code>.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">BAKKESMOD_PLUGIN</span><span class="p">(</span><span class="n">CoolPlugin</span><span class="p">,</span> <span class="s">&#34;Cool Plugin&#34;</span><span class="p">,</span> <span class="n">plugin_version</span><span class="p">,</span> <span class="n">PLUGINTYPE_FREEPLAY</span><span class="p">)</span>
 </code></pre></div><p>Next you define your functions, starting with <code>onLoad()</code>. As this is a demo, we&rsquo;ll just do a hello world.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">void</span> <span class="n">CoolPlugin</span><span class="o">::</span><span class="n">onLoad</span><span class="p">()</span> <span class="p">{</span>
@@ -11190,8 +11190,8 @@ Finally is the permissions, which should usually be <code>PERMISSION_ALL</code>.
 <span class="p">}</span>
 </code></pre></div><p>Finally build the plugin with ctrl + b. Then start freeplay, load the plugin with <code>plugin load CoolPlugin</code> and call <code>CoolerBallOnTop</code> from the f6 console. The ball should teleport above you!</p>
 <p>You can find the final code here!
-<a class="gdoc-markdown__link" href="https://github.com/ubelhj/BakkesModStarterPlugin/tree/starter-tutorial">https://github.com/ubelhj/BakkesModStarterPlugin/tree/starter-tutorial</a></p>
-<p>Now what if you wanted a user to be able to modify plugin behavior on the fly? <a class="gdoc-markdown__link" href="/plugin_tutorial/plugin_variables">Next are Plugin Variables</a></p>
+<a class="gdoc-markdown__link" target="_blank" href="https://github.com/ubelhj/BakkesModStarterPlugin/tree/starter-tutorial">https://github.com/ubelhj/BakkesModStarterPlugin/tree/starter-tutorial&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a></p>
+<p>Now what if you wanted a user to be able to modify plugin behavior on the fly? <a class="gdoc-markdown__link"  href="/plugin_tutorial/plugin_variables">Next are Plugin Variables</a></p>
 
         
         <hr>
@@ -11225,12 +11225,10 @@ Finally is the permissions, which should usually be <code>PERMISSION_ALL</code>.
             </div>
         </main>
 
-        <footer class="gdoc-footer"  style="position: fixed;bottom: 0;left:0;right:0">
+        <footer class="gdoc-footer"  style="position: fixed;bottom: 0;left: 0;right: 0;">
     <div class="container flex">
         <div class="flex flex-wrap">
             <span class="gdoc-footer__item gdoc-footer__item--row">
-                Built with <a href="https://gohugo.io/" class="gdoc-footer__link">Hugo</a> and
-                <svg class="icon gdoc_heart"><use xlink:href="#gdoc_heart"></use></svg>
             </span>
             
             

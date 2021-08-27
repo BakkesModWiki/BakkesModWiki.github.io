@@ -11,7 +11,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/AIControllerWrapper/</guid>
-      <description>View Implementation    void DoNothing()    Does Nothing</description>
+      <description>View Implementation    void&amp;nbsp; DoNothing()    Does Nothing</description>
     </item>
     
     <item>
@@ -23,7 +23,7 @@
       <description>View Implementation    ArrayWrapper(const ArrayWrapper&amp;lt; T &amp;gt; &amp;amp;other)        Parameter Type Description     other ArrayWrapper &amp;mdash;    
 ArrayWrapper operator=(ArrayWrapper&amp;lt; T &amp;gt; rhs)        Parameter Type Description     rhs ArrayWrapper &amp;mdash;    
 ~ArrayWrapper()     
-int Count()</description>
+int&amp;nbsp; Count()</description>
     </item>
     
     <item>
@@ -32,7 +32,7 @@ int Count()</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/ArrayWrapperIterator/</guid>
-      <description>View Implementation    size_t index     
+      <description>View Implementation    size_t&amp;nbsp; index     
 ArrayWrapper collection</description>
     </item>
     
@@ -42,11 +42,11 @@ ArrayWrapper collection</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/CanvasWrapper/</guid>
-      <description>View Implementation    void SetPosition(Vector2 pos)        Parameter Type Description     pos Vector2 &amp;mdash;    
+      <description>View Implementation    void&amp;nbsp; SetPosition(Vector2 pos)        Parameter Type Description     pos Vector2 &amp;mdash;    
 Vector2F GetPositionFloat()     
-void SetColor(LinearColor color)        Parameter Type Description     color LinearColor &amp;mdash;    
+void&amp;nbsp; SetColor(LinearColor color)        Parameter Type Description     color LinearColor &amp;mdash;    
 LinearColor GetColor()     
-void DrawBox(Vector2 size)        Parameter Type Description     size Vector2 &amp;mdash;</description>
+void&amp;nbsp; DrawBox(Vector2 size)        Parameter Type Description     size Vector2 &amp;mdash;</description>
     </item>
     
     <item>
@@ -76,7 +76,7 @@ void DrawBox(Vector2 size)        Parameter Type Description     size Vector2 &
       <description>View Implementation    CVarManagerWrapper(const CVarManagerWrapper &amp;amp;other)        Parameter Type Description     other CVarManagerWrapper &amp;mdash;    
 CVarManagerWrapper operator=(CVarManagerWrapper rhs)        Parameter Type Description     rhs CVarManagerWrapper &amp;mdash;    
 ~CVarManagerWrapper()     
-void executeCommand(std::string command, bool log=true)        Parameter Type Description     command std::string &amp;mdash;   log bool &amp;mdash;</description>
+void&amp;nbsp; executeCommand(std::string command, bool log=true)        Parameter Type Description     command std::string&amp;nbsp; &amp;mdash;   log bool&amp;nbsp; &amp;mdash;</description>
     </item>
     
     <item>
@@ -88,8 +88,8 @@ void executeCommand(std::string command, bool log=true)        Parameter Type D
       <description>View Implementation    CVarWrapper(const CVarWrapper &amp;amp;other)        Parameter Type Description     other CVarWrapper &amp;mdash;    
 CVarWrapper operator=(CVarWrapper rhs)        Parameter Type Description     rhs CVarWrapper &amp;mdash;    
 ~CVarWrapper()     
-std::string getCVarName()     
-int getIntValue()</description>
+std::string&amp;nbsp; getCVarName()     
+int&amp;nbsp; getIntValue()</description>
     </item>
     
     <item>
@@ -98,7 +98,7 @@ int getIntValue()</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameWrapper/</guid>
-      <description>View Implementation    std::unique_ptr&amp;lt; Impl &amp;gt; pimpl</description>
+      <description>View Implementation    std::unique_ptr&amp;lt; Impl &amp;gt;&amp;nbsp; pimpl</description>
     </item>
     
     <item>
@@ -108,8 +108,8 @@ int getIntValue()</description>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GuiManagerWrapper/</guid>
       <description>View Implementation    CONSTRUCTORS(GuiManagerWrapper)        Parameter Type Description     GuiManagerWrapper &amp;mdash;     
-void * GetImGuiStyle()     
-std::tuple&amp;lt; int, ImFont * &amp;gt; LoadFont(std::string name, std::string path, int size, const ImFontConfig *=nullptr, const ImWchar *=nullptr)        Parameter Type Description     name std::string &amp;mdash;   path std::string &amp;mdash;   size int &amp;mdash;   const ImFontConfig * &amp;mdash;    const ImWchar * &amp;mdash;</description>
+void *&amp;nbsp; GetImGuiStyle()     
+std::tuple&amp;lt; int, ImFont * &amp;gt; LoadFont(std::string name, std::string path, int size, const ImFontConfig *=nullptr, const ImWchar *=nullptr)        Parameter Type Description     name std::string&amp;nbsp; &amp;mdash;   path std::string&amp;nbsp; &amp;mdash;   size int&amp;nbsp; &amp;mdash;   const ImFontConfig * &amp;mdash;    const ImWchar * &amp;mdash;</description>
     </item>
     
     <item>
@@ -121,8 +121,8 @@ std::tuple&amp;lt; int, ImFont * &amp;gt; LoadFont(std::string name, std::strin
       <description>View Implementation    ImageWrapper(const ImageWrapper &amp;amp;)=delete        Parameter Type Description     ImageWrapper &amp;mdash;     
 ImageWrapper operator=(const ImageWrapper &amp;amp;)=delete        Parameter Type Description     ImageWrapper &amp;mdash;     
 ~ImageWrapper()     
-bool LoadForCanvas()     
-bool IsLoadedForCanvas()</description>
+bool&amp;nbsp; LoadForCanvas()     
+bool&amp;nbsp; IsLoadedForCanvas()</description>
     </item>
     
     <item>
@@ -133,10 +133,10 @@ bool IsLoadedForCanvas()</description>
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/MatchmakingWrapper/</guid>
       <description>View Implementation    _NODISCARD bool IsNull() const     
 operator bool() const     
-bool IsSearching()     
-int GetActiveViewTab()     
-void SetRegionSelection(Region region, bool bSelected)        Parameter Type Description     region Region &amp;mdash;   bSelected bool &amp;mdash;    
-void SetPlaylistSelection(Playlist playlist, bool bSelected)        Parameter Type Description     playlist Playlist &amp;mdash;   bSelected bool &amp;mdash;</description>
+bool&amp;nbsp; IsSearching()     
+int&amp;nbsp; GetActiveViewTab()     
+void&amp;nbsp; SetRegionSelection(Region region, bool bSelected)        Parameter Type Description     region Region &amp;mdash;   bSelected bool&amp;nbsp; &amp;mdash;    
+void&amp;nbsp; SetPlaylistSelection(Playlist playlist, bool bSelected)        Parameter Type Description     playlist Playlist &amp;mdash;   bSelected bool&amp;nbsp; &amp;mdash;</description>
     </item>
     
     <item>
@@ -146,8 +146,8 @@ void SetPlaylistSelection(Playlist playlist, bool bSelected)        Parameter T
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/MMRWrapper/</guid>
       <description>View Implementation    CONSTRUCTORS(MMRWrapper)        Parameter Type Description     MMRWrapper &amp;mdash;     
-bool IsSyncing(SteamID playerID)        Parameter Type Description     playerID SteamID &amp;mdash;    
-bool IsSynced(SteamID playerID, int playlistID)        Parameter Type Description     playerID SteamID &amp;mdash;   playlistID int &amp;mdash;</description>
+bool&amp;nbsp; IsSyncing(SteamID playerID)        Parameter Type Description     playerID SteamID &amp;mdash;    
+bool&amp;nbsp; IsSynced(SteamID playerID, int playlistID)        Parameter Type Description     playerID SteamID &amp;mdash;   playlistID int&amp;nbsp; &amp;mdash;</description>
     </item>
     
     <item>
@@ -157,9 +157,9 @@ bool IsSynced(SteamID playerID, int playlistID)        Parameter Type Descripti
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/PlayerControllerWrapper/</guid>
       <description>View Implementation    CarWrapper GetCar()     
-void SetCar(CarWrapper newCar)        Parameter Type Description     newCar CarWrapper &amp;mdash;    
+void&amp;nbsp; SetCar(CarWrapper newCar)        Parameter Type Description     newCar CarWrapper &amp;mdash;    
 PriWrapper GetPRI()     
-void SetPRI(PriWrapper newPRI)        Parameter Type Description     newPRI PriWrapper &amp;mdash;    
+void&amp;nbsp; SetPRI(PriWrapper newPRI)        Parameter Type Description     newPRI PriWrapper &amp;mdash;    
 ControllerInput GetVehicleInput()</description>
     </item>
     
@@ -211,7 +211,7 @@ std::vector&amp;lt; std::pair&amp;lt; std::string, std::string &amp;gt; &amp;gt;
       <description>View Implementation    StructArrayWrapper(const StructArrayWrapper&amp;lt; T &amp;gt; &amp;amp;other)        Parameter Type Description     other StructArrayWrapper &amp;mdash;    
 StructArrayWrapper operator=(StructArrayWrapper&amp;lt; T &amp;gt; rhs)        Parameter Type Description     rhs StructArrayWrapper &amp;mdash;    
 ~StructArrayWrapper()     
-int Count()</description>
+int&amp;nbsp; Count()</description>
     </item>
     
     <item>
@@ -224,7 +224,7 @@ int Count()</description>
 UniqueIDWrapper operator=(UniqueIDWrapper rhs)        Parameter Type Description     rhs UniqueIDWrapper &amp;mdash;    
 ~UniqueIDWrapper()     
 OnlinePlatform GetPlatform() const     
-std::string GetEpicAccountID() const</description>
+std::string&amp;nbsp; GetEpicAccountID() const</description>
     </item>
     
   </channel>

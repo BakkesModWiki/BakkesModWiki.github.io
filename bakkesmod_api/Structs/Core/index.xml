@@ -15,13 +15,13 @@
 
 Attribute product_attributes     Default value: none
 
-unsigned char team     Default value = 0
+unsigned char&amp;nbsp; team     Default value = 0
 
-int team_finish_id     Default value = 0
+int&amp;nbsp; team_finish_id     Default value = 0
 
-int custom_finish_id     Default value = 0
+int&amp;nbsp; custom_finish_id     Default value = 0
 
-unsigned char team_color_id     Default value = 0</description>
+unsigned char&amp;nbsp; team_color_id     Default value = 0</description>
     </item>
     
     <item>
@@ -30,13 +30,13 @@ unsigned char team_color_id     Default value = 0</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Core/CurlRequest/</guid>
-      <description>View Implementation    std::string url     Default value: none
+      <description>View Implementation    std::string&amp;nbsp; url     Default value: none
 
-std::string verb     Default value: none
+std::string&amp;nbsp; verb     Default value: none
 
 std::map&amp;lt; std::string, std::string &amp;gt; headers     Default value: none
 
-std::string body     Default value: none
+std::string&amp;nbsp; body     Default value: none
 
 FormField form_data     Default value: none
 
@@ -54,9 +54,9 @@ CurlProgressFunction progress_function     Default value: none</description>
   
 Type field_type     Default value: none
 
-std::string data     Default value: none
+std::string&amp;nbsp; data     Default value: none
 
-std::string name     Default value: none</description>
+std::string&amp;nbsp; name     Default value: none</description>
     </item>
     
   </channel>

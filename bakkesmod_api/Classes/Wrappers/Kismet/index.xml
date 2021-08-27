@@ -34,15 +34,15 @@ UnrealStringWrapper GetObjComment()</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Kismet/SequenceVariableWrapper/</guid>
-      <description>View Implementation    std::string GetVarName()     
-bool IsInt()     
-bool IsFloat()     
-bool IsString()     
-bool IsVector()     
-bool IsBool()     
-bool IsObjectList()     
-bool IsActor()     
-float GetFloat()</description>
+      <description>View Implementation    std::string&amp;nbsp; GetVarName()     
+bool&amp;nbsp; IsInt()     
+bool&amp;nbsp; IsFloat()     
+bool&amp;nbsp; IsString()     
+bool&amp;nbsp; IsVector()     
+bool&amp;nbsp; IsBool()     
+bool&amp;nbsp; IsObjectList()     
+bool&amp;nbsp; IsActor()     
+float&amp;nbsp; GetFloat()</description>
     </item>
     
     <item>
@@ -53,8 +53,8 @@ float GetFloat()</description>
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Kismet/SequenceWrapper/</guid>
       <description>View Implementation    ArrayWrapper GetSequenceObjects()     
 ArrayWrapper GetNestedSequences()     
-int ActivateRemoteEvents(const std::string &amp;amp;remote_event_name) const        Parameter Type Description     remote_event_name const std::string &amp;amp; &amp;mdash;    
-SequenceVariableWrapper GetAllSequenceVariables(bool reqursive)        Parameter Type Description     reqursive bool &amp;mdash;</description>
+int&amp;nbsp; ActivateRemoteEvents(const std::string &amp;amp;remote_event_name) const        Parameter Type Description     remote_event_name const std::string &amp;amp; &amp;mdash;    
+SequenceVariableWrapper GetAllSequenceVariables(bool reqursive)        Parameter Type Description     reqursive bool&amp;nbsp; &amp;mdash;</description>
     </item>
     
   </channel>

@@ -11049,7 +11049,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
     <article class="gdoc-markdown gdoc-markdown__align--left">
         <h1>Plugin Variables</h1>
         <p>Next we will make your plugin alterable by a user. They might want to enable/disable the plugin, change how it acts, and pretty much infinite options. I&rsquo;ll be using a fairly simple plugin I&rsquo;ve made as an example. I&rsquo;ll only be focusing on the settings, not the actual code that makes it work.
-We&rsquo;ll continue the CoolPlugin from <a class="gdoc-markdown__link" href="/plugin_tutorial/starting_a_plugin/">Starting a Plugin</a></p>
+We&rsquo;ll continue the CoolPlugin from <a class="gdoc-markdown__link"  href="/plugin_tutorial/starting_a_plugin/">Starting a Plugin</a></p>
 <p>We give the users control with the Console Variables, CVars. They allow a user to set a named variable&rsquo;s value, and for our code to know when those values are changed. These can be used to store string, int, bool, float, or color values</p>
 <p>To create one, we call <code>cvarManager-&gt;registerCvar()</code>
 There are 2-9 arguments. The first 2 are required, but the others are not</p>
@@ -11084,9 +11084,9 @@ If I had a variable <code>bool coolEnabled</code>, I could call <code>coolEnable
 <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">distanceCVar</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
 <span class="kt">float</span> <span class="n">distance</span> <span class="o">=</span> <span class="n">distanceCVar</span><span class="p">.</span><span class="n">getFloatValue</span><span class="p">();</span>
 </code></pre></div><p>We can put together this knowledge to add to <code>CoolPlugin.cpp</code>
-<a class="gdoc-markdown__link" href="https://github.com/ubelhj/BakkesModStarterPlugin/blob/plugin-settings/CoolPlugin/CoolPlugin.cpp">https://github.com/ubelhj/BakkesModStarterPlugin/blob/plugin-settings/CoolPlugin/CoolPlugin.cpp</a></p>
+<a class="gdoc-markdown__link" target="_blank" href="https://github.com/ubelhj/BakkesModStarterPlugin/blob/plugin-settings/CoolPlugin/CoolPlugin.cpp">https://github.com/ubelhj/BakkesModStarterPlugin/blob/plugin-settings/CoolPlugin/CoolPlugin.cpp&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a></p>
 <p>This isn&rsquo;t enough though. Who want to be changing an integer value with a console command? Gross. What if we had sliders? Checkboxes? Buttons?
-<a class="gdoc-markdown__link" href="/plugin_tutorial/plugin_interface">Plugin Interface</a></p>
+<a class="gdoc-markdown__link"  href="/plugin_tutorial/plugin_interface">Plugin Interface</a></p>
 
         
         <hr>
@@ -11120,12 +11120,10 @@ If I had a variable <code>bool coolEnabled</code>, I could call <code>coolEnable
             </div>
         </main>
 
-        <footer class="gdoc-footer"  style="position: fixed;bottom: 0;left:0;right:0">
+        <footer class="gdoc-footer"  style="position: fixed;bottom: 0;left: 0;right: 0;">
     <div class="container flex">
         <div class="flex flex-wrap">
             <span class="gdoc-footer__item gdoc-footer__item--row">
-                Built with <a href="https://gohugo.io/" class="gdoc-footer__link">Hugo</a> and
-                <svg class="icon gdoc_heart"><use xlink:href="#gdoc_heart"></use></svg>
             </span>
             
             
