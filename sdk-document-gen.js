@@ -62,10 +62,12 @@ let foundDefs = {
 };
 
 let manualDescriptions = JSON.parse(fs.readFileSync("sdk-manual-descriptions.json", "utf8"));
+let descriptionsAdded = 0;
 function drillDescriptions(defs, manualDescLevel) {
     _.each(manualDescLevel, (v, k) => {
         if (k === "Description") {
             defs["Description"] = v;
+            descriptionsAdded++;
             return;
         }
         if (_.isUndefined(defs[k])) {
@@ -76,6 +78,7 @@ function drillDescriptions(defs, manualDescLevel) {
         }
         if (v.length > 0) {
             defs[k]["Description"] = v;
+            descriptionsAdded++;
         }
     });
 }
@@ -239,13 +242,13 @@ async function main() {
                                     });
                                     members[foundObj.name[0]] = enumObj;
                                 } else {
-                                    console.log("Enum has no name!", member);
+                                    console.warn("Enum has no name!", member);
                                 }
                             }
                         } else if (member.$.kind === "enumvalue") {
                             // Skip because this will be captured inside "enum" members
                         } else {
-                            console.log(`Struct member type has no defined output "${member.$.kind}": ${member.$.refid}`);
+                            console.log(`  - Struct member type has no defined output "${member.$.kind}": ${member.$.refid}`);
                         }
                     }
                 }
@@ -279,7 +282,7 @@ async function main() {
                                     });
                                     foundDefs.Enums[foundObj.name[0]] = enumObj;
                                 } else {
-                                    console.log("Enum has no name!", member);
+                                    console.warn("Enum has no name!", member);
                                 }
                                 _.each(foundObj.enumvalue, ev => {
                                     enumObj.Values[ev.name[0]] = ev.initializer[0]
@@ -311,6 +314,7 @@ async function main() {
     });
     await Promise.all(allPromises);
     drillDescriptions(foundDefs, manualDescriptions);
+    console.log(`  - Added ${descriptionsAdded} descriptions to the metadata`);
     fs.writeFileSync("_bakkesmod_sdk_parsed_output.json", JSON.stringify(foundDefs));
 
     createHugoPages();
