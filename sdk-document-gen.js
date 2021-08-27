@@ -1,6 +1,6 @@
 const refreshLocalSdk = true;
 const hugoBaseSdkPath = "content/bakkesmod_api/"
-const cachedSdk = true;
+const cachedSdk = false;
 //------
 
 const fs = require('fs');
