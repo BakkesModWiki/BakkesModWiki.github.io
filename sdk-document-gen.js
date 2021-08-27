@@ -1,5 +1,6 @@
 const refreshLocalSdk = true;
 const hugoBaseSdkPath = "content/bakkesmod_api/"
+const cachedSdk = true;
 //------
 
 const fs = require('fs');
@@ -70,17 +71,19 @@ async function getXmlFromString(string) {
 
 async function main() {
     if (refreshLocalSdk) {
-        if (fs.existsSync("_bakkesmod_sdk")) {
-            fs.rmdirSync("_bakkesmod_sdk", {
-                recursive: true
-            });
+        if (!cachedSdk) {
+            if (fs.existsSync("_bakkesmod_sdk")) {
+                fs.rmdirSync("_bakkesmod_sdk", {
+                    recursive: true
+                });
+            }
+            if (fs.existsSync("_doxygen")) {
+                fs.rmdirSync("_doxygen", {
+                    recursive: true
+                });
+            }
+            child_process.execSync("git clone https://github.com/bakkesmodorg/BakkesModSDK.git ./_bakkesmod_sdk");
         }
-        if (fs.existsSync("_doxygen")) {
-            fs.rmdirSync("_doxygen", {
-                recursive: true
-            });
-        }
-        child_process.execSync("git clone https://github.com/bakkesmodorg/BakkesModSDK.git ./_bakkesmod_sdk");
         let doxyFile = fs.readFileSync("Doxyfile", "utf8");
         doxyFile = doxyFile.replace(/\{\{CURRENT_DIR\}\}/g, process.cwd());
 
@@ -254,15 +257,17 @@ function createHugoPages() {
 
 function cleanup() {
     fs.unlinkSync("Doxyfile_2");
-    if (fs.existsSync("_bakkesmod_sdk")) {
-        fs.rmdirSync("_bakkesmod_sdk", {
-            recursive: true
-        });
-    }
-    if (fs.existsSync("_doxygen")) {
-        fs.rmdirSync("_doxygen", {
-            recursive: true
-        });
+    if (!cachedSdk) {
+        if (fs.existsSync("_bakkesmod_sdk")) {
+            fs.rmdirSync("_bakkesmod_sdk", {
+                recursive: true
+            });
+        }
+        if (fs.existsSync("_doxygen")) {
+            fs.rmdirSync("_doxygen", {
+                recursive: true
+            });
+        }
     }
 
     console.log(`\n\nGeneration successful! Took ${((+(Date.now())) - timeStart) / 1000}s\n\n`);
