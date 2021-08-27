@@ -213,7 +213,7 @@ async function main() {
                 if (Object.keys(members).length > 0) {
                     let structObj = {
                         StructName: item.name[0],
-                        GitHubPath: sdkGithubLink,
+                        GitHubPath:  GitHubLinkFromLocalPath(itemCompound.location[0].$.file) + `#L${itemCompound.location[0].$.line}`,
                         Members: members
                     };
                     structObj.Parents = ["Structs", ...sdkLocation],
@@ -304,6 +304,8 @@ function createHugoPages() {
                 content = nunjucks.render("constant.md", itemData);
             } else if (defTopName === "Classes") {
                 content = nunjucks.render("class.md", itemData);
+            } else if (defTopName === "Structs") {
+                content = nunjucks.render("struct.md", itemData);
             }
             content = content.replace(/\\{/g, "{").replace(/\\}/g, "}");
             fs.writeFileSync(fullPath + `/${itemName}.md`, content);

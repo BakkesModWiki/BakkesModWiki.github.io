@@ -18,7 +18,9 @@ baseClass: "<a href=\"/bakkesmod_api/{{PathMap[BaseClass]}}\">{{BaseClass}}</a>"
 {% else %}
 ### {%if Field.Type %}{{Field.Type | trim}}&nbsp;{%endif%}{{FieldName | trim}}{{Field.ArgsString}}
 {% endif %}
-{%if Field.Description | length > 0 %}{{Field.Description}}{%else%}---{%endif%}
+{%if Field.Description | length > 0 %}{{Field.Description}}
+
+---{%else%}---{%endif%}
 {% if Field.Params | length > 0 %}
 
 |Parameter|Type|Description|
