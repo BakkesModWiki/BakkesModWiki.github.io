@@ -6,30 +6,57 @@
     <description>Recent content on BakkesMod Programming Wiki</description>
     <generator>Hugo -- gohugo.io</generator><atom:link href="https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Core/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title></title>
+      <title>BotLoadoutData</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Core/BotLoadoutData/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Core/BotLoadoutData/</guid>
-      <description></description>
+      <description>View Implementation    std::map&amp;lt; int, int &amp;gt; products     Default value: none
+
+Attribute product_attributes     Default value: none
+
+unsigned char team     Default value = 0
+
+int team_finish_id     Default value = 0
+
+int custom_finish_id     Default value = 0
+
+unsigned char team_color_id     Default value = 0</description>
     </item>
     
     <item>
-      <title></title>
+      <title>CurlRequest</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Core/CurlRequest/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Core/CurlRequest/</guid>
-      <description></description>
+      <description>View Implementation    std::string url     Default value: none
+
+std::string verb     Default value: none
+
+std::map&amp;lt; std::string, std::string &amp;gt; headers     Default value: none
+
+std::string body     Default value: none
+
+FormField form_data     Default value: none
+
+CurlProgressFunction progress_function     Default value: none</description>
     </item>
     
     <item>
-      <title></title>
+      <title>FormField</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Core/FormField/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Core/FormField/</guid>
-      <description></description>
+      <description>View Implementation    Type       kString
+  kFile
+  
+Type field_type     Default value: none
+
+std::string data     Default value: none
+
+std::string name     Default value: none</description>
     </item>
     
   </channel>

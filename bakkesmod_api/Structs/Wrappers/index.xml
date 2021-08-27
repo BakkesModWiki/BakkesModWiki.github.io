@@ -6,264 +6,439 @@
     <description>Recent content on BakkesMod Programming Wiki</description>
     <generator>Hugo -- gohugo.io</generator><atom:link href="https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title></title>
+      <title>CameraSave</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/CameraSave/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/CameraSave/</guid>
-      <description></description>
+      <description>View Implementation    bool InvertSwivelPitch     Default value: none
+
+bool CameraShake     Default value: none</description>
     </item>
     
     <item>
-      <title></title>
+      <title>ClubColorSet</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/ClubColorSet/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/ClubColorSet/</guid>
-      <description></description>
+      <description>View Implementation    unsigned char TeamColorID     Default value = 0
+
+unsigned char CustomColorID     Default value = 0
+
+bool bTeamColorSet     Default value = false
+
+bool bCustomColorSet     Default value = false</description>
     </item>
     
     <item>
-      <title></title>
+      <title>ControllerInput</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/ControllerInput/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/ControllerInput/</guid>
-      <description></description>
+      <description>View Implementation    float Throttle     Default value = .0f
+
+float Steer     Default value = .0f
+
+float Pitch     Default value = .0f
+
+float Yaw     Default value = .0f
+
+float Roll     Default value = .0f
+
+float DodgeForward     Default value = .</description>
     </item>
     
     <item>
-      <title></title>
+      <title>CustomMatchSettings</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/CustomMatchSettings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/CustomMatchSettings/</guid>
-      <description></description>
+      <description>View Implementation    std::string GameTags     Default value: none
+
+std::string MapName     Default value: none
+
+std::string ServerName     Default value: none
+
+std::string Password     Default value: none
+
+CustomMatchTeamSettings BlueTeamSettings     Default value: none
+
+CustomMatchTeamSettings OrangeTeamSettings     Default value: none
+
+int GameMode     Default value = 0</description>
     </item>
     
     <item>
-      <title></title>
+      <title>CustomMatchTeamSettings</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/CustomMatchTeamSettings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/CustomMatchTeamSettings/</guid>
-      <description></description>
+      <description>View Implementation    std::string Name     Default value: none
+
+ClubColorSet Colors     Default value: none
+
+int GameScore     Default value = 0</description>
     </item>
     
     <item>
-      <title></title>
+      <title>GamepadSettings</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/GamepadSettings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/GamepadSettings/</guid>
-      <description></description>
+      <description>View Implementation    float ControllerDeadzone     Default value: none
+
+float DodgeInputThreshold     Default value: none
+
+float SteeringSensitivity     Default value: none
+
+float AirControlSensitivity     Default value: none</description>
     </item>
     
     <item>
-      <title></title>
+      <title>GUIDWrapper</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/GUIDWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/GUIDWrapper/</guid>
-      <description></description>
+      <description>View Implementation    EGuidFormats       Digits = 0
+  DigitsWithHyphens = 1
+  DigitsWithHyphensInBraces = 2
+  DigitsWithHyphensInParentheses = 3
+  HexValuesInBraces = 4
+  UniqueObjectGuid = 5
+  
+int32_t A     Default value: none
+
+int32_t B     Default value: none
+
+int32_t C     Default value: none</description>
     </item>
     
     <item>
-      <title></title>
+      <title>LinearColor</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/LinearColor/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/LinearColor/</guid>
-      <description></description>
+      <description>View Implementation    float R     Default value: none
+
+float G     Default value: none
+
+float B     Default value: none
+
+float A     Default value: none</description>
     </item>
     
     <item>
-      <title></title>
+      <title>MMRNotifierToken</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/MMRNotifierToken/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/MMRNotifierToken/</guid>
-      <description></description>
+      <description>View Implementation    unsigned long long token     Default value: none</description>
     </item>
     
     <item>
-      <title></title>
+      <title>POV</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/POV/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/POV/</guid>
-      <description></description>
+      <description>View Implementation    Vector location     Default value: none
+
+Rotator rotation     Default value: none
+
+float FOV     Default value: none</description>
     </item>
     
     <item>
-      <title></title>
+      <title>PredictionInfo</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/PredictionInfo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/PredictionInfo/</guid>
-      <description></description>
+      <description>View Implementation    float Time     Default value: none
+
+float ArchTopTime     Default value: none
+
+Vector Location     Default value: none
+
+Vector Velocity     Default value: none
+
+Vector ArchTop     Default value: none
+
+Vector ArchTopVelocity     Default value: none
+
+unsigned long bHitWall     Default value: none</description>
     </item>
     
     <item>
-      <title></title>
+      <title>ProfileCameraSettings</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/ProfileCameraSettings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/ProfileCameraSettings/</guid>
-      <description></description>
+      <description>View Implementation    float FOV     Default value: none
+
+float Height     Default value: none
+
+float Pitch     Default value: none
+
+float Distance     Default value: none
+
+float Stiffness     Default value: none
+
+float SwivelSpeed     Default value: none
+
+float TransitionSpeed     Default value: none</description>
     </item>
     
     <item>
-      <title></title>
+      <title>Quat</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/Quat/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/Quat/</guid>
-      <description></description>
+      <description>View Implementation    float X     Default value: none
+
+float Y     Default value: none
+
+float Z     Default value: none
+
+float W     Default value: none</description>
     </item>
     
     <item>
-      <title></title>
+      <title>RBState</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/RBState/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/RBState/</guid>
-      <description></description>
+      <description>View Implementation    Quat Quaternion     Default value: none
+
+Vector Location     Default value: none
+
+Vector LinearVelocity     Default value: none
+
+Vector AngularVelocity     Default value: none
+
+float Time     Default value: none
+
+unsigned long bSleeping     Default value: none
+
+unsigned long bNewData     Default value: none</description>
     </item>
     
     <item>
-      <title></title>
+      <title>RecordedSample</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/RecordedSample/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/RecordedSample/</guid>
-      <description></description>
+      <description>View Implementation    float Low     Default value: none
+
+float High     Default value: none</description>
     </item>
     
     <item>
-      <title></title>
+      <title>ReplayScoreData</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/ReplayScoreData/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/ReplayScoreData/</guid>
-      <description></description>
+      <description>View Implementation    uintptr_t ScoredBy     Default value: none
+
+uintptr_t AssistedBy     Default value: none
+
+float Speed     Default value: none
+
+float Time     Default value: none
+
+unsigned char ScoreTeam     Default value: none</description>
     </item>
     
     <item>
-      <title></title>
+      <title>Rotator</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/Rotator/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/Rotator/</guid>
-      <description></description>
+      <description>View Implementation    int Pitch     Default value: none
+
+int Yaw     Default value: none
+
+int Roll     Default value: none</description>
     </item>
     
     <item>
-      <title></title>
+      <title>SkillRank</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/SkillRank/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/SkillRank/</guid>
-      <description></description>
+      <description>View Implementation    int Tier     Default value: none
+
+int Division     Default value: none
+
+int MatchesPlayed     Default value: none</description>
     </item>
     
     <item>
-      <title></title>
+      <title>SkillRating</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/SkillRating/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/SkillRating/</guid>
-      <description></description>
+      <description>View Implementation    float Mu     Default value: none
+
+float Sigma     Default value: none</description>
     </item>
     
     <item>
-      <title></title>
+      <title>SteamID</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/SteamID/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/SteamID/</guid>
-      <description></description>
+      <description>View Implementation    unsigned long long ID     Default value: none</description>
     </item>
     
     <item>
-      <title></title>
+      <title>StickyForceData</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/StickyForceData/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/StickyForceData/</guid>
-      <description></description>
+      <description>View Implementation    float Ground     Default value: none
+
+float Wall     Default value: none</description>
     </item>
     
     <item>
-      <title></title>
+      <title>UnrealColor</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/UnrealColor/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/UnrealColor/</guid>
-      <description></description>
+      <description>View Implementation    unsigned char B     Default value: none
+
+unsigned char G     Default value: none
+
+unsigned char R     Default value: none
+
+unsigned char A     Default value: none</description>
     </item>
     
     <item>
-      <title></title>
+      <title>Vector</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/Vector/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/Vector/</guid>
-      <description></description>
+      <description>View Implementation    float X     Default value: none
+
+float Y     Default value: none
+
+float Z     Default value: none</description>
     </item>
     
     <item>
-      <title></title>
+      <title>Vector2</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/Vector2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/Vector2/</guid>
-      <description></description>
+      <description>View Implementation    int X     Default value: none
+
+int Y     Default value: none</description>
     </item>
     
     <item>
-      <title></title>
+      <title>Vector2F</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/Vector2F/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/Vector2F/</guid>
-      <description></description>
+      <description>View Implementation    float X     Default value: none
+
+float Y     Default value: none</description>
     </item>
     
     <item>
-      <title></title>
+      <title>VideoSettings</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/VideoSettings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/VideoSettings/</guid>
-      <description></description>
+      <description>View Implementation    bool bVsync     Default value: none
+
+bool bShowWeatherFX     Default value: none
+
+bool bShowLightShafts     Default value: none
+
+bool bTranslucentArenaShaders     Default value: none
+
+bool bShowLensFlares     Default value: none
+
+bool bEnableHDRSideBySideVisualizer     Default value: none
+
+bool bUncappedFramerate     Default value: none</description>
     </item>
     
     <item>
-      <title></title>
+      <title>ViewTarget</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/ViewTarget/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/ViewTarget/</guid>
-      <description></description>
+      <description>View Implementation    void * Target     Default value: none
+
+void * Controller     Default value: none
+
+POV POV     Default value: none
+
+float AspectRatio     Default value: none
+
+void * PRI     Default value: none</description>
     </item>
     
     <item>
-      <title></title>
+      <title>WheelContactData</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/WheelContactData/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/WheelContactData/</guid>
-      <description></description>
+      <description>View Implementation    unsigned long bHasContact     Default value: none
+
+unsigned long bHasContactWithWorldGeometry     Default value: none
+
+float HasContactChangeTime     Default value: none
+
+void * Actor     Default value: none
+
+void * Component     Default value: none
+
+Vector Location     Default value: none</description>
     </item>
     
     <item>
-      <title></title>
+      <title>WorldContactData</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/WorldContactData/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/WorldContactData/</guid>
-      <description></description>
+      <description>View Implementation    unsigned long bHasContact     Default value: none
+
+Vector Location     Default value: none
+
+Vector Velocity     Default value: none
+
+Vector Normal     Default value: none</description>
     </item>
     
   </channel>
