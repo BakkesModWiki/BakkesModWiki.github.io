@@ -1,10 +1,11 @@
 ---
 title: {{ ClassName }}
+description: {{ ClassName }}
 weight: 2
 showEditOverride: false{% if BaseClass %}
 baseClass: "<a href=\"{{PathMap[BaseClass]}}\">{{BaseClass}}</a>"{% endif %}
 ---
-\{\{< button href="{{GitHubPath}}" target="_blank" >\}\}\{\{< icon "github" >\}\} View Implementation\{\{< /button >\}\}
+\{\{< button href="{{GitHubPath}}" >\}\}\{\{< icon "github" >\}\} View Implementation\{\{< /button >\}\}
 {% if Description | length > 0 %}
 {{ Description }}
 

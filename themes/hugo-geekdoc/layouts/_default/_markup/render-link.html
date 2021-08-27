@@ -1,3 +1,4 @@
+{{ $linkPrefix := substr .Destination 0 4}}
 {{- $raw := or (hasPrefix .Text "<img") (hasPrefix .Text "<figure") -}}
-<a class="gdoc-markdown__link{{ if $raw }}--raw{{ end }}" href="{{ .Destination | safeURL }}"{{ with .Title}} title="{{ . }}"{{ end }}>{{ .Text | safeHTML }}</a>
+<a class="gdoc-markdown__link{{ if $raw }}--raw{{ end }}" {{ if eq $linkPrefix "http" }}target="_blank"{{ end }} href="{{ .Destination | safeURL }}"{{ with .Title}} title="{{ . }}"{{ end }}>{{ .Text | safeHTML }}{{ if eq $linkPrefix "http" }}&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small>{{ end }}</a>
 {{- /* Drop trailing newlines */ -}}

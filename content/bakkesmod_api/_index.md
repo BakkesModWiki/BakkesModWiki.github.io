@@ -5,7 +5,7 @@ geekdocCollapseSection: true
 weight: 5
 ---
 ## About
-BakkesMod provides a powerful SDK, accessible in c++. Visit the [Plugin Tutorial](/plugin_tutorial) sections to get started!
+BakkesMod provides a powerful SDK, accessible in c++. Visit the [Plugin Tutorial](/plugin_tutorial/getting_started/) sections to get started!
 
 ## Links
-- [C++ Reference {{< icon "external-link-alt" >}}](https://en.cppreference.com/w/)
+- [C++ Reference](https://en.cppreference.com/w/)

@@ -364,11 +364,15 @@ function cleanup() {
                 recursive: true
             });
         }
+        console.log("  - Removed downloaded SDK");
         if (fs.existsSync("_doxygen")) {
             fs.rmdirSync("_doxygen", {
                 recursive: true
             });
         }
+        console.log("  - Removed generated SDK XML from Doxygen");
+    } else {
+        console.log("  - Skipped removing sdk");
     }
 
     console.log(`\n\nGeneration successful! Took ${((+(Date.now())) - timeStart) / 1000}s\n\n`);
