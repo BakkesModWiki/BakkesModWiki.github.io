@@ -170,42 +170,44 @@ async function main() {
                 defObject.Parents = ["Classes", ...sdkLocation],
                 defObject.Fields = {};
                 if (itemCompound.sectiondef) {
-                    _.each(itemCompound.sectiondef[0].memberdef, member => {
-                        let field = {
-                            SpecialProperties: {
-                                Kind: member.$.kind,
-                                Protection: member.$.prot,
-                                isStatic: member.$.static === "yes",
-                                isConstan: member.$.const === "yes",
-                                isExplicit: member.$.explicit === "yes",
-                                isInline: member.$.inline === "yes",
-                                isVirtual: member.$.virt !== "non-virtual"
-                            },
-                            Type: _.isString(member.type[0]) ? member.type[0] : member.type[0].ref[0]._,
-                            ArgsString: member.argsstring,
-                            Name: member.name[0],
-                            Params: [],
-                            GitHubPath: GitHubLinkFromLocalPath(member.location[0].$.file) + `#L${member.location[0].$.line}`
-                        };
-                        _.each(member.param, param => {
-                            let paramObj;
-                            if (_.isString(param.type[0])) {
-                                paramObj = {
-                                    Type: param.type[0],
-                                    Name: _.isUndefined(param.declname) ? "" : param.declname[0]
+                    _.each(itemCompound.sectiondef, sectiondef => {
+                        _.each(sectiondef.memberdef, member => {
+                            let field = {
+                                SpecialProperties: {
+                                    Kind: member.$.kind,
+                                    Protection: member.$.prot,
+                                    isStatic: member.$.static === "yes",
+                                    isConstan: member.$.const === "yes",
+                                    isExplicit: member.$.explicit === "yes",
+                                    isInline: member.$.inline === "yes",
+                                    isVirtual: member.$.virt !== "non-virtual"
+                                },
+                                Type: _.isString(member.type[0]) ? member.type[0] : member.type[0].ref[0]._,
+                                ArgsString: member.argsstring,
+                                Name: member.name[0],
+                                Params: [],
+                                GitHubPath: GitHubLinkFromLocalPath(member.location[0].$.file) + `#L${member.location[0].$.line}`
+                            };
+                            _.each(member.param, param => {
+                                let paramObj;
+                                if (_.isString(param.type[0])) {
+                                    paramObj = {
+                                        Type: param.type[0],
+                                        Name: _.isUndefined(param.declname) ? "" : param.declname[0]
+                                    }
+                                } else {
+                                    paramObj = {
+                                        Type: param.type[0].ref[0]._,
+                                        TypeKeyword: _.has(param.type[0]._) && param.type[0]._ !== "&" ? param.type[0]._ : "",
+                                        AmpersandAstrisk: _.has(param.type[0]._) && (param.type[0]._ === "&" || param.type[0]._ === "*") ? param.type[0]._ : "",
+                                        Name: _.isUndefined(param.declname) ? "" : param.declname[0]
+                                    }
                                 }
-                            } else {
-                                paramObj = {
-                                    Type: param.type[0].ref[0]._,
-                                    TypeKeyword: _.has(param.type[0]._) && param.type[0]._ !== "&" ? param.type[0]._ : "",
-                                    AmpersandAstrisk: _.has(param.type[0]._) && (param.type[0]._ === "&" || param.type[0]._ === "*") ? param.type[0]._ : "",
-                                    Name: _.isUndefined(param.declname) ? "" : param.declname[0]
-                                }
-                            }
-                            field.Params.push(paramObj);
+                                field.Params.push(paramObj);
+                            });
+                            defObject.Fields[member.name[0]] = field;
                         });
-                        defObject.Fields[member.name[0]] = field;
-                    });
+                    })
                 }
                 foundDefs.Classes[item.name[0]] = defObject;
                 pathsMap[item.name[0]] = pathMapLocalReferenceBase + [...foundDefs.Classes[item.name[0]].Parents, item.name[0]].join("/");
@@ -361,11 +363,11 @@ function cleanup() {
             });
         }
         console.log("  - Removed downloaded SDK");
-        if (fs.existsSync("_doxygen")) {
-            fs.rmdirSync("_doxygen", {
-                recursive: true
-            });
-        }
+        // if (fs.existsSync("_doxygen")) {
+        //     fs.rmdirSync("_doxygen", {
+        //         recursive: true
+        //     });
+        // }
         console.log("  - Removed generated SDK XML from Doxygen");
     } else {
         console.log("  - Skipped removing sdk");
