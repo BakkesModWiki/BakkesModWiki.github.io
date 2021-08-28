@@ -39,6 +39,11 @@
         "UNLOCKMETHOD": "Ways an item can be earned"
     },
     "Structs": {
+        "BotLoadoutData": "Info on a bot's items. Unsure how to obtain",
+        "CurlRequest": "Used to make a request with the [HTTPWrapper](/bakkesmod_api/Classes/Wrappers/Http/HttpWrapper/). [Info on using that here](/code_snippets/using_http_wrapper/)",
+        "FormField": "Part of a [CurlRequest](/bakkesmod_api/Structs/Core/CurlRequest/). [Info on using HttpWrapper here](/code_snippets/using_http_wrapper/)",
+        "ClubMember": "A member of a club. Get from [ClubDetailsWrapper.GetMembers()](/bakkesmod_api/Classes/Wrappers/GameObject/ClubDetailsWrapper/#structarraywrapperbakkesmod_apiclasseswrappersstructarraywrappernbspgetmembers)",
+        "SpecialEdition": "Info on an item's special edition. Not sure where to obtain",
         "CameraSave": "Two of the saved camera settings. Get from [SettingsWrapper.GetCameraSaveSettings()](/bakkesmod_api/Classes/Wrappers/SettingsWrapper/#camerasavebakkesmod_apistructswrapperscamerasavenbspgetcamerasavesettings)",
         "ClubColorSet": "IDs of colors used by a team in a club match. TODO: Figure out and note what the mapping from ID to color is. Get from [CustomMatchTeamSettings.Colors](/bakkesmod_api/Structs/Wrappers/CustomMatchTeamSettings/#clubcolorsetbakkesmod_apistructswrappersclubcolorsetnbspcolors)",
         "ControllerInput": "A controller's input at a single frame. Easy access with [CarWrapper.GetInput()](/bakkesmod_api/Classes/Wrappers/GameObject/CarWrapper/#controllerinputbakkesmod_apistructswrapperscontrollerinputnbspgetinput)",
@@ -51,7 +56,7 @@
         "POV": "The location, rotation, and FOV of a player's POV",
         "PredictionInfo": "Info on the predicted location of a ball. Get with [BallWrapper.PredictPosition()](/bakkesmod_api/Classes/Wrappers/GameObject/BallWrapper/#predictioninfobakkesmod_apistructswrapperspredictioninfonbsppredictpositionfloat-timeahead)",
         "ProfileCameraSettings": "A player's camera Settings. Access with [CameraWrapper.GetCameraSettings()](/bakkesmod_api/Classes/Wrappers/GameObject/CameraWrapper/#profilecamerasettingsbakkesmod_apistructswrappersprofilecamerasettingsnbspgetcamerasettings)",
-        "Quat": "A description of a 4D space. Just trust it works and don't think too hard. Used with RotatorToQuat and RotateVectorWithQuat to rotate things in 3D space",
+        "Quat": "A description of a 4D space. Just trust it works and don't think too hard. Used RotatorToQuat and RotateVectorWithQuat to rotate a vector in 3D space using a Rotator and Quat",
         "RecordedSample": "A single sample of data recorded for performance graphs. Get with [SampleHistoryWrapper](/bakkesmod_api/Classes/Wrappers/GameObject/PerformanceStats/SampleHistoryWrapper/)",
         "ReplayScoreData": "Stats shown in a replay. Get with [ReplayDirectorWrapper.GetReplayScoreData()](/bakkesmod_api/Classes/Wrappers/GameEvent/ReplayDirectorWrapper/#replayscoredatabakkesmod_apistructswrappersreplayscoredatanbspgetreplayscoredata)",
         "Rotator": "A description of the orientation of an object. [This github page describes what 3D space is in Rocket League](https://github.com/RLBot/RLBot/wiki/Useful-Game-Values)",
