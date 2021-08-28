@@ -11,7 +11,5 @@ Note these instructions are designed for **Windows 10 (and presumably 11)**. Roc
 2. Download Visual Studio (any version should work although most devs use VS19). Note that this is not the same as Visual Studio Code
 [https://visualstudio.microsoft.com/](https://visualstudio.microsoft.com/)
 3. During Visual Studio's install, make sure you select and download the C++ and Windows 10 SDK options
-4. Download the plugin template as instructed in it's README. This makes things much easier to work with and automatically handles include paths for your plugin. Martinn is a wizard
-[https://github.com/Martinii89/BakkesmodPluginTemplate](https://github.com/Martinii89/BakkesmodPluginTemplate)
-5. Open Visual Studio and create a new project. You should see BakkesModPlugin as a template type.
-6. Start coding! When you build, your plugin will automatically be moved into your plugins folder, and it will load in Rocket League. If you're having trouble understanding how to start the code, try looking at [Starting A Plugin](/plugin_tutorial/starting_a_plugin/) and the code snippets for some examples on how Bakkesmod SDK is used
+4. Get Martinn's template set up. Either [add the template to your Visual Studio](https://github.com/Martinii89/BakkesmodPluginTemplate) or [make a new repo using the GitHub template](/useful_info/github_plugin_template/)
+5. Start coding! When you build, your plugin will automatically be moved into your plugins folder, and it will load in Rocket League. If you're having trouble understanding how to start the code, try looking at [Starting A Plugin](/plugin_tutorial/starting_a_plugin/) and the code snippets for some examples on how Bakkesmod SDK is used
