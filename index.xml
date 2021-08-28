@@ -79,7 +79,9 @@ int&amp;nbsp; Count()</description>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/ArrayWrapperIterator/</guid>
       <description>View Implementation    size_t&amp;nbsp; index     
-ArrayWrapper collection</description>
+ArrayWrapper collection     
+ArrayWrapperIterator(ArrayWrapper&amp;lt; T &amp;gt; &amp;amp;collection, size_t const index)        Parameter Type Description     collection ArrayWrapper &amp;mdash;   index size_t const &amp;mdash;    
+bool&amp;nbsp; operator!=(ArrayWrapperIterator const &amp;amp;other) const        Parameter Type Description     other ArrayWrapperIterator &amp;mdash;</description>
     </item>
     
     <item>
@@ -785,7 +787,10 @@ unsigned long&amp;nbsp; GetbStandard()</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameWrapper/</guid>
-      <description>View Implementation    std::unique_ptr&amp;lt; Impl &amp;gt;&amp;nbsp; pimpl</description>
+      <description>View Implementation    std::unique_ptr&amp;lt; Impl &amp;gt;&amp;nbsp; pimpl     
+GameWrapper(const GameWrapper &amp;amp;other)        Parameter Type Description     other GameWrapper &amp;mdash;    
+GameWrapper operator=(GameWrapper rhs)        Parameter Type Description     rhs GameWrapper &amp;mdash;    
+~GameWrapper()</description>
     </item>
     
     <item>
@@ -1056,7 +1061,8 @@ SampleHistoryWrapper GetLostPacketsOut()</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Engine/ObjectWrapper/</guid>
-      <description>View Implementation    std::uintptr_t memory_address</description>
+      <description>View Implementation    std::uintptr_t memory_address     
+ObjectWrapper(std::uintptr_t mem)        Parameter Type Description     mem std::uintptr_t &amp;mdash;</description>
     </item>
     
     <item>

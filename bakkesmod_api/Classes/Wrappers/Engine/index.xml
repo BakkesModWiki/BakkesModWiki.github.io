@@ -37,7 +37,8 @@ void&amp;nbsp; SetbClientPhysicsUpdate(unsigned long newbClientPhysicsUpdate)  
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Engine/ObjectWrapper/</guid>
-      <description>View Implementation    std::uintptr_t memory_address</description>
+      <description>View Implementation    std::uintptr_t memory_address     
+ObjectWrapper(std::uintptr_t mem)        Parameter Type Description     mem std::uintptr_t &amp;mdash;</description>
     </item>
     
     <item>
