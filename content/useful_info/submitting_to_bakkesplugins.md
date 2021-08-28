@@ -5,15 +5,15 @@ author: ubelhj
 
 You've looked through the docs in desperation, angrily screamed at your computer, crashed a couple times, but it's all worth it! You have made a super cool plugin that you want to share! Nice job! 
 
-Plugins are officially hosted at [https://bakkesplugins.com/](https://bakkesplugins.com/). Go there, sign up for an account, and hit submit plugin
+Plugins are officially hosted at [https://bakkesplugins.com/](https://bakkesplugins.com/). Go there and sign up for an account. Please make the username similar to a discord or github you can be contacted at. 
 
-IMAGE OF SUBMIT PLUGIN
+Once you're logged in, hover over your name in the top right, hit `Account`, and then hit `Add New Plugin`
 
-You'll come to a new page asking for details. Give your plugin a title, a one-sentence description, and a longer description. You can also add a plugin homepage, which will be included as a link from the plugin page. This is a great place to link to the plugin's source code on github, gitlab, or other version control host!
+![addnewplugin](/img/addnewplugin.png)
 
-IMAGE HERE OF FILLED IN FIELDS
+You'll come to a new page asking for details. Give your plugin a title, a one-sentence description, and a longer description. Add any relevant tags too. You can also add a plugin homepage, which will be included as a link from the plugin page. This is a great place to link to the plugin's source code on github, gitlab, or other version control host!
 
-IMAGE HERE OF PLUGIN HOMEPAGE LINK
+Also choose if it's visible and publically listed. If not visible, nobody but you can see the plugin. If not listed your plugin will be accessible through the URL directly but not searchable. It is still easy to find a not listed plugin though, so only make a plugin visible if you're comfortable with it being public
 
 Next upload a .png banner for the plugin. It should be below 50 MB? and wider than it is tall. 16 x 9 is a reasonable ratio.
 
