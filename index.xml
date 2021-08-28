@@ -133,7 +133,7 @@ Unfortunately sometimes there is no .dmp file. That often means you crashed in a
       <guid>https://bakkesmodwiki.github.io/useful_info/github_plugin_template/</guid>
       <description>As an easier alternative to the traditional Visual Studio template, you can use this other template to make a plugin. https://github.com/Martinii89/BakkesmodPluginTemplateV2&amp;nbsp;
 Instructions copied from the README:
-Create a repository from this template     Click the big green button Use this template or click here. Enter a Repository name and click Create repository from template Head over to the created repository and complete the setup.  Complete setup     In the a new repository, complete the project setup by editing the cookiecutter.</description>
+Create a repository from this template     Click the big green button Use this template or click here&amp;nbsp;. Enter a Repository name and click Create repository from template Head over to the created repository and complete the setup.  Complete setup     In the a new repository, complete the project setup by editing the cookiecutter.</description>
     </item>
     
     <item>
