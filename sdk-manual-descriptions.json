@@ -37,5 +37,32 @@
         "PRODUCTQUALITY": "Possible item rarities",
         "ToastType": "Possible colors for [Toasts](/code_snippets/toasts/).\n\n`ToastType_Info` is black, `ToastType_OK` is green, `ToastType_Warning` is orange, and `ToastType_Error` is red",
         "UNLOCKMETHOD": "Ways an item can be earned"
+    },
+    "Structs": {
+        "ControllerInput": "A controller's input at a single frame. Easy access with [CarWrapper.GetInput()](/bakkesmod_api/Classes/Wrappers/GameObject/CarWrapper/#controllerinputbakkesmod_apistructswrapperscontrollerinputnbspgetinput)",
+        "CustomMatchSettings": "Use to create a private match with [MatchmakingWrapper.CreatePrivateMatch()](/bakkesmod_api/Classes/Wrappers/MatchmakingWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspcreateprivatematchregion-region-const-custommatchsettings-ampmatch_settings)",
+        "CustomMatchTeamSettings": "A single team's setting. Get from a [CustomMatchSettings](/bakkesmod_api/Structs/Wrappers/CustomMatchSettings/)",
+        "GamepadSettings": "A read-only copy of a player's gamepad settings. Get with [SettingsWrapper.GetGamepadSettings()](/bakkesmod_api/Classes/Wrappers/SettingsWrapper/#gamepadsettingsbakkesmod_apistructswrappersgamepadsettingsnbspgetgamepadsettings)",
+        "GUIDWrapper": "Wraps a read-only copy of a GUI menu's ID. Not 100% sure on the use case",
+        "LinearColor": "RGBA value to change the color of the Canvas. Values from 0.0-1.0 for each with 1 being 100% intensity. A is for alpha and is opacity. A = 1.0 will be fully opaque",
+        "MMRNotifierToken": "Unique value assigned to an mmr notifier for a specific player. Obtain with [MMRWrapper.RegisterMMRNotifier()](/bakkesmod_api/Classes/Wrappers/MMRWrapper/#mmrnotifiertokenbakkesmod_apistructswrappersmmrnotifiertokennbspregistermmrnotifierstdfunctionlt-voiduniqueidwrapper-idgt)",
+        "POV": "The location, rotation, and FOV of a player's POV",
+        "PredictionInfo": "Info on the predicted location of a ball. Get with [BallWrapper.PredictPosition()](/bakkesmod_api/Classes/Wrappers/GameObject/BallWrapper/#predictioninfobakkesmod_apistructswrapperspredictioninfonbsppredictpositionfloat-timeahead)",
+        "ProfileCameraSettings": "A player's camera Settings. Access with [CameraWrapper.GetCameraSettings()](/bakkesmod_api/Classes/Wrappers/GameObject/CameraWrapper/#profilecamerasettingsbakkesmod_apistructswrappersprofilecamerasettingsnbspgetcamerasettings)",
+        "Quat": "A description of a 4D space. Just trust it works and don't think too hard. Used with RotatorToQuat and RotateVectorWithQuat to rotate things in 3D space",
+        "RecordedSample": "A single sample of data recorded for performance graphs. Get with [SampleHistoryWrapper](/bakkesmod_api/Classes/Wrappers/GameObject/PerformanceStats/SampleHistoryWrapper/)",
+        "ReplayScoreData": "Stats shown in a replay. Get with [ReplayDirectorWrapper.GetReplayScoreData()](/bakkesmod_api/Classes/Wrappers/GameEvent/ReplayDirectorWrapper/#replayscoredatabakkesmod_apistructswrappersreplayscoredatanbspgetreplayscoredata)",
+        "Rotator": "A description of the orientation of an object. [This github page describes what 3D space is in Rocket League](https://github.com/RLBot/RLBot/wiki/Useful-Game-Values)",
+        "SkillRank": "Information on a player's rank. From [MMRWrapper.GetPlayerRank()](/bakkesmod_api/Classes/Wrappers/MMRWrapper/#skillrankbakkesmod_apistructswrappersskillranknbspgetplayerranksteamid-playerid-int-playlistid)",
+        "SkillRating": "Raw skill data used to calculate MMR with [MMRWrapper.CalculateMMR()](/bakkesmod_api/Classes/Wrappers/MMRWrapper/#floathttpsencppreferencecomwcpplanguagetypesfloating-point_typesnbspcalculatemmrskillrating-sr-bool-disregardplacements)",
+        "SteamID": "Mostly depreciated. When possible use the epic and steam friendly [UniqueIDWrapper](/bakkesmod_api/Classes/Wrappers/UniqueIDWrapper/)",
+        "StickyForceData": "Info on stickiness to wall. Get with [VehicleWrapper.GetStickyForce()](/bakkesmod_api/Classes/Wrappers/GameObject/VehicleWrapper/#stickyforcedatabakkesmod_apistructswrappersstickyforcedatanbspgetstickyforce)",
+        "UnrealColor": "RGBA stored in 0-255 values for each. A is alpha or opacity. 255 Alpha is max opacity",
+        "Vector": "A 3D vector. This can define a location, direction or a velocity. [This github page describes what 3D space is in Rocket League](https://github.com/RLBot/RLBot/wiki/Useful-Game-Values)",
+        "Vector2": "A 2D vector. This is two ints, and can often be used to describe a location on the screen. (0, 0) is the top left corner. +x is to the right, and +y is down",
+        "Vector2F": "A 2D vector, but x and y are floats",
+        "VideoSettings": "The video settings. Get from [SettingsWrapper.GetVideoSettings()](/bakkesmod_api/Classes/Wrappers/SettingsWrapper/#videosettingsbakkesmod_apistructswrappersvideosettingsnbspgetvideosettings)",
+        "ViewTarget": "Target of a camera. Target can be wrapped in an `ActorWrapper wrappedTarget(((uintptr_t) struct->Target))`\n Similarly controller is safe to cast to [PlayerControllerWrapper](/bakkesmod_api/Classes/Wrappers/PlayerControllerWrapper/) and PRI can be cast to [PriWrapper](/bakkesmod_api/Classes/Wrappers/GameObject/PriWrapper/)",
+        "WheelContactData": "Info on a single wheel's contact with stuff. Get with [WheelWrapper.GetContact()](http://localhost:1313/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/WheelWrapper/#wheelcontactdatabakkesmod_apistructswrapperswheelcontactdatanbspgetcontact)"
     }
 }
