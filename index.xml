@@ -27,6 +27,667 @@ gameWrapper-&amp;gt;HookEvent(&amp;#34;Function TAGame.Car_TA.SetVehicleInput&am
     </item>
     
     <item>
+      <title>ActorWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Engine/ActorWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Engine/ActorWrapper/</guid>
+      <description>View Implementation    Vector GetLocation()     
+void&amp;nbsp; SetLocation(const Vector location)        Parameter Type Description     location Vector &amp;mdash;    
+Vector GetVelocity()     
+void&amp;nbsp; SetVelocity(const Vector velocity)        Parameter Type Description     velocity Vector &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>AIControllerWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/AIControllerWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/AIControllerWrapper/</guid>
+      <description>View Implementation    void&amp;nbsp; DoNothing()</description>
+    </item>
+    
+    <item>
+      <title>AirControlComponentWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/AirControlComponentWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/AirControlComponentWrapper/</guid>
+      <description>View Implementation    Rotator GetAirTorque()     
+void&amp;nbsp; SetAirTorque(Rotator newAirTorque)        Parameter Type Description     newAirTorque Rotator &amp;mdash;    
+Rotator GetAirDamping()     
+void&amp;nbsp; SetAirDamping(Rotator newAirDamping)        Parameter Type Description     newAirDamping Rotator &amp;mdash;    
+float&amp;nbsp; GetThrottleForce()</description>
+    </item>
+    
+    <item>
+      <title>ArrayWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/ArrayWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/ArrayWrapper/</guid>
+      <description>View Implementation    ArrayWrapper(const ArrayWrapper&amp;lt; T &amp;gt; &amp;amp;other)        Parameter Type Description     other ArrayWrapper &amp;mdash;    
+ArrayWrapper operator=(ArrayWrapper&amp;lt; T &amp;gt; rhs)        Parameter Type Description     rhs ArrayWrapper &amp;mdash;    
+~ArrayWrapper()     
+int&amp;nbsp; Count()</description>
+    </item>
+    
+    <item>
+      <title>ArrayWrapperIterator</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/ArrayWrapperIterator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/ArrayWrapperIterator/</guid>
+      <description>View Implementation    size_t&amp;nbsp; index     
+ArrayWrapper collection</description>
+    </item>
+    
+    <item>
+      <title>AttachmentPickup</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/AttachmentPickup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/AttachmentPickup/</guid>
+      <description>View Implementation    void&amp;nbsp; PickupEnd()     
+void&amp;nbsp; PickupStart()</description>
+    </item>
+    
+    <item>
+      <title>BAKKESMOD_PLUGIN_API_VERSION</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Constants/BAKKESMOD_PLUGIN_API_VERSION/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Constants/BAKKESMOD_PLUGIN_API_VERSION/</guid>
+      <description>View Implementation   Current plugin API Version
+ BAKKESMOD_PLUGIN_API_VERSION = 95</description>
+    </item>
+    
+    <item>
+      <title>BallCarSpringPickup</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/BallCarSpringPickup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/BallCarSpringPickup/</guid>
+      <description>View Implementation    void&amp;nbsp; ScaleSpringMeshToLocation(Vector &amp;amp;NewLocation, Vector &amp;amp;TargetLocation)        Parameter Type Description     NewLocation Vector &amp;mdash;   TargetLocation Vector &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>BallFreezePickup</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/BallFreezePickup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/BallFreezePickup/</guid>
+      <description>View Implementation    FXActorWrapper GetFreezeBreakFXArchetype()     
+void&amp;nbsp; SetFreezeBreakFXArchetype(FXActorWrapper newFreezeBreakFXArchetype)        Parameter Type Description     newFreezeBreakFXArchetype FXActorWrapper &amp;mdash;    
+FXActorWrapper GetFreezeFXArchetype()     
+void&amp;nbsp; SetFreezeFXArchetype(FXActorWrapper newFreezeFXArchetype)        Parameter Type Description     newFreezeFXArchetype FXActorWrapper &amp;mdash;    
+unsigned long&amp;nbsp; GetbMaintainMomentum()</description>
+    </item>
+    
+    <item>
+      <title>BallLassoPickup</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/BallLassoPickup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/BallLassoPickup/</guid>
+      <description>View Implementation    void&amp;nbsp; ScaleSpringMeshToLocation(Vector &amp;amp;NewLocation, Vector &amp;amp;TargetLocation)        Parameter Type Description     NewLocation Vector &amp;mdash;   TargetLocation Vector &amp;mdash;    
+void&amp;nbsp; DoSpring(unsigned long bFirstHit)        Parameter Type Description     bFirstHit unsigned long&amp;nbsp; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>BallWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/BallWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/BallWrapper/</guid>
+      <description>View Implementation   Any ball in the match. There can be more than one!
+The best way to get the ball is ServerWrapper.GetGameBalls()
+ float&amp;nbsp; GetLastTouchTime()     
+PredictionInfo PredictPosition(float timeAhead)        Parameter Type Description     timeAhead float&amp;nbsp; &amp;mdash;    
+FXActorWrapper GetEndOfGameFXArchetype()     
+void&amp;nbsp; SetEndOfGameFXArchetype(FXActorWrapper newEndOfGameFXArchetype)        Parameter Type Description     newEndOfGameFXArchetype FXActorWrapper &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>BaseCameraWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/BaseCameraWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/BaseCameraWrapper/</guid>
+      <description>View Implementation    float&amp;nbsp; GetDefaultFOV()     
+void&amp;nbsp; SetDefaultFOV(float newDefaultFOV)        Parameter Type Description     newDefaultFOV float&amp;nbsp; &amp;mdash;    
+unsigned long&amp;nbsp; GetbLockedFOV()     
+void&amp;nbsp; SetbLockedFOV(unsigned long newbLockedFOV)        Parameter Type Description     newbLockedFOV unsigned long&amp;nbsp; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>BasketballPickup</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/BasketballPickup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/BasketballPickup/</guid>
+      <description>View Implementation    Vector GetBallOffset()     
+void&amp;nbsp; SetBallOffset(Vector newBallOffset)        Parameter Type Description     newBallOffset Vector &amp;mdash;    
+float&amp;nbsp; GetAttachedBallMass()     
+void&amp;nbsp; SetAttachedBallMass(float newAttachedBallMass)        Parameter Type Description     newAttachedBallMass float&amp;nbsp; &amp;mdash;    
+Vector GetLaunchForce()</description>
+    </item>
+    
+    <item>
+      <title>BattarangPickup</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/BattarangPickup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/BattarangPickup/</guid>
+      <description>View Implementation    float&amp;nbsp; GetSpinSpeed()     
+void&amp;nbsp; SetSpinSpeed(float newSpinSpeed)        Parameter Type Description     newSpinSpeed float&amp;nbsp; &amp;mdash;    
+float&amp;nbsp; GetCurRotation()     
+void&amp;nbsp; SetCurRotation(float newCurRotation)        Parameter Type Description     newCurRotation float&amp;nbsp; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>BoostModPickup</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/BoostModPickup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/BoostModPickup/</guid>
+      <description>View Implementation    unsigned long&amp;nbsp; GetbUnlimitedBoost()     
+void&amp;nbsp; SetbUnlimitedBoost(unsigned long newbUnlimitedBoost)        Parameter Type Description     newbUnlimitedBoost unsigned long&amp;nbsp; &amp;mdash;    
+float&amp;nbsp; GetBoostStrength()     
+void&amp;nbsp; SetBoostStrength(float newBoostStrength)        Parameter Type Description     newBoostStrength float&amp;nbsp; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>BoostOverridePickup</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/BoostOverridePickup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/BoostOverridePickup/</guid>
+      <description>View Implementation    CarWrapper GetOtherCar()     
+void&amp;nbsp; SetOtherCar(CarWrapper newOtherCar)        Parameter Type Description     newOtherCar CarWrapper &amp;mdash;    
+void&amp;nbsp; PickupEnd()     
+void&amp;nbsp; OnTargetChanged()     
+void&amp;nbsp; PickupStart()</description>
+    </item>
+    
+    <item>
+      <title>BoostPickupWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/BoostPickupWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/BoostPickupWrapper/</guid>
+      <description>View Implementation    float&amp;nbsp; GetBoostAmount()     
+void&amp;nbsp; SetBoostAmount(float newBoostAmount)        Parameter Type Description     newBoostAmount float&amp;nbsp; &amp;mdash;    
+unsigned char&amp;nbsp; GetBoostType()     
+void&amp;nbsp; SetBoostType(unsigned char newBoostType)        Parameter Type Description     newBoostType unsigned char&amp;nbsp; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>BoostWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/BoostWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/BoostWrapper/</guid>
+      <description>View Implementation    float&amp;nbsp; GetBoostConsumptionRate()     
+void&amp;nbsp; SetBoostConsumptionRate(float newBoostConsumptionRate)        Parameter Type Description     newBoostConsumptionRate float&amp;nbsp; &amp;mdash;    
+float&amp;nbsp; GetMaxBoostAmount()     
+void&amp;nbsp; SetMaxBoostAmount(float newMaxBoostAmount)        Parameter Type Description     newMaxBoostAmount float&amp;nbsp; &amp;mdash;    
+float&amp;nbsp; GetStartBoostAmount()</description>
+    </item>
+    
+    <item>
+      <title>BotLoadoutData</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Core/BotLoadoutData/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Core/BotLoadoutData/</guid>
+      <description>View Implementation   Info on a bot&#39;s items. Unsure how to obtain
+ std::map&amp;lt; int, int &amp;gt; products     Default value: none
+
+Attribute product_attributes     Default value: none
+
+unsigned char&amp;nbsp; team     Default value = 0
+
+int&amp;nbsp; team_finish_id     Default value = 0
+
+int&amp;nbsp; custom_finish_id     Default value = 0</description>
+    </item>
+    
+    <item>
+      <title>CameraSave</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/CameraSave/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/CameraSave/</guid>
+      <description>View Implementation   Two of the saved camera settings. Get from SettingsWrapper.GetCameraSaveSettings()
+ bool&amp;nbsp; InvertSwivelPitch     Default value: none
+
+bool&amp;nbsp; CameraShake     Default value: none</description>
+    </item>
+    
+    <item>
+      <title>CameraWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CameraWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CameraWrapper/</guid>
+      <description>View Implementation    Vector GetLocation()     
+void&amp;nbsp; SetLocation(Vector location)        Parameter Type Description     location Vector &amp;mdash;    
+Rotator GetRotation()     
+void&amp;nbsp; SetRotation(Rotator rotation)        Parameter Type Description     rotation Rotator &amp;mdash;    
+ProfileCameraSettings GetCameraSettings()</description>
+    </item>
+    
+    <item>
+      <title>CameraXWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CameraXWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CameraXWrapper/</guid>
+      <description>View Implementation    Rotator GetPCDeltaRotation()     
+void&amp;nbsp; SetPCDeltaRotation(Rotator newPCDeltaRotation)        Parameter Type Description     newPCDeltaRotation Rotator &amp;mdash;    
+Rotator GetOldControllerRotation()     
+void&amp;nbsp; SetOldControllerRotation(Rotator newOldControllerRotation)        Parameter Type Description     newOldControllerRotation Rotator &amp;mdash;    
+Vector GetPCDeltaLocation()</description>
+    </item>
+    
+    <item>
+      <title>CanvasWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/CanvasWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/CanvasWrapper/</guid>
+      <description>View Implementation    void&amp;nbsp; SetPosition(Vector2 pos)        Parameter Type Description     pos Vector2 &amp;mdash;    
+Vector2F GetPositionFloat()     
+void&amp;nbsp; SetColor(LinearColor color)        Parameter Type Description     color LinearColor &amp;mdash;    
+LinearColor GetColor()     
+void&amp;nbsp; DrawBox(Vector2 size)        Parameter Type Description     size Vector2 &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>CARBODY</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/CARBODY/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/CARBODY/</guid>
+      <description>View Implementation   A list of car body IDs. This is really outdated (early 2017?), so you&#39;ll likely need to find or write a new one for any plugins you make. If you make one make a code snippet and we&#39;ll link to it from here
+   CAR_BACKFIRE = 21
+  CAR_BREAKOUT = 22
+  CAR_BREAKOUTTYPES = 1416
+  CAR_OCTANE = 23</description>
+    </item>
+    
+    <item>
+      <title>CarComponentWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/CarComponentWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/CarComponentWrapper/</guid>
+      <description>View Implementation    FXActorWrapper GetFXActorArchetype()     
+void&amp;nbsp; SetFXActorArchetype(FXActorWrapper newFXActorArchetype)        Parameter Type Description     newFXActorArchetype FXActorWrapper &amp;mdash;    
+unsigned long&amp;nbsp; GetbDisabled()     
+void&amp;nbsp; SetbDisabled(unsigned long newbDisabled)        Parameter Type Description     newbDisabled unsigned long&amp;nbsp; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>CareerStatsWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/CareerStatsWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/CareerStatsWrapper/</guid>
+      <description>View Implementation    StatValue GetStatValues()</description>
+    </item>
+    
+    <item>
+      <title>CarSpeedPickup</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/CarSpeedPickup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/CarSpeedPickup/</guid>
+      <description>View Implementation    float&amp;nbsp; GetGravityScale()     
+void&amp;nbsp; SetGravityScale(float newGravityScale)        Parameter Type Description     newGravityScale float&amp;nbsp; &amp;mdash;    
+Vector GetAddedForce()     
+void&amp;nbsp; SetAddedForce(Vector newAddedForce)        Parameter Type Description     newAddedForce Vector &amp;mdash;    
+float&amp;nbsp; GetOrigGravityScale()</description>
+    </item>
+    
+    <item>
+      <title>CarWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CarWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CarWrapper/</guid>
+      <description>View Implementation   Any car in the match. There can be more than one!
+The best way to get the cars is using a ServerWrapper to call from its superclass GameEventWrapper.GetCars()
+ bool&amp;nbsp; IsBoostCheap()     
+void&amp;nbsp; SetBoostCheap(bool b)        Parameter Type Description     b bool&amp;nbsp; &amp;mdash;    
+void&amp;nbsp; SetCarRotation(Rotator rotation)        Parameter Type Description     rotation Rotator &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>CertifiedStatDatabaseWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Dbs/CertifiedStatDatabaseWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Dbs/CertifiedStatDatabaseWrapper/</guid>
+      <description>View Implementation    _NODISCARD bool IsNull() const     
+operator bool() const     
+std::string&amp;nbsp; GetStatName(int StatId)        Parameter Type Description     StatId int&amp;nbsp; &amp;mdash;    
+int&amp;nbsp; GetStatId(std::string &amp;amp;StatName)        Parameter Type Description     StatName std::string &amp;amp; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>ClubColorSet</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/ClubColorSet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/ClubColorSet/</guid>
+      <description>View Implementation   IDs of colors used by a team in a club match. TODO: Figure out and note what the mapping from ID to color is. Get from CustomMatchTeamSettings.Colors
+ unsigned char&amp;nbsp; TeamColorID     Default value = 0
+
+unsigned char&amp;nbsp; CustomColorID     Default value = 0
+
+bool&amp;nbsp; bTeamColorSet     Default value = false
+
+bool&amp;nbsp; bCustomColorSet     Default value = false</description>
+    </item>
+    
+    <item>
+      <title>ClubDetailsWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/ClubDetailsWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/ClubDetailsWrapper/</guid>
+      <description>View Implementation    unsigned long long&amp;nbsp; GetClubID()     
+SteamID GetOwnerPlayerID()     
+UniqueIDWrapper GetOwnerPlayerUniqueID()     
+UnrealStringWrapper GetMotD()     
+unsigned long&amp;nbsp; GetbVerified()     
+unsigned long long&amp;nbsp; GetLastUpdatedTime()     
+StructArrayWrapper GetMembers()</description>
+    </item>
+    
+    <item>
+      <title>ClubMember</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/GameObject/ClubMember/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/GameObject/ClubMember/</guid>
+      <description>View Implementation   A member of a club. Get from ClubDetailsWrapper.GetMembers()
+ unsigned char&amp;nbsp; paddingForReasons     Default value: none</description>
+    </item>
+    
+    <item>
+      <title>ClubSettingsWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/ClubSettingsWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/ClubSettingsWrapper/</guid>
+      <description>View Implementation    _NODISCARD bool IsNull() const     
+operator bool() const     
+UnrealStringWrapper GetClubName()     
+UnrealStringWrapper GetClubTag()     
+int&amp;nbsp; GetPrimaryColor()     
+int&amp;nbsp; GetAccentColor()</description>
+    </item>
+    
+    <item>
+      <title>CONST_DegToUnrRot</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Constants/CONST_DegToUnrRot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Constants/CONST_DegToUnrRot/</guid>
+      <description>View Implementation   Multiply a degree (from 0-360°) by this value to get a rotation value to pass to a Rotator
+ CONST_DegToUnrRot = 182.0444f</description>
+    </item>
+    
+    <item>
+      <title>CONST_PI_D</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Constants/CONST_PI_D/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Constants/CONST_PI_D/</guid>
+      <description>View Implementation   The value of Pi as a double
+ CONST_PI_D = 3.14159265358979323846</description>
+    </item>
+    
+    <item>
+      <title>CONST_PI_F</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Constants/CONST_PI_F/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Constants/CONST_PI_F/</guid>
+      <description>View Implementation   The value of Pi as a float
+ CONST_PI_F = 3.1415926f</description>
+    </item>
+    
+    <item>
+      <title>CONST_RadToUnrRot</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Constants/CONST_RadToUnrRot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Constants/CONST_RadToUnrRot/</guid>
+      <description>View Implementation   Multiply a radian (from 0-2π) by this value to get a rotation value to pass to a Rotator
+ CONST_RadToUnrRot = 10430.3783504704527f</description>
+    </item>
+    
+    <item>
+      <title>CONST_UnrRotToRad</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Constants/CONST_UnrRotToRad/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Constants/CONST_UnrRotToRad/</guid>
+      <description>View Implementation   Multiply a rotation value from a Rotator by this value to get radians (from 0-2π)
+ CONST_UnrRotToRad = 0.00009587379924285f</description>
+    </item>
+    
+    <item>
+      <title>ControllerInput</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/ControllerInput/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/ControllerInput/</guid>
+      <description>View Implementation   A controller&#39;s input at a single frame. Easy access with CarWrapper.GetInput()
+ float&amp;nbsp; Throttle     Default value = .0f
+
+float&amp;nbsp; Steer     Default value = .0f
+
+float&amp;nbsp; Pitch     Default value = .0f
+
+float&amp;nbsp; Yaw     Default value = .0f
+
+float&amp;nbsp; Roll     Default value = .</description>
+    </item>
+    
+    <item>
+      <title>ControllerWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/ControllerWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/ControllerWrapper/</guid>
+      <description>View Implementation    PlayerReplicationInfoWrapper GetPlayerReplicationInfo()</description>
+    </item>
+    
+    <item>
+      <title>CurlRequest</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Core/CurlRequest/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Core/CurlRequest/</guid>
+      <description>View Implementation   Used to make a request with the HTTPWrapper. Info on using that here
+ std::string&amp;nbsp; url     Default value: none
+
+std::string&amp;nbsp; verb     Default value: none
+
+std::map&amp;lt; std::string, std::string &amp;gt; headers     Default value: none
+
+std::string&amp;nbsp; body     Default value: none
+
+FormField form_data     Default value: none</description>
+    </item>
+    
+    <item>
+      <title>CustomMatchSettings</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/CustomMatchSettings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/CustomMatchSettings/</guid>
+      <description>View Implementation   Use to create a private match with MatchmakingWrapper.CreatePrivateMatch()
+ std::string&amp;nbsp; GameTags     Default value: none
+
+std::string&amp;nbsp; MapName     Default value: none
+
+std::string&amp;nbsp; ServerName     Default value: none
+
+std::string&amp;nbsp; Password     Default value: none
+
+CustomMatchTeamSettings BlueTeamSettings     Default value: none
+
+CustomMatchTeamSettings OrangeTeamSettings     Default value: none</description>
+    </item>
+    
+    <item>
+      <title>CustomMatchTeamSettings</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/CustomMatchTeamSettings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/CustomMatchTeamSettings/</guid>
+      <description>View Implementation   A single team&#39;s setting. Get from a CustomMatchSettings
+ std::string&amp;nbsp; Name     Default value: none
+
+ClubColorSet Colors     Default value: none
+
+int&amp;nbsp; GameScore     Default value = 0</description>
+    </item>
+    
+    <item>
+      <title>CVarManagerWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/CVarManagerWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/CVarManagerWrapper/</guid>
+      <description>View Implementation    CVarManagerWrapper(const CVarManagerWrapper &amp;amp;other)        Parameter Type Description     other CVarManagerWrapper &amp;mdash;    
+CVarManagerWrapper operator=(CVarManagerWrapper rhs)        Parameter Type Description     rhs CVarManagerWrapper &amp;mdash;    
+~CVarManagerWrapper()     
+void&amp;nbsp; executeCommand(std::string command, bool log=true)        Parameter Type Description     command std::string&amp;nbsp; &amp;mdash;   log bool&amp;nbsp; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>CVarWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/CVarWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/CVarWrapper/</guid>
+      <description>View Implementation    CVarWrapper(const CVarWrapper &amp;amp;other)        Parameter Type Description     other CVarWrapper &amp;mdash;    
+CVarWrapper operator=(CVarWrapper rhs)        Parameter Type Description     rhs CVarWrapper &amp;mdash;    
+~CVarWrapper()     
+std::string&amp;nbsp; getCVarName()     
+int&amp;nbsp; getIntValue()</description>
+    </item>
+    
+    <item>
+      <title>DataAssetDatabase_ESportsTeamWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Dbs/DataAssetDatabase_ESportsTeamWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Dbs/DataAssetDatabase_ESportsTeamWrapper/</guid>
+      <description>  View Implementation    </description>
+    </item>
+    
+    <item>
+      <title>DataAssetDatabaseWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Dbs/DataAssetDatabaseWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Dbs/DataAssetDatabaseWrapper/</guid>
+      <description>View Implementation    _NODISCARD bool IsNull() const     
+operator bool() const     
+std::string&amp;nbsp; GetName(int DataAssetID)        Parameter Type Description     DataAssetID int&amp;nbsp; &amp;mdash;    
+int&amp;nbsp; GetID(std::string &amp;amp;DataAssetName)        Parameter Type Description     DataAssetName std::string &amp;amp; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>DemolishPickup</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/DemolishPickup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/DemolishPickup/</guid>
+      <description>View Implementation    unsigned char&amp;nbsp; GetDemolishTarget()     
+void&amp;nbsp; SetDemolishTarget(unsigned char newDemolishTarget)        Parameter Type Description     newDemolishTarget unsigned char&amp;nbsp; &amp;mdash;    
+unsigned char&amp;nbsp; GetDemolishSpeed()     
+void&amp;nbsp; SetDemolishSpeed(unsigned char newDemolishSpeed)        Parameter Type Description     newDemolishSpeed unsigned char&amp;nbsp; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>DodgeComponentWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/DodgeComponentWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/DodgeComponentWrapper/</guid>
+      <description>View Implementation    float&amp;nbsp; GetDodgeInputThreshold()     
+void&amp;nbsp; SetDodgeInputThreshold(float newDodgeInputThreshold)        Parameter Type Description     newDodgeInputThreshold float&amp;nbsp; &amp;mdash;    
+float&amp;nbsp; GetSideDodgeImpulse()     
+void&amp;nbsp; SetSideDodgeImpulse(float newSideDodgeImpulse)        Parameter Type Description     newSideDodgeImpulse float&amp;nbsp; &amp;mdash;    
+float&amp;nbsp; GetSideDodgeImpulseMaxSpeedScale()</description>
+    </item>
+    
+    <item>
+      <title>DoubleJumpComponentWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/DoubleJumpComponentWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/DoubleJumpComponentWrapper/</guid>
+      <description>View Implementation    void&amp;nbsp; SetJumpImpulse(float newJumpImpulse)        Parameter Type Description     newJumpImpulse float&amp;nbsp; &amp;mdash;    
+float&amp;nbsp; GetImpulseScale()     
+void&amp;nbsp; SetImpulseScale(float newImpulseScale)        Parameter Type Description     newImpulseScale float&amp;nbsp; &amp;mdash;    
+void&amp;nbsp; ApplyForces(float ActiveTime)        Parameter Type Description     ActiveTime float&amp;nbsp; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>EngineTAWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Engine/EngineTAWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Engine/EngineTAWrapper/</guid>
+      <description>View Implementation    _NODISCARD bool IsNull() const     
+operator bool() const     
+unsigned long&amp;nbsp; GetbEnableClientPrediction()     
+void&amp;nbsp; SetbEnableClientPrediction(unsigned long newbEnableClientPrediction)        Parameter Type Description     newbEnableClientPrediction unsigned long&amp;nbsp; &amp;mdash;    
+unsigned long&amp;nbsp; GetbClientPhysicsUpdate()     
+void&amp;nbsp; SetbClientPhysicsUpdate(unsigned long newbClientPhysicsUpdate)        Parameter Type Description     newbClientPhysicsUpdate unsigned long&amp;nbsp; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>FlipCarComponentWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/FlipCarComponentWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/FlipCarComponentWrapper/</guid>
+      <description>View Implementation    float&amp;nbsp; GetFlipCarImpulse()     
+void&amp;nbsp; SetFlipCarImpulse(float newFlipCarImpulse)        Parameter Type Description     newFlipCarImpulse float&amp;nbsp; &amp;mdash;    
+float&amp;nbsp; GetFlipCarTorque()     
+void&amp;nbsp; SetFlipCarTorque(float newFlipCarTorque)        Parameter Type Description     newFlipCarTorque float&amp;nbsp; &amp;mdash;    
+float&amp;nbsp; GetFlipCarTime()</description>
+    </item>
+    
+    <item>
+      <title>FormField</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Core/FormField/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Core/FormField/</guid>
+      <description>View Implementation   Part of a CurlRequest. Info on using HttpWrapper here
+ Type       kString
+  kFile
+  
+Type field_type     Default value: none
+
+std::string&amp;nbsp; data     Default value: none
+
+std::string&amp;nbsp; name     Default value: none</description>
+    </item>
+    
+    <item>
       <title>Function Scanner</title>
       <link>https://bakkesmodwiki.github.io/functions/function_scanner/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -38,6 +699,1235 @@ Set the -dev option    On Steam: Right click the game and hit properties Then ad
     </item>
     
     <item>
+      <title>FXActorWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/FXActorWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/FXActorWrapper/</guid>
+      <description>View Implementation    unsigned long&amp;nbsp; GetbDeactivateWhenOwnerDestroyed()     
+void&amp;nbsp; SetbDeactivateWhenOwnerDestroyed(unsigned long newbDeactivateWhenOwnerDestroyed)        Parameter Type Description     newbDeactivateWhenOwnerDestroyed unsigned long&amp;nbsp; &amp;mdash;    
+unsigned long&amp;nbsp; GetbAllowShadowCasting()     
+void&amp;nbsp; SetbAllowShadowCasting(unsigned long newbAllowShadowCasting)        Parameter Type Description     newbAllowShadowCasting unsigned long&amp;nbsp; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>GameEditorSaveDataWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/SaveData/GameEditorSaveDataWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/SaveData/GameEditorSaveDataWrapper/</guid>
+      <description>View Implementation    UnrealStringWrapper GetLoadedSaveName()     
+TrainingEditorSaveDataWrapper GetTrainingData()     
+void&amp;nbsp; SetTrainingData(TrainingEditorSaveDataWrapper newTrainingData)        Parameter Type Description     newTrainingData TrainingEditorSaveDataWrapper &amp;mdash;    
+int&amp;nbsp; GetPlayerTeamNumber()     
+void&amp;nbsp; SetPlayerTeamNumber(int newPlayerTeamNumber)        Parameter Type Description     newPlayerTeamNumber int&amp;nbsp; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>GameEditorWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/GameEditorWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/GameEditorWrapper/</guid>
+      <description>View Implementation    int&amp;nbsp; GetActiveRoundNumber()     
+void&amp;nbsp; SetActiveRoundNumber(int newActiveRoundNumber)        Parameter Type Description     newActiveRoundNumber int&amp;nbsp; &amp;mdash;    
+int&amp;nbsp; GetMaxRounds()     
+void&amp;nbsp; SetMaxRounds(int newMaxRounds)        Parameter Type Description     newMaxRounds int&amp;nbsp; &amp;mdash;    
+int&amp;nbsp; GetHistoryPosition()</description>
+    </item>
+    
+    <item>
+      <title>GameEventWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/GameEventWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/GameEventWrapper/</guid>
+      <description>View Implementation    unsigned char&amp;nbsp; GetGameMode()     
+void&amp;nbsp; SetGameMode(unsigned char newGameMode)        Parameter Type Description     newGameMode unsigned char&amp;nbsp; &amp;mdash;    
+unsigned char&amp;nbsp; GetReplicatedStateIndex()     
+void&amp;nbsp; SetReplicatedStateIndex(unsigned char newReplicatedStateIndex)        Parameter Type Description     newReplicatedStateIndex unsigned char&amp;nbsp; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>GamepadSettings</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/GamepadSettings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/GamepadSettings/</guid>
+      <description>View Implementation   A read-only copy of a player&#39;s gamepad settings. Get with SettingsWrapper.GetGamepadSettings()
+ float&amp;nbsp; ControllerDeadzone     Default value: none
+
+float&amp;nbsp; DodgeInputThreshold     Default value: none
+
+float&amp;nbsp; SteeringSensitivity     Default value: none
+
+float&amp;nbsp; AirControlSensitivity     Default value: none</description>
+    </item>
+    
+    <item>
+      <title>GameSettingPlaylistWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/GameSettingPlaylistWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/GameSettingPlaylistWrapper/</guid>
+      <description>View Implementation    _NODISCARD bool IsNull() const     
+operator bool() const     
+UnrealStringWrapper GetTitle()     
+UnrealStringWrapper GetDescription()     
+int&amp;nbsp; GetPlayerCount()     
+void&amp;nbsp; SetPlayerCount(int newPlayerCount)        Parameter Type Description     newPlayerCount int&amp;nbsp; &amp;mdash;    
+unsigned long&amp;nbsp; GetbStandard()</description>
+    </item>
+    
+    <item>
+      <title>GameWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameWrapper/</guid>
+      <description>View Implementation    std::unique_ptr&amp;lt; Impl &amp;gt;&amp;nbsp; pimpl</description>
+    </item>
+    
+    <item>
+      <title>GoalWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/GoalWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/GoalWrapper/</guid>
+      <description>View Implementation    _NODISCARD bool IsNull() const     
+operator bool() const     
+ActorWrapper GetGoalOrientation()     
+void&amp;nbsp; SetGoalOrientation(ActorWrapper newGoalOrientation)        Parameter Type Description     newGoalOrientation ActorWrapper &amp;mdash;    
+ArrayWrapper GetOverrideGoalIndicatorOrientations()     
+unsigned char&amp;nbsp; GetTeamNum()</description>
+    </item>
+    
+    <item>
+      <title>GrapplingHookPickup</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/GrapplingHookPickup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/GrapplingHookPickup/</guid>
+      <description>View Implementation    float&amp;nbsp; GetImpulse()     
+void&amp;nbsp; SetImpulse(float newImpulse)        Parameter Type Description     newImpulse float&amp;nbsp; &amp;mdash;    
+float&amp;nbsp; GetForce()     
+void&amp;nbsp; SetForce(float newForce)        Parameter Type Description     newForce float&amp;nbsp; &amp;mdash;    
+float&amp;nbsp; GetMaxRopeLength()</description>
+    </item>
+    
+    <item>
+      <title>GravityPickup</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/GravityPickup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/GravityPickup/</guid>
+      <description>View Implementation    float&amp;nbsp; GetBallGravity()     
+void&amp;nbsp; SetBallGravity(float newBallGravity)        Parameter Type Description     newBallGravity float&amp;nbsp; &amp;mdash;    
+float&amp;nbsp; GetRange()     
+void&amp;nbsp; SetRange(float newRange)        Parameter Type Description     newRange float&amp;nbsp; &amp;mdash;    
+Vector GetOffset()</description>
+    </item>
+    
+    <item>
+      <title>GUIDWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/GUIDWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/GUIDWrapper/</guid>
+      <description>View Implementation   Wraps a read-only copy of a GUI menu&#39;s ID. Not 100% sure on the use case
+ EGuidFormats       Digits = 0
+  DigitsWithHyphens = 1
+  DigitsWithHyphensInBraces = 2
+  DigitsWithHyphensInParentheses = 3
+  HexValuesInBraces = 4
+  UniqueObjectGuid = 5
+  
+int32_t A     Default value: none</description>
+    </item>
+    
+    <item>
+      <title>GuiManagerWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GuiManagerWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GuiManagerWrapper/</guid>
+      <description>View Implementation    CONSTRUCTORS(GuiManagerWrapper)        Parameter Type Description     GuiManagerWrapper &amp;mdash;     
+void *&amp;nbsp; GetImGuiStyle()     
+std::tuple&amp;lt; int, ImFont * &amp;gt; LoadFont(std::string name, std::string path, int size, const ImFontConfig *=nullptr, const ImWchar *=nullptr)        Parameter Type Description     name std::string&amp;nbsp; &amp;mdash;   path std::string&amp;nbsp; &amp;mdash;   size int&amp;nbsp; &amp;mdash;   const ImFontConfig * &amp;mdash;    const ImWchar * &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>HandbrakeOverridePickup</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/HandbrakeOverridePickup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/HandbrakeOverridePickup/</guid>
+      <description>View Implementation    CarWrapper GetOtherCar()     
+void&amp;nbsp; SetOtherCar(CarWrapper newOtherCar)        Parameter Type Description     newOtherCar CarWrapper &amp;mdash;    
+void&amp;nbsp; PickupEnd()     
+void&amp;nbsp; PickupStart()</description>
+    </item>
+    
+    <item>
+      <title>HitForcePickup</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/HitForcePickup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/HitForcePickup/</guid>
+      <description>View Implementation    unsigned long&amp;nbsp; GetbBallForce()     
+void&amp;nbsp; SetbBallForce(unsigned long newbBallForce)        Parameter Type Description     newbBallForce unsigned long&amp;nbsp; &amp;mdash;    
+unsigned long&amp;nbsp; GetbCarForce()     
+void&amp;nbsp; SetbCarForce(unsigned long newbCarForce)        Parameter Type Description     newbCarForce unsigned long&amp;nbsp; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>HttpWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Http/HttpWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Http/HttpWrapper/</guid>
+      <description>View Implementation    void&amp;nbsp; SendCurlRequest(CurlRequest request_data, const std::wstring &amp;amp;file_output, CurlRequestDoneFileReturn on_complete)        Parameter Type Description     request_data CurlRequest &amp;mdash;   file_output const std::wstring &amp;amp; &amp;mdash;   on_complete CurlRequestDoneFileReturn &amp;mdash;    
+void&amp;nbsp; SendCurlJsonRequest(CurlRequest request_data, CurlRequestDoneStringReturn on_complete)        Parameter Type Description     request_data CurlRequest &amp;mdash;   on_complete CurlRequestDoneStringReturn &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>ImageWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/ImageWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/ImageWrapper/</guid>
+      <description>View Implementation    ImageWrapper(const ImageWrapper &amp;amp;)=delete        Parameter Type Description     ImageWrapper &amp;mdash;     
+ImageWrapper operator=(const ImageWrapper &amp;amp;)=delete        Parameter Type Description     ImageWrapper &amp;mdash;     
+~ImageWrapper()     
+bool&amp;nbsp; LoadForCanvas()     
+bool&amp;nbsp; IsLoadedForCanvas()</description>
+    </item>
+    
+    <item>
+      <title>InputBufferGraphWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PerformanceStats/InputBufferGraphWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PerformanceStats/InputBufferGraphWrapper/</guid>
+      <description>View Implementation    SampleHistoryWrapper GetBuffer()     
+void&amp;nbsp; SetBuffer(SampleHistoryWrapper newBuffer)        Parameter Type Description     newBuffer SampleHistoryWrapper &amp;mdash;    
+SampleHistoryWrapper GetBufferTarget()     
+void&amp;nbsp; SetBufferTarget(SampleHistoryWrapper newBufferTarget)        Parameter Type Description     newBufferTarget SampleHistoryWrapper &amp;mdash;    
+SampleHistoryWrapper GetOverUnderFrames()</description>
+    </item>
+    
+    <item>
+      <title>ItemsWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/ItemsWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/ItemsWrapper/</guid>
+      <description>View Implementation    ItemsWrapper(const ItemsWrapper &amp;amp;other)        Parameter Type Description     other ItemsWrapper &amp;mdash;    
+ItemsWrapper operator=(ItemsWrapper rhs)        Parameter Type Description     rhs ItemsWrapper &amp;mdash;    
+~ItemsWrapper()     
+bool&amp;nbsp; IsNull()     
+operator bool()</description>
+    </item>
+    
+    <item>
+      <title>JumpComponentWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/JumpComponentWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/JumpComponentWrapper/</guid>
+      <description>View Implementation    float&amp;nbsp; GetMinJumpTime()     
+void&amp;nbsp; SetMinJumpTime(float newMinJumpTime)        Parameter Type Description     newMinJumpTime float&amp;nbsp; &amp;mdash;    
+float&amp;nbsp; GetJumpImpulse()     
+void&amp;nbsp; SetJumpImpulse(float newJumpImpulse)        Parameter Type Description     newJumpImpulse float&amp;nbsp; &amp;mdash;    
+float&amp;nbsp; GetJumpForce()</description>
+    </item>
+    
+    <item>
+      <title>LinearColor</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/LinearColor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/LinearColor/</guid>
+      <description>View Implementation   RGBA value to change the color of the Canvas. Values from 0.0-1.0 for each with 1 being 100% intensity. A is for alpha and is opacity. A = 1.0 will be fully opaque
+ float&amp;nbsp; R     Default value: none
+
+float&amp;nbsp; G     Default value: none
+
+float&amp;nbsp; B     Default value: none</description>
+    </item>
+    
+    <item>
+      <title>LoadoutWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/LoadoutWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/LoadoutWrapper/</guid>
+      <description>View Implementation    _NODISCARD bool IsNull() const     
+operator bool() const     
+ArrayWrapper GetLoadout()     
+ArrayWrapper GetOnlineLoadout()     
+unsigned char&amp;nbsp; GetPrimaryPaintColorId()     
+unsigned char&amp;nbsp; GetAccentPaintColorId()     
+int&amp;nbsp; GetPrimaryFinishId()     
+int&amp;nbsp; GetAccentFinishId()</description>
+    </item>
+    
+    <item>
+      <title>MatchmakingWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/MatchmakingWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/MatchmakingWrapper/</guid>
+      <description>View Implementation    _NODISCARD bool IsNull() const     
+operator bool() const     
+bool&amp;nbsp; IsSearching()     
+int&amp;nbsp; GetActiveViewTab()     
+void&amp;nbsp; SetRegionSelection(Region region, bool bSelected)        Parameter Type Description     region Region &amp;mdash;   bSelected bool&amp;nbsp; &amp;mdash;    
+void&amp;nbsp; SetPlaylistSelection(Playlist playlist, bool bSelected)        Parameter Type Description     playlist Playlist &amp;mdash;   bSelected bool&amp;nbsp; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>MMRNotifierToken</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/MMRNotifierToken/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/MMRNotifierToken/</guid>
+      <description>View Implementation   Unique value assigned to an mmr notifier for a specific player. Obtain with MMRWrapper.RegisterMMRNotifier()
+ unsigned long long&amp;nbsp; token     Default value: none</description>
+    </item>
+    
+    <item>
+      <title>MMRWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/MMRWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/MMRWrapper/</guid>
+      <description>View Implementation    CONSTRUCTORS(MMRWrapper)        Parameter Type Description     MMRWrapper &amp;mdash;     
+bool&amp;nbsp; IsSyncing(SteamID playerID)        Parameter Type Description     playerID SteamID &amp;mdash;    
+bool&amp;nbsp; IsSynced(SteamID playerID, int playlistID)        Parameter Type Description     playerID SteamID &amp;mdash;   playlistID int&amp;nbsp; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>ModalWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Modals/ModalWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Modals/ModalWrapper/</guid>
+      <description>View Implementation    void&amp;nbsp; ShowModal() const     
+void&amp;nbsp; CloseModal()     
+void&amp;nbsp; SetColor(float r, float g, float b)        Parameter Type Description     r float&amp;nbsp; &amp;mdash;   g float&amp;nbsp; &amp;mdash;   b float&amp;nbsp; &amp;mdash;    
+void&amp;nbsp; SetIcon(const std::string &amp;amp;iconName)        Parameter Type Description     iconName const std::string &amp;amp; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>NetStatGraphWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PerformanceStats/NetStatGraphWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PerformanceStats/NetStatGraphWrapper/</guid>
+      <description>View Implementation    SampleHistoryWrapper GetPacketsOut()     
+void&amp;nbsp; SetPacketsOut(SampleHistoryWrapper newPacketsOut)        Parameter Type Description     newPacketsOut SampleHistoryWrapper &amp;mdash;    
+SampleHistoryWrapper GetPacketsIn()     
+void&amp;nbsp; SetPacketsIn(SampleHistoryWrapper newPacketsIn)        Parameter Type Description     newPacketsIn SampleHistoryWrapper &amp;mdash;    
+SampleHistoryWrapper GetLostPacketsOut()</description>
+    </item>
+    
+    <item>
+      <title>NOTIFIER_PERMISSION</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/NOTIFIER_PERMISSION/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/NOTIFIER_PERMISSION/</guid>
+      <description>  View Implementation      PERMISSION_ALL = 0
+  PERMISSION_MENU = (1 &amp;lt;&amp;lt; 0)
+  PERMISSION_SOCCAR = (1 &amp;lt;&amp;lt; 1)
+  PERMISSION_FREEPLAY = (1 &amp;lt;&amp;lt; 2)
+  PERMISSION_CUSTOM_TRAINING = (1 &amp;lt;&amp;lt; 3)
+  PERMISSION_ONLINE = (1 &amp;lt;&amp;lt; 4)
+  PERMISSION_PAUSEMENU_CLOSED = (1 &amp;lt;&amp;lt; 5)
+  PERMISSION_REPLAY = (1 &amp;lt;&amp;lt; 6)
+  PERMISSION_OFFLINE = (1 &amp;lt;&amp;lt; 7)
+  </description>
+    </item>
+    
+    <item>
+      <title>ObjectWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Engine/ObjectWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Engine/ObjectWrapper/</guid>
+      <description>View Implementation    std::uintptr_t memory_address</description>
+    </item>
+    
+    <item>
+      <title>OnlinePlatform</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/OnlinePlatform/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/OnlinePlatform/</guid>
+      <description>View Implementation   Ids for platforms players can be playing on
+   OnlinePlatform_Unknown = 0
+  OnlinePlatform_Steam = 1
+  OnlinePlatform_PS4 = 2
+  OnlinePlatform_PS3 = 3
+  OnlinePlatform_Dingo = 4
+  OnlinePlatform_QQ = 5
+  OnlinePlatform_OldNNX = 6
+  OnlinePlatform_NNX = 7
+  OnlinePlatform_PsyNet = 8
+  OnlinePlatform_Deleted = 9
+  OnlinePlatform_WeGame = 10</description>
+    </item>
+    
+    <item>
+      <title>OnlineProductWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/OnlineProductWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/OnlineProductWrapper/</guid>
+      <description>View Implementation    _NODISCARD bool IsNull() const     
+operator bool() const     
+std::string&amp;nbsp; SeriesIdToSeriesName(int seriesID)        Parameter Type Description     seriesID int&amp;nbsp; &amp;mdash;    
+int&amp;nbsp; GetProductID()     
+int&amp;nbsp; GetSeriesID()     
+int&amp;nbsp; GetTradeHold()     
+std::string&amp;nbsp; GetProductSeries()</description>
+    </item>
+    
+    <item>
+      <title>PaintDatabaseWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Dbs/PaintDatabaseWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Dbs/PaintDatabaseWrapper/</guid>
+      <description>View Implementation    _NODISCARD bool IsNull() const     
+operator bool() const     
+std::string&amp;nbsp; GetPaintName(int PaintID)        Parameter Type Description     PaintID int&amp;nbsp; &amp;mdash;    
+int&amp;nbsp; GetPaintID(std::string &amp;amp;PaintName)        Parameter Type Description     PaintName std::string &amp;amp; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>PerfStatGraphWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PerformanceStats/PerfStatGraphWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PerformanceStats/PerfStatGraphWrapper/</guid>
+      <description>View Implementation    SampleHistoryWrapper GetFPS()     
+void&amp;nbsp; SetFPS(SampleHistoryWrapper newFPS)        Parameter Type Description     newFPS SampleHistoryWrapper &amp;mdash;    
+SampleHistoryWrapper GetFrameTime()     
+void&amp;nbsp; SetFrameTime(SampleHistoryWrapper newFrameTime)        Parameter Type Description     newFrameTime SampleHistoryWrapper &amp;mdash;    
+SampleHistoryWrapper GetGameThreadTime()</description>
+    </item>
+    
+    <item>
+      <title>PhysicalMaterialPropertyWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PhysicalMaterialPropertyWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PhysicalMaterialPropertyWrapper/</guid>
+      <description>View Implementation    _NODISCARD bool IsNull() const     
+operator bool() const     
+float&amp;nbsp; GetTireFrictionScale()     
+void&amp;nbsp; SetTireFrictionScale(float newTireFrictionScale)        Parameter Type Description     newTireFrictionScale float&amp;nbsp; &amp;mdash;    
+unsigned long&amp;nbsp; GetbStickyWheels()     
+void&amp;nbsp; SetbStickyWheels(unsigned long newbStickyWheels)        Parameter Type Description     newbStickyWheels unsigned long&amp;nbsp; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>PlayerControllerWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/PlayerControllerWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/PlayerControllerWrapper/</guid>
+      <description>View Implementation    CarWrapper GetCar()     
+void&amp;nbsp; SetCar(CarWrapper newCar)        Parameter Type Description     newCar CarWrapper &amp;mdash;    
+PriWrapper GetPRI()     
+void&amp;nbsp; SetPRI(PriWrapper newPRI)        Parameter Type Description     newPRI PriWrapper &amp;mdash;    
+ControllerInput GetVehicleInput()</description>
+    </item>
+    
+    <item>
+      <title>PlayerReplicationInfoWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PlayerReplicationInfoWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PlayerReplicationInfoWrapper/</guid>
+      <description>View Implementation    OnlinePlatform GetPlatform()     
+int&amp;nbsp; GetScore()     
+void&amp;nbsp; SetScore(int newScore)        Parameter Type Description     newScore int&amp;nbsp; &amp;mdash;    
+int&amp;nbsp; GetDeaths()     
+void&amp;nbsp; SetDeaths(int newDeaths)        Parameter Type Description     newDeaths int&amp;nbsp; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>Playlist</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/Playlist/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/Playlist/</guid>
+      <description>  View Implementation      CASUAL_STANDARD = 0
+  CASUAL_DOUBLES = 1
+  CASUAL_DUELS = 2
+  CASUAL_CHAOS = 3
+  RANKED_STANDARD = 4
+  RANKED_DOUBLES = 5
+  RANKED_DUELS = 6
+  EXTRAS_RUMBLE = 12
+  EXTRAS_DROPSHOT = 13
+  EXTRAS_HOOPS = 14
+  EXTRAS_SNOWDAY = 15
+  </description>
+    </item>
+    
+    <item>
+      <title>PlaylistCategory</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/PlaylistCategory/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/PlaylistCategory/</guid>
+      <description>  View Implementation      CASUAL = 0
+  RANKED = 1
+  EXTRAS = 2
+  </description>
+    </item>
+    
+    <item>
+      <title>PluginManagerWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/PluginManagerWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/PluginManagerWrapper/</guid>
+      <description>View Implementation    CONSTRUCTORS(PluginManagerWrapper)        Parameter Type Description     PluginManagerWrapper &amp;mdash;     
+BakkesMod::Plugin::LoadedPlugin GetLoadedPlugins()</description>
+    </item>
+    
+    <item>
+      <title>PLUGINTYPE</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/PLUGINTYPE/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/PLUGINTYPE/</guid>
+      <description>  View Implementation      PLUGINTYPE_FREEPLAY = 0x01
+  PLUGINTYPE_CUSTOM_TRAINING = 0x02
+  PLUGINTYPE_SPECTATOR = 0x04
+  PLUGINTYPE_BOTAI = 0x08
+  PLUGINTYPE_REPLAY = 0x10
+  PLUGINTYPE_THREADED = 0x20
+  PLUGINTYPE_THREADEDUNLOAD = 0x40
+  </description>
+    </item>
+    
+    <item>
+      <title>POV</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/POV/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/POV/</guid>
+      <description>View Implementation   The location, rotation, and FOV of a player&#39;s POV
+ Vector location     Default value: none
+
+Rotator rotation     Default value: none
+
+float&amp;nbsp; FOV     Default value: none</description>
+    </item>
+    
+    <item>
+      <title>PredictionInfo</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/PredictionInfo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/PredictionInfo/</guid>
+      <description>View Implementation   Info on the predicted location of a ball. Get with BallWrapper.PredictPosition()
+ float&amp;nbsp; Time     Default value: none
+
+float&amp;nbsp; ArchTopTime     Default value: none
+
+Vector Location     Default value: none
+
+Vector Velocity     Default value: none
+
+Vector ArchTop     Default value: none
+
+Vector ArchTopVelocity     Default value: none</description>
+    </item>
+    
+    <item>
+      <title>PrimitiveComponentWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/PrimitiveComponentWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/PrimitiveComponentWrapper/</guid>
+      <description>View Implementation    _NODISCARD bool IsNull() const     
+operator bool() const     
+unsigned char&amp;nbsp; GetRBChannel()     
+void&amp;nbsp; SetRBChannel(unsigned char newRBChannel)        Parameter Type Description     newRBChannel unsigned char&amp;nbsp; &amp;mdash;    
+unsigned char&amp;nbsp; GetRBDominanceGroup()     
+void&amp;nbsp; SetRBDominanceGroup(unsigned char newRBDominanceGroup)        Parameter Type Description     newRBDominanceGroup unsigned char&amp;nbsp; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>PriWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PriWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PriWrapper/</guid>
+      <description>View Implementation   The Player Replication Info provides a ton of information on all players connected to a match, including spectators and bots.
+The best way to get the PRIs is using a ServerWrapper to call from its superclass GameEventWrapper.GetPRIs()
+ int&amp;nbsp; GetMatchScore()     
+void&amp;nbsp; SetMatchScore(int newMatchScore)        Parameter Type Description     newMatchScore int&amp;nbsp; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>PriXWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PriXWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PriXWrapper/</guid>
+      <description>View Implementation    void&amp;nbsp; eventDestroyed()     
+void&amp;nbsp; OnUniqueIdChanged()     
+void&amp;nbsp; SetUniqueId(SteamID &amp;amp;PlayerUniqueId)        Parameter Type Description     PlayerUniqueId SteamID &amp;mdash;    
+void&amp;nbsp; UnregisterPlayerFromSession()     
+void&amp;nbsp; RegisterPlayerWithSession()     
+void&amp;nbsp; OnTeamChanged()     
+void&amp;nbsp; SetPlayerTeam(TeamInfoWrapper NewTeam)        Parameter Type Description     NewTeam TeamInfoWrapper &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>ProductAttribute_AnimatedSkinLabelWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_AnimatedSkinLabelWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_AnimatedSkinLabelWrapper/</guid>
+      <description>View Implementation    UnrealStringWrapper GetAnimatedLabel()</description>
+    </item>
+    
+    <item>
+      <title>ProductAttribute_BlueprintCostWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_BlueprintCostWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_BlueprintCostWrapper/</guid>
+      <description>View Implementation    int&amp;nbsp; GetCost()</description>
+    </item>
+    
+    <item>
+      <title>ProductAttribute_BlueprintWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_BlueprintWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_BlueprintWrapper/</guid>
+      <description>View Implementation    int&amp;nbsp; GetProductID()     
+int&amp;nbsp; GetCachedBlueprintSeriesID()     
+UnrealStringWrapper GetSortLabel()</description>
+    </item>
+    
+    <item>
+      <title>ProductAttribute_BodyCompatibilityWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_BodyCompatibilityWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_BodyCompatibilityWrapper/</guid>
+      <description>View Implementation    ArrayWrapper GetCompatibleBodies()</description>
+    </item>
+    
+    <item>
+      <title>ProductAttribute_CertifiedWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_CertifiedWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_CertifiedWrapper/</guid>
+      <description>View Implementation    std::string&amp;nbsp; GetValueKeyName()     
+int&amp;nbsp; GetStatId()     
+int&amp;nbsp; GetStatValue()     
+UnrealStringWrapper GetSortLabel()     
+UnrealStringWrapper GetDescription()     
+UnrealStringWrapper GetRankLabel()     
+int&amp;nbsp; GetRank()</description>
+    </item>
+    
+    <item>
+      <title>ProductAttribute_CurrencyWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_CurrencyWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_CurrencyWrapper/</guid>
+      <description>View Implementation    int&amp;nbsp; GetCurrencyID()     
+UnrealStringWrapper GetSortLabel()</description>
+    </item>
+    
+    <item>
+      <title>ProductAttribute_PaintedWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_PaintedWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_PaintedWrapper/</guid>
+      <description>View Implementation    int&amp;nbsp; GetPaintID()     
+UnrealStringWrapper GetSortLabel()</description>
+    </item>
+    
+    <item>
+      <title>ProductAttribute_QualityWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_QualityWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_QualityWrapper/</guid>
+      <description>View Implementation    unsigned char&amp;nbsp; GetQuality()     
+UnrealStringWrapper ProductQualityToString(unsigned char InQuality)        Parameter Type Description     InQuality unsigned char&amp;nbsp; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>ProductAttribute_SpecialEditionSettingsWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_SpecialEditionSettingsWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_SpecialEditionSettingsWrapper/</guid>
+      <description>View Implementation    SpecialEdition GetEditions()</description>
+    </item>
+    
+    <item>
+      <title>ProductAttribute_SpecialEditionWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_SpecialEditionWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_SpecialEditionWrapper/</guid>
+      <description>View Implementation    int&amp;nbsp; GetEditionID()     
+UnrealStringWrapper GetSortLabel()     
+int&amp;nbsp; GetOverrideProductID(int ProductID)        Parameter Type Description     ProductID int&amp;nbsp; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>ProductAttribute_TeamEditionUploadWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_TeamEditionUploadWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_TeamEditionUploadWrapper/</guid>
+      <description>View Implementation    ArrayWrapper GetSupportedTeamEditions()</description>
+    </item>
+    
+    <item>
+      <title>ProductAttribute_TeamEditionWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_TeamEditionWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_TeamEditionWrapper/</guid>
+      <description>View Implementation    int&amp;nbsp; GetId()     
+UnrealStringWrapper GetSortLabel()</description>
+    </item>
+    
+    <item>
+      <title>ProductAttribute_UnlockMethodWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_UnlockMethodWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_UnlockMethodWrapper/</guid>
+      <description>View Implementation    unsigned char&amp;nbsp; GetUnlockMethod()</description>
+    </item>
+    
+    <item>
+      <title>ProductAttributeWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttributeWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttributeWrapper/</guid>
+      <description>View Implementation    _NODISCARD bool IsNull() const     
+operator bool() const     
+std::string&amp;nbsp; GetAttributeType()     
+std::string&amp;nbsp; GetTypename()     
+UnrealStringWrapper GetLabel()</description>
+    </item>
+    
+    <item>
+      <title>PRODUCTQUALITY</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/PRODUCTQUALITY/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/PRODUCTQUALITY/</guid>
+      <description>  View Implementation   Possible item rarities
+   Common = 0
+  Uncommon = 1
+  Rare = 2
+  VeryRare = 3
+  Import = 4
+  Exotic = 5
+  BlackMarket = 6
+  Premium = 7
+  Limited = 8
+  MAX = 9
+  </description>
+    </item>
+    
+    <item>
+      <title>ProductSlotWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/ProductSlotWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/ProductSlotWrapper/</guid>
+      <description>View Implementation    _NODISCARD bool IsNull() const     
+operator bool() const     
+UnrealStringWrapper GetLabel()     
+UnrealStringWrapper GetPluralLabel()     
+UnrealStringWrapper GetDescription()     
+UnrealStringWrapper GetOnlineLabel()     
+int&amp;nbsp; GetSlotIndex()</description>
+    </item>
+    
+    <item>
+      <title>ProductTemplateWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/ProductTemplateWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/ProductTemplateWrapper/</guid>
+      <description>View Implementation    _NODISCARD bool IsNull() const     
+operator bool() const     
+ProductSlotWrapper GetSlot()     
+unsigned char&amp;nbsp; GetUnlockMethod()     
+unsigned char&amp;nbsp; GetQuality()     
+ProductWrapper GetRequiredProduct()     
+unsigned long&amp;nbsp; GetbLicensed()</description>
+    </item>
+    
+    <item>
+      <title>ProductTradeInWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/ProductTradeInWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/ProductTradeInWrapper/</guid>
+      <description>View Implementation    ArrayWrapper GetProducts() const     
+_NODISCARD bool IsNull() const     
+operator bool() const</description>
+    </item>
+    
+    <item>
+      <title>ProductWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/ProductWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/ProductWrapper/</guid>
+      <description>View Implementation    bool&amp;nbsp; IsNull()     
+operator bool()     
+std::string&amp;nbsp; GetAssetPackageName()     
+UnrealStringWrapper GetAssetPath()     
+UnrealStringWrapper GetLabel()     
+UnrealStringWrapper GetAsciiLabel()     
+UnrealStringWrapper GetLongLabel()     
+bool&amp;nbsp; IsPaintable()     
+UnrealStringWrapper GetDisplayLabelSlot()</description>
+    </item>
+    
+    <item>
+      <title>ProfileCameraSettings</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/ProfileCameraSettings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/ProfileCameraSettings/</guid>
+      <description>View Implementation   A player&#39;s camera Settings. Access with CameraWrapper.GetCameraSettings()
+ float&amp;nbsp; FOV     Default value: none
+
+float&amp;nbsp; Height     Default value: none
+
+float&amp;nbsp; Pitch     Default value: none
+
+float&amp;nbsp; Distance     Default value: none
+
+float&amp;nbsp; Stiffness     Default value: none
+
+float&amp;nbsp; SwivelSpeed     Default value: none</description>
+    </item>
+    
+    <item>
+      <title>Quat</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/Quat/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/Quat/</guid>
+      <description>View Implementation   A description of a 4D space. Just trust it works and don&#39;t think too hard. Used RotatorToQuat and RotateVectorWithQuat to rotate a vector in 3D space using a Rotator and Quat
+ float&amp;nbsp; X     Default value: none
+
+float&amp;nbsp; Y     Default value: none
+
+float&amp;nbsp; Z     Default value: none
+
+float&amp;nbsp; W     Default value: none</description>
+    </item>
+    
+    <item>
+      <title>quat_norm</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Constants/quat_norm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Constants/quat_norm/</guid>
+      <description>View Implementation   Used in linmath.h
+ quat_norm = vec4_norm</description>
+    </item>
+    
+    <item>
+      <title>RBActorWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RBActorWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RBActorWrapper/</guid>
+      <description>View Implementation    float&amp;nbsp; GetMaxLinearSpeed()     
+void&amp;nbsp; SetMaxLinearSpeed(float newMaxLinearSpeed)        Parameter Type Description     newMaxLinearSpeed float&amp;nbsp; &amp;mdash;    
+float&amp;nbsp; GetMaxAngularSpeed()     
+void&amp;nbsp; SetMaxAngularSpeed(float newMaxAngularSpeed)        Parameter Type Description     newMaxAngularSpeed float&amp;nbsp; &amp;mdash;    
+unsigned long&amp;nbsp; GetbDisableSleeping()</description>
+    </item>
+    
+    <item>
+      <title>RBState</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/RBState/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/RBState/</guid>
+      <description>View Implementation    Quat Quaternion     Default value: none
+
+Vector Location     Default value: none
+
+Vector LinearVelocity     Default value: none
+
+Vector AngularVelocity     Default value: none
+
+float&amp;nbsp; Time     Default value: none
+
+unsigned long&amp;nbsp; bSleeping     Default value: none
+
+unsigned long&amp;nbsp; bNewData     Default value: none</description>
+    </item>
+    
+    <item>
+      <title>RecordedSample</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/RecordedSample/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/RecordedSample/</guid>
+      <description>View Implementation   A single sample of data recorded for performance graphs. Get with SampleHistoryWrapper
+ float&amp;nbsp; Low     Default value: none
+
+float&amp;nbsp; High     Default value: none</description>
+    </item>
+    
+    <item>
+      <title>Region</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/Region/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/Region/</guid>
+      <description>  View Implementation      USE = 0
+  EU = 1
+  USW = 2
+  ASC = 3
+  ASM = 4
+  JPN = 5
+  ME = 6
+  OCE = 7
+  SAF = 8
+  SAM = 9
+  </description>
+    </item>
+    
+    <item>
+      <title>ReplayDirectorWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/ReplayDirectorWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/ReplayDirectorWrapper/</guid>
+      <description>View Implementation    float&amp;nbsp; GetSlomoPreScoreTime()     
+void&amp;nbsp; SetSlomoPreScoreTime(float newSlomoPreScoreTime)        Parameter Type Description     newSlomoPreScoreTime float&amp;nbsp; &amp;mdash;    
+float&amp;nbsp; GetSlomoPostScoreTime()     
+void&amp;nbsp; SetSlomoPostScoreTime(float newSlomoPostScoreTime)        Parameter Type Description     newSlomoPostScoreTime float&amp;nbsp; &amp;mdash;    
+float&amp;nbsp; GetSlomoDefendTime()</description>
+    </item>
+    
+    <item>
+      <title>ReplayScoreData</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/ReplayScoreData/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/ReplayScoreData/</guid>
+      <description>View Implementation   Stats shown in a replay. Get with ReplayDirectorWrapper.GetReplayScoreData()
+ uintptr_t ScoredBy     Default value: none
+
+uintptr_t AssistedBy     Default value: none
+
+float&amp;nbsp; Speed     Default value: none
+
+float&amp;nbsp; Time     Default value: none
+
+unsigned char&amp;nbsp; ScoreTeam     Default value: none</description>
+    </item>
+    
+    <item>
+      <title>ReplayServerWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/ReplayServerWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/ReplayServerWrapper/</guid>
+      <description>View Implementation    ReplayServerWrapper(const ReplayServerWrapper &amp;amp;other)        Parameter Type Description     other ReplayServerWrapper &amp;mdash;    
+ReplayServerWrapper operator=(ReplayServerWrapper rhs)        Parameter Type Description     rhs ReplayServerWrapper &amp;mdash;    
+~ReplayServerWrapper()     
+ActorWrapper GetViewTarget()     
+ReplayWrapper GetReplay()</description>
+    </item>
+    
+    <item>
+      <title>ReplaySoccarWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/ReplaySoccarWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/ReplaySoccarWrapper/</guid>
+      <description>View Implementation    int&amp;nbsp; GetTeamSize()     
+void&amp;nbsp; SetTeamSize(int newTeamSize)        Parameter Type Description     newTeamSize int&amp;nbsp; &amp;mdash;    
+int&amp;nbsp; GetUnfairTeamSize()     
+void&amp;nbsp; SetUnfairTeamSize(int newUnfairTeamSize)        Parameter Type Description     newUnfairTeamSize int&amp;nbsp; &amp;mdash;    
+unsigned long&amp;nbsp; GetbUnfairBots()</description>
+    </item>
+    
+    <item>
+      <title>ReplayWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/ReplayWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/ReplayWrapper/</guid>
+      <description>View Implementation    _NODISCARD bool IsNull() const     
+operator bool() const     
+UnrealStringWrapper GetReplayName()     
+int&amp;nbsp; GetEngineVersion()     
+void&amp;nbsp; SetEngineVersion(int newEngineVersion)        Parameter Type Description     newEngineVersion int&amp;nbsp; &amp;mdash;    
+int&amp;nbsp; GetLicenseeVersion()     
+void&amp;nbsp; SetLicenseeVersion(int newLicenseeVersion)        Parameter Type Description     newLicenseeVersion int&amp;nbsp; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>Rotator</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/Rotator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/Rotator/</guid>
+      <description>View Implementation   A description of the orientation of an object. This github page describes what 3D space is in Rocket League&amp;nbsp;
+ int&amp;nbsp; Pitch     Default value: none
+
+int&amp;nbsp; Yaw     Default value: none
+
+int&amp;nbsp; Roll     Default value: none</description>
+    </item>
+    
+    <item>
+      <title>RumblePickupComponentWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/RumblePickupComponentWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/RumblePickupComponentWrapper/</guid>
+      <description>View Implementation    UnrealStringWrapper GetPickupName()     
+unsigned long&amp;nbsp; GetbHudIgnoreUseTime()     
+void&amp;nbsp; SetbHudIgnoreUseTime(unsigned long newbHudIgnoreUseTime)        Parameter Type Description     newbHudIgnoreUseTime unsigned long&amp;nbsp; &amp;mdash;    
+unsigned long&amp;nbsp; GetbHasActivated()     
+void&amp;nbsp; SetbHasActivated(unsigned long newbHasActivated)        Parameter Type Description     newbHasActivated unsigned long&amp;nbsp; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>SampleHistoryWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PerformanceStats/SampleHistoryWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PerformanceStats/SampleHistoryWrapper/</guid>
+      <description>View Implementation    _NODISCARD bool IsNull() const     
+operator bool() const     
+SampleRecordSettingsWrapper GetRecordSettings()     
+void&amp;nbsp; SetRecordSettings(SampleRecordSettingsWrapper newRecordSettings)        Parameter Type Description     newRecordSettings SampleRecordSettingsWrapper &amp;mdash;    
+UnrealStringWrapper GetTitle()     
+float&amp;nbsp; GetYMin()     
+void&amp;nbsp; SetYMin(float newYMin)        Parameter Type Description     newYMin float&amp;nbsp; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>SampleRecordSettingsWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PerformanceStats/SampleRecordSettingsWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PerformanceStats/SampleRecordSettingsWrapper/</guid>
+      <description>View Implementation    _NODISCARD bool IsNull() const     
+operator bool() const     
+float&amp;nbsp; GetMaxSampleAge()     
+void&amp;nbsp; SetMaxSampleAge(float newMaxSampleAge)        Parameter Type Description     newMaxSampleAge float&amp;nbsp; &amp;mdash;    
+float&amp;nbsp; GetRecordRate()     
+void&amp;nbsp; SetRecordRate(float newRecordRate)        Parameter Type Description     newRecordRate float&amp;nbsp; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>SaveDataWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/SaveData/SaveDataWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/SaveData/SaveDataWrapper/</guid>
+      <description>View Implementation    _NODISCARD bool IsNull() const     
+operator bool() const     
+UnrealStringWrapper GetDirectoryPath()     
+UnrealStringWrapper GetSaveType()     
+UnrealStringWrapper GetSaveExt()     
+unsigned long&amp;nbsp; GetbExactFileMatch()     
+void&amp;nbsp; SetbExactFileMatch(unsigned long newbExactFileMatch)        Parameter Type Description     newbExactFileMatch unsigned long&amp;nbsp; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>SequenceObjectWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Kismet/SequenceObjectWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Kismet/SequenceObjectWrapper/</guid>
+      <description>View Implementation    _NODISCARD bool IsNull() const     
+operator bool() const     
+SequenceWrapper GetParentSequence()     
+UnrealStringWrapper GetObjName()     
+UnrealStringWrapper GetObjCategory()     
+UnrealStringWrapper GetObjComment()</description>
+    </item>
+    
+    <item>
+      <title>SequenceOpWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Kismet/SequenceOpWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Kismet/SequenceOpWrapper/</guid>
+      <description>  View Implementation    </description>
+    </item>
+    
+    <item>
+      <title>SequenceVariableWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Kismet/SequenceVariableWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Kismet/SequenceVariableWrapper/</guid>
+      <description>View Implementation    std::string&amp;nbsp; GetVarName()     
+bool&amp;nbsp; IsInt()     
+bool&amp;nbsp; IsFloat()     
+bool&amp;nbsp; IsString()     
+bool&amp;nbsp; IsVector()     
+bool&amp;nbsp; IsBool()     
+bool&amp;nbsp; IsObjectList()     
+bool&amp;nbsp; IsActor()     
+float&amp;nbsp; GetFloat()</description>
+    </item>
+    
+    <item>
+      <title>SequenceWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Kismet/SequenceWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Kismet/SequenceWrapper/</guid>
+      <description>View Implementation    ArrayWrapper GetSequenceObjects()     
+ArrayWrapper GetNestedSequences()     
+int&amp;nbsp; ActivateRemoteEvents(const std::string &amp;amp;remote_event_name) const        Parameter Type Description     remote_event_name const std::string &amp;amp; &amp;mdash;    
+SequenceVariableWrapper GetAllSequenceVariables(bool reqursive)        Parameter Type Description     reqursive bool&amp;nbsp; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>ServerWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/ServerWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/ServerWrapper/</guid>
+      <description>View Implementation   The server is the controller of the match. It tells you where cars and balls are, the time remaining, score, and so much more.
+If not hosting the match (in an online or private match) all values are read-only. Some functions will also return garbage data in online matches to protect the competitive integrity of the game
+Get it with gameWrapper.GetCurrentGameState()
+ BallWrapper GetBall()</description>
+    </item>
+    
+    <item>
+      <title>SettingsWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/SettingsWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/SettingsWrapper/</guid>
+      <description>View Implementation    SettingsWrapper()     
+~SettingsWrapper()     
+ProfileCameraSettings GetCameraSettings()     
+CameraSave GetCameraSaveSettings()     
+std::map&amp;lt; std::string, std::string &amp;gt; GetPCBindings()     
+std::map&amp;lt; std::string, std::string &amp;gt; GetGamepadBindings()     
+std::vector&amp;lt; std::pair&amp;lt; std::string, std::string &amp;gt; &amp;gt; GetAllPCBindings()     
+std::vector&amp;lt; std::pair&amp;lt; std::string, std::string &amp;gt; &amp;gt; GetAllGamepadBindings()</description>
+    </item>
+    
+    <item>
+      <title>SkillRank</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/SkillRank/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/SkillRank/</guid>
+      <description>View Implementation   Information on a player&#39;s rank. From MMRWrapper.GetPlayerRank()
+ int&amp;nbsp; Tier     Default value: none
+
+int&amp;nbsp; Division     Default value: none
+
+int&amp;nbsp; MatchesPlayed     Default value: none</description>
+    </item>
+    
+    <item>
+      <title>SkillRating</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/SkillRating/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/SkillRating/</guid>
+      <description>View Implementation   Raw skill data used to calculate MMR with MMRWrapper.CalculateMMR()
+ float&amp;nbsp; Mu     Default value: none
+
+float&amp;nbsp; Sigma     Default value: none</description>
+    </item>
+    
+    <item>
+      <title>SpecialEdition</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/Items/Attributes/SpecialEdition/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/Items/Attributes/SpecialEdition/</guid>
+      <description>View Implementation   Info on an item&#39;s special edition. Not sure where to obtain
+ int&amp;nbsp; productId     Default value: none
+
+int&amp;nbsp; editionId     Default value: none
+
+std::string&amp;nbsp; label     Default value: none</description>
+    </item>
+    
+    <item>
+      <title>SpecialEditionDatabaseWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Dbs/SpecialEditionDatabaseWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Dbs/SpecialEditionDatabaseWrapper/</guid>
+      <description>View Implementation    _NODISCARD bool IsNull() const     
+operator bool() const     
+std::string&amp;nbsp; GetSpecialEditionName(int EditionID)        Parameter Type Description     EditionID int&amp;nbsp; &amp;mdash;    
+int&amp;nbsp; GetSpecialEditionId(std::string &amp;amp;EditionName)        Parameter Type Description     EditionName std::string &amp;amp; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>SpringPickup</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/SpringPickup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/SpringPickup/</guid>
+      <description>View Implementation    float&amp;nbsp; GetForce()     
+void&amp;nbsp; SetForce(float newForce)        Parameter Type Description     newForce float&amp;nbsp; &amp;mdash;    
+float&amp;nbsp; GetVerticalForce()     
+void&amp;nbsp; SetVerticalForce(float newVerticalForce)        Parameter Type Description     newVerticalForce float&amp;nbsp; &amp;mdash;    
+Vector GetTorque()</description>
+    </item>
+    
+    <item>
+      <title>StartGraphSystemWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PerformanceStats/StartGraphSystemWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PerformanceStats/StartGraphSystemWrapper/</guid>
+      <description>View Implementation    _NODISCARD bool IsNull() const     
+operator bool() const     
+float&amp;nbsp; GetGraphSampleTime()     
+void&amp;nbsp; SetGraphSampleTime(float newGraphSampleTime)        Parameter Type Description     newGraphSampleTime float&amp;nbsp; &amp;mdash;    
+unsigned char&amp;nbsp; GetGraphLevel()     
+void&amp;nbsp; SetGraphLevel(unsigned char newGraphLevel)        Parameter Type Description     newGraphLevel unsigned char&amp;nbsp; &amp;mdash;</description>
+    </item>
+    
+    <item>
       <title>Starting a plugin</title>
       <link>https://bakkesmodwiki.github.io/plugin_tutorial/starting_a_plugin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -45,6 +1935,517 @@ Set the -dev option    On Steam: Right click the game and hit properties Then ad
       <guid>https://bakkesmodwiki.github.io/plugin_tutorial/starting_a_plugin/</guid>
       <description>It will assume you&amp;rsquo;re using the template as linked in Setting Up. You can of course make a plugin without it, but it gives an easier basis to work off of. You can name it anything, but here we&amp;rsquo;ll be using a demo plugin named CoolPlugin
 The template has a lot of commented out code that is designed to help you learn how to use the syntax, but is ignored for the purposes of this tutorial</description>
+    </item>
+    
+    <item>
+      <title>StatEventWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/Stats/StatEventWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/Stats/StatEventWrapper/</guid>
+      <description>View Implementation    _NODISCARD bool IsNull() const     
+operator bool() const     
+int&amp;nbsp; GetPoints()     
+float&amp;nbsp; GetCooldownSeconds()     
+unsigned long&amp;nbsp; GetbAddToScore()     
+unsigned long&amp;nbsp; GetbIsLeaderboardStat()     
+unsigned long&amp;nbsp; GetbNotifyTicker()     
+unsigned long&amp;nbsp; GetbShowOnHUD()</description>
+    </item>
+    
+    <item>
+      <title>StatGraphSystemWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PerformanceStats/StatGraphSystemWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PerformanceStats/StatGraphSystemWrapper/</guid>
+      <description>View Implementation    _NODISCARD bool IsNull() const     
+operator bool() const     
+float&amp;nbsp; GetGraphSampleTime()     
+void&amp;nbsp; SetGraphSampleTime(float newGraphSampleTime)        Parameter Type Description     newGraphSampleTime float&amp;nbsp; &amp;mdash;    
+unsigned char&amp;nbsp; GetGraphLevel()     
+void&amp;nbsp; SetGraphLevel(unsigned char newGraphLevel)        Parameter Type Description     newGraphLevel unsigned char&amp;nbsp; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>StatGraphWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PerformanceStats/StatGraphWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PerformanceStats/StatGraphWrapper/</guid>
+      <description>View Implementation    _NODISCARD bool IsNull() const     
+operator bool() const     
+SampleRecordSettingsWrapper GetRecordSettings()     
+void&amp;nbsp; SetRecordSettings(SampleRecordSettingsWrapper newRecordSettings)        Parameter Type Description     newRecordSettings SampleRecordSettingsWrapper &amp;mdash;    
+double&amp;nbsp; GetLastTickTime()     
+void&amp;nbsp; SetLastTickTime(double newLastTickTime)        Parameter Type Description     newLastTickTime double&amp;nbsp; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>SteamID</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/SteamID/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/SteamID/</guid>
+      <description>View Implementation   Mostly depreciated. When possible use the epic and steam friendly UniqueIDWrapper
+ unsigned long long&amp;nbsp; ID     Default value: none</description>
+    </item>
+    
+    <item>
+      <title>StickyForceData</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/StickyForceData/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/StickyForceData/</guid>
+      <description>View Implementation   Info on stickiness to wall. Get with VehicleWrapper.GetStickyForce()
+ float&amp;nbsp; Ground     Default value: none
+
+float&amp;nbsp; Wall     Default value: none</description>
+    </item>
+    
+    <item>
+      <title>StructArrayWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/StructArrayWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/StructArrayWrapper/</guid>
+      <description>View Implementation    StructArrayWrapper(const StructArrayWrapper&amp;lt; T &amp;gt; &amp;amp;other)        Parameter Type Description     other StructArrayWrapper &amp;mdash;    
+StructArrayWrapper operator=(StructArrayWrapper&amp;lt; T &amp;gt; rhs)        Parameter Type Description     rhs StructArrayWrapper &amp;mdash;    
+~StructArrayWrapper()     
+int&amp;nbsp; Count()</description>
+    </item>
+    
+    <item>
+      <title>SwapperPickup</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/SwapperPickup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/SwapperPickup/</guid>
+      <description>View Implementation    CarWrapper GetOtherCar()     
+void&amp;nbsp; SetOtherCar(CarWrapper newOtherCar)        Parameter Type Description     newOtherCar CarWrapper &amp;mdash;    
+void&amp;nbsp; PickupEnd()     
+void&amp;nbsp; OnTargetChanged()     
+void&amp;nbsp; PickupStart()</description>
+    </item>
+    
+    <item>
+      <title>TargetedPickup</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/TargetedPickup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/TargetedPickup/</guid>
+      <description>View Implementation    unsigned long&amp;nbsp; GetbCanTargetBall()     
+void&amp;nbsp; SetbCanTargetBall(unsigned long newbCanTargetBall)        Parameter Type Description     newbCanTargetBall unsigned long&amp;nbsp; &amp;mdash;    
+unsigned long&amp;nbsp; GetbCanTargetCars()     
+void&amp;nbsp; SetbCanTargetCars(unsigned long newbCanTargetCars)        Parameter Type Description     newbCanTargetCars unsigned long&amp;nbsp; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>TeamGameEventWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TeamGameEventWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TeamGameEventWrapper/</guid>
+      <description>View Implementation    ArrayWrapper GetTeamArchetypes()     
+ArrayWrapper GetTeams()     
+int&amp;nbsp; GetMaxTeamSize()     
+void&amp;nbsp; SetMaxTeamSize(int newMaxTeamSize)        Parameter Type Description     newMaxTeamSize int&amp;nbsp; &amp;mdash;    
+int&amp;nbsp; GetNumBots()     
+void&amp;nbsp; SetNumBots(int newNumBots)        Parameter Type Description     newNumBots int&amp;nbsp; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>TeamInfoWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/TeamInfoWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/TeamInfoWrapper/</guid>
+      <description>View Implementation    UnrealStringWrapper GetTeamName()     
+int&amp;nbsp; GetSize()     
+void&amp;nbsp; SetSize(int newSize)        Parameter Type Description     newSize int&amp;nbsp; &amp;mdash;    
+int&amp;nbsp; GetScore()     
+void&amp;nbsp; SetScore(int newScore)        Parameter Type Description     newScore int&amp;nbsp; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>TeamWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/TeamWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/TeamWrapper/</guid>
+      <description>View Implementation    LinearColor GetPrimaryColor()     
+LinearColor GetSecondaryColor()     
+LinearColor GetFontColor()     
+void&amp;nbsp; SetFontColor(LinearColor newFontColor)        Parameter Type Description     newFontColor LinearColor &amp;mdash;    
+LinearColor GetColorBlindFontColor()     
+void&amp;nbsp; SetColorBlindFontColor(LinearColor newColorBlindFontColor)        Parameter Type Description     newColorBlindFontColor LinearColor &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>TextInputModalWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Modals/TextInputModalWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Modals/TextInputModalWrapper/</guid>
+      <description>View Implementation    void&amp;nbsp; SetTextInput(const std::string &amp;amp;defaultText, int32_t max_text_length, bool password, std::function&amp;lt; void(std::string, bool)&amp;gt; input_callback)        Parameter Type Description     defaultText const std::string &amp;amp; &amp;mdash;   max_text_length int32_t &amp;mdash;   password bool&amp;nbsp; &amp;mdash;   input_callback std::function&amp;lt; void(std::string, bool)&amp;gt; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>TimeBombPickup</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/TimeBombPickup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/TimeBombPickup/</guid>
+      <description>View Implementation    float&amp;nbsp; GetRadius()     
+void&amp;nbsp; SetRadius(float newRadius)        Parameter Type Description     newRadius float&amp;nbsp; &amp;mdash;    
+float&amp;nbsp; GetAlmostReadyDuration()     
+void&amp;nbsp; SetAlmostReadyDuration(float newAlmostReadyDuration)        Parameter Type Description     newAlmostReadyDuration float&amp;nbsp; &amp;mdash;    
+float&amp;nbsp; GetStartMatSpeed()</description>
+    </item>
+    
+    <item>
+      <title>ToastType</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/ToastType/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/ToastType/</guid>
+      <description>  View Implementation   Possible colors for Toasts.
+ToastType_Info is black, ToastType_OK is green, ToastType_Warning is orange, and ToastType_Error is red
+   ToastType_Info = 0
+  ToastType_OK = 1
+  ToastType_Warning = 2
+  ToastType_Error = 3
+  </description>
+    </item>
+    
+    <item>
+      <title>TornadoPickup</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/TornadoPickup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/TornadoPickup/</guid>
+      <description>View Implementation    float&amp;nbsp; GetHeight()     
+void&amp;nbsp; SetHeight(float newHeight)        Parameter Type Description     newHeight float&amp;nbsp; &amp;mdash;    
+float&amp;nbsp; GetRadius()     
+void&amp;nbsp; SetRadius(float newRadius)        Parameter Type Description     newRadius float&amp;nbsp; &amp;mdash;    
+Vector GetOffset()</description>
+    </item>
+    
+    <item>
+      <title>TRADEHOLD</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/TRADEHOLD/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/TRADEHOLD/</guid>
+      <description>  View Implementation      TRADEHOLD_P2P = -2
+  TRADEHOLD_ALL = -1
+  TRADEHOLD_NONE = 0
+  </description>
+    </item>
+    
+    <item>
+      <title>TradeWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/TradeWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/TradeWrapper/</guid>
+      <description>View Implementation    Currency GetReceivingCurrency() const     
+Currency GetSendingCurrency() const     
+ArrayWrapper GetReceivingProducts()     
+ArrayWrapper GetSendingProducts()     
+UniqueIDWrapper GetTradingPlayer() const     
+GUIDWrapper GetTradeGuid() const     
+bool&amp;nbsp; IsNull()     
+operator bool()</description>
+    </item>
+    
+    <item>
+      <title>TrainingEditorSaveDataWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/SaveData/TrainingEditorSaveDataWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/SaveData/TrainingEditorSaveDataWrapper/</guid>
+      <description>View Implementation    _NODISCARD bool IsNull() const     
+operator bool() const     
+UnrealStringWrapper GetCode()     
+UnrealStringWrapper GetTM_Name()     
+unsigned char&amp;nbsp; GetType()     
+void&amp;nbsp; SetType(unsigned char newType)        Parameter Type Description     newType unsigned char&amp;nbsp; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>TrainingEditorWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/</guid>
+      <description>View Implementation    float&amp;nbsp; GetMinRoundTime()     
+void&amp;nbsp; SetMinRoundTime(float newMinRoundTime)        Parameter Type Description     newMinRoundTime float&amp;nbsp; &amp;mdash;    
+float&amp;nbsp; GetMaxRoundTime()     
+void&amp;nbsp; SetMaxRoundTime(float newMaxRoundTime)        Parameter Type Description     newMaxRoundTime float&amp;nbsp; &amp;mdash;    
+unsigned long&amp;nbsp; GetbNoEditor()</description>
+    </item>
+    
+    <item>
+      <title>TutorialWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TutorialWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TutorialWrapper/</guid>
+      <description>View Implementation    void&amp;nbsp; Redo()     
+Vector GetCarSpawnLocation()     
+void&amp;nbsp; SetCarSpawnLocation(Vector v)        Parameter Type Description     v Vector &amp;mdash;    
+Rotator GetCarSpawnRotation()     
+void&amp;nbsp; SetCarSpawnRotation(Rotator v)        Parameter Type Description     v Rotator &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>UniqueIDWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/UniqueIDWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/UniqueIDWrapper/</guid>
+      <description>View Implementation    UniqueIDWrapper(const UniqueIDWrapper &amp;amp;other)        Parameter Type Description     other UniqueIDWrapper &amp;mdash;    
+UniqueIDWrapper operator=(UniqueIDWrapper rhs)        Parameter Type Description     rhs UniqueIDWrapper &amp;mdash;    
+~UniqueIDWrapper()     
+OnlinePlatform GetPlatform() const     
+std::string&amp;nbsp; GetEpicAccountID() const</description>
+    </item>
+    
+    <item>
+      <title>UNLOCKMETHOD</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/UNLOCKMETHOD/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/UNLOCKMETHOD/</guid>
+      <description>  View Implementation   Ways an item can be earned
+   Default = 0
+  Drop = 1
+  Special = 2
+  Reward = 3
+  DLC = 4
+  Never = 5
+  MAX_ = 6
+  </description>
+    </item>
+    
+    <item>
+      <title>UnrealColor</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/UnrealColor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/UnrealColor/</guid>
+      <description>View Implementation   RGBA stored in 0-255 values for each. A is alpha or opacity. 255 Alpha is max opacity
+ unsigned char&amp;nbsp; B     Default value: none
+
+unsigned char&amp;nbsp; G     Default value: none
+
+unsigned char&amp;nbsp; R     Default value: none
+
+unsigned char&amp;nbsp; A     Default value: none</description>
+    </item>
+    
+    <item>
+      <title>UnrealStringWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Engine/UnrealStringWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Engine/UnrealStringWrapper/</guid>
+      <description>View Implementation    std::string&amp;nbsp; ToString()     
+std::wstring&amp;nbsp; ToWideString()     
+bool&amp;nbsp; IsNull()     
+operator bool()</description>
+    </item>
+    
+    <item>
+      <title>Vector</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/Vector/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/Vector/</guid>
+      <description>View Implementation   A 3D vector. This can define a location, direction or a velocity. This github page describes what 3D space is in Rocket League&amp;nbsp;
+ float&amp;nbsp; X     Default value: none
+
+float&amp;nbsp; Y     Default value: none
+
+float&amp;nbsp; Z     Default value: none</description>
+    </item>
+    
+    <item>
+      <title>Vector2</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/Vector2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/Vector2/</guid>
+      <description>View Implementation   A 2D vector. This is two ints, and can often be used to describe a location on the screen. (0, 0) is the top left corner. +x is to the right, and +y is down
+ int&amp;nbsp; X     Default value: none
+
+int&amp;nbsp; Y     Default value: none</description>
+    </item>
+    
+    <item>
+      <title>Vector2F</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/Vector2F/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/Vector2F/</guid>
+      <description>View Implementation   A 2D vector, but x and y are floats
+ float&amp;nbsp; X     Default value: none
+
+float&amp;nbsp; Y     Default value: none</description>
+    </item>
+    
+    <item>
+      <title>VehiclePickupWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/VehiclePickupWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/VehiclePickupWrapper/</guid>
+      <description>View Implementation    float&amp;nbsp; GetRespawnDelay()     
+void&amp;nbsp; SetRespawnDelay(float newRespawnDelay)        Parameter Type Description     newRespawnDelay float&amp;nbsp; &amp;mdash;    
+FXActorWrapper GetFXActorArchetype()     
+void&amp;nbsp; SetFXActorArchetype(FXActorWrapper newFXActorArchetype)        Parameter Type Description     newFXActorArchetype FXActorWrapper &amp;mdash;    
+FXActorWrapper GetFXActor()</description>
+    </item>
+    
+    <item>
+      <title>VehicleSimWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/VehicleSimWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/VehicleSimWrapper/</guid>
+      <description>View Implementation    _NODISCARD bool IsNull() const     
+operator bool() const     
+ArrayWrapper GetWheels()     
+float&amp;nbsp; GetDriveTorque()     
+void&amp;nbsp; SetDriveTorque(float newDriveTorque)        Parameter Type Description     newDriveTorque float&amp;nbsp; &amp;mdash;    
+float&amp;nbsp; GetBrakeTorque()     
+void&amp;nbsp; SetBrakeTorque(float newBrakeTorque)        Parameter Type Description     newBrakeTorque float&amp;nbsp; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>VehicleWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/VehicleWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/VehicleWrapper/</guid>
+      <description>View Implementation    unsigned long&amp;nbsp; GetbCanJump()     
+void&amp;nbsp; SetbCanJump(unsigned long newbCanJump)        Parameter Type Description     newbCanJump unsigned long&amp;nbsp; &amp;mdash;    
+VehicleSimWrapper GetVehicleSim()     
+void&amp;nbsp; SetVehicleSim(VehicleSimWrapper newVehicleSim)        Parameter Type Description     newVehicleSim VehicleSimWrapper &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>VelcroPickup</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/VelcroPickup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/VelcroPickup/</guid>
+      <description>View Implementation    Vector GetBallOffset()     
+void&amp;nbsp; SetBallOffset(Vector newBallOffset)        Parameter Type Description     newBallOffset Vector &amp;mdash;    
+unsigned long&amp;nbsp; GetbUseRealOffset()     
+void&amp;nbsp; SetbUseRealOffset(unsigned long newbUseRealOffset)        Parameter Type Description     newbUseRealOffset unsigned long&amp;nbsp; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>VideoSettings</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/VideoSettings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/VideoSettings/</guid>
+      <description>View Implementation   The video settings. Get from SettingsWrapper.GetVideoSettings()
+ bool&amp;nbsp; bVsync     Default value: none
+
+bool&amp;nbsp; bShowWeatherFX     Default value: none
+
+bool&amp;nbsp; bShowLightShafts     Default value: none
+
+bool&amp;nbsp; bTranslucentArenaShaders     Default value: none
+
+bool&amp;nbsp; bShowLensFlares     Default value: none
+
+bool&amp;nbsp; bEnableHDRSideBySideVisualizer     Default value: none</description>
+    </item>
+    
+    <item>
+      <title>ViewTarget</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/ViewTarget/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/ViewTarget/</guid>
+      <description>View Implementation   Target of a camera. Target can be wrapped in an ActorWrapper wrappedTarget(((uintptr_t) struct-&amp;amp;gt;Target)) Similarly controller is safe to cast to PlayerControllerWrapper and PRI can be cast to PriWrapper
+ void *&amp;nbsp; Target     Default value: none
+
+void *&amp;nbsp; Controller     Default value: none
+
+POV POV     Default value: none
+
+float&amp;nbsp; AspectRatio     Default value: none</description>
+    </item>
+    
+    <item>
+      <title>WheelContactData</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/WheelContactData/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/WheelContactData/</guid>
+      <description>View Implementation   Info on a single wheel&#39;s contact with stuff. Get with WheelWrapper.GetContact()&amp;nbsp;
+ unsigned long&amp;nbsp; bHasContact     Default value: none
+
+unsigned long&amp;nbsp; bHasContactWithWorldGeometry     Default value: none
+
+float&amp;nbsp; HasContactChangeTime     Default value: none
+
+void *&amp;nbsp; Actor     Default value: none
+
+void *&amp;nbsp; Component     Default value: none</description>
+    </item>
+    
+    <item>
+      <title>WheelWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/WheelWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/WheelWrapper/</guid>
+      <description>View Implementation    _NODISCARD bool IsNull() const     
+operator bool() const     
+float&amp;nbsp; GetSteerFactor()     
+void&amp;nbsp; SetSteerFactor(float newSteerFactor)        Parameter Type Description     newSteerFactor float&amp;nbsp; &amp;mdash;    
+float&amp;nbsp; GetWheelRadius()     
+void&amp;nbsp; SetWheelRadius(float newWheelRadius)        Parameter Type Description     newWheelRadius float&amp;nbsp; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>WorldContactData</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/WorldContactData/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/WorldContactData/</guid>
+      <description>View Implementation   Info on an actors contact with the world. Get with RBActor.GetWorldContact()
+ unsigned long&amp;nbsp; bHasContact     Default value: none
+
+Vector Location     Default value: none
+
+Vector Velocity     Default value: none
+
+Vector Normal     Default value: none</description>
+    </item>
+    
+    <item>
+      <title>WorldInfoWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Engine/WorldInfoWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Engine/WorldInfoWrapper/</guid>
+      <description>View Implementation    float&amp;nbsp; GetTimeDilation()     
+float&amp;nbsp; GetDemoPlayTimeDilation()     
+float&amp;nbsp; GetTimeSeconds()     
+float&amp;nbsp; GetRealTimeSeconds()     
+float&amp;nbsp; GetRealDeltaSeconds()     
+float&amp;nbsp; GetAudioTimeSeconds()     
+float&amp;nbsp; GetDeltaSeconds()     
+float&amp;nbsp; GetPauseDelay()     
+float&amp;nbsp; GetRealTimeToUnPause()</description>
     </item>
     
     <item>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BakkesMod Programming Wiki</title>
+    <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/Items/Attributes/</link>
+    <description>Recent content on BakkesMod Programming Wiki</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/Items/Attributes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SpecialEdition</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/Items/Attributes/SpecialEdition/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/Items/Attributes/SpecialEdition/</guid>
+      <description>View Implementation   Info on an item&#39;s special edition. Not sure where to obtain
+ int&amp;nbsp; productId     Default value: none
+
+int&amp;nbsp; editionId     Default value: none
+
+std::string&amp;nbsp; label     Default value: none</description>
+    </item>
+    
+  </channel>
+</rss>

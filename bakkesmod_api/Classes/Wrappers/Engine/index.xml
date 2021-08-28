@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BakkesMod Programming Wiki</title>
+    <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Engine/</link>
+    <description>Recent content on BakkesMod Programming Wiki</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Engine/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ActorWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Engine/ActorWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Engine/ActorWrapper/</guid>
+      <description>View Implementation    Vector GetLocation()     
+void&amp;nbsp; SetLocation(const Vector location)        Parameter Type Description     location Vector &amp;mdash;    
+Vector GetVelocity()     
+void&amp;nbsp; SetVelocity(const Vector velocity)        Parameter Type Description     velocity Vector &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>EngineTAWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Engine/EngineTAWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Engine/EngineTAWrapper/</guid>
+      <description>View Implementation    _NODISCARD bool IsNull() const     
+operator bool() const     
+unsigned long&amp;nbsp; GetbEnableClientPrediction()     
+void&amp;nbsp; SetbEnableClientPrediction(unsigned long newbEnableClientPrediction)        Parameter Type Description     newbEnableClientPrediction unsigned long&amp;nbsp; &amp;mdash;    
+unsigned long&amp;nbsp; GetbClientPhysicsUpdate()     
+void&amp;nbsp; SetbClientPhysicsUpdate(unsigned long newbClientPhysicsUpdate)        Parameter Type Description     newbClientPhysicsUpdate unsigned long&amp;nbsp; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>ObjectWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Engine/ObjectWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Engine/ObjectWrapper/</guid>
+      <description>View Implementation    std::uintptr_t memory_address</description>
+    </item>
+    
+    <item>
+      <title>UnrealStringWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Engine/UnrealStringWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Engine/UnrealStringWrapper/</guid>
+      <description>View Implementation    std::string&amp;nbsp; ToString()     
+std::wstring&amp;nbsp; ToWideString()     
+bool&amp;nbsp; IsNull()     
+operator bool()</description>
+    </item>
+    
+    <item>
+      <title>WorldInfoWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Engine/WorldInfoWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Engine/WorldInfoWrapper/</guid>
+      <description>View Implementation    float&amp;nbsp; GetTimeDilation()     
+float&amp;nbsp; GetDemoPlayTimeDilation()     
+float&amp;nbsp; GetTimeSeconds()     
+float&amp;nbsp; GetRealTimeSeconds()     
+float&amp;nbsp; GetRealDeltaSeconds()     
+float&amp;nbsp; GetAudioTimeSeconds()     
+float&amp;nbsp; GetDeltaSeconds()     
+float&amp;nbsp; GetPauseDelay()     
+float&amp;nbsp; GetRealTimeToUnPause()</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BakkesMod Programming Wiki</title>
+    <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/Stats/</link>
+    <description>Recent content on BakkesMod Programming Wiki</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/Stats/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>StatEventWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/Stats/StatEventWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/Stats/StatEventWrapper/</guid>
+      <description>View Implementation    _NODISCARD bool IsNull() const     
+operator bool() const     
+int&amp;nbsp; GetPoints()     
+float&amp;nbsp; GetCooldownSeconds()     
+unsigned long&amp;nbsp; GetbAddToScore()     
+unsigned long&amp;nbsp; GetbIsLeaderboardStat()     
+unsigned long&amp;nbsp; GetbNotifyTicker()     
+unsigned long&amp;nbsp; GetbShowOnHUD()</description>
+    </item>
+    
+  </channel>
+</rss>

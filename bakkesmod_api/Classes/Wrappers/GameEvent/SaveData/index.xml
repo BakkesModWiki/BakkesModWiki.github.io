@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BakkesMod Programming Wiki</title>
+    <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/SaveData/</link>
+    <description>Recent content on BakkesMod Programming Wiki</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/SaveData/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GameEditorSaveDataWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/SaveData/GameEditorSaveDataWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/SaveData/GameEditorSaveDataWrapper/</guid>
+      <description>View Implementation    UnrealStringWrapper GetLoadedSaveName()     
+TrainingEditorSaveDataWrapper GetTrainingData()     
+void&amp;nbsp; SetTrainingData(TrainingEditorSaveDataWrapper newTrainingData)        Parameter Type Description     newTrainingData TrainingEditorSaveDataWrapper &amp;mdash;    
+int&amp;nbsp; GetPlayerTeamNumber()     
+void&amp;nbsp; SetPlayerTeamNumber(int newPlayerTeamNumber)        Parameter Type Description     newPlayerTeamNumber int&amp;nbsp; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>SaveDataWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/SaveData/SaveDataWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/SaveData/SaveDataWrapper/</guid>
+      <description>View Implementation    _NODISCARD bool IsNull() const     
+operator bool() const     
+UnrealStringWrapper GetDirectoryPath()     
+UnrealStringWrapper GetSaveType()     
+UnrealStringWrapper GetSaveExt()     
+unsigned long&amp;nbsp; GetbExactFileMatch()     
+void&amp;nbsp; SetbExactFileMatch(unsigned long newbExactFileMatch)        Parameter Type Description     newbExactFileMatch unsigned long&amp;nbsp; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>TrainingEditorSaveDataWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/SaveData/TrainingEditorSaveDataWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/SaveData/TrainingEditorSaveDataWrapper/</guid>
+      <description>View Implementation    _NODISCARD bool IsNull() const     
+operator bool() const     
+UnrealStringWrapper GetCode()     
+UnrealStringWrapper GetTM_Name()     
+unsigned char&amp;nbsp; GetType()     
+void&amp;nbsp; SetType(unsigned char newType)        Parameter Type Description     newType unsigned char&amp;nbsp; &amp;mdash;</description>
+    </item>
+    
+  </channel>
+</rss>

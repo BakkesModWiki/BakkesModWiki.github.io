@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BakkesMod Programming Wiki</title>
+    <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Modals/</link>
+    <description>Recent content on BakkesMod Programming Wiki</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Modals/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ModalWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Modals/ModalWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Modals/ModalWrapper/</guid>
+      <description>View Implementation    void&amp;nbsp; ShowModal() const     
+void&amp;nbsp; CloseModal()     
+void&amp;nbsp; SetColor(float r, float g, float b)        Parameter Type Description     r float&amp;nbsp; &amp;mdash;   g float&amp;nbsp; &amp;mdash;   b float&amp;nbsp; &amp;mdash;    
+void&amp;nbsp; SetIcon(const std::string &amp;amp;iconName)        Parameter Type Description     iconName const std::string &amp;amp; &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>TextInputModalWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Modals/TextInputModalWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Modals/TextInputModalWrapper/</guid>
+      <description>View Implementation    void&amp;nbsp; SetTextInput(const std::string &amp;amp;defaultText, int32_t max_text_length, bool password, std::function&amp;lt; void(std::string, bool)&amp;gt; input_callback)        Parameter Type Description     defaultText const std::string &amp;amp; &amp;mdash;   max_text_length int32_t &amp;mdash;   password bool&amp;nbsp; &amp;mdash;   input_callback std::function&amp;lt; void(std::string, bool)&amp;gt; &amp;mdash;</description>
+    </item>
+    
+  </channel>
+</rss>
