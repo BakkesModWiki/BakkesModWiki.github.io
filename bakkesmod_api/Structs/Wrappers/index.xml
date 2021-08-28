@@ -115,7 +115,7 @@ float&amp;nbsp; AirControlSensitivity     Default value: none</description>
   HexValuesInBraces = 4
   UniqueObjectGuid = 5
   
-int32_t A     Default value: none</description>
+int32_t&amp;nbsp; A     Default value: none</description>
     </item>
     
     <item>
@@ -252,9 +252,9 @@ float&amp;nbsp; High     Default value: none</description>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/ReplayScoreData/</guid>
       <description>View Implementation   Stats shown in a replay. Get with ReplayDirectorWrapper.GetReplayScoreData()
- uintptr_t ScoredBy     Default value: none
+ uintptr_t&amp;nbsp; ScoredBy     Default value: none
 
-uintptr_t AssistedBy     Default value: none
+uintptr_t&amp;nbsp; AssistedBy     Default value: none
 
 float&amp;nbsp; Speed     Default value: none
 

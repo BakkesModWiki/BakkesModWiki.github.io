@@ -847,7 +847,7 @@ Vector GetOffset()</description>
   HexValuesInBraces = 4
   UniqueObjectGuid = 5
   
-int32_t A     Default value: none</description>
+int32_t&amp;nbsp; A     Default value: none</description>
     </item>
     
     <item>
@@ -1651,9 +1651,9 @@ float&amp;nbsp; GetSlomoDefendTime()</description>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/ReplayScoreData/</guid>
       <description>View Implementation   Stats shown in a replay. Get with ReplayDirectorWrapper.GetReplayScoreData()
- uintptr_t ScoredBy     Default value: none
+ uintptr_t&amp;nbsp; ScoredBy     Default value: none
 
-uintptr_t AssistedBy     Default value: none
+uintptr_t&amp;nbsp; AssistedBy     Default value: none
 
 float&amp;nbsp; Speed     Default value: none
 
@@ -2093,7 +2093,7 @@ void&amp;nbsp; SetColorBlindFontColor(LinearColor newColorBlindFontColor)      
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Modals/TextInputModalWrapper/</guid>
-      <description>View Implementation    void&amp;nbsp; SetTextInput(const std::string &amp;amp;defaultText, int32_t max_text_length, bool password, std::function&amp;lt; void(std::string, bool)&amp;gt; input_callback)        Parameter Type Description     defaultText const std::string &amp;amp; &amp;mdash;   max_text_length int32_t &amp;mdash;   password bool&amp;nbsp; &amp;mdash;   input_callback std::function&amp;lt; void(std::string, bool)&amp;gt; &amp;mdash;</description>
+      <description>View Implementation    void&amp;nbsp; SetTextInput(const std::string &amp;amp;defaultText, int32_t max_text_length, bool password, std::function&amp;lt; void(std::string, bool)&amp;gt; input_callback)        Parameter Type Description     defaultText const std::string &amp;amp; &amp;mdash;   max_text_length int32_t&amp;nbsp; &amp;mdash;   password bool&amp;nbsp; &amp;mdash;   input_callback std::function&amp;lt; void(std::string, bool)&amp;gt; &amp;mdash;</description>
     </item>
     
     <item>

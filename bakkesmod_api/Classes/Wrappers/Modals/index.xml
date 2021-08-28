@@ -23,7 +23,7 @@ void&amp;nbsp; SetIcon(const std::string &amp;amp;iconName)        Parameter Ty
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Modals/TextInputModalWrapper/</guid>
-      <description>View Implementation    void&amp;nbsp; SetTextInput(const std::string &amp;amp;defaultText, int32_t max_text_length, bool password, std::function&amp;lt; void(std::string, bool)&amp;gt; input_callback)        Parameter Type Description     defaultText const std::string &amp;amp; &amp;mdash;   max_text_length int32_t &amp;mdash;   password bool&amp;nbsp; &amp;mdash;   input_callback std::function&amp;lt; void(std::string, bool)&amp;gt; &amp;mdash;</description>
+      <description>View Implementation    void&amp;nbsp; SetTextInput(const std::string &amp;amp;defaultText, int32_t max_text_length, bool password, std::function&amp;lt; void(std::string, bool)&amp;gt; input_callback)        Parameter Type Description     defaultText const std::string &amp;amp; &amp;mdash;   max_text_length int32_t&amp;nbsp; &amp;mdash;   password bool&amp;nbsp; &amp;mdash;   input_callback std::function&amp;lt; void(std::string, bool)&amp;gt; &amp;mdash;</description>
     </item>
     
   </channel>
