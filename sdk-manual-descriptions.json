@@ -1,10 +1,5 @@
 {
     "Classes": {
-        "AIControllerWrapper": {
-            "Fields": {
-                "DoNothing": "Does Nothing"
-            }
-        },
         "CanvasWrapper": {
             "Fields": {
                 "SetPosition": {

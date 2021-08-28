@@ -284,10 +284,6 @@ async function main() {
                                 } else {
                                     console.warn("Enum has no name!", member);
                                 }
-                                _.each(foundObj.enumvalue, ev => {
-                                    enumObj.Values[ev.name[0]] = ev.initializer[0]
-                                });
-                                foundDefs.Enums[foundObj.name[0]] = enumObj;
                             }
                         } else if (member.$.kind === "define") {
                             let memberXml = await getXmlFromString(fs.readFileSync(`_doxygen/xml/${item.$.refid}.xml`));
