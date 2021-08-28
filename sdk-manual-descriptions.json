@@ -39,6 +39,8 @@
         "UNLOCKMETHOD": "Ways an item can be earned"
     },
     "Structs": {
+        "CameraSave": "Two of the saved camera settings. Get from [SettingsWrapper.GetCameraSaveSettings()](/bakkesmod_api/Classes/Wrappers/SettingsWrapper/#camerasavebakkesmod_apistructswrapperscamerasavenbspgetcamerasavesettings)",
+        "ClubColorSet": "IDs of colors used by a team in a club match. TODO: Figure out and note what the mapping from ID to color is. Get from [CustomMatchTeamSettings.Colors](/bakkesmod_api/Structs/Wrappers/CustomMatchTeamSettings/#clubcolorsetbakkesmod_apistructswrappersclubcolorsetnbspcolors)",
         "ControllerInput": "A controller's input at a single frame. Easy access with [CarWrapper.GetInput()](/bakkesmod_api/Classes/Wrappers/GameObject/CarWrapper/#controllerinputbakkesmod_apistructswrapperscontrollerinputnbspgetinput)",
         "CustomMatchSettings": "Use to create a private match with [MatchmakingWrapper.CreatePrivateMatch()](/bakkesmod_api/Classes/Wrappers/MatchmakingWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspcreateprivatematchregion-region-const-custommatchsettings-ampmatch_settings)",
         "CustomMatchTeamSettings": "A single team's setting. Get from a [CustomMatchSettings](/bakkesmod_api/Structs/Wrappers/CustomMatchSettings/)",
@@ -63,6 +65,7 @@
         "Vector2F": "A 2D vector, but x and y are floats",
         "VideoSettings": "The video settings. Get from [SettingsWrapper.GetVideoSettings()](/bakkesmod_api/Classes/Wrappers/SettingsWrapper/#videosettingsbakkesmod_apistructswrappersvideosettingsnbspgetvideosettings)",
         "ViewTarget": "Target of a camera. Target can be wrapped in an `ActorWrapper wrappedTarget(((uintptr_t) struct->Target))`\n Similarly controller is safe to cast to [PlayerControllerWrapper](/bakkesmod_api/Classes/Wrappers/PlayerControllerWrapper/) and PRI can be cast to [PriWrapper](/bakkesmod_api/Classes/Wrappers/GameObject/PriWrapper/)",
-        "WheelContactData": "Info on a single wheel's contact with stuff. Get with [WheelWrapper.GetContact()](http://localhost:1313/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/WheelWrapper/#wheelcontactdatabakkesmod_apistructswrapperswheelcontactdatanbspgetcontact)"
+        "WheelContactData": "Info on a single wheel's contact with stuff. Get with [WheelWrapper.GetContact()](http://localhost:1313/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/WheelWrapper/#wheelcontactdatabakkesmod_apistructswrapperswheelcontactdatanbspgetcontact)",
+        "WorldContactData": "Info on an actors contact with the world. Get with [RBActor.GetWorldContact()](/bakkesmod_api/Classes/Wrappers/GameObject/RBActorWrapper/#worldcontactdatabakkesmod_apistructswrappersworldcontactdatanbspgetworldcontact)"
     }
 }
