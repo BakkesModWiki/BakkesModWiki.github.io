@@ -18,11 +18,15 @@ Also choose if it's visible and publically listed. If not visible, nobody but yo
 Next upload a .png banner for the plugin. It should be below 50 MB? and wider than it is tall. 16 x 9 is a reasonable ratio.
 
 Finally is the plugin .zip. Make a .zip file including all of your source files and nothing else.
-You should include the .sln, the .vcxproj, any .cpp, .h, or .hpp files, and any other data files like .set or images to be included.
+You should include the .sln, the .vcxproj, any .cpp, .h, or .hpp files, and any other additional data files like .set or images to be included.
 
-IMAGE HERE OF TEMPLATE WITH SLN IN FOLDER
+If you have the .sln outside the solution folder, include the green checked files
 
-IMAGE HERE OF TEMPLATE WITH SLN OUTSIDE FOLDER
+![addnewplugin](/img/slnoutfolder.png)
+
+If you have the .sln inside the solution folder, include the green checked files
+
+![addnewplugin](/img/slninfolder.png)
 
 Once you have everything just hit submit! All plugins are manually reviewed and built by volunteer moderators. It may take a couple days to a couple weeks depending on moderator availability. Please be respectful of the time it may take. Please use the [plugin template](https://github.com/Martinii89/BakkesmodPluginTemplate) to make building to .dll smooth and easy for the moderators. 
 
