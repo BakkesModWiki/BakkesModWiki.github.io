@@ -1,4 +1,4 @@
-baseURL = "https://bakkesmod-programming-wiki.netlify.app"
+baseURL = "https://bakkesmodwiki.github.io/"
 title = "BakkesMod Programming Wiki"
 theme = "hugo-geekdoc"
 

@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ubelhj/BakkesModWiki.git"
+    "url": "git+https://github.com/BakkesModWiki/BakkesModWiki.github.io.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ubelhj/BakkesModWiki/issues"
+    "url": "https://github.com/BakkesModWiki/BakkesModWiki.github.io/issues"
   },
-  "homepage": "https://github.com/ubelhj/BakkesModWiki#readme",
+  "homepage": "https://github.com/BakkesModWiki/BakkesModWiki.github.io#readme",
   "dependencies": {
     "glob": "^7.1.7",
     "lodash": "^4.17.21",
