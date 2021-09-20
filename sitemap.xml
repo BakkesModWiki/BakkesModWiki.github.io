@@ -2,6 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://bakkesmodwiki.github.io/code_snippets/code_snippet_example/</loc>
+  </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/</loc>
@@ -440,9 +442,9 @@
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/</loc>
   </url><url>
-    <loc>https://bakkesmodwiki.github.io/categories/</loc>
+    <loc>https://bakkesmodwiki.github.io/code_snippets/canvas/</loc>
   </url><url>
-    <loc>https://bakkesmodwiki.github.io/code_snippets/code_snippet_example/</loc>
+    <loc>https://bakkesmodwiki.github.io/categories/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/useful_info/crash_dumps/</loc>
   </url><url>

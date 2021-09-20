@@ -13,7 +13,7 @@
       <guid>https://bakkesmodwiki.github.io/code_snippets/code_snippet_example/</guid>
       <description>If you want to add a new snippet to the page, simply make a code snippet in this folder like this
 Give your snippet a unique name and send the pull request!
-The filename will be the name of the page, with _ replaced with spaces and automatic proper capitalization
+Make sure to fill out the fields in the top, but do not include a weight
 Everything is written in Markdown
 Make code blocks using Markdown
 ```cpp
@@ -21,6 +21,20 @@ Make code blocks using Markdown
 ```
 becomes
 // code here </description>
+    </item>
+    
+    <item>
+      <title>Canvas</title>
+      <link>https://bakkesmodwiki.github.io/code_snippets/canvas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/code_snippets/canvas/</guid>
+      <description>The CanvasWrapper is a powerful tool that allows you to draw GUI elements on the screen
+For example this is used by the Hitbox Plugin&amp;nbsp; by mega and HalfwayDead/Rocket Science
+You can also do more basic things, like text in my stat counter plugin OBSCounter&amp;nbsp;
+First in your .h, define a function that will take a canvas.
+void Render(CanvasWrapper canvas);
+Then you need to register the function in your .cpp code.</description>
     </item>
     
     <item>
