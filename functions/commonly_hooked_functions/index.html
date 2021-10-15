@@ -11127,8 +11127,11 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <p><code>&quot;Function Engine.GameViewportClient.Tick&quot;</code> This event is called every rendered frame. This is very powerful, but again can have issues. Different framerates and stutters can make the number of ticks different on different PCs</p>
 <p><code>&quot;Function TAGame.Ball_TA.OnCarTouch&quot;</code> This event is called when a <a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameObject/CarWrapper/">BallWrapper</a> hits a car. The caller is the ball that hit, and the first parameter is the <a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameObject/CarWrapper/">CarWrapper</a> touched</p>
 <p><code>&quot;Function TAGame.Car_TA.OnHitBall&quot;</code> This event is called when a car hits a ball. The caller is the <a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameObject/CarWrapper/">CarWrapper</a> that hit, and the first parameter is the <a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameObject/CarWrapper/">BallWrapper</a> touched</p>
-<p><code>&quot;Function TAGame.GameEvent_Soccar_TA.EventMatchEnded&quot;</code> Happens at the end of a match when the podium is shown. If someone quits early it is not called</p>
+<p><code>&quot;Function TAGame.GameEvent_Soccar_TA.EventMatchEnded&quot;</code> Happens at the end of a match when the podium is shown. If someone quits early it is not called. The caller is a <a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameEvent/ServerWrapper/">ServerWrapper</a>.</p>
+<p><code>&quot;Function TAGame.GameEvent_Soccar_TA.Destroyed&quot;</code> Happens when the user quits an active game. The caller is a <a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameEvent/ServerWrapper/">ServerWrapper</a>.</p>
 <p><code>&quot;Function TAGame.GFxData_MainMenu_TA.MainMenuAdded&quot;</code> Happens when the main menu is opened, either through booting the game or leaving a mode</p>
+<p><code>&quot;Function GameEvent_TA.Countdown.BeginState&quot;</code> Happens when a match countdown begins or at the beginning/reset of freeplay</p>
+<p><code>&quot;Function TAGame.Ball_TA.OnHitGoal&quot;</code> Happens when a goal is scored</p>
 
         
     </article>
