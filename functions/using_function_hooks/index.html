@@ -11149,8 +11149,22 @@ They return a <code>std::string</code> which is the name of the calling function
 </span><span class="c1"></span><span class="p">});</span>
 </code></pre></div><p>The two WithCaller variants do the same thing, but let you know a bit more about what is using the function</p>
 <p>They provide a <code>caller</code> value which is obtained from the function&rsquo;s name. After <code>Function TAGame</code> there will be a class name ending in <code>_TA</code>. If the name matches a wrapper name, you can hook it as that wrapper. <code>Car_TA</code> becomes <a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameObject/CarWrapper/">CarWrapper</a> for example
-They also provide a <code>void *</code> pointer. This points at the location of any parameters provided to the function. These aren&rsquo;t well documented, and are hard to guess, so feel free to ask about them if you think you need them</p>
-<p>Find functions with the <a class="gdoc-markdown__link"  href="/functions/function_scanner/">function scanner</a></p>
+They also provide a <code>void *</code> pointer. This points at the location of any parameters provided to the function. These aren&rsquo;t well documented, and are hard to guess, so feel free to ask about them if you think you need them.</p>
+<p>For example <code>Function TAGame.Car_TA.OnHitBall</code> has a <a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameObject/BallWrapper/">BallWrapper</a> parameter. To access it, cast the <code>void *</code> pointer to a struct including the parameters</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">struct</span> <span class="nc">CarHitBallParams</span> <span class="p">{</span>
+  <span class="c1">// This is a pointer to the ball&#39;s address 
+</span><span class="c1"></span>  <span class="c1">//  but needs to be constructed into a BallWrapper before use
+</span><span class="c1"></span>  <span class="n">uintptr_t</span> <span class="n">ball</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">HookEventWithCallerPost</span><span class="o">&lt;</span><span class="n">CarWrapper</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&#34;Function TAGame.Car_TA.OnHitBall&#34;</span><span class="p">,</span>
+  <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="n">CarWrapper</span> <span class="n">caller</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="n">params</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">eventname</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// This cast is only safe if you&#39;re 100% sure the params are correct
+</span><span class="c1"></span>    <span class="n">CarHitBallParams</span><span class="o">*</span> <span class="n">params</span> <span class="o">=</span> <span class="p">(</span><span class="n">CarHitBallParams</span><span class="o">*</span><span class="p">)</span> <span class="n">params</span><span class="p">;</span> 
+    <span class="n">BallWrapper</span> <span class="n">ballHit</span> <span class="o">=</span> <span class="n">BallWrapper</span><span class="p">(</span><span class="n">params</span><span class="o">-&gt;</span><span class="n">ball</span><span class="p">);</span>
+    <span class="c1">// Now you know what ball was hit!
+</span><span class="c1"></span><span class="p">});</span>
+</code></pre></div><p>Find functions with the <a class="gdoc-markdown__link"  href="/functions/function_scanner/">function scanner</a></p>
 
         
         <hr>

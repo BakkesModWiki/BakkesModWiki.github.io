@@ -11,11 +11,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/SaveData/GameEditorSaveDataWrapper/</guid>
-      <description>View Implementation    UnrealStringWrapper GetLoadedSaveName()     
-TrainingEditorSaveDataWrapper GetTrainingData()     
-void&amp;nbsp; SetTrainingData(TrainingEditorSaveDataWrapper newTrainingData)        Parameter Type Description     newTrainingData TrainingEditorSaveDataWrapper &amp;mdash;    
-int&amp;nbsp; GetPlayerTeamNumber()     
-void&amp;nbsp; SetPlayerTeamNumber(int newPlayerTeamNumber)        Parameter Type Description     newPlayerTeamNumber int&amp;nbsp; &amp;mdash;</description>
+      <description>  View Implementation    UnrealStringWrapper GetLoadedSaveName()     TrainingEditorSaveDataWrapper GetTrainingData()     void&amp;nbsp; SetTrainingData(TrainingEditorSaveDataWrapper newTrainingData)        Parameter Type Description     newTrainingData TrainingEditorSaveDataWrapper &amp;mdash;    int&amp;nbsp; GetPlayerTeamNumber()     void&amp;nbsp; SetPlayerTeamNumber(int newPlayerTeamNumber)        Parameter Type Description     newPlayerTeamNumber int&amp;nbsp; &amp;mdash;    unsigned long&amp;nbsp; GetbUnowned()     void&amp;nbsp; SetbUnowned(unsigned long newbUnowned)        Parameter Type Description     newbUnowned unsigned long&amp;nbsp; &amp;mdash;    int&amp;nbsp; GetShotsCompleted()     void&amp;nbsp; SetShotsCompleted(int newShotsCompleted)        Parameter Type Description     newShotsCompleted int&amp;nbsp; &amp;mdash;    UnrealStringWrapper GetFavoritesFolderPath()     UnrealStringWrapper GetMyTrainingFolderPath()     UnrealStringWrapper GetDownloadedFolderPath()     unsigned char&amp;nbsp; GetTrainingSaveType(unsigned long bOwned, unsigned long bFavorited)        Parameter Type Description     bOwned unsigned long&amp;nbsp; &amp;mdash;   bFavorited unsigned long&amp;nbsp; &amp;mdash;    void&amp;nbsp; Init()     </description>
     </item>
     
     <item>
@@ -24,13 +20,7 @@ void&amp;nbsp; SetPlayerTeamNumber(int newPlayerTeamNumber)        Parameter Ty
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/SaveData/SaveDataWrapper/</guid>
-      <description>View Implementation    _NODISCARD bool IsNull() const     
-operator bool() const     
-UnrealStringWrapper GetDirectoryPath()     
-UnrealStringWrapper GetSaveType()     
-UnrealStringWrapper GetSaveExt()     
-unsigned long&amp;nbsp; GetbExactFileMatch()     
-void&amp;nbsp; SetbExactFileMatch(unsigned long newbExactFileMatch)        Parameter Type Description     newbExactFileMatch unsigned long&amp;nbsp; &amp;mdash;</description>
+      <description>  View Implementation    _NODISCARD bool IsNull() const     operator bool() const     UnrealStringWrapper GetDirectoryPath()     UnrealStringWrapper GetSaveType()     UnrealStringWrapper GetSaveExt()     unsigned long&amp;nbsp; GetbExactFileMatch()     void&amp;nbsp; SetbExactFileMatch(unsigned long newbExactFileMatch)        Parameter Type Description     newbExactFileMatch unsigned long&amp;nbsp; &amp;mdash;    void&amp;nbsp; Init()     </description>
     </item>
     
     <item>
@@ -39,12 +29,7 @@ void&amp;nbsp; SetbExactFileMatch(unsigned long newbExactFileMatch)        Para
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/SaveData/TrainingEditorSaveDataWrapper/</guid>
-      <description>View Implementation    _NODISCARD bool IsNull() const     
-operator bool() const     
-UnrealStringWrapper GetCode()     
-UnrealStringWrapper GetTM_Name()     
-unsigned char&amp;nbsp; GetType()     
-void&amp;nbsp; SetType(unsigned char newType)        Parameter Type Description     newType unsigned char&amp;nbsp; &amp;mdash;</description>
+      <description>  View Implementation    _NODISCARD bool IsNull() const     operator bool() const     UnrealStringWrapper GetCode()     UnrealStringWrapper GetTM_Name()     unsigned char&amp;nbsp; GetType()     void&amp;nbsp; SetType(unsigned char newType)        Parameter Type Description     newType unsigned char&amp;nbsp; &amp;mdash;    unsigned char&amp;nbsp; GetDifficulty()     void&amp;nbsp; SetDifficulty(unsigned char newDifficulty)        Parameter Type Description     newDifficulty unsigned char&amp;nbsp; &amp;mdash;    UnrealStringWrapper GetCreatorName()     UnrealStringWrapper GetDescription()     int&amp;nbsp; GetNumRounds()     void&amp;nbsp; SetNumRounds(int newNumRounds)        Parameter Type Description     newNumRounds int&amp;nbsp; &amp;mdash;    unsigned long long&amp;nbsp; GetCreatedAt()     void&amp;nbsp; SetCreatedAt(unsigned long long newCreatedAt)        Parameter Type Description     newCreatedAt unsigned long long&amp;nbsp; &amp;mdash;    unsigned long long&amp;nbsp; GetUpdatedAt()     void&amp;nbsp; SetUpdatedAt(unsigned long long newUpdatedAt)        Parameter Type Description     newUpdatedAt unsigned long long&amp;nbsp; &amp;mdash;    SteamID GetCreatorPlayerID()     void&amp;nbsp; SetCreatorPlayerID(SteamID newCreatorPlayerID)        Parameter Type Description     newCreatorPlayerID SteamID &amp;mdash;    void&amp;nbsp; Init()     UniqueIDWrapper GetCreatorPlayerUniqueID()     </description>
     </item>
     
   </channel>

@@ -11,8 +11,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Http/HttpWrapper/</guid>
-      <description>View Implementation    void&amp;nbsp; SendCurlRequest(CurlRequest request_data, const std::wstring &amp;amp;file_output, CurlRequestDoneFileReturn on_complete)        Parameter Type Description     request_data CurlRequest &amp;mdash;   file_output const std::wstring &amp;amp; &amp;mdash;   on_complete CurlRequestDoneFileReturn &amp;mdash;    
-void&amp;nbsp; SendCurlJsonRequest(CurlRequest request_data, CurlRequestDoneStringReturn on_complete)        Parameter Type Description     request_data CurlRequest &amp;mdash;   on_complete CurlRequestDoneStringReturn &amp;mdash;</description>
+      <description>  View Implementation    void&amp;nbsp; SendCurlRequest(CurlRequest request_data, const std::wstring &amp;amp;file_output, CurlRequestDoneFileReturn on_complete)        Parameter Type Description     request_data CurlRequest &amp;mdash;   file_output const std::wstring &amp;amp; &amp;mdash;   on_complete CurlRequestDoneFileReturn &amp;mdash;    void&amp;nbsp; SendCurlJsonRequest(CurlRequest request_data, CurlRequestDoneStringReturn on_complete)        Parameter Type Description     request_data CurlRequest &amp;mdash;   on_complete CurlRequestDoneStringReturn &amp;mdash;    </description>
     </item>
     
   </channel>

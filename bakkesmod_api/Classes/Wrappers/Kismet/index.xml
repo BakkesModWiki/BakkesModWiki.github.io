@@ -11,12 +11,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Kismet/SequenceObjectWrapper/</guid>
-      <description>View Implementation    _NODISCARD bool IsNull() const     
-operator bool() const     
-SequenceWrapper GetParentSequence()     
-UnrealStringWrapper GetObjName()     
-UnrealStringWrapper GetObjCategory()     
-UnrealStringWrapper GetObjComment()</description>
+      <description>  View Implementation    _NODISCARD bool IsNull() const     operator bool() const     SequenceWrapper GetParentSequence()     UnrealStringWrapper GetObjName()     UnrealStringWrapper GetObjCategory()     UnrealStringWrapper GetObjComment()     </description>
     </item>
     
     <item>
@@ -34,15 +29,7 @@ UnrealStringWrapper GetObjComment()</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Kismet/SequenceVariableWrapper/</guid>
-      <description>View Implementation    std::string&amp;nbsp; GetVarName()     
-bool&amp;nbsp; IsInt()     
-bool&amp;nbsp; IsFloat()     
-bool&amp;nbsp; IsString()     
-bool&amp;nbsp; IsVector()     
-bool&amp;nbsp; IsBool()     
-bool&amp;nbsp; IsObjectList()     
-bool&amp;nbsp; IsActor()     
-float&amp;nbsp; GetFloat()</description>
+      <description>  View Implementation    std::string&amp;nbsp; GetVarName()     bool&amp;nbsp; IsInt()     bool&amp;nbsp; IsFloat()     bool&amp;nbsp; IsString()     bool&amp;nbsp; IsVector()     bool&amp;nbsp; IsBool()     bool&amp;nbsp; IsObjectList()     bool&amp;nbsp; IsActor()     float&amp;nbsp; GetFloat()     int&amp;nbsp; GetInt()     std::string&amp;nbsp; GetString()     Vector GetVector()     bool&amp;nbsp; GetBool()     ArrayWrapper GetObjectList()     void&amp;nbsp; SetFloat(float value)        Parameter Type Description     value float&amp;nbsp; &amp;mdash;    void&amp;nbsp; SetInt(int value)        Parameter Type Description     value int&amp;nbsp; &amp;mdash;    void&amp;nbsp; SetString(const std::string &amp;amp;value)        Parameter Type Description     value const std::string &amp;amp; &amp;mdash;    void&amp;nbsp; SetVector(Vector value)        Parameter Type Description     value Vector &amp;mdash;    void&amp;nbsp; SetBool(bool value)        Parameter Type Description     value bool&amp;nbsp; &amp;mdash;    ActorWrapper GetActor()     </description>
     </item>
     
     <item>
@@ -51,10 +38,7 @@ float&amp;nbsp; GetFloat()</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Kismet/SequenceWrapper/</guid>
-      <description>View Implementation    ArrayWrapper GetSequenceObjects()     
-ArrayWrapper GetNestedSequences()     
-int&amp;nbsp; ActivateRemoteEvents(const std::string &amp;amp;remote_event_name) const        Parameter Type Description     remote_event_name const std::string &amp;amp; &amp;mdash;    
-SequenceVariableWrapper GetAllSequenceVariables(bool reqursive)        Parameter Type Description     reqursive bool&amp;nbsp; &amp;mdash;</description>
+      <description>  View Implementation    ArrayWrapper GetSequenceObjects()     ArrayWrapper GetNestedSequences()     int&amp;nbsp; ActivateRemoteEvents(const std::string &amp;amp;remote_event_name) const        Parameter Type Description     remote_event_name const std::string &amp;amp; &amp;mdash;    SequenceVariableWrapper GetAllSequenceVariables(bool reqursive)        Parameter Type Description     reqursive bool&amp;nbsp; &amp;mdash;    </description>
     </item>
     
   </channel>

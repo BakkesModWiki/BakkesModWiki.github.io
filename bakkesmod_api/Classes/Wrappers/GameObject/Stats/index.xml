@@ -11,14 +11,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/Stats/StatEventWrapper/</guid>
-      <description>View Implementation    _NODISCARD bool IsNull() const     
-operator bool() const     
-int&amp;nbsp; GetPoints()     
-float&amp;nbsp; GetCooldownSeconds()     
-unsigned long&amp;nbsp; GetbAddToScore()     
-unsigned long&amp;nbsp; GetbIsLeaderboardStat()     
-unsigned long&amp;nbsp; GetbNotifyTicker()     
-unsigned long&amp;nbsp; GetbShowOnHUD()</description>
+      <description>  View Implementation    _NODISCARD bool IsNull() const     operator bool() const     int&amp;nbsp; GetPoints()     float&amp;nbsp; GetCooldownSeconds()     unsigned long&amp;nbsp; GetbAddToScore()     unsigned long&amp;nbsp; GetbIsLeaderboardStat()     unsigned long&amp;nbsp; GetbNotifyTicker()     unsigned long&amp;nbsp; GetbShowOnHUD()     unsigned long&amp;nbsp; GetbPrimaryStat()     unsigned long&amp;nbsp; GetbSkipReplication()     unsigned long&amp;nbsp; GetbCanMute()     unsigned long&amp;nbsp; GetbCountMultiplied()     UnrealStringWrapper GetLabel()     UnrealStringWrapper GetPluralLabel()     UnrealStringWrapper GetDescription()     float&amp;nbsp; GetNextCooldownTime()     std::string&amp;nbsp; GetGroupName()     std::string&amp;nbsp; GetEventName()     </description>
     </item>
     
   </channel>

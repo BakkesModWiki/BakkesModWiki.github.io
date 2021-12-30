@@ -11,11 +11,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PerformanceStats/InputBufferGraphWrapper/</guid>
-      <description>View Implementation    SampleHistoryWrapper GetBuffer()     
-void&amp;nbsp; SetBuffer(SampleHistoryWrapper newBuffer)        Parameter Type Description     newBuffer SampleHistoryWrapper &amp;mdash;    
-SampleHistoryWrapper GetBufferTarget()     
-void&amp;nbsp; SetBufferTarget(SampleHistoryWrapper newBufferTarget)        Parameter Type Description     newBufferTarget SampleHistoryWrapper &amp;mdash;    
-SampleHistoryWrapper GetOverUnderFrames()</description>
+      <description>  View Implementation    SampleHistoryWrapper GetBuffer()     void&amp;nbsp; SetBuffer(SampleHistoryWrapper newBuffer)        Parameter Type Description     newBuffer SampleHistoryWrapper &amp;mdash;    SampleHistoryWrapper GetBufferTarget()     void&amp;nbsp; SetBufferTarget(SampleHistoryWrapper newBufferTarget)        Parameter Type Description     newBufferTarget SampleHistoryWrapper &amp;mdash;    SampleHistoryWrapper GetOverUnderFrames()     void&amp;nbsp; SetOverUnderFrames(SampleHistoryWrapper newOverUnderFrames)        Parameter Type Description     newOverUnderFrames SampleHistoryWrapper &amp;mdash;    SampleHistoryWrapper GetPhysicsRate()     void&amp;nbsp; SetPhysicsRate(SampleHistoryWrapper newPhysicsRate)        Parameter Type Description     newPhysicsRate SampleHistoryWrapper &amp;mdash;    float&amp;nbsp; GetMaxPhysicsRate()     void&amp;nbsp; SetMaxPhysicsRate(float newMaxPhysicsRate)        Parameter Type Description     newMaxPhysicsRate float&amp;nbsp; &amp;mdash;    float&amp;nbsp; GetMinPhysicsRate()     void&amp;nbsp; SetMinPhysicsRate(float newMinPhysicsRate)        Parameter Type Description     newMinPhysicsRate float&amp;nbsp; &amp;mdash;    SampleHistoryWrapper CreateBufferHistory(std::string Title)        Parameter Type Description     Title std::string&amp;nbsp; &amp;mdash;    void&amp;nbsp; eventConstruct()     </description>
     </item>
     
     <item>
@@ -24,11 +20,7 @@ SampleHistoryWrapper GetOverUnderFrames()</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PerformanceStats/NetStatGraphWrapper/</guid>
-      <description>View Implementation    SampleHistoryWrapper GetPacketsOut()     
-void&amp;nbsp; SetPacketsOut(SampleHistoryWrapper newPacketsOut)        Parameter Type Description     newPacketsOut SampleHistoryWrapper &amp;mdash;    
-SampleHistoryWrapper GetPacketsIn()     
-void&amp;nbsp; SetPacketsIn(SampleHistoryWrapper newPacketsIn)        Parameter Type Description     newPacketsIn SampleHistoryWrapper &amp;mdash;    
-SampleHistoryWrapper GetLostPacketsOut()</description>
+      <description>  View Implementation    SampleHistoryWrapper GetPacketsOut()     void&amp;nbsp; SetPacketsOut(SampleHistoryWrapper newPacketsOut)        Parameter Type Description     newPacketsOut SampleHistoryWrapper &amp;mdash;    SampleHistoryWrapper GetPacketsIn()     void&amp;nbsp; SetPacketsIn(SampleHistoryWrapper newPacketsIn)        Parameter Type Description     newPacketsIn SampleHistoryWrapper &amp;mdash;    SampleHistoryWrapper GetLostPacketsOut()     void&amp;nbsp; SetLostPacketsOut(SampleHistoryWrapper newLostPacketsOut)        Parameter Type Description     newLostPacketsOut SampleHistoryWrapper &amp;mdash;    SampleHistoryWrapper GetLostPacketsIn()     void&amp;nbsp; SetLostPacketsIn(SampleHistoryWrapper newLostPacketsIn)        Parameter Type Description     newLostPacketsIn SampleHistoryWrapper &amp;mdash;    SampleHistoryWrapper GetBytesOut()     void&amp;nbsp; SetBytesOut(SampleHistoryWrapper newBytesOut)        Parameter Type Description     newBytesOut SampleHistoryWrapper &amp;mdash;    SampleHistoryWrapper GetBytesIn()     void&amp;nbsp; SetBytesIn(SampleHistoryWrapper newBytesIn)        Parameter Type Description     newBytesIn SampleHistoryWrapper &amp;mdash;    SampleHistoryWrapper GetLatency()     void&amp;nbsp; SetLatency(SampleHistoryWrapper newLatency)        Parameter Type Description     newLatency SampleHistoryWrapper &amp;mdash;    float&amp;nbsp; GetExpectedOutPacketRate()     void&amp;nbsp; SetExpectedOutPacketRate(float newExpectedOutPacketRate)        Parameter Type Description     newExpectedOutPacketRate float&amp;nbsp; &amp;mdash;    float&amp;nbsp; GetExpectedInPacketRate()     void&amp;nbsp; SetExpectedInPacketRate(float newExpectedInPacketRate)        Parameter Type Description     newExpectedInPacketRate float&amp;nbsp; &amp;mdash;    float&amp;nbsp; GetMaxBytesRate()     void&amp;nbsp; SetMaxBytesRate(float newMaxBytesRate)        Parameter Type Description     newMaxBytesRate float&amp;nbsp; &amp;mdash;    void&amp;nbsp; eventUpdateGraphRanges()     SampleHistoryWrapper CreateBytesSummary(std::string Title)        Parameter Type Description     Title std::string&amp;nbsp; &amp;mdash;    SampleHistoryWrapper CreateLossSummary(std::string Title)        Parameter Type Description     Title std::string&amp;nbsp; &amp;mdash;    SampleHistoryWrapper CreatePktSummary(std::string Title)        Parameter Type Description     Title std::string&amp;nbsp; &amp;mdash;    void&amp;nbsp; eventConstruct()     </description>
     </item>
     
     <item>
@@ -37,11 +29,7 @@ SampleHistoryWrapper GetLostPacketsOut()</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PerformanceStats/PerfStatGraphWrapper/</guid>
-      <description>View Implementation    SampleHistoryWrapper GetFPS()     
-void&amp;nbsp; SetFPS(SampleHistoryWrapper newFPS)        Parameter Type Description     newFPS SampleHistoryWrapper &amp;mdash;    
-SampleHistoryWrapper GetFrameTime()     
-void&amp;nbsp; SetFrameTime(SampleHistoryWrapper newFrameTime)        Parameter Type Description     newFrameTime SampleHistoryWrapper &amp;mdash;    
-SampleHistoryWrapper GetGameThreadTime()</description>
+      <description>  View Implementation    SampleHistoryWrapper GetFPS()     void&amp;nbsp; SetFPS(SampleHistoryWrapper newFPS)        Parameter Type Description     newFPS SampleHistoryWrapper &amp;mdash;    SampleHistoryWrapper GetFrameTime()     void&amp;nbsp; SetFrameTime(SampleHistoryWrapper newFrameTime)        Parameter Type Description     newFrameTime SampleHistoryWrapper &amp;mdash;    SampleHistoryWrapper GetGameThreadTime()     void&amp;nbsp; SetGameThreadTime(SampleHistoryWrapper newGameThreadTime)        Parameter Type Description     newGameThreadTime SampleHistoryWrapper &amp;mdash;    SampleHistoryWrapper GetRenderThreadTime()     void&amp;nbsp; SetRenderThreadTime(SampleHistoryWrapper newRenderThreadTime)        Parameter Type Description     newRenderThreadTime SampleHistoryWrapper &amp;mdash;    SampleHistoryWrapper GetGPUFrameTime()     void&amp;nbsp; SetGPUFrameTime(SampleHistoryWrapper newGPUFrameTime)        Parameter Type Description     newGPUFrameTime SampleHistoryWrapper &amp;mdash;    ArrayWrapper GetFrameTimeHistories()     float&amp;nbsp; GetMaxFPS()     void&amp;nbsp; SetMaxFPS(float newMaxFPS)        Parameter Type Description     newMaxFPS float&amp;nbsp; &amp;mdash;    float&amp;nbsp; GetTargetFPS()     void&amp;nbsp; SetTargetFPS(float newTargetFPS)        Parameter Type Description     newTargetFPS float&amp;nbsp; &amp;mdash;    void&amp;nbsp; eventUpdateGraphRanges()     SampleHistoryWrapper CreateFrameTimeHistory(std::string Title)        Parameter Type Description     Title std::string&amp;nbsp; &amp;mdash;    SampleHistoryWrapper CreateFpsHistory(std::string Title)        Parameter Type Description     Title std::string&amp;nbsp; &amp;mdash;    void&amp;nbsp; eventConstruct()     </description>
     </item>
     
     <item>
@@ -50,13 +38,7 @@ SampleHistoryWrapper GetGameThreadTime()</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PerformanceStats/SampleHistoryWrapper/</guid>
-      <description>View Implementation    _NODISCARD bool IsNull() const     
-operator bool() const     
-SampleRecordSettingsWrapper GetRecordSettings()     
-void&amp;nbsp; SetRecordSettings(SampleRecordSettingsWrapper newRecordSettings)        Parameter Type Description     newRecordSettings SampleRecordSettingsWrapper &amp;mdash;    
-UnrealStringWrapper GetTitle()     
-float&amp;nbsp; GetYMin()     
-void&amp;nbsp; SetYMin(float newYMin)        Parameter Type Description     newYMin float&amp;nbsp; &amp;mdash;</description>
+      <description>  View Implementation    _NODISCARD bool IsNull() const     operator bool() const     SampleRecordSettingsWrapper GetRecordSettings()     void&amp;nbsp; SetRecordSettings(SampleRecordSettingsWrapper newRecordSettings)        Parameter Type Description     newRecordSettings SampleRecordSettingsWrapper &amp;mdash;    UnrealStringWrapper GetTitle()     float&amp;nbsp; GetYMin()     void&amp;nbsp; SetYMin(float newYMin)        Parameter Type Description     newYMin float&amp;nbsp; &amp;mdash;    float&amp;nbsp; GetYMax()     void&amp;nbsp; SetYMax(float newYMax)        Parameter Type Description     newYMax float&amp;nbsp; &amp;mdash;    float&amp;nbsp; GetGoodValue()     void&amp;nbsp; SetGoodValue(float newGoodValue)        Parameter Type Description     newGoodValue float&amp;nbsp; &amp;mdash;    float&amp;nbsp; GetBadValue()     void&amp;nbsp; SetBadValue(float newBadValue)        Parameter Type Description     newBadValue float&amp;nbsp; &amp;mdash;    float&amp;nbsp; GetBaseValue()     void&amp;nbsp; SetBaseValue(float newBaseValue)        Parameter Type Description     newBaseValue float&amp;nbsp; &amp;mdash;    StructArrayWrapper GetSamples()     int&amp;nbsp; GetSampleIndex()     void&amp;nbsp; SetSampleIndex(int newSampleIndex)        Parameter Type Description     newSampleIndex int&amp;nbsp; &amp;mdash;    float&amp;nbsp; GetAccumTime()     void&amp;nbsp; SetAccumTime(float newAccumTime)        Parameter Type Description     newAccumTime float&amp;nbsp; &amp;mdash;    RecordedSample GetPendingSample()     void&amp;nbsp; SetPendingSample(RecordedSample newPendingSample)        Parameter Type Description     newPendingSample RecordedSample &amp;mdash;    unsigned long&amp;nbsp; GetbHasPendingSample()     void&amp;nbsp; SetbHasPendingSample(unsigned long newbHasPendingSample)        Parameter Type Description     newbHasPendingSample unsigned long&amp;nbsp; &amp;mdash;    void&amp;nbsp; Tick(float DeltaTime)        Parameter Type Description     DeltaTime float&amp;nbsp; &amp;mdash;    void&amp;nbsp; AddSample(float NewValue)        Parameter Type Description     NewValue float&amp;nbsp; &amp;mdash;    float&amp;nbsp; GetSummaryValue(unsigned char Type, float MaxSampleAge, unsigned long bAbsoluteValue)        Parameter Type Description     Type unsigned char&amp;nbsp; &amp;mdash;   MaxSampleAge float&amp;nbsp; &amp;mdash;   bAbsoluteValue unsigned long&amp;nbsp; &amp;mdash;    SampleHistoryWrapper SetBaseValue2(float InBaseValue)        Parameter Type Description     InBaseValue float&amp;nbsp; &amp;mdash;    SampleHistoryWrapper SetGoodBadValues(float InGoodValue, float InBadValue)        Parameter Type Description     InGoodValue float&amp;nbsp; &amp;mdash;   InBadValue float&amp;nbsp; &amp;mdash;    SampleHistoryWrapper SetGraphMaxMin(float MaxValue, float MinValue)        Parameter Type Description     MaxValue float&amp;nbsp; &amp;mdash;   MinValue float&amp;nbsp; &amp;mdash;    SampleHistoryWrapper SetTitle(std::string InTitle)        Parameter Type Description     InTitle std::string&amp;nbsp; &amp;mdash;    </description>
     </item>
     
     <item>
@@ -65,12 +47,7 @@ void&amp;nbsp; SetYMin(float newYMin)        Parameter Type Description     new
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PerformanceStats/SampleRecordSettingsWrapper/</guid>
-      <description>View Implementation    _NODISCARD bool IsNull() const     
-operator bool() const     
-float&amp;nbsp; GetMaxSampleAge()     
-void&amp;nbsp; SetMaxSampleAge(float newMaxSampleAge)        Parameter Type Description     newMaxSampleAge float&amp;nbsp; &amp;mdash;    
-float&amp;nbsp; GetRecordRate()     
-void&amp;nbsp; SetRecordRate(float newRecordRate)        Parameter Type Description     newRecordRate float&amp;nbsp; &amp;mdash;</description>
+      <description>  View Implementation    _NODISCARD bool IsNull() const     operator bool() const     float&amp;nbsp; GetMaxSampleAge()     void&amp;nbsp; SetMaxSampleAge(float newMaxSampleAge)        Parameter Type Description     newMaxSampleAge float&amp;nbsp; &amp;mdash;    float&amp;nbsp; GetRecordRate()     void&amp;nbsp; SetRecordRate(float newRecordRate)        Parameter Type Description     newRecordRate float&amp;nbsp; &amp;mdash;    </description>
     </item>
     
     <item>
@@ -79,12 +56,7 @@ void&amp;nbsp; SetRecordRate(float newRecordRate)        Parameter Type Descrip
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PerformanceStats/StartGraphSystemWrapper/</guid>
-      <description>View Implementation    _NODISCARD bool IsNull() const     
-operator bool() const     
-float&amp;nbsp; GetGraphSampleTime()     
-void&amp;nbsp; SetGraphSampleTime(float newGraphSampleTime)        Parameter Type Description     newGraphSampleTime float&amp;nbsp; &amp;mdash;    
-unsigned char&amp;nbsp; GetGraphLevel()     
-void&amp;nbsp; SetGraphLevel(unsigned char newGraphLevel)        Parameter Type Description     newGraphLevel unsigned char&amp;nbsp; &amp;mdash;</description>
+      <description>  View Implementation    _NODISCARD bool IsNull() const     operator bool() const     float&amp;nbsp; GetGraphSampleTime()     void&amp;nbsp; SetGraphSampleTime(float newGraphSampleTime)        Parameter Type Description     newGraphSampleTime float&amp;nbsp; &amp;mdash;    unsigned char&amp;nbsp; GetGraphLevel()     void&amp;nbsp; SetGraphLevel(unsigned char newGraphLevel)        Parameter Type Description     newGraphLevel unsigned char&amp;nbsp; &amp;mdash;    PerfStatGraphWrapper GetPerfStatGraph()     void&amp;nbsp; SetPerfStatGraph(PerfStatGraphWrapper newPerfStatGraph)        Parameter Type Description     newPerfStatGraph PerfStatGraphWrapper &amp;mdash;    NetStatGraphWrapper GetNetStatGraph()     void&amp;nbsp; SetNetStatGraph(NetStatGraphWrapper newNetStatGraph)        Parameter Type Description     newNetStatGraph NetStatGraphWrapper &amp;mdash;    InputBufferGraphWrapper GetInputBufferGraph()     void&amp;nbsp; SetInputBufferGraph(InputBufferGraphWrapper newInputBufferGraph)        Parameter Type Description     newInputBufferGraph InputBufferGraphWrapper &amp;mdash;    ArrayWrapper GetStatGraphs()     ArrayWrapper GetVisibleStatGraphs()     void&amp;nbsp; Graphtime(float Seconds)        Parameter Type Description     Seconds float&amp;nbsp; &amp;mdash;    void&amp;nbsp; StatGraphNext()     float&amp;nbsp; GetGraphSampleTime2(unsigned char Level)        Parameter Type Description     Level unsigned char&amp;nbsp; &amp;mdash;    void&amp;nbsp; SetGraphLevel2(unsigned char Level)        Parameter Type Description     Level unsigned char&amp;nbsp; &amp;mdash;    </description>
     </item>
     
     <item>
@@ -93,12 +65,7 @@ void&amp;nbsp; SetGraphLevel(unsigned char newGraphLevel)        Parameter Type
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PerformanceStats/StatGraphSystemWrapper/</guid>
-      <description>View Implementation    _NODISCARD bool IsNull() const     
-operator bool() const     
-float&amp;nbsp; GetGraphSampleTime()     
-void&amp;nbsp; SetGraphSampleTime(float newGraphSampleTime)        Parameter Type Description     newGraphSampleTime float&amp;nbsp; &amp;mdash;    
-unsigned char&amp;nbsp; GetGraphLevel()     
-void&amp;nbsp; SetGraphLevel(unsigned char newGraphLevel)        Parameter Type Description     newGraphLevel unsigned char&amp;nbsp; &amp;mdash;</description>
+      <description>  View Implementation    _NODISCARD bool IsNull() const     operator bool() const     float&amp;nbsp; GetGraphSampleTime()     void&amp;nbsp; SetGraphSampleTime(float newGraphSampleTime)        Parameter Type Description     newGraphSampleTime float&amp;nbsp; &amp;mdash;    unsigned char&amp;nbsp; GetGraphLevel()     void&amp;nbsp; SetGraphLevel(unsigned char newGraphLevel)        Parameter Type Description     newGraphLevel unsigned char&amp;nbsp; &amp;mdash;    PerfStatGraphWrapper GetPerfStatGraph()     void&amp;nbsp; SetPerfStatGraph(PerfStatGraphWrapper newPerfStatGraph)        Parameter Type Description     newPerfStatGraph PerfStatGraphWrapper &amp;mdash;    NetStatGraphWrapper GetNetStatGraph()     void&amp;nbsp; SetNetStatGraph(NetStatGraphWrapper newNetStatGraph)        Parameter Type Description     newNetStatGraph NetStatGraphWrapper &amp;mdash;    InputBufferGraphWrapper GetInputBufferGraph()     void&amp;nbsp; SetInputBufferGraph(InputBufferGraphWrapper newInputBufferGraph)        Parameter Type Description     newInputBufferGraph InputBufferGraphWrapper &amp;mdash;    ArrayWrapper GetStatGraphs()     ArrayWrapper GetVisibleStatGraphs()     int&amp;nbsp; GetPreallocGraphLines()     void&amp;nbsp; SetPreallocGraphLines(int newPreallocGraphLines)        Parameter Type Description     newPreallocGraphLines int&amp;nbsp; &amp;mdash;    void&amp;nbsp; __StatGraphSystem_TA__SetGraphLevel(StatGraphWrapper G)        Parameter Type Description     G StatGraphWrapper &amp;mdash;    void&amp;nbsp; PacketReceived(float Latency)        Parameter Type Description     Latency float&amp;nbsp; &amp;mdash;    void&amp;nbsp; Graphtime(float Seconds)        Parameter Type Description     Seconds float&amp;nbsp; &amp;mdash;    void&amp;nbsp; StatGraphNext()     float&amp;nbsp; GetGraphSampleTime2(unsigned char Level)        Parameter Type Description     Level unsigned char&amp;nbsp; &amp;mdash;    void&amp;nbsp; SetGraphLevel2(unsigned char Level)        Parameter Type Description     Level unsigned char&amp;nbsp; &amp;mdash;    </description>
     </item>
     
     <item>
@@ -107,12 +74,7 @@ void&amp;nbsp; SetGraphLevel(unsigned char newGraphLevel)        Parameter Type
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PerformanceStats/StatGraphWrapper/</guid>
-      <description>View Implementation    _NODISCARD bool IsNull() const     
-operator bool() const     
-SampleRecordSettingsWrapper GetRecordSettings()     
-void&amp;nbsp; SetRecordSettings(SampleRecordSettingsWrapper newRecordSettings)        Parameter Type Description     newRecordSettings SampleRecordSettingsWrapper &amp;mdash;    
-double&amp;nbsp; GetLastTickTime()     
-void&amp;nbsp; SetLastTickTime(double newLastTickTime)        Parameter Type Description     newLastTickTime double&amp;nbsp; &amp;mdash;</description>
+      <description>  View Implementation    _NODISCARD bool IsNull() const     operator bool() const     SampleRecordSettingsWrapper GetRecordSettings()     void&amp;nbsp; SetRecordSettings(SampleRecordSettingsWrapper newRecordSettings)        Parameter Type Description     newRecordSettings SampleRecordSettingsWrapper &amp;mdash;    double&amp;nbsp; GetLastTickTime()     void&amp;nbsp; SetLastTickTime(double newLastTickTime)        Parameter Type Description     newLastTickTime double&amp;nbsp; &amp;mdash;    ArrayWrapper GetSampleHistories()     void&amp;nbsp; StopDrawing()     SampleHistoryWrapper CreateSampleHistory(std::string Title)        Parameter Type Description     Title std::string&amp;nbsp; &amp;mdash;    SampleHistoryWrapper AddSampleHistory(SampleHistoryWrapper History)        Parameter Type Description     History SampleHistoryWrapper &amp;mdash;    void&amp;nbsp; eventConstruct()     </description>
     </item>
     
   </channel>
