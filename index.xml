@@ -1559,7 +1559,8 @@ The template has a lot of commented out code that is designed to help you learn 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/Stats/StatEventWrapper/</guid>
-      <description>  View Implementation    _NODISCARD bool IsNull() const     operator bool() const     int&amp;nbsp; GetPoints()     float&amp;nbsp; GetCooldownSeconds()     unsigned long&amp;nbsp; GetbAddToScore()     unsigned long&amp;nbsp; GetbIsLeaderboardStat()     unsigned long&amp;nbsp; GetbNotifyTicker()     unsigned long&amp;nbsp; GetbShowOnHUD()     unsigned long&amp;nbsp; GetbPrimaryStat()     unsigned long&amp;nbsp; GetbSkipReplication()     unsigned long&amp;nbsp; GetbCanMute()     unsigned long&amp;nbsp; GetbCountMultiplied()     UnrealStringWrapper GetLabel()     UnrealStringWrapper GetPluralLabel()     UnrealStringWrapper GetDescription()     float&amp;nbsp; GetNextCooldownTime()     std::string&amp;nbsp; GetGroupName()     std::string&amp;nbsp; GetEventName()     </description>
+      <description>  View Implementation   A stat that was just recorded. Use this guide to hook them
+ _NODISCARD bool IsNull() const     operator bool() const     int&amp;nbsp; GetPoints()     float&amp;nbsp; GetCooldownSeconds()     unsigned long&amp;nbsp; GetbAddToScore()     unsigned long&amp;nbsp; GetbIsLeaderboardStat()     unsigned long&amp;nbsp; GetbNotifyTicker()     unsigned long&amp;nbsp; GetbShowOnHUD()     unsigned long&amp;nbsp; GetbPrimaryStat()     unsigned long&amp;nbsp; GetbSkipReplication()     unsigned long&amp;nbsp; GetbCanMute()     unsigned long&amp;nbsp; GetbCountMultiplied()     UnrealStringWrapper GetLabel()     UnrealStringWrapper GetPluralLabel()     UnrealStringWrapper GetDescription()     float&amp;nbsp; GetNextCooldownTime()     std::string&amp;nbsp; GetGroupName()     std::string&amp;nbsp; GetEventName()     </description>
     </item>
     
     <item>
@@ -1976,6 +1977,18 @@ template &amp;lt;typename T, typename std::enable_if&amp;lt;std::is_base_of&amp;
       <guid>https://bakkesmodwiki.github.io/plugin_tutorial/plugin_interface/</guid>
       <description>This channel will go over creating a user-friendly interface. There&amp;rsquo;s buttons, sliders, checkboxes, dropdowns, and all sorts of options. It also assumes you&amp;rsquo;re using the template, as the template automatically includes the ImGui GUI library we&amp;rsquo;ll be using. It will ignore the fact that there is some commented out code in CoolPluginGUI.cpp.
 Yet again we have the CoolPlugin from Plugin Variables and we want to add a button to activate our cooler ball on top, a checkbox to enable cool, and a slider to choose the distance that the ball is placed from your car</description>
+    </item>
+    
+    <item>
+      <title>Stat Events</title>
+      <link>https://bakkesmodwiki.github.io/functions/stat_events/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/functions/stat_events/</guid>
+      <description>Stat events are a great way to show a slightly more complicated plugin logic. They are fairly common to use, use multiple wrappers, event hooks, and have some unique caveots. Also I made a plugin with them so I know how they work. Hopefully this helps someone
+First add this include to the top of your .h
+#include &amp;quot;bakkesmod/wrappers/GameObject/Stats/StatEventWrapper.h&amp;quot;
+You need to hook some events to use stat events. This depends on your use case.</description>
     </item>
     
     <item>

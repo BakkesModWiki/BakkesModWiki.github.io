@@ -47,5 +47,17 @@ Set the -dev option    On Steam: Right click the game and hit properties Then ad
 template &amp;lt;typename T, typename std::enable_if&amp;lt;std::is_base_of&amp;lt;ObjectWrapper, T&amp;gt;::value&amp;gt;::type*&amp;gt; void GameWrapper::HookEventWithCaller(std::string eventName, std::function&amp;lt;void(T caller, void* params, std::string eventName)&amp;gt; callback) { auto wrapped_callback = [callback](ActorWrapper caller, void* params, std::string eventName) { callback(T(caller.memory_address), params, eventName); }; HookEventWithCaller&amp;lt;ActorWrapper&amp;gt;(eventName, wrapped_callback); } And this for Post</description>
     </item>
     
+    <item>
+      <title>Stat Events</title>
+      <link>https://bakkesmodwiki.github.io/functions/stat_events/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/functions/stat_events/</guid>
+      <description>Stat events are a great way to show a slightly more complicated plugin logic. They are fairly common to use, use multiple wrappers, event hooks, and have some unique caveots. Also I made a plugin with them so I know how they work. Hopefully this helps someone
+First add this include to the top of your .h
+#include &amp;quot;bakkesmod/wrappers/GameObject/Stats/StatEventWrapper.h&amp;quot;
+You need to hook some events to use stat events. This depends on your use case.</description>
+    </item>
+    
   </channel>
 </rss>

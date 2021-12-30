@@ -10,11 +10,14 @@
 
 
 
-    <meta name="description" content="TrainingEditorWrapper">
+    <meta name="description" content="Stat events are a great way to show a slightly more complicated plugin logic. They are fairly common to use, use multiple wrappers, event hooks, and have some unique caveots. Also I made a plugin with them so I know how they work. Hopefully this helps someone
+First add this include to the top of your .h
+#include &quot;bakkesmod/wrappers/GameObject/Stats/StatEventWrapper.h&quot;
+You need to hook some events to use stat events. This depends on your use case.">
 
 
 
-    <title>TrainingEditorWrapper | BakkesMod Programming Wiki</title>
+    <title>Stat Events | BakkesMod Programming Wiki</title>
 
     <link rel="icon" href="/favicon/favicon-32x32.png" type="image/x-icon">
 
@@ -5600,7 +5603,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 
             <li>
             
-            <input type="checkbox" id="navtree-6e3aa38d" class="gdoc-nav__toggle" >
+            <input type="checkbox" id="navtree-6e3aa38d" class="gdoc-nav__toggle" checked>
             <label for="navtree-6e3aa38d" class="flex justify-between">
             
             
@@ -5734,7 +5737,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
             
             
                 <span class="flex">
-                    <a href="/functions/stat_events/" class="gdoc-nav__entry ">
+                    <a href="/functions/stat_events/" class="gdoc-nav__entry is-active">
                         Stat Events
                     </a>
                 </span>
@@ -5765,7 +5768,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 
             <li>
             
-            <input type="checkbox" id="navtree-fabdf7e2" class="gdoc-nav__toggle" checked>
+            <input type="checkbox" id="navtree-fabdf7e2" class="gdoc-nav__toggle" >
             <label for="navtree-fabdf7e2" class="flex justify-between">
             
             
@@ -5799,7 +5802,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 
             <li>
             
-            <input type="checkbox" id="navtree-7a2cafd9" class="gdoc-nav__toggle" checked>
+            <input type="checkbox" id="navtree-7a2cafd9" class="gdoc-nav__toggle" >
             <label for="navtree-7a2cafd9" class="flex justify-between">
             
             
@@ -5829,7 +5832,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 
             <li>
             
-            <input type="checkbox" id="navtree-1c182f07" class="gdoc-nav__toggle" checked>
+            <input type="checkbox" id="navtree-1c182f07" class="gdoc-nav__toggle" >
             <label for="navtree-1c182f07" class="flex justify-between">
             
             
@@ -6016,7 +6019,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 
             <li>
             
-            <input type="checkbox" id="navtree-581499b1" class="gdoc-nav__toggle" checked>
+            <input type="checkbox" id="navtree-581499b1" class="gdoc-nav__toggle" >
             <label for="navtree-581499b1" class="flex justify-between">
             
             
@@ -6351,7 +6354,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
             
             
                 <span class="flex">
-                    <a href="/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/" class="gdoc-nav__entry is-active">
+                    <a href="/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/" class="gdoc-nav__entry ">
                         TrainingEditorWrapper
                     </a>
                 </span>
@@ -11118,31 +11121,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
         
     
     
-        
-        
-        
-        
-    
-    
-        
-        
-        
-        
-    
-    
-        
-        
-        
-        
-    
-    
-        <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/' href='/'><span itemprop='name'>Welcome to the BakkesMod Programming Wiki!</span></a><meta itemprop='position' content='1' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/bakkesmod_api/' href='/bakkesmod_api/'><span itemprop='name'>BakkesMod API</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/bakkesmod_api/Classes/' href='/bakkesmod_api/Classes/'><span itemprop='name'>Classes</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/bakkesmod_api/Classes/Wrappers/' href='/bakkesmod_api/Classes/Wrappers/'><span itemprop='name'>Wrappers</span></a><meta itemprop='position' content='4' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/bakkesmod_api/Classes/Wrappers/GameEvent/' href='/bakkesmod_api/Classes/Wrappers/GameEvent/'><span itemprop='name'>Game Event</span></a><meta itemprop='position' content='5' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>TrainingEditorWrapper</span><meta itemprop='position' content='6' /></li>
-    
-
-    
-
-    
-
+        <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/' href='/'><span itemprop='name'>Welcome to the BakkesMod Programming Wiki!</span></a><meta itemprop='position' content='1' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/functions/' href='/functions/'><span itemprop='name'>Functions</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>Stat Events</span><meta itemprop='position' content='3' /></li>
     
 
     
@@ -11153,1408 +11132,147 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
     </div>
     
     
+        
+        <div>
+            <span class="editpage">
+                <svg class="icon gdoc_code"><use xlink:href="#gdoc_code"></use></svg>
+                <a href="https://github.com/BakkesModWiki/BakkesModWiki.github.io/blob/main/content/functions/stat_events.md" target="_blank">
+                    View on GitHub
+                </a>
+            </span>
+        </div>
+        
+    
 </div>
 
 
     <article class="gdoc-markdown gdoc-markdown__align--left">
-        <h1>TrainingEditorWrapper&nbsp;:&nbsp;<small><i><a href="/bakkesmod_api/Classes/Wrappers/GameEvent/GameEditorWrapper">GameEditorWrapper</a></i></small></h1>
+        <h1>Stat Events</h1>
+        <p>Stat events are a great way to show a slightly more complicated plugin logic. They are fairly common to use, use multiple wrappers, event hooks, and have some unique caveots. Also I made a plugin with them so I know how they work. Hopefully this helps someone</p>
+<p>First add this include to the top of your .h<br>
+<code>#include &quot;bakkesmod/wrappers/GameObject/Stats/StatEventWrapper.h&quot;</code></p>
+<p>You need to hook some events to use stat events. This depends on your use case.<br>
+<code>&quot;Function TAGame.GFxHUD_TA.HandleStatTickerMessage&quot;</code> is called any time a stat should appear on the top right ticker, even if it&rsquo;s disabled.<br>
+<code>&quot;Function TAGame.GFxHUD_TA.HandleStatEvent&quot;</code> is called any time a stat should appear in the center of the screen, even if it&rsquo;s disabled.<br>
+The stat ticker catches stat events from all players, but fails to see first touches, clears, and centers.
+HandleStatEvent catches all stats, but only for the primary player. Depending on your use case you may need to only hook one or both</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="c1">// The ServerWrappers here are placeholders and should not be used. 
+</span><span class="c1">//  We need the params so we hook with caller, but there is no wrapper for the HUD
+</span><span class="c1"></span><span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">HookEventWithCallerPost</span><span class="o">&lt;</span><span class="n">ServerWrapper</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&#34;Function TAGame.GFxHUD_TA.HandleStatTickerMessage&#34;</span><span class="p">,</span>
+    <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="n">ServerWrapper</span> <span class="n">caller</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="n">params</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">eventname</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">onStatTickerMessage</span><span class="p">(</span><span class="n">params</span><span class="p">);</span>
+    <span class="p">});</span>
+
+<span class="c1">// hooked whenever the primary player earns a stat
+</span><span class="c1"></span><span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">HookEventWithCallerPost</span><span class="o">&lt;</span><span class="n">ServerWrapper</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&#34;Function TAGame.GFxHUD_TA.HandleStatEvent&#34;</span><span class="p">,</span>
+    <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="n">ServerWrapper</span> <span class="n">caller</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="n">params</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">eventname</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">onStatEvent</span><span class="p">(</span><span class="n">params</span><span class="p">);</span>
+    <span class="p">});</span>
+</code></pre></div><p>Now we have the functions hooked, and we need the parameters. Either define these in your .h or right before using them in your .cpp</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="c1">// The structure of a ticker stat event
+</span><span class="c1"></span><span class="k">struct</span> <span class="nc">StatTickerParams</span> <span class="p">{</span>
+    <span class="c1">// person who got a stat
+</span><span class="c1"></span>    <span class="n">uintptr_t</span> <span class="n">Receiver</span><span class="p">;</span>
+    <span class="c1">// person who is victim of a stat (only exists for demos afaik)
+</span><span class="c1"></span>    <span class="n">uintptr_t</span> <span class="n">Victim</span><span class="p">;</span>
+    <span class="c1">// wrapper for the stat event
+</span><span class="c1"></span>    <span class="n">uintptr_t</span> <span class="n">StatEvent</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="c1">// structure of a stat event
+</span><span class="c1"></span><span class="k">struct</span> <span class="nc">StatEventParams</span> <span class="p">{</span>
+    <span class="c1">// always primary player
+</span><span class="c1"></span>    <span class="n">uintptr_t</span> <span class="n">PRI</span><span class="p">;</span>
+    <span class="c1">// wrapper for the stat event
+</span><span class="c1"></span>    <span class="n">uintptr_t</span> <span class="n">StatEvent</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div><p>Now you can use them. For reference see <a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameObject/Stats/StatEventWrapper/">StatEventWrapper</a> and <a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameObject/PriWrapper/">PriWrapper</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">void</span> <span class="n">ClassName</span><span class="o">::</span><span class="n">onStatTickerMessage</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">params</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">StatTickerParams</span> <span class="n">pStruct</span> <span class="o">=</span> <span class="p">(</span><span class="n">StatTickerParams</span><span class="o">*</span><span class="p">)</span><span class="n">params</span><span class="p">;</span>
+    <span class="n">PriWrapper</span> <span class="n">receiver</span> <span class="o">=</span> <span class="n">PriWrapper</span><span class="p">(</span><span class="n">pStruct</span><span class="o">-&gt;</span><span class="n">Receiver</span><span class="p">);</span>
+    <span class="n">PriWrapper</span> <span class="n">victim</span> <span class="o">=</span> <span class="n">PriWrapper</span><span class="p">(</span><span class="n">pStruct</span><span class="o">-&gt;</span><span class="n">Victim</span><span class="p">);</span>
+    <span class="n">StatEventWrapper</span> <span class="n">statEvent</span> <span class="o">=</span> <span class="n">StatEventWrapper</span><span class="p">(</span><span class="n">pStruct</span><span class="o">-&gt;</span><span class="n">StatEvent</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="n">ClassName</span><span class="o">::</span><span class="n">onStatEvent</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">params</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">StatEventParams</span> <span class="n">pStruct</span> <span class="o">=</span> <span class="p">(</span><span class="n">StatEventParams</span><span class="o">*</span><span class="p">)</span><span class="n">params</span><span class="p">;</span>
+    <span class="n">PriWrapper</span> <span class="n">receiver</span> <span class="o">=</span> <span class="n">PriWrapper</span><span class="p">(</span><span class="n">pStruct</span><span class="o">-&gt;</span><span class="n">Receiver</span><span class="p">);</span>
+    <span class="n">StatEventWrapper</span> <span class="n">statEvent</span> <span class="o">=</span> <span class="n">StatEventWrapper</span><span class="p">(</span><span class="n">pStruct</span><span class="o">-&gt;</span><span class="n">StatEvent</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div><p>Now you probably want to do something special with a specific event. Get the event&rsquo;s name with <code>StatEventWrapper.GetEventName()</code>. This gets the stat&rsquo;s internal names regardless of game language. This is safest to use for string comparisons. For logging or displaying in the game&rsquo;s current language you can use <code>StatEventWrapper.GetLabel()</code>. Here&rsquo;s a list of all the <code>GetEventName</code>s. The only confusing one is that a &ldquo;Demolish&rdquo; is one demolition and a &ldquo;Demolition&rdquo; is an extermination. OwnGoal is a fun ticker event that does exactly what you&rsquo;d expect, yet is never displayed anywhere in game</p>
+<pre tabindex="0"><code>&quot;Demolish&quot;
+&quot;Demolition&quot;
+&quot;Goal&quot;
+&quot;Win&quot;
+&quot;MVP&quot;
+&quot;AerialGoal&quot;
+&quot;BackwardsGoal&quot;
+&quot;BicycleGoal&quot;
+&quot;LongGoal&quot;
+&quot;TurtleGoal&quot;
+&quot;PoolShot&quot;
+&quot;OvertimeGoal&quot;
+&quot;HatTrick&quot;
+&quot;Assist&quot;
+&quot;Playmaker&quot;
+&quot;Save&quot;
+&quot;EpicSave&quot;
+&quot;Savior&quot;
+&quot;Shot&quot;
+&quot;Center&quot;
+&quot;Clear&quot;
+&quot;FirstTouch&quot;
+&quot;BreakoutDamage&quot;
+&quot;BreakoutDamageLarge&quot;
+&quot;LowFive&quot;
+&quot;HighFive&quot;
+&quot;HoopsSwishGoal&quot;
+&quot;BicycleHit&quot;
+&quot;OwnGoal&quot;
+</code></pre><p>Now I&rsquo;ll just put together a simple example to track if the main player is demoed. As always this is assuming this is using the template</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="c1">// add to onload 
+</span><span class="c1"></span><span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">HookEventWithCallerPost</span><span class="o">&lt;</span><span class="n">ServerWrapper</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&#34;Function TAGame.GFxHUD_TA.HandleStatTickerMessage&#34;</span><span class="p">,</span>
+    <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="n">ServerWrapper</span> <span class="n">caller</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="n">params</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">eventname</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">onStatTickerMessage</span><span class="p">(</span><span class="n">params</span><span class="p">);</span>
+    <span class="p">});</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="c1">// defined elsewhere in .cpp
+</span><span class="c1"></span><span class="kt">void</span> <span class="n">ClassName</span><span class="o">::</span><span class="n">onStatTickerMessage</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">params</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">struct</span> <span class="nc">StatTickerParams</span> <span class="p">{</span>
+        <span class="n">uintptr_t</span> <span class="n">Receiver</span><span class="p">;</span>
+        <span class="n">uintptr_t</span> <span class="n">Victim</span><span class="p">;</span>
+        <span class="n">uintptr_t</span> <span class="n">StatEvent</span><span class="p">;</span>
+    <span class="p">};</span>
+
+    <span class="n">StatTickerParams</span><span class="o">*</span> <span class="n">pStruct</span> <span class="o">=</span> <span class="p">(</span><span class="n">StatTickerParams</span><span class="o">*</span><span class="p">)</span><span class="n">params</span><span class="p">;</span>
+    <span class="n">PriWrapper</span> <span class="n">receiver</span> <span class="o">=</span> <span class="n">PriWrapper</span><span class="p">(</span><span class="n">pStruct</span><span class="o">-&gt;</span><span class="n">Receiver</span><span class="p">);</span>
+    <span class="n">PriWrapper</span> <span class="n">victim</span> <span class="o">=</span> <span class="n">PriWrapper</span><span class="p">(</span><span class="n">pStruct</span><span class="o">-&gt;</span><span class="n">Victim</span><span class="p">);</span>
+    <span class="n">StatEventWrapper</span> <span class="n">statEvent</span> <span class="o">=</span> <span class="n">StatEventWrapper</span><span class="p">(</span><span class="n">pStruct</span><span class="o">-&gt;</span><span class="n">StatEvent</span><span class="p">);</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">statEvent</span><span class="p">.</span><span class="n">GetEventName</span><span class="p">()</span> <span class="o">==</span> <span class="s">&#34;Demolish&#34;</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;a demolition happened &gt;:(&#34;</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">receiver</span><span class="p">)</span> <span class="p">{</span> <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;Null reciever PRI&#34;</span><span class="p">);</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">victim</span><span class="p">)</span> <span class="p">{</span> <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;Null victim PRI&#34;</span><span class="p">);</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
+
+        <span class="c1">// Find the primary player&#39;s PRI
+</span><span class="c1"></span>        <span class="n">PlayerControllerWrapper</span> <span class="n">playerController</span> <span class="o">=</span> <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">GetPlayerController</span><span class="p">();</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">playerController</span><span class="p">)</span> <span class="p">{</span> <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;Null controller&#34;</span><span class="p">);</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
+        <span class="n">PriWrapper</span> <span class="n">playerPRI</span> <span class="o">=</span> <span class="n">playerController</span><span class="p">.</span><span class="n">GetPRI</span><span class="p">();</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">playerPRI</span><span class="p">)</span> <span class="p">{</span> <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;Null player PRI&#34;</span><span class="p">);</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
+
+        <span class="c1">// Compare the primary player to the victim
+</span><span class="c1"></span>        <span class="k">if</span> <span class="p">(</span><span class="n">playerPRI</span><span class="p">.</span><span class="n">memory_address</span> <span class="o">!=</span> <span class="n">victim</span><span class="p">.</span><span class="n">memory_address</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;Hah you got demoed get good {}&#34;</span><span class="p">,</span> <span class="n">victim</span><span class="p">.</span><span class="n">GetPlayerName</span><span class="p">().</span><span class="n">ToString</span><span class="p">());</span>
+            <span class="k">return</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="c1">// Primary player is the victim!
+</span><span class="c1"></span>        <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;I was demoed!!! {} is toxic I&#39;m uninstalling&#34;</span><span class="p">,</span> <span class="n">receiver</span><span class="p">.</span><span class="n">GetPlayerName</span><span class="p">().</span><span class="n">ToString</span><span class="p">());</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><p>Hopefully all of this is useful to someone using stat events in the future!</p>
+
         
-
-
-
-
-
-
-  
-  
-
-
-
-
-<span class="gdoc-button gdoc-button--regular">
-<a  href="https://github.com/bakkesmodorg/BakkesModSDK/blob/master/include/bakkesmod/wrappers/GameEvent/TrainingEditorWrapper.h"   target="_blank"  class="gdoc-button__link">
-  <svg class="icon github"><use xlink:href="#github"></use></svg> View Implementation
-</a>
-</span>
-
-<hr>
-<div class="gdoc-page__anchorwrap">
-    <h3 id="floathttpsencppreferencecomwcpplanguagetypesfloating-point_typesnbspgetminroundtime">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Floating-point_types">float&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> GetMinRoundTime()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#floathttpsencppreferencecomwcpplanguagetypesfloating-point_typesnbspgetminroundtime" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor float&nbsp; GetMinRoundTime()" href="#floathttpsencppreferencecomwcpplanguagetypesfloating-point_typesnbspgetminroundtime">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetminroundtimefloat-newminroundtime">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> SetMinRoundTime(float newMinRoundTime)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetminroundtimefloat-newminroundtime" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; SetMinRoundTime(float newMinRoundTime)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetminroundtimefloat-newminroundtime">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>newMinRoundTime</td>
-<td><a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Floating-point_types">float&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="floathttpsencppreferencecomwcpplanguagetypesfloating-point_typesnbspgetmaxroundtime">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Floating-point_types">float&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> GetMaxRoundTime()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#floathttpsencppreferencecomwcpplanguagetypesfloating-point_typesnbspgetmaxroundtime" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor float&nbsp; GetMaxRoundTime()" href="#floathttpsencppreferencecomwcpplanguagetypesfloating-point_typesnbspgetmaxroundtime">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetmaxroundtimefloat-newmaxroundtime">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> SetMaxRoundTime(float newMaxRoundTime)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetmaxroundtimefloat-newmaxroundtime" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; SetMaxRoundTime(float newMaxRoundTime)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetmaxroundtimefloat-newmaxroundtime">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>newMaxRoundTime</td>
-<td><a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Floating-point_types">float&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="unsigned-longhttpsencppreferencecomwcpplanguagetypessigned_and_unsigned_integer_typesnbspgetbnoeditor">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types">unsigned long&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> GetbNoEditor()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#unsigned-longhttpsencppreferencecomwcpplanguagetypessigned_and_unsigned_integer_typesnbspgetbnoeditor" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor unsigned long&nbsp; GetbNoEditor()" href="#unsigned-longhttpsencppreferencecomwcpplanguagetypessigned_and_unsigned_integer_typesnbspgetbnoeditor">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetbnoeditorunsigned-long-newbnoeditor">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> SetbNoEditor(unsigned long newbNoEditor)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetbnoeditorunsigned-long-newbnoeditor" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; SetbNoEditor(unsigned long newbNoEditor)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetbnoeditorunsigned-long-newbnoeditor">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>newbNoEditor</td>
-<td><a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types">unsigned long&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="unsigned-longhttpsencppreferencecomwcpplanguagetypessigned_and_unsigned_integer_typesnbspgetbdisplayedredopenaltymessage">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types">unsigned long&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> GetbDisplayedRedoPenaltyMessage()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#unsigned-longhttpsencppreferencecomwcpplanguagetypessigned_and_unsigned_integer_typesnbspgetbdisplayedredopenaltymessage" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor unsigned long&nbsp; GetbDisplayedRedoPenaltyMessage()" href="#unsigned-longhttpsencppreferencecomwcpplanguagetypessigned_and_unsigned_integer_typesnbspgetbdisplayedredopenaltymessage">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetbdisplayedredopenaltymessageunsigned-long-newbdisplayedredopenaltymessage">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> SetbDisplayedRedoPenaltyMessage(unsigned long newbDisplayedRedoPenaltyMessage)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetbdisplayedredopenaltymessageunsigned-long-newbdisplayedredopenaltymessage" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; SetbDisplayedRedoPenaltyMessage(unsigned long newbDisplayedRedoPenaltyMessage)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetbdisplayedredopenaltymessageunsigned-long-newbdisplayedredopenaltymessage">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>newbDisplayedRedoPenaltyMessage</td>
-<td><a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types">unsigned long&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="unsigned-longhttpsencppreferencecomwcpplanguagetypessigned_and_unsigned_integer_typesnbspgetbunsavedchanges">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types">unsigned long&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> GetbUnsavedChanges()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#unsigned-longhttpsencppreferencecomwcpplanguagetypessigned_and_unsigned_integer_typesnbspgetbunsavedchanges" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor unsigned long&nbsp; GetbUnsavedChanges()" href="#unsigned-longhttpsencppreferencecomwcpplanguagetypessigned_and_unsigned_integer_typesnbspgetbunsavedchanges">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetbunsavedchangesunsigned-long-newbunsavedchanges">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> SetbUnsavedChanges(unsigned long newbUnsavedChanges)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetbunsavedchangesunsigned-long-newbunsavedchanges" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; SetbUnsavedChanges(unsigned long newbUnsavedChanges)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetbunsavedchangesunsigned-long-newbunsavedchanges">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>newbUnsavedChanges</td>
-<td><a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types">unsigned long&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="inthttpsencppreferencecomwcpplanguagetypessigned_and_unsigned_integer_typesnbspgetpointsscoredthisround">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types">int&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> GetPointsScoredThisRound()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#inthttpsencppreferencecomwcpplanguagetypessigned_and_unsigned_integer_typesnbspgetpointsscoredthisround" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor int&nbsp; GetPointsScoredThisRound()" href="#inthttpsencppreferencecomwcpplanguagetypessigned_and_unsigned_integer_typesnbspgetpointsscoredthisround">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetpointsscoredthisroundint-newpointsscoredthisround">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> SetPointsScoredThisRound(int newPointsScoredThisRound)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetpointsscoredthisroundint-newpointsscoredthisround" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; SetPointsScoredThisRound(int newPointsScoredThisRound)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetpointsscoredthisroundint-newpointsscoredthisround">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>newPointsScoredThisRound</td>
-<td><a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types">int&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="inthttpsencppreferencecomwcpplanguagetypessigned_and_unsigned_integer_typesnbspgetshotattempt">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types">int&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> GetShotAttempt()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#inthttpsencppreferencecomwcpplanguagetypessigned_and_unsigned_integer_typesnbspgetshotattempt" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor int&nbsp; GetShotAttempt()" href="#inthttpsencppreferencecomwcpplanguagetypessigned_and_unsigned_integer_typesnbspgetshotattempt">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetshotattemptint-newshotattempt">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> SetShotAttempt(int newShotAttempt)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetshotattemptint-newshotattempt" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; SetShotAttempt(int newShotAttempt)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetshotattemptint-newshotattempt">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>newShotAttempt</td>
-<td><a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types">int&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="inthttpsencppreferencecomwcpplanguagetypessigned_and_unsigned_integer_typesnbspgetgoaliescore">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types">int&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> GetGoalieScore()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#inthttpsencppreferencecomwcpplanguagetypessigned_and_unsigned_integer_typesnbspgetgoaliescore" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor int&nbsp; GetGoalieScore()" href="#inthttpsencppreferencecomwcpplanguagetypessigned_and_unsigned_integer_typesnbspgetgoaliescore">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetgoaliescoreint-newgoaliescore">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> SetGoalieScore(int newGoalieScore)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetgoaliescoreint-newgoaliescore" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; SetGoalieScore(int newGoalieScore)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetgoaliescoreint-newgoaliescore">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>newGoalieScore</td>
-<td><a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types">int&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="unsigned-charhttpsencppreferencecomwcpplanguagetypescharacter_typesnbspgetplaytesttype">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Character_types">unsigned char&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> GetPlayTestType()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#unsigned-charhttpsencppreferencecomwcpplanguagetypescharacter_typesnbspgetplaytesttype" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor unsigned char&nbsp; GetPlayTestType()" href="#unsigned-charhttpsencppreferencecomwcpplanguagetypescharacter_typesnbspgetplaytesttype">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetplaytesttypeunsigned-char-newplaytesttype">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> SetPlayTestType(unsigned char newPlayTestType)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetplaytesttypeunsigned-char-newplaytesttype" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; SetPlayTestType(unsigned char newPlayTestType)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetplaytesttypeunsigned-char-newplaytesttype">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>newPlayTestType</td>
-<td><a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Character_types">unsigned char&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="arraywrapperbakkesmod_apiclasseswrappersarraywrappernbspgetgoalmeshblockers">
-        <a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/ArrayWrapper">ArrayWrapper</a> GetGoalMeshBlockers()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#arraywrapperbakkesmod_apiclasseswrappersarraywrappernbspgetgoalmeshblockers" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor ArrayWrapper GetGoalMeshBlockers()" href="#arraywrapperbakkesmod_apiclasseswrappersarraywrappernbspgetgoalmeshblockers">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="actorwrapperbakkesmod_apiclasseswrappersengineactorwrappernbspgetgoalmeshblockerarchetype">
-        <a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/Engine/ActorWrapper">ActorWrapper</a> GetGoalMeshBlockerArchetype()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#actorwrapperbakkesmod_apiclasseswrappersengineactorwrappernbspgetgoalmeshblockerarchetype" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor ActorWrapper GetGoalMeshBlockerArchetype()" href="#actorwrapperbakkesmod_apiclasseswrappersengineactorwrappernbspgetgoalmeshblockerarchetype">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetgoalmeshblockerarchetypeactorwrapper-newgoalmeshblockerarchetype">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> SetGoalMeshBlockerArchetype(ActorWrapper newGoalMeshBlockerArchetype)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetgoalmeshblockerarchetypeactorwrapper-newgoalmeshblockerarchetype" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; SetGoalMeshBlockerArchetype(ActorWrapper newGoalMeshBlockerArchetype)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetgoalmeshblockerarchetypeactorwrapper-newgoalmeshblockerarchetype">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>newGoalMeshBlockerArchetype</td>
-<td><a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/Engine/ActorWrapper">ActorWrapper</a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="gameeditorsavedatawrapperbakkesmod_apiclasseswrappersgameeventsavedatagameeditorsavedatawrappernbspgettrainingdata">
-        <a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameEvent/SaveData/GameEditorSaveDataWrapper">GameEditorSaveDataWrapper</a> GetTrainingData()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#gameeditorsavedatawrapperbakkesmod_apiclasseswrappersgameeventsavedatagameeditorsavedatawrappernbspgettrainingdata" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor GameEditorSaveDataWrapper GetTrainingData()" href="#gameeditorsavedatawrapperbakkesmod_apiclasseswrappersgameeventsavedatagameeditorsavedatawrappernbspgettrainingdata">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsettrainingdatagameeditorsavedatawrapper-newtrainingdata">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> SetTrainingData(GameEditorSaveDataWrapper newTrainingData)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsettrainingdatagameeditorsavedatawrapper-newtrainingdata" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; SetTrainingData(GameEditorSaveDataWrapper newTrainingData)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsettrainingdatagameeditorsavedatawrapper-newtrainingdata">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>newTrainingData</td>
-<td><a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameEvent/SaveData/GameEditorSaveDataWrapper">GameEditorSaveDataWrapper</a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="floathttpsencppreferencecomwcpplanguagetypesfloating-point_typesnbspgetsavedelaytime">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Floating-point_types">float&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> GetSaveDelayTime()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#floathttpsencppreferencecomwcpplanguagetypesfloating-point_typesnbspgetsavedelaytime" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor float&nbsp; GetSaveDelayTime()" href="#floathttpsencppreferencecomwcpplanguagetypesfloating-point_typesnbspgetsavedelaytime">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetsavedelaytimefloat-newsavedelaytime">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> SetSaveDelayTime(float newSaveDelayTime)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetsavedelaytimefloat-newsavedelaytime" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; SetSaveDelayTime(float newSaveDelayTime)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetsavedelaytimefloat-newsavedelaytime">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>newSaveDelayTime</td>
-<td><a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Floating-point_types">float&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="floathttpsencppreferencecomwcpplanguagetypesfloating-point_typesnbspgetsavecooldown">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Floating-point_types">float&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> GetSaveCooldown()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#floathttpsencppreferencecomwcpplanguagetypesfloating-point_typesnbspgetsavecooldown" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor float&nbsp; GetSaveCooldown()" href="#floathttpsencppreferencecomwcpplanguagetypesfloating-point_typesnbspgetsavecooldown">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetsavecooldownfloat-newsavecooldown">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> SetSaveCooldown(float newSaveCooldown)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetsavecooldownfloat-newsavecooldown" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; SetSaveCooldown(float newSaveCooldown)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetsavecooldownfloat-newsavecooldown">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>newSaveCooldown</td>
-<td><a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Floating-point_types">float&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="unrealstringwrapperbakkesmod_apiclasseswrappersengineunrealstringwrappernbspgettrainingfilename">
-        <a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/Engine/UnrealStringWrapper">UnrealStringWrapper</a> GetTrainingFileName()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#unrealstringwrapperbakkesmod_apiclasseswrappersengineunrealstringwrappernbspgettrainingfilename" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor UnrealStringWrapper GetTrainingFileName()" href="#unrealstringwrapperbakkesmod_apiclasseswrappersengineunrealstringwrappernbspgettrainingfilename">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbsponloadingmovieclosed">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> OnLoadingMovieClosed()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbsponloadingmovieclosed" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; OnLoadingMovieClosed()" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbsponloadingmovieclosed">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbsptaghistorychanges">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> TagHistoryChanges()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbsptaghistorychanges" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; TagHistoryChanges()" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbsptaghistorychanges">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspmarkasdirty">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> MarkAsDirty()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspmarkasdirty" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; MarkAsDirty()" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspmarkasdirty">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspforcetaghistorychanges">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> ForceTagHistoryChanges()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspforcetaghistorychanges" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; ForceTagHistoryChanges()" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspforcetaghistorychanges">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsettracedcrosshairactorplayercontrollerwrapper-pc-actorwrapper-newactor">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> SetTracedCrosshairActor(PlayerControllerWrapper PC, ActorWrapper NewActor)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsettracedcrosshairactorplayercontrollerwrapper-pc-actorwrapper-newactor" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; SetTracedCrosshairActor(PlayerControllerWrapper PC, ActorWrapper NewActor)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsettracedcrosshairactorplayercontrollerwrapper-pc-actorwrapper-newactor">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>PC</td>
-<td><a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/PlayerControllerWrapper">PlayerControllerWrapper</a></td>
-<td>&mdash;</td>
-</tr>
-<tr>
-<td>NewActor</td>
-<td><a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/Engine/ActorWrapper">ActorWrapper</a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="boolhttpsencppreferencecomwcpplanguagetypesboolean_typenbspdestroyballballwrapper-ball">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Boolean_type">bool&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> DestroyBall(BallWrapper Ball)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#boolhttpsencppreferencecomwcpplanguagetypesboolean_typenbspdestroyballballwrapper-ball" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor bool&nbsp; DestroyBall(BallWrapper Ball)" href="#boolhttpsencppreferencecomwcpplanguagetypesboolean_typenbspdestroyballballwrapper-ball">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Ball</td>
-<td><a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameObject/BallWrapper">BallWrapper</a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="boolhttpsencppreferencecomwcpplanguagetypesboolean_typenbspallowdynamiccrowd">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Boolean_type">bool&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> AllowDynamicCrowd()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#boolhttpsencppreferencecomwcpplanguagetypesboolean_typenbspallowdynamiccrowd" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor bool&nbsp; AllowDynamicCrowd()" href="#boolhttpsencppreferencecomwcpplanguagetypesboolean_typenbspallowdynamiccrowd">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspbroadcastgomessage">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> BroadcastGoMessage()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspbroadcastgomessage" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; BroadcastGoMessage()" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspbroadcastgomessage">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="inthttpsencppreferencecomwcpplanguagetypessigned_and_unsigned_integer_typesnbspgettotalrounds">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types">int&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> GetTotalRounds()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#inthttpsencppreferencecomwcpplanguagetypessigned_and_unsigned_integer_typesnbspgettotalrounds" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor int&nbsp; GetTotalRounds()" href="#inthttpsencppreferencecomwcpplanguagetypessigned_and_unsigned_integer_typesnbspgettotalrounds">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="unsigned-charhttpsencppreferencecomwcpplanguagetypescharacter_typesnbspgetdifficulty">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Character_types">unsigned char&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> GetDifficulty()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#unsigned-charhttpsencppreferencecomwcpplanguagetypescharacter_typesnbspgetdifficulty" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor unsigned char&nbsp; GetDifficulty()" href="#unsigned-charhttpsencppreferencecomwcpplanguagetypescharacter_typesnbspgetdifficulty">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="unsigned-charhttpsencppreferencecomwcpplanguagetypescharacter_typesnbspgettrainingtype">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Character_types">unsigned char&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> GetTrainingType()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#unsigned-charhttpsencppreferencecomwcpplanguagetypescharacter_typesnbspgettrainingtype" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor unsigned char&nbsp; GetTrainingType()" href="#unsigned-charhttpsencppreferencecomwcpplanguagetypescharacter_typesnbspgettrainingtype">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsave2">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> Save2()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsave2" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; Save2()" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsave2">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspontrainingmodeloaded">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> OnTrainingModeLoaded()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspontrainingmodeloaded" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; OnTrainingModeLoaded()" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspontrainingmodeloaded">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspduplicateroundint-index">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> DuplicateRound(int Index)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspduplicateroundint-index" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; DuplicateRound(int Index)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspduplicateroundint-index">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Index</td>
-<td><a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types">int&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspreorderroundint-fromindex-int-toindex">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> ReorderRound(int FromIndex, int ToIndex)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspreorderroundint-fromindex-int-toindex" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; ReorderRound(int FromIndex, int ToIndex)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspreorderroundint-fromindex-int-toindex">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>FromIndex</td>
-<td><a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types">int&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a></td>
-<td>&mdash;</td>
-</tr>
-<tr>
-<td>ToIndex</td>
-<td><a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types">int&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetroundtimelimitfloat-newroundtime">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> SetRoundTimeLimit(float NewRoundTime)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetroundtimelimitfloat-newroundtime" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; SetRoundTimeLimit(float NewRoundTime)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetroundtimelimitfloat-newroundtime">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>NewRoundTime</td>
-<td><a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Floating-point_types">float&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="boolhttpsencppreferencecomwcpplanguagetypesboolean_typenbsphandlenextgame">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Boolean_type">bool&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> HandleNextGame()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#boolhttpsencppreferencecomwcpplanguagetypesboolean_typenbsphandlenextgame" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor bool&nbsp; HandleNextGame()" href="#boolhttpsencppreferencecomwcpplanguagetypesboolean_typenbsphandlenextgame">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspresetballs">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> ResetBalls()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspresetballs" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; ResetBalls()" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspresetballs">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspload2stdstring-savename-playercontrollerwrapper-pc">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> Load2(std::string SaveName, PlayerControllerWrapper PC)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspload2stdstring-savename-playercontrollerwrapper-pc" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; Load2(std::string SaveName, PlayerControllerWrapper PC)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspload2stdstring-savename-playercontrollerwrapper-pc">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>SaveName</td>
-<td><a class="gdoc-markdown__link" target="_blank" href="https://www.cplusplus.com/reference/string/string/">std::string&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a></td>
-<td>&mdash;</td>
-</tr>
-<tr>
-<td>PC</td>
-<td><a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/PlayerControllerWrapper">PlayerControllerWrapper</a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspdestroygoalmeshblockers">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> DestroyGoalMeshBlockers()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspdestroygoalmeshblockers" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; DestroyGoalMeshBlockers()" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspdestroygoalmeshblockers">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspupdategoalmeshblocker">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> UpdateGoalMeshBlocker()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspupdategoalmeshblocker" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; UpdateGoalMeshBlocker()" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspupdategoalmeshblocker">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="inthttpsencppreferencecomwcpplanguagetypessigned_and_unsigned_integer_typesnbspgetscore">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types">int&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> GetScore()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#inthttpsencppreferencecomwcpplanguagetypessigned_and_unsigned_integer_typesnbspgetscore" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor int&nbsp; GetScore()" href="#inthttpsencppreferencecomwcpplanguagetypessigned_and_unsigned_integer_typesnbspgetscore">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspremovepointsfromscoreint-pointstoremove-int-teamindex">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> RemovePointsFromScore(int PointsToRemove, int TeamIndex)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspremovepointsfromscoreint-pointstoremove-int-teamindex" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; RemovePointsFromScore(int PointsToRemove, int TeamIndex)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspremovepointsfromscoreint-pointstoremove-int-teamindex">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>PointsToRemove</td>
-<td><a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types">int&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a></td>
-<td>&mdash;</td>
-</tr>
-<tr>
-<td>TeamIndex</td>
-<td><a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types">int&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="boolhttpsencppreferencecomwcpplanguagetypesboolean_typenbspshowscorergoalmessage">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Boolean_type">bool&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> ShowScorerGoalMessage()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#boolhttpsencppreferencecomwcpplanguagetypesboolean_typenbspshowscorergoalmessage" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor bool&nbsp; ShowScorerGoalMessage()" href="#boolhttpsencppreferencecomwcpplanguagetypesboolean_typenbspshowscorergoalmessage">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspshowresetroundmessage">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> ShowResetRoundMessage()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspshowresetroundmessage" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; ShowResetRoundMessage()" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspshowresetroundmessage">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="boolhttpsencppreferencecomwcpplanguagetypesboolean_typenbspshowpenaltymessage">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Boolean_type">bool&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> ShowPenaltyMessage()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#boolhttpsencppreferencecomwcpplanguagetypesboolean_typenbspshowpenaltymessage" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor bool&nbsp; ShowPenaltyMessage()" href="#boolhttpsencppreferencecomwcpplanguagetypesboolean_typenbspshowpenaltymessage">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="inthttpsencppreferencecomwcpplanguagetypessigned_and_unsigned_integer_typesnbspgetplayerteamnumber">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types">int&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> GetPlayerTeamNumber()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#inthttpsencppreferencecomwcpplanguagetypessigned_and_unsigned_integer_typesnbspgetplayerteamnumber" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor int&nbsp; GetPlayerTeamNumber()" href="#inthttpsencppreferencecomwcpplanguagetypessigned_and_unsigned_integer_typesnbspgetplayerteamnumber">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="inthttpsencppreferencecomwcpplanguagetypessigned_and_unsigned_integer_typesnbspgetballgoalscorenumber">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types">int&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> GetBallGoalScoreNumber()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#inthttpsencppreferencecomwcpplanguagetypessigned_and_unsigned_integer_typesnbspgetballgoalscorenumber" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor int&nbsp; GetBallGoalScoreNumber()" href="#inthttpsencppreferencecomwcpplanguagetypessigned_and_unsigned_integer_typesnbspgetballgoalscorenumber">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspremoveallpointsfromscoreint-teamindex">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> RemoveAllPointsFromScore(int TeamIndex)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspremoveallpointsfromscoreint-teamindex" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; RemoveAllPointsFromScore(int TeamIndex)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspremoveallpointsfromscoreint-teamindex">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>TeamIndex</td>
-<td><a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types">int&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="boolhttpsencppreferencecomwcpplanguagetypesboolean_typenbspincrementroundunsigned-long-bloop">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Boolean_type">bool&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> IncrementRound(unsigned long bLoop)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#boolhttpsencppreferencecomwcpplanguagetypesboolean_typenbspincrementroundunsigned-long-bloop" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor bool&nbsp; IncrementRound(unsigned long bLoop)" href="#boolhttpsencppreferencecomwcpplanguagetypesboolean_typenbspincrementroundunsigned-long-bloop">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>bLoop</td>
-<td><a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types">unsigned long&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="vectorbakkesmod_apistructswrappersvectornbspadjusttofloorlocationvector-amptracestart-vector-ampcollsionextent">
-        <a class="gdoc-markdown__link"  href="/bakkesmod_api/Structs/Wrappers/Vector">Vector</a> AdjustToFloorLocation(Vector &amp;TraceStart, Vector &amp;CollsionExtent)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#vectorbakkesmod_apistructswrappersvectornbspadjusttofloorlocationvector-amptracestart-vector-ampcollsionextent" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor Vector AdjustToFloorLocation(Vector &amp;TraceStart, Vector &amp;CollsionExtent)" href="#vectorbakkesmod_apistructswrappersvectornbspadjusttofloorlocationvector-amptracestart-vector-ampcollsionextent">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>TraceStart</td>
-<td><a class="gdoc-markdown__link"  href="/bakkesmod_api/Structs/Wrappers/Vector">Vector</a></td>
-<td>&mdash;</td>
-</tr>
-<tr>
-<td>CollsionExtent</td>
-<td><a class="gdoc-markdown__link"  href="/bakkesmod_api/Structs/Wrappers/Vector">Vector</a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="actorwrapperbakkesmod_apiclasseswrappersengineactorwrappernbspspawnarchetypeatandadjusttoflooractorwrapper-archetype-vector-ampspawnlocation-rotator-ampspawnrotation">
-        <a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/Engine/ActorWrapper">ActorWrapper</a> SpawnArchetypeAtAndAdjustToFloor(ActorWrapper Archetype, Vector &amp;SpawnLocation, Rotator &amp;SpawnRotation)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#actorwrapperbakkesmod_apiclasseswrappersengineactorwrappernbspspawnarchetypeatandadjusttoflooractorwrapper-archetype-vector-ampspawnlocation-rotator-ampspawnrotation" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor ActorWrapper SpawnArchetypeAtAndAdjustToFloor(ActorWrapper Archetype, Vector &amp;SpawnLocation, Rotator &amp;SpawnRotation)" href="#actorwrapperbakkesmod_apiclasseswrappersengineactorwrappernbspspawnarchetypeatandadjusttoflooractorwrapper-archetype-vector-ampspawnlocation-rotator-ampspawnrotation">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Archetype</td>
-<td><a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/Engine/ActorWrapper">ActorWrapper</a></td>
-<td>&mdash;</td>
-</tr>
-<tr>
-<td>SpawnLocation</td>
-<td><a class="gdoc-markdown__link"  href="/bakkesmod_api/Structs/Wrappers/Vector">Vector</a></td>
-<td>&mdash;</td>
-</tr>
-<tr>
-<td>SpawnRotation</td>
-<td><a class="gdoc-markdown__link"  href="/bakkesmod_api/Structs/Wrappers/Rotator">Rotator</a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspspawnballandstartpointatvector-ampballspawnlocation-rotator-ampballspawnrotation-vector-ampstartpointspawnlocation-rotator-ampstartpointspawnrotation">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> SpawnBallAndStartPointAt(Vector &amp;BallSpawnLocation, Rotator &amp;BallSpawnRotation, Vector &amp;StartPointSpawnLocation, Rotator &amp;StartPointSpawnRotation)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspspawnballandstartpointatvector-ampballspawnlocation-rotator-ampballspawnrotation-vector-ampstartpointspawnlocation-rotator-ampstartpointspawnrotation" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; SpawnBallAndStartPointAt(Vector &amp;BallSpawnLocation, Rotator &amp;BallSpawnRotation, Vector &amp;StartPointSpawnLocation, Rotator &amp;StartPointSpawnRotation)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspspawnballandstartpointatvector-ampballspawnlocation-rotator-ampballspawnrotation-vector-ampstartpointspawnlocation-rotator-ampstartpointspawnrotation">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>BallSpawnLocation</td>
-<td><a class="gdoc-markdown__link"  href="/bakkesmod_api/Structs/Wrappers/Vector">Vector</a></td>
-<td>&mdash;</td>
-</tr>
-<tr>
-<td>BallSpawnRotation</td>
-<td><a class="gdoc-markdown__link"  href="/bakkesmod_api/Structs/Wrappers/Rotator">Rotator</a></td>
-<td>&mdash;</td>
-</tr>
-<tr>
-<td>StartPointSpawnLocation</td>
-<td><a class="gdoc-markdown__link"  href="/bakkesmod_api/Structs/Wrappers/Vector">Vector</a></td>
-<td>&mdash;</td>
-</tr>
-<tr>
-<td>StartPointSpawnRotation</td>
-<td><a class="gdoc-markdown__link"  href="/bakkesmod_api/Structs/Wrappers/Rotator">Rotator</a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetupdefaultround">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> SetupDefaultRound()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetupdefaultround" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; SetupDefaultRound()" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetupdefaultround">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspswitchtoroundnumberint-roundnumber-unsigned-long-backupcurrentround">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> SwitchToRoundNumber(int RoundNumber, unsigned long BackupCurrentRound)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspswitchtoroundnumberint-roundnumber-unsigned-long-backupcurrentround" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; SwitchToRoundNumber(int RoundNumber, unsigned long BackupCurrentRound)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspswitchtoroundnumberint-roundnumber-unsigned-long-backupcurrentround">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>RoundNumber</td>
-<td><a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types">int&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a></td>
-<td>&mdash;</td>
-</tr>
-<tr>
-<td>BackupCurrentRound</td>
-<td><a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types">unsigned long&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspdeleteroundint-roundtodelete">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> DeleteRound(int RoundToDelete)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspdeleteroundint-roundtodelete" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; DeleteRound(int RoundToDelete)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspdeleteroundint-roundtodelete">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>RoundToDelete</td>
-<td><a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types">int&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbsprestartplaytest">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> RestartPlayTest()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbsprestartplaytest" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; RestartPlayTest()" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbsprestartplaytest">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspendplaytest">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> EndPlayTest()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspendplaytest" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; EndPlayTest()" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspendplaytest">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspstartplaytestunsigned-char-inplaytesttype">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> StartPlayTest(unsigned char InPlayTestType)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspstartplaytestunsigned-char-inplaytesttype" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; StartPlayTest(unsigned char InPlayTestType)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspstartplaytestunsigned-char-inplaytesttype">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>InPlayTestType</td>
-<td><a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Character_types">unsigned char&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="boolhttpsencppreferencecomwcpplanguagetypesboolean_typenbspcanplaytestroundnumberint-roundnumber">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Boolean_type">bool&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> CanPlayTestRoundNumber(int RoundNumber)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#boolhttpsencppreferencecomwcpplanguagetypesboolean_typenbspcanplaytestroundnumberint-roundnumber" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor bool&nbsp; CanPlayTestRoundNumber(int RoundNumber)" href="#boolhttpsencppreferencecomwcpplanguagetypesboolean_typenbspcanplaytestroundnumberint-roundnumber">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>RoundNumber</td>
-<td><a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types">int&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetunsavedchangesunsigned-long-binunsavedchanges">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> SetUnsavedChanges(unsigned long bInUnsavedChanges)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetunsavedchangesunsigned-long-binunsavedchanges" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; SetUnsavedChanges(unsigned long bInUnsavedChanges)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetunsavedchangesunsigned-long-binunsavedchanges">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>bInUnsavedChanges</td>
-<td><a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types">unsigned long&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspupdateactiverounddata">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> UpdateActiveRoundData()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspupdateactiverounddata" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; UpdateActiveRoundData()" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspupdateactiverounddata">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspstartnewround">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> StartNewRound()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspstartnewround" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; StartNewRound()" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspstartnewround">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="boolhttpsencppreferencecomwcpplanguagetypesboolean_typenbspisvalidroundindexint-arrayindex">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Boolean_type">bool&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> IsValidRoundIndex(int ArrayIndex)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#boolhttpsencppreferencecomwcpplanguagetypesboolean_typenbspisvalidroundindexint-arrayindex" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor bool&nbsp; IsValidRoundIndex(int ArrayIndex)" href="#boolhttpsencppreferencecomwcpplanguagetypesboolean_typenbspisvalidroundindexint-arrayindex">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ArrayIndex</td>
-<td><a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types">int&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspaddlocalplayerplayercontrollerwrapper-player">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> AddLocalPlayer(PlayerControllerWrapper Player)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspaddlocalplayerplayercontrollerwrapper-player" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; AddLocalPlayer(PlayerControllerWrapper Player)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspaddlocalplayerplayercontrollerwrapper-player">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Player</td>
-<td><a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/PlayerControllerWrapper">PlayerControllerWrapper</a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbsponinit">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> OnInit()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbsponinit" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; OnInit()" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbsponinit">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspeventdestroyed">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> eventDestroyed()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspeventdestroyed" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; eventDestroyed()" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspeventdestroyed">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspeventpostbeginplay">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> eventPostBeginPlay()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspeventpostbeginplay" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; eventPostBeginPlay()" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspeventpostbeginplay">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspeventsaveresultunsigned-long-bsuccess">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> EventSaveResult(unsigned long bSuccess)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspeventsaveresultunsigned-long-bsuccess" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; EventSaveResult(unsigned long bSuccess)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspeventsaveresultunsigned-long-bsuccess">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>bSuccess</td>
-<td><a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types">unsigned long&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspeventunsavedchangesunsigned-long-boutunsavedchanges">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> EventUnsavedChanges(unsigned long bOutUnsavedChanges)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspeventunsavedchangesunsigned-long-boutunsavedchanges" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; EventUnsavedChanges(unsigned long bOutUnsavedChanges)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspeventunsavedchangesunsigned-long-boutunsavedchanges">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>bOutUnsavedChanges</td>
-<td><a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types">unsigned long&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspeventplayteststartedtrainingeditorwrapper-gamevent">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> EventPlaytestStarted(TrainingEditorWrapper GamEvent)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspeventplayteststartedtrainingeditorwrapper-gamevent" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; EventPlaytestStarted(TrainingEditorWrapper GamEvent)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspeventplayteststartedtrainingeditorwrapper-gamevent">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>GamEvent</td>
-<td><a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper">TrainingEditorWrapper</a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspeventroundchangedtrainingeditorwrapper-gamevent">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> EventRoundChanged(TrainingEditorWrapper GamEvent)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspeventroundchangedtrainingeditorwrapper-gamevent" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; EventRoundChanged(TrainingEditorWrapper GamEvent)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspeventroundchangedtrainingeditorwrapper-gamevent">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>GamEvent</td>
-<td><a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper">TrainingEditorWrapper</a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspeventroundtimechangedtrainingeditorwrapper-gameevent">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> EventRoundTimeChanged(TrainingEditorWrapper GameEvent)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspeventroundtimechangedtrainingeditorwrapper-gameevent" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; EventRoundTimeChanged(TrainingEditorWrapper GameEvent)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspeventroundtimechangedtrainingeditorwrapper-gameevent">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>GameEvent</td>
-<td><a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper">TrainingEditorWrapper</a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-
+        <hr>
+        <div>Written by <b>ubelhj</b></div>
         
     </article>
 
