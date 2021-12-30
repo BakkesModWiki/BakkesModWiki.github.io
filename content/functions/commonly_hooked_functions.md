@@ -22,3 +22,5 @@ This is a list of functions that we use regularly, as well as when they fire. We
 `"Function GameEvent_TA.Countdown.BeginState"` Happens when a match countdown begins or at the beginning/reset of freeplay
 
 `"Function TAGame.Ball_TA.OnHitGoal"` Happens when a goal is scored
+
+`"Function TAGame.GameEvent_Soccar_TA.OnGameTimeUpdated"` Happens when the time on the game clock changes. Note that this is not real time. At 0:00 with the ball up it won't be called
