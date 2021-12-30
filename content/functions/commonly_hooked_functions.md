@@ -9,9 +9,9 @@ This is a list of functions that we use regularly, as well as when they fire. We
 
 `"Function Engine.GameViewportClient.Tick"` This event is called every rendered frame. This is very powerful, but again can have issues. Different framerates and stutters can make the number of ticks different on different PCs
 
-`"Function TAGame.Ball_TA.OnCarTouch"` This event is called when a [BallWrapper](/bakkesmod_api/Classes/Wrappers/GameObject/CarWrapper/) hits a car. The caller is the ball that hit, and the first parameter is the [CarWrapper](/bakkesmod_api/Classes/Wrappers/GameObject/CarWrapper/) touched
+`"Function TAGame.Ball_TA.OnCarTouch"` This event is called when a [BallWrapper](/bakkesmod_api/Classes/Wrappers/GameObject/BallWrapper/) hits a car. The caller is the ball that hit, and the first parameter is the [CarWrapper](/bakkesmod_api/Classes/Wrappers/GameObject/CarWrapper/) touched
 
-`"Function TAGame.Car_TA.OnHitBall"` This event is called when a car hits a ball. The caller is the [CarWrapper](/bakkesmod_api/Classes/Wrappers/GameObject/CarWrapper/) that hit, and the first parameter is the [BallWrapper](/bakkesmod_api/Classes/Wrappers/GameObject/CarWrapper/) touched
+`"Function TAGame.Car_TA.OnHitBall"` This event is called when a car hits a ball. The caller is the [CarWrapper](/bakkesmod_api/Classes/Wrappers/GameObject/CarWrapper/) that hit, and the first parameter is the [BallWrapper](/bakkesmod_api/Classes/Wrappers/GameObject/BallWrapper/) touched
 
 `"Function TAGame.GameEvent_Soccar_TA.EventMatchEnded"` Happens at the end of a match when the podium is shown. If someone quits early it is not called. The caller is a [ServerWrapper](/bakkesmod_api/Classes/Wrappers/GameEvent/ServerWrapper/).
 

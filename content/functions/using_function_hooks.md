@@ -39,6 +39,24 @@ gameWrapper->HookEventWithCallerPost<CarWrapper>("Function TAGame.Car_TA.SetVehi
 The two WithCaller variants do the same thing, but let you know a bit more about what is using the function
 
 They provide a `caller` value which is obtained from the function's name. After `Function TAGame` there will be a class name ending in `_TA`. If the name matches a wrapper name, you can hook it as that wrapper. `Car_TA` becomes [CarWrapper](/bakkesmod_api/Classes/Wrappers/GameObject/CarWrapper/) for example
-They also provide a `void *` pointer. This points at the location of any parameters provided to the function. These aren't well documented, and are hard to guess, so feel free to ask about them if you think you need them
+They also provide a `void *` pointer. This points at the location of any parameters provided to the function. These aren't well documented, and are hard to guess, so feel free to ask about them if you think you need them. 
+
+For example `Function TAGame.Car_TA.OnHitBall` has a [BallWrapper](/bakkesmod_api/Classes/Wrappers/GameObject/BallWrapper/) parameter. To access it, cast the `void *` pointer to a struct including the parameters
+
+```cpp
+struct CarHitBallParams {
+  // This is a pointer to the ball's address 
+  //  but needs to be constructed into a BallWrapper before use
+  uintptr_t ball;
+};
+
+gameWrapper->HookEventWithCallerPost<CarWrapper>("Function TAGame.Car_TA.OnHitBall",
+  [this](CarWrapper caller, void* params, std::string eventname) {
+    // This cast is only safe if you're 100% sure the params are correct
+    CarHitBallParams* params = (CarHitBallParams*) params; 
+    BallWrapper ballHit = BallWrapper(params->ball);
+    // Now you know what ball was hit!
+});
+```
 
 Find functions with the [function scanner](/functions/function_scanner/)
