@@ -16,6 +16,10 @@ Happens when a goal is scored
 `"Function TAGame.Ball_TA.Explode"`  
 Happens when a ball explodes. Usually this means a goal was scored
 
+## [BoostWrapper Caller](/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/BoostWrapper/)
+`"Function TAGame.VehiclePickup_Boost_TA.Pickup"`
+Happens when a car picks up a boost. The first parameter is the [CarWrapper](/bakkesmod_api/Classes/Wrappers/GameObject/CarWrapper/) touched
+
 ## [CarWrapper Caller](/bakkesmod_api/Classes/Wrappers/GameObject/CarWrapper/)
 `"Function TAGame.Car_TA.SetVehicleInput"`  
 This event is called every physics tick while you are playing. This is 120 times per second. This can be highly useful but isn't perfect. It doesn't fire while spectating matches. While hosting a match it fires once per tick per car in the match
@@ -54,6 +58,9 @@ Happens at the start of a kickoff countdown or at the beginning/reset of freepla
 
 `"Function TAGame.GameEvent_Soccar_TA.Destroyed"`  
 Happens when a match is left by the player. The caller may be null or unsafe to use as the match is destroyed
+
+`"Function TAGame.GameEvent_TA.AddCar"`
+Happens whenenever a car spawns. Useful if modifying car physics that may reset after a respawn
 
 ## [StatEventWrapper Caller](/bakkesmod_api/Classes/Wrappers/GameObject/Stats/StatEventWrapper/)
 ### [StatEventWrapper functions are explained here](/functions/stat_events/)
