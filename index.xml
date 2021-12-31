@@ -1946,7 +1946,10 @@ Vector Normal     Default value: none</description>
       
       <guid>https://bakkesmodwiki.github.io/functions/commonly_hooked_functions/</guid>
       <description>This is a list of functions that we use regularly, as well as when they fire. We&amp;rsquo;ll never be able to document them all but hopefully this helps. Hook them with Function Hooks
-&amp;quot;Function TAGame.Car_TA.SetVehicleInput&amp;quot; This event is called every physics tick while you are playing. This is 120 times per second. This can be highly useful but isn&amp;rsquo;t perfect. It doesn&amp;rsquo;t fire while spectating matches. While hosting a match it fires once per tick per car in the match.</description>
+BallWrapper Caller    &amp;quot;Function TAGame.Ball_TA.OnCarTouch&amp;quot;
+This event is called when a BallWrapper hits a car. The caller is the ball that hit, and the first parameter is the CarWrapper touched
+&amp;quot;Function TAGame.Ball_TA.OnHitGoal&amp;quot;
+Happens when a goal is scored</description>
     </item>
     
     <item>
@@ -1985,7 +1988,7 @@ Yet again we have the CoolPlugin from Plugin Variables and we want to add a butt
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/functions/stat_events/</guid>
-      <description>Stat events are a great way to show a slightly more complicated plugin logic. They are fairly common to use, use multiple wrappers, event hooks, and have some unique caveots. Also I made a plugin with them so I know how they work. Hopefully this helps someone
+      <description>Stat events are a great way to show a slightly more complicated plugin logic. They are fairly common to use, use multiple wrappers, event hooks, and have some unique caveats. Also I made a plugin with them so I know how they work. Hopefully this helps someone
 First add this include to the top of your .h
 #include &amp;quot;bakkesmod/wrappers/GameObject/Stats/StatEventWrapper.h&amp;quot;
 You need to hook some events to use stat events. This depends on your use case.</description>
@@ -2100,16 +2103,6 @@ Usage
 // preferably in onload but at least before you use it (genious advice) persistent_storage_ = std::make_shared&amp;lt;PersistentStorage&amp;gt;(this, &amp;#34;Hats&amp;#34;, true, true); //register the cvar like &amp;#34;normal&amp;#34; auto cvar = persistent_storage_-&amp;gt;RegisterPersistentCvar(&amp;#34;hats_preset&amp;#34;, &amp;#34;&amp;#34;, &amp;#34;The selected preset&amp;#34;, true); Download these files to use
 PersistentStorage.h
 PersistentStorage.cpp</description>
-    </item>
-    
-    <item>
-      <title>Plugin Exclusive Log</title>
-      <link>https://bakkesmodwiki.github.io/useful_info/plugin_exclusive_log/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://bakkesmodwiki.github.io/useful_info/plugin_exclusive_log/</guid>
-      <description>Want to see the console logging from just your plugin? Open a new PowerShell window and use this command. Replace &amp;ldquo;PLUGIN_NAME&amp;rdquo; with your plugin&amp;rsquo;s class name
-Get-Content (-join($env:APPDATA, &amp;#34;\bakkesmod\bakkesmod\bakkesmod.log&amp;#34;)) -wait -tail 1 | select-string -pattern &amp;#34;PLUGIN_NAME&amp;#34; </description>
     </item>
     
     <item>

@@ -34,7 +34,10 @@ Set the -dev option    On Steam: Right click the game and hit properties Then ad
       
       <guid>https://bakkesmodwiki.github.io/functions/commonly_hooked_functions/</guid>
       <description>This is a list of functions that we use regularly, as well as when they fire. We&amp;rsquo;ll never be able to document them all but hopefully this helps. Hook them with Function Hooks
-&amp;quot;Function TAGame.Car_TA.SetVehicleInput&amp;quot; This event is called every physics tick while you are playing. This is 120 times per second. This can be highly useful but isn&amp;rsquo;t perfect. It doesn&amp;rsquo;t fire while spectating matches. While hosting a match it fires once per tick per car in the match.</description>
+BallWrapper Caller    &amp;quot;Function TAGame.Ball_TA.OnCarTouch&amp;quot;
+This event is called when a BallWrapper hits a car. The caller is the ball that hit, and the first parameter is the CarWrapper touched
+&amp;quot;Function TAGame.Ball_TA.OnHitGoal&amp;quot;
+Happens when a goal is scored</description>
     </item>
     
     <item>
@@ -53,7 +56,7 @@ template &amp;lt;typename T, typename std::enable_if&amp;lt;std::is_base_of&amp;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/functions/stat_events/</guid>
-      <description>Stat events are a great way to show a slightly more complicated plugin logic. They are fairly common to use, use multiple wrappers, event hooks, and have some unique caveots. Also I made a plugin with them so I know how they work. Hopefully this helps someone
+      <description>Stat events are a great way to show a slightly more complicated plugin logic. They are fairly common to use, use multiple wrappers, event hooks, and have some unique caveats. Also I made a plugin with them so I know how they work. Hopefully this helps someone
 First add this include to the top of your .h
 #include &amp;quot;bakkesmod/wrappers/GameObject/Stats/StatEventWrapper.h&amp;quot;
 You need to hook some events to use stat events. This depends on your use case.</description>
