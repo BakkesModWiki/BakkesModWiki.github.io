@@ -12,9 +12,8 @@
 
     <meta name="description" content="This is a list of functions that we use regularly, as well as when they fire. We&rsquo;ll never be able to document them all but hopefully this helps. Hook them with Function Hooks
 BallWrapper Caller    &quot;Function TAGame.Ball_TA.OnCarTouch&quot;
-This event is called when a BallWrapper hits a car. The caller is the ball that hit, and the first parameter is the CarWrapper touched
-&quot;Function TAGame.Ball_TA.OnHitGoal&quot;
-Happens when a goal is scored">
+This event is called when a ball hits a car. The caller is the ball that hit, and the first parameter is the CarWrapper touched
+struct BallCarTouchParams { uintptr_t car; } &quot;Function TAGame.">
 
 
 
@@ -11206,8 +11205,11 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
         </a>
     </h2>
 </div><p><code>&quot;Function TAGame.Ball_TA.OnCarTouch&quot;</code><br>
-This event is called when a <a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameObject/BallWrapper/">BallWrapper</a> hits a car. The caller is the ball that hit, and the first parameter is the <a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameObject/CarWrapper/">CarWrapper</a> touched</p>
-<p><code>&quot;Function TAGame.Ball_TA.OnHitGoal&quot;</code><br>
+This event is called when a ball hits a car. The caller is the ball that hit, and the first parameter is the <a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameObject/CarWrapper/">CarWrapper</a> touched</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">struct</span> <span class="nc">BallCarTouchParams</span> <span class="p">{</span>
+    <span class="n">uintptr_t</span> <span class="n">car</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><p><code>&quot;Function TAGame.Ball_TA.OnHitGoal&quot;</code><br>
 Happens when a goal is scored</p>
 <p><code>&quot;Function TAGame.Ball_TA.Explode&quot;</code><br>
 Happens when a ball explodes. Usually this means a goal was scored</p>
@@ -11219,8 +11221,11 @@ Happens when a ball explodes. Usually this means a goal was scored</p>
         </a>
     </h2>
 </div><p><code>&quot;Function TAGame.VehiclePickup_Boost_TA.Pickup&quot;</code>
-Happens when a car picks up a boost. The first parameter is the <a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameObject/CarWrapper/">CarWrapper</a> touched</p>
-<div class="gdoc-page__anchorwrap">
+Happens when a car picks up a boost</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">struct</span> <span class="nc">BoostPickupParams</span> <span class="p">{</span>
+    <span class="n">uintptr_t</span> <span class="n">car</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><div class="gdoc-page__anchorwrap">
     <h2 id="carwrapper-callerbakkesmod_apiclasseswrappersgameobjectcarwrapper">
         <a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameObject/CarWrapper/">CarWrapper Caller</a>
         <a data-clipboard-text="https://bakkesmodwiki.github.io/functions/commonly_hooked_functions/#carwrapper-callerbakkesmod_apiclasseswrappersgameobjectcarwrapper" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor CarWrapper Caller" href="#carwrapper-callerbakkesmod_apiclasseswrappersgameobjectcarwrapper">
@@ -11231,7 +11236,10 @@ Happens when a car picks up a boost. The first parameter is the <a class="gdoc-m
 This event is called every physics tick while you are playing. This is 120 times per second. This can be highly useful but isn&rsquo;t perfect. It doesn&rsquo;t fire while spectating matches. While hosting a match it fires once per tick per car in the match</p>
 <p><code>&quot;Function TAGame.Car_TA.OnHitBall&quot;</code><br>
 This event is called when a car hits a ball. The caller is the <a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameObject/CarWrapper/">CarWrapper</a> that hit, and the first parameter is the <a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameObject/BallWrapper/">BallWrapper</a> touched</p>
-<div class="gdoc-page__anchorwrap">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">struct</span> <span class="nc">CarBallTouchParams</span> <span class="p">{</span>
+    <span class="n">uintptr_t</span> <span class="n">ball</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><div class="gdoc-page__anchorwrap">
     <h2 id="replaydirectorwrapper-callerbakkesmod_apiclasseswrappersgameeventreplaydirectorwrapper">
         <a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameEvent/ReplayDirectorWrapper/">ReplayDirectorWrapper Caller</a>
         <a data-clipboard-text="https://bakkesmodwiki.github.io/functions/commonly_hooked_functions/#replaydirectorwrapper-callerbakkesmod_apiclasseswrappersgameeventreplaydirectorwrapper" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor ReplayDirectorWrapper Caller" href="#replaydirectorwrapper-callerbakkesmod_apiclasseswrappersgameeventreplaydirectorwrapper">
@@ -11282,9 +11290,9 @@ Happens whenenever a car spawns. Useful if modifying car physics that may reset 
         </a>
     </h3>
 </div><p><code>&quot;Function TAGame.GFxHUD_TA.HandleStatTickerMessage&quot;</code><br>
-Called any time a stat should appear on the top right ticker, even if it&rsquo;s disabled.<br>
+Called any time a stat should appear on the top right ticker, even if it&rsquo;s disabled<br>
 <code>&quot;Function TAGame.GFxHUD_TA.HandleStatEvent&quot;</code><br>
-Called any time a stat should appear in the center of the screen, even if it&rsquo;s disabled.</p>
+Called any time a stat should appear in the center of the screen, even if it&rsquo;s disabled</p>
 <div class="gdoc-page__anchorwrap">
     <h2 id="teamwrapper-callerbakkesmod_apiclasseswrappersgameobjectteamwrapper">
         <a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameObject/TeamWrapper/">TeamWrapper Caller</a>

@@ -1947,9 +1947,8 @@ Vector Normal     Default value: none</description>
       <guid>https://bakkesmodwiki.github.io/functions/commonly_hooked_functions/</guid>
       <description>This is a list of functions that we use regularly, as well as when they fire. We&amp;rsquo;ll never be able to document them all but hopefully this helps. Hook them with Function Hooks
 BallWrapper Caller    &amp;quot;Function TAGame.Ball_TA.OnCarTouch&amp;quot;
-This event is called when a BallWrapper hits a car. The caller is the ball that hit, and the first parameter is the CarWrapper touched
-&amp;quot;Function TAGame.Ball_TA.OnHitGoal&amp;quot;
-Happens when a goal is scored</description>
+This event is called when a ball hits a car. The caller is the ball that hit, and the first parameter is the CarWrapper touched
+struct BallCarTouchParams { uintptr_t car; } &amp;quot;Function TAGame.</description>
     </item>
     
     <item>
