@@ -60,6 +60,16 @@ If you want to make your own netcode plugin, there&amp;rsquo;s a template for it
     </item>
     
     <item>
+      <title>Plugin Exclusive Log</title>
+      <link>https://bakkesmodwiki.github.io/useful_info/plugin_exclusive_log/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/useful_info/plugin_exclusive_log/</guid>
+      <description>Want to see the console logging from just your plugin? Open a new PowerShell window and use this command. Replace &amp;ldquo;PLUGIN_NAME&amp;rdquo; with your plugin&amp;rsquo;s class name
+Get-Content (-join($env:APPDATA, &amp;#34;\bakkesmod\bakkesmod\bakkesmod.log&amp;#34;)) -wait -tail 1 | select-string -pattern &amp;#34;PLUGIN_NAME&amp;#34; </description>
+    </item>
+    
+    <item>
       <title>Submitting to Bakkesplugins</title>
       <link>https://bakkesmodwiki.github.io/useful_info/submitting_to_bakkesplugins/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
