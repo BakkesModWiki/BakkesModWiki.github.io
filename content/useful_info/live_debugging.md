@@ -1,6 +1,6 @@
 ---
 title: Live Debugging
-author: Cyril.Gibaud
+author: CyrilToonkit
 ---
 
 You can live debug your code by attaching Rocket League to visual studio and stepping through it  
