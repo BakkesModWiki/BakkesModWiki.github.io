@@ -2078,6 +2078,19 @@ If you want to make your own netcode plugin, there&amp;rsquo;s a template for it
     </item>
     
     <item>
+      <title>Persistent Storage</title>
+      <link>https://bakkesmodwiki.github.io/code_snippets/persistent_storage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/code_snippets/persistent_storage/</guid>
+      <description>Use these files in your plugin files to store persistent data with cvars but without risking the cvars being cleared
+Usage
+// preferably in onload but at least before you use it (genious advice) persistent_storage_ = std::make_shared&amp;lt;PersistentStorage&amp;gt;(this, &amp;#34;Hats&amp;#34;, true, true); //register the cvar like &amp;#34;normal&amp;#34; auto cvar = persistent_storage_-&amp;gt;RegisterPersistentCvar(&amp;#34;hats_preset&amp;#34;, &amp;#34;&amp;#34;, &amp;#34;The selected preset&amp;#34;, true); Download these files to use
+PersistentStorage.h
+PersistentStorage.cpp</description>
+    </item>
+    
+    <item>
       <title>Plugin Exclusive Logging</title>
       <link>https://bakkesmodwiki.github.io/code_snippets/plugin_exclusive_logging/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
