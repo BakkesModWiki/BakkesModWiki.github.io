@@ -4,7 +4,7 @@ weight: 4
 author: ubelhj
 ---
 
-Stat events are a great way to show a slightly more complicated plugin logic. They are fairly common to use, use multiple wrappers, event hooks, and have some unique caveots. Also I made a plugin with them so I know how they work. Hopefully this helps someone
+Stat events are a great way to show a slightly more complicated plugin logic. They are fairly common to use, use multiple wrappers, event hooks, and have some unique caveats. Also I made a plugin with them so I know how they work. Hopefully this helps someone
 
 First add this include to the top of your .h  
 `#include "bakkesmod/wrappers/GameObject/Stats/StatEventWrapper.h"`
