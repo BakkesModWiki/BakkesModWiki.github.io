@@ -2058,6 +2058,18 @@ On BM startup, it&amp;rsquo;ll execute plugins.cfg first to load all plugins, ca
     </item>
     
     <item>
+      <title>Live Debugging</title>
+      <link>https://bakkesmodwiki.github.io/useful_info/live_debugging/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/useful_info/live_debugging/</guid>
+      <description>You can live debug your code by attaching Rocket League to visual studio and stepping through it
+This page explains how
+https://github.com/MicrosoftDocs/visualstudio-docs/blob/main/docs/debugger/attach-to-running-processes-with-the-visual-studio-debugger.md&amp;nbsp;
+For rocket league, you need to attach to the process &amp;ldquo;RocketLeague.exe&amp;rdquo; (see capture, sorry for the french UI ^^) If you&amp;rsquo;re in an infinte loop (which never happens to me 😏), you can press the &amp;ldquo;interrupt&amp;rdquo; button, and Visual Studio will jump to the part of the code that is currently being executed</description>
+    </item>
+    
+    <item>
       <title>Multiplayer Plugins</title>
       <link>https://bakkesmodwiki.github.io/useful_info/multiplayer_plugins/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
