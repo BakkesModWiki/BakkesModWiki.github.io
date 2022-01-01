@@ -11196,7 +11196,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
         <h1>Plugin Variables</h1>
         <p>Next we will make your plugin alterable by a user. They might want to enable/disable the plugin, change how it acts, and pretty much infinite options. I&rsquo;ll be using a fairly simple plugin I&rsquo;ve made as an example. I&rsquo;ll only be focusing on the settings, not the actual code that makes it work.
 We&rsquo;ll continue the CoolPlugin from <a class="gdoc-markdown__link"  href="/plugin_tutorial/starting_a_plugin/">Starting a Plugin</a></p>
-<p>We give the users control with the Console Variables, CVars. They allow a user to set a named variable&rsquo;s value, and for our code to know when those values are changed. These can be used to store string, int, bool, float, or color values</p>
+<p>We give the users control with the Console Variables, CVars. They allow a user to set a variable&rsquo;s value, and for our code to know when those values are changed. These can be used for string, int, bool, float, or color values. They also can persist across multiple sessions, so user settings are saved. If something being changed to the wrong value can break your plugin, don&rsquo;t use a CVar. Any internal plugin logic that can do unintended things if modified should be stored and controlled with class variables declared in your .cpp or .h files.</p>
 <p>To create one, we call <code>cvarManager-&gt;registerCvar()</code>
 There are 2-9 arguments. The first 2 are required, but the others are not</p>
 <ol>
@@ -11229,9 +11229,9 @@ If I had a variable <code>bool coolEnabled</code>, I could call <code>coolEnable
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">CVarWrapper</span> <span class="n">distanceCVar</span> <span class="o">=</span> <span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">getCvar</span><span class="p">(</span><span class="s">&#34;cool_distance&#34;</span><span class="p">);</span>
 <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">distanceCVar</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
 <span class="kt">float</span> <span class="n">distance</span> <span class="o">=</span> <span class="n">distanceCVar</span><span class="p">.</span><span class="n">getFloatValue</span><span class="p">();</span>
-</code></pre></div><p>We can put together this knowledge to add to <code>CoolPlugin.cpp</code>
+</code></pre></div><p>We can put together this knowledge to add to <code>CoolPlugin.cpp</code><br>
 <a class="gdoc-markdown__link" target="_blank" href="https://github.com/ubelhj/BakkesModStarterPlugin/blob/plugin-settings/CoolPlugin/CoolPlugin.cpp">https://github.com/ubelhj/BakkesModStarterPlugin/blob/plugin-settings/CoolPlugin/CoolPlugin.cpp&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a></p>
-<p>This isn&rsquo;t enough though. Who want to be changing an integer value with a console command? Gross. What if we had sliders? Checkboxes? Buttons?
+<p>This isn&rsquo;t enough though. Who wants to be changing an integer value with a console command? Gross. What if we had sliders? Checkboxes? Buttons? Next we&rsquo;ll add a simple GUI<br>
 <a class="gdoc-markdown__link"  href="/plugin_tutorial/plugin_interface">Plugin Interface</a></p>
 
         
