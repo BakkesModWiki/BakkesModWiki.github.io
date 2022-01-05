@@ -46,9 +46,9 @@ All (known) playlist IDs - 2020
 48: TacticalRumble
 ```
 
-Find the ID of the current playlist with
+Find the ID of the current playlist with this code. [Click here for GameSettingPlaylistWrapper reference](/bakkesmod_api/Classes/Wrappers/GameEvent/GameSettingPlaylistWrapper/)  
 ```cpp
-ServerWrapper sw = gameWrapper->GetOnlineGame();
+ServerWrapper sw = gameWrapper->GetCurrentGameState();
 if (!sw) return;
 GameSettingPlaylistWrapper playlist = sw.GetPlaylist();
 if (!playlist) return;

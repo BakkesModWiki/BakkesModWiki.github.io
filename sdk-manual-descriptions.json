@@ -1,12 +1,5 @@
 {
     "Classes": {
-        "CanvasWrapper": {
-            "Fields": {
-                "SetPosition": {
-                    "Parameters": ["Sets the position of the canvas"]
-                }
-            }
-        },
         "BallWrapper": {
             "Description": "Any ball in the match. There can be more than one!\n\nThe best way to get the ball is [ServerWrapper.GetGameBalls()](/bakkesmod_api/Classes/Wrappers/GameEvent/ServerWrapper/#arraywrapperltballwrappergtnbspgetgameballs)",
             "Fields": {
@@ -15,17 +8,27 @@
                 }
             }
         },
+        "CanvasWrapper": {
+            "Fields": {
+                "SetPosition": {
+                    "Parameters": ["Sets the position of the canvas"]
+                }
+            }
+        },
         "CarWrapper": {
             "Description": "Any car in the match. There can be more than one!\n\nThe best way to get the cars is using a [ServerWrapper](/bakkesmod_api/Classes/Wrappers/GameEvent/ServerWrapper/) to call from its superclass [GameEventWrapper.GetCars()](/bakkesmod_api/Classes/Wrappers/GameEvent/GameEventWrapper/#arraywrapperbakkesmod_apiclasseswrappersarraywrappernbspgetcars)"
+        },
+        "GameSettingPlaylistWrapper": {
+            "Description": "The current playlist. [Most common usage here](/code_snippets/playlist_id/)"
+        },
+        "PriWrapper": {
+            "Description": "The Player Replication Info provides a ton of information on all players connected to a match, including spectators and bots.\n\nThe best way to get the PRIs is using a [ServerWrapper](/bakkesmod_api/Classes/Wrappers/GameEvent/ServerWrapper/) to call from its superclass [GameEventWrapper.GetPRIs()](/Classes/Wrappers/GameEvent/GameEventWrapper/#arraywrapperbakkesmod_apiclasseswrappersarraywrappernbspgetpris)"
         },
         "ServerWrapper": {
             "Description": "The server is the controller of the match. It tells you where cars and balls are, the time remaining, score, and so much more.\n\nIf not hosting the match (in an online or private match) all values are read-only. Some functions will also return garbage data in online matches to protect the competitive integrity of the game \n\nGet it with `gameWrapper.GetCurrentGameState()`"
         },
         "StatEventWrapper": {
             "Description": "A stat that was just recorded. [Use this guide to hook them](/functions/stat_events/)"
-        },
-        "PriWrapper": {
-            "Description": "The Player Replication Info provides a ton of information on all players connected to a match, including spectators and bots.\n\nThe best way to get the PRIs is using a [ServerWrapper](/bakkesmod_api/Classes/Wrappers/GameEvent/ServerWrapper/) to call from its superclass [GameEventWrapper.GetPRIs()](/Classes/Wrappers/GameEvent/GameEventWrapper/#arraywrapperbakkesmod_apiclasseswrappersarraywrappernbspgetpris)"
         }
     },
     "Constants": {
