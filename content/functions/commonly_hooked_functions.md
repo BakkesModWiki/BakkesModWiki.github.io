@@ -99,6 +99,7 @@ Happens twice at the start of a match, once per team that is totally joined and 
 `"Function TAGame.TrainingEditorMetrics_TA.TrainingShotAttempt"`  
 Called whenever an attempt is started in a custom training pack. An attempt counts as started if the player starts moving in any way. Selecting a different shot, or resetting the shot does not fire this event (until the player moves).
 If you are only interested in the initial ball touch for each shot, you can react to only the first `"Function TAGame.Ball_TA.OnCarTouch"` event after each `TrainingShotAttempt` for example.
+
 `"Function TAGame.GameEvent_TrainingEditor_TA.OnInit"`  
 Called whenever a new training pack is being loaded, or the current training pack was restarted.  
 Be aware that `_gameWrapper->IsInCustomTraining()` will not yet return `true` at this point.
