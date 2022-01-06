@@ -11211,7 +11211,9 @@ This event is called when a ball hits a car. The caller is the ball that hit, an
     <span class="n">uintptr_t</span> <span class="n">car</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div><p><code>&quot;Function TAGame.Ball_TA.OnHitGoal&quot;</code><br>
-Happens when a goal is scored</p>
+Happens when a goal is scored.<br>
+Note that this event is also called during the goal replay, if the player does not cancel it. If you want to filter out the event during goal replay, you can hook to
+<code>&quot;Function GameEvent_Soccar_TA.ReplayPlayback.BeginState</code> and <code>&quot;Function GameEvent_Soccar_TA.ReplayPlayback.EndState&quot;</code> in order to e.g. set a <code>bool</code> flag while replay playback is active.</p>
 <p><code>&quot;Function TAGame.Ball_TA.Explode&quot;</code><br>
 Happens when a ball explodes. Usually this means a goal was scored</p>
 <div class="gdoc-page__anchorwrap">
@@ -11303,6 +11305,19 @@ Called any time a stat should appear in the center of the screen, even if it&rsq
     </h2>
 </div><p><code>&quot;Function TAGame.Team_TA.PostBeginPlay&quot;</code><br>
 Happens twice at the start of a match, once per team that is totally joined and ready. It can be used to detect the start of a match. This only works when the player is in the match as it starts, so it&rsquo;s inconsistent in casual where you can join matches in progress</p>
+<div class="gdoc-page__anchorwrap">
+    <h2 id="trainingeditor-callerbakkesmod_apiclasseswrappersgameeventtrainingeditorwrapper">
+        <a class="gdoc-markdown__link"  href="bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/">TrainingEditor Caller</a>
+        <a data-clipboard-text="https://bakkesmodwiki.github.io/functions/commonly_hooked_functions/#trainingeditor-callerbakkesmod_apiclasseswrappersgameeventtrainingeditorwrapper" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor TrainingEditor Caller" href="#trainingeditor-callerbakkesmod_apiclasseswrappersgameeventtrainingeditorwrapper">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div><p><code>&quot;Function TAGame.TrainingEditorMetrics_TA.TrainingShotAttempt&quot;</code><br>
+Called whenever an attempt is started in a custom training pack. An attempt counts as started if the player starts moving in any way. Selecting a different shot, or resetting the shot does not fire this event (until the player moves).
+If you are only interested in the initial ball touch for each shot, you can react to only the first <code>&quot;Function TAGame.Ball_TA.OnCarTouch&quot;</code> event after each <code>TrainingShotAttempt</code> for example.
+<code>&quot;Function TAGame.GameEvent_TrainingEditor_TA.OnInit&quot;</code><br>
+Called whenever a new training pack is being loaded, or the current training pack was restarted.<br>
+Be aware that <code>_gameWrapper-&gt;IsInCustomTraining()</code> will not yet return <code>true</code> at this point.</p>
 <div class="gdoc-page__anchorwrap">
     <h2 id="unwrapped-callers">
         Unwrapped callers
