@@ -6,6 +6,11 @@ author: dozens of helpful people in the community who post open source plugins
 
 This is a list of functions that we use regularly, as well as when they fire. We'll never be able to document them all but hopefully this helps. Hook them with [Function Hooks](/functions/using_function_hooks/)
 
+The Bakkesmod caller will be based off of the Rocket League calling class / calling object name. Most functions are called by classes named Something_TA. Remove the _TA at the end and look for any wrappers with similar names. If a wrapper matches, that is the caller. For example, `"Function TAGame.Car_TA.OnHitBall"` is called by a `Car_TA`. The prefix is `Car`, so it's wrapped by [CarWrapper](/bakkesmod_api/Classes/Wrappers/GameObject/CarWrapper/). Not all callers are wrapped though.
+
+This image shows the breakdown of the function name  
+![functionnaming.png](/img/functionnaming.png)
+
 ## [BallWrapper Caller](/bakkesmod_api/Classes/Wrappers/GameObject/BallWrapper/)
 `"Function TAGame.Ball_TA.OnCarTouch"`  
 This event is called when a ball hits a car. The caller is the ball that hit, and the first parameter is the [CarWrapper](/bakkesmod_api/Classes/Wrappers/GameObject/CarWrapper/) touched
