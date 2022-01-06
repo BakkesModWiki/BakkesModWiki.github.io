@@ -583,7 +583,7 @@ std::string&amp;nbsp; name     Default value: none</description>
       <guid>https://bakkesmodwiki.github.io/functions/function_scanner/</guid>
       <description>Trying to hook an event but don&amp;rsquo;t know what event to use? There&amp;rsquo;s way more events out there than can be documented, so you can find one yourself with the function scanner
 I highly recommend this video I made to understand how to use it, but there&amp;rsquo;s also a text guide below https://www.youtube.com/watch?v=gDZ1wWKE8aw&amp;nbsp;
-Set the -dev option    On Steam: Right click the game and hit properties Then add the option On Epic: (They&amp;rsquo;ve moved this before so @ me if it&amp;rsquo;s in a new place)</description>
+Set the -dev option    On Steam: Right click the game and hit properties Then add the option</description>
     </item>
     
     <item>
@@ -1947,9 +1947,7 @@ Vector Normal     Default value: none</description>
       
       <guid>https://bakkesmodwiki.github.io/functions/commonly_hooked_functions/</guid>
       <description>This is a list of functions that we use regularly, as well as when they fire. We&amp;rsquo;ll never be able to document them all but hopefully this helps. Hook them with Function Hooks
-BallWrapper Caller    &amp;quot;Function TAGame.Ball_TA.OnCarTouch&amp;quot;
-This event is called when a ball hits a car. The caller is the ball that hit, and the first parameter is the CarWrapper touched
-struct BallCarTouchParams { uintptr_t car; } &amp;quot;Function TAGame.</description>
+The Bakkesmod caller will be based off of the Rocket League calling class / calling object name. Most functions are called by classes named Something_TA. Remove the _TA at the end and look for any wrappers with similar names.</description>
     </item>
     
     <item>
