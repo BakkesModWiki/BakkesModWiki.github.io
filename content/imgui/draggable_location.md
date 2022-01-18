@@ -2,9 +2,6 @@
 title: Draggable location
 weight: 1
 author: ubelhj
-resources:
-  - name: dragcanvasvideo
-    src: "/video/imguidrag.mp4"
 ---
 
 Imagine you have a plugin that renders something on the screen. Users might want to move it to a different location. Dragging's a great way to make it move, and here's how to get it to work!
