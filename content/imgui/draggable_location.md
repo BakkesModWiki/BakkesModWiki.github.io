@@ -67,6 +67,7 @@ if (inDragMode) {
 }
 ```
 This video shows the code in action! 
-<video controls width="1000">
-    <source src="/video/imguidrag.mp4" />
+<video controls="controls" width="1000" preload="metadata">
+    <source src="/video/imguidrag.mp4" 
+            type="video/mp4" />
 </video>
