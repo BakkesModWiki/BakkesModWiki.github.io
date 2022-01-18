@@ -54,6 +54,10 @@
   </url><url>
     <loc>https://bakkesmodwiki.github.io/plugin_tutorial/</loc>
   </url><url>
+    <loc>https://bakkesmodwiki.github.io/imgui/color_picker/</loc>
+  </url><url>
+    <loc>https://bakkesmodwiki.github.io/imgui/draggable_location/</loc>
+  </url><url>
     <loc>https://bakkesmodwiki.github.io/plugin_tutorial/getting_started/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/functions/using_function_hooks/</loc>
@@ -428,6 +432,8 @@
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Engine/WorldInfoWrapper/</loc>
   </url><url>
+    <loc>https://bakkesmodwiki.github.io/imgui/</loc>
+  </url><url>
     <loc>https://bakkesmodwiki.github.io/functions/commonly_hooked_functions/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/plugin_tutorial/plugin_variables/</loc>
@@ -455,6 +461,8 @@
     <loc>https://bakkesmodwiki.github.io/useful_info/github_plugin_template/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/code_snippets/how_cvars_work/</loc>
+  </url><url>
+    <loc>https://bakkesmodwiki.github.io/imgui/imgui_begin/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/code_snippets/playlist_id/</loc>
   </url><url>

@@ -24,6 +24,29 @@ becomes
     </item>
     
     <item>
+      <title>Color Picker</title>
+      <link>https://bakkesmodwiki.github.io/imgui/color_picker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/imgui/color_picker/</guid>
+      <description>You&amp;rsquo;ve got a super cool looking overlay, but you want the user to change the color. Here&amp;rsquo;s some code for a super nice color picker!
+First, you need to be rendering something on the canvas. Let&amp;rsquo;s say it&amp;rsquo;s a single chunk of text. Like this example.
+Next, make a cvar for color. This is really simple. The default value can be encoded with hex
+cvarManager-&amp;gt;registerCvar(&amp;#34;cool_color&amp;#34;, &amp;#34;#FFFFFF&amp;#34;, &amp;#34;color of overlay&amp;#34;); Now in the canvas render, use the new color</description>
+    </item>
+    
+    <item>
+      <title>Draggable location</title>
+      <link>https://bakkesmodwiki.github.io/imgui/draggable_location/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/imgui/draggable_location/</guid>
+      <description>Imagine you have a plugin that renders something on the screen. Users might want to move it to a different location. Dragging&amp;rsquo;s a great way to make it move, and here&amp;rsquo;s how to get it to work!
+First, you need to be rendering something on the canvas. Let&amp;rsquo;s say it&amp;rsquo;s a single chunk of text, with its location defined at the top left. Like this example.
+Next we&amp;rsquo;ll add a simple level of customizability with location cvars.</description>
+    </item>
+    
+    <item>
       <title>Setup your installs</title>
       <link>https://bakkesmodwiki.github.io/plugin_tutorial/getting_started/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2046,6 +2069,17 @@ Create a repository from this template     Click the big green button Use this t
       <description>In plugin onLoad(), registerCVar is called and the cvar will have default values
 cvar values are only changed when a config file is executed, or a console command is fired. It doesn&amp;rsquo;t magically &amp;ldquo;remember&amp;rdquo; values from previous runs or anything.
 On BM startup, it&amp;rsquo;ll execute plugins.cfg first to load all plugins, causing all cvars for these plugins to be created. Then once this is done it will execute config.cfg, which will set the actual saved value.</description>
+    </item>
+    
+    <item>
+      <title>ImGui Basics</title>
+      <link>https://bakkesmodwiki.github.io/imgui/imgui_begin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/imgui/imgui_begin/</guid>
+      <description>This section is dedicated to ImGui, a library used for creating a user-friendly interface. There&amp;rsquo;s buttons, sliders, checkboxes, dropdowns, and all sorts of options. It also assumes you&amp;rsquo;re using the template, as the template automatically includes the ImGui library.
+And here&amp;rsquo;s a useful interactable imgui demo to see what these look like in action
+https://pthom.github.io/imgui_manual_online/manual/imgui_manual.html&amp;nbsp;</description>
     </item>
     
     <item>
