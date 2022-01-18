@@ -11320,7 +11320,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">yLocCvar</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
 <span class="kt">float</span> <span class="n">yLoc</span> <span class="o">=</span> <span class="n">yLocCvar</span><span class="p">.</span><span class="n">getFloatValue</span><span class="p">();</span>
 
-<span class="n">canvas</span><span class="p">.</span><span class="n">SetPosition</span><span class="p">(</span><span class="n">Vector2</span><span class="p">{</span> <span class="n">xLoc</span><span class="p">,</span> <span class="n">yLoc</span> <span class="p">});</span>
+<span class="n">canvas</span><span class="p">.</span><span class="n">SetPosition</span><span class="p">(</span><span class="n">Vector2F</span><span class="p">{</span> <span class="n">xLoc</span><span class="p">,</span> <span class="n">yLoc</span> <span class="p">});</span>
 <span class="c1">// now render everything else
 </span></code></pre></div><p>Now the user can change the location of the overlay in the console, but now you can add it to the GUI too. In your <code>RenderSettings()</code> add these lines</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">CVarWrapper</span> <span class="n">xLocCvar</span> <span class="o">=</span> <span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">getCvar</span><span class="p">(</span><span class="s">&#34;cool_x_location&#34;</span><span class="p">);</span>
@@ -11361,6 +11361,7 @@ Then the code is fairly simple. Put it where you&rsquo;re doing your ImGui rende
 <source src="/video/imguidrag.mp4" 
 type="video/mp4" />
 </video></p>
+<p><a class="gdoc-markdown__link" target="_blank" href="https://github.com/ubelhj/BakkesModStarterPlugin/tree/imgui">Click here to see exactly how this code is used in CoolPlugin&rsquo;s source&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a></p>
 
         
         <hr>

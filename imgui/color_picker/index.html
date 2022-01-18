@@ -11321,39 +11321,26 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <span class="c1">// render text after setting the color
 </span></code></pre></div><p>This code goes wherever you&rsquo;re rendering your ImGui</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">CVarWrapper</span> <span class="n">textColorVar</span> <span class="o">=</span> <span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">getCvar</span><span class="p">(</span><span class="s">&#34;cool_color&#34;</span><span class="p">);</span>
-<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">textColorVar</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="n">LinearColor</span> <span class="n">textColor</span> <span class="o">=</span> <span class="n">textColorVar</span><span class="p">.</span><span class="n">getColorValue</span><span class="p">();</span>
-
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">textColorVar</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
 <span class="c1">// converts from 0-255 color to 0.0-1.0 color
-</span><span class="c1"></span><span class="kt">float</span> <span class="n">textColors</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="n">textColor</span><span class="p">.</span><span class="n">R</span> <span class="o">/</span> <span class="mi">255</span><span class="p">,</span> <span class="n">textColor</span><span class="p">.</span><span class="n">G</span> <span class="o">/</span> <span class="mi">255</span><span class="p">,</span> <span class="n">textColor</span><span class="p">.</span><span class="n">B</span> <span class="o">/</span> <span class="mi">255</span><span class="p">,</span> <span class="n">textColor</span><span class="p">.</span><span class="n">A</span> <span class="o">/</span> <span class="mi">255</span> <span class="p">};</span>
-<span class="n">ImVec4</span> <span class="n">colorVec</span> <span class="o">=</span> <span class="p">{</span> <span class="n">textColor</span><span class="p">.</span><span class="n">R</span> <span class="o">/</span> <span class="mi">255</span><span class="p">,</span> <span class="n">textColor</span><span class="p">.</span><span class="n">G</span> <span class="o">/</span> <span class="mi">255</span><span class="p">,</span> <span class="n">textColor</span><span class="p">.</span><span class="n">B</span> <span class="o">/</span> <span class="mi">255</span><span class="p">,</span> <span class="n">textColor</span><span class="p">.</span><span class="n">A</span> <span class="o">/</span> <span class="mi">255</span> <span class="p">};</span>
-
-<span class="k">if</span> <span class="p">(</span><span class="n">ImGui</span><span class="o">::</span><span class="n">ColorButton</span><span class="p">(</span><span class="s">&#34;Text Color##button&#34;</span><span class="p">,</span> <span class="n">colorVec</span><span class="p">))</span> <span class="p">{</span>
-    <span class="n">ImGui</span><span class="o">::</span><span class="n">OpenPopup</span><span class="p">(</span><span class="s">&#34;Text Color selector&#34;</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="n">ImGui</span><span class="o">::</span><span class="n">SameLine</span><span class="p">();</span>
-
-<span class="n">ImGui</span><span class="o">::</span><span class="n">Text</span><span class="p">(</span><span class="s">&#34;Text Color&#34;</span><span class="p">);</span>
-
-<span class="k">if</span> <span class="p">(</span><span class="n">ImGui</span><span class="o">::</span><span class="n">BeginPopup</span><span class="p">(</span><span class="s">&#34;Text Color selector&#34;</span><span class="p">))</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">ImGui</span><span class="o">::</span><span class="n">ColorPicker4</span><span class="p">(</span><span class="s">&#34;Text Color##selector&#34;</span><span class="p">,</span> <span class="n">textColors</span><span class="p">))</span> <span class="p">{</span>
-        <span class="n">textColor</span> <span class="o">=</span> <span class="p">{</span> <span class="n">textColors</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">255</span><span class="p">,</span> <span class="n">textColors</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="mi">255</span><span class="p">,</span> <span class="n">textColors</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">*</span> <span class="mi">255</span><span class="p">,</span> <span class="n">textColors</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">*</span> <span class="mi">255</span> <span class="p">};</span>
-        <span class="n">textColorVar</span><span class="p">.</span><span class="n">setValue</span><span class="p">(</span><span class="n">textColor</span><span class="p">);</span>
-    <span class="p">}</span>
-
-    <span class="n">ImGui</span><span class="o">::</span><span class="n">EndPopup</span><span class="p">();</span>
+</span><span class="c1"></span><span class="n">LinearColor</span> <span class="n">textColor</span> <span class="o">=</span> <span class="n">textColorVar</span><span class="p">.</span><span class="n">getColorValue</span><span class="p">()</span> <span class="o">/</span> <span class="mi">255</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">ImGui</span><span class="o">::</span><span class="n">ColorEdit4</span><span class="p">(</span><span class="s">&#34;Text Color&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">textColor</span><span class="p">.</span><span class="n">R</span><span class="p">))</span> <span class="p">{</span>
+    <span class="n">textColorVar</span><span class="p">.</span><span class="n">setValue</span><span class="p">(</span><span class="n">textColor</span> <span class="o">*</span> <span class="mi">255</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div><p>Here&rsquo;s the final result. First when you hover the ColorButton<br>
 <img src="/img/colorpickerhover.png" alt="colorpickerhover"  /><br>
 And here&rsquo;s when the ColorPicker popup is opened by clicking the ColorButton<br>
 <img src="/img/colorpickeropen.png" alt="colorpickeropen"  /></p>
+<p>There&rsquo;s multiple flags to change the ColorEdit. If you want a color wheel, or alpha, or just the color button, there&rsquo;s many <code>ImGuiColorEditFlags</code> found on line 1150 of <code>IMGUI/imgui.h</code><br>
+For example, I like this combination</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">ImGui</span><span class="o">::</span><span class="n">ColorEdit4</span><span class="p">(</span><span class="s">&#34;Text Color With Flags&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">textColor</span><span class="p">.</span><span class="n">R</span><span class="p">,</span> <span class="n">ImGuiColorEditFlags_NoInputs</span> <span class="o">|</span> <span class="n">ImGuiColorEditFlags_AlphaBar</span><span class="p">)</span>
+</code></pre></div><p>With these flags it looks like this<br>
+<img src="/img/colorpickerflags.png" alt="colorpickerflags"  /></p>
+<p><a class="gdoc-markdown__link" target="_blank" href="https://github.com/ubelhj/BakkesModStarterPlugin/tree/imgui">Click here to see exactly how this code is used in CoolPlugin&rsquo;s source&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a></p>
 
         
         <hr>
-        <div>Written by <b>ubelhj</b></div>
+        <div>Written by <b>ubelhj</b>.&nbsp;<i>Collaborations from martinn</i></div>
         
     </article>
 
