@@ -23,7 +23,7 @@ CVarWrapper yLocCvar = cvarManager->getCvar("cool_y_location");
 if (!yLocCvar) { return; }
 float yLoc = yLocCvar.getFloatValue();
 
-canvas.SetPosition(Vector2{ xLoc, yLoc });
+canvas.SetPosition(Vector2F{ xLoc, yLoc });
 // now render everything else
 ```
 
@@ -71,3 +71,5 @@ This video shows the code in action!
     <source src="/video/imguidrag.mp4" 
             type="video/mp4" />
 </video>
+
+[Click here to see exactly how this code is used in CoolPlugin's source](https://github.com/ubelhj/BakkesModStarterPlugin/tree/imgui)
