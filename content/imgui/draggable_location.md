@@ -2,6 +2,9 @@
 title: Draggable location
 weight: 1
 author: ubelhj
+resources:
+  - name: dragcanvasvideo
+    src: "/video/imguidrag.mp4"
 ---
 
 Imagine you have a plugin that renders something on the screen. Users might want to move it to a different location. Dragging's a great way to make it move, and here's how to get it to work!
@@ -65,5 +68,7 @@ if (inDragMode) {
     }
 }
 ```
-Look this gif shows the code in action! Sorry for legibility issues, but the button clicked is the drag mode
-![dragcanvas](/img/dragcanvas2.gif)
+This video shows the code in action! 
+<video controls width="1000">
+    <source src="/video/imguidrag.mp4" />
+</video>
