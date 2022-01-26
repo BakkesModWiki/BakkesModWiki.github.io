@@ -98,8 +98,7 @@ float&amp;nbsp; AirControlSensitivity     Default value: none</description>
   DigitsWithHyphensInParentheses = 3
   HexValuesInBraces = 4
   UniqueObjectGuid = 5
-  int32_t&amp;nbsp; A     Default value: none
-int32_t&amp;nbsp; B     Default value: none</description>
+  int32_t&amp;nbsp; A     Default value = 0</description>
     </item>
     
     <item>

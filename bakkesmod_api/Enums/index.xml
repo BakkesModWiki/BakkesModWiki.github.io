@@ -69,10 +69,11 @@
   RANKED_STANDARD = 4
   RANKED_DOUBLES = 5
   RANKED_DUELS = 6
-  EXTRAS_RUMBLE = 12
-  EXTRAS_DROPSHOT = 13
-  EXTRAS_HOOPS = 14
-  EXTRAS_SNOWDAY = 15
+  AUTO_TOURNAMENT = 12
+  EXTRAS_RUMBLE = 13
+  EXTRAS_DROPSHOT = 14
+  EXTRAS_HOOPS = 15
+  EXTRAS_SNOWDAY = 16
   </description>
     </item>
     
@@ -86,6 +87,27 @@
   RANKED = 1
   EXTRAS = 2
   </description>
+    </item>
+    
+    <item>
+      <title>PlaylistIds</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/PlaylistIds/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/PlaylistIds/</guid>
+      <description>View Implementation      Unknown = -1337
+  Casual = 0
+  Duel = 1
+  Doubles = 2
+  Standard = 3
+  Chaos = 4
+  PrivateMatch = 6
+  Season = 7
+  OfflineSplitscreen = 8
+  Training = 9
+  RankedSoloDuel = 10
+  RankedTeamDoubles = 11
+  RankedStandard = 13</description>
     </item>
     
     <item>
@@ -120,7 +142,8 @@
   BlackMarket = 6
   Premium = 7
   Limited = 8
-  MAX = 9
+  Legacy = 9
+  MAX = 10
   </description>
     </item>
     
@@ -140,6 +163,7 @@
   OCE = 7
   SAF = 8
   SAM = 9
+  IND = 10
   </description>
     </item>
     

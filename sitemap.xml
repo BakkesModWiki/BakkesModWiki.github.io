@@ -68,6 +68,8 @@
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/AirControlComponentWrapper/</loc>
   </url><url>
+    <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/GameObject/AppliedBreakoutDamage/</loc>
+  </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/ArrayWrapper/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/ArrayWrapperIterator/</loc>
@@ -76,9 +78,15 @@
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Constants/BAKKESMOD_PLUGIN_API_VERSION/</loc>
   </url><url>
+    <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/BallBreakoutWrapper/</loc>
+  </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/BallCarSpringPickup/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/BallFreezePickup/</loc>
+  </url><url>
+    <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/BallGodWrapper/</loc>
+  </url><url>
+    <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/BallHauntedWrapper/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/BallLassoPickup/</loc>
   </url><url>
@@ -99,6 +107,10 @@
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/BoostWrapper/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Core/BotLoadoutData/</loc>
+  </url><url>
+    <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/BreakOutActorPlatformWrapper/</loc>
+  </url><url>
+    <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/GameObject/BreakoutDamageState/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/CameraSave/</loc>
   </url><url>
@@ -166,7 +178,11 @@
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Engine/EngineTAWrapper/</loc>
   </url><url>
+    <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Engine/EnumWrapper/</loc>
+  </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/FlipCarComponentWrapper/</loc>
+  </url><url>
+    <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/FootballPickupWrapper/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Core/FormField/</loc>
   </url><url>
@@ -185,6 +201,8 @@
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/GameSettingPlaylistWrapper/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameWrapper/</loc>
+  </url><url>
+    <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/GoalHoopsWrapper/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/GoalWrapper/</loc>
   </url><url>
@@ -245,6 +263,8 @@
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/Playlist/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/PlaylistCategory/</loc>
+  </url><url>
+    <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/PlaylistIds/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/PluginManagerWrapper/</loc>
   </url><url>
@@ -323,6 +343,8 @@
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/ReplayWrapper/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/Rotator/</loc>
+  </url><url>
+    <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/RugbyPickupWrapper/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/RumblePickupComponentWrapper/</loc>
   </url><url>
