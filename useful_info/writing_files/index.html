@@ -10,11 +10,15 @@
 
 
 
-    <meta name="description" content="HandbrakeOverridePickup">
+    <meta name="description" content="Use gameWrapper-&gt;GetBakkesModPath() and use that as the base path to write to (this will be %appdata%/bakkesmod/bakkesmod). This works for both Epic and Steam installs
+Make sure you&rsquo;ve included fstream
+#include &lt;fstream&gt;C&#43;&#43;17
+std::ofstream stream( gameWrapper-&gt;GetBakkesModPath() / &#34;data&#34; / &#34;abc.txt&#34; ); std::ofstream stream( gameWrapper-&gt;GetDataFolder() / &#34;abc.txt&#34; ); //Note the removal of &#34;data&#34; stream &lt;&lt; &#34;def&#34;; // %appdata%/bakkesmod/bakkesmod/data/abc.txt now includes &#34;def&#34; Older C&#43;&#43;
+//Note that windows paths require wide strings, so need to use the L to indicate a wide string std::ofstream stream( gameWrapper-&gt;GetBakkesModPathW() &#43; L&#34;data/abc.">
 
 
 
-    <title>HandbrakeOverridePickup | BakkesMod Programming Wiki</title>
+    <title>Writing Files | BakkesMod Programming Wiki</title>
 
     <link rel="icon" href="/favicon/favicon-32x32.png" type="image/x-icon">
 
@@ -5528,7 +5532,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 
             <li>
             
-            <input type="checkbox" id="navtree-4d3d794e" class="gdoc-nav__toggle" >
+            <input type="checkbox" id="navtree-4d3d794e" class="gdoc-nav__toggle" checked>
             <label for="navtree-4d3d794e" class="flex justify-between">
             
             
@@ -5776,7 +5780,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
             
             
                 <span class="flex">
-                    <a href="/useful_info/writing_files/" class="gdoc-nav__entry ">
+                    <a href="/useful_info/writing_files/" class="gdoc-nav__entry is-active">
                         Writing Files
                     </a>
                 </span>
@@ -5972,7 +5976,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 
             <li>
             
-            <input type="checkbox" id="navtree-fabdf7e2" class="gdoc-nav__toggle" checked>
+            <input type="checkbox" id="navtree-fabdf7e2" class="gdoc-nav__toggle" >
             <label for="navtree-fabdf7e2" class="flex justify-between">
             
             
@@ -6006,7 +6010,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 
             <li>
             
-            <input type="checkbox" id="navtree-7a2cafd9" class="gdoc-nav__toggle" checked>
+            <input type="checkbox" id="navtree-7a2cafd9" class="gdoc-nav__toggle" >
             <label for="navtree-7a2cafd9" class="flex justify-between">
             
             
@@ -6036,7 +6040,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 
             <li>
             
-            <input type="checkbox" id="navtree-1c182f07" class="gdoc-nav__toggle" checked>
+            <input type="checkbox" id="navtree-1c182f07" class="gdoc-nav__toggle" >
             <label for="navtree-1c182f07" class="flex justify-between">
             
             
@@ -6635,7 +6639,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 
             <li>
             
-            <input type="checkbox" id="navtree-033ac79f" class="gdoc-nav__toggle" checked>
+            <input type="checkbox" id="navtree-033ac79f" class="gdoc-nav__toggle" >
             <label for="navtree-033ac79f" class="flex justify-between">
             
             
@@ -7171,7 +7175,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 
             <li>
             
-            <input type="checkbox" id="navtree-066ca6c5" class="gdoc-nav__toggle" checked>
+            <input type="checkbox" id="navtree-066ca6c5" class="gdoc-nav__toggle" >
             <label for="navtree-066ca6c5" class="flex justify-between">
             
             
@@ -7515,7 +7519,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
             
             
                 <span class="flex">
-                    <a href="/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/HandbrakeOverridePickup/" class="gdoc-nav__entry is-active">
+                    <a href="/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/HandbrakeOverridePickup/" class="gdoc-nav__entry ">
                         HandbrakeOverridePickup
                     </a>
                 </span>
@@ -11589,39 +11593,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
         
     
     
-        
-        
-        
-        
-    
-    
-        
-        
-        
-        
-    
-    
-        
-        
-        
-        
-    
-    
-        
-        
-        
-        
-    
-    
-        <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/' href='/'><span itemprop='name'>Welcome to the BakkesMod Programming Wiki!</span></a><meta itemprop='position' content='1' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/bakkesmod_api/' href='/bakkesmod_api/'><span itemprop='name'>BakkesMod API</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/bakkesmod_api/Classes/' href='/bakkesmod_api/Classes/'><span itemprop='name'>Classes</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/bakkesmod_api/Classes/Wrappers/' href='/bakkesmod_api/Classes/Wrappers/'><span itemprop='name'>Wrappers</span></a><meta itemprop='position' content='4' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/bakkesmod_api/Classes/Wrappers/GameObject/' href='/bakkesmod_api/Classes/Wrappers/GameObject/'><span itemprop='name'>Game Object</span></a><meta itemprop='position' content='5' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/' href='/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/'><span itemprop='name'>Rumble Component</span></a><meta itemprop='position' content='6' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>HandbrakeOverridePickup</span><meta itemprop='position' content='7' /></li>
-    
-
-    
-
-    
-
-    
-
+        <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/' href='/'><span itemprop='name'>Welcome to the BakkesMod Programming Wiki!</span></a><meta itemprop='position' content='1' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/useful_info/' href='/useful_info/'><span itemprop='name'>Useful Info</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>Writing Files</span><meta itemprop='position' content='3' /></li>
     
 
     
@@ -11632,84 +11604,40 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
     </div>
     
     
+        
+        <div>
+            <span class="editpage">
+                <svg class="icon gdoc_code"><use xlink:href="#gdoc_code"></use></svg>
+                <a href="https://github.com/BakkesModWiki/BakkesModWiki.github.io/blob/main/content/useful_info/writing_files.md" target="_blank">
+                    View on GitHub
+                </a>
+            </span>
+        </div>
+        
+    
 </div>
 
 
     <article class="gdoc-markdown gdoc-markdown__align--left">
-        <h1>HandbrakeOverridePickup&nbsp;:&nbsp;<small><i><a href="/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/TargetedPickup">TargetedPickup</a></i></small></h1>
+        <h1>Writing Files</h1>
+        <p>Use <code>gameWrapper-&gt;GetBakkesModPath()</code> and use that as the base path to write to (this will be <code>%appdata%/bakkesmod/bakkesmod</code>). This works for both Epic and Steam installs</p>
+<p>Make sure you&rsquo;ve included fstream</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp">
+</span></span></span></code></pre></div><p>C++17</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">std</span><span class="o">::</span><span class="n">ofstream</span> <span class="n">stream</span><span class="p">(</span> <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">GetBakkesModPath</span><span class="p">()</span> <span class="o">/</span> <span class="s">&#34;data&#34;</span> <span class="o">/</span> <span class="s">&#34;abc.txt&#34;</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">std</span><span class="o">::</span><span class="n">ofstream</span> <span class="n">stream</span><span class="p">(</span> <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">GetDataFolder</span><span class="p">()</span> <span class="o">/</span> <span class="s">&#34;abc.txt&#34;</span> <span class="p">);</span> <span class="c1">//Note the removal of &#34;data&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">stream</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;def&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// %appdata%/bakkesmod/bakkesmod/data/abc.txt now includes &#34;def&#34;
+</span></span></span></code></pre></div><p>Older C++</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">//Note that windows paths require wide strings, so need to use the L to indicate a wide string
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">std</span><span class="o">::</span><span class="n">ofstream</span> <span class="n">stream</span><span class="p">(</span> <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">GetBakkesModPathW</span><span class="p">()</span> <span class="o">+</span> <span class="sa">L</span><span class="s">&#34;data/abc.txt&#34;</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">std</span><span class="o">::</span><span class="n">ofstream</span> <span class="n">stream</span><span class="p">(</span> <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">GetDataFolderW</span><span class="p">()</span> <span class="o">+</span> <span class="sa">L</span><span class="s">&#34;abc.txt&#34;</span> <span class="p">);</span>
+</span></span></code></pre></div><p>We highly recommend using C++17. This is the default in the template. If not using the template, in Visual Studio go to your project&rsquo;s properties -&gt; C/C++ -&gt; Language -&gt; C++ Language Standard -&gt; <code>ISO C++17 Standard (/std:c++17)</code>.
+This will allow you to use std::filesystem::path which prevents a lot of pathing errors (like weird characters in folder names and missing/mixed folder separators) and in general is just much easier to work with.</p>
+
         
-
-
-
-
-
-
-  
-  
-
-
-
-
-<span class="gdoc-button gdoc-button--regular">
-<a  href="https://github.com/bakkesmodorg/BakkesModSDK/blob/master/include/bakkesmod/wrappers/GameObject/RumbleComponent/HandbrakeOverridePickup.h"   target="_blank"  class="gdoc-button__link">
-  <svg class="icon github"><use xlink:href="#github"></use></svg> View Implementation
-</a>
-</span>
-
-<hr>
-<div class="gdoc-page__anchorwrap">
-    <h3 id="carwrapperbakkesmod_apiclasseswrappersgameobjectcarwrappernbspgetothercar">
-        <a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameObject/CarWrapper">CarWrapper</a> GetOtherCar()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/HandbrakeOverridePickup/#carwrapperbakkesmod_apiclasseswrappersgameobjectcarwrappernbspgetothercar" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor CarWrapper GetOtherCar()" href="#carwrapperbakkesmod_apiclasseswrappersgameobjectcarwrappernbspgetothercar">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetothercarcarwrapper-newothercar">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> SetOtherCar(CarWrapper newOtherCar)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/HandbrakeOverridePickup/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetothercarcarwrapper-newothercar" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; SetOtherCar(CarWrapper newOtherCar)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetothercarcarwrapper-newothercar">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>newOtherCar</td>
-<td><a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameObject/CarWrapper">CarWrapper</a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbsppickupend">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> PickupEnd()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/HandbrakeOverridePickup/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbsppickupend" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; PickupEnd()" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbsppickupend">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbsppickupstart">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> PickupStart()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/HandbrakeOverridePickup/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbsppickupstart" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; PickupStart()" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbsppickupstart">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-
+        <hr>
+        <div>Written by <b>bakkes</b>.&nbsp;<i>Collaborations from ubelhj</i></div>
         
     </article>
 

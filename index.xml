@@ -2346,5 +2346,18 @@ CanvasWrapper library for improved tools https://github.com/CinderBlocc/Renderin
       <description>HttpWrapper    Sending a simple http request with a string body    CurlRequest req; req.url = &amp;#34;https://httpbin.org/anything&amp;#34;; req.body = &amp;#34;testing with body&amp;#34;; LOG(&amp;#34;sending body request&amp;#34;); HttpWrapper::SendCurlRequest(req, [this](int code, std::string result) { LOG(&amp;#34;Body result{}&amp;#34;, result); }); Perform an HTTP/S JSON request    CurlRequest req; req.url = &amp;#34;https://httpbin.org/anything&amp;#34;; req.body = R&amp;#34;T({ &amp;#34;userId&amp;#34;: 1, &amp;#34;id&amp;#34;: 1, &amp;#34;title&amp;#34;: &amp;#34;delectus aut autem&amp;#34;, &amp;#34;completed&amp;#34;: false })T&amp;#34;; HttpWrapper::SendCurlJsonRequest(req, [this](int code, std::string result) { LOG(&amp;#34;Json result{}&amp;#34;, result); }); Sending a file over HTTP/S    { CurlRequest req; req.</description>
     </item>
     
+    <item>
+      <title>Writing Files</title>
+      <link>https://bakkesmodwiki.github.io/useful_info/writing_files/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/useful_info/writing_files/</guid>
+      <description>Use gameWrapper-&amp;gt;GetBakkesModPath() and use that as the base path to write to (this will be %appdata%/bakkesmod/bakkesmod). This works for both Epic and Steam installs
+Make sure you&amp;rsquo;ve included fstream
+#include &amp;lt;fstream&amp;gt;C++17
+std::ofstream stream( gameWrapper-&amp;gt;GetBakkesModPath() / &amp;#34;data&amp;#34; / &amp;#34;abc.txt&amp;#34; ); std::ofstream stream( gameWrapper-&amp;gt;GetDataFolder() / &amp;#34;abc.txt&amp;#34; ); //Note the removal of &amp;#34;data&amp;#34; stream &amp;lt;&amp;lt; &amp;#34;def&amp;#34;; // %appdata%/bakkesmod/bakkesmod/data/abc.txt now includes &amp;#34;def&amp;#34; Older C++
+//Note that windows paths require wide strings, so need to use the L to indicate a wide string std::ofstream stream( gameWrapper-&amp;gt;GetBakkesModPathW() + L&amp;#34;data/abc.</description>
+    </item>
+    
   </channel>
 </rss>
