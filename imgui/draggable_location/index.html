@@ -5634,6 +5634,30 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
             
             
                 <span class="flex">
+                    <a href="/useful_info/mmr/" class="gdoc-nav__entry ">
+                        MMR
+                    </a>
+                </span>
+            
+            
+
+            
+            </li>
+            
+            
+            
+
+            
+            
+            
+            
+            
+            
+
+            <li>
+            
+            
+                <span class="flex">
                     <a href="/useful_info/multiplayer_plugins/" class="gdoc-nav__entry ">
                         Multiplayer Plugins
                     </a>
@@ -11573,54 +11597,54 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
         <p>Imagine you have a plugin that renders something on the screen. Users might want to move it to a different location. Dragging&rsquo;s a great way to make it move, and here&rsquo;s how to get it to work!</p>
 <p>First, you need to be rendering something on the canvas. Let&rsquo;s say it&rsquo;s a single chunk of text, with its location defined at the top left. <a class="gdoc-markdown__link"  href="/code_snippets/canvas/">Like this example</a>.</p>
 <p>Next we&rsquo;ll add a simple level of customizability with location cvars. X is the left to right axis, and Y is top to bottom. (0, 0) is the top left of the screen</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">registerCvar</span><span class="p">(</span><span class="s">&#34;cool_x_location&#34;</span><span class="p">,</span> <span class="s">&#34;0&#34;</span><span class="p">,</span> <span class="s">&#34;set x location of the overlay&#34;</span><span class="p">);</span>
-<span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">registerCvar</span><span class="p">(</span><span class="s">&#34;cool_y_location&#34;</span><span class="p">,</span> <span class="s">&#34;0&#34;</span><span class="p">,</span> <span class="s">&#34;set y location of the overlay&#34;</span><span class="p">);</span>
-</code></pre></div><p>Now in the canvas render, just use those new locations</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">CVarWrapper</span> <span class="n">xLocCvar</span> <span class="o">=</span> <span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">getCvar</span><span class="p">(</span><span class="s">&#34;cool_x_location&#34;</span><span class="p">);</span>
-<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">xLocCvar</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
-<span class="kt">float</span> <span class="n">xLoc</span> <span class="o">=</span> <span class="n">xLocCvar</span><span class="p">.</span><span class="n">getFloatValue</span><span class="p">();</span>
-
-<span class="n">CVarWrapper</span> <span class="n">yLocCvar</span> <span class="o">=</span> <span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">getCvar</span><span class="p">(</span><span class="s">&#34;cool_y_location&#34;</span><span class="p">);</span>
-<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">yLocCvar</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
-<span class="kt">float</span> <span class="n">yLoc</span> <span class="o">=</span> <span class="n">yLocCvar</span><span class="p">.</span><span class="n">getFloatValue</span><span class="p">();</span>
-
-<span class="n">canvas</span><span class="p">.</span><span class="n">SetPosition</span><span class="p">(</span><span class="n">Vector2F</span><span class="p">{</span> <span class="n">xLoc</span><span class="p">,</span> <span class="n">yLoc</span> <span class="p">});</span>
-<span class="c1">// now render everything else
-</span></code></pre></div><p>Now the user can change the location of the overlay in the console, but now you can add it to the GUI too. In your <code>RenderSettings()</code> add these lines</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">CVarWrapper</span> <span class="n">xLocCvar</span> <span class="o">=</span> <span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">getCvar</span><span class="p">(</span><span class="s">&#34;cool_x_location&#34;</span><span class="p">);</span>
-<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">xLocCvar</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
-<span class="kt">float</span> <span class="n">xLoc</span> <span class="o">=</span> <span class="n">xLocCvar</span><span class="p">.</span><span class="n">getFloatValue</span><span class="p">();</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">ImGui</span><span class="o">::</span><span class="n">SliderFloat</span><span class="p">(</span><span class="s">&#34;X Location&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">xLoc</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">5000.0</span><span class="p">))</span> <span class="p">{</span>
-    <span class="n">xLocCvar</span><span class="p">.</span><span class="n">setValue</span><span class="p">(</span><span class="n">xLoc</span><span class="p">);</span>
-<span class="p">}</span>
-<span class="n">CVarWrapper</span> <span class="n">yLocCvar</span> <span class="o">=</span> <span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">getCvar</span><span class="p">(</span><span class="s">&#34;cool_y_location&#34;</span><span class="p">);</span>
-<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">yLocCvar</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
-<span class="kt">float</span> <span class="n">yLoc</span> <span class="o">=</span> <span class="n">yLocCvar</span><span class="p">.</span><span class="n">getFloatValue</span><span class="p">();</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">ImGui</span><span class="o">::</span><span class="n">SliderFloat</span><span class="p">(</span><span class="s">&#34;Y Location&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">yLoc</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">5000.0</span><span class="p">))</span> <span class="p">{</span>
-    <span class="n">yLocCvar</span><span class="p">.</span><span class="n">setValue</span><span class="p">(</span><span class="n">yLoc</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div><p>Now you can move the x and y locations with sliders, and finally we can add dragging.<br>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">registerCvar</span><span class="p">(</span><span class="s">&#34;cool_x_location&#34;</span><span class="p">,</span> <span class="s">&#34;0&#34;</span><span class="p">,</span> <span class="s">&#34;set x location of the overlay&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">registerCvar</span><span class="p">(</span><span class="s">&#34;cool_y_location&#34;</span><span class="p">,</span> <span class="s">&#34;0&#34;</span><span class="p">,</span> <span class="s">&#34;set y location of the overlay&#34;</span><span class="p">);</span>
+</span></span></code></pre></div><p>Now in the canvas render, just use those new locations</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">CVarWrapper</span> <span class="n">xLocCvar</span> <span class="o">=</span> <span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">getCvar</span><span class="p">(</span><span class="s">&#34;cool_x_location&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">xLocCvar</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kt">float</span> <span class="n">xLoc</span> <span class="o">=</span> <span class="n">xLocCvar</span><span class="p">.</span><span class="n">getFloatValue</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">CVarWrapper</span> <span class="n">yLocCvar</span> <span class="o">=</span> <span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">getCvar</span><span class="p">(</span><span class="s">&#34;cool_y_location&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">yLocCvar</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kt">float</span> <span class="n">yLoc</span> <span class="o">=</span> <span class="n">yLocCvar</span><span class="p">.</span><span class="n">getFloatValue</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">canvas</span><span class="p">.</span><span class="n">SetPosition</span><span class="p">(</span><span class="n">Vector2F</span><span class="p">{</span> <span class="n">xLoc</span><span class="p">,</span> <span class="n">yLoc</span> <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// now render everything else
+</span></span></span></code></pre></div><p>Now the user can change the location of the overlay in the console, but now you can add it to the GUI too. In your <code>RenderSettings()</code> add these lines</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">CVarWrapper</span> <span class="n">xLocCvar</span> <span class="o">=</span> <span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">getCvar</span><span class="p">(</span><span class="s">&#34;cool_x_location&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">xLocCvar</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kt">float</span> <span class="n">xLoc</span> <span class="o">=</span> <span class="n">xLocCvar</span><span class="p">.</span><span class="n">getFloatValue</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">ImGui</span><span class="o">::</span><span class="n">SliderFloat</span><span class="p">(</span><span class="s">&#34;X Location&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">xLoc</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">5000.0</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">xLocCvar</span><span class="p">.</span><span class="n">setValue</span><span class="p">(</span><span class="n">xLoc</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">CVarWrapper</span> <span class="n">yLocCvar</span> <span class="o">=</span> <span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">getCvar</span><span class="p">(</span><span class="s">&#34;cool_y_location&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">yLocCvar</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kt">float</span> <span class="n">yLoc</span> <span class="o">=</span> <span class="n">yLocCvar</span><span class="p">.</span><span class="n">getFloatValue</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">ImGui</span><span class="o">::</span><span class="n">SliderFloat</span><span class="p">(</span><span class="s">&#34;Y Location&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">yLoc</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">5000.0</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">yLocCvar</span><span class="p">.</span><span class="n">setValue</span><span class="p">(</span><span class="n">yLoc</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Now you can move the x and y locations with sliders, and finally we can add dragging.<br>
 First add a checkbox to enable the dragging mode. Without that check there&rsquo;s some weird interactions on when dragging will happen.<br>
 Then the code is fairly simple. Put it where you&rsquo;re doing your ImGui rendering. It sets the cvar values to the x and y locations of the mouse if left click is held.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="c1">// inDragMode is just a bool declared at the top of the .cpp file
-</span><span class="c1"></span><span class="n">ImGui</span><span class="o">::</span><span class="n">Checkbox</span><span class="p">(</span><span class="s">&#34;Drag Mode&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">inDragMode</span><span class="p">);</span>
-
-<span class="k">if</span> <span class="p">(</span><span class="n">inDragMode</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">ImGui</span><span class="o">::</span><span class="n">IsAnyWindowHovered</span><span class="p">()</span> <span class="o">||</span> <span class="n">ImGui</span><span class="o">::</span><span class="n">IsAnyItemHovered</span><span class="p">())</span> <span class="p">{</span>
-        <span class="c1">// doesn&#39;t do anything if any ImGui is hovered over
-</span><span class="c1"></span>        <span class="k">return</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="c1">// drag cursor w/ arrows to N, E, S, W
-</span><span class="c1"></span>    <span class="n">ImGui</span><span class="o">::</span><span class="n">SetMouseCursor</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">ImGui</span><span class="o">::</span><span class="n">IsMouseDown</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span> <span class="p">{</span>
-        <span class="c1">// if holding left click, move
-</span><span class="c1"></span>        <span class="c1">// sets location to current mouse position
-</span><span class="c1"></span>        <span class="n">ImVec2</span> <span class="n">mousePos</span> <span class="o">=</span> <span class="n">ImGui</span><span class="o">::</span><span class="n">GetMousePos</span><span class="p">();</span>
-        <span class="n">xLocCvar</span><span class="p">.</span><span class="n">setValue</span><span class="p">(</span><span class="n">mousePos</span><span class="p">.</span><span class="n">x</span><span class="p">);</span>
-        <span class="n">yLocCvar</span><span class="p">.</span><span class="n">setValue</span><span class="p">(</span><span class="n">mousePos</span><span class="p">.</span><span class="n">y</span><span class="p">);</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div><p>This video shows the code in action!
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// inDragMode is just a bool declared at the top of the .cpp file
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">ImGui</span><span class="o">::</span><span class="n">Checkbox</span><span class="p">(</span><span class="s">&#34;Drag Mode&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">inDragMode</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">inDragMode</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">ImGui</span><span class="o">::</span><span class="n">IsAnyWindowHovered</span><span class="p">()</span> <span class="o">||</span> <span class="n">ImGui</span><span class="o">::</span><span class="n">IsAnyItemHovered</span><span class="p">())</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// doesn&#39;t do anything if any ImGui is hovered over
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// drag cursor w/ arrows to N, E, S, W
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">ImGui</span><span class="o">::</span><span class="n">SetMouseCursor</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">ImGui</span><span class="o">::</span><span class="n">IsMouseDown</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// if holding left click, move
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// sets location to current mouse position
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">ImVec2</span> <span class="n">mousePos</span> <span class="o">=</span> <span class="n">ImGui</span><span class="o">::</span><span class="n">GetMousePos</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="n">xLocCvar</span><span class="p">.</span><span class="n">setValue</span><span class="p">(</span><span class="n">mousePos</span><span class="p">.</span><span class="n">x</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">yLocCvar</span><span class="p">.</span><span class="n">setValue</span><span class="p">(</span><span class="n">mousePos</span><span class="p">.</span><span class="n">y</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>This video shows the code in action!
 <video controls="controls" width="1000" preload="metadata">
 <source src="/video/imguidrag.mp4" 
 type="video/mp4" />
@@ -11686,7 +11710,7 @@ type="video/mp4" />
 
 
 
-<script defer src="/js/en.search.min.971a54268003784273525d47668a2a838d237b252c559e3525521e8b18664f4d.js"></script>
+<script defer src="/js/en.search.min.61c2f4149dab69aa7e73a20c9b35ef9b7dd93fb9ba55693d3444bfddbb10d556.js"></script>
 
 
 

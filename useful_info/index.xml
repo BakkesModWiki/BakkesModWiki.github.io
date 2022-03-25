@@ -40,6 +40,16 @@ For rocket league, you need to attach to the process &amp;ldquo;RocketLeague.exe
     </item>
     
     <item>
+      <title>MMR</title>
+      <link>https://bakkesmodwiki.github.io/useful_info/mmr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/useful_info/mmr/</guid>
+      <description>These code snippets will help you track a player&amp;rsquo;s MMR. BakkesMod only gets player MMR in matches you&amp;rsquo;re in, so it&amp;rsquo;s best used for the primary player or any players in your party. You can&amp;rsquo;t get any arbitrary player&amp;rsquo;s MMR.
+In yourplugin.h, create a smart pointer for the token. Even if you don&amp;rsquo;t use the token, BakkesMod uses it to ensure that MMR is still being tracked. If you don&amp;rsquo;t declare it using a C++ pointer, you might not get any MMR updates.</description>
+    </item>
+    
+    <item>
       <title>Multiplayer Plugins</title>
       <link>https://bakkesmodwiki.github.io/useful_info/multiplayer_plugins/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

@@ -5635,6 +5635,30 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
             
             
                 <span class="flex">
+                    <a href="/useful_info/mmr/" class="gdoc-nav__entry ">
+                        MMR
+                    </a>
+                </span>
+            
+            
+
+            
+            </li>
+            
+            
+            
+
+            
+            
+            
+            
+            
+            
+
+            <li>
+            
+            
+                <span class="flex">
                     <a href="/useful_info/multiplayer_plugins/" class="gdoc-nav__entry ">
                         Multiplayer Plugins
                     </a>
@@ -11579,119 +11603,119 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <code>&quot;Function TAGame.GFxHUD_TA.HandleStatEvent&quot;</code> is called any time a stat should appear in the center of the screen, even if it&rsquo;s disabled.<br>
 The stat ticker catches stat events from all players, but fails to see first touches, clears, and centers.
 HandleStatEvent catches all stats, but only for the primary player. Depending on your use case you may need to only hook one or both</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="c1">// The ServerWrappers here are placeholders and should not be used. 
-</span><span class="c1">//  We need the params so we hook with caller, but there is no wrapper for the HUD
-</span><span class="c1"></span><span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">HookEventWithCallerPost</span><span class="o">&lt;</span><span class="n">ServerWrapper</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&#34;Function TAGame.GFxHUD_TA.HandleStatTickerMessage&#34;</span><span class="p">,</span>
-    <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="n">ServerWrapper</span> <span class="n">caller</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="n">params</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">eventname</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">onStatTickerMessage</span><span class="p">(</span><span class="n">params</span><span class="p">);</span>
-    <span class="p">});</span>
-
-<span class="c1">// hooked whenever the primary player earns a stat
-</span><span class="c1"></span><span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">HookEventWithCallerPost</span><span class="o">&lt;</span><span class="n">ServerWrapper</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&#34;Function TAGame.GFxHUD_TA.HandleStatEvent&#34;</span><span class="p">,</span>
-    <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="n">ServerWrapper</span> <span class="n">caller</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="n">params</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">eventname</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">onStatEvent</span><span class="p">(</span><span class="n">params</span><span class="p">);</span>
-    <span class="p">});</span>
-</code></pre></div><p>Now we have the functions hooked, and we need the parameters. Either define these in your .h or right before using them in your .cpp</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="c1">// The structure of a ticker stat event
-</span><span class="c1"></span><span class="k">struct</span> <span class="nc">StatTickerParams</span> <span class="p">{</span>
-    <span class="c1">// person who got a stat
-</span><span class="c1"></span>    <span class="n">uintptr_t</span> <span class="n">Receiver</span><span class="p">;</span>
-    <span class="c1">// person who is victim of a stat (only exists for demos afaik)
-</span><span class="c1"></span>    <span class="n">uintptr_t</span> <span class="n">Victim</span><span class="p">;</span>
-    <span class="c1">// wrapper for the stat event
-</span><span class="c1"></span>    <span class="n">uintptr_t</span> <span class="n">StatEvent</span><span class="p">;</span>
-<span class="p">};</span>
-
-<span class="c1">// structure of a stat event
-</span><span class="c1"></span><span class="k">struct</span> <span class="nc">StatEventParams</span> <span class="p">{</span>
-    <span class="c1">// always primary player
-</span><span class="c1"></span>    <span class="n">uintptr_t</span> <span class="n">PRI</span><span class="p">;</span>
-    <span class="c1">// wrapper for the stat event
-</span><span class="c1"></span>    <span class="n">uintptr_t</span> <span class="n">StatEvent</span><span class="p">;</span>
-<span class="p">};</span>
-</code></pre></div><p>Now you can use them. For reference see <a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameObject/Stats/StatEventWrapper/">StatEventWrapper</a> and <a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameObject/PriWrapper/">PriWrapper</a></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">void</span> <span class="n">ClassName</span><span class="o">::</span><span class="n">onStatTickerMessage</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">params</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">StatTickerParams</span> <span class="n">pStruct</span> <span class="o">=</span> <span class="p">(</span><span class="n">StatTickerParams</span><span class="o">*</span><span class="p">)</span><span class="n">params</span><span class="p">;</span>
-    <span class="n">PriWrapper</span> <span class="n">receiver</span> <span class="o">=</span> <span class="n">PriWrapper</span><span class="p">(</span><span class="n">pStruct</span><span class="o">-&gt;</span><span class="n">Receiver</span><span class="p">);</span>
-    <span class="n">PriWrapper</span> <span class="n">victim</span> <span class="o">=</span> <span class="n">PriWrapper</span><span class="p">(</span><span class="n">pStruct</span><span class="o">-&gt;</span><span class="n">Victim</span><span class="p">);</span>
-    <span class="n">StatEventWrapper</span> <span class="n">statEvent</span> <span class="o">=</span> <span class="n">StatEventWrapper</span><span class="p">(</span><span class="n">pStruct</span><span class="o">-&gt;</span><span class="n">StatEvent</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="kt">void</span> <span class="n">ClassName</span><span class="o">::</span><span class="n">onStatEvent</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">params</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">StatEventParams</span> <span class="n">pStruct</span> <span class="o">=</span> <span class="p">(</span><span class="n">StatEventParams</span><span class="o">*</span><span class="p">)</span><span class="n">params</span><span class="p">;</span>
-    <span class="n">PriWrapper</span> <span class="n">receiver</span> <span class="o">=</span> <span class="n">PriWrapper</span><span class="p">(</span><span class="n">pStruct</span><span class="o">-&gt;</span><span class="n">Receiver</span><span class="p">);</span>
-    <span class="n">StatEventWrapper</span> <span class="n">statEvent</span> <span class="o">=</span> <span class="n">StatEventWrapper</span><span class="p">(</span><span class="n">pStruct</span><span class="o">-&gt;</span><span class="n">StatEvent</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div><p>Now you probably want to do something special with a specific event. Get the event&rsquo;s name with <code>StatEventWrapper.GetEventName()</code>. This gets the stat&rsquo;s internal names regardless of game language. This is safest to use for string comparisons. For logging or displaying in the game&rsquo;s current language you can use <code>StatEventWrapper.GetLabel()</code>. Here&rsquo;s a list of all the <code>GetEventName</code>s. The only confusing one is that a &ldquo;Demolish&rdquo; is one demolition and a &ldquo;Demolition&rdquo; is an extermination. OwnGoal is a fun ticker event that does exactly what you&rsquo;d expect, yet is never displayed anywhere in game</p>
-<pre tabindex="0"><code>&quot;Demolish&quot;
-&quot;Demolition&quot;
-&quot;Goal&quot;
-&quot;Win&quot;
-&quot;MVP&quot;
-&quot;AerialGoal&quot;
-&quot;BackwardsGoal&quot;
-&quot;BicycleGoal&quot;
-&quot;LongGoal&quot;
-&quot;TurtleGoal&quot;
-&quot;PoolShot&quot;
-&quot;OvertimeGoal&quot;
-&quot;HatTrick&quot;
-&quot;Assist&quot;
-&quot;Playmaker&quot;
-&quot;Save&quot;
-&quot;EpicSave&quot;
-&quot;Savior&quot;
-&quot;Shot&quot;
-&quot;Center&quot;
-&quot;Clear&quot;
-&quot;FirstTouch&quot;
-&quot;BreakoutDamage&quot;
-&quot;BreakoutDamageLarge&quot;
-&quot;LowFive&quot;
-&quot;HighFive&quot;
-&quot;HoopsSwishGoal&quot;
-&quot;BicycleHit&quot;
-&quot;OwnGoal&quot;
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// The ServerWrappers here are placeholders and should not be used. 
+</span></span></span><span class="line"><span class="cl"><span class="c1">//  We need the params so we hook with caller, but there is no wrapper for the HUD
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">HookEventWithCallerPost</span><span class="o">&lt;</span><span class="n">ServerWrapper</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&#34;Function TAGame.GFxHUD_TA.HandleStatTickerMessage&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="n">ServerWrapper</span> <span class="n">caller</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="n">params</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">eventname</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">onStatTickerMessage</span><span class="p">(</span><span class="n">params</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// hooked whenever the primary player earns a stat
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">HookEventWithCallerPost</span><span class="o">&lt;</span><span class="n">ServerWrapper</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&#34;Function TAGame.GFxHUD_TA.HandleStatEvent&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="n">ServerWrapper</span> <span class="n">caller</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="n">params</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">eventname</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">onStatEvent</span><span class="p">(</span><span class="n">params</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span></code></pre></div><p>Now we have the functions hooked, and we need the parameters. Either define these in your .h or right before using them in your .cpp</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// The structure of a ticker stat event
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">struct</span> <span class="nc">StatTickerParams</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// person who got a stat
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">uintptr_t</span> <span class="n">Receiver</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// person who is victim of a stat (only exists for demos afaik)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">uintptr_t</span> <span class="n">Victim</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// wrapper for the stat event
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">uintptr_t</span> <span class="n">StatEvent</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// structure of a stat event
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">struct</span> <span class="nc">StatEventParams</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// always primary player
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">uintptr_t</span> <span class="n">PRI</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// wrapper for the stat event
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">uintptr_t</span> <span class="n">StatEvent</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></div><p>Now you can use them. For reference see <a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameObject/Stats/StatEventWrapper/">StatEventWrapper</a> and <a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameObject/PriWrapper/">PriWrapper</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">ClassName</span><span class="o">::</span><span class="n">onStatTickerMessage</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">params</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">StatTickerParams</span> <span class="n">pStruct</span> <span class="o">=</span> <span class="p">(</span><span class="n">StatTickerParams</span><span class="o">*</span><span class="p">)</span><span class="n">params</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">PriWrapper</span> <span class="n">receiver</span> <span class="o">=</span> <span class="n">PriWrapper</span><span class="p">(</span><span class="n">pStruct</span><span class="o">-&gt;</span><span class="n">Receiver</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">PriWrapper</span> <span class="n">victim</span> <span class="o">=</span> <span class="n">PriWrapper</span><span class="p">(</span><span class="n">pStruct</span><span class="o">-&gt;</span><span class="n">Victim</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">StatEventWrapper</span> <span class="n">statEvent</span> <span class="o">=</span> <span class="n">StatEventWrapper</span><span class="p">(</span><span class="n">pStruct</span><span class="o">-&gt;</span><span class="n">StatEvent</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">ClassName</span><span class="o">::</span><span class="n">onStatEvent</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">params</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">StatEventParams</span> <span class="n">pStruct</span> <span class="o">=</span> <span class="p">(</span><span class="n">StatEventParams</span><span class="o">*</span><span class="p">)</span><span class="n">params</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">PriWrapper</span> <span class="n">receiver</span> <span class="o">=</span> <span class="n">PriWrapper</span><span class="p">(</span><span class="n">pStruct</span><span class="o">-&gt;</span><span class="n">Receiver</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">StatEventWrapper</span> <span class="n">statEvent</span> <span class="o">=</span> <span class="n">StatEventWrapper</span><span class="p">(</span><span class="n">pStruct</span><span class="o">-&gt;</span><span class="n">StatEvent</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Now you probably want to do something special with a specific event. Get the event&rsquo;s name with <code>StatEventWrapper.GetEventName()</code>. This gets the stat&rsquo;s internal names regardless of game language. This is safest to use for string comparisons. For logging or displaying in the game&rsquo;s current language you can use <code>StatEventWrapper.GetLabel()</code>. Here&rsquo;s a list of all the <code>GetEventName</code>s. The only confusing one is that a &ldquo;Demolish&rdquo; is one demolition and a &ldquo;Demolition&rdquo; is an extermination. OwnGoal is a fun ticker event that does exactly what you&rsquo;d expect, yet is never displayed anywhere in game</p>
+<pre tabindex="0"><code>&#34;Demolish&#34;
+&#34;Demolition&#34;
+&#34;Goal&#34;
+&#34;Win&#34;
+&#34;MVP&#34;
+&#34;AerialGoal&#34;
+&#34;BackwardsGoal&#34;
+&#34;BicycleGoal&#34;
+&#34;LongGoal&#34;
+&#34;TurtleGoal&#34;
+&#34;PoolShot&#34;
+&#34;OvertimeGoal&#34;
+&#34;HatTrick&#34;
+&#34;Assist&#34;
+&#34;Playmaker&#34;
+&#34;Save&#34;
+&#34;EpicSave&#34;
+&#34;Savior&#34;
+&#34;Shot&#34;
+&#34;Center&#34;
+&#34;Clear&#34;
+&#34;FirstTouch&#34;
+&#34;BreakoutDamage&#34;
+&#34;BreakoutDamageLarge&#34;
+&#34;LowFive&#34;
+&#34;HighFive&#34;
+&#34;HoopsSwishGoal&#34;
+&#34;BicycleHit&#34;
+&#34;OwnGoal&#34;
 </code></pre><p>Now I&rsquo;ll just put together a simple example to track if the main player is demoed. As always this is assuming this is using the template</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="c1">// add to onload 
-</span><span class="c1"></span><span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">HookEventWithCallerPost</span><span class="o">&lt;</span><span class="n">ServerWrapper</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&#34;Function TAGame.GFxHUD_TA.HandleStatTickerMessage&#34;</span><span class="p">,</span>
-    <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="n">ServerWrapper</span> <span class="n">caller</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="n">params</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">eventname</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">onStatTickerMessage</span><span class="p">(</span><span class="n">params</span><span class="p">);</span>
-    <span class="p">});</span>
-</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="c1">// defined elsewhere in .cpp
-</span><span class="c1"></span><span class="kt">void</span> <span class="n">ClassName</span><span class="o">::</span><span class="n">onStatTickerMessage</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">params</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">struct</span> <span class="nc">StatTickerParams</span> <span class="p">{</span>
-        <span class="n">uintptr_t</span> <span class="n">Receiver</span><span class="p">;</span>
-        <span class="n">uintptr_t</span> <span class="n">Victim</span><span class="p">;</span>
-        <span class="n">uintptr_t</span> <span class="n">StatEvent</span><span class="p">;</span>
-    <span class="p">};</span>
-
-    <span class="n">StatTickerParams</span><span class="o">*</span> <span class="n">pStruct</span> <span class="o">=</span> <span class="p">(</span><span class="n">StatTickerParams</span><span class="o">*</span><span class="p">)</span><span class="n">params</span><span class="p">;</span>
-    <span class="n">PriWrapper</span> <span class="n">receiver</span> <span class="o">=</span> <span class="n">PriWrapper</span><span class="p">(</span><span class="n">pStruct</span><span class="o">-&gt;</span><span class="n">Receiver</span><span class="p">);</span>
-    <span class="n">PriWrapper</span> <span class="n">victim</span> <span class="o">=</span> <span class="n">PriWrapper</span><span class="p">(</span><span class="n">pStruct</span><span class="o">-&gt;</span><span class="n">Victim</span><span class="p">);</span>
-    <span class="n">StatEventWrapper</span> <span class="n">statEvent</span> <span class="o">=</span> <span class="n">StatEventWrapper</span><span class="p">(</span><span class="n">pStruct</span><span class="o">-&gt;</span><span class="n">StatEvent</span><span class="p">);</span>
-
-    <span class="k">if</span> <span class="p">(</span><span class="n">statEvent</span><span class="p">.</span><span class="n">GetEventName</span><span class="p">()</span> <span class="o">==</span> <span class="s">&#34;Demolish&#34;</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;a demolition happened &gt;:(&#34;</span><span class="p">);</span>
-        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">receiver</span><span class="p">)</span> <span class="p">{</span> <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;Null reciever PRI&#34;</span><span class="p">);</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
-        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">victim</span><span class="p">)</span> <span class="p">{</span> <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;Null victim PRI&#34;</span><span class="p">);</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
-
-        <span class="c1">// Find the primary player&#39;s PRI
-</span><span class="c1"></span>        <span class="n">PlayerControllerWrapper</span> <span class="n">playerController</span> <span class="o">=</span> <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">GetPlayerController</span><span class="p">();</span>
-        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">playerController</span><span class="p">)</span> <span class="p">{</span> <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;Null controller&#34;</span><span class="p">);</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
-        <span class="n">PriWrapper</span> <span class="n">playerPRI</span> <span class="o">=</span> <span class="n">playerController</span><span class="p">.</span><span class="n">GetPRI</span><span class="p">();</span>
-        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">playerPRI</span><span class="p">)</span> <span class="p">{</span> <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;Null player PRI&#34;</span><span class="p">);</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
-
-        <span class="c1">// Compare the primary player to the victim
-</span><span class="c1"></span>        <span class="k">if</span> <span class="p">(</span><span class="n">playerPRI</span><span class="p">.</span><span class="n">memory_address</span> <span class="o">!=</span> <span class="n">victim</span><span class="p">.</span><span class="n">memory_address</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;Hah you got demoed get good {}&#34;</span><span class="p">,</span> <span class="n">victim</span><span class="p">.</span><span class="n">GetPlayerName</span><span class="p">().</span><span class="n">ToString</span><span class="p">());</span>
-            <span class="k">return</span><span class="p">;</span>
-        <span class="p">}</span>
-        <span class="c1">// Primary player is the victim!
-</span><span class="c1"></span>        <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;I was demoed!!! {} is toxic I&#39;m uninstalling&#34;</span><span class="p">,</span> <span class="n">receiver</span><span class="p">.</span><span class="n">GetPlayerName</span><span class="p">().</span><span class="n">ToString</span><span class="p">());</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div><p>Hopefully all of this is useful to someone using stat events in the future!</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// add to onload 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">HookEventWithCallerPost</span><span class="o">&lt;</span><span class="n">ServerWrapper</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&#34;Function TAGame.GFxHUD_TA.HandleStatTickerMessage&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="n">ServerWrapper</span> <span class="n">caller</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="n">params</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">eventname</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">onStatTickerMessage</span><span class="p">(</span><span class="n">params</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// defined elsewhere in .cpp
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="n">ClassName</span><span class="o">::</span><span class="n">onStatTickerMessage</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">params</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">struct</span> <span class="nc">StatTickerParams</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">uintptr_t</span> <span class="n">Receiver</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">uintptr_t</span> <span class="n">Victim</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">uintptr_t</span> <span class="n">StatEvent</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">StatTickerParams</span><span class="o">*</span> <span class="n">pStruct</span> <span class="o">=</span> <span class="p">(</span><span class="n">StatTickerParams</span><span class="o">*</span><span class="p">)</span><span class="n">params</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">PriWrapper</span> <span class="n">receiver</span> <span class="o">=</span> <span class="n">PriWrapper</span><span class="p">(</span><span class="n">pStruct</span><span class="o">-&gt;</span><span class="n">Receiver</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">PriWrapper</span> <span class="n">victim</span> <span class="o">=</span> <span class="n">PriWrapper</span><span class="p">(</span><span class="n">pStruct</span><span class="o">-&gt;</span><span class="n">Victim</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">StatEventWrapper</span> <span class="n">statEvent</span> <span class="o">=</span> <span class="n">StatEventWrapper</span><span class="p">(</span><span class="n">pStruct</span><span class="o">-&gt;</span><span class="n">StatEvent</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">statEvent</span><span class="p">.</span><span class="n">GetEventName</span><span class="p">()</span> <span class="o">==</span> <span class="s">&#34;Demolish&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;a demolition happened &gt;:(&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">receiver</span><span class="p">)</span> <span class="p">{</span> <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;Null reciever PRI&#34;</span><span class="p">);</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">victim</span><span class="p">)</span> <span class="p">{</span> <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;Null victim PRI&#34;</span><span class="p">);</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// Find the primary player&#39;s PRI
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">PlayerControllerWrapper</span> <span class="n">playerController</span> <span class="o">=</span> <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">GetPlayerController</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">playerController</span><span class="p">)</span> <span class="p">{</span> <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;Null controller&#34;</span><span class="p">);</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="n">PriWrapper</span> <span class="n">playerPRI</span> <span class="o">=</span> <span class="n">playerController</span><span class="p">.</span><span class="n">GetPRI</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">playerPRI</span><span class="p">)</span> <span class="p">{</span> <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;Null player PRI&#34;</span><span class="p">);</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// Compare the primary player to the victim
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">if</span> <span class="p">(</span><span class="n">playerPRI</span><span class="p">.</span><span class="n">memory_address</span> <span class="o">!=</span> <span class="n">victim</span><span class="p">.</span><span class="n">memory_address</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;Hah you got demoed get good {}&#34;</span><span class="p">,</span> <span class="n">victim</span><span class="p">.</span><span class="n">GetPlayerName</span><span class="p">().</span><span class="n">ToString</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// Primary player is the victim!
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;I was demoed!!! {} is toxic I&#39;m uninstalling&#34;</span><span class="p">,</span> <span class="n">receiver</span><span class="p">.</span><span class="n">GetPlayerName</span><span class="p">().</span><span class="n">ToString</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Hopefully all of this is useful to someone using stat events in the future!</p>
 
         
         <hr>
@@ -11752,7 +11776,7 @@ HandleStatEvent catches all stats, but only for the primary player. Depending on
 
 
 
-<script defer src="/js/en.search.min.971a54268003784273525d47668a2a838d237b252c559e3525521e8b18664f4d.js"></script>
+<script defer src="/js/en.search.min.61c2f4149dab69aa7e73a20c9b35ef9b7dd93fb9ba55693d3444bfddbb10d556.js"></script>
 
 
 

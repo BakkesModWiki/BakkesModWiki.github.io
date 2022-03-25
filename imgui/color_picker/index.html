@@ -5635,6 +5635,30 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
             
             
                 <span class="flex">
+                    <a href="/useful_info/mmr/" class="gdoc-nav__entry ">
+                        MMR
+                    </a>
+                </span>
+            
+            
+
+            
+            </li>
+            
+            
+            
+
+            
+            
+            
+            
+            
+            
+
+            <li>
+            
+            
+                <span class="flex">
                     <a href="/useful_info/multiplayer_plugins/" class="gdoc-nav__entry ">
                         Multiplayer Plugins
                     </a>
@@ -11574,31 +11598,31 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
         <p>You&rsquo;ve got a super cool looking overlay, but you want the user to change the color. Here&rsquo;s some code for a super nice color picker!</p>
 <p>First, you need to be rendering something on the canvas. Let&rsquo;s say it&rsquo;s a single chunk of text. <a class="gdoc-markdown__link"  href="/code_snippets/canvas/">Like this example</a>.</p>
 <p>Next, make a cvar for color. This is really simple. The default value can be encoded with hex</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">registerCvar</span><span class="p">(</span><span class="s">&#34;cool_color&#34;</span><span class="p">,</span> <span class="s">&#34;#FFFFFF&#34;</span><span class="p">,</span> <span class="s">&#34;color of overlay&#34;</span><span class="p">);</span>
-</code></pre></div><p>Now in the canvas render, use the new color</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">CVarWrapper</span> <span class="n">textColorVar</span> <span class="o">=</span> <span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">getCvar</span><span class="p">(</span><span class="s">&#34;cool_color&#34;</span><span class="p">);</span>
-<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">textColorVar</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="n">LinearColor</span> <span class="n">textColor</span> <span class="o">=</span> <span class="n">textColorVar</span><span class="p">.</span><span class="n">getColorValue</span><span class="p">();</span>
-<span class="n">canvas</span><span class="p">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">textColor</span><span class="p">);</span>
-<span class="c1">// render text after setting the color
-</span></code></pre></div><p>This code goes wherever you&rsquo;re rendering your ImGui</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">CVarWrapper</span> <span class="n">textColorVar</span> <span class="o">=</span> <span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">getCvar</span><span class="p">(</span><span class="s">&#34;cool_color&#34;</span><span class="p">);</span>
-<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">textColorVar</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
-<span class="c1">// converts from 0-255 color to 0.0-1.0 color
-</span><span class="c1"></span><span class="n">LinearColor</span> <span class="n">textColor</span> <span class="o">=</span> <span class="n">textColorVar</span><span class="p">.</span><span class="n">getColorValue</span><span class="p">()</span> <span class="o">/</span> <span class="mi">255</span><span class="p">;</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">ImGui</span><span class="o">::</span><span class="n">ColorEdit4</span><span class="p">(</span><span class="s">&#34;Text Color&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">textColor</span><span class="p">.</span><span class="n">R</span><span class="p">))</span> <span class="p">{</span>
-    <span class="n">textColorVar</span><span class="p">.</span><span class="n">setValue</span><span class="p">(</span><span class="n">textColor</span> <span class="o">*</span> <span class="mi">255</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div><p>Here&rsquo;s the final result. First when you hover the ColorButton<br>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">registerCvar</span><span class="p">(</span><span class="s">&#34;cool_color&#34;</span><span class="p">,</span> <span class="s">&#34;#FFFFFF&#34;</span><span class="p">,</span> <span class="s">&#34;color of overlay&#34;</span><span class="p">);</span>
+</span></span></code></pre></div><p>Now in the canvas render, use the new color</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">CVarWrapper</span> <span class="n">textColorVar</span> <span class="o">=</span> <span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">getCvar</span><span class="p">(</span><span class="s">&#34;cool_color&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">textColorVar</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">LinearColor</span> <span class="n">textColor</span> <span class="o">=</span> <span class="n">textColorVar</span><span class="p">.</span><span class="n">getColorValue</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="n">canvas</span><span class="p">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">textColor</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// render text after setting the color
+</span></span></span></code></pre></div><p>This code goes wherever you&rsquo;re rendering your ImGui</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">CVarWrapper</span> <span class="n">textColorVar</span> <span class="o">=</span> <span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">getCvar</span><span class="p">(</span><span class="s">&#34;cool_color&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">textColorVar</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// converts from 0-255 color to 0.0-1.0 color
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">LinearColor</span> <span class="n">textColor</span> <span class="o">=</span> <span class="n">textColorVar</span><span class="p">.</span><span class="n">getColorValue</span><span class="p">()</span> <span class="o">/</span> <span class="mi">255</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">ImGui</span><span class="o">::</span><span class="n">ColorEdit4</span><span class="p">(</span><span class="s">&#34;Text Color&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">textColor</span><span class="p">.</span><span class="n">R</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">textColorVar</span><span class="p">.</span><span class="n">setValue</span><span class="p">(</span><span class="n">textColor</span> <span class="o">*</span> <span class="mi">255</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Here&rsquo;s the final result. First when you hover the ColorButton<br>
 <img src="/img/colorpickerhover.png" alt="colorpickerhover"  /><br>
 And here&rsquo;s when the ColorPicker popup is opened by clicking the ColorButton<br>
 <img src="/img/colorpickeropen.png" alt="colorpickeropen"  /></p>
 <p>There&rsquo;s multiple flags to change the ColorEdit. If you want a color wheel, or alpha, or just the color button, there&rsquo;s many <code>ImGuiColorEditFlags</code> found on line 1150 of <code>IMGUI/imgui.h</code><br>
 For example, I like this combination</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">ImGui</span><span class="o">::</span><span class="n">ColorEdit4</span><span class="p">(</span><span class="s">&#34;Text Color With Flags&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">textColor</span><span class="p">.</span><span class="n">R</span><span class="p">,</span> <span class="n">ImGuiColorEditFlags_NoInputs</span> <span class="o">|</span> <span class="n">ImGuiColorEditFlags_AlphaBar</span><span class="p">)</span>
-</code></pre></div><p>With these flags it looks like this<br>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">ImGui</span><span class="o">::</span><span class="n">ColorEdit4</span><span class="p">(</span><span class="s">&#34;Text Color With Flags&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">textColor</span><span class="p">.</span><span class="n">R</span><span class="p">,</span> <span class="n">ImGuiColorEditFlags_NoInputs</span> <span class="o">|</span> <span class="n">ImGuiColorEditFlags_AlphaBar</span><span class="p">)</span>
+</span></span></code></pre></div><p>With these flags it looks like this<br>
 <img src="/img/colorpickerflags.png" alt="colorpickerflags"  /></p>
 <p><a class="gdoc-markdown__link" target="_blank" href="https://github.com/ubelhj/BakkesModStarterPlugin/tree/imgui">Click here to see exactly how this code is used in CoolPlugin&rsquo;s source&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a></p>
 
@@ -11661,7 +11685,7 @@ For example, I like this combination</p>
 
 
 
-<script defer src="/js/en.search.min.971a54268003784273525d47668a2a838d237b252c559e3525521e8b18664f4d.js"></script>
+<script defer src="/js/en.search.min.61c2f4149dab69aa7e73a20c9b35ef9b7dd93fb9ba55693d3444bfddbb10d556.js"></script>
 
 
 

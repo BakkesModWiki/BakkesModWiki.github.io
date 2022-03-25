@@ -5634,6 +5634,30 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
             
             
                 <span class="flex">
+                    <a href="/useful_info/mmr/" class="gdoc-nav__entry ">
+                        MMR
+                    </a>
+                </span>
+            
+            
+
+            
+            </li>
+            
+            
+            
+
+            
+            
+            
+            
+            
+            
+
+            <li>
+            
+            
+                <span class="flex">
                     <a href="/useful_info/multiplayer_plugins/" class="gdoc-nav__entry ">
                         Multiplayer Plugins
                     </a>
@@ -11572,46 +11596,46 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
         <h1>Using Function Hooks</h1>
         <p>Function hooks are a powerful part of BakkesMod. After a function is hooked, any time it is called by Rocket League, your code is called as well.</p>
 <p>There are multiple types of hooks. First are the two simpler ones. <code>gameWrapper</code> is a <a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameWrapper/">GameWrapper</a> and will be accessible from any point in your code.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">HookEvent</span><span class="p">(</span><span class="s">&#34;Function TAGame.Car_TA.SetVehicleInput&#34;</span><span class="p">,</span>
-  <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">eventName</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// Your Code here
-</span><span class="c1"></span>    <span class="c1">// Call another function or just do your things here
-</span><span class="c1"></span><span class="p">});</span>
-
-<span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">HookEventPost</span><span class="p">(</span><span class="s">&#34;Function TAGame.Car_TA.SetVehicleInput&#34;</span><span class="p">,</span>
-  <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">eventName</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// Your Code here
-</span><span class="c1"></span><span class="p">});</span>
-</code></pre></div><p><code>HookEvent</code> runs your code as the function is called
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">HookEvent</span><span class="p">(</span><span class="s">&#34;Function TAGame.Car_TA.SetVehicleInput&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">eventName</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Your Code here
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// Call another function or just do your things here
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">HookEventPost</span><span class="p">(</span><span class="s">&#34;Function TAGame.Car_TA.SetVehicleInput&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">eventName</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Your Code here
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">});</span>
+</span></span></code></pre></div><p><code>HookEvent</code> runs your code as the function is called
 <code>HookEventPost</code> runs your code as the function is returned from
 They return a <code>std::string</code> which is the name of the calling function. This is useful to differentiate what your caller is if you have multiple hooks calling the same code.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">HookEventWithCaller</span><span class="o">&lt;</span><span class="n">CarWrapper</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&#34;Function TAGame.Car_TA.SetVehicleInput&#34;</span><span class="p">,</span>
-  <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="n">CarWrapper</span> <span class="n">caller</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="n">params</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">eventname</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// Your Code here
-</span><span class="c1"></span><span class="p">});</span>
-
-<span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">HookEventWithCallerPost</span><span class="o">&lt;</span><span class="n">CarWrapper</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&#34;Function TAGame.Car_TA.SetVehicleInput&#34;</span><span class="p">,</span>
-  <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="n">CarWrapper</span> <span class="n">caller</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="n">params</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">eventname</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// Your Code here
-</span><span class="c1"></span><span class="p">});</span>
-</code></pre></div><p>The two WithCaller variants do the same thing, but let you know a bit more about what is using the function</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">HookEventWithCaller</span><span class="o">&lt;</span><span class="n">CarWrapper</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&#34;Function TAGame.Car_TA.SetVehicleInput&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="n">CarWrapper</span> <span class="n">caller</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="n">params</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">eventname</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Your Code here
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">HookEventWithCallerPost</span><span class="o">&lt;</span><span class="n">CarWrapper</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&#34;Function TAGame.Car_TA.SetVehicleInput&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="n">CarWrapper</span> <span class="n">caller</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="n">params</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">eventname</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Your Code here
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">});</span>
+</span></span></code></pre></div><p>The two WithCaller variants do the same thing, but let you know a bit more about what is using the function</p>
 <p>They provide a <code>caller</code> value which is obtained from the function&rsquo;s name. After <code>Function TAGame</code> there will be a class name ending in <code>_TA</code>. If the name matches a wrapper name, you can hook it as that wrapper. <code>Car_TA</code> becomes <a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameObject/CarWrapper/">CarWrapper</a> for example
 They also provide a <code>void *</code> pointer. This points at the location of any parameters provided to the function. These aren&rsquo;t well documented, and are hard to guess, so feel free to ask about them if you think you need them.</p>
 <p>For example <code>Function TAGame.Car_TA.OnHitBall</code> has a <a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameObject/BallWrapper/">BallWrapper</a> parameter. To access it, cast the <code>void *</code> pointer to a struct including the parameters</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">struct</span> <span class="nc">CarHitBallParams</span> <span class="p">{</span>
-  <span class="c1">// This is a pointer to the ball&#39;s address 
-</span><span class="c1"></span>  <span class="c1">//  but needs to be constructed into a BallWrapper before use
-</span><span class="c1"></span>  <span class="n">uintptr_t</span> <span class="n">ball</span><span class="p">;</span>
-<span class="p">};</span>
-
-<span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">HookEventWithCallerPost</span><span class="o">&lt;</span><span class="n">CarWrapper</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&#34;Function TAGame.Car_TA.OnHitBall&#34;</span><span class="p">,</span>
-  <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="n">CarWrapper</span> <span class="n">caller</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="n">params</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">eventname</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// This cast is only safe if you&#39;re 100% sure the params are correct
-</span><span class="c1"></span>    <span class="n">CarHitBallParams</span><span class="o">*</span> <span class="n">params</span> <span class="o">=</span> <span class="p">(</span><span class="n">CarHitBallParams</span><span class="o">*</span><span class="p">)</span> <span class="n">params</span><span class="p">;</span> 
-    <span class="n">BallWrapper</span> <span class="n">ballHit</span> <span class="o">=</span> <span class="n">BallWrapper</span><span class="p">(</span><span class="n">params</span><span class="o">-&gt;</span><span class="n">ball</span><span class="p">);</span>
-    <span class="c1">// Now you know what ball was hit!
-</span><span class="c1"></span><span class="p">});</span>
-</code></pre></div><p>Find functions with the <a class="gdoc-markdown__link"  href="/functions/function_scanner/">function scanner</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">struct</span> <span class="nc">CarHitBallParams</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// This is a pointer to the ball&#39;s address 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="c1">//  but needs to be constructed into a BallWrapper before use
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="n">uintptr_t</span> <span class="n">ball</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">HookEventWithCallerPost</span><span class="o">&lt;</span><span class="n">CarWrapper</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&#34;Function TAGame.Car_TA.OnHitBall&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="n">CarWrapper</span> <span class="n">caller</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="n">params</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">eventname</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// This cast is only safe if you&#39;re 100% sure the params are correct
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">CarHitBallParams</span><span class="o">*</span> <span class="n">params</span> <span class="o">=</span> <span class="p">(</span><span class="n">CarHitBallParams</span><span class="o">*</span><span class="p">)</span> <span class="n">params</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">BallWrapper</span> <span class="n">ballHit</span> <span class="o">=</span> <span class="n">BallWrapper</span><span class="p">(</span><span class="n">params</span><span class="o">-&gt;</span><span class="n">ball</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Now you know what ball was hit!
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">});</span>
+</span></span></code></pre></div><p>Find functions with the <a class="gdoc-markdown__link"  href="/functions/function_scanner/">function scanner</a></p>
 
         
         <hr>
@@ -11672,7 +11696,7 @@ They also provide a <code>void *</code> pointer. This points at the location of 
 
 
 
-<script defer src="/js/en.search.min.971a54268003784273525d47668a2a838d237b252c559e3525521e8b18664f4d.js"></script>
+<script defer src="/js/en.search.min.61c2f4149dab69aa7e73a20c9b35ef9b7dd93fb9ba55693d3444bfddbb10d556.js"></script>
 
 
 

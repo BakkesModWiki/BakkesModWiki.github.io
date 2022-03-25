@@ -5633,6 +5633,30 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
             
             
                 <span class="flex">
+                    <a href="/useful_info/mmr/" class="gdoc-nav__entry ">
+                        MMR
+                    </a>
+                </span>
+            
+            
+
+            
+            </li>
+            
+            
+            
+
+            
+            
+            
+            
+            
+            
+
+            <li>
+            
+            
+                <span class="flex">
                     <a href="/useful_info/multiplayer_plugins/" class="gdoc-nav__entry ">
                         Multiplayer Plugins
                     </a>
@@ -11573,143 +11597,143 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <p>The template has a lot of commented out code that is designed to help you learn how to use the syntax, but is ignored for the purposes of this tutorial</p>
 <p>First we&rsquo;ll look at your <code>CoolPlugin.h</code> file. It describes any functions your code will use
 At the top are two lines that are required for plugins, and allow you to call BakkesMod SDK functions</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#pragma once
-</span><span class="cp">#include</span> <span class="cpf">&#34;bakkesmod/plugin/bakkesmodplugin.h&#34;</span><span class="cp">
-</span></code></pre></div><p>Next is the declaration of your class. Here you describe any functions you will be using.
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#pragma once
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;bakkesmod/plugin/bakkesmodplugin.h&#34;</span><span class="cp">
+</span></span></span></code></pre></div><p>Next is the declaration of your class. Here you describe any functions you will be using.
 <code>onLoad()</code> is automatically called by BakkesMod when the plugin is loaded, and <code>onUnload()</code> is called when it is unloaded</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">class</span> <span class="nc">CoolPlugin</span><span class="o">:</span> <span class="k">public</span> <span class="n">BakkesMod</span><span class="o">::</span><span class="n">Plugin</span><span class="o">::</span><span class="n">BakkesModPlugin</span>
-<span class="p">{</span>
-  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">onLoad</span><span class="p">();</span>
-  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">onUnload</span><span class="p">();</span>
-<span class="p">};</span>
-</code></pre></div><p>Now we will look at the <code>CoolPlugin.cpp</code> file. Here you write the code that will define the functions
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">CoolPlugin</span><span class="o">:</span> <span class="k">public</span> <span class="n">BakkesMod</span><span class="o">::</span><span class="n">Plugin</span><span class="o">::</span><span class="n">BakkesModPlugin</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">onLoad</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">onUnload</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></div><p>Now we will look at the <code>CoolPlugin.cpp</code> file. Here you write the code that will define the functions
 First it includes your header so it can define the functions described above</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&#34;pch.h&#34;</span><span class="cp">
-</span><span class="cp">#include</span> <span class="cpf">&#34;CoolPlugin.h&#34;</span><span class="cp">
-</span></code></pre></div><p>Next it declares the plugin. The string in &quot;&quot; will be used in the plugin manager to describe the plugin, but it needs to be a short description. Keep it to 1 or two words. You can also define a plugin version, although the template handles that automatically. Finally is the plugin type described <a class="gdoc-markdown__link"  href="/code_snippets/plugin_types/">here</a>. If you don&rsquo;t know what it is, just use <code>PLUGINTYPE_FREEPLAY</code>.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">BAKKESMOD_PLUGIN</span><span class="p">(</span><span class="n">CoolPlugin</span><span class="p">,</span> <span class="s">&#34;Cool Plugin&#34;</span><span class="p">,</span> <span class="n">plugin_version</span><span class="p">,</span> <span class="n">PLUGINTYPE_FREEPLAY</span><span class="p">)</span>
-</code></pre></div><p>Next you define your functions, starting with <code>onLoad()</code>. As this is a demo, we&rsquo;ll just do a hello world.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">void</span> <span class="n">CoolPlugin</span><span class="o">::</span><span class="n">onLoad</span><span class="p">()</span> <span class="p">{</span>
-  <span class="c1">// do something when it loads
-</span><span class="c1"></span>  <span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">log</span><span class="p">(</span><span class="s">&#34;Hello I&#39;m CoolPlugin B)&#34;</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div><p>Next is <code>onUnload()</code>. Bakkesmod handles most of unloading, so only worry about this if your code is using some 3rd party library that needs unloading to be handled specially. For now this can just log that it unloaded</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">void</span> <span class="n">CoolPlugin</span><span class="o">::</span><span class="n">onUnload</span><span class="p">()</span> <span class="p">{</span>
-  <span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">log</span><span class="p">(</span><span class="s">&#34;I was too cool for this world B&#39;(&#34;</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div><p>Now you&rsquo;ve got a super basic plugin. Hit Build -&gt; Build CoolPlugin or press ctrl + B to finalize the plugin. It will create <code>CoolPlugin.dll</code> in a <code>plugins/</code> folder next to your plugin source code. It will also move it into your bakkesmod folder if you are using the template.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;pch.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;CoolPlugin.h&#34;</span><span class="cp">
+</span></span></span></code></pre></div><p>Next it declares the plugin. The string in &quot;&quot; will be used in the plugin manager to describe the plugin, but it needs to be a short description. Keep it to 1 or two words. You can also define a plugin version, although the template handles that automatically. Finally is the plugin type described <a class="gdoc-markdown__link"  href="/code_snippets/plugin_types/">here</a>. If you don&rsquo;t know what it is, just use <code>PLUGINTYPE_FREEPLAY</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">BAKKESMOD_PLUGIN</span><span class="p">(</span><span class="n">CoolPlugin</span><span class="p">,</span> <span class="s">&#34;Cool Plugin&#34;</span><span class="p">,</span> <span class="n">plugin_version</span><span class="p">,</span> <span class="n">PLUGINTYPE_FREEPLAY</span><span class="p">)</span>
+</span></span></code></pre></div><p>Next you define your functions, starting with <code>onLoad()</code>. As this is a demo, we&rsquo;ll just do a hello world.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">CoolPlugin</span><span class="o">::</span><span class="n">onLoad</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// do something when it loads
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">log</span><span class="p">(</span><span class="s">&#34;Hello I&#39;m CoolPlugin B)&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Next is <code>onUnload()</code>. Bakkesmod handles most of unloading, so only worry about this if your code is using some 3rd party library that needs unloading to be handled specially. For now this can just log that it unloaded</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">CoolPlugin</span><span class="o">::</span><span class="n">onUnload</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">log</span><span class="p">(</span><span class="s">&#34;I was too cool for this world B&#39;(&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Now you&rsquo;ve got a super basic plugin. Hit Build -&gt; Build CoolPlugin or press ctrl + B to finalize the plugin. It will create <code>CoolPlugin.dll</code> in a <code>plugins/</code> folder next to your plugin source code. It will also move it into your bakkesmod folder if you are using the template.</p>
 <p>Now open Rocket League and open the BakkesMod console with f6. Type <code>plugin load CoolPlugin</code> and you should see it load and say hello! If you unload it with <code>plugin unload CoolPlugin</code> you should see it say goodbye to you :cry:</p>
 <p>Next we&rsquo;ll make the plugin actually do something. We&rsquo;ll reverse engineer the <code>ballontop</code> command, which puts the ball on top of your car in freeplay.
 In <code>CoolPlugin.h</code> add a new function</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">class</span> <span class="nc">CoolPlugin</span><span class="o">:</span> <span class="k">public</span> <span class="n">BakkesMod</span><span class="o">::</span><span class="n">Plugin</span><span class="o">::</span><span class="n">BakkesModPlugin</span>
-<span class="p">{</span>
-  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">onLoad</span><span class="p">();</span>
-  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">onUnload</span><span class="p">();</span>
-  <span class="kt">void</span> <span class="nf">ballOnTop</span><span class="p">();</span>
-<span class="p">};</span>
-</code></pre></div><p>We need to define that function in <code>CoolPlugin.cpp</code>. Just jump to the end of the file and add</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">void</span> <span class="n">CoolPlugin</span><span class="o">::</span><span class="n">ballOnTop</span><span class="p">()</span> <span class="p">{</span>
-
-<span class="p">}</span>
-</code></pre></div><p>⠀
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">CoolPlugin</span><span class="o">:</span> <span class="k">public</span> <span class="n">BakkesMod</span><span class="o">::</span><span class="n">Plugin</span><span class="o">::</span><span class="n">BakkesModPlugin</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">onLoad</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">onUnload</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">void</span> <span class="nf">ballOnTop</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></div><p>We need to define that function in <code>CoolPlugin.cpp</code>. Just jump to the end of the file and add</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">CoolPlugin</span><span class="o">::</span><span class="n">ballOnTop</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>⠀
 The next lines of code are all going to be within <code>CoolPlugin::ballOnTop()</code> in <code>CoolPlugin.cpp</code></p>
 <p>First we need to make sure we should be running the plugin. We only want it to work in freeplay. The <code>gameWrapper</code> gives a ton of useful functions to figure out what context the code is being run from. The first line of <code>CoolPlugin::ballOnTop()</code> will be</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">IsInFreeplay</span><span class="p">())</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
-</code></pre></div><p>There are also <code>gameWrapper-&gt;IsInGame()</code> and <code>gameWrapper-&gt;IsInOnlineGame()</code> if you&rsquo;d rather your plugin run elsewhere</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">IsInFreeplay</span><span class="p">())</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
+</span></span></code></pre></div><p>There are also <code>gameWrapper-&gt;IsInGame()</code> and <code>gameWrapper-&gt;IsInOnlineGame()</code> if you&rsquo;d rather your plugin run elsewhere</p>
 <p>The next line will be getting the <code>ServerWrapper</code>.  This is what controls pretty much everything in the current game. You can get players, cars, the ball, the goals, and other things from it so it&rsquo;s incredibly useful. <strong>We also nullcheck it</strong>. If you call functions on a null server Rocket League will crash</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">ServerWrapper</span> <span class="n">server</span> <span class="o">=</span> <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">GetCurrentGameState</span><span class="p">();</span>
-<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">server</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
-</code></pre></div><p>Next we get the ball and nullcheck it</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">BallWrapper</span> <span class="n">ball</span> <span class="o">=</span> <span class="n">server</span><span class="p">.</span><span class="n">GetBall</span><span class="p">();</span>
-<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">ball</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
-</code></pre></div><p>And we get the car. As this is freeplay we only have one to worry about, but in any mode this will select your car. And we nullcheck it. If this seems redundant, it isn&rsquo;t</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">CarWrapper</span> <span class="n">car</span> <span class="o">=</span> <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">GetLocalCar</span><span class="p">();</span>
-<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">car</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
-</code></pre></div><p>Next we can start manipulating things. We can grab the car&rsquo;s velocity and assign it to the ball so they match. If the ball is going slower or faster than the car, it&rsquo;ll just fly off by itself</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">Vector</span> <span class="n">carVelocity</span> <span class="o">=</span> <span class="n">car</span><span class="p">.</span><span class="n">GetVelocity</span><span class="p">();</span>
-<span class="n">ball</span><span class="p">.</span><span class="n">SetVelocity</span><span class="p">(</span><span class="n">carVelocity</span><span class="p">);</span>
-</code></pre></div><p>Next we&rsquo;ll actually move the ball. A Vector is a 3 dimensional point in space. The Z axis is up and down in Rocket League, so we can put the ball above the car by using the car&rsquo;s location and adding distance on the Z axis.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">Vector</span> <span class="n">carLocation</span> <span class="o">=</span> <span class="n">car</span><span class="p">.</span><span class="n">GetLocation</span><span class="p">();</span>
-<span class="kt">float</span> <span class="n">ballRadius</span> <span class="o">=</span> <span class="n">ball</span><span class="p">.</span><span class="n">GetRadius</span><span class="p">();</span>
-<span class="n">ball</span><span class="p">.</span><span class="n">SetLocation</span><span class="p">(</span><span class="n">carLocation</span> <span class="o">+</span> <span class="n">Vector</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ballRadius</span> <span class="o">*</span> <span class="mi">2</span><span class="p">});</span>
-</code></pre></div><p>We&rsquo;ve now defined <code>CoolPlugin::ballOnTop()</code>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">ServerWrapper</span> <span class="n">server</span> <span class="o">=</span> <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">GetCurrentGameState</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">server</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
+</span></span></code></pre></div><p>Next we get the ball and nullcheck it</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">BallWrapper</span> <span class="n">ball</span> <span class="o">=</span> <span class="n">server</span><span class="p">.</span><span class="n">GetBall</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">ball</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
+</span></span></code></pre></div><p>And we get the car. As this is freeplay we only have one to worry about, but in any mode this will select your car. And we nullcheck it. If this seems redundant, it isn&rsquo;t</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">CarWrapper</span> <span class="n">car</span> <span class="o">=</span> <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">GetLocalCar</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">car</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
+</span></span></code></pre></div><p>Next we can start manipulating things. We can grab the car&rsquo;s velocity and assign it to the ball so they match. If the ball is going slower or faster than the car, it&rsquo;ll just fly off by itself</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">Vector</span> <span class="n">carVelocity</span> <span class="o">=</span> <span class="n">car</span><span class="p">.</span><span class="n">GetVelocity</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="n">ball</span><span class="p">.</span><span class="n">SetVelocity</span><span class="p">(</span><span class="n">carVelocity</span><span class="p">);</span>
+</span></span></code></pre></div><p>Next we&rsquo;ll actually move the ball. A Vector is a 3 dimensional point in space. The Z axis is up and down in Rocket League, so we can put the ball above the car by using the car&rsquo;s location and adding distance on the Z axis.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">Vector</span> <span class="n">carLocation</span> <span class="o">=</span> <span class="n">car</span><span class="p">.</span><span class="n">GetLocation</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="kt">float</span> <span class="n">ballRadius</span> <span class="o">=</span> <span class="n">ball</span><span class="p">.</span><span class="n">GetRadius</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="n">ball</span><span class="p">.</span><span class="n">SetLocation</span><span class="p">(</span><span class="n">carLocation</span> <span class="o">+</span> <span class="n">Vector</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ballRadius</span> <span class="o">*</span> <span class="mi">2</span><span class="p">});</span>
+</span></span></code></pre></div><p>We&rsquo;ve now defined <code>CoolPlugin::ballOnTop()</code>
 In full:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">void</span> <span class="n">CoolPlugin</span><span class="o">::</span><span class="n">ballOnTop</span><span class="p">()</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">IsInFreeplay</span><span class="p">())</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
-  <span class="n">ServerWrapper</span> <span class="n">server</span> <span class="o">=</span> <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">GetCurrentGameState</span><span class="p">();</span>
-  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">server</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
-
-  <span class="n">BallWrapper</span> <span class="n">ball</span> <span class="o">=</span> <span class="n">server</span><span class="p">.</span><span class="n">GetBall</span><span class="p">();</span>
-  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">ball</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
-  <span class="n">CarWrapper</span> <span class="n">car</span> <span class="o">=</span> <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">GetLocalCar</span><span class="p">();</span>
-  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">car</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
-
-  <span class="n">Vector</span> <span class="n">carVelocity</span> <span class="o">=</span> <span class="n">car</span><span class="p">.</span><span class="n">GetVelocity</span><span class="p">();</span>
-  <span class="n">ball</span><span class="p">.</span><span class="n">SetVelocity</span><span class="p">(</span><span class="n">carVelocity</span><span class="p">);</span>
-
-  <span class="n">Vector</span> <span class="n">carLocation</span> <span class="o">=</span> <span class="n">car</span><span class="p">.</span><span class="n">GetLocation</span><span class="p">();</span>
-  <span class="kt">float</span> <span class="n">ballRadius</span> <span class="o">=</span> <span class="n">ball</span><span class="p">.</span><span class="n">GetRadius</span><span class="p">();</span>
-  <span class="n">ball</span><span class="p">.</span><span class="n">SetLocation</span><span class="p">(</span><span class="n">carLocation</span> <span class="o">+</span> <span class="n">Vector</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ballRadius</span> <span class="o">*</span> <span class="mi">2</span><span class="p">});</span>
-<span class="p">}</span>
-</code></pre></div><p>Now we need to call the function</p>
-<p>This can be done with a notifier. These can be called with a console command to activate your code. Here we&rsquo;ll define it as <code>CoolerBallOnTop</code> because Bakkes' <code>ballontop</code> is for the birds.
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">CoolPlugin</span><span class="o">::</span><span class="n">ballOnTop</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">IsInFreeplay</span><span class="p">())</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="n">ServerWrapper</span> <span class="n">server</span> <span class="o">=</span> <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">GetCurrentGameState</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">server</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">BallWrapper</span> <span class="n">ball</span> <span class="o">=</span> <span class="n">server</span><span class="p">.</span><span class="n">GetBall</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">ball</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="n">CarWrapper</span> <span class="n">car</span> <span class="o">=</span> <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">GetLocalCar</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">car</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">Vector</span> <span class="n">carVelocity</span> <span class="o">=</span> <span class="n">car</span><span class="p">.</span><span class="n">GetVelocity</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="n">ball</span><span class="p">.</span><span class="n">SetVelocity</span><span class="p">(</span><span class="n">carVelocity</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">Vector</span> <span class="n">carLocation</span> <span class="o">=</span> <span class="n">car</span><span class="p">.</span><span class="n">GetLocation</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">float</span> <span class="n">ballRadius</span> <span class="o">=</span> <span class="n">ball</span><span class="p">.</span><span class="n">GetRadius</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="n">ball</span><span class="p">.</span><span class="n">SetLocation</span><span class="p">(</span><span class="n">carLocation</span> <span class="o">+</span> <span class="n">Vector</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ballRadius</span> <span class="o">*</span> <span class="mi">2</span><span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Now we need to call the function</p>
+<p>This can be done with a notifier. These can be called with a console command to activate your code. Here we&rsquo;ll define it as <code>CoolerBallOnTop</code> because Bakkes&rsquo; <code>ballontop</code> is for the birds.
 When it&rsquo;s called, it takes a vector (basically a list) of command arguments that were provided by the command. Here we don&rsquo;t care about those, so they are unused.
 The code is called in a lambda <code>[](){}</code>. You can just copy the syntax here.
 Next is the notifier description, which does nothing, so it&rsquo;ll be <code>&quot;&quot;</code>.
 Finally is the permissions, which should usually be <code>PERMISSION_ALL</code>. If you want to restrict it you can use the list LINKED HERE</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">registerNotifier</span><span class="p">(</span><span class="s">&#34;CoolerBallOnTop&#34;</span><span class="p">,</span> <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">ballOnTop</span><span class="p">();</span>
-<span class="p">},</span> <span class="s">&#34;&#34;</span><span class="p">,</span> <span class="n">PERMISSION_ALL</span><span class="p">);</span>
-</code></pre></div><p>Now we&rsquo;ll put it all together.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="c1">// CoolPlugin.h
-</span><span class="c1"></span><span class="cp">#pragma once
-</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&#34;bakkesmod/plugin/bakkesmodplugin.h&#34;</span><span class="cp">
-</span><span class="cp">#include</span> <span class="cpf">&#34;bakkesmod/plugin/pluginwindow.h&#34;</span><span class="cp">
-</span><span class="cp"></span>
-<span class="k">class</span> <span class="nc">CoolPlugin</span> <span class="o">:</span> <span class="k">public</span> <span class="n">BakkesMod</span><span class="o">::</span><span class="n">Plugin</span><span class="o">::</span><span class="n">BakkesModPlugin</span>
-<span class="p">{</span>
-    <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">onLoad</span><span class="p">();</span>
-    <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">onUnload</span><span class="p">();</span>
-    <span class="kt">void</span> <span class="nf">ballOnTop</span><span class="p">();</span>
-<span class="p">};</span>
-</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="c1">// CoolPlugin.cpp
-</span><span class="c1"></span><span class="cp">#include</span> <span class="cpf">&#34;pch.h&#34;</span><span class="cp">
-</span><span class="cp">#include</span> <span class="cpf">&#34;CoolPlugin.h&#34;</span><span class="cp">
-</span><span class="cp"></span>
-<span class="n">BAKKESMOD_PLUGIN</span><span class="p">(</span><span class="n">CoolPlugin</span><span class="p">,</span> <span class="s">&#34;Cool Plugin&#34;</span><span class="p">,</span> <span class="n">plugin_version</span><span class="p">,</span> <span class="n">PLUGINTYPE_FREEPLAY</span><span class="p">)</span>
-
-<span class="kt">void</span> <span class="n">CoolPlugin</span><span class="o">::</span><span class="n">onLoad</span><span class="p">()</span>
-<span class="p">{</span>
-
-  <span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">log</span><span class="p">(</span><span class="s">&#34;Hello I&#39;m CoolPlugin B)&#34;</span><span class="p">);</span>
-  <span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">registerNotifier</span><span class="p">(</span><span class="s">&#34;CoolerBallOnTop&#34;</span><span class="p">,</span> <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">ballOnTop</span><span class="p">();</span>
-  <span class="p">},</span> <span class="s">&#34;&#34;</span><span class="p">,</span> <span class="n">PERMISSION_ALL</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="kt">void</span> <span class="n">CoolPlugin</span><span class="o">::</span><span class="n">onUnload</span><span class="p">()</span> <span class="p">{</span>
-  <span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">log</span><span class="p">(</span><span class="s">&#34;I was too cool for this world B&#39;(&#34;</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="kt">void</span> <span class="n">CoolPlugin</span><span class="o">::</span><span class="n">ballOnTop</span><span class="p">()</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">IsInFreeplay</span><span class="p">())</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
-  <span class="n">ServerWrapper</span> <span class="n">server</span> <span class="o">=</span> <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">GetCurrentGameState</span><span class="p">();</span>
-  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">server</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
-
-  <span class="n">BallWrapper</span> <span class="n">ball</span> <span class="o">=</span> <span class="n">server</span><span class="p">.</span><span class="n">GetBall</span><span class="p">();</span>
-  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">ball</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
-  <span class="n">CarWrapper</span> <span class="n">car</span> <span class="o">=</span> <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">GetLocalCar</span><span class="p">();</span>
-  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">car</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
-
-  <span class="n">Vector</span> <span class="n">carVelocity</span> <span class="o">=</span> <span class="n">car</span><span class="p">.</span><span class="n">GetVelocity</span><span class="p">();</span>
-  <span class="n">ball</span><span class="p">.</span><span class="n">SetVelocity</span><span class="p">(</span><span class="n">carVelocity</span><span class="p">);</span>
-
-  <span class="n">Vector</span> <span class="n">carLocation</span> <span class="o">=</span> <span class="n">car</span><span class="p">.</span><span class="n">GetLocation</span><span class="p">();</span>
-  <span class="kt">float</span> <span class="n">ballRadius</span> <span class="o">=</span> <span class="n">ball</span><span class="p">.</span><span class="n">GetRadius</span><span class="p">();</span>
-  <span class="n">ball</span><span class="p">.</span><span class="n">SetLocation</span><span class="p">(</span><span class="n">carLocation</span> <span class="o">+</span> <span class="n">Vector</span><span class="p">{</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ballRadius</span> <span class="o">*</span> <span class="mi">2</span> <span class="p">});</span>
-<span class="p">}</span>
-</code></pre></div><p>Finally build the plugin with ctrl + b. Then start freeplay, load the plugin with <code>plugin load CoolPlugin</code> and call <code>CoolerBallOnTop</code> from the f6 console. The ball should teleport above you!</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">registerNotifier</span><span class="p">(</span><span class="s">&#34;CoolerBallOnTop&#34;</span><span class="p">,</span> <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ballOnTop</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">},</span> <span class="s">&#34;&#34;</span><span class="p">,</span> <span class="n">PERMISSION_ALL</span><span class="p">);</span>
+</span></span></code></pre></div><p>Now we&rsquo;ll put it all together.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// CoolPlugin.h
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="cp">#pragma once
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;bakkesmod/plugin/bakkesmodplugin.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;bakkesmod/plugin/pluginwindow.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">CoolPlugin</span> <span class="o">:</span> <span class="k">public</span> <span class="n">BakkesMod</span><span class="o">::</span><span class="n">Plugin</span><span class="o">::</span><span class="n">BakkesModPlugin</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">onLoad</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">onUnload</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">void</span> <span class="nf">ballOnTop</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// CoolPlugin.cpp
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="cp">#include</span> <span class="cpf">&#34;pch.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;CoolPlugin.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="n">BAKKESMOD_PLUGIN</span><span class="p">(</span><span class="n">CoolPlugin</span><span class="p">,</span> <span class="s">&#34;Cool Plugin&#34;</span><span class="p">,</span> <span class="n">plugin_version</span><span class="p">,</span> <span class="n">PLUGINTYPE_FREEPLAY</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">CoolPlugin</span><span class="o">::</span><span class="n">onLoad</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">log</span><span class="p">(</span><span class="s">&#34;Hello I&#39;m CoolPlugin B)&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">registerNotifier</span><span class="p">(</span><span class="s">&#34;CoolerBallOnTop&#34;</span><span class="p">,</span> <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ballOnTop</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span> <span class="s">&#34;&#34;</span><span class="p">,</span> <span class="n">PERMISSION_ALL</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">CoolPlugin</span><span class="o">::</span><span class="n">onUnload</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">log</span><span class="p">(</span><span class="s">&#34;I was too cool for this world B&#39;(&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">CoolPlugin</span><span class="o">::</span><span class="n">ballOnTop</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">IsInFreeplay</span><span class="p">())</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="n">ServerWrapper</span> <span class="n">server</span> <span class="o">=</span> <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">GetCurrentGameState</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">server</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">BallWrapper</span> <span class="n">ball</span> <span class="o">=</span> <span class="n">server</span><span class="p">.</span><span class="n">GetBall</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">ball</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="n">CarWrapper</span> <span class="n">car</span> <span class="o">=</span> <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">GetLocalCar</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">car</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">Vector</span> <span class="n">carVelocity</span> <span class="o">=</span> <span class="n">car</span><span class="p">.</span><span class="n">GetVelocity</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="n">ball</span><span class="p">.</span><span class="n">SetVelocity</span><span class="p">(</span><span class="n">carVelocity</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">Vector</span> <span class="n">carLocation</span> <span class="o">=</span> <span class="n">car</span><span class="p">.</span><span class="n">GetLocation</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">float</span> <span class="n">ballRadius</span> <span class="o">=</span> <span class="n">ball</span><span class="p">.</span><span class="n">GetRadius</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="n">ball</span><span class="p">.</span><span class="n">SetLocation</span><span class="p">(</span><span class="n">carLocation</span> <span class="o">+</span> <span class="n">Vector</span><span class="p">{</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ballRadius</span> <span class="o">*</span> <span class="mi">2</span> <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Finally build the plugin with ctrl + b. Then start freeplay, load the plugin with <code>plugin load CoolPlugin</code> and call <code>CoolerBallOnTop</code> from the f6 console. The ball should teleport above you!</p>
 <p>You can find the final code here!
 <a class="gdoc-markdown__link" target="_blank" href="https://github.com/ubelhj/BakkesModStarterPlugin/tree/starter-tutorial">https://github.com/ubelhj/BakkesModStarterPlugin/tree/starter-tutorial&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a></p>
 <p>Now what if you wanted a user to be able to modify plugin behavior on the fly? <a class="gdoc-markdown__link"  href="/plugin_tutorial/plugin_variables">Next are Plugin Variables</a></p>
@@ -11773,7 +11797,7 @@ Finally is the permissions, which should usually be <code>PERMISSION_ALL</code>.
 
 
 
-<script defer src="/js/en.search.min.971a54268003784273525d47668a2a838d237b252c559e3525521e8b18664f4d.js"></script>
+<script defer src="/js/en.search.min.61c2f4149dab69aa7e73a20c9b35ef9b7dd93fb9ba55693d3444bfddbb10d556.js"></script>
 
 
 

@@ -5637,6 +5637,30 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
             
             
                 <span class="flex">
+                    <a href="/useful_info/mmr/" class="gdoc-nav__entry ">
+                        MMR
+                    </a>
+                </span>
+            
+            
+
+            
+            </li>
+            
+            
+            
+
+            
+            
+            
+            
+            
+            
+
+            <li>
+            
+            
+                <span class="flex">
                     <a href="/useful_info/multiplayer_plugins/" class="gdoc-nav__entry ">
                         Multiplayer Plugins
                     </a>
@@ -11581,34 +11605,34 @@ You can also do more basic things, like text in my stat counter plugin <a class=
 <p>First in your <code>.h</code>, define a function that will take a canvas.<br>
 <code>void Render(CanvasWrapper canvas);</code><br>
 Then you need to register the function in your <code>.cpp</code> code. This can be done in OnLoad or any other place where you want to start the rendering loop</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">RegisterDrawable</span><span class="p">([</span><span class="k">this</span><span class="p">](</span><span class="n">CanvasWrapper</span> <span class="n">canvas</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">Render</span><span class="p">(</span><span class="n">canvas</span><span class="p">);</span>
-<span class="p">});</span>
-</code></pre></div><p>Now every single frame, the <code>Render</code> function is called with a valid canvas to draw on.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">RegisterDrawable</span><span class="p">([</span><span class="k">this</span><span class="p">](</span><span class="n">CanvasWrapper</span> <span class="n">canvas</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Render</span><span class="p">(</span><span class="n">canvas</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></div><p>Now every single frame, the <code>Render</code> function is called with a valid canvas to draw on.</p>
 <p>In Render you can do a ton of stuff with the canvas. Here&rsquo;s a quick definition of one. Look for plugin homepages on <a class="gdoc-markdown__link" target="_blank" href="https://bakkesplugins.com/">BakkesPlugins&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> for examples and source code</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="c1">// in a .cpp file 
-</span><span class="c1"></span><span class="kt">void</span> <span class="n">CoolPlugin</span><span class="o">::</span><span class="n">Render</span><span class="p">(</span><span class="n">CanvasWrapper</span> <span class="n">canvas</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// defines colors in RGBA 0-255
-</span><span class="c1"></span>    <span class="n">LinearColor</span> <span class="n">colors</span><span class="p">;</span>
-    <span class="n">colors</span><span class="p">.</span><span class="n">R</span> <span class="o">=</span> <span class="mi">255</span><span class="p">;</span>
-    <span class="n">colors</span><span class="p">.</span><span class="n">G</span> <span class="o">=</span> <span class="mi">255</span><span class="p">;</span>
-    <span class="n">colors</span><span class="p">.</span><span class="n">B</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="n">colors</span><span class="p">.</span><span class="n">A</span> <span class="o">=</span> <span class="mi">255</span><span class="p">;</span>
-    <span class="n">canvas</span><span class="p">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">colors</span><span class="p">);</span>
-
-    <span class="c1">// sets position to top left
-</span><span class="c1"></span>    <span class="c1">// x moves to the right
-</span><span class="c1"></span>    <span class="c1">// y moves down
-</span><span class="c1"></span>    <span class="c1">// bottom right would be 1920, 1080 for 1080p monitors
-</span><span class="c1"></span>    <span class="n">canvas</span><span class="p">.</span><span class="n">SetPosition</span><span class="p">(</span><span class="n">Vector2F</span><span class="p">{</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span> <span class="p">});</span>
-
-    <span class="c1">// says hi
-</span><span class="c1"></span>    <span class="c1">// draws from the last set position
-</span><span class="c1"></span>    <span class="c1">// the two floats are text x and y scale
-</span><span class="c1"></span>    <span class="c1">// the false turns off the drop shadow
-</span><span class="c1"></span>    <span class="n">canvas</span><span class="p">.</span><span class="n">DrawString</span><span class="p">(</span><span class="s">&#34;Hi Cool Dude&#34;</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="nb">false</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div><p><img src="/img/basiccanvas.png" alt="basic example"  /></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// in a .cpp file 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="n">CoolPlugin</span><span class="o">::</span><span class="n">Render</span><span class="p">(</span><span class="n">CanvasWrapper</span> <span class="n">canvas</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// defines colors in RGBA 0-255
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">LinearColor</span> <span class="n">colors</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">colors</span><span class="p">.</span><span class="n">R</span> <span class="o">=</span> <span class="mi">255</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">colors</span><span class="p">.</span><span class="n">G</span> <span class="o">=</span> <span class="mi">255</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">colors</span><span class="p">.</span><span class="n">B</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">colors</span><span class="p">.</span><span class="n">A</span> <span class="o">=</span> <span class="mi">255</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">canvas</span><span class="p">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">colors</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// sets position to top left
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// x moves to the right
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// y moves down
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// bottom right would be 1920, 1080 for 1080p monitors
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">canvas</span><span class="p">.</span><span class="n">SetPosition</span><span class="p">(</span><span class="n">Vector2F</span><span class="p">{</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span> <span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// says hi
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// draws from the last set position
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// the two floats are text x and y scale
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// the false turns off the drop shadow
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">canvas</span><span class="p">.</span><span class="n">DrawString</span><span class="p">(</span><span class="s">&#34;Hi Cool Dude&#34;</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="nb">false</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p><img src="/img/basiccanvas.png" alt="basic example"  /></p>
 <p>The result is a bit underwhelming, but there&rsquo;s loads more you can do with this awesome tool.<br>
 You can include <a class="gdoc-markdown__link"  href="/code_snippets/creating_image_wrapper/">images</a> too<br>
 I highly recommend checking the <a class="gdoc-markdown__link" target="_blank" href="https://github.com/Aberinkula/HitboxPlugin">Hitbox Plugin Source&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> if you want to render things relative to locations on the field<br>
@@ -11673,7 +11697,7 @@ I highly recommend checking the <a class="gdoc-markdown__link" target="_blank" h
 
 
 
-<script defer src="/js/en.search.min.971a54268003784273525d47668a2a838d237b252c559e3525521e8b18664f4d.js"></script>
+<script defer src="/js/en.search.min.61c2f4149dab69aa7e73a20c9b35ef9b7dd93fb9ba55693d3444bfddbb10d556.js"></script>
 
 
 

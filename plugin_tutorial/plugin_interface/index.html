@@ -5633,6 +5633,30 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
             
             
                 <span class="flex">
+                    <a href="/useful_info/mmr/" class="gdoc-nav__entry ">
+                        MMR
+                    </a>
+                </span>
+            
+            
+
+            
+            </li>
+            
+            
+            
+
+            
+            
+            
+            
+            
+            
+
+            <li>
+            
+            
+                <span class="flex">
                     <a href="/useful_info/multiplayer_plugins/" class="gdoc-nav__entry ">
                         Multiplayer Plugins
                     </a>
@@ -11575,59 +11599,59 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <p>At the top of the file, add the line to your list of includes
 <code>#include &quot;bakkesmod/plugin/PluginSettingsWindow.h&quot;</code></p>
 <p>At the class declaration, add <code>PluginSettingsWindow</code></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">class</span> <span class="nc">CoolPlugin</span><span class="o">:</span> <span class="k">public</span> <span class="n">BakkesMod</span><span class="o">::</span><span class="n">Plugin</span><span class="o">::</span><span class="n">BakkesModPlugin</span><span class="p">,</span> <span class="k">public</span> <span class="n">BakkesMod</span><span class="o">::</span><span class="n">Plugin</span><span class="o">::</span><span class="n">PluginSettingsWindow</span>
-</code></pre></div><p>And inside the plugin <code>{}</code> add these 3 lines</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">void</span> <span class="nf">RenderSettings</span><span class="p">()</span> <span class="k">override</span><span class="p">;</span>
-<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">GetPluginName</span><span class="p">()</span> <span class="k">override</span><span class="p">;</span>
-<span class="kt">void</span> <span class="nf">SetImGuiContext</span><span class="p">(</span><span class="n">uintptr_t</span> <span class="n">ctx</span><span class="p">)</span> <span class="k">override</span><span class="p">;</span>
-</code></pre></div><p>Now we can define those 3 functions to create the interface. We will put these in <code>CoolPluginGUI.cpp</code> but they can be in any <code>.cpp</code> file that includes <code>CoolPlugin.h</code>, such as <code>CoolPlugin.cpp</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">CoolPlugin</span><span class="o">:</span> <span class="k">public</span> <span class="n">BakkesMod</span><span class="o">::</span><span class="n">Plugin</span><span class="o">::</span><span class="n">BakkesModPlugin</span><span class="p">,</span> <span class="k">public</span> <span class="n">BakkesMod</span><span class="o">::</span><span class="n">Plugin</span><span class="o">::</span><span class="n">PluginSettingsWindow</span>
+</span></span></code></pre></div><p>And inside the plugin <code>{}</code> add these 3 lines</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">RenderSettings</span><span class="p">()</span> <span class="k">override</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">GetPluginName</span><span class="p">()</span> <span class="k">override</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">SetImGuiContext</span><span class="p">(</span><span class="n">uintptr_t</span> <span class="n">ctx</span><span class="p">)</span> <span class="k">override</span><span class="p">;</span>
+</span></span></code></pre></div><p>Now we can define those 3 functions to create the interface. We will put these in <code>CoolPluginGUI.cpp</code> but they can be in any <code>.cpp</code> file that includes <code>CoolPlugin.h</code>, such as <code>CoolPlugin.cpp</code></p>
 <p>The first is simple and should be copied and pasted. Never call this function, just assume it works</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">void</span> <span class="n">CoolPlugin</span><span class="o">::</span><span class="n">SetImGuiContext</span><span class="p">(</span><span class="n">uintptr_t</span> <span class="n">ctx</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">ImGui</span><span class="o">::</span><span class="n">SetCurrentContext</span><span class="p">(</span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="n">ImGuiContext</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">ctx</span><span class="p">));</span>
-<span class="p">}</span>
-</code></pre></div><p>The second is also simple. Put whatever the name of the plugin is as the return value. This&rsquo;ll be what the plugin will be called in the f2 -&gt; Plugins menu</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">CoolPlugin</span><span class="o">::</span><span class="n">GetPluginName</span><span class="p">()</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="s">&#34;Cool Plugin&#34;</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div><p>The third and final actually creates the interface. We&rsquo;ll start with simple text but this is what we&rsquo;ll be modifying in the rest of this channel
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">CoolPlugin</span><span class="o">::</span><span class="n">SetImGuiContext</span><span class="p">(</span><span class="n">uintptr_t</span> <span class="n">ctx</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">ImGui</span><span class="o">::</span><span class="n">SetCurrentContext</span><span class="p">(</span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="n">ImGuiContext</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">ctx</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>The second is also simple. Put whatever the name of the plugin is as the return value. This&rsquo;ll be what the plugin will be called in the f2 -&gt; Plugins menu</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">CoolPlugin</span><span class="o">::</span><span class="n">GetPluginName</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="s">&#34;Cool Plugin&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>The third and final actually creates the interface. We&rsquo;ll start with simple text but this is what we&rsquo;ll be modifying in the rest of this channel
 There&rsquo;s a hugely important thing to consider with this function. Never call on or change any Rocket League / Bakkesmod values here. If you do, you will crash. It&rsquo;s happening outside of the game, and cannot safely alter it. That means that if you have a <code>CVarWrapper.addOnValueChanged()</code> that alters the state of the game, it will be unsafe to use here</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">void</span> <span class="n">CoolPlugin</span><span class="o">::</span><span class="n">RenderSettings</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">ImGui</span><span class="o">::</span><span class="n">TextUnformatted</span><span class="p">(</span><span class="s">&#34;A really cool plugin&#34;</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div><p>Lets start building the plugin interface. First we&rsquo;ll have a button that&rsquo;ll call <code>CoolerBallOnTop</code>. The button as well as most other interactable ImGui components has a boolean property. If it&rsquo;s true, that means it&rsquo;s been interacted with. So when the button has been clicked, we&rsquo;ll use the cvarManager to call <code>CoolerBallOnTop</code>. But <code>CoolerBallOnTop</code> uses the ServerWrapper and alters the game. It&rsquo;ll crash! We can wrap it inside <code>gameWrapper-&gt;Execute()</code>. We&rsquo;ll also add hover text because why not</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">if</span> <span class="p">(</span><span class="n">ImGui</span><span class="o">::</span><span class="n">Button</span><span class="p">(</span><span class="s">&#34;Ball On Top&#34;</span><span class="p">))</span> <span class="p">{</span>
-  <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">Execute</span><span class="p">([</span><span class="k">this</span><span class="p">](</span><span class="n">GameWrapper</span><span class="o">*</span> <span class="n">gw</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">executeCommand</span><span class="p">(</span><span class="s">&#34;CoolerBallOnTop&#34;</span><span class="p">);</span>
-  <span class="p">});</span>
-<span class="p">}</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">ImGui</span><span class="o">::</span><span class="n">IsItemHovered</span><span class="p">())</span> <span class="p">{</span>
-  <span class="n">ImGui</span><span class="o">::</span><span class="n">SetTooltip</span><span class="p">(</span><span class="s">&#34;Activate Ball On Top&#34;</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div><p><img src="https://cdn.discordapp.com/attachments/863320309834186762/863537895444709416/unknown.png" alt="The button"  /></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">CoolPlugin</span><span class="o">::</span><span class="n">RenderSettings</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ImGui</span><span class="o">::</span><span class="n">TextUnformatted</span><span class="p">(</span><span class="s">&#34;A really cool plugin&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Lets start building the plugin interface. First we&rsquo;ll have a button that&rsquo;ll call <code>CoolerBallOnTop</code>. The button as well as most other interactable ImGui components has a boolean property. If it&rsquo;s true, that means it&rsquo;s been interacted with. So when the button has been clicked, we&rsquo;ll use the cvarManager to call <code>CoolerBallOnTop</code>. But <code>CoolerBallOnTop</code> uses the ServerWrapper and alters the game. It&rsquo;ll crash! We can wrap it inside <code>gameWrapper-&gt;Execute()</code>. We&rsquo;ll also add hover text because why not</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">ImGui</span><span class="o">::</span><span class="n">Button</span><span class="p">(</span><span class="s">&#34;Ball On Top&#34;</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">Execute</span><span class="p">([</span><span class="k">this</span><span class="p">](</span><span class="n">GameWrapper</span><span class="o">*</span> <span class="n">gw</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">executeCommand</span><span class="p">(</span><span class="s">&#34;CoolerBallOnTop&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">ImGui</span><span class="o">::</span><span class="n">IsItemHovered</span><span class="p">())</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">ImGui</span><span class="o">::</span><span class="n">SetTooltip</span><span class="p">(</span><span class="s">&#34;Activate Ball On Top&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p><img src="https://cdn.discordapp.com/attachments/863320309834186762/863537895444709416/unknown.png" alt="The button"  /></p>
 <p>Now let&rsquo;s do a checkbox for <code>cool_enabled</code>. First we need to get the CVar, then use it. The <code>bool enabled</code> is necessary, as the checkbox uses that to store whether or not the checkbox should be checked. You can&rsquo;t just use the CVar</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">CVarWrapper</span> <span class="n">enableCvar</span> <span class="o">=</span> <span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">getCvar</span><span class="p">(</span><span class="s">&#34;cool_enabled&#34;</span><span class="p">);</span>
-<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">enableCvar</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
-<span class="kt">bool</span> <span class="n">enabled</span> <span class="o">=</span> <span class="n">enableCvar</span><span class="p">.</span><span class="n">getBoolValue</span><span class="p">();</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">ImGui</span><span class="o">::</span><span class="n">Checkbox</span><span class="p">(</span><span class="s">&#34;Enable plugin&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">enabled</span><span class="p">))</span> <span class="p">{</span>
-  <span class="n">enableCvar</span><span class="p">.</span><span class="n">setValue</span><span class="p">(</span><span class="n">enabled</span><span class="p">);</span>
-<span class="p">}</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">ImGui</span><span class="o">::</span><span class="n">IsItemHovered</span><span class="p">())</span> <span class="p">{</span>
-  <span class="n">ImGui</span><span class="o">::</span><span class="n">SetTooltip</span><span class="p">(</span><span class="s">&#34;Toggle Cool Plugin&#34;</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div><p>And finally a slider for the distance CVar.
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">CVarWrapper</span> <span class="n">enableCvar</span> <span class="o">=</span> <span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">getCvar</span><span class="p">(</span><span class="s">&#34;cool_enabled&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">enableCvar</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kt">bool</span> <span class="n">enabled</span> <span class="o">=</span> <span class="n">enableCvar</span><span class="p">.</span><span class="n">getBoolValue</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">ImGui</span><span class="o">::</span><span class="n">Checkbox</span><span class="p">(</span><span class="s">&#34;Enable plugin&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">enabled</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">enableCvar</span><span class="p">.</span><span class="n">setValue</span><span class="p">(</span><span class="n">enabled</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">ImGui</span><span class="o">::</span><span class="n">IsItemHovered</span><span class="p">())</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">ImGui</span><span class="o">::</span><span class="n">SetTooltip</span><span class="p">(</span><span class="s">&#34;Toggle Cool Plugin&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>And finally a slider for the distance CVar.
 ImGui elements use <code>char *</code> instead of <code>std::string</code>
 You can easily convert between with <code>std::string.c_str()</code> and <code>std::string newStringVariableName(char *)</code></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">CVarWrapper</span> <span class="n">distanceCvar</span> <span class="o">=</span> <span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">getCvar</span><span class="p">(</span><span class="s">&#34;cool_distance&#34;</span><span class="p">);</span>
-<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">distanceCvar</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
-<span class="kt">float</span> <span class="n">distance</span> <span class="o">=</span> <span class="n">distanceCvar</span><span class="p">.</span><span class="n">getFloatValue</span><span class="p">();</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">ImGui</span><span class="o">::</span><span class="n">SliderFloat</span><span class="p">(</span><span class="s">&#34;Distance&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">distance</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">500.0</span><span class="p">))</span> <span class="p">{</span>
-  <span class="n">distanceCvar</span><span class="p">.</span><span class="n">setValue</span><span class="p">(</span><span class="n">distance</span><span class="p">);</span>
-<span class="p">}</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">ImGui</span><span class="o">::</span><span class="n">IsItemHovered</span><span class="p">())</span> <span class="p">{</span>
-  <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">hoverText</span> <span class="o">=</span> <span class="s">&#34;distance is &#34;</span> <span class="o">+</span> <span class="n">std</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="n">distance</span><span class="p">);</span>
-  <span class="n">ImGui</span><span class="o">::</span><span class="n">SetTooltip</span><span class="p">(</span><span class="n">hoverText</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
-<span class="p">}</span>
-</code></pre></div><p><img src="https://cdn.discordapp.com/attachments/863320309834186762/863541774324203540/unknown.png" alt="The slider"  /></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">CVarWrapper</span> <span class="n">distanceCvar</span> <span class="o">=</span> <span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">getCvar</span><span class="p">(</span><span class="s">&#34;cool_distance&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">distanceCvar</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kt">float</span> <span class="n">distance</span> <span class="o">=</span> <span class="n">distanceCvar</span><span class="p">.</span><span class="n">getFloatValue</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">ImGui</span><span class="o">::</span><span class="n">SliderFloat</span><span class="p">(</span><span class="s">&#34;Distance&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">distance</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">500.0</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">distanceCvar</span><span class="p">.</span><span class="n">setValue</span><span class="p">(</span><span class="n">distance</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">ImGui</span><span class="o">::</span><span class="n">IsItemHovered</span><span class="p">())</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">hoverText</span> <span class="o">=</span> <span class="s">&#34;distance is &#34;</span> <span class="o">+</span> <span class="n">std</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="n">distance</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="n">ImGui</span><span class="o">::</span><span class="n">SetTooltip</span><span class="p">(</span><span class="n">hoverText</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p><img src="https://cdn.discordapp.com/attachments/863320309834186762/863541774324203540/unknown.png" alt="The slider"  /></p>
 <p>We finally have a settings file using all of our CVars. There&rsquo;s a load more things you can do with ImGui, but hopefully this is enough to get the right idea and get started. I hope that by covering these three elements I covered most of what plugins need to use. ImGui is complicated and most plugins don&rsquo;t use it yet. Feel free to ask questions</p>
 <p>Here&rsquo;s the final code<br>
 <a class="gdoc-markdown__link" target="_blank" href="https://github.com/ubelhj/BakkesModStarterPlugin/blob/plugin-settings/CoolPlugin/CoolPlugin.h">https://github.com/ubelhj/BakkesModStarterPlugin/blob/plugin-settings/CoolPlugin/CoolPlugin.h&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a>
@@ -11694,7 +11718,7 @@ You can easily convert between with <code>std::string.c_str()</code> and <code>s
 
 
 
-<script defer src="/js/en.search.min.971a54268003784273525d47668a2a838d237b252c559e3525521e8b18664f4d.js"></script>
+<script defer src="/js/en.search.min.61c2f4149dab69aa7e73a20c9b35ef9b7dd93fb9ba55693d3444bfddbb10d556.js"></script>
 
 
 

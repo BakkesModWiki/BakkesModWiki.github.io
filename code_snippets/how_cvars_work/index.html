@@ -5634,6 +5634,30 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
             
             
                 <span class="flex">
+                    <a href="/useful_info/mmr/" class="gdoc-nav__entry ">
+                        MMR
+                    </a>
+                </span>
+            
+            
+
+            
+            </li>
+            
+            
+            
+
+            
+            
+            
+            
+            
+            
+
+            <li>
+            
+            
+                <span class="flex">
                     <a href="/useful_info/multiplayer_plugins/" class="gdoc-nav__entry ">
                         Multiplayer Plugins
                     </a>
@@ -11574,28 +11598,28 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <p>cvar values are only changed when a config file is executed, or a console command is fired. It doesn&rsquo;t magically &ldquo;remember&rdquo; values from previous runs or anything.</p>
 <p>On BM startup, it&rsquo;ll execute plugins.cfg first to load all plugins, causing all cvars for these plugins to be created. Then once this is done it will execute config.cfg, which will set the actual saved value.</p>
 <p>If you want to reload a plugin while BM is running already but keep its values, make sure you use writeconfig before the plugin is unloaded, then unload/load or reload the plugin, now the plugin will have registered it cvars, but with default values. Then execute config.cfg to get your stored values back</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span> <span class="n">enabledOverlay</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
-
-<span class="k">auto</span> <span class="n">overlayEnableVar</span> <span class="o">=</span> <span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">registerCvar</span><span class="p">(</span><span class="s">&#34;counter_enable_ingame&#34;</span><span class="p">,</span> <span class="s">&#34;0&#34;</span><span class="p">,</span> <span class="s">&#34;enables in game overlay&#34;</span><span class="p">);</span>
-<span class="n">overlayEnableVar</span><span class="p">.</span><span class="n">bindTo</span><span class="p">(</span><span class="n">enabledOverlay</span><span class="p">);</span>
-<span class="n">overlayEnableVar</span><span class="p">.</span><span class="n">addOnValueChanged</span><span class="p">([</span><span class="k">this</span><span class="p">](</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">CVarWrapper</span> <span class="n">cvar</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">doSomethingWhenCounterEnabledChanged</span><span class="p">();</span>
-<span class="p">});</span>
-</code></pre></div><p>also bindTo is pretty much just a wrapper for</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">void</span> <span class="nf">bindTo</span><span class="p">(</span><span class="n">CVar</span> <span class="n">cvar</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">abc</span><span class="p">)</span>
-<span class="p">{</span>
-  <span class="n">cvar</span><span class="p">.</span><span class="n">addOnValueChanged</span><span class="p">([</span><span class="k">this</span><span class="p">](</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">CVarWrapper</span> <span class="n">cvar</span><span class="p">)</span> <span class="p">{</span>
-    <span class="o">*</span><span class="n">abc</span> <span class="o">=</span> <span class="n">cvar</span><span class="p">.</span><span class="n">getTValue</span><span class="p">();</span>
-  <span class="p">});</span>
-<span class="p">}</span>
-</code></pre></div><p>these std::shared_ptrs only work one way though, cvar -&gt; shared_ptrs. if you alter the shared_ptr directly it will NOT update the actual cvar value. To do that:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">auto</span> <span class="n">cvar</span> <span class="o">=</span> <span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">getCvar</span><span class="p">(</span><span class="s">&#34;counter_enable_ingame&#34;</span><span class="p">);</span>
-<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">cvar</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// CVarWrappers can be null if the cvar doesn&#39;t exit!
-</span><span class="c1"></span>    <span class="k">return</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="k">auto</span> <span class="n">overlayEnableVar</span> <span class="o">=</span> <span class="n">cvar</span><span class="p">.</span><span class="n">setValue</span><span class="p">(</span><span class="n">enabledOverlay</span><span class="p">.</span><span class="n">get</span><span class="p">());</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span> <span class="n">enabledOverlay</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">auto</span> <span class="n">overlayEnableVar</span> <span class="o">=</span> <span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">registerCvar</span><span class="p">(</span><span class="s">&#34;counter_enable_ingame&#34;</span><span class="p">,</span> <span class="s">&#34;0&#34;</span><span class="p">,</span> <span class="s">&#34;enables in game overlay&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">overlayEnableVar</span><span class="p">.</span><span class="n">bindTo</span><span class="p">(</span><span class="n">enabledOverlay</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">overlayEnableVar</span><span class="p">.</span><span class="n">addOnValueChanged</span><span class="p">([</span><span class="k">this</span><span class="p">](</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">CVarWrapper</span> <span class="n">cvar</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">doSomethingWhenCounterEnabledChanged</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></div><p>also bindTo is pretty much just a wrapper for</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">bindTo</span><span class="p">(</span><span class="n">CVar</span> <span class="n">cvar</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">abc</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">cvar</span><span class="p">.</span><span class="n">addOnValueChanged</span><span class="p">([</span><span class="k">this</span><span class="p">](</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">CVarWrapper</span> <span class="n">cvar</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="o">*</span><span class="n">abc</span> <span class="o">=</span> <span class="n">cvar</span><span class="p">.</span><span class="n">getTValue</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>these std::shared_ptrs only work one way though, cvar -&gt; shared_ptrs. if you alter the shared_ptr directly it will NOT update the actual cvar value. To do that:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">auto</span> <span class="n">cvar</span> <span class="o">=</span> <span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">getCvar</span><span class="p">(</span><span class="s">&#34;counter_enable_ingame&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">cvar</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// CVarWrappers can be null if the cvar doesn&#39;t exit!
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">auto</span> <span class="n">overlayEnableVar</span> <span class="o">=</span> <span class="n">cvar</span><span class="p">.</span><span class="n">setValue</span><span class="p">(</span><span class="n">enabledOverlay</span><span class="p">.</span><span class="n">get</span><span class="p">());</span>
+</span></span></code></pre></div>
         
         <hr>
         <div>Written by <b>Bakkes</b>.&nbsp;<i>Collaborations from ubelhj</i></div>
@@ -11655,7 +11679,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 
 
 
-<script defer src="/js/en.search.min.971a54268003784273525d47668a2a838d237b252c559e3525521e8b18664f4d.js"></script>
+<script defer src="/js/en.search.min.61c2f4149dab69aa7e73a20c9b35ef9b7dd93fb9ba55693d3444bfddbb10d556.js"></script>
 
 
 

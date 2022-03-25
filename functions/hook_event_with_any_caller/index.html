@@ -5633,6 +5633,30 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
             
             
                 <span class="flex">
+                    <a href="/useful_info/mmr/" class="gdoc-nav__entry ">
+                        MMR
+                    </a>
+                </span>
+            
+            
+
+            
+            </li>
+            
+            
+            
+
+            
+            
+            
+            
+            
+            
+
+            <li>
+            
+            
+                <span class="flex">
                     <a href="/useful_info/multiplayer_plugins/" class="gdoc-nav__entry ">
                         Multiplayer Plugins
                     </a>
@@ -11570,28 +11594,28 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
     <article class="gdoc-markdown gdoc-markdown__align--left">
         <h1>Hook Event With Any Caller</h1>
         <p>Add this to your plugin header and you can hook with caller for &ldquo;anything&rdquo;. This will do a blind cast, so make absolutely sure you&rsquo;re hooking the right function or you will crash. There are no type checks here!</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span> <span class="n">std</span><span class="o">::</span><span class="n">enable_if</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">is_base_of</span><span class="o">&lt;</span><span class="n">ObjectWrapper</span><span class="p">,</span> <span class="n">T</span><span class="o">&gt;::</span><span class="n">value</span><span class="o">&gt;::</span><span class="n">type</span><span class="o">*&gt;</span>
-<span class="kt">void</span> <span class="n">GameWrapper</span><span class="o">::</span><span class="n">HookEventWithCaller</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">eventName</span><span class="p">,</span>
-                                      <span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">void</span><span class="p">(</span><span class="n">T</span> <span class="n">caller</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="n">params</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">eventName</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">callback</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="k">auto</span> <span class="n">wrapped_callback</span> <span class="o">=</span> <span class="p">[</span><span class="n">callback</span><span class="p">](</span><span class="n">ActorWrapper</span> <span class="n">caller</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="n">params</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">eventName</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="n">callback</span><span class="p">(</span><span class="n">T</span><span class="p">(</span><span class="n">caller</span><span class="p">.</span><span class="n">memory_address</span><span class="p">),</span> <span class="n">params</span><span class="p">,</span> <span class="n">eventName</span><span class="p">);</span>
-    <span class="p">};</span>
-    <span class="n">HookEventWithCaller</span><span class="o">&lt;</span><span class="n">ActorWrapper</span><span class="o">&gt;</span><span class="p">(</span><span class="n">eventName</span><span class="p">,</span> <span class="n">wrapped_callback</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div><p>And this for Post</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span> <span class="n">std</span><span class="o">::</span><span class="n">enable_if</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">is_base_of</span><span class="o">&lt;</span><span class="n">ObjectWrapper</span><span class="p">,</span> <span class="n">T</span><span class="o">&gt;::</span><span class="n">value</span><span class="o">&gt;::</span><span class="n">type</span><span class="o">*&gt;</span>
-<span class="kt">void</span> <span class="n">GameWrapper</span><span class="o">::</span><span class="n">HookEventWithCallerPost</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">eventName</span><span class="p">,</span>
-                                      <span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">void</span><span class="p">(</span><span class="n">T</span> <span class="n">caller</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="n">params</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">eventName</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">callback</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="k">auto</span> <span class="n">wrapped_callback</span> <span class="o">=</span> <span class="p">[</span><span class="n">callback</span><span class="p">](</span><span class="n">ActorWrapper</span> <span class="n">caller</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="n">params</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">eventName</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="n">callback</span><span class="p">(</span><span class="n">T</span><span class="p">(</span><span class="n">caller</span><span class="p">.</span><span class="n">memory_address</span><span class="p">),</span> <span class="n">params</span><span class="p">,</span> <span class="n">eventName</span><span class="p">);</span>
-    <span class="p">};</span>
-    <span class="n">HookEventWithCallerPost</span><span class="o">&lt;</span><span class="n">ActorWrapper</span><span class="o">&gt;</span><span class="p">(</span><span class="n">eventName</span><span class="p">,</span> <span class="n">wrapped_callback</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span> <span class="n">std</span><span class="o">::</span><span class="n">enable_if</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">is_base_of</span><span class="o">&lt;</span><span class="n">ObjectWrapper</span><span class="p">,</span> <span class="n">T</span><span class="o">&gt;::</span><span class="n">value</span><span class="o">&gt;::</span><span class="n">type</span><span class="o">*&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">GameWrapper</span><span class="o">::</span><span class="n">HookEventWithCaller</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">eventName</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                                      <span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">void</span><span class="p">(</span><span class="n">T</span> <span class="n">caller</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="n">params</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">eventName</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">callback</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">auto</span> <span class="n">wrapped_callback</span> <span class="o">=</span> <span class="p">[</span><span class="n">callback</span><span class="p">](</span><span class="n">ActorWrapper</span> <span class="n">caller</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="n">params</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">eventName</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">callback</span><span class="p">(</span><span class="n">T</span><span class="p">(</span><span class="n">caller</span><span class="p">.</span><span class="n">memory_address</span><span class="p">),</span> <span class="n">params</span><span class="p">,</span> <span class="n">eventName</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">};</span>
+</span></span><span class="line"><span class="cl">    <span class="n">HookEventWithCaller</span><span class="o">&lt;</span><span class="n">ActorWrapper</span><span class="o">&gt;</span><span class="p">(</span><span class="n">eventName</span><span class="p">,</span> <span class="n">wrapped_callback</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>And this for Post</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span> <span class="n">std</span><span class="o">::</span><span class="n">enable_if</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">is_base_of</span><span class="o">&lt;</span><span class="n">ObjectWrapper</span><span class="p">,</span> <span class="n">T</span><span class="o">&gt;::</span><span class="n">value</span><span class="o">&gt;::</span><span class="n">type</span><span class="o">*&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">GameWrapper</span><span class="o">::</span><span class="n">HookEventWithCallerPost</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">eventName</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                                      <span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">void</span><span class="p">(</span><span class="n">T</span> <span class="n">caller</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="n">params</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">eventName</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">callback</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">auto</span> <span class="n">wrapped_callback</span> <span class="o">=</span> <span class="p">[</span><span class="n">callback</span><span class="p">](</span><span class="n">ActorWrapper</span> <span class="n">caller</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="n">params</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">eventName</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">callback</span><span class="p">(</span><span class="n">T</span><span class="p">(</span><span class="n">caller</span><span class="p">.</span><span class="n">memory_address</span><span class="p">),</span> <span class="n">params</span><span class="p">,</span> <span class="n">eventName</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">};</span>
+</span></span><span class="line"><span class="cl">    <span class="n">HookEventWithCallerPost</span><span class="o">&lt;</span><span class="n">ActorWrapper</span><span class="o">&gt;</span><span class="p">(</span><span class="n">eventName</span><span class="p">,</span> <span class="n">wrapped_callback</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
         
         <hr>
         <div>Written by <b>Martinn</b></div>
@@ -11651,7 +11675,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 
 
 
-<script defer src="/js/en.search.min.971a54268003784273525d47668a2a838d237b252c559e3525521e8b18664f4d.js"></script>
+<script defer src="/js/en.search.min.61c2f4149dab69aa7e73a20c9b35ef9b7dd93fb9ba55693d3444bfddbb10d556.js"></script>
 
 
 
