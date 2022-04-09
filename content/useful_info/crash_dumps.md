@@ -44,7 +44,7 @@ This crash happened because of a null ball! Remember that whenever you use any t
 BallWrapper* ball = (BallWrapper*) nullptr;
 
 if (!ball) {
-  cvarManager->log("null ball");
+  LOG("null ball");
   // I am saved from crashing!
   return;
 }
@@ -57,4 +57,4 @@ Once you've found the issue, hit the red square up top
 
 ![https://cdn.discordapp.com/attachments/869661160834744390/869671714735411240/unknown.png](https://cdn.discordapp.com/attachments/869661160834744390/869671714735411240/unknown.png)
 
-Hopefully you've found your issue. If not, try adding many `cvarManager->log("");` in places where you're suspicious a crash may have happened. If a log doesn't happen that you expected to, you likely crashed before that statement. Debugging can be tedious, but hopefully the .dmp files can help
+Hopefully you've found your issue. If not, try adding many `LOG("");` in places where you're suspicious a crash may have happened. If a log doesn't happen that you expected to, you likely crashed before that statement. Debugging can be tedious, but hopefully the .dmp files can help

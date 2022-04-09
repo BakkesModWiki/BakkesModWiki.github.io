@@ -39,20 +39,20 @@ Next you define your functions, starting with `onLoad()`. As this is a demo, we'
 ```cpp
 void CoolPlugin::onLoad() {
   // do something when it loads
-  cvarManager->log("Hello I'm CoolPlugin B)");
+  LOG("Hello I'm CoolPlugin B)");
 }
 ```
 
 Next is `onUnload()`. Bakkesmod handles most of unloading, so only worry about this if your code is using some 3rd party library that needs unloading to be handled specially. For now this can just log that it unloaded
 ```cpp
 void CoolPlugin::onUnload() {
-  cvarManager->log("I was too cool for this world B'(");
+  LOG("I was too cool for this world B'(");
 }
 ```
 
 Now you've got a super basic plugin. Hit Build -> Build CoolPlugin or press ctrl + B to finalize the plugin. It will create `CoolPlugin.dll` in a `plugins/` folder next to your plugin source code. It will also move it into your bakkesmod folder if you are using the template.
 
-Now open Rocket League and open the BakkesMod console with f6. Type `plugin load CoolPlugin` and you should see it load and say hello! If you unload it with `plugin unload CoolPlugin` you should see it say goodbye to you :cry:
+Now open Rocket League and open the BakkesMod console with f6. Type `plugin load CoolPlugin` and you should see it load and say hello! If you unload it with `plugin unload CoolPlugin` you should see it say goodbye to you 😢
 
 Next we'll make the plugin actually do something. We'll reverse engineer the `ballontop` command, which puts the ball on top of your car in freeplay.
 In `CoolPlugin.h` add a new function
@@ -171,14 +171,14 @@ BAKKESMOD_PLUGIN(CoolPlugin, "Cool Plugin", plugin_version, PLUGINTYPE_FREEPLAY)
 void CoolPlugin::onLoad()
 {
 
-  cvarManager->log("Hello I'm CoolPlugin B)");
+  LOG("Hello I'm CoolPlugin B)");
   cvarManager->registerNotifier("CoolerBallOnTop", [this](std::vector<std::string> args) {
     ballOnTop();
   }, "", PERMISSION_ALL);
 }
 
 void CoolPlugin::onUnload() {
-  cvarManager->log("I was too cool for this world B'(");
+  LOG("I was too cool for this world B'(");
 }
 
 void CoolPlugin::ballOnTop() {

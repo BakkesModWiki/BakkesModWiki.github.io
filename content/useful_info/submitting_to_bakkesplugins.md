@@ -5,6 +5,8 @@ author: ubelhj
 
 You've looked through the docs in desperation, angrily screamed at your computer, crashed a couple times, but it's all worth it! You have made a super cool plugin that you want to share! Nice job! 
 
+First open your DMs in the Programming or BakkesMod server. This will allow moderators to contact you through our bot. If you plugin is denied, this is how you'll find out why.
+
 Plugins are officially hosted at [https://bakkesplugins.com/](https://bakkesplugins.com/). Go there and sign up for an account. Please make the username similar to a discord or github you can be contacted at. 
 
 Once you're logged in, hover over your name in the top right, hit `Account`, and then hit `Add New Plugin`
