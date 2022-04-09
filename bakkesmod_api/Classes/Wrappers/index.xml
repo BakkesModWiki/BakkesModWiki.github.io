@@ -114,6 +114,15 @@
     </item>
     
     <item>
+      <title>MenuStackWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/MenuStackWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/MenuStackWrapper/</guid>
+      <description>  View Implementation    _NODISCARD std::string GetTopMenu() const     _NODISCARD std::vector&amp;lt; std::string &amp;gt; GetMenuStack() const     _NODISCARD bool IsNull() const     _NODISCARD operator bool() const     </description>
+    </item>
+    
+    <item>
       <title>MMRWrapper</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/MMRWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

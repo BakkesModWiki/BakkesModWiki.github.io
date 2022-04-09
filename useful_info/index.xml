@@ -40,6 +40,18 @@ For rocket league, you need to attach to the process &amp;ldquo;RocketLeague.exe
     </item>
     
     <item>
+      <title>Logging</title>
+      <link>https://bakkesmodwiki.github.io/useful_info/logging/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/useful_info/logging/</guid>
+      <description>Hitting f6 in Rocket League with BakkesMod running opens the console. You can log to this with a helpful template function, LOG().
+LOG uses a really smart formatting library to make your life easier called fmt&amp;nbsp;
+Here&amp;rsquo;s an example. Simply put, it replaces any {} in the string with whatever arguments you put after
+float a = 10.10; int b = 11; std::string c = &amp;#34;12&amp;#34;; bool d = false; LOG(&amp;#34;a = {}, b = {}, c = {}, d = {}&amp;#34;, a, b, c, d); // outputs [class OBSCounter] a = 10.</description>
+    </item>
+    
+    <item>
       <title>MMR</title>
       <link>https://bakkesmodwiki.github.io/useful_info/mmr/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -76,8 +88,8 @@ If you want to make your own netcode plugin, there&amp;rsquo;s a template for it
       
       <guid>https://bakkesmodwiki.github.io/useful_info/submitting_to_bakkesplugins/</guid>
       <description>You&amp;rsquo;ve looked through the docs in desperation, angrily screamed at your computer, crashed a couple times, but it&amp;rsquo;s all worth it! You have made a super cool plugin that you want to share! Nice job!
-Plugins are officially hosted at https://bakkesplugins.com/&amp;nbsp;. Go there and sign up for an account. Please make the username similar to a discord or github you can be contacted at.
-Once you&amp;rsquo;re logged in, hover over your name in the top right, hit Account, and then hit Add New Plugin</description>
+First open your DMs in the Programming or BakkesMod server. This will allow moderators to contact you through our bot. If you plugin is denied, this is how you&amp;rsquo;ll find out why.
+Plugins are officially hosted at https://bakkesplugins.</description>
     </item>
     
     <item>

@@ -29,7 +29,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/OnlineProductWrapper/</guid>
-      <description>  View Implementation    _NODISCARD bool IsNull() const     operator bool() const     std::string&amp;nbsp; SeriesIdToSeriesName(int seriesID)        Parameter Type Description     seriesID int&amp;nbsp; &amp;mdash;    int&amp;nbsp; GetProductID()     int&amp;nbsp; GetSeriesID()     int&amp;nbsp; GetTradeHold()     std::string&amp;nbsp; GetProductSeries()     unsigned char&amp;nbsp; GetQuality()     ArrayWrapper GetAttributes()     UnrealStringWrapper GetLongLabel()     int&amp;nbsp; GetBlueprintSeriesID()     unsigned char&amp;nbsp; GetBlueprintType()     bool&amp;nbsp; IsBlueprint()     ProductWrapper GetProduct()     bool&amp;nbsp; GetIsUntradable()     unsigned long long&amp;nbsp; GetInstanceID()     </description>
+      <description>  View Implementation    _NODISCARD bool IsNull() const     operator bool() const     std::string&amp;nbsp; SeriesIdToSeriesName(int seriesID)        Parameter Type Description     seriesID int&amp;nbsp; &amp;mdash;    _NODISCARD bool IsFavorited() const     int&amp;nbsp; GetProductID()     int&amp;nbsp; GetSeriesID()     int&amp;nbsp; GetTradeHold()     std::string&amp;nbsp; GetProductSeries()     unsigned char&amp;nbsp; GetQuality()     ArrayWrapper GetAttributes()     UnrealStringWrapper GetLongLabel()     int&amp;nbsp; GetBlueprintSeriesID()     unsigned char&amp;nbsp; GetBlueprintType()     bool&amp;nbsp; IsBlueprint()     ProductWrapper GetProduct()     bool&amp;nbsp; GetIsUntradable()     unsigned long long&amp;nbsp; GetInstanceID()     </description>
     </item>
     
     <item>

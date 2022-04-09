@@ -234,6 +234,8 @@
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/MatchmakingWrapper/</loc>
   </url><url>
+    <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/MenuStackWrapper/</loc>
+  </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/MMRNotifierToken/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/MMRWrapper/</loc>
@@ -489,6 +491,8 @@
     <loc>https://bakkesmodwiki.github.io/code_snippets/playlist_id/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/useful_info/live_debugging/</loc>
+  </url><url>
+    <loc>https://bakkesmodwiki.github.io/useful_info/logging/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/useful_info/mmr/</loc>
   </url><url>

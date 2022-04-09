@@ -912,6 +912,15 @@ float&amp;nbsp; A     Default value: none</description>
     </item>
     
     <item>
+      <title>MenuStackWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/MenuStackWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/MenuStackWrapper/</guid>
+      <description>  View Implementation    _NODISCARD std::string GetTopMenu() const     _NODISCARD std::vector&amp;lt; std::string &amp;gt; GetMenuStack() const     _NODISCARD bool IsNull() const     _NODISCARD operator bool() const     </description>
+    </item>
+    
+    <item>
       <title>MMRNotifierToken</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/MMRNotifierToken/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1001,7 +1010,7 @@ float&amp;nbsp; A     Default value: none</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/OnlineProductWrapper/</guid>
-      <description>  View Implementation    _NODISCARD bool IsNull() const     operator bool() const     std::string&amp;nbsp; SeriesIdToSeriesName(int seriesID)        Parameter Type Description     seriesID int&amp;nbsp; &amp;mdash;    int&amp;nbsp; GetProductID()     int&amp;nbsp; GetSeriesID()     int&amp;nbsp; GetTradeHold()     std::string&amp;nbsp; GetProductSeries()     unsigned char&amp;nbsp; GetQuality()     ArrayWrapper GetAttributes()     UnrealStringWrapper GetLongLabel()     int&amp;nbsp; GetBlueprintSeriesID()     unsigned char&amp;nbsp; GetBlueprintType()     bool&amp;nbsp; IsBlueprint()     ProductWrapper GetProduct()     bool&amp;nbsp; GetIsUntradable()     unsigned long long&amp;nbsp; GetInstanceID()     </description>
+      <description>  View Implementation    _NODISCARD bool IsNull() const     operator bool() const     std::string&amp;nbsp; SeriesIdToSeriesName(int seriesID)        Parameter Type Description     seriesID int&amp;nbsp; &amp;mdash;    _NODISCARD bool IsFavorited() const     int&amp;nbsp; GetProductID()     int&amp;nbsp; GetSeriesID()     int&amp;nbsp; GetTradeHold()     std::string&amp;nbsp; GetProductSeries()     unsigned char&amp;nbsp; GetQuality()     ArrayWrapper GetAttributes()     UnrealStringWrapper GetLongLabel()     int&amp;nbsp; GetBlueprintSeriesID()     unsigned char&amp;nbsp; GetBlueprintType()     bool&amp;nbsp; IsBlueprint()     ProductWrapper GetProduct()     bool&amp;nbsp; GetIsUntradable()     unsigned long long&amp;nbsp; GetInstanceID()     </description>
     </item>
     
     <item>
@@ -2225,6 +2234,18 @@ For rocket league, you need to attach to the process &amp;ldquo;RocketLeague.exe
     </item>
     
     <item>
+      <title>Logging</title>
+      <link>https://bakkesmodwiki.github.io/useful_info/logging/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/useful_info/logging/</guid>
+      <description>Hitting f6 in Rocket League with BakkesMod running opens the console. You can log to this with a helpful template function, LOG().
+LOG uses a really smart formatting library to make your life easier called fmt&amp;nbsp;
+Here&amp;rsquo;s an example. Simply put, it replaces any {} in the string with whatever arguments you put after
+float a = 10.10; int b = 11; std::string c = &amp;#34;12&amp;#34;; bool d = false; LOG(&amp;#34;a = {}, b = {}, c = {}, d = {}&amp;#34;, a, b, c, d); // outputs [class OBSCounter] a = 10.</description>
+    </item>
+    
+    <item>
       <title>MMR</title>
       <link>https://bakkesmodwiki.github.io/useful_info/mmr/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2294,8 +2315,8 @@ PLUGINTYPE_FREEPLAY = 0x01, // Does nothing  PLUGINTYPE_CUSTOM_TRAINING = 0x02, 
       
       <guid>https://bakkesmodwiki.github.io/useful_info/submitting_to_bakkesplugins/</guid>
       <description>You&amp;rsquo;ve looked through the docs in desperation, angrily screamed at your computer, crashed a couple times, but it&amp;rsquo;s all worth it! You have made a super cool plugin that you want to share! Nice job!
-Plugins are officially hosted at https://bakkesplugins.com/&amp;nbsp;. Go there and sign up for an account. Please make the username similar to a discord or github you can be contacted at.
-Once you&amp;rsquo;re logged in, hover over your name in the top right, hit Account, and then hit Add New Plugin</description>
+First open your DMs in the Programming or BakkesMod server. This will allow moderators to contact you through our bot. If you plugin is denied, this is how you&amp;rsquo;ll find out why.
+Plugins are officially hosted at https://bakkesplugins.</description>
     </item>
     
     <item>
