@@ -80,7 +80,7 @@ if (!gameWrapper->IsInFreeplay()) { return; }
 ```
 There are also `gameWrapper->IsInGame()` and `gameWrapper->IsInOnlineGame()` if you'd rather your plugin run elsewhere
 
-The next line will be getting the `ServerWrapper`.  This is what controls pretty much everything in the current game. You can get players, cars, the ball, the goals, and other things from it so it's incredibly useful. **We also nullcheck it**. If you call functions on a null server Rocket League will crash
+The next line will be getting the `ServerWrapper`.  This is what controls pretty much everything in the current game. You can get players, cars, the ball, the goals, and other things from it so it's incredibly useful. **[We also nullcheck it](/plugin_tutorial/best_practices/)**. If you call functions on a null server Rocket League will crash
  ```cpp
 ServerWrapper server = gameWrapper->GetCurrentGameState();
 if (!server) { return; }
