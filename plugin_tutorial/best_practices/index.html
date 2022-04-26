@@ -10,11 +10,13 @@
 
 
 
-    <meta name="description" content="VehiclePickupWrapper">
+    <meta name="description" content="These practices are super important to follow to make sure you don&rsquo;t accidentally crash the game.
+ Nullchecking
+Any BakkesMod wrapper is a pointer under the hood, and that pointer could be null! If you try and use a null wrapper, you&rsquo;ll crash. This is super simple, just make sure you nullcheck every time you obtain a new wrapper.  ServerWrapper server = gameWrapper-&gt;GetCurrentGameState(); // Just check if the server is null if (!">
 
 
 
-    <title>VehiclePickupWrapper | BakkesMod Programming Wiki</title>
+    <title>Best Practices | BakkesMod Programming Wiki</title>
 
     <link rel="icon" href="/favicon/favicon-32x32.png" type="image/x-icon">
 
@@ -4995,7 +4997,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 
             <li>
             
-            <input type="checkbox" id="navtree-c0d4004f" class="gdoc-nav__toggle" >
+            <input type="checkbox" id="navtree-c0d4004f" class="gdoc-nav__toggle" checked>
             <label for="navtree-c0d4004f" class="flex justify-between">
             
             
@@ -5131,7 +5133,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
             
             
                 <span class="flex">
-                    <a href="/plugin_tutorial/best_practices/" class="gdoc-nav__entry ">
+                    <a href="/plugin_tutorial/best_practices/" class="gdoc-nav__entry is-active">
                         Best Practices
                     </a>
                 </span>
@@ -6022,7 +6024,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 
             <li>
             
-            <input type="checkbox" id="navtree-fabdf7e2" class="gdoc-nav__toggle" checked>
+            <input type="checkbox" id="navtree-fabdf7e2" class="gdoc-nav__toggle" >
             <label for="navtree-fabdf7e2" class="flex justify-between">
             
             
@@ -6056,7 +6058,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 
             <li>
             
-            <input type="checkbox" id="navtree-7a2cafd9" class="gdoc-nav__toggle" checked>
+            <input type="checkbox" id="navtree-7a2cafd9" class="gdoc-nav__toggle" >
             <label for="navtree-7a2cafd9" class="flex justify-between">
             
             
@@ -6086,7 +6088,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 
             <li>
             
-            <input type="checkbox" id="navtree-1c182f07" class="gdoc-nav__toggle" checked>
+            <input type="checkbox" id="navtree-1c182f07" class="gdoc-nav__toggle" >
             <label for="navtree-1c182f07" class="flex justify-between">
             
             
@@ -6685,7 +6687,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 
             <li>
             
-            <input type="checkbox" id="navtree-033ac79f" class="gdoc-nav__toggle" checked>
+            <input type="checkbox" id="navtree-033ac79f" class="gdoc-nav__toggle" >
             <label for="navtree-033ac79f" class="flex justify-between">
             
             
@@ -8403,7 +8405,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
             
             
                 <span class="flex">
-                    <a href="/bakkesmod_api/Classes/Wrappers/GameObject/VehiclePickupWrapper/" class="gdoc-nav__entry is-active">
+                    <a href="/bakkesmod_api/Classes/Wrappers/GameObject/VehiclePickupWrapper/" class="gdoc-nav__entry ">
                         VehiclePickupWrapper
                     </a>
                 </span>
@@ -11663,31 +11665,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
         
     
     
-        
-        
-        
-        
-    
-    
-        
-        
-        
-        
-    
-    
-        
-        
-        
-        
-    
-    
-        <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/' href='/'><span itemprop='name'>Welcome to the BakkesMod Programming Wiki!</span></a><meta itemprop='position' content='1' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/bakkesmod_api/' href='/bakkesmod_api/'><span itemprop='name'>BakkesMod API</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/bakkesmod_api/Classes/' href='/bakkesmod_api/Classes/'><span itemprop='name'>Classes</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/bakkesmod_api/Classes/Wrappers/' href='/bakkesmod_api/Classes/Wrappers/'><span itemprop='name'>Wrappers</span></a><meta itemprop='position' content='4' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/bakkesmod_api/Classes/Wrappers/GameObject/' href='/bakkesmod_api/Classes/Wrappers/GameObject/'><span itemprop='name'>Game Object</span></a><meta itemprop='position' content='5' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>VehiclePickupWrapper</span><meta itemprop='position' content='6' /></li>
-    
-
-    
-
-    
-
+        <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/' href='/'><span itemprop='name'>Welcome to the BakkesMod Programming Wiki!</span></a><meta itemprop='position' content='1' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/plugin_tutorial/' href='/plugin_tutorial/'><span itemprop='name'>Plugin Tutorial</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>Best Practices</span><meta itemprop='position' content='3' /></li>
     
 
     
@@ -11698,554 +11676,49 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
     </div>
     
     
+        
+        <div>
+            <span class="editpage">
+                <svg class="icon gdoc_code"><use xlink:href="#gdoc_code"></use></svg>
+                <a href="https://github.com/BakkesModWiki/BakkesModWiki.github.io/blob/main/content/plugin_tutorial/best_practices.md" target="_blank">
+                    View on GitHub
+                </a>
+            </span>
+        </div>
+        
+    
 </div>
 
 
     <article class="gdoc-markdown gdoc-markdown__align--left">
-        <h1>VehiclePickupWrapper&nbsp;:&nbsp;<small><i><a href="/bakkesmod_api/Classes/Wrappers/Engine/ActorWrapper">ActorWrapper</a></i></small></h1>
-        
-
-
-
-
-
-
-  
-  
-
-
-
-
-<span class="gdoc-button gdoc-button--regular">
-<a  href="https://github.com/bakkesmodorg/BakkesModSDK/blob/master/include/bakkesmod/wrappers/GameObject/VehiclePickupWrapper.h"   target="_blank"  class="gdoc-button__link">
-  <svg class="icon github"><use xlink:href="#github"></use></svg> View Implementation
-</a>
-</span>
-
-<hr>
-<div class="gdoc-page__anchorwrap">
-    <h3 id="floathttpsencppreferencecomwcpplanguagetypesfloating-point_typesnbspgetrespawndelay">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Floating-point_types">float&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> GetRespawnDelay()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/VehiclePickupWrapper/#floathttpsencppreferencecomwcpplanguagetypesfloating-point_typesnbspgetrespawndelay" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor float&nbsp; GetRespawnDelay()" href="#floathttpsencppreferencecomwcpplanguagetypesfloating-point_typesnbspgetrespawndelay">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetrespawndelayfloat-newrespawndelay">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> SetRespawnDelay(float newRespawnDelay)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/VehiclePickupWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetrespawndelayfloat-newrespawndelay" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; SetRespawnDelay(float newRespawnDelay)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetrespawndelayfloat-newrespawndelay">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>newRespawnDelay</td>
-<td><a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Floating-point_types">float&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="fxactorwrapperbakkesmod_apiclasseswrappersgameobjectfxactorwrappernbspgetfxactorarchetype">
-        <a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameObject/FXActorWrapper">FXActorWrapper</a> GetFXActorArchetype()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/VehiclePickupWrapper/#fxactorwrapperbakkesmod_apiclasseswrappersgameobjectfxactorwrappernbspgetfxactorarchetype" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor FXActorWrapper GetFXActorArchetype()" href="#fxactorwrapperbakkesmod_apiclasseswrappersgameobjectfxactorwrappernbspgetfxactorarchetype">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetfxactorarchetypefxactorwrapper-newfxactorarchetype">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> SetFXActorArchetype(FXActorWrapper newFXActorArchetype)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/VehiclePickupWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetfxactorarchetypefxactorwrapper-newfxactorarchetype" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; SetFXActorArchetype(FXActorWrapper newFXActorArchetype)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetfxactorarchetypefxactorwrapper-newfxactorarchetype">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>newFXActorArchetype</td>
-<td><a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameObject/FXActorWrapper">FXActorWrapper</a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="fxactorwrapperbakkesmod_apiclasseswrappersgameobjectfxactorwrappernbspgetfxactor">
-        <a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameObject/FXActorWrapper">FXActorWrapper</a> GetFXActor()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/VehiclePickupWrapper/#fxactorwrapperbakkesmod_apiclasseswrappersgameobjectfxactorwrappernbspgetfxactor" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor FXActorWrapper GetFXActor()" href="#fxactorwrapperbakkesmod_apiclasseswrappersgameobjectfxactorwrappernbspgetfxactor">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetfxactorfxactorwrapper-newfxactor">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> SetFXActor(FXActorWrapper newFXActor)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/VehiclePickupWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetfxactorfxactorwrapper-newfxactor" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; SetFXActor(FXActorWrapper newFXActor)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetfxactorfxactorwrapper-newfxactor">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>newFXActor</td>
-<td><a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameObject/FXActorWrapper">FXActorWrapper</a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="unsigned-longhttpsencppreferencecomwcpplanguagetypessigned_and_unsigned_integer_typesnbspgetbpickedup">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types">unsigned long&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> GetbPickedUp()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/VehiclePickupWrapper/#unsigned-longhttpsencppreferencecomwcpplanguagetypessigned_and_unsigned_integer_typesnbspgetbpickedup" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor unsigned long&nbsp; GetbPickedUp()" href="#unsigned-longhttpsencppreferencecomwcpplanguagetypessigned_and_unsigned_integer_typesnbspgetbpickedup">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetbpickedupunsigned-long-newbpickedup">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> SetbPickedUp(unsigned long newbPickedUp)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/VehiclePickupWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetbpickedupunsigned-long-newbpickedup" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; SetbPickedUp(unsigned long newbPickedUp)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetbpickedupunsigned-long-newbpickedup">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>newbPickedUp</td>
-<td><a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types">unsigned long&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="unsigned-longhttpsencppreferencecomwcpplanguagetypessigned_and_unsigned_integer_typesnbspgetbnetrelevant">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types">unsigned long&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> GetbNetRelevant()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/VehiclePickupWrapper/#unsigned-longhttpsencppreferencecomwcpplanguagetypessigned_and_unsigned_integer_typesnbspgetbnetrelevant" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor unsigned long&nbsp; GetbNetRelevant()" href="#unsigned-longhttpsencppreferencecomwcpplanguagetypessigned_and_unsigned_integer_typesnbspgetbnetrelevant">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetbnetrelevantunsigned-long-newbnetrelevant">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> SetbNetRelevant(unsigned long newbNetRelevant)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/VehiclePickupWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetbnetrelevantunsigned-long-newbnetrelevant" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; SetbNetRelevant(unsigned long newbNetRelevant)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetbnetrelevantunsigned-long-newbnetrelevant">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>newbNetRelevant</td>
-<td><a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types">unsigned long&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="unsigned-longhttpsencppreferencecomwcpplanguagetypessigned_and_unsigned_integer_typesnbspgetbnopickup">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types">unsigned long&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> GetbNoPickup()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/VehiclePickupWrapper/#unsigned-longhttpsencppreferencecomwcpplanguagetypessigned_and_unsigned_integer_typesnbspgetbnopickup" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor unsigned long&nbsp; GetbNoPickup()" href="#unsigned-longhttpsencppreferencecomwcpplanguagetypessigned_and_unsigned_integer_typesnbspgetbnopickup">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetbnopickupunsigned-long-newbnopickup">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> SetbNoPickup(unsigned long newbNoPickup)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/VehiclePickupWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetbnopickupunsigned-long-newbnopickup" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; SetbNoPickup(unsigned long newbNoPickup)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetbnopickupunsigned-long-newbnopickup">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>newbNoPickup</td>
-<td><a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types">unsigned long&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspplaypickedupfx">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> PlayPickedUpFX()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/VehiclePickupWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspplaypickedupfx" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; PlayPickedUpFX()" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspplaypickedupfx">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="boolhttpsencppreferencecomwcpplanguagetypesboolean_typenbspistouchingavehicle">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Boolean_type">bool&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> IsTouchingAVehicle()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/VehiclePickupWrapper/#boolhttpsencppreferencecomwcpplanguagetypesboolean_typenbspistouchingavehicle" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor bool&nbsp; IsTouchingAVehicle()" href="#boolhttpsencppreferencecomwcpplanguagetypesboolean_typenbspistouchingavehicle">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspupdatetickdisabled">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> UpdateTickDisabled()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/VehiclePickupWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspupdatetickdisabled" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; UpdateTickDisabled()" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspupdatetickdisabled">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetnetrelevantunsigned-long-brelevant">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> SetNetRelevant(unsigned long bRelevant)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/VehiclePickupWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetnetrelevantunsigned-long-brelevant" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; SetNetRelevant(unsigned long bRelevant)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetnetrelevantunsigned-long-brelevant">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>bRelevant</td>
-<td><a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types">unsigned long&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbsprespawn2">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> Respawn2()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/VehiclePickupWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbsprespawn2" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; Respawn2()" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbsprespawn2">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetpickedupunsigned-long-bnewpickedup-carwrapper-ininstigator">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> SetPickedUp(unsigned long bNewPickedUp, CarWrapper InInstigator)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/VehiclePickupWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetpickedupunsigned-long-bnewpickedup-carwrapper-ininstigator" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; SetPickedUp(unsigned long bNewPickedUp, CarWrapper InInstigator)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetpickedupunsigned-long-bnewpickedup-carwrapper-ininstigator">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>bNewPickedUp</td>
-<td><a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Signed_and_unsigned_integer_types">unsigned long&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a></td>
-<td>&mdash;</td>
-</tr>
-<tr>
-<td>InInstigator</td>
-<td><a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameObject/CarWrapper">CarWrapper</a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbsppickup2carwrapper-car">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> Pickup2(CarWrapper Car)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/VehiclePickupWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbsppickup2carwrapper-car" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; Pickup2(CarWrapper Car)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbsppickup2carwrapper-car">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Car</td>
-<td><a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameObject/CarWrapper">CarWrapper</a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="boolhttpsencppreferencecomwcpplanguagetypesboolean_typenbspcanpickupcarwrapper-car">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Boolean_type">bool&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> CanPickup(CarWrapper Car)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/VehiclePickupWrapper/#boolhttpsencppreferencecomwcpplanguagetypesboolean_typenbspcanpickupcarwrapper-car" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor bool&nbsp; CanPickup(CarWrapper Car)" href="#boolhttpsencppreferencecomwcpplanguagetypesboolean_typenbspcanpickupcarwrapper-car">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Car</td>
-<td><a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameObject/CarWrapper">CarWrapper</a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspontouchcarwrapper-car">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> OnTouch(CarWrapper Car)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/VehiclePickupWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspontouchcarwrapper-car" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; OnTouch(CarWrapper Car)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspontouchcarwrapper-car">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Car</td>
-<td><a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameObject/CarWrapper">CarWrapper</a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspeventtouchactorwrapper-other-primitivecomponentwrapper-othercomp-vector-amphitlocation-vector-amphitnormal">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> eventTouch(ActorWrapper Other, PrimitiveComponentWrapper OtherComp, Vector &amp;HitLocation, Vector &amp;HitNormal)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/VehiclePickupWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspeventtouchactorwrapper-other-primitivecomponentwrapper-othercomp-vector-amphitlocation-vector-amphitnormal" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; eventTouch(ActorWrapper Other, PrimitiveComponentWrapper OtherComp, Vector &amp;HitLocation, Vector &amp;HitNormal)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspeventtouchactorwrapper-other-primitivecomponentwrapper-othercomp-vector-amphitlocation-vector-amphitnormal">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Other</td>
-<td><a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/Engine/ActorWrapper">ActorWrapper</a></td>
-<td>&mdash;</td>
-</tr>
-<tr>
-<td>OtherComp</td>
-<td><a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/PrimitiveComponentWrapper">PrimitiveComponentWrapper</a></td>
-<td>&mdash;</td>
-</tr>
-<tr>
-<td>HitLocation</td>
-<td><a class="gdoc-markdown__link"  href="/bakkesmod_api/Structs/Wrappers/Vector">Vector</a></td>
-<td>&mdash;</td>
-</tr>
-<tr>
-<td>HitNormal</td>
-<td><a class="gdoc-markdown__link"  href="/bakkesmod_api/Structs/Wrappers/Vector">Vector</a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbsponpickup">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> OnPickUp()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/VehiclePickupWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbsponpickup" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; OnPickUp()" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbsponpickup">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbsponspawn">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> OnSpawn()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/VehiclePickupWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbsponspawn" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; OnSpawn()" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbsponspawn">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetnopickup">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> SetNoPickup()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/VehiclePickupWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetnopickup" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; SetNoPickup()" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetnopickup">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetupreplicatenopickup">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> SetupReplicateNoPickup()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/VehiclePickupWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetupreplicatenopickup" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; SetupReplicateNoPickup()" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspsetupreplicatenopickup">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspinitfx">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> InitFX()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/VehiclePickupWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspinitfx" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; InitFX()" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspinitfx">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspeventpostbeginplay">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> eventPostBeginPlay()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/VehiclePickupWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspeventpostbeginplay" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; eventPostBeginPlay()" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspeventpostbeginplay">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspeventprebeginplay">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> eventPreBeginPlay()
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/VehiclePickupWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspeventprebeginplay" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; eventPreBeginPlay()" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspeventprebeginplay">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspeventpickedupvehiclepickupwrapper-pickup">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> EventPickedUp(VehiclePickupWrapper Pickup)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/VehiclePickupWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspeventpickedupvehiclepickupwrapper-pickup" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; EventPickedUp(VehiclePickupWrapper Pickup)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspeventpickedupvehiclepickupwrapper-pickup">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Pickup</td>
-<td><a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameObject/VehiclePickupWrapper">VehiclePickupWrapper</a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspeventspawnedvehiclepickupwrapper-pickup">
-        <a class="gdoc-markdown__link" target="_blank" href="https://en.cppreference.com/w/cpp/language/types#Void_type">void&nbsp;<small><svg class="icon external-link-alt"><use xlink:href="#external-link-alt"></use></svg></small></a> EventSpawned(VehiclePickupWrapper Pickup)
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/VehiclePickupWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspeventspawnedvehiclepickupwrapper-pickup" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor void&nbsp; EventSpawned(VehiclePickupWrapper Pickup)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspeventspawnedvehiclepickupwrapper-pickup">
-            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div><hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Pickup</td>
-<td><a class="gdoc-markdown__link"  href="/bakkesmod_api/Classes/Wrappers/GameObject/VehiclePickupWrapper">VehiclePickupWrapper</a></td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
+        <h1>Best Practices</h1>
+        <p>These practices are super important to follow to make sure you don&rsquo;t accidentally crash the game.</p>
+<ol>
+<li>Nullchecking<br>
+Any BakkesMod wrapper is a pointer under the hood, and that pointer could be null!
+If you try and use a null wrapper, you&rsquo;ll crash.
+This is super simple, just make sure you nullcheck every time you obtain a new wrapper.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">ServerWrapper</span> <span class="n">server</span> <span class="o">=</span> <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">GetCurrentGameState</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Just check if the server is null
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">server</span><span class="p">)</span> <span class="p">{</span> 
+</span></span><span class="line"><span class="cl">    <span class="c1">// The server is null! Maybe you want to log here
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// LOG(&#34;Null Server!&#34;);
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Otherwise just return out of the function
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">return</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Now you&#39;re safe and the server is valid
+</span></span></span></code></pre></div><ol start="2">
+<li>Don&rsquo;t store wrappers<br>
+As the game is played, the pointers underneath wrappers might become invalid or point to unexpected memory locations.
+Imagine you stored a ServerWrapper for use later, but by the time you use it you&rsquo;re in a new match.<br>
+Solve this by obtaining wrappers as you use them.<br>
+Wrappers are safe to pass to functions or lambdas for immediate use, but should never be stored as class variables.<br>
+Also don&rsquo;t pass them to any callbacks or timeouts where the wrappers will be used later in time</li>
+</ol>
 
         
     </article>

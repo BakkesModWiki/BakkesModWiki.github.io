@@ -45,5 +45,16 @@ We give the users control with the Console Variables, CVars.</description>
 Yet again we have the CoolPlugin from Plugin Variables and we want to add a button to activate our cooler ball on top, a checkbox to enable cool, and a slider to choose the distance that the ball is placed from your car</description>
     </item>
     
+    <item>
+      <title>Best Practices</title>
+      <link>https://bakkesmodwiki.github.io/plugin_tutorial/best_practices/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/plugin_tutorial/best_practices/</guid>
+      <description>These practices are super important to follow to make sure you don&amp;rsquo;t accidentally crash the game.
+ Nullchecking
+Any BakkesMod wrapper is a pointer under the hood, and that pointer could be null! If you try and use a null wrapper, you&amp;rsquo;ll crash. This is super simple, just make sure you nullcheck every time you obtain a new wrapper.  ServerWrapper server = gameWrapper-&amp;gt;GetCurrentGameState(); // Just check if the server is null if (!</description>
+    </item>
+    
   </channel>
 </rss>

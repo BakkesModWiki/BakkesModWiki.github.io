@@ -5118,6 +5118,32 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
             
             
         
+            
+            
+
+            
+            
+            
+            
+            
+            
+
+            <li>
+            
+            
+                <span class="flex">
+                    <a href="/plugin_tutorial/best_practices/" class="gdoc-nav__entry ">
+                        Best Practices
+                    </a>
+                </span>
+            
+            
+
+            
+            </li>
+            
+            
+        
     </ul>
 
             
@@ -11712,7 +11738,7 @@ The next lines of code are all going to be within <code>CoolPlugin::ballOnTop()<
 <p>First we need to make sure we should be running the plugin. We only want it to work in freeplay. The <code>gameWrapper</code> gives a ton of useful functions to figure out what context the code is being run from. The first line of <code>CoolPlugin::ballOnTop()</code> will be</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">IsInFreeplay</span><span class="p">())</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
 </span></span></code></pre></div><p>There are also <code>gameWrapper-&gt;IsInGame()</code> and <code>gameWrapper-&gt;IsInOnlineGame()</code> if you&rsquo;d rather your plugin run elsewhere</p>
-<p>The next line will be getting the <code>ServerWrapper</code>.  This is what controls pretty much everything in the current game. You can get players, cars, the ball, the goals, and other things from it so it&rsquo;s incredibly useful. <strong>We also nullcheck it</strong>. If you call functions on a null server Rocket League will crash</p>
+<p>The next line will be getting the <code>ServerWrapper</code>.  This is what controls pretty much everything in the current game. You can get players, cars, the ball, the goals, and other things from it so it&rsquo;s incredibly useful. <strong><a class="gdoc-markdown__link"  href="/plugin_tutorial/best_practices/">We also nullcheck it</a></strong>. If you call functions on a null server Rocket League will crash</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">ServerWrapper</span> <span class="n">server</span> <span class="o">=</span> <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">GetCurrentGameState</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">server</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
 </span></span></code></pre></div><p>Next we get the ball and nullcheck it</p>
