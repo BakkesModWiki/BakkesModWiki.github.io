@@ -30,8 +30,8 @@ becomes
       
       <guid>https://bakkesmodwiki.github.io/code_snippets/canvas/</guid>
       <description>The CanvasWrapper is a powerful tool that allows you to draw GUI elements on the screen
-For example this is used by the Hitbox Plugin&amp;nbsp; by mega and HalfwayDead/Rocket Science
-You can also do more basic things, like text in my stat counter plugin OBSCounter&amp;nbsp;
+For example this is used by the Hitbox Plugin by mega and HalfwayDead/Rocket Science
+You can also do more basic things, like text in my stat counter plugin OBSCounter
 First in your .h, define a function that will take a canvas.
 void Render(CanvasWrapper canvas);
 Then you need to register the function in your .cpp code.</description>
@@ -43,7 +43,7 @@ Then you need to register the function in your .cpp code.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/code_snippets/creating_image_wrapper/</guid>
-      <description>Creating an ImageWrapper     You should use some kind of reference type that manages the memory. std::shared_ptr&amp;lt;ImageWrapper&amp;gt; is my recommendation. The constructor takes 3 arguments (2 are optional) The optional arguments are two bools that decide if the core will preload the images for use in the canvas\imgui. The ImageWrapper is a resource managing class. This means that you have to keep this object &amp;ldquo;alive&amp;rdquo; as long as you want to use the image.</description>
+      <description>Creating an ImageWrapper      You should use some kind of reference type that manages the memory. std::shared_ptr&amp;lt;ImageWrapper&amp;gt; is my recommendation. The constructor takes 3 arguments (2 are optional) The optional arguments are two bools that decide if the core will preload the images for use in the canvas\imgui. The ImageWrapper is a resource managing class. This means that you have to keep this object &amp;ldquo;alive&amp;rdquo; as long as you want to use the image.</description>
     </item>
     
     <item>
@@ -86,7 +86,7 @@ PersistentStorage.cpp</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/code_snippets/plugin_exclusive_logging/</guid>
-      <description>Want to see the console logging from just your plugin? Open a new PowerShell window and use this command (It may require git for windows https://gitforwindows.org/&amp;nbsp;)
+      <description>Want to see the console logging from just your plugin? Open a new PowerShell window and use this command (It may require git for windows https://gitforwindows.org/)
 Get-Content (-join($env:APPDATA, &amp;#34;\bakkesmod\bakkesmod\bakkesmod.log&amp;#34;)) -wait -tail 1 | select-string -pattern &amp;#34;PLUGIN_NAME&amp;#34; </description>
     </item>
     
@@ -120,7 +120,7 @@ Make a toast pop up with GameWrapper.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/code_snippets/using_http_wrapper/</guid>
-      <description>HttpWrapper    Sending a simple http request with a string body    CurlRequest req; req.url = &amp;#34;https://httpbin.org/anything&amp;#34;; req.body = &amp;#34;testing with body&amp;#34;; LOG(&amp;#34;sending body request&amp;#34;); HttpWrapper::SendCurlRequest(req, [this](int code, std::string result) { LOG(&amp;#34;Body result{}&amp;#34;, result); }); Perform an HTTP/S JSON request    CurlRequest req; req.url = &amp;#34;https://httpbin.org/anything&amp;#34;; req.body = R&amp;#34;T({ &amp;#34;userId&amp;#34;: 1, &amp;#34;id&amp;#34;: 1, &amp;#34;title&amp;#34;: &amp;#34;delectus aut autem&amp;#34;, &amp;#34;completed&amp;#34;: false })T&amp;#34;; HttpWrapper::SendCurlJsonRequest(req, [this](int code, std::string result) { LOG(&amp;#34;Json result{}&amp;#34;, result); }); Sending a file over HTTP/S    { CurlRequest req; req.</description>
+      <description>HttpWrapper     Sending a simple http request with a string body     CurlRequest req; req.url = &amp;#34;https://httpbin.org/anything&amp;#34;; req.body = &amp;#34;testing with body&amp;#34;; LOG(&amp;#34;sending body request&amp;#34;); HttpWrapper::SendCurlRequest(req, [this](int code, std::string result) { LOG(&amp;#34;Body result{}&amp;#34;, result); }); Perform an HTTP/S JSON request     CurlRequest req; req.url = &amp;#34;https://httpbin.org/anything&amp;#34;; req.body = R&amp;#34;T({ &amp;#34;userId&amp;#34;: 1, &amp;#34;id&amp;#34;: 1, &amp;#34;title&amp;#34;: &amp;#34;delectus aut autem&amp;#34;, &amp;#34;completed&amp;#34;: false })T&amp;#34;; HttpWrapper::SendCurlJsonRequest(req, [this](int code, std::string result) { LOG(&amp;#34;Json result{}&amp;#34;, result); }); Sending a file over HTTP/S     { CurlRequest req; req.</description>
     </item>
     
   </channel>

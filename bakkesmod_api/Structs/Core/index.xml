@@ -12,12 +12,11 @@
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Core/BotLoadoutData/</guid>
       <description>View Implementation   Info on a bot&#39;s items. Unsure how to obtain
- std::map&amp;lt; int, int &amp;gt; products     Default value: none
-Attribute product_attributes     Default value: none
-unsigned char&amp;nbsp; team     Default value = 0
-int&amp;nbsp; team_finish_id     Default value = 0
-int&amp;nbsp; custom_finish_id     Default value = 0
-unsigned char&amp;nbsp; team_color_id     Default value = 0</description>
+ std::map&amp;lt; int, int &amp;gt; products      Default value: none
+Attribute product_attributes      Default value: none
+unsigned char team      Default value = 0
+int team_finish_id      Default value = 0
+int custom_finish_id      Default value = 0</description>
     </item>
     
     <item>
@@ -27,12 +26,11 @@ unsigned char&amp;nbsp; team_color_id     Default value = 0</description>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Core/CurlRequest/</guid>
       <description>View Implementation   Used to make a request with the HTTPWrapper. Info on using that here
- std::string&amp;nbsp; url     Default value: none
-std::string&amp;nbsp; verb     Default value: none
-std::map&amp;lt; std::string, std::string &amp;gt; headers     Default value: none
-std::string&amp;nbsp; body     Default value: none
-FormField form_data     Default value: none
-CurlProgressFunction progress_function     Default value: none</description>
+ std::string url      Default value: none
+std::string verb      Default value: none
+std::map&amp;lt; std::string, std::string &amp;gt; headers      Default value: none
+std::string body      Default value: none
+FormField form_data      Default value: none</description>
     </item>
     
     <item>
@@ -42,11 +40,11 @@ CurlProgressFunction progress_function     Default value: none</description>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Core/FormField/</guid>
       <description>View Implementation   Part of a CurlRequest. Info on using HttpWrapper here
- Type       kString
+ Type        kString
   kFile
-  Type field_type     Default value: none
-std::string&amp;nbsp; data     Default value: none
-std::string&amp;nbsp; name     Default value: none</description>
+  Type field_type      Default value: none
+std::string data      Default value: none
+std::string name      Default value: none</description>
     </item>
     
   </channel>

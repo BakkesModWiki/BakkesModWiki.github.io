@@ -12,7 +12,7 @@
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/Stats/StatEventWrapper/</guid>
       <description>  View Implementation   A stat that was just recorded. Use this guide to hook them
- _NODISCARD bool IsNull() const     operator bool() const     int&amp;nbsp; GetPoints()     float&amp;nbsp; GetCooldownSeconds()     unsigned long&amp;nbsp; GetbAddToScore()     unsigned long&amp;nbsp; GetbIsLeaderboardStat()     unsigned long&amp;nbsp; GetbNotifyTicker()     unsigned long&amp;nbsp; GetbShowOnHUD()     unsigned long&amp;nbsp; GetbPrimaryStat()     unsigned long&amp;nbsp; GetbSkipReplication()     unsigned long&amp;nbsp; GetbCanMute()     unsigned long&amp;nbsp; GetbCountMultiplied()     UnrealStringWrapper GetLabel()     UnrealStringWrapper GetPluralLabel()     UnrealStringWrapper GetDescription()     float&amp;nbsp; GetNextCooldownTime()     std::string&amp;nbsp; GetGroupName()     std::string&amp;nbsp; GetEventName()     </description>
+ _NODISCARD bool IsNull() const      operator bool() const      int GetPoints()      float GetCooldownSeconds()      unsigned long GetbAddToScore()      unsigned long GetbIsLeaderboardStat()      unsigned long GetbNotifyTicker()      unsigned long GetbShowOnHUD()      unsigned long GetbPrimaryStat()      unsigned long GetbSkipReplication()      unsigned long GetbCanMute()      unsigned long GetbCountMultiplied()      UnrealStringWrapper GetLabel()      UnrealStringWrapper GetPluralLabel()      UnrealStringWrapper GetDescription()      float GetNextCooldownTime()      std::string GetGroupName()      std::string GetEventName()      </description>
     </item>
     
   </channel>

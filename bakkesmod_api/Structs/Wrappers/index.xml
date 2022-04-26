@@ -12,8 +12,8 @@
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/CameraSave/</guid>
       <description>View Implementation   Two of the saved camera settings. Get from SettingsWrapper.GetCameraSaveSettings()
- bool&amp;nbsp; InvertSwivelPitch     Default value: none
-bool&amp;nbsp; CameraShake     Default value: none</description>
+ bool InvertSwivelPitch      Default value: none
+bool CameraShake      Default value: none</description>
     </item>
     
     <item>
@@ -23,10 +23,10 @@ bool&amp;nbsp; CameraShake     Default value: none</description>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/ClubColorSet/</guid>
       <description>View Implementation   IDs of colors used by a team in a club match. TODO: Figure out and note what the mapping from ID to color is. Get from CustomMatchTeamSettings.Colors
- unsigned char&amp;nbsp; TeamColorID     Default value = 0
-unsigned char&amp;nbsp; CustomColorID     Default value = 0
-bool&amp;nbsp; bTeamColorSet     Default value = false
-bool&amp;nbsp; bCustomColorSet     Default value = false</description>
+ unsigned char TeamColorID      Default value = 0
+unsigned char CustomColorID      Default value = 0
+bool bTeamColorSet      Default value = false
+bool bCustomColorSet      Default value = false</description>
     </item>
     
     <item>
@@ -36,12 +36,11 @@ bool&amp;nbsp; bCustomColorSet     Default value = false</description>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/ControllerInput/</guid>
       <description>View Implementation   A controller&#39;s input at a single frame. Easy access with CarWrapper.GetInput()
- float&amp;nbsp; Throttle     Default value = .0f
-float&amp;nbsp; Steer     Default value = .0f
-float&amp;nbsp; Pitch     Default value = .0f
-float&amp;nbsp; Yaw     Default value = .0f
-float&amp;nbsp; Roll     Default value = .0f
-float&amp;nbsp; DodgeForward     Default value = .</description>
+ float Throttle      Default value = .0f
+float Steer      Default value = .0f
+float Pitch      Default value = .0f
+float Yaw      Default value = .0f
+float Roll      Default value = .</description>
     </item>
     
     <item>
@@ -51,13 +50,12 @@ float&amp;nbsp; DodgeForward     Default value = .</description>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/CustomMatchSettings/</guid>
       <description>View Implementation   Use to create a private match with MatchmakingWrapper.CreatePrivateMatch()
- std::string&amp;nbsp; GameTags     Default value: none
-std::string&amp;nbsp; MapName     Default value: none
-std::string&amp;nbsp; ServerName     Default value: none
-std::string&amp;nbsp; Password     Default value: none
-CustomMatchTeamSettings BlueTeamSettings     Default value: none
-CustomMatchTeamSettings OrangeTeamSettings     Default value: none
-int&amp;nbsp; GameMode     Default value = 0</description>
+ std::string GameTags      Default value: none
+std::string MapName      Default value: none
+std::string ServerName      Default value: none
+std::string Password      Default value: none
+CustomMatchTeamSettings BlueTeamSettings      Default value: none
+CustomMatchTeamSettings OrangeTeamSettings      Default value: none</description>
     </item>
     
     <item>
@@ -67,9 +65,9 @@ int&amp;nbsp; GameMode     Default value = 0</description>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/CustomMatchTeamSettings/</guid>
       <description>View Implementation   A single team&#39;s setting. Get from a CustomMatchSettings
- std::string&amp;nbsp; Name     Default value: none
-ClubColorSet Colors     Default value: none
-int&amp;nbsp; GameScore     Default value = 0</description>
+ std::string Name      Default value: none
+ClubColorSet Colors      Default value: none
+int GameScore      Default value = 0</description>
     </item>
     
     <item>
@@ -79,10 +77,10 @@ int&amp;nbsp; GameScore     Default value = 0</description>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/GamepadSettings/</guid>
       <description>View Implementation   A read-only copy of a player&#39;s gamepad settings. Get with SettingsWrapper.GetGamepadSettings()
- float&amp;nbsp; ControllerDeadzone     Default value: none
-float&amp;nbsp; DodgeInputThreshold     Default value: none
-float&amp;nbsp; SteeringSensitivity     Default value: none
-float&amp;nbsp; AirControlSensitivity     Default value: none</description>
+ float ControllerDeadzone      Default value: none
+float DodgeInputThreshold      Default value: none
+float SteeringSensitivity      Default value: none
+float AirControlSensitivity      Default value: none</description>
     </item>
     
     <item>
@@ -92,13 +90,13 @@ float&amp;nbsp; AirControlSensitivity     Default value: none</description>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/GUIDWrapper/</guid>
       <description>View Implementation   Wraps a read-only copy of a GUI menu&#39;s ID. Not 100% sure on the use case
- EGuidFormats       Digits = 0
+ EGuidFormats        Digits = 0
   DigitsWithHyphens = 1
   DigitsWithHyphensInBraces = 2
   DigitsWithHyphensInParentheses = 3
   HexValuesInBraces = 4
   UniqueObjectGuid = 5
-  int32_t&amp;nbsp; A     Default value = 0</description>
+  int32_t A      Default value = 0</description>
     </item>
     
     <item>
@@ -108,10 +106,9 @@ float&amp;nbsp; AirControlSensitivity     Default value: none</description>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/LinearColor/</guid>
       <description>View Implementation   RGBA value to change the color of the Canvas. Values from 0.0-1.0 for each with 1 being 100% intensity. A is for alpha and is opacity. A = 1.0 will be fully opaque
- float&amp;nbsp; R     Default value: none
-float&amp;nbsp; G     Default value: none
-float&amp;nbsp; B     Default value: none
-float&amp;nbsp; A     Default value: none</description>
+ float R      Default value: none
+float G      Default value: none
+float B      Default value: none</description>
     </item>
     
     <item>
@@ -121,7 +118,7 @@ float&amp;nbsp; A     Default value: none</description>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/MMRNotifierToken/</guid>
       <description>View Implementation   Unique value assigned to an mmr notifier for a specific player. Obtain with MMRWrapper.RegisterMMRNotifier()
- unsigned long long&amp;nbsp; token     Default value: none</description>
+ unsigned long long token      Default value: none</description>
     </item>
     
     <item>
@@ -131,9 +128,9 @@ float&amp;nbsp; A     Default value: none</description>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/POV/</guid>
       <description>View Implementation   The location, rotation, and FOV of a player&#39;s POV
- Vector location     Default value: none
-Rotator rotation     Default value: none
-float&amp;nbsp; FOV     Default value: none</description>
+ Vector location      Default value: none
+Rotator rotation      Default value: none
+float FOV      Default value: none</description>
     </item>
     
     <item>
@@ -143,12 +140,12 @@ float&amp;nbsp; FOV     Default value: none</description>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/PredictionInfo/</guid>
       <description>View Implementation   Info on the predicted location of a ball. Get with BallWrapper.PredictPosition()
- float&amp;nbsp; Time     Default value: none
-float&amp;nbsp; ArchTopTime     Default value: none
-Vector Location     Default value: none
-Vector Velocity     Default value: none
-Vector ArchTop     Default value: none
-Vector ArchTopVelocity     Default value: none</description>
+ float Time      Default value: none
+float ArchTopTime      Default value: none
+Vector Location      Default value: none
+Vector Velocity      Default value: none
+Vector ArchTop      Default value: none
+Vector ArchTopVelocity      Default value: none</description>
     </item>
     
     <item>
@@ -158,13 +155,12 @@ Vector ArchTopVelocity     Default value: none</description>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/ProfileCameraSettings/</guid>
       <description>View Implementation   A player&#39;s camera Settings. Access with CameraWrapper.GetCameraSettings()
- float&amp;nbsp; FOV     Default value: none
-float&amp;nbsp; Height     Default value: none
-float&amp;nbsp; Pitch     Default value: none
-float&amp;nbsp; Distance     Default value: none
-float&amp;nbsp; Stiffness     Default value: none
-float&amp;nbsp; SwivelSpeed     Default value: none
-float&amp;nbsp; TransitionSpeed     Default value: none</description>
+ float FOV      Default value: none
+float Height      Default value: none
+float Pitch      Default value: none
+float Distance      Default value: none
+float Stiffness      Default value: none
+float SwivelSpeed      Default value: none</description>
     </item>
     
     <item>
@@ -174,10 +170,10 @@ float&amp;nbsp; TransitionSpeed     Default value: none</description>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/Quat/</guid>
       <description>View Implementation   A description of a 4D space. Just trust it works and don&#39;t think too hard. Used RotatorToQuat and RotateVectorWithQuat to rotate a vector in 3D space using a Rotator and Quat
- float&amp;nbsp; X     Default value: none
-float&amp;nbsp; Y     Default value: none
-float&amp;nbsp; Z     Default value: none
-float&amp;nbsp; W     Default value: none</description>
+ float X      Default value: none
+float Y      Default value: none
+float Z      Default value: none
+float W      Default value: none</description>
     </item>
     
     <item>
@@ -186,13 +182,13 @@ float&amp;nbsp; W     Default value: none</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/RBState/</guid>
-      <description>View Implementation    Quat Quaternion     Default value: none
-Vector Location     Default value: none
-Vector LinearVelocity     Default value: none
-Vector AngularVelocity     Default value: none
-float&amp;nbsp; Time     Default value: none
-unsigned long&amp;nbsp; bSleeping     Default value: none
-unsigned long&amp;nbsp; bNewData     Default value: none</description>
+      <description>View Implementation    Quat Quaternion      Default value: none
+Vector Location      Default value: none
+Vector LinearVelocity      Default value: none
+Vector AngularVelocity      Default value: none
+float Time      Default value: none
+unsigned long bSleeping      Default value: none
+unsigned long bNewData      Default value: none</description>
     </item>
     
     <item>
@@ -202,8 +198,8 @@ unsigned long&amp;nbsp; bNewData     Default value: none</description>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/RecordedSample/</guid>
       <description>View Implementation   A single sample of data recorded for performance graphs. Get with SampleHistoryWrapper
- float&amp;nbsp; Low     Default value: none
-float&amp;nbsp; High     Default value: none</description>
+ float Low      Default value: none
+float High      Default value: none</description>
     </item>
     
     <item>
@@ -213,11 +209,11 @@ float&amp;nbsp; High     Default value: none</description>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/ReplayScoreData/</guid>
       <description>View Implementation   Stats shown in a replay. Get with ReplayDirectorWrapper.GetReplayScoreData()
- uintptr_t&amp;nbsp; ScoredBy     Default value: none
-uintptr_t&amp;nbsp; AssistedBy     Default value: none
-float&amp;nbsp; Speed     Default value: none
-float&amp;nbsp; Time     Default value: none
-unsigned char&amp;nbsp; ScoreTeam     Default value: none</description>
+ uintptr_t ScoredBy      Default value: none
+uintptr_t AssistedBy      Default value: none
+float Speed      Default value: none
+float Time      Default value: none
+unsigned char ScoreTeam      Default value: none</description>
     </item>
     
     <item>
@@ -226,10 +222,10 @@ unsigned char&amp;nbsp; ScoreTeam     Default value: none</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/Rotator/</guid>
-      <description>View Implementation   A description of the orientation of an object. This github page describes what 3D space is in Rocket League&amp;nbsp;
- int&amp;nbsp; Pitch     Default value: none
-int&amp;nbsp; Yaw     Default value: none
-int&amp;nbsp; Roll     Default value: none</description>
+      <description>View Implementation   A description of the orientation of an object. This github page describes what 3D space is in Rocket League
+ int Pitch      Default value: none
+int Yaw      Default value: none
+int Roll      Default value: none</description>
     </item>
     
     <item>
@@ -239,9 +235,9 @@ int&amp;nbsp; Roll     Default value: none</description>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/SkillRank/</guid>
       <description>View Implementation   Information on a player&#39;s rank. From MMRWrapper.GetPlayerRank()
- int&amp;nbsp; Tier     Default value: none
-int&amp;nbsp; Division     Default value: none
-int&amp;nbsp; MatchesPlayed     Default value: none</description>
+ int Tier      Default value: none
+int Division      Default value: none
+int MatchesPlayed      Default value: none</description>
     </item>
     
     <item>
@@ -251,8 +247,8 @@ int&amp;nbsp; MatchesPlayed     Default value: none</description>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/SkillRating/</guid>
       <description>View Implementation   Raw skill data used to calculate MMR with MMRWrapper.CalculateMMR()
- float&amp;nbsp; Mu     Default value: none
-float&amp;nbsp; Sigma     Default value: none</description>
+ float Mu      Default value: none
+float Sigma      Default value: none</description>
     </item>
     
     <item>
@@ -262,7 +258,7 @@ float&amp;nbsp; Sigma     Default value: none</description>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/SteamID/</guid>
       <description>View Implementation   Mostly depreciated. When possible use the epic and steam friendly UniqueIDWrapper
- unsigned long long&amp;nbsp; ID     Default value: none</description>
+ unsigned long long ID      Default value: none</description>
     </item>
     
     <item>
@@ -272,8 +268,8 @@ float&amp;nbsp; Sigma     Default value: none</description>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/StickyForceData/</guid>
       <description>View Implementation   Info on stickiness to wall. Get with VehicleWrapper.GetStickyForce()
- float&amp;nbsp; Ground     Default value: none
-float&amp;nbsp; Wall     Default value: none</description>
+ float Ground      Default value: none
+float Wall      Default value: none</description>
     </item>
     
     <item>
@@ -283,10 +279,10 @@ float&amp;nbsp; Wall     Default value: none</description>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/UnrealColor/</guid>
       <description>View Implementation   RGBA stored in 0-255 values for each. A is alpha or opacity. 255 Alpha is max opacity
- unsigned char&amp;nbsp; B     Default value: none
-unsigned char&amp;nbsp; G     Default value: none
-unsigned char&amp;nbsp; R     Default value: none
-unsigned char&amp;nbsp; A     Default value: none</description>
+ unsigned char B      Default value: none
+unsigned char G      Default value: none
+unsigned char R      Default value: none
+unsigned char A      Default value: none</description>
     </item>
     
     <item>
@@ -295,10 +291,10 @@ unsigned char&amp;nbsp; A     Default value: none</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/Vector/</guid>
-      <description>View Implementation   A 3D vector. This can define a location, direction or a velocity. This github page describes what 3D space is in Rocket League&amp;nbsp;
- float&amp;nbsp; X     Default value: none
-float&amp;nbsp; Y     Default value: none
-float&amp;nbsp; Z     Default value: none</description>
+      <description>View Implementation   A 3D vector. This can define a location, direction or a velocity. This github page describes what 3D space is in Rocket League
+ float X      Default value: none
+float Y      Default value: none
+float Z      Default value: none</description>
     </item>
     
     <item>
@@ -308,8 +304,8 @@ float&amp;nbsp; Z     Default value: none</description>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/Vector2/</guid>
       <description>View Implementation   A 2D vector. This is two ints, and can often be used to describe a location on the screen. (0, 0) is the top left corner. +x is to the right, and +y is down
- int&amp;nbsp; X     Default value: none
-int&amp;nbsp; Y     Default value: none</description>
+ int X      Default value: none
+int Y      Default value: none</description>
     </item>
     
     <item>
@@ -319,8 +315,8 @@ int&amp;nbsp; Y     Default value: none</description>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/Vector2F/</guid>
       <description>View Implementation   A 2D vector, but x and y are floats
- float&amp;nbsp; X     Default value: none
-float&amp;nbsp; Y     Default value: none</description>
+ float X      Default value: none
+float Y      Default value: none</description>
     </item>
     
     <item>
@@ -330,13 +326,12 @@ float&amp;nbsp; Y     Default value: none</description>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/VideoSettings/</guid>
       <description>View Implementation   The video settings. Get from SettingsWrapper.GetVideoSettings()
- bool&amp;nbsp; bVsync     Default value: none
-bool&amp;nbsp; bShowWeatherFX     Default value: none
-bool&amp;nbsp; bShowLightShafts     Default value: none
-bool&amp;nbsp; bTranslucentArenaShaders     Default value: none
-bool&amp;nbsp; bShowLensFlares     Default value: none
-bool&amp;nbsp; bEnableHDRSideBySideVisualizer     Default value: none
-bool&amp;nbsp; bUncappedFramerate     Default value: none</description>
+ bool bVsync      Default value: none
+bool bShowWeatherFX      Default value: none
+bool bShowLightShafts      Default value: none
+bool bTranslucentArenaShaders      Default value: none
+bool bShowLensFlares      Default value: none
+bool bEnableHDRSideBySideVisualizer      Default value: none</description>
     </item>
     
     <item>
@@ -346,10 +341,10 @@ bool&amp;nbsp; bUncappedFramerate     Default value: none</description>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/ViewTarget/</guid>
       <description>View Implementation   Target of a camera. Target can be wrapped in an ActorWrapper wrappedTarget(((uintptr_t) struct-&amp;amp;gt;Target)) Similarly controller is safe to cast to PlayerControllerWrapper and PRI can be cast to PriWrapper
- void *&amp;nbsp; Target     Default value: none
-void *&amp;nbsp; Controller     Default value: none
-POV POV     Default value: none
-float&amp;nbsp; AspectRatio     Default value: none</description>
+ void * Target      Default value: none
+void * Controller      Default value: none
+POV POV      Default value: none
+float AspectRatio      Default value: none</description>
     </item>
     
     <item>
@@ -358,13 +353,12 @@ float&amp;nbsp; AspectRatio     Default value: none</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/WheelContactData/</guid>
-      <description>View Implementation   Info on a single wheel&#39;s contact with stuff. Get with WheelWrapper.GetContact()&amp;nbsp;
- unsigned long&amp;nbsp; bHasContact     Default value: none
-unsigned long&amp;nbsp; bHasContactWithWorldGeometry     Default value: none
-float&amp;nbsp; HasContactChangeTime     Default value: none
-void *&amp;nbsp; Actor     Default value: none
-void *&amp;nbsp; Component     Default value: none
-Vector Location     Default value: none</description>
+      <description>View Implementation   Info on a single wheel&#39;s contact with stuff. Get with WheelWrapper.GetContact()
+ unsigned long bHasContact      Default value: none
+unsigned long bHasContactWithWorldGeometry      Default value: none
+float HasContactChangeTime      Default value: none
+void * Actor      Default value: none
+void * Component      Default value: none</description>
     </item>
     
     <item>
@@ -374,10 +368,10 @@ Vector Location     Default value: none</description>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/WorldContactData/</guid>
       <description>View Implementation   Info on an actors contact with the world. Get with RBActor.GetWorldContact()
- unsigned long&amp;nbsp; bHasContact     Default value: none
-Vector Location     Default value: none
-Vector Velocity     Default value: none
-Vector Normal     Default value: none</description>
+ unsigned long bHasContact      Default value: none
+Vector Location      Default value: none
+Vector Velocity      Default value: none
+Vector Normal      Default value: none</description>
     </item>
     
   </channel>

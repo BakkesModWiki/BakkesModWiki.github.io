@@ -11,10 +11,10 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/GameObject/AppliedBreakoutDamage/</guid>
-      <description>View Implementation    unsigned char&amp;nbsp; Id     Default value: none
-Vector Location     Default value: none
-int&amp;nbsp; DamageIndex     Default value: none
-int&amp;nbsp; TotalDamage     Default value: none</description>
+      <description>View Implementation    unsigned char Id      Default value: none
+Vector Location      Default value: none
+int DamageIndex      Default value: none
+int TotalDamage      Default value: none</description>
     </item>
     
     <item>
@@ -23,11 +23,11 @@ int&amp;nbsp; TotalDamage     Default value: none</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/GameObject/BreakoutDamageState/</guid>
-      <description>View Implementation    unsigned char&amp;nbsp; State     Default value: none
-PriWrapper Causer     Default value {0}
-Vector DamageLocation     Default value: none
-bool&amp;nbsp; bDirectDamage     Default value: none
-bool&amp;nbsp; bImmediate     Default value: none</description>
+      <description>View Implementation    unsigned char State      Default value: none
+PriWrapper Causer      Default value {0}
+Vector DamageLocation      Default value: none
+bool bDirectDamage      Default value: none
+bool bImmediate      Default value: none</description>
     </item>
     
     <item>
@@ -37,7 +37,7 @@ bool&amp;nbsp; bImmediate     Default value: none</description>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/GameObject/ClubMember/</guid>
       <description>View Implementation   A member of a club. Get from ClubDetailsWrapper.GetMembers()
- unsigned char&amp;nbsp; paddingForReasons     Default value: none</description>
+ unsigned char paddingForReasons      Default value: none</description>
     </item>
     
   </channel>

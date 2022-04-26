@@ -12,9 +12,9 @@
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/Items/Attributes/SpecialEdition/</guid>
       <description>View Implementation   Info on an item&#39;s special edition. Not sure where to obtain
- int&amp;nbsp; productId     Default value: none
-int&amp;nbsp; editionId     Default value: none
-std::string&amp;nbsp; label     Default value: none</description>
+ int productId      Default value: none
+int editionId      Default value: none
+std::string label      Default value: none</description>
     </item>
     
   </channel>
