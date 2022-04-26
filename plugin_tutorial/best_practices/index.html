@@ -10,7 +10,7 @@
 
   <meta name="description" content="These practices are super important to follow to make sure you don&rsquo;t accidentally crash the game.
  Nullchecking
-Any BakkesMod wrapper is a pointer under the hood, and that pointer could be null! If you try and use a null wrapper, you&rsquo;ll crash. This is super simple, just make sure you nullcheck every time you obtain a new wrapper.  ServerWrapper server = gameWrapper-&gt;GetCurrentGameState(); // Just check if the server is null if (!" />
+Any BakkesMod wrapper is a pointer under the hood, and that pointer could be null! If you try and use a null wrapper, you&rsquo;ll crash. This is super simple, just make sure you nullcheck every time you obtain a new wrapper.  1 2 3 4 5 6 7 8 9 10 11 12  ServerWrapper server = gameWrapper-&gt;GetCurrentGameState(); // Just check if the server is null if (!" />
 
     <title>Best Practices | BakkesMod Programming Wiki</title>
 
@@ -38,14 +38,14 @@ Any BakkesMod wrapper is a pointer under the hood, and that pointer could be nul
   <meta property="og:site_name" content="BakkesMod Programming Wiki" />
   <meta property="og:description" content="These practices are super important to follow to make sure you don’t accidentally crash the game.
  Nullchecking
-Any BakkesMod wrapper is a pointer under the hood, and that pointer could be null! If you try and use a null wrapper, you’ll crash. This is super simple, just make sure you nullcheck every time you obtain a new wrapper.  ServerWrapper server = gameWrapper-&gt;GetCurrentGameState(); // Just check if the server is null if (!" />
+Any BakkesMod wrapper is a pointer under the hood, and that pointer could be null! If you try and use a null wrapper, you’ll crash. This is super simple, just make sure you nullcheck every time you obtain a new wrapper.  1 2 3 4 5 6 7 8 9 10 11 12  ServerWrapper server = gameWrapper-&gt;GetCurrentGameState(); // Just check if the server is null if (!" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bakkesmodwiki.github.io/plugin_tutorial/best_practices/" />
 
 <meta property="article:section" content="Plugin Tutorial" />
     <meta
       property="article:modified_time"
-      content="2022-04-25T22:30:00-07:00"
+      content="2022-04-25T23:40:20-07:00"
     />
 
 
@@ -53,7 +53,7 @@ Any BakkesMod wrapper is a pointer under the hood, and that pointer could be nul
 <meta name="twitter:title" content="Best Practices" />
   <meta name="twitter:description" content="These practices are super important to follow to make sure you don’t accidentally crash the game.
  Nullchecking
-Any BakkesMod wrapper is a pointer under the hood, and that pointer could be null! If you try and use a null wrapper, you’ll crash. This is super simple, just make sure you nullcheck every time you obtain a new wrapper.  ServerWrapper server = gameWrapper-&gt;GetCurrentGameState(); // Just check if the server is null if (!" />
+Any BakkesMod wrapper is a pointer under the hood, and that pointer could be null! If you try and use a null wrapper, you’ll crash. This is super simple, just make sure you nullcheck every time you obtain a new wrapper.  1 2 3 4 5 6 7 8 9 10 11 12  ServerWrapper server = gameWrapper-&gt;GetCurrentGameState(); // Just check if the server is null if (!" />
 
 
   <script type="application/ld+json">
@@ -64,8 +64,8 @@ Any BakkesMod wrapper is a pointer under the hood, and that pointer could be nul
       "name": "Best Practices",
       "url" : "https://bakkesmodwiki.github.io/plugin_tutorial/best_practices/",
       "headline": "Best Practices",
-      "description": "These practices are super important to follow to make sure you don’t accidentally crash the game.\n Nullchecking\nAny BakkesMod wrapper is a pointer under the hood, and that pointer could be null! If you try and use a null wrapper, you’ll crash. This is super simple, just make sure you nullcheck every time you obtain a new wrapper.  ServerWrapper server = gameWrapper-\u003eGetCurrentGameState(); \/\/ Just check if the server is null if (!",
-      "wordCount" : "194",
+      "description": "These practices are super important to follow to make sure you don’t accidentally crash the game.\n Nullchecking\nAny BakkesMod wrapper is a pointer under the hood, and that pointer could be null! If you try and use a null wrapper, you’ll crash. This is super simple, just make sure you nullcheck every time you obtain a new wrapper.  1 2 3 4 5 6 7 8 9 10 11 12  ServerWrapper server = gameWrapper-\u003eGetCurrentGameState(); \/\/ Just check if the server is null if (!",
+      "wordCount" : "206",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -76,7 +76,7 @@ Any BakkesMod wrapper is a pointer under the hood, and that pointer could be nul
       "copyrightYear" : "0001",
       "dateCreated": "0001-01-01T00:00:00.00Z",
       "datePublished": "0001-01-01T00:00:00.00Z",
-      "dateModified": "2022-04-25T22:30:00.00Z",
+      "dateModified": "2022-04-25T23:40:20.00Z",
       "publisher":{
           "@type":"Organization",
           "name": "BakkesMod Programming Wiki",
@@ -15331,7 +15331,23 @@ Any BakkesMod wrapper is a pointer under the hood, and that pointer could be nul
 If you try and use a null wrapper, you&rsquo;ll crash.
 This is super simple, just make sure you nullcheck every time you obtain a new wrapper.</li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">ServerWrapper</span> <span class="n">server</span> <span class="o">=</span> <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">GetCurrentGameState</span><span class="p">();</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">ServerWrapper</span> <span class="n">server</span> <span class="o">=</span> <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">GetCurrentGameState</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// Just check if the server is null
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">server</span><span class="p">)</span> <span class="p">{</span> 
@@ -15343,7 +15359,10 @@ This is super simple, just make sure you nullcheck every time you obtain a new w
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// Now you&#39;re safe and the server is valid
-</span></span></span></code></pre></div><ol start="2">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+<ol start="2">
 <li>Don&rsquo;t store wrappers<br>
 As the game is played, the pointers underneath wrappers might become invalid or point to unexpected memory locations.
 Imagine you stored a ServerWrapper for use later, but by the time you use it you&rsquo;re in a new match.<br>

@@ -51,7 +51,7 @@ Make a toast pop up with GameWrapper." />
 <meta property="article:section" content="Code Snippets" />
     <meta
       property="article:modified_time"
-      content="2021-08-25T01:06:59-04:00"
+      content="2022-04-25T23:40:20-07:00"
     />
 
 
@@ -74,7 +74,7 @@ Make a toast pop up with GameWrapper." />
       "url" : "https://bakkesmodwiki.github.io/code_snippets/toasts/",
       "headline": "Toasts",
       "description": "Toasts are cool little popups that show on the top right of your game\nThese are useful for quick notifications that you want to disappear quickly\nFirst you need to enable them in f2 - Misc - Enable notifications\nWatch out though! Every user also has to enable this, so make sure your plugin page or interface is quite clear that this is necessary\nNow to the code\nMake a toast pop up with GameWrapper.",
-      "wordCount" : "270",
+      "wordCount" : "275",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -85,7 +85,7 @@ Make a toast pop up with GameWrapper." />
       "copyrightYear" : "0001",
       "dateCreated": "0001-01-01T00:00:00.00Z",
       "datePublished": "0001-01-01T00:00:00.00Z",
-      "dateModified": "2021-08-25T01:06:59.00Z",
+      "dateModified": "2022-04-25T23:40:20.00Z",
       "publisher":{
           "@type":"Organization",
           "name": "BakkesMod Programming Wiki",
@@ -15386,13 +15386,24 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
   alt="https://cdn.discordapp.com/attachments/873081105090215957/879215077654417469/unknown.png"
   
 /></p>
-<p>I&rsquo;ve made an example using CoolPlugin. I put this code in the onLoad() in CoolPlugin.cpp and cool.png in the <code>bakkesmod/data</code> folder</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">LoadToastTexture</span><span class="p">(</span><span class="s">&#34;cool&#34;</span><span class="p">,</span> <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">GetDataFolder</span><span class="p">()</span> <span class="o">/</span> <span class="s">&#34;cool.png&#34;</span><span class="p">);</span>
+<p>I&rsquo;ve made an example using CoolPlugin. I put this code in the onLoad() in CoolPlugin.cpp and cool.png in the <code>bakkesmod/data</code> folder
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">LoadToastTexture</span><span class="p">(</span><span class="s">&#34;cool&#34;</span><span class="p">,</span> <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">GetDataFolder</span><span class="p">()</span> <span class="o">/</span> <span class="s">&#34;cool.png&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">registerNotifier</span><span class="p">(</span><span class="s">&#34;cool_toast&#34;</span><span class="p">,</span> <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">	<span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">Toast</span><span class="p">(</span><span class="s">&#34;Whoa you&#39;re cool&#34;</span><span class="p">,</span> <span class="s">&#34;Super cool&#34;</span><span class="p">,</span> <span class="s">&#34;cool&#34;</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="n">ToastType_Warning</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">	<span class="p">},</span> <span class="s">&#34;&#34;</span><span class="p">,</span> <span class="n">PERMISSION_ALL</span><span class="p">);</span>
-</span></span></code></pre></div><p>The result when I call <code>cool_toast</code> from the f6 console</p>
+</span></span><span class="line"><span class="cl">    <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">Toast</span><span class="p">(</span><span class="s">&#34;Whoa you&#39;re cool&#34;</span><span class="p">,</span> <span class="s">&#34;Super cool&#34;</span><span class="p">,</span> <span class="s">&#34;cool&#34;</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="n">ToastType_Warning</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">},</span> <span class="s">&#34;&#34;</span><span class="p">,</span> <span class="n">PERMISSION_ALL</span><span class="p">);</span></span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<p>The result when I call <code>cool_toast</code> from the f6 console</p>
 <p><img
   src="https://cdn.discordapp.com/attachments/873081105090215957/879210871946088508/unknown.png"
   alt="https://cdn.discordapp.com/attachments/873081105090215957/879210871946088508/unknown.png"

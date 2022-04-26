@@ -41,7 +41,7 @@
 <meta property="article:section" content="Code Snippets" />
     <meta
       property="article:modified_time"
-      content="2021-08-25T01:06:59-04:00"
+      content="2022-04-25T23:40:20-07:00"
     />
 
 
@@ -59,7 +59,7 @@
       "url" : "https://bakkesmodwiki.github.io/code_snippets/creating_image_wrapper/",
       "headline": "Creating an ImageWrapper",
       "description": "Creating an ImageWrapper      You should use some kind of reference type that manages the memory. std::shared_ptr\u003cImageWrapper\u003e is my recommendation. The constructor takes 3 arguments (2 are optional) The optional arguments are two bools that decide if the core will preload the images for use in the canvas\\imgui. The ImageWrapper is a resource managing class. This means that you have to keep this object “alive” as long as you want to use the image.",
-      "wordCount" : "258",
+      "wordCount" : "269",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -70,7 +70,7 @@
       "copyrightYear" : "0001",
       "dateCreated": "0001-01-01T00:00:00.00Z",
       "datePublished": "0001-01-01T00:00:00.00Z",
-      "dateModified": "2021-08-25T01:06:59.00Z",
+      "dateModified": "2022-04-25T23:40:20.00Z",
       "publisher":{
           "@type":"Organization",
           "name": "BakkesMod Programming Wiki",
@@ -15344,27 +15344,58 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 </div>
 <ol>
 <li>
-<p>Use the constructor with the second or third argument true (or both).</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// ImageWrapper(std::string path, bool canvasLoad = false, bool ImGuiLoad = false);
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">myImage</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ImageWrapper</span><span class="o">&gt;</span><span class="p">(</span><span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">GetDataFolder</span><span class="p">()</span> <span class="o">/</span> <span class="s">&#34;MyPluginFolder&#34;</span> <span class="o">/</span> <span class="s">&#34;MyImage.png&#34;</span><span class="p">,</span> <span class="nb">true</span><span class="p">,</span> <span class="nb">true</span><span class="p">);</span>
-</span></span></code></pre></div></li>
+<p>Use the constructor with the second or third argument true (or both).
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// ImageWrapper(std::string path, bool canvasLoad = false, bool ImGuiLoad = false);
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">myImage</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ImageWrapper</span><span class="o">&gt;</span><span class="p">(</span><span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">GetDataFolder</span><span class="p">()</span> <span class="o">/</span> <span class="s">&#34;MyPluginFolder&#34;</span> <span class="o">/</span> <span class="s">&#34;MyImage.png&#34;</span><span class="p">,</span> <span class="nb">true</span><span class="p">,</span> <span class="nb">true</span><span class="p">);</span></span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+</li>
 <li>
-<p>Load the resource if you didn&rsquo;t use the optional args.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">myImage</span><span class="o">-&gt;</span><span class="n">LoadForCanvas</span><span class="p">();</span>
-</span></span></code></pre></div></li>
+<p>Load the resource if you didn&rsquo;t use the optional args.
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">myImage</span><span class="o">-&gt;</span><span class="n">LoadForCanvas</span><span class="p">();</span></span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+</li>
 <li>
-<ol>
-<li>Pass it to the canvas wrapper in a drawable callback</li>
-</ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">canvas</span><span class="p">.</span><span class="n">DrawTexture</span><span class="p">(</span><span class="n">testImage</span><span class="p">.</span><span class="n">get</span><span class="p">(),</span> <span class="mi">1</span><span class="p">);</span> <span class="c1">// there are multiple functions in the canvaswrapper that accept ImageWrapper*
-</span></span></span></code></pre></div><ol start="2">
-<li>Use it in your imgui render code</li>
-</ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="k">auto</span> <span class="n">pTex</span> <span class="o">=</span> <span class="n">myImage</span><span class="o">-&gt;</span><span class="n">GetImguiTex</span><span class="p">())</span> <span class="p">{</span>
+<p>a. Pass it to the canvas wrapper in a drawable callback
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">canvas</span><span class="p">.</span><span class="n">DrawTexture</span><span class="p">(</span><span class="n">testImage</span><span class="p">.</span><span class="n">get</span><span class="p">(),</span> <span class="mi">1</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl"><span class="c1">// there are multiple functions in the canvaswrapper that accept ImageWrapper*
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<p>b. Use it in your imgui render code
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="k">auto</span> <span class="n">pTex</span> <span class="o">=</span> <span class="n">myImage</span><span class="o">-&gt;</span><span class="n">GetImguiTex</span><span class="p">())</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">auto</span> <span class="n">rect</span> <span class="o">=</span> <span class="n">myImage</span><span class="o">-&gt;</span><span class="n">GetSizeF</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">    <span class="n">ImGui</span><span class="o">::</span><span class="n">Image</span><span class="p">(</span><span class="n">pTex</span><span class="p">,</span> <span class="p">{</span> <span class="n">rect</span><span class="p">.</span><span class="n">width</span><span class="p">,</span> <span class="n">rect</span><span class="p">.</span><span class="n">height</span> <span class="p">});</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div></li>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+</li>
 </ol>
 <p>PS:
 The backend will load in the resource whenever you try to use the images if it hasn&rsquo;t already been loaded. So you actually don&rsquo;t have to worry about it, but the loading can cause some lag\stutters.

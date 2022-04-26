@@ -47,8 +47,7 @@ For rocket league, you need to attach to the process &amp;ldquo;RocketLeague.exe
       <guid>https://bakkesmodwiki.github.io/useful_info/logging/</guid>
       <description>Hitting f6 in Rocket League with BakkesMod running opens the console. You can log to this with a helpful template function, LOG().
 LOG uses a really smart formatting library to make your life easier called fmt
-Here&amp;rsquo;s an example. Simply put, it replaces any {} in the string with whatever arguments you put after
-float a = 10.10; int b = 11; std::string c = &amp;#34;12&amp;#34;; bool d = false; LOG(&amp;#34;a = {}, b = {}, c = {}, d = {}&amp;#34;, a, b, c, d); // outputs [class OBSCounter] a = 10.</description>
+Here&amp;rsquo;s an example. Simply put, it replaces any {} in the string with whatever arguments you put after 1 2 3 4 5 6 7  float a = 10.10; int b = 11; std::string c = &amp;#34;12&amp;#34;; bool d = false; LOG(&amp;#34;a = {}, b = {}, c = {}, d = {}&amp;#34;, a, b, c, d); // outputs [class OBSCounter] a = 10.</description>
     </item>
     
     <item>
@@ -125,10 +124,8 @@ Unreal Command https://bakkesmod.fandom.com/wiki/Unreal_command</description>
       
       <guid>https://bakkesmodwiki.github.io/useful_info/writing_files/</guid>
       <description>Use gameWrapper-&amp;gt;GetBakkesModPath() and use that as the base path to write to (this will be %appdata%/bakkesmod/bakkesmod). This works for both Epic and Steam installs
-Make sure you&amp;rsquo;ve included fstream
-#include &amp;lt;fstream&amp;gt;C++17
-std::ofstream stream( gameWrapper-&amp;gt;GetBakkesModPath() / &amp;#34;data&amp;#34; / &amp;#34;abc.txt&amp;#34; ); std::ofstream stream( gameWrapper-&amp;gt;GetDataFolder() / &amp;#34;abc.txt&amp;#34; ); //Note the removal of &amp;#34;data&amp;#34; stream &amp;lt;&amp;lt; &amp;#34;def&amp;#34;; // %appdata%/bakkesmod/bakkesmod/data/abc.txt now includes &amp;#34;def&amp;#34; Older C++
-//Note that windows paths require wide strings, so need to use the L to indicate a wide string std::ofstream stream( gameWrapper-&amp;gt;GetBakkesModPathW() + L&amp;#34;data/abc.</description>
+Make sure you&amp;rsquo;ve included fstream 1  #include &amp;lt;fstream&amp;gt;  
+C++17 1 2 3 4  std::ofstream stream( gameWrapper-&amp;gt;GetBakkesModPath() / &amp;#34;data&amp;#34; / &amp;#34;abc.txt&amp;#34; ); std::ofstream stream( gameWrapper-&amp;gt;GetDataFolder() / &amp;#34;abc.txt&amp;#34; ); //Note the removal of &amp;#34;data&amp;#34; stream &amp;lt;&amp;lt; &amp;#34;def&amp;#34;; // %appdata%/bakkesmod/bakkesmod/data/abc.txt now includes &amp;#34;def&amp;#34;    Older C++ 1 2 3  //Note that windows paths require wide strings, so need to use the L to indicate a wide string std::ofstream stream( gameWrapper-&amp;gt;GetBakkesModPathW() + L&amp;#34;data/abc.</description>
     </item>
     
   </channel>

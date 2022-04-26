@@ -43,7 +43,7 @@ In yourplugin.h, create a smart pointer for the token. Even if you don’t use t
 <meta property="article:section" content="Useful Info" />
     <meta
       property="article:modified_time"
-      content="2022-03-25T11:00:24-07:00"
+      content="2022-04-25T23:40:20-07:00"
     />
 
 
@@ -62,7 +62,7 @@ In yourplugin.h, create a smart pointer for the token. Even if you don’t use t
       "url" : "https://bakkesmodwiki.github.io/useful_info/mmr/",
       "headline": "MMR",
       "description": "These code snippets will help you track a player’s MMR. BakkesMod only gets player MMR in matches you’re in, so it’s best used for the primary player or any players in your party. You can’t get any arbitrary player’s MMR.\nIn yourplugin.h, create a smart pointer for the token. Even if you don’t use the token, BakkesMod uses it to ensure that MMR is still being tracked. If you don’t declare it using a C\u002b\u002b pointer, you might not get any MMR updates.",
-      "wordCount" : "225",
+      "wordCount" : "245",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -73,7 +73,7 @@ In yourplugin.h, create a smart pointer for the token. Even if you don’t use t
       "copyrightYear" : "0001",
       "dateCreated": "0001-01-01T00:00:00.00Z",
       "datePublished": "0001-01-01T00:00:00.00Z",
-      "dateModified": "2022-03-25T11:00:24.00Z",
+      "dateModified": "2022-04-25T23:40:20.00Z",
       "publisher":{
           "@type":"Organization",
           "name": "BakkesMod Programming Wiki",
@@ -15322,35 +15322,79 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
   >
     <h1>MMR</h1>
     <p>These code snippets will help you track a player&rsquo;s MMR. BakkesMod only gets player MMR in matches you&rsquo;re in, so it&rsquo;s best used for the primary player or any players in your party. You can&rsquo;t get any arbitrary player&rsquo;s MMR.</p>
-<p>In yourplugin.h, create a smart pointer for the token. Even if you don&rsquo;t use the token, BakkesMod uses it to ensure that MMR is still being tracked. If you don&rsquo;t declare it using a C++ pointer, you might not get any MMR updates.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">MMRNotifierToken</span><span class="o">&gt;</span> <span class="n">notifierToken</span><span class="p">;</span>
-</span></span></code></pre></div><p>When you want to start tracking MMR, likely in onLoad(), register the notifier. Each time BakkesMod gets any player&rsquo;s MMR, it will do whatever is inside the {}. For best style, it calls a function written elsewhere.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">notifierToken</span> <span class="o">=</span> <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">GetMMRWrapper</span><span class="p">().</span><span class="n">RegisterMMRNotifier</span><span class="p">(</span>
+<p>In yourplugin.h, create a smart pointer for the token. Even if you don&rsquo;t use the token, BakkesMod uses it to ensure that MMR is still being tracked. If you don&rsquo;t declare it using a C++ pointer, you might not get any MMR updates.
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">MMRNotifierToken</span><span class="o">&gt;</span> <span class="n">notifierToken</span><span class="p">;</span></span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<p>When you want to start tracking MMR, likely in onLoad(), register the notifier. Each time BakkesMod gets any player&rsquo;s MMR, it will do whatever is inside the {}. For best style, it calls a function written elsewhere.
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">notifierToken</span> <span class="o">=</span> <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">GetMMRWrapper</span><span class="p">().</span><span class="n">RegisterMMRNotifier</span><span class="p">(</span>
 </span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="n">UniqueIDWrapper</span> <span class="n">id</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="n">updateStats</span><span class="p">(</span><span class="n">id</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">);</span>
-</span></span></code></pre></div><p>Here&rsquo;s an example callback function called updateStats. You can get any playlist&rsquo;s MMR for that player now, see <a
+</span></span><span class="line"><span class="cl"><span class="p">);</span></span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<p>Here&rsquo;s an example callback function called updateStats. You can get any playlist&rsquo;s MMR for that player now, see <a
   class="gdoc-markdown__link"
   href="/code_snippets/playlist_id/"
   
->playlist IDs here</a></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">PluginName</span><span class="o">::</span><span class="n">updateStats</span><span class="p">(</span><span class="n">UniqueIDWrapper</span> <span class="n">id</span><span class="p">)</span>
+>playlist IDs here</a>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">PluginName</span><span class="o">::</span><span class="n">updateStats</span><span class="p">(</span><span class="n">UniqueIDWrapper</span> <span class="n">id</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="kt">float</span> <span class="n">mmr</span> <span class="o">=</span> <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">GetMMRWrapper</span><span class="p">().</span><span class="n">GetPlayerMMR</span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">playlistID</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">  <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;{} MMR is: {}&#34;</span><span class="p">,</span> <span class="n">id</span><span class="p">.</span><span class="n">GetIdString</span><span class="p">(),</span> <span class="n">mmr</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p>To ensure the player is someone you care about, you can compare their ID to the primary or any other player&rsquo;s PRI</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl">    <span class="n">PlayerControllerWrapper</span> <span class="n">pc</span> <span class="o">=</span> <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">GetPlayerController</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">pc</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="n">PriWrapper</span> <span class="n">pri</span> <span class="o">=</span> <span class="n">pc</span><span class="p">.</span><span class="n">GetPRI</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">pri</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="n">UniqueIDWrapper</span> <span class="n">primaryID</span> <span class="o">=</span> <span class="n">pri</span><span class="p">.</span><span class="n">GetUniqueIdWrapper</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<p>To ensure the player is someone you care about, you can compare their ID to the primary or any other player&rsquo;s PRI
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">PlayerControllerWrapper</span> <span class="n">pc</span> <span class="o">=</span> <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">GetPlayerController</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">pc</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">PriWrapper</span> <span class="n">pri</span> <span class="o">=</span> <span class="n">pc</span><span class="p">.</span><span class="n">GetPRI</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">pri</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">UniqueIDWrapper</span> <span class="n">primaryID</span> <span class="o">=</span> <span class="n">pri</span><span class="p">.</span><span class="n">GetUniqueIdWrapper</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">id</span> <span class="o">==</span> <span class="n">primaryID</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">// This is Player 1&#39;s new MMR!
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
-</span></span></code></pre></div>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">id</span> <span class="o">==</span> <span class="n">primaryID</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// This is Player 1&#39;s new MMR!
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+
   </article>
 
 

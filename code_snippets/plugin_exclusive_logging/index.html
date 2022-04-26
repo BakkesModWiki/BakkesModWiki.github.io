@@ -8,8 +8,8 @@
 <meta name="generator" content="Hugo 0.97.3" />
 
 
-  <meta name="description" content="Want to see the console logging from just your plugin? Open a new PowerShell window and use this command (It may require git for windows https://gitforwindows.org/)
-Get-Content (-join($env:APPDATA, &#34;\bakkesmod\bakkesmod\bakkesmod.log&#34;)) -wait -tail 1 | select-string -pattern &#34;PLUGIN_NAME&#34; " />
+  <meta name="description" content="Want to see the console logging from just your plugin? Open a new PowerShell window and use this command
+1  Get-Content (-join($env:APPDATA, &#34;\bakkesmod\bakkesmod\bakkesmod.log&#34;)) -wait -tail 1 | select-string -pattern &#34;PLUGIN_NAME&#34;   " />
 
     <title>Plugin Exclusive Logging | BakkesMod Programming Wiki</title>
 
@@ -35,22 +35,22 @@ Get-Content (-join($env:APPDATA, &#34;\bakkesmod\bakkesmod\bakkesmod.log&#34;)) 
     content="Plugin Exclusive Logging"
   />
   <meta property="og:site_name" content="BakkesMod Programming Wiki" />
-  <meta property="og:description" content="Want to see the console logging from just your plugin? Open a new PowerShell window and use this command (It may require git for windows https://gitforwindows.org/)
-Get-Content (-join($env:APPDATA, &#34;\bakkesmod\bakkesmod\bakkesmod.log&#34;)) -wait -tail 1 | select-string -pattern &#34;PLUGIN_NAME&#34; " />
+  <meta property="og:description" content="Want to see the console logging from just your plugin? Open a new PowerShell window and use this command
+1  Get-Content (-join($env:APPDATA, &#34;\bakkesmod\bakkesmod\bakkesmod.log&#34;)) -wait -tail 1 | select-string -pattern &#34;PLUGIN_NAME&#34;   " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bakkesmodwiki.github.io/code_snippets/plugin_exclusive_logging/" />
 
 <meta property="article:section" content="Code Snippets" />
     <meta
       property="article:modified_time"
-      content="2021-08-25T01:06:59-04:00"
+      content="2022-04-25T23:40:20-07:00"
     />
 
 
   <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Plugin Exclusive Logging" />
-  <meta name="twitter:description" content="Want to see the console logging from just your plugin? Open a new PowerShell window and use this command (It may require git for windows https://gitforwindows.org/)
-Get-Content (-join($env:APPDATA, &#34;\bakkesmod\bakkesmod\bakkesmod.log&#34;)) -wait -tail 1 | select-string -pattern &#34;PLUGIN_NAME&#34; " />
+  <meta name="twitter:description" content="Want to see the console logging from just your plugin? Open a new PowerShell window and use this command
+1  Get-Content (-join($env:APPDATA, &#34;\bakkesmod\bakkesmod\bakkesmod.log&#34;)) -wait -tail 1 | select-string -pattern &#34;PLUGIN_NAME&#34;   " />
 
 
   <script type="application/ld+json">
@@ -61,8 +61,8 @@ Get-Content (-join($env:APPDATA, &#34;\bakkesmod\bakkesmod\bakkesmod.log&#34;)) 
       "name": "Plugin Exclusive Logging",
       "url" : "https://bakkesmodwiki.github.io/code_snippets/plugin_exclusive_logging/",
       "headline": "Plugin Exclusive Logging",
-      "description": "Want to see the console logging from just your plugin? Open a new PowerShell window and use this command (It may require git for windows https:\/\/gitforwindows.org\/)\nGet-Content (-join($env:APPDATA, \u0022\\bakkesmod\\bakkesmod\\bakkesmod.log\u0022)) -wait -tail 1 | select-string -pattern \u0022PLUGIN_NAME\u0022 ",
-      "wordCount" : "36",
+      "description": "Want to see the console logging from just your plugin? Open a new PowerShell window and use this command\n1  Get-Content (-join($env:APPDATA, \u0022\\bakkesmod\\bakkesmod\\bakkesmod.log\u0022)) -wait -tail 1 | select-string -pattern \u0022PLUGIN_NAME\u0022   ",
+      "wordCount" : "30",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -73,7 +73,7 @@ Get-Content (-join($env:APPDATA, &#34;\bakkesmod\bakkesmod\bakkesmod.log&#34;)) 
       "copyrightYear" : "0001",
       "dateCreated": "0001-01-01T00:00:00.00Z",
       "datePublished": "0001-01-01T00:00:00.00Z",
-      "dateModified": "2021-08-25T01:06:59.00Z",
+      "dateModified": "2022-04-25T23:40:20.00Z",
       "publisher":{
           "@type":"Organization",
           "name": "BakkesMod Programming Wiki",
@@ -15321,14 +15321,16 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
     class="gdoc-markdown gdoc-markdown__align--left"
   >
     <h1>Plugin Exclusive Logging</h1>
-    <p>Want to see the console logging from just your plugin? Open a new PowerShell window and use this command
-(It may require git for windows <a
-  class="gdoc-markdown__link"
-  href="https://gitforwindows.org/"
-  
->https://gitforwindows.org/</a>)</p>
-<pre tabindex="0"><code>Get-Content (-join($env:APPDATA, &#34;\bakkesmod\bakkesmod\bakkesmod.log&#34;)) -wait -tail 1 | select-string -pattern &#34;PLUGIN_NAME&#34;
-</code></pre>
+    <p>Want to see the console logging from just your plugin? Open a new PowerShell window and use this command</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Shell" data-lang="Shell"><span class="line"><span class="cl">Get-Content <span class="o">(</span>-join<span class="o">(</span><span class="nv">$env</span>:APPDATA, <span class="s2">&#34;\bakkesmod\bakkesmod\bakkesmod.log&#34;</span><span class="o">))</span> -wait -tail <span class="m">1</span> <span class="p">|</span> <span class="k">select</span>-string -pattern <span class="s2">&#34;PLUGIN_NAME&#34;</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+
   </article>
 
 

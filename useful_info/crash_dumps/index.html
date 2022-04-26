@@ -45,7 +45,7 @@ Unfortunately sometimes there is no .dmp file. That often means you crashed in a
 <meta property="article:section" content="Useful Info" />
     <meta
       property="article:modified_time"
-      content="2022-04-09T15:10:52-07:00"
+      content="2022-04-25T23:40:20-07:00"
     />
 
 
@@ -65,7 +65,7 @@ Unfortunately sometimes there is no .dmp file. That often means you crashed in a
       "url" : "https://bakkesmodwiki.github.io/useful_info/crash_dumps/",
       "headline": "Crash Dumps",
       "description": "Modding RL is finnicky. You’re going to crash the game at some point. This will tell you how to learn from a crash and solve your issue.\nCrashes are often logged in .dmp files. They are found at My Documents\/My Games\/rocketleague\/TAGame\/Logs\nUnfortunately sometimes there is no .dmp file. That often means you crashed in a non-game thread, like rendering or websockets. For those you might just need to do some logging to find out where you crashed",
-      "wordCount" : "456",
+      "wordCount" : "468",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -76,7 +76,7 @@ Unfortunately sometimes there is no .dmp file. That often means you crashed in a
       "copyrightYear" : "0001",
       "dateCreated": "0001-01-01T00:00:00.00Z",
       "datePublished": "0001-01-01T00:00:00.00Z",
-      "dateModified": "2022-04-09T15:10:52.00Z",
+      "dateModified": "2022-04-25T23:40:20.00Z",
       "publisher":{
           "@type":"Organization",
           "name": "BakkesMod Programming Wiki",
@@ -15366,8 +15366,26 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
   alt="https://cdn.discordapp.com/attachments/869661160834744390/869671323817881600/unknown.png"
   
 /></p>
-<p>This crash happened because of a null ball! Remember that whenever you use any type that ends with <code>Wrapper</code> like this <code>BallWrapper</code> you must nullcheck it before using it. These 4 lines of code will save your plugin from crashing</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">BallWrapper</span><span class="o">*</span> <span class="n">ball</span> <span class="o">=</span> <span class="p">(</span><span class="n">BallWrapper</span><span class="o">*</span><span class="p">)</span> <span class="k">nullptr</span><span class="p">;</span>
+<p>This crash happened because of a null ball! <a
+  class="gdoc-markdown__link"
+  href="/plugin_tutorial/best_practices"
+  
+>Remember the best practices!</a> Whenever you use any type that ends with <code>Wrapper</code> like this <code>BallWrapper</code> you must nullcheck it before using it. These 4 lines of code will save your plugin from crashing</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">BallWrapper</span><span class="o">*</span> <span class="n">ball</span> <span class="o">=</span> <span class="p">(</span><span class="n">BallWrapper</span><span class="o">*</span><span class="p">)</span> <span class="k">nullptr</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">ball</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;null ball&#34;</span><span class="p">);</span>
@@ -15376,8 +15394,10 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// guaranteed to only happen on valid balls and not crash
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">ball</span><span class="o">-&gt;</span><span class="n">SetLocation</span><span class="p">(</span><span class="n">Vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">));</span>
-</span></span></code></pre></div><p>Once you&rsquo;ve found the issue, hit the red square up top</p>
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">ball</span><span class="o">-&gt;</span><span class="n">SetLocation</span><span class="p">(</span><span class="n">Vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">));</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+<p>Once you&rsquo;ve found the issue, hit the red square up top</p>
 <p><img
   src="https://cdn.discordapp.com/attachments/869661160834744390/869671714735411240/unknown.png"
   alt="https://cdn.discordapp.com/attachments/869661160834744390/869671714735411240/unknown.png"

@@ -8,7 +8,7 @@
 <meta name="generator" content="Hugo 0.97.3" />
 
 
-  <meta name="description" content="HttpWrapper     Sending a simple http request with a string body     CurlRequest req; req.url = &#34;https://httpbin.org/anything&#34;; req.body = &#34;testing with body&#34;; LOG(&#34;sending body request&#34;); HttpWrapper::SendCurlRequest(req, [this](int code, std::string result) { LOG(&#34;Body result{}&#34;, result); }); Perform an HTTP/S JSON request     CurlRequest req; req.url = &#34;https://httpbin.org/anything&#34;; req.body = R&#34;T({ &#34;userId&#34;: 1, &#34;id&#34;: 1, &#34;title&#34;: &#34;delectus aut autem&#34;, &#34;completed&#34;: false })T&#34;; HttpWrapper::SendCurlJsonRequest(req, [this](int code, std::string result) { LOG(&#34;Json result{}&#34;, result); }); Sending a file over HTTP/S     { CurlRequest req; req." />
+  <meta name="description" content="HttpWrapper     Sending a simple http request with a string body     1 2 3 4 5 6 7 8 9  CurlRequest req; req.url = &#34;https://httpbin.org/anything&#34;; req.body = &#34;testing with body&#34;; LOG(&#34;sending body request&#34;); HttpWrapper::SendCurlRequest(req, [this](int code, std::string result) { LOG(&#34;Body result{}&#34;, result); });   Perform an HTTP/S JSON request     1 2 3 4 5 6 7 8 9 10 11 12 13  CurlRequest req; req." />
 
     <title>Using HttpWrapper | BakkesMod Programming Wiki</title>
 
@@ -34,20 +34,20 @@
     content="Using HttpWrapper"
   />
   <meta property="og:site_name" content="BakkesMod Programming Wiki" />
-  <meta property="og:description" content="HttpWrapper     Sending a simple http request with a string body     CurlRequest req; req.url = &#34;https://httpbin.org/anything&#34;; req.body = &#34;testing with body&#34;; LOG(&#34;sending body request&#34;); HttpWrapper::SendCurlRequest(req, [this](int code, std::string result) { LOG(&#34;Body result{}&#34;, result); }); Perform an HTTP/S JSON request     CurlRequest req; req.url = &#34;https://httpbin.org/anything&#34;; req.body = R&#34;T({ &#34;userId&#34;: 1, &#34;id&#34;: 1, &#34;title&#34;: &#34;delectus aut autem&#34;, &#34;completed&#34;: false })T&#34;; HttpWrapper::SendCurlJsonRequest(req, [this](int code, std::string result) { LOG(&#34;Json result{}&#34;, result); }); Sending a file over HTTP/S     { CurlRequest req; req." />
+  <meta property="og:description" content="HttpWrapper     Sending a simple http request with a string body     1 2 3 4 5 6 7 8 9  CurlRequest req; req.url = &#34;https://httpbin.org/anything&#34;; req.body = &#34;testing with body&#34;; LOG(&#34;sending body request&#34;); HttpWrapper::SendCurlRequest(req, [this](int code, std::string result) { LOG(&#34;Body result{}&#34;, result); });   Perform an HTTP/S JSON request     1 2 3 4 5 6 7 8 9 10 11 12 13  CurlRequest req; req." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bakkesmodwiki.github.io/code_snippets/using_http_wrapper/" />
 
 <meta property="article:section" content="Code Snippets" />
     <meta
       property="article:modified_time"
-      content="2021-08-25T01:06:59-04:00"
+      content="2022-04-25T23:40:20-07:00"
     />
 
 
   <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Using HttpWrapper" />
-  <meta name="twitter:description" content="HttpWrapper     Sending a simple http request with a string body     CurlRequest req; req.url = &#34;https://httpbin.org/anything&#34;; req.body = &#34;testing with body&#34;; LOG(&#34;sending body request&#34;); HttpWrapper::SendCurlRequest(req, [this](int code, std::string result) { LOG(&#34;Body result{}&#34;, result); }); Perform an HTTP/S JSON request     CurlRequest req; req.url = &#34;https://httpbin.org/anything&#34;; req.body = R&#34;T({ &#34;userId&#34;: 1, &#34;id&#34;: 1, &#34;title&#34;: &#34;delectus aut autem&#34;, &#34;completed&#34;: false })T&#34;; HttpWrapper::SendCurlJsonRequest(req, [this](int code, std::string result) { LOG(&#34;Json result{}&#34;, result); }); Sending a file over HTTP/S     { CurlRequest req; req." />
+  <meta name="twitter:description" content="HttpWrapper     Sending a simple http request with a string body     1 2 3 4 5 6 7 8 9  CurlRequest req; req.url = &#34;https://httpbin.org/anything&#34;; req.body = &#34;testing with body&#34;; LOG(&#34;sending body request&#34;); HttpWrapper::SendCurlRequest(req, [this](int code, std::string result) { LOG(&#34;Body result{}&#34;, result); });   Perform an HTTP/S JSON request     1 2 3 4 5 6 7 8 9 10 11 12 13  CurlRequest req; req." />
 
 
   <script type="application/ld+json">
@@ -58,8 +58,8 @@
       "name": "Using HttpWrapper",
       "url" : "https://bakkesmodwiki.github.io/code_snippets/using_http_wrapper/",
       "headline": "Using HttpWrapper",
-      "description": "HttpWrapper     Sending a simple http request with a string body     CurlRequest req; req.url = \u0022https:\/\/httpbin.org\/anything\u0022; req.body = \u0022testing with body\u0022; LOG(\u0022sending body request\u0022); HttpWrapper::SendCurlRequest(req, [this](int code, std::string result) { LOG(\u0022Body result{}\u0022, result); }); Perform an HTTP\/S JSON request     CurlRequest req; req.url = \u0022https:\/\/httpbin.org\/anything\u0022; req.body = R\u0022T({ \u0022userId\u0022: 1, \u0022id\u0022: 1, \u0022title\u0022: \u0022delectus aut autem\u0022, \u0022completed\u0022: false })T\u0022; HttpWrapper::SendCurlJsonRequest(req, [this](int code, std::string result) { LOG(\u0022Json result{}\u0022, result); }); Sending a file over HTTP\/S     { CurlRequest req; req.",
-      "wordCount" : "191",
+      "description": "HttpWrapper     Sending a simple http request with a string body     1 2 3 4 5 6 7 8 9  CurlRequest req; req.url = \u0022https:\/\/httpbin.org\/anything\u0022; req.body = \u0022testing with body\u0022; LOG(\u0022sending body request\u0022); HttpWrapper::SendCurlRequest(req, [this](int code, std::string result) { LOG(\u0022Body result{}\u0022, result); });   Perform an HTTP\/S JSON request     1 2 3 4 5 6 7 8 9 10 11 12 13  CurlRequest req; req.",
+      "wordCount" : "245",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -70,7 +70,7 @@
       "copyrightYear" : "0001",
       "dateCreated": "0001-01-01T00:00:00.00Z",
       "datePublished": "0001-01-01T00:00:00.00Z",
-      "dateModified": "2021-08-25T01:06:59.00Z",
+      "dateModified": "2022-04-25T23:40:20.00Z",
       "publisher":{
           "@type":"Organization",
           "name": "BakkesMod Programming Wiki",
@@ -15338,7 +15338,20 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
         </a>
     </h2>
 </div>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">CurlRequest</span> <span class="n">req</span><span class="p">;</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">CurlRequest</span> <span class="n">req</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="n">req</span><span class="p">.</span><span class="n">url</span> <span class="o">=</span> <span class="s">&#34;https://httpbin.org/anything&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="n">req</span><span class="p">.</span><span class="n">body</span> <span class="o">=</span> <span class="s">&#34;testing with body&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
@@ -15346,8 +15359,10 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 </span></span><span class="line"><span class="cl"><span class="n">HttpWrapper</span><span class="o">::</span><span class="n">SendCurlRequest</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="kt">int</span> <span class="n">code</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">result</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;Body result{}&#34;</span><span class="p">,</span> <span class="n">result</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">});</span>
-</span></span></code></pre></div><div class="gdoc-page__anchorwrap">
+</span></span><span class="line"><span class="cl"><span class="p">});</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+<div class="gdoc-page__anchorwrap">
     <h2 id="perform-an-https-json-request">
         Perform an HTTP/S JSON request
         <a data-clipboard-text="https://bakkesmodwiki.github.io/code_snippets/using_http_wrapper/#perform-an-https-json-request" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: Perform an HTTP/S JSON request" aria-label="Anchor to: Perform an HTTP/S JSON request" href="#perform-an-https-json-request">
@@ -15355,7 +15370,24 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
         </a>
     </h2>
 </div>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">CurlRequest</span> <span class="n">req</span><span class="p">;</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">CurlRequest</span> <span class="n">req</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="n">req</span><span class="p">.</span><span class="n">url</span> <span class="o">=</span> <span class="s">&#34;https://httpbin.org/anything&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="n">req</span><span class="p">.</span><span class="n">body</span> <span class="o">=</span> <span class="n">R</span><span class="s">&#34;T({</span>
 </span></span><span class="line"><span class="cl">    <span class="s">&#34;userId&#34;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
@@ -15367,8 +15399,10 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 </span></span><span class="line"><span class="cl"><span class="n">HttpWrapper</span><span class="o">::</span><span class="n">SendCurlJsonRequest</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="kt">int</span> <span class="n">code</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">result</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;Json result{}&#34;</span><span class="p">,</span> <span class="n">result</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">});</span>
-</span></span></code></pre></div><div class="gdoc-page__anchorwrap">
+</span></span><span class="line"><span class="cl"><span class="p">});</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+<div class="gdoc-page__anchorwrap">
     <h2 id="sending-a-file-over-https">
         Sending a file over HTTP/S
         <a data-clipboard-text="https://bakkesmodwiki.github.io/code_snippets/using_http_wrapper/#sending-a-file-over-https" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: Sending a file over HTTP/S" aria-label="Anchor to: Sending a file over HTTP/S" href="#sending-a-file-over-https">
@@ -15376,7 +15410,21 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
         </a>
     </h2>
 </div>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="p">{</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl"><span class="n">CurlRequest</span> <span class="n">req</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="n">req</span><span class="p">.</span><span class="n">url</span> <span class="o">=</span> <span class="s">&#34;https://httpbin.org/anything&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="n">req</span><span class="p">.</span><span class="n">body</span> <span class="o">=</span> <span class="s">&#34;testing body with file output&#34;</span><span class="p">;</span>
@@ -15385,8 +15433,10 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 </span></span><span class="line"><span class="cl"><span class="n">HttpWrapper</span><span class="o">::</span><span class="n">SendCurlRequest</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="sa">L</span><span class="s">&#34;file_output_test.txt&#34;</span><span class="p">,</span> <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="kt">int</span> <span class="n">code</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">wstring</span> <span class="n">result</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;sending file output body request: returned&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">});</span>
-</span></span></code></pre></div><div class="gdoc-page__anchorwrap">
+</span></span><span class="line"><span class="cl"><span class="p">});</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+<div class="gdoc-page__anchorwrap">
     <h2 id="downloading-a-file-with-download-progress-callbacks-and-reading-the-raw-downloaded-data">
         Downloading a file with download progress callbacks and reading the raw downloaded data
         <a data-clipboard-text="https://bakkesmodwiki.github.io/code_snippets/using_http_wrapper/#downloading-a-file-with-download-progress-callbacks-and-reading-the-raw-downloaded-data" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: Downloading a file with download progress callbacks and reading the raw downloaded data" aria-label="Anchor to: Downloading a file with download progress callbacks and reading the raw downloaded data" href="#downloading-a-file-with-download-progress-callbacks-and-reading-the-raw-downloaded-data">
@@ -15394,7 +15444,25 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
         </a>
     </h2>
 </div>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">CurlRequest</span> <span class="n">req</span><span class="p">;</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">CurlRequest</span> <span class="n">req</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="n">req</span><span class="p">.</span><span class="n">url</span> <span class="o">=</span> <span class="s">&#34;url&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="n">req</span><span class="p">.</span><span class="n">progress_function</span> <span class="o">=</span> <span class="p">[](</span><span class="kt">double</span> <span class="n">file_size</span><span class="p">,</span> <span class="kt">double</span> <span class="n">downloaded</span><span class="p">,</span> <span class="p">...)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
@@ -15407,8 +15475,10 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 </span></span><span class="line"><span class="cl">    <span class="n">std</span><span class="o">::</span><span class="n">ofstream</span> <span class="n">out_file</span> <span class="p">{</span><span class="s">&#34;test_image_raw.jpeg&#34;</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">ios_base</span><span class="o">::</span><span class="n">binary</span><span class="p">};</span>
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">out_file</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="n">out_file</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">size</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">});</span>
-</span></span></code></pre></div><div class="gdoc-page__anchorwrap">
+</span></span><span class="line"><span class="cl"><span class="p">});</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+<div class="gdoc-page__anchorwrap">
     <h2 id="downloading-a-file-to-the-filesystem">
         Downloading a file to the filesystem
         <a data-clipboard-text="https://bakkesmodwiki.github.io/code_snippets/using_http_wrapper/#downloading-a-file-to-the-filesystem" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: Downloading a file to the filesystem" aria-label="Anchor to: Downloading a file to the filesystem" href="#downloading-a-file-to-the-filesystem">
@@ -15416,15 +15486,29 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
         </a>
     </h2>
 </div>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">CurlRequest</span> <span class="n">req</span><span class="p">;</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">CurlRequest</span> <span class="n">req</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="n">req</span><span class="p">.</span><span class="n">url</span> <span class="o">=</span> <span class="s">&#34;url&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">LOG</span><span class="p">(</span><span class="s">&#34;sending raw output image download request&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="n">HttpWrapper</span><span class="o">::</span><span class="n">SendCurlRequest</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="sa">L</span><span class="s">&#34;test_image.jpeg&#34;</span><span class="p">,</span> <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="kt">int</span> <span class="n">code</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">wstring</span> <span class="n">out_path</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;file image download code: {}&#34;</span><span class="p">,</span> <span class="n">code</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">});</span>
-</span></span></code></pre></div>
+</span></span><span class="line"><span class="cl"><span class="p">});</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+
   </article>
 
 

@@ -14,13 +14,9 @@
       <description>If you want to add a new snippet to the page, simply make a code snippet in this folder like this
 Give your snippet a unique name and send the pull request!
 Make sure to fill out the fields in the top, but do not include a weight
-Everything is written in Markdown
-Make code blocks using Markdown
-```cpp
-// code here
-```
-becomes
-// code here </description>
+Everything is written in Markdown, but you can add html inside of {{}}
+Make code blocks using highlights
+{{&amp;lt; highlight cpp &amp;#34;linenos=table&amp;#34; &amp;gt;}} // Wow look at this code int a = 1; int b = 1; if (a + b == 11) { LOG(&amp;#34;Success&amp;#34;); } else { LOG(&amp;#34;Failure&amp;#34;); } {{&amp;lt; /highlight &amp;gt;}} becomes 1 2 3 4 5 6 7 8  // Wow look at this code int a = 1; int b = 1; if (a + b == 11) { LOG(&amp;#34;Success&amp;#34;); } else { LOG(&amp;#34;Failure&amp;#34;); }</description>
     </item>
     
     <item>
@@ -74,8 +70,8 @@ On BM startup, it&amp;rsquo;ll execute plugins.cfg first to load all plugins, ca
       
       <guid>https://bakkesmodwiki.github.io/code_snippets/persistent_storage/</guid>
       <description>Use these files in your plugin files to store persistent data with cvars but without risking the cvars being cleared
-Usage
-// preferably in onload but at least before you use it (genious advice) persistent_storage_ = std::make_shared&amp;lt;PersistentStorage&amp;gt;(this, &amp;#34;Hats&amp;#34;, true, true); //register the cvar like &amp;#34;normal&amp;#34; auto cvar = persistent_storage_-&amp;gt;RegisterPersistentCvar(&amp;#34;hats_preset&amp;#34;, &amp;#34;&amp;#34;, &amp;#34;The selected preset&amp;#34;, true); Download these files to use
+Usage 1 2 3 4 5  // preferably in onload but at least before you use it (genious advice) persistent_storage_ = std::make_shared&amp;lt;PersistentStorage&amp;gt;(this, &amp;#34;Hats&amp;#34;, true, true); //register the cvar like &amp;#34;normal&amp;#34; auto cvar = persistent_storage_-&amp;gt;RegisterPersistentCvar(&amp;#34;hats_preset&amp;#34;, &amp;#34;&amp;#34;, &amp;#34;The selected preset&amp;#34;, true);  
+Download these files to use
 PersistentStorage.h
 PersistentStorage.cpp</description>
     </item>
@@ -86,8 +82,8 @@ PersistentStorage.cpp</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/code_snippets/plugin_exclusive_logging/</guid>
-      <description>Want to see the console logging from just your plugin? Open a new PowerShell window and use this command (It may require git for windows https://gitforwindows.org/)
-Get-Content (-join($env:APPDATA, &amp;#34;\bakkesmod\bakkesmod\bakkesmod.log&amp;#34;)) -wait -tail 1 | select-string -pattern &amp;#34;PLUGIN_NAME&amp;#34; </description>
+      <description>Want to see the console logging from just your plugin? Open a new PowerShell window and use this command
+1  Get-Content (-join($env:APPDATA, &amp;#34;\bakkesmod\bakkesmod\bakkesmod.log&amp;#34;)) -wait -tail 1 | select-string -pattern &amp;#34;PLUGIN_NAME&amp;#34;   </description>
     </item>
     
     <item>
@@ -96,8 +92,7 @@ Get-Content (-join($env:APPDATA, &amp;#34;\bakkesmod\bakkesmod\bakkesmod.log&amp
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/code_snippets/plugin_types/</guid>
-      <description>All Plugin Types
-PLUGINTYPE_FREEPLAY = 0x01, // Does nothing  PLUGINTYPE_CUSTOM_TRAINING = 0x02, // see above  PLUGINTYPE_SPECTATOR = 0x04, // see above  PLUGINTYPE_BOTAI = 0x08, // see above  PLUGINTYPE_REPLAY = 0x10, // see above  PLUGINTYPE_THREADED = 0x20, // OnLoad is called in it&amp;#39;s own thread  PLUGINTYPE_THREADEDUNLOAD = 0x40 // Unload is called in it&amp;#39;s own thread </description>
+      <description>All Plugin Types 1 2 3 4 5 6 7  PLUGINTYPE_FREEPLAY = 0x01, // Does nothing PLUGINTYPE_CUSTOM_TRAINING = 0x02, // see above PLUGINTYPE_SPECTATOR = 0x04, // see above PLUGINTYPE_BOTAI = 0x08, // see above PLUGINTYPE_REPLAY = 0x10, // see above PLUGINTYPE_THREADED = 0x20, // OnLoad is called in it&amp;#39;s own thread PLUGINTYPE_THREADEDUNLOAD = 0x40 // Unload is called in it&amp;#39;s own thread</description>
     </item>
     
     <item>
@@ -120,7 +115,7 @@ Make a toast pop up with GameWrapper.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/code_snippets/using_http_wrapper/</guid>
-      <description>HttpWrapper     Sending a simple http request with a string body     CurlRequest req; req.url = &amp;#34;https://httpbin.org/anything&amp;#34;; req.body = &amp;#34;testing with body&amp;#34;; LOG(&amp;#34;sending body request&amp;#34;); HttpWrapper::SendCurlRequest(req, [this](int code, std::string result) { LOG(&amp;#34;Body result{}&amp;#34;, result); }); Perform an HTTP/S JSON request     CurlRequest req; req.url = &amp;#34;https://httpbin.org/anything&amp;#34;; req.body = R&amp;#34;T({ &amp;#34;userId&amp;#34;: 1, &amp;#34;id&amp;#34;: 1, &amp;#34;title&amp;#34;: &amp;#34;delectus aut autem&amp;#34;, &amp;#34;completed&amp;#34;: false })T&amp;#34;; HttpWrapper::SendCurlJsonRequest(req, [this](int code, std::string result) { LOG(&amp;#34;Json result{}&amp;#34;, result); }); Sending a file over HTTP/S     { CurlRequest req; req.</description>
+      <description>HttpWrapper     Sending a simple http request with a string body     1 2 3 4 5 6 7 8 9  CurlRequest req; req.url = &amp;#34;https://httpbin.org/anything&amp;#34;; req.body = &amp;#34;testing with body&amp;#34;; LOG(&amp;#34;sending body request&amp;#34;); HttpWrapper::SendCurlRequest(req, [this](int code, std::string result) { LOG(&amp;#34;Body result{}&amp;#34;, result); });   Perform an HTTP/S JSON request     1 2 3 4 5 6 7 8 9 10 11 12 13  CurlRequest req; req.</description>
     </item>
     
   </channel>

@@ -9,8 +9,8 @@
 
 
   <meta name="description" content="Use these files in your plugin files to store persistent data with cvars but without risking the cvars being cleared
-Usage
-// preferably in onload but at least before you use it (genious advice) persistent_storage_ = std::make_shared&lt;PersistentStorage&gt;(this, &#34;Hats&#34;, true, true); //register the cvar like &#34;normal&#34; auto cvar = persistent_storage_-&gt;RegisterPersistentCvar(&#34;hats_preset&#34;, &#34;&#34;, &#34;The selected preset&#34;, true); Download these files to use
+Usage 1 2 3 4 5  // preferably in onload but at least before you use it (genious advice) persistent_storage_ = std::make_shared&lt;PersistentStorage&gt;(this, &#34;Hats&#34;, true, true); //register the cvar like &#34;normal&#34; auto cvar = persistent_storage_-&gt;RegisterPersistentCvar(&#34;hats_preset&#34;, &#34;&#34;, &#34;The selected preset&#34;, true);  
+Download these files to use
 PersistentStorage.h
 PersistentStorage.cpp" />
 
@@ -39,8 +39,8 @@ PersistentStorage.cpp" />
   />
   <meta property="og:site_name" content="BakkesMod Programming Wiki" />
   <meta property="og:description" content="Use these files in your plugin files to store persistent data with cvars but without risking the cvars being cleared
-Usage
-// preferably in onload but at least before you use it (genious advice) persistent_storage_ = std::make_shared&lt;PersistentStorage&gt;(this, &#34;Hats&#34;, true, true); //register the cvar like &#34;normal&#34; auto cvar = persistent_storage_-&gt;RegisterPersistentCvar(&#34;hats_preset&#34;, &#34;&#34;, &#34;The selected preset&#34;, true); Download these files to use
+Usage 1 2 3 4 5  // preferably in onload but at least before you use it (genious advice) persistent_storage_ = std::make_shared&lt;PersistentStorage&gt;(this, &#34;Hats&#34;, true, true); //register the cvar like &#34;normal&#34; auto cvar = persistent_storage_-&gt;RegisterPersistentCvar(&#34;hats_preset&#34;, &#34;&#34;, &#34;The selected preset&#34;, true);  
+Download these files to use
 PersistentStorage.h
 PersistentStorage.cpp" />
 <meta property="og:type" content="article" />
@@ -49,15 +49,15 @@ PersistentStorage.cpp" />
 <meta property="article:section" content="Code Snippets" />
     <meta
       property="article:modified_time"
-      content="2021-12-30T21:38:59-08:00"
+      content="2022-04-25T23:40:20-07:00"
     />
 
 
   <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Persistent Storage" />
   <meta name="twitter:description" content="Use these files in your plugin files to store persistent data with cvars but without risking the cvars being cleared
-Usage
-// preferably in onload but at least before you use it (genious advice) persistent_storage_ = std::make_shared&lt;PersistentStorage&gt;(this, &#34;Hats&#34;, true, true); //register the cvar like &#34;normal&#34; auto cvar = persistent_storage_-&gt;RegisterPersistentCvar(&#34;hats_preset&#34;, &#34;&#34;, &#34;The selected preset&#34;, true); Download these files to use
+Usage 1 2 3 4 5  // preferably in onload but at least before you use it (genious advice) persistent_storage_ = std::make_shared&lt;PersistentStorage&gt;(this, &#34;Hats&#34;, true, true); //register the cvar like &#34;normal&#34; auto cvar = persistent_storage_-&gt;RegisterPersistentCvar(&#34;hats_preset&#34;, &#34;&#34;, &#34;The selected preset&#34;, true);  
+Download these files to use
 PersistentStorage.h
 PersistentStorage.cpp" />
 
@@ -70,8 +70,8 @@ PersistentStorage.cpp" />
       "name": "Persistent Storage",
       "url" : "https://bakkesmodwiki.github.io/code_snippets/persistent_storage/",
       "headline": "Persistent Storage",
-      "description": "Use these files in your plugin files to store persistent data with cvars but without risking the cvars being cleared\nUsage\n\/\/ preferably in onload but at least before you use it (genious advice) persistent_storage_ = std::make_shared\u003cPersistentStorage\u003e(this, \u0022Hats\u0022, true, true); \/\/register the cvar like \u0022normal\u0022 auto cvar = persistent_storage_-\u003eRegisterPersistentCvar(\u0022hats_preset\u0022, \u0022\u0022, \u0022The selected preset\u0022, true); Download these files to use\nPersistentStorage.h\nPersistentStorage.cpp",
-      "wordCount" : "61",
+      "description": "Use these files in your plugin files to store persistent data with cvars but without risking the cvars being cleared\nUsage 1 2 3 4 5  \/\/ preferably in onload but at least before you use it (genious advice) persistent_storage_ = std::make_shared\u003cPersistentStorage\u003e(this, \u0022Hats\u0022, true, true); \/\/register the cvar like \u0022normal\u0022 auto cvar = persistent_storage_-\u003eRegisterPersistentCvar(\u0022hats_preset\u0022, \u0022\u0022, \u0022The selected preset\u0022, true);  \nDownload these files to use\nPersistentStorage.h\nPersistentStorage.cpp",
+      "wordCount" : "66",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -82,7 +82,7 @@ PersistentStorage.cpp" />
       "copyrightYear" : "0001",
       "dateCreated": "0001-01-01T00:00:00.00Z",
       "datePublished": "0001-01-01T00:00:00.00Z",
-      "dateModified": "2021-12-30T21:38:59.00Z",
+      "dateModified": "2022-04-25T23:40:20.00Z",
       "publisher":{
           "@type":"Organization",
           "name": "BakkesMod Programming Wiki",
@@ -15331,13 +15331,24 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
   >
     <h1>Persistent Storage</h1>
     <p>Use these files in your plugin files to store persistent data with cvars but without risking the cvars being cleared</p>
-<p>Usage</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// preferably in onload but at least before you use it (genious advice)
+<p>Usage
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// preferably in onload but at least before you use it (genious advice)
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">persistent_storage_</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">PersistentStorage</span><span class="o">&gt;</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="s">&#34;Hats&#34;</span><span class="p">,</span> <span class="nb">true</span><span class="p">,</span> <span class="nb">true</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">//register the cvar like &#34;normal&#34;
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">auto</span> <span class="n">cvar</span> <span class="o">=</span> <span class="n">persistent_storage_</span><span class="o">-&gt;</span><span class="n">RegisterPersistentCvar</span><span class="p">(</span><span class="s">&#34;hats_preset&#34;</span><span class="p">,</span> <span class="s">&#34;&#34;</span><span class="p">,</span> <span class="s">&#34;The selected preset&#34;</span><span class="p">,</span> <span class="nb">true</span><span class="p">);</span>
-</span></span></code></pre></div><p>Download these files to use<br>
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">auto</span> <span class="n">cvar</span> <span class="o">=</span> <span class="n">persistent_storage_</span><span class="o">-&gt;</span><span class="n">RegisterPersistentCvar</span><span class="p">(</span><span class="s">&#34;hats_preset&#34;</span><span class="p">,</span> <span class="s">&#34;&#34;</span><span class="p">,</span> <span class="s">&#34;The selected preset&#34;</span><span class="p">,</span> <span class="nb">true</span><span class="p">);</span></span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<p>Download these files to use<br>
 <a
   class="gdoc-markdown__link"
   href="/files/PersistentStorage.h"

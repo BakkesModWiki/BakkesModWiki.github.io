@@ -43,7 +43,7 @@
 <meta property="article:section" content="Code Snippets" />
     <meta
       property="article:modified_time"
-      content="2022-01-04T16:40:46-08:00"
+      content="2022-04-25T23:40:20-07:00"
     />
 
 
@@ -62,7 +62,7 @@
       "url" : "https://bakkesmodwiki.github.io/code_snippets/playlist_id/",
       "headline": "Known Playlist IDs",
       "description": "All (known) playlist IDs - 2020\n1: Duel 2: Doubles 3: Standard 4: Chaos 6: Private Match 7: Season 8: Exhibition 9: Training 10: Duel (Ranked) 11: Doubles (Ranked) 13: Standard (Ranked) 15: Snow Day 16: Rocket Labs 17: Hoops 18: Rumble 19: Workshop 20: Custom Training Editor 21: Custom Training 22: Tournament Match (Custom) 23: Dropshot 24: Local Match 26: External Match (Ranked) 27: Hoops (Ranked) 28: Rumble (Ranked) 29: Dropshot (Ranked) 30: Snow Day (Ranked) 31: Ghost Hunt 32: Beach Ball 33: Spike Rush 34: Tournament Match (Automatic) 35: Rocket Labs 37: Dropshot Rumble 38: Heatseeker 41: Boomer Ball 43: Heatseeker Doubles 44: Winter Breakaway 46: Gridiron 47: Super Cube 48: TacticalRumble Find the ID of the current playlist with this code.",
-      "wordCount" : "147",
+      "wordCount" : "152",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -73,7 +73,7 @@
       "copyrightYear" : "0001",
       "dateCreated": "0001-01-01T00:00:00.00Z",
       "datePublished": "0001-01-01T00:00:00.00Z",
-      "dateModified": "2022-01-04T16:40:46.00Z",
+      "dateModified": "2022-04-25T23:40:20.00Z",
       "publisher":{
           "@type":"Organization",
           "name": "BakkesMod Programming Wiki",
@@ -15365,13 +15365,24 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
   class="gdoc-markdown__link"
   href="/bakkesmod_api/Classes/Wrappers/GameEvent/GameSettingPlaylistWrapper/"
   
->Click here for GameSettingPlaylistWrapper reference</a></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">ServerWrapper</span> <span class="n">sw</span> <span class="o">=</span> <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">GetCurrentGameState</span><span class="p">();</span>
+>Click here for GameSettingPlaylistWrapper reference</a><br>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">ServerWrapper</span> <span class="n">sw</span> <span class="o">=</span> <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">GetCurrentGameState</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">sw</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="n">GameSettingPlaylistWrapper</span> <span class="n">playlist</span> <span class="o">=</span> <span class="n">sw</span><span class="p">.</span><span class="n">GetPlaylist</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">playlist</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">playlistID</span> <span class="o">=</span> <span class="n">playlist</span><span class="p">.</span><span class="n">GetPlaylistId</span><span class="p">();</span>
-</span></span></code></pre></div>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">playlistID</span> <span class="o">=</span> <span class="n">playlist</span><span class="p">.</span><span class="n">GetPlaylistId</span><span class="p">();</span></span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+
   </article>
 
 

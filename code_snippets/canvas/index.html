@@ -51,7 +51,7 @@ Then you need to register the function in your .cpp code." />
 <meta property="article:section" content="Code Snippets" />
     <meta
       property="article:modified_time"
-      content="2021-09-20T15:56:34-07:00"
+      content="2022-04-25T23:40:20-07:00"
     />
 
 
@@ -74,7 +74,7 @@ Then you need to register the function in your .cpp code." />
       "url" : "https://bakkesmodwiki.github.io/code_snippets/canvas/",
       "headline": "Canvas",
       "description": "The CanvasWrapper is a powerful tool that allows you to draw GUI elements on the screen\nFor example this is used by the Hitbox Plugin by mega and HalfwayDead\/Rocket Science\nYou can also do more basic things, like text in my stat counter plugin OBSCounter\nFirst in your .h, define a function that will take a canvas.\nvoid Render(CanvasWrapper canvas);\nThen you need to register the function in your .cpp code.",
-      "wordCount" : "287",
+      "wordCount" : "312",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -85,7 +85,7 @@ Then you need to register the function in your .cpp code." />
       "copyrightYear" : "0001",
       "dateCreated": "0001-01-01T00:00:00.00Z",
       "datePublished": "0001-01-01T00:00:00.00Z",
-      "dateModified": "2021-09-20T15:56:34.00Z",
+      "dateModified": "2022-04-25T23:40:20.00Z",
       "publisher":{
           "@type":"Organization",
           "name": "BakkesMod Programming Wiki",
@@ -15360,17 +15360,52 @@ You can also do more basic things, like text in my stat counter plugin <a
 >OBSCounter</a></p>
 <p>First in your <code>.h</code>, define a function that will take a canvas.<br>
 <code>void Render(CanvasWrapper canvas);</code><br>
-Then you need to register the function in your <code>.cpp</code> code. This can be done in OnLoad or any other place where you want to start the rendering loop</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">RegisterDrawable</span><span class="p">([</span><span class="k">this</span><span class="p">](</span><span class="n">CanvasWrapper</span> <span class="n">canvas</span><span class="p">)</span> <span class="p">{</span>
+Then you need to register the function in your <code>.cpp</code> code. This can be done in OnLoad or any other place where you want to start the rendering loop
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">RegisterDrawable</span><span class="p">([</span><span class="k">this</span><span class="p">](</span><span class="n">CanvasWrapper</span> <span class="n">canvas</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="n">Render</span><span class="p">(</span><span class="n">canvas</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">});</span>
-</span></span></code></pre></div><p>Now every single frame, the <code>Render</code> function is called with a valid canvas to draw on.</p>
+</span></span><span class="line"><span class="cl"><span class="p">});</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+Now every single frame, the <code>Render</code> function is called with a valid canvas to draw on.</p>
 <p>In Render you can do a ton of stuff with the canvas. Here&rsquo;s a quick definition of one. Look for plugin homepages on <a
   class="gdoc-markdown__link"
   href="https://bakkesplugins.com/"
   
->BakkesPlugins</a> for examples and source code</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// in a .cpp file 
+>BakkesPlugins</a> for examples and source code
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// in a .cpp file 
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="n">CoolPlugin</span><span class="o">::</span><span class="n">Render</span><span class="p">(</span><span class="n">CanvasWrapper</span> <span class="n">canvas</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">// defines colors in RGBA 0-255
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">LinearColor</span> <span class="n">colors</span><span class="p">;</span>
@@ -15391,8 +15426,10 @@ Then you need to register the function in your <code>.cpp</code> code. This can 
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// the two floats are text x and y scale
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// the false turns off the drop shadow
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">canvas</span><span class="p">.</span><span class="n">DrawString</span><span class="p">(</span><span class="s">&#34;Hi Cool Dude&#34;</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="nb">false</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p><img
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+<img
   src="/img/basiccanvas.png"
   alt="basic example"
   

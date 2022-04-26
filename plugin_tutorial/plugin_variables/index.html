@@ -43,7 +43,7 @@ We give the users control with the Console Variables, CVars." />
 <meta property="article:section" content="Plugin Tutorial" />
     <meta
       property="article:modified_time"
-      content="2022-01-01T14:04:02-08:00"
+      content="2022-04-25T23:40:20-07:00"
     />
 
 
@@ -62,7 +62,7 @@ We give the users control with the Console Variables, CVars." />
       "url" : "https://bakkesmodwiki.github.io/plugin_tutorial/plugin_variables/",
       "headline": "Plugin Variables",
       "description": "Next we will make your plugin alterable by a user. They might want to enable\/disable the plugin, change how it acts, and pretty much infinite options. I’ll be using a fairly simple plugin I’ve made as an example. I’ll only be focusing on the settings, not the actual code that makes it work. We’ll continue the CoolPlugin from Starting a Plugin\nWe give the users control with the Console Variables, CVars.",
-      "wordCount" : "658",
+      "wordCount" : "667",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -73,7 +73,7 @@ We give the users control with the Console Variables, CVars." />
       "copyrightYear" : "0001",
       "dateCreated": "0001-01-01T00:00:00.00Z",
       "datePublished": "0001-01-01T00:00:00.00Z",
-      "dateModified": "2022-01-01T14:04:02.00Z",
+      "dateModified": "2022-04-25T23:40:20.00Z",
       "publisher":{
           "@type":"Organization",
           "name": "BakkesMod Programming Wiki",
@@ -15341,26 +15341,53 @@ There are 2-9 arguments. The first 2 are required, but the others are not</p>
 <li>The maximum value of your CVar if it exists. If the previous is <code>false</code> this value can be anything and is ignored</li>
 <li>Whether the CVar&rsquo;s value is stored between sessions. Defaults to <code>true</code></li>
 </ol>
-<p>To create an enable/disable CVar for the plugin and a ball distance CVar</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">registerCvar</span><span class="p">(</span><span class="s">&#34;cool_enabled&#34;</span><span class="p">,</span> <span class="s">&#34;0&#34;</span><span class="p">,</span> <span class="s">&#34;Enable Cool&#34;</span><span class="p">,</span> <span class="nb">true</span><span class="p">,</span> <span class="nb">true</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">true</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">registerCvar</span><span class="p">(</span><span class="s">&#34;cool_distance&#34;</span><span class="p">,</span> <span class="s">&#34;200.0&#34;</span><span class="p">,</span> <span class="s">&#34;Distance to place the ball above&#34;</span><span class="p">);</span>
-</span></span></code></pre></div><p>A user can use these by typing into the f6 console <code>cool_enabled 1</code> to enable cool, or <code>cool_distance 300</code> to move the ball away</p>
+<p>To create an enable/disable CVar for the plugin and a ball distance CVar
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">registerCvar</span><span class="p">(</span><span class="s">&#34;cool_enabled&#34;</span><span class="p">,</span> <span class="s">&#34;0&#34;</span><span class="p">,</span> <span class="s">&#34;Enable Cool&#34;</span><span class="p">,</span> <span class="nb">true</span><span class="p">,</span> <span class="nb">true</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">true</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">registerCvar</span><span class="p">(</span><span class="s">&#34;cool_distance&#34;</span><span class="p">,</span> <span class="s">&#34;200.0&#34;</span><span class="p">,</span> <span class="s">&#34;Distance to place the ball above&#34;</span><span class="p">);</span></span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<p>A user can use these by typing into the f6 console <code>cool_enabled 1</code> to enable cool, or <code>cool_distance 300</code> to move the ball away</p>
 <p>Now we&rsquo;ve got the CVar. But what do we do with it? There&rsquo;s two good ways to use it. Either we can do something when the value is changed, or we can get the value from the CVar as we use the value</p>
 <p>First is <code>CVarWrapper.addOnValueChanged()</code>
 This creates a function that is called when the value is changed. Quite simple. The string simply is what the old value was. The CVarWrapper holds the new value.
 The <code>[](){}</code> is called a lambda, and is basically just a helper function. We put <code>[this]</code> so we can access our global variables inside the lambda. <code>(std::string oldValue, CVarWrapper cvar)</code> are the values passed to the lambda by the <code>addOnValueChanged</code> function. Every time the value changes and the lambda is called, the code inside <code>{}</code> happens.
 The most common use is to change the value of a global variable.
-If I had a variable <code>bool coolEnabled</code>, I could call <code>coolEnabled = cvar.getBoolValue();</code> inside the brackets to change its value</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">registerCvar</span><span class="p">(</span><span class="s">&#34;cool_enabled&#34;</span><span class="p">,</span> <span class="s">&#34;0&#34;</span><span class="p">,</span> <span class="s">&#34;Enable Cool&#34;</span><span class="p">,</span> <span class="nb">true</span><span class="p">,</span> <span class="nb">true</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">true</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+If I had a variable <code>bool coolEnabled</code>, I could call <code>coolEnabled = cvar.getBoolValue();</code> inside the brackets to change its value
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">registerCvar</span><span class="p">(</span><span class="s">&#34;cool_enabled&#34;</span><span class="p">,</span> <span class="s">&#34;0&#34;</span><span class="p">,</span> <span class="s">&#34;Enable Cool&#34;</span><span class="p">,</span> <span class="nb">true</span><span class="p">,</span> <span class="nb">true</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">true</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="n">addOnValueChanged</span><span class="p">([</span><span class="k">this</span><span class="p">](</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">oldValue</span><span class="p">,</span> <span class="n">CVarWrapper</span> <span class="n">cvar</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="n">coolEnabled</span> <span class="o">=</span> <span class="n">cvar</span><span class="p">.</span><span class="n">getBoolValue</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">        <span class="p">});</span>
-</span></span></code></pre></div><p>The second is by getting the CVar and then its value in another function. We can call
-<code>cvarManager-&gt;getCvar()</code> with the name of any CVar to get and/or set the value of that CVar, even ones that aren&rsquo;t from our plugin.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">CVarWrapper</span> <span class="n">distanceCVar</span> <span class="o">=</span> <span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">getCvar</span><span class="p">(</span><span class="s">&#34;cool_distance&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">});</span></span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<p>The second is by getting the CVar and then its value in another function. We can call
+<code>cvarManager-&gt;getCvar()</code> with the name of any CVar to get and/or set the value of that CVar, even ones that aren&rsquo;t from our plugin.
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">CVarWrapper</span> <span class="n">distanceCVar</span> <span class="o">=</span> <span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">getCvar</span><span class="p">(</span><span class="s">&#34;cool_distance&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">distanceCVar</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="kt">float</span> <span class="n">distance</span> <span class="o">=</span> <span class="n">distanceCVar</span><span class="p">.</span><span class="n">getFloatValue</span><span class="p">();</span>
-</span></span></code></pre></div><p>We can put together this knowledge to add to <code>CoolPlugin.cpp</code><br>
+</span></span><span class="line"><span class="cl"><span class="kt">float</span> <span class="n">distance</span> <span class="o">=</span> <span class="n">distanceCVar</span><span class="p">.</span><span class="n">getFloatValue</span><span class="p">();</span></span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<p>We can put together this knowledge to add to <code>CoolPlugin.cpp</code><br>
 <a
   class="gdoc-markdown__link"
   href="https://github.com/ubelhj/BakkesModStarterPlugin/blob/plugin-settings/CoolPlugin/CoolPlugin.cpp"

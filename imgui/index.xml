@@ -13,8 +13,7 @@
       <guid>https://bakkesmodwiki.github.io/imgui/color_picker/</guid>
       <description>You&amp;rsquo;ve got a super cool looking overlay, but you want the user to change the color. Here&amp;rsquo;s some code for a super nice color picker!
 First, you need to be rendering something on the canvas. Let&amp;rsquo;s say it&amp;rsquo;s a single chunk of text. Like this example.
-Next, make a cvar for color. This is really simple. The default value can be encoded with hex
-cvarManager-&amp;gt;registerCvar(&amp;#34;cool_color&amp;#34;, &amp;#34;#FFFFFF&amp;#34;, &amp;#34;color of overlay&amp;#34;); Now in the canvas render, use the new color</description>
+Next, make a cvar for color. This is really simple. The default value can be encoded with hex 1  cvarManager-&amp;gt;registerCvar(&amp;#34;cool_color&amp;#34;, &amp;#34;#FFFFFF&amp;#34;, &amp;#34;color of overlay&amp;#34;);   Now in the canvas render, use the new color 1 2 3 4 5 6 7  CVarWrapper textColorVar = cvarManager-&amp;gt;getCvar(&amp;#34;cool_color&amp;#34;); if (!</description>
     </item>
     
     <item>

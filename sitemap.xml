@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://bakkesmodwiki.github.io/code_snippets/code_snippet_example/</loc>
-    <lastmod>2021-09-20T15:56:34-07:00</lastmod>
+    <lastmod>2022-04-25T23:40:20-07:00</lastmod>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/</loc>
   </url><url>
@@ -57,16 +57,16 @@
     <lastmod>2021-08-20T14:48:46-07:00</lastmod>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/imgui/color_picker/</loc>
-    <lastmod>2022-01-18T14:45:49-08:00</lastmod>
+    <lastmod>2022-04-25T23:40:20-07:00</lastmod>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/imgui/draggable_location/</loc>
-    <lastmod>2022-01-18T14:45:49-08:00</lastmod>
+    <lastmod>2022-04-25T23:40:20-07:00</lastmod>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/plugin_tutorial/getting_started/</loc>
     <lastmod>2022-01-06T13:55:15-08:00</lastmod>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/functions/using_function_hooks/</loc>
-    <lastmod>2021-12-30T11:40:34-08:00</lastmod>
+    <lastmod>2022-04-25T23:40:20-07:00</lastmod>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Engine/ActorWrapper/</loc>
   </url><url>
@@ -389,7 +389,7 @@
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PerformanceStats/StartGraphSystemWrapper/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/plugin_tutorial/starting_a_plugin/</loc>
-    <lastmod>2022-04-25T22:30:00-07:00</lastmod>
+    <lastmod>2022-04-25T23:40:20-07:00</lastmod>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/Stats/StatEventWrapper/</loc>
   </url><url>
@@ -472,7 +472,7 @@
     <lastmod>2022-01-06T23:51:43+01:00</lastmod>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/plugin_tutorial/plugin_variables/</loc>
-    <lastmod>2022-01-01T14:04:02-08:00</lastmod>
+    <lastmod>2022-04-25T23:40:20-07:00</lastmod>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/useful_info/</loc>
     <lastmod>2021-08-20T14:48:46-07:00</lastmod>
@@ -481,51 +481,51 @@
     <lastmod>2021-08-20T14:48:46-07:00</lastmod>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/functions/hook_event_with_any_caller/</loc>
-    <lastmod>2021-08-25T01:06:59-04:00</lastmod>
+    <lastmod>2022-04-25T23:40:20-07:00</lastmod>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/plugin_tutorial/plugin_interface/</loc>
-    <lastmod>2022-01-01T14:04:02-08:00</lastmod>
+    <lastmod>2022-04-25T23:40:20-07:00</lastmod>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/functions/stat_events/</loc>
-    <lastmod>2021-12-30T22:31:49-08:00</lastmod>
+    <lastmod>2022-04-25T23:40:20-07:00</lastmod>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/</loc>
     <lastmod>2021-08-27T03:19:32-04:00</lastmod>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/plugin_tutorial/best_practices/</loc>
-    <lastmod>2022-04-25T22:30:00-07:00</lastmod>
+    <lastmod>2022-04-25T23:40:20-07:00</lastmod>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/code_snippets/canvas/</loc>
-    <lastmod>2021-09-20T15:56:34-07:00</lastmod>
+    <lastmod>2022-04-25T23:40:20-07:00</lastmod>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/categories/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/useful_info/crash_dumps/</loc>
-    <lastmod>2022-04-09T15:10:52-07:00</lastmod>
+    <lastmod>2022-04-25T23:40:20-07:00</lastmod>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/code_snippets/creating_image_wrapper/</loc>
-    <lastmod>2021-08-25T01:06:59-04:00</lastmod>
+    <lastmod>2022-04-25T23:40:20-07:00</lastmod>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/useful_info/github_plugin_template/</loc>
     <lastmod>2021-08-28T12:37:08-07:00</lastmod>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/code_snippets/how_cvars_work/</loc>
-    <lastmod>2021-08-25T01:06:59-04:00</lastmod>
+    <lastmod>2022-04-25T23:40:20-07:00</lastmod>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/imgui/imgui_begin/</loc>
     <lastmod>2022-01-17T21:46:31-08:00</lastmod>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/code_snippets/playlist_id/</loc>
-    <lastmod>2022-01-04T16:40:46-08:00</lastmod>
+    <lastmod>2022-04-25T23:40:20-07:00</lastmod>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/useful_info/live_debugging/</loc>
     <lastmod>2021-12-30T21:49:31-08:00</lastmod>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/useful_info/logging/</loc>
-    <lastmod>2022-04-09T15:10:52-07:00</lastmod>
+    <lastmod>2022-04-25T23:40:20-07:00</lastmod>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/useful_info/mmr/</loc>
-    <lastmod>2022-03-25T11:00:24-07:00</lastmod>
+    <lastmod>2022-04-25T23:40:20-07:00</lastmod>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/useful_info/multiplayer_plugins/</loc>
     <lastmod>2021-08-20T15:30:48-07:00</lastmod>
@@ -534,13 +534,13 @@
     <lastmod>2021-08-20T15:30:48-07:00</lastmod>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/code_snippets/persistent_storage/</loc>
-    <lastmod>2021-12-30T21:38:59-08:00</lastmod>
+    <lastmod>2022-04-25T23:40:20-07:00</lastmod>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/code_snippets/plugin_exclusive_logging/</loc>
-    <lastmod>2021-08-25T01:06:59-04:00</lastmod>
+    <lastmod>2022-04-25T23:40:20-07:00</lastmod>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/code_snippets/plugin_types/</loc>
-    <lastmod>2021-08-20T14:04:30-07:00</lastmod>
+    <lastmod>2022-04-25T23:40:20-07:00</lastmod>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/useful_info/submitting_to_bakkesplugins/</loc>
     <lastmod>2022-04-09T15:10:52-07:00</lastmod>
@@ -548,7 +548,7 @@
     <loc>https://bakkesmodwiki.github.io/tags/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/code_snippets/toasts/</loc>
-    <lastmod>2021-08-25T01:06:59-04:00</lastmod>
+    <lastmod>2022-04-25T23:40:20-07:00</lastmod>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/useful_info/troubleshooting_bakkesmod/</loc>
     <lastmod>2021-08-20T15:30:48-07:00</lastmod>
@@ -557,12 +557,12 @@
     <lastmod>2022-03-25T12:03:30-07:00</lastmod>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/code_snippets/using_http_wrapper/</loc>
-    <lastmod>2021-08-25T01:06:59-04:00</lastmod>
+    <lastmod>2022-04-25T23:40:20-07:00</lastmod>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/</loc>
     <lastmod>2021-08-28T22:24:00-04:00</lastmod>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/useful_info/writing_files/</loc>
-    <lastmod>2022-03-25T11:44:35-07:00</lastmod>
+    <lastmod>2022-04-25T23:40:20-07:00</lastmod>
   </url>
 </urlset>

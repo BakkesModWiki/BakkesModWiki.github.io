@@ -9,10 +9,8 @@
 
 
   <meta name="description" content="Use gameWrapper-&gt;GetBakkesModPath() and use that as the base path to write to (this will be %appdata%/bakkesmod/bakkesmod). This works for both Epic and Steam installs
-Make sure you&rsquo;ve included fstream
-#include &lt;fstream&gt;C&#43;&#43;17
-std::ofstream stream( gameWrapper-&gt;GetBakkesModPath() / &#34;data&#34; / &#34;abc.txt&#34; ); std::ofstream stream( gameWrapper-&gt;GetDataFolder() / &#34;abc.txt&#34; ); //Note the removal of &#34;data&#34; stream &lt;&lt; &#34;def&#34;; // %appdata%/bakkesmod/bakkesmod/data/abc.txt now includes &#34;def&#34; Older C&#43;&#43;
-//Note that windows paths require wide strings, so need to use the L to indicate a wide string std::ofstream stream( gameWrapper-&gt;GetBakkesModPathW() &#43; L&#34;data/abc." />
+Make sure you&rsquo;ve included fstream 1  #include &lt;fstream&gt;  
+C&#43;&#43;17 1 2 3 4  std::ofstream stream( gameWrapper-&gt;GetBakkesModPath() / &#34;data&#34; / &#34;abc.txt&#34; ); std::ofstream stream( gameWrapper-&gt;GetDataFolder() / &#34;abc.txt&#34; ); //Note the removal of &#34;data&#34; stream &lt;&lt; &#34;def&#34;; // %appdata%/bakkesmod/bakkesmod/data/abc.txt now includes &#34;def&#34;    Older C&#43;&#43; 1 2 3  //Note that windows paths require wide strings, so need to use the L to indicate a wide string std::ofstream stream( gameWrapper-&gt;GetBakkesModPathW() &#43; L&#34;data/abc." />
 
     <title>Writing Files | BakkesMod Programming Wiki</title>
 
@@ -39,27 +37,23 @@ std::ofstream stream( gameWrapper-&gt;GetBakkesModPath() / &#34;data&#34; / &#34
   />
   <meta property="og:site_name" content="BakkesMod Programming Wiki" />
   <meta property="og:description" content="Use gameWrapper-&gt;GetBakkesModPath() and use that as the base path to write to (this will be %appdata%/bakkesmod/bakkesmod). This works for both Epic and Steam installs
-Make sure you’ve included fstream
-#include &lt;fstream&gt;C&#43;&#43;17
-std::ofstream stream( gameWrapper-&gt;GetBakkesModPath() / &#34;data&#34; / &#34;abc.txt&#34; ); std::ofstream stream( gameWrapper-&gt;GetDataFolder() / &#34;abc.txt&#34; ); //Note the removal of &#34;data&#34; stream &lt;&lt; &#34;def&#34;; // %appdata%/bakkesmod/bakkesmod/data/abc.txt now includes &#34;def&#34; Older C&#43;&#43;
-//Note that windows paths require wide strings, so need to use the L to indicate a wide string std::ofstream stream( gameWrapper-&gt;GetBakkesModPathW() &#43; L&#34;data/abc." />
+Make sure you’ve included fstream 1  #include &lt;fstream&gt;  
+C&#43;&#43;17 1 2 3 4  std::ofstream stream( gameWrapper-&gt;GetBakkesModPath() / &#34;data&#34; / &#34;abc.txt&#34; ); std::ofstream stream( gameWrapper-&gt;GetDataFolder() / &#34;abc.txt&#34; ); //Note the removal of &#34;data&#34; stream &lt;&lt; &#34;def&#34;; // %appdata%/bakkesmod/bakkesmod/data/abc.txt now includes &#34;def&#34;    Older C&#43;&#43; 1 2 3  //Note that windows paths require wide strings, so need to use the L to indicate a wide string std::ofstream stream( gameWrapper-&gt;GetBakkesModPathW() &#43; L&#34;data/abc." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bakkesmodwiki.github.io/useful_info/writing_files/" />
 
 <meta property="article:section" content="Useful Info" />
     <meta
       property="article:modified_time"
-      content="2022-03-25T11:44:35-07:00"
+      content="2022-04-25T23:40:20-07:00"
     />
 
 
   <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Writing Files" />
   <meta name="twitter:description" content="Use gameWrapper-&gt;GetBakkesModPath() and use that as the base path to write to (this will be %appdata%/bakkesmod/bakkesmod). This works for both Epic and Steam installs
-Make sure you’ve included fstream
-#include &lt;fstream&gt;C&#43;&#43;17
-std::ofstream stream( gameWrapper-&gt;GetBakkesModPath() / &#34;data&#34; / &#34;abc.txt&#34; ); std::ofstream stream( gameWrapper-&gt;GetDataFolder() / &#34;abc.txt&#34; ); //Note the removal of &#34;data&#34; stream &lt;&lt; &#34;def&#34;; // %appdata%/bakkesmod/bakkesmod/data/abc.txt now includes &#34;def&#34; Older C&#43;&#43;
-//Note that windows paths require wide strings, so need to use the L to indicate a wide string std::ofstream stream( gameWrapper-&gt;GetBakkesModPathW() &#43; L&#34;data/abc." />
+Make sure you’ve included fstream 1  #include &lt;fstream&gt;  
+C&#43;&#43;17 1 2 3 4  std::ofstream stream( gameWrapper-&gt;GetBakkesModPath() / &#34;data&#34; / &#34;abc.txt&#34; ); std::ofstream stream( gameWrapper-&gt;GetDataFolder() / &#34;abc.txt&#34; ); //Note the removal of &#34;data&#34; stream &lt;&lt; &#34;def&#34;; // %appdata%/bakkesmod/bakkesmod/data/abc.txt now includes &#34;def&#34;    Older C&#43;&#43; 1 2 3  //Note that windows paths require wide strings, so need to use the L to indicate a wide string std::ofstream stream( gameWrapper-&gt;GetBakkesModPathW() &#43; L&#34;data/abc." />
 
 
   <script type="application/ld+json">
@@ -70,8 +64,8 @@ std::ofstream stream( gameWrapper-&gt;GetBakkesModPath() / &#34;data&#34; / &#34
       "name": "Writing Files",
       "url" : "https://bakkesmodwiki.github.io/useful_info/writing_files/",
       "headline": "Writing Files",
-      "description": "Use gameWrapper-\u003eGetBakkesModPath() and use that as the base path to write to (this will be %appdata%\/bakkesmod\/bakkesmod). This works for both Epic and Steam installs\nMake sure you’ve included fstream\n#include \u003cfstream\u003eC\u002b\u002b17\nstd::ofstream stream( gameWrapper-\u003eGetBakkesModPath() \/ \u0022data\u0022 \/ \u0022abc.txt\u0022 ); std::ofstream stream( gameWrapper-\u003eGetDataFolder() \/ \u0022abc.txt\u0022 ); \/\/Note the removal of \u0022data\u0022 stream \u003c\u003c \u0022def\u0022; \/\/ %appdata%\/bakkesmod\/bakkesmod\/data\/abc.txt now includes \u0022def\u0022 Older C\u002b\u002b\n\/\/Note that windows paths require wide strings, so need to use the L to indicate a wide string std::ofstream stream( gameWrapper-\u003eGetBakkesModPathW() \u002b L\u0022data\/abc.",
-      "wordCount" : "162",
+      "description": "Use gameWrapper-\u003eGetBakkesModPath() and use that as the base path to write to (this will be %appdata%\/bakkesmod\/bakkesmod). This works for both Epic and Steam installs\nMake sure you’ve included fstream 1  #include \u003cfstream\u003e  \nC\u002b\u002b17 1 2 3 4  std::ofstream stream( gameWrapper-\u003eGetBakkesModPath() \/ \u0022data\u0022 \/ \u0022abc.txt\u0022 ); std::ofstream stream( gameWrapper-\u003eGetDataFolder() \/ \u0022abc.txt\u0022 ); \/\/Note the removal of \u0022data\u0022 stream \u003c\u003c \u0022def\u0022; \/\/ %appdata%\/bakkesmod\/bakkesmod\/data\/abc.txt now includes \u0022def\u0022    Older C\u002b\u002b 1 2 3  \/\/Note that windows paths require wide strings, so need to use the L to indicate a wide string std::ofstream stream( gameWrapper-\u003eGetBakkesModPathW() \u002b L\u0022data\/abc.",
+      "wordCount" : "171",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -82,7 +76,7 @@ std::ofstream stream( gameWrapper-&gt;GetBakkesModPath() / &#34;data&#34; / &#34
       "copyrightYear" : "0001",
       "dateCreated": "0001-01-01T00:00:00.00Z",
       "datePublished": "0001-01-01T00:00:00.00Z",
-      "dateModified": "2022-03-25T11:44:35.00Z",
+      "dateModified": "2022-04-25T23:40:20.00Z",
       "publisher":{
           "@type":"Organization",
           "name": "BakkesMod Programming Wiki",
@@ -15331,18 +15325,45 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
   >
     <h1>Writing Files</h1>
     <p>Use <code>gameWrapper-&gt;GetBakkesModPath()</code> and use that as the base path to write to (this will be <code>%appdata%/bakkesmod/bakkesmod</code>). This works for both Epic and Steam installs</p>
-<p>Make sure you&rsquo;ve included fstream</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp">
-</span></span></span></code></pre></div><p>C++17</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">std</span><span class="o">::</span><span class="n">ofstream</span> <span class="n">stream</span><span class="p">(</span> <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">GetBakkesModPath</span><span class="p">()</span> <span class="o">/</span> <span class="s">&#34;data&#34;</span> <span class="o">/</span> <span class="s">&#34;abc.txt&#34;</span> <span class="p">);</span>
+<p>Make sure you&rsquo;ve included fstream
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span></span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<p>C++17
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">std</span><span class="o">::</span><span class="n">ofstream</span> <span class="n">stream</span><span class="p">(</span> <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">GetBakkesModPath</span><span class="p">()</span> <span class="o">/</span> <span class="s">&#34;data&#34;</span> <span class="o">/</span> <span class="s">&#34;abc.txt&#34;</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="n">std</span><span class="o">::</span><span class="n">ofstream</span> <span class="n">stream</span><span class="p">(</span> <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">GetDataFolder</span><span class="p">()</span> <span class="o">/</span> <span class="s">&#34;abc.txt&#34;</span> <span class="p">);</span> <span class="c1">//Note the removal of &#34;data&#34;
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">stream</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;def&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="c1">// %appdata%/bakkesmod/bakkesmod/data/abc.txt now includes &#34;def&#34;
-</span></span></span></code></pre></div><p>Older C++</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">//Note that windows paths require wide strings, so need to use the L to indicate a wide string
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+Older C++
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">//Note that windows paths require wide strings, so need to use the L to indicate a wide string
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">std</span><span class="o">::</span><span class="n">ofstream</span> <span class="n">stream</span><span class="p">(</span> <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">GetBakkesModPathW</span><span class="p">()</span> <span class="o">+</span> <span class="sa">L</span><span class="s">&#34;data/abc.txt&#34;</span> <span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">std</span><span class="o">::</span><span class="n">ofstream</span> <span class="n">stream</span><span class="p">(</span> <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">GetDataFolderW</span><span class="p">()</span> <span class="o">+</span> <span class="sa">L</span><span class="s">&#34;abc.txt&#34;</span> <span class="p">);</span>
-</span></span></code></pre></div><p>We highly recommend using C++17. This is the default in the template. If not using the template, in Visual Studio go to your project&rsquo;s properties -&gt; C/C++ -&gt; Language -&gt; C++ Language Standard -&gt; <code>ISO C++17 Standard (/std:c++17)</code>.
+</span></span><span class="line"><span class="cl"><span class="n">std</span><span class="o">::</span><span class="n">ofstream</span> <span class="n">stream</span><span class="p">(</span> <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">GetDataFolderW</span><span class="p">()</span> <span class="o">+</span> <span class="sa">L</span><span class="s">&#34;abc.txt&#34;</span> <span class="p">);</span></span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<p>We highly recommend using C++17. This is the default in the template. If not using the template, in Visual Studio go to your project&rsquo;s properties -&gt; C/C++ -&gt; Language -&gt; C++ Language Standard -&gt; <code>ISO C++17 Standard (/std:c++17)</code>.
 This will allow you to use std::filesystem::path which prevents a lot of pathing errors (like weird characters in folder names and missing/mixed folder separators) and in general is just much easier to work with.</p>
 
   </article>
