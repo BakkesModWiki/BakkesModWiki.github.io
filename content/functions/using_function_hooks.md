@@ -7,7 +7,7 @@ author: ubelhj
 Function hooks are a powerful part of BakkesMod. After a function is hooked, any time it is called by Rocket League, your code is called as well.
 
 There are multiple types of hooks. First are the two simpler ones. `gameWrapper` is a [GameWrapper](/bakkesmod_api/Classes/Wrappers/GameWrapper/) and will be accessible from any point in your code.
-```cpp
+{{< highlight cpp "linenos=table" >}}
 gameWrapper->HookEvent("Function TAGame.Car_TA.SetVehicleInput",
   [this](std::string eventName) {
     // Your Code here
@@ -18,13 +18,13 @@ gameWrapper->HookEventPost("Function TAGame.Car_TA.SetVehicleInput",
   [this](std::string eventName) {
     // Your Code here
 });
-```
+{{< /highlight >}}
 
 `HookEvent` runs your code as the function is called
 `HookEventPost` runs your code as the function is returned from
 They return a `std::string` which is the name of the calling function. This is useful to differentiate what your caller is if you have multiple hooks calling the same code.
 
-```cpp
+{{< highlight cpp "linenos=table" >}}
 gameWrapper->HookEventWithCaller<CarWrapper>("Function TAGame.Car_TA.SetVehicleInput",
   [this](CarWrapper caller, void* params, std::string eventname) {
     // Your Code here
@@ -34,7 +34,7 @@ gameWrapper->HookEventWithCallerPost<CarWrapper>("Function TAGame.Car_TA.SetVehi
   [this](CarWrapper caller, void* params, std::string eventname) {
     // Your Code here
 });
-```
+{{< /highlight >}}
 
 The two WithCaller variants do the same thing, but let you know a bit more about what is using the function
 
@@ -43,7 +43,7 @@ They also provide a `void *` pointer. This points at the location of any paramet
 
 For example `Function TAGame.Car_TA.OnHitBall` has a [BallWrapper](/bakkesmod_api/Classes/Wrappers/GameObject/BallWrapper/) parameter. To access it, cast the `void *` pointer to a struct including the parameters
 
-```cpp
+{{< highlight cpp "linenos=table" >}}
 struct CarHitBallParams {
   // This is a pointer to the ball's address 
   //  but needs to be constructed into a BallWrapper before use
@@ -57,6 +57,6 @@ gameWrapper->HookEventWithCallerPost<CarWrapper>("Function TAGame.Car_TA.OnHitBa
     BallWrapper ballHit = BallWrapper(params->ball);
     // Now you know what ball was hit!
 });
-```
+{{< /highlight >}}
 
 Find functions with the [function scanner](/functions/function_scanner/)

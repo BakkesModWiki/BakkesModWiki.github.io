@@ -35,13 +35,13 @@ Toasts can be one of 4 colors based on the ToastType
 ![https://cdn.discordapp.com/attachments/873081105090215957/879215077654417469/unknown.png](https://cdn.discordapp.com/attachments/873081105090215957/879215077654417469/unknown.png)
 
 I've made an example using CoolPlugin. I put this code in the onLoad() in CoolPlugin.cpp and cool.png in the `bakkesmod/data` folder
-```cpp
+{{< highlight cpp "linenos=table" >}}
 gameWrapper->LoadToastTexture("cool", gameWrapper->GetDataFolder() / "cool.png");
 
 cvarManager->registerNotifier("cool_toast", [this](std::vector<std::string> args) {
-	gameWrapper->Toast("Whoa you're cool", "Super cool", "cool", 5.0, ToastType_Warning);
-	}, "", PERMISSION_ALL);
-```
+    gameWrapper->Toast("Whoa you're cool", "Super cool", "cool", 5.0, ToastType_Warning);
+}, "", PERMISSION_ALL);
+{{< /highlight >}}
 
 The result when I call `cool_toast` from the f6 console
 

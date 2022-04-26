@@ -9,12 +9,12 @@ Imagine you have a plugin that renders something on the screen. Users might want
 First, you need to be rendering something on the canvas. Let's say it's a single chunk of text, with its location defined at the top left. [Like this example](/code_snippets/canvas/).
 
 Next we'll add a simple level of customizability with location cvars. X is the left to right axis, and Y is top to bottom. (0, 0) is the top left of the screen
-```cpp
+{{< highlight cpp "linenos=table" >}}
 cvarManager->registerCvar("cool_x_location", "0", "set x location of the overlay");
 cvarManager->registerCvar("cool_y_location", "0", "set y location of the overlay");
-```
+{{< /highlight >}}
 Now in the canvas render, just use those new locations
-```cpp
+{{< highlight cpp "linenos=table" >}}
 CVarWrapper xLocCvar = cvarManager->getCvar("cool_x_location");
 if (!xLocCvar) { return; }
 float xLoc = xLocCvar.getFloatValue();
@@ -25,10 +25,10 @@ float yLoc = yLocCvar.getFloatValue();
 
 canvas.SetPosition(Vector2F{ xLoc, yLoc });
 // now render everything else
-```
+{{< /highlight >}}
 
 Now the user can change the location of the overlay in the console, but now you can add it to the GUI too. In your `RenderSettings()` add these lines
-```cpp
+{{< highlight cpp "linenos=table" >}}
 CVarWrapper xLocCvar = cvarManager->getCvar("cool_x_location");
 if (!xLocCvar) { return; }
 float xLoc = xLocCvar.getFloatValue();
@@ -41,12 +41,12 @@ float yLoc = yLocCvar.getFloatValue();
 if (ImGui::SliderFloat("Y Location", &yLoc, 0.0, 5000.0)) {
     yLocCvar.setValue(yLoc);
 }
-```
+{{< /highlight >}}
 
 Now you can move the x and y locations with sliders, and finally we can add dragging.  
 First add a checkbox to enable the dragging mode. Without that check there's some weird interactions on when dragging will happen.  
 Then the code is fairly simple. Put it where you're doing your ImGui rendering. It sets the cvar values to the x and y locations of the mouse if left click is held. 
-```cpp
+{{< highlight cpp "linenos=table" >}}
 // inDragMode is just a bool declared at the top of the .cpp file
 ImGui::Checkbox("Drag Mode", &inDragMode);
 
@@ -65,7 +65,7 @@ if (inDragMode) {
         yLocCvar.setValue(mousePos.y);
     }
 }
-```
+{{< /highlight >}}
 This video shows the code in action! 
 <video controls="controls" width="1000" preload="metadata">
     <source src="/video/imguidrag.mp4" 

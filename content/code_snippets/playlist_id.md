@@ -4,7 +4,7 @@ author: CinderBlock
 ---
 
 All (known) playlist IDs - 2020
-```javascript
+``` javascript 
 1: Duel
 2: Doubles
 3: Standard
@@ -47,10 +47,10 @@ All (known) playlist IDs - 2020
 ```
 
 Find the ID of the current playlist with this code. [Click here for GameSettingPlaylistWrapper reference](/bakkesmod_api/Classes/Wrappers/GameEvent/GameSettingPlaylistWrapper/)  
-```cpp
+{{< highlight cpp "linenos=table" >}}
 ServerWrapper sw = gameWrapper->GetCurrentGameState();
 if (!sw) return;
 GameSettingPlaylistWrapper playlist = sw.GetPlaylist();
 if (!playlist) return;
 int playlistID = playlist.GetPlaylistId();
-```
+{{< /highlight >}}

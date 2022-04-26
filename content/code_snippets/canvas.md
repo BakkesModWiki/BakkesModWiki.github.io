@@ -13,15 +13,15 @@ You can also do more basic things, like text in my stat counter plugin [OBSCount
 First in your `.h`, define a function that will take a canvas.  
 `void Render(CanvasWrapper canvas);`  
 Then you need to register the function in your `.cpp` code. This can be done in OnLoad or any other place where you want to start the rendering loop
-```cpp
+{{< highlight cpp "linenos=table" >}}
 gameWrapper->RegisterDrawable([this](CanvasWrapper canvas) {
     Render(canvas);
 });
-```
+{{< /highlight >}}
 Now every single frame, the `Render` function is called with a valid canvas to draw on.
 
 In Render you can do a ton of stuff with the canvas. Here's a quick definition of one. Look for plugin homepages on [BakkesPlugins](https://bakkesplugins.com/) for examples and source code
-```cpp
+{{< highlight cpp "linenos=table" >}}
 // in a .cpp file 
 void CoolPlugin::Render(CanvasWrapper canvas) {
     // defines colors in RGBA 0-255
@@ -44,7 +44,7 @@ void CoolPlugin::Render(CanvasWrapper canvas) {
     // the false turns off the drop shadow
     canvas.DrawString("Hi Cool Dude", 2.0, 2.0, false);
 }
-```
+{{< /highlight >}}
 ![basic example](/img/basiccanvas.png)
 
 The result is a bit underwhelming, but there's loads more you can do with this awesome tool.  

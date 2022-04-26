@@ -38,9 +38,9 @@ Sometimes it's a little less easy, and the issue happens in pluginsdk.dll or Roc
 
 ![https://cdn.discordapp.com/attachments/869661160834744390/869671323817881600/unknown.png](https://cdn.discordapp.com/attachments/869661160834744390/869671323817881600/unknown.png)
 
-This crash happened because of a null ball! Remember that whenever you use any type that ends with `Wrapper` like this `BallWrapper` you must nullcheck it before using it. These 4 lines of code will save your plugin from crashing
+This crash happened because of a null ball! [Remember the best practices!](/plugin_tutorial/best_practices) Whenever you use any type that ends with `Wrapper` like this `BallWrapper` you must nullcheck it before using it. These 4 lines of code will save your plugin from crashing
 
-```cpp
+{{< highlight cpp "linenos=table" >}}
 BallWrapper* ball = (BallWrapper*) nullptr;
 
 if (!ball) {
@@ -51,7 +51,7 @@ if (!ball) {
 
 // guaranteed to only happen on valid balls and not crash
 ball->SetLocation(Vector(0, 0, 0));
-```
+{{< /highlight >}}
 
 Once you've found the issue, hit the red square up top
 

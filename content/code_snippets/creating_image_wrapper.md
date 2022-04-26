@@ -14,29 +14,30 @@ author: Martinn
 
 ## Using a ImageWrapper
  1. Use the constructor with the second or third argument true (or both).
-    ```cpp
-    // ImageWrapper(std::string path, bool canvasLoad = false, bool ImGuiLoad = false);
-    myImage = std::make_shared<ImageWrapper>(gameWrapper->GetDataFolder() / "MyPluginFolder" / "MyImage.png", true, true);
-    ```
+{{< highlight cpp "linenos=table" >}}
+// ImageWrapper(std::string path, bool canvasLoad = false, bool ImGuiLoad = false);
+myImage = std::make_shared<ImageWrapper>(gameWrapper->GetDataFolder() / "MyPluginFolder" / "MyImage.png", true, true);
+{{< / highlight >}}
 
 2. Load the resource if you didn't use the optional args.
-    ```cpp
-    myImage->LoadForCanvas();
-    ```
+{{< highlight cpp "linenos=table" >}}
+myImage->LoadForCanvas();
+{{< /highlight >}}
 
-3.
-    1. Pass it to the canvas wrapper in a drawable callback
-    ```cpp
-    canvas.DrawTexture(testImage.get(), 1); // there are multiple functions in the canvaswrapper that accept ImageWrapper*
-    ```
+3. 
+    a. Pass it to the canvas wrapper in a drawable callback
+{{< highlight cpp "linenos=table" >}}
+canvas.DrawTexture(testImage.get(), 1); 
+// there are multiple functions in the canvaswrapper that accept ImageWrapper*
+{{< /highlight >}}
 
-    2. Use it in your imgui render code
-    ```cpp
-        if (auto pTex = myImage->GetImguiTex()) {
-        auto rect = myImage->GetSizeF();
-        ImGui::Image(pTex, { rect.width, rect.height });
-    }
-    ```
+    b. Use it in your imgui render code
+{{< highlight cpp "linenos=table" >}}
+if (auto pTex = myImage->GetImguiTex()) {
+    auto rect = myImage->GetSizeF();
+    ImGui::Image(pTex, { rect.width, rect.height });
+}
+{{< /highlight >}}
 
 
 PS:

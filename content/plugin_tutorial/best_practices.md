@@ -10,7 +10,7 @@ Any BakkesMod wrapper is a pointer under the hood, and that pointer could be nul
 If you try and use a null wrapper, you'll crash. 
 This is super simple, just make sure you nullcheck every time you obtain a new wrapper.
 
-```cpp
+{{< highlight cpp "linenos=table" >}}
 ServerWrapper server = gameWrapper->GetCurrentGameState();
 
 // Just check if the server is null
@@ -23,7 +23,7 @@ if (!server) {
 }
 
 // Now you're safe and the server is valid
-```
+{{< /highlight >}}
 
 2. Don't store wrappers  
 As the game is played, the pointers underneath wrappers might become invalid or point to unexpected memory locations. 

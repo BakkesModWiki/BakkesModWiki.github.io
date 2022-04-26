@@ -14,41 +14,41 @@ At the top of the file, add the line to your list of includes
 `#include "bakkesmod/plugin/PluginSettingsWindow.h"`
 
 At the class declaration, add `PluginSettingsWindow`
-```cpp
+{{< highlight cpp "linenos=table" >}}
 class CoolPlugin: public BakkesMod::Plugin::BakkesModPlugin, public BakkesMod::Plugin::PluginSettingsWindow
-```
+{{< /highlight >}}
 
 And inside the plugin `{}` add these 3 lines
-```cpp
+{{< highlight cpp "linenos=table" >}}
 void RenderSettings() override;
 std::string GetPluginName() override;
 void SetImGuiContext(uintptr_t ctx) override;
-```
+{{< /highlight >}}
 
 Now we can define those 3 functions to create the interface. We will put these in `CoolPluginGUI.cpp` but they can be in any `.cpp` file that includes `CoolPlugin.h`, such as `CoolPlugin.cpp`
 
 The first is simple and should be copied and pasted. Never call this function, just assume it works
-```cpp
+{{< highlight cpp "linenos=table" >}}
 void CoolPlugin::SetImGuiContext(uintptr_t ctx) {
   ImGui::SetCurrentContext(reinterpret_cast<ImGuiContext*>(ctx));
 }
-```
+{{< /highlight >}}
 The second is also simple. Put whatever the name of the plugin is as the return value. This'll be what the plugin will be called in the f2 -> Plugins menu
-```cpp
+{{< highlight cpp "linenos=table" >}}
 std::string CoolPlugin::GetPluginName() {
   return "Cool Plugin";
 }
-```
+{{< /highlight >}}
 The third and final actually creates the interface. We'll start with simple text but this is what we'll be modifying in the rest of this channel
 There's a hugely important thing to consider with this function. Never call on or change any Rocket League / Bakkesmod values here. If you do, you will crash. It's happening outside of the game, and cannot safely alter it. That means that if you have a `CVarWrapper.addOnValueChanged()` that alters the state of the game, it will be unsafe to use here
-```cpp
+{{< highlight cpp "linenos=table" >}}
 void CoolPlugin::RenderSettings() {
     ImGui::TextUnformatted("A really cool plugin");
 }
-```
+{{< /highlight >}}
 
 Lets start building the plugin interface. First we'll have a button that'll call `CoolerBallOnTop`. The button as well as most other interactable ImGui components has a boolean property. If it's true, that means it's been interacted with. So when the button has been clicked, we'll use the cvarManager to call `CoolerBallOnTop`. But `CoolerBallOnTop` uses the ServerWrapper and alters the game. It'll crash! We can wrap it inside `gameWrapper->Execute()`. We'll also add hover text because why not
-```cpp
+{{< highlight cpp "linenos=table" >}}
 if (ImGui::Button("Ball On Top")) {
   gameWrapper->Execute([this](GameWrapper* gw) {
     cvarManager->executeCommand("CoolerBallOnTop");
@@ -57,12 +57,12 @@ if (ImGui::Button("Ball On Top")) {
 if (ImGui::IsItemHovered()) {
   ImGui::SetTooltip("Activate Ball On Top");
 }
-```
+{{< /highlight >}}
 
 ![The button](https://cdn.discordapp.com/attachments/863320309834186762/863537895444709416/unknown.png)
 
 Now let's do a checkbox for `cool_enabled`. First we need to get the CVar, then use it. The `bool enabled` is necessary, as the checkbox uses that to store whether or not the checkbox should be checked. You can't just use the CVar
-```cpp
+{{< highlight cpp "linenos=table" >}}
 CVarWrapper enableCvar = cvarManager->getCvar("cool_enabled");
 if (!enableCvar) { return; }
 bool enabled = enableCvar.getBoolValue();
@@ -72,11 +72,11 @@ if (ImGui::Checkbox("Enable plugin", &enabled)) {
 if (ImGui::IsItemHovered()) {
   ImGui::SetTooltip("Toggle Cool Plugin");
 }
-```
+{{< /highlight >}}
 And finally a slider for the distance CVar.
 ImGui elements use `char *` instead of `std::string`
 You can easily convert between with `std::string.c_str()` and `std::string newStringVariableName(char *)`
-```cpp
+{{< highlight cpp "linenos=table" >}}
 CVarWrapper distanceCvar = cvarManager->getCvar("cool_distance");
 if (!distanceCvar) { return; }
 float distance = distanceCvar.getFloatValue();
@@ -87,7 +87,7 @@ if (ImGui::IsItemHovered()) {
   std::string hoverText = "distance is " + std::to_string(distance);
   ImGui::SetTooltip(hoverText.c_str());
 }
-```
+{{< /highlight >}}
 
 ![The slider](https://cdn.discordapp.com/attachments/863320309834186762/863541774324203540/unknown.png)
 

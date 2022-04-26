@@ -10,45 +10,45 @@ The template has a lot of commented out code that is designed to help you learn 
 
 First we'll look at your `CoolPlugin.h` file. It describes any functions your code will use
 At the top are two lines that are required for plugins, and allow you to call BakkesMod SDK functions
-```cpp
+{{< highlight cpp "linenos=table" >}}
 #pragma once
 #include "bakkesmod/plugin/bakkesmodplugin.h"
-```
+{{< /highlight >}}
 Next is the declaration of your class. Here you describe any functions you will be using.
 `onLoad()` is automatically called by BakkesMod when the plugin is loaded, and `onUnload()` is called when it is unloaded
-```cpp
+{{< highlight cpp "linenos=table" >}}
 class CoolPlugin: public BakkesMod::Plugin::BakkesModPlugin
 {
   virtual void onLoad();
   virtual void onUnload();
 };
-```
+{{< /highlight >}}
 
 Now we will look at the `CoolPlugin.cpp` file. Here you write the code that will define the functions
 First it includes your header so it can define the functions described above
-```cpp
+{{< highlight cpp "linenos=table" >}}
 #include "pch.h"
 #include "CoolPlugin.h"
-```
+{{< /highlight >}}
 Next it declares the plugin. The string in "" will be used in the plugin manager to describe the plugin, but it needs to be a short description. Keep it to 1 or two words. You can also define a plugin version, although the template handles that automatically. Finally is the plugin type described [here](/code_snippets/plugin_types/). If you don't know what it is, just use `PLUGINTYPE_FREEPLAY`.
-```cpp
+{{< highlight cpp "linenos=table" >}}
 BAKKESMOD_PLUGIN(CoolPlugin, "Cool Plugin", plugin_version, PLUGINTYPE_FREEPLAY)
-```
+{{< /highlight >}}
 
 Next you define your functions, starting with `onLoad()`. As this is a demo, we'll just do a hello world.
-```cpp
+{{< highlight cpp "linenos=table" >}}
 void CoolPlugin::onLoad() {
   // do something when it loads
   LOG("Hello I'm CoolPlugin B)");
 }
-```
+{{< /highlight >}}
 
 Next is `onUnload()`. Bakkesmod handles most of unloading, so only worry about this if your code is using some 3rd party library that needs unloading to be handled specially. For now this can just log that it unloaded
-```cpp
+{{< highlight cpp "linenos=table" >}}
 void CoolPlugin::onUnload() {
   LOG("I was too cool for this world B'(");
 }
-```
+{{< /highlight >}}
 
 Now you've got a super basic plugin. Hit Build -> Build CoolPlugin or press ctrl + B to finalize the plugin. It will create `CoolPlugin.dll` in a `plugins/` folder next to your plugin source code. It will also move it into your bakkesmod folder if you are using the template.
 
@@ -56,64 +56,64 @@ Now open Rocket League and open the BakkesMod console with f6. Type `plugin load
 
 Next we'll make the plugin actually do something. We'll reverse engineer the `ballontop` command, which puts the ball on top of your car in freeplay.
 In `CoolPlugin.h` add a new function
-```cpp
+{{< highlight cpp "linenos=table" >}}
 class CoolPlugin: public BakkesMod::Plugin::BakkesModPlugin
 {
   virtual void onLoad();
   virtual void onUnload();
   void ballOnTop();
 };
-```
+{{< /highlight >}}
 
 We need to define that function in `CoolPlugin.cpp`. Just jump to the end of the file and add
-```cpp
+{{< highlight cpp "linenos=table" >}}
 void CoolPlugin::ballOnTop() {
 
 }
-```
+{{< /highlight >}}
 ⠀
 The next lines of code are all going to be within `CoolPlugin::ballOnTop()` in `CoolPlugin.cpp`
 
 First we need to make sure we should be running the plugin. We only want it to work in freeplay. The `gameWrapper` gives a ton of useful functions to figure out what context the code is being run from. The first line of `CoolPlugin::ballOnTop()` will be
-```cpp
+{{< highlight cpp "linenos=table" >}}
 if (!gameWrapper->IsInFreeplay()) { return; }
-```
+{{< /highlight >}}
 There are also `gameWrapper->IsInGame()` and `gameWrapper->IsInOnlineGame()` if you'd rather your plugin run elsewhere
 
 The next line will be getting the `ServerWrapper`.  This is what controls pretty much everything in the current game. You can get players, cars, the ball, the goals, and other things from it so it's incredibly useful. **[We also nullcheck it](/plugin_tutorial/best_practices/)**. If you call functions on a null server Rocket League will crash
- ```cpp
+ {{< highlight cpp "linenos=table" >}}
 ServerWrapper server = gameWrapper->GetCurrentGameState();
 if (!server) { return; }
-```
+{{< /highlight >}}
 
 Next we get the ball and nullcheck it
-```cpp
+{{< highlight cpp "linenos=table" >}}
 BallWrapper ball = server.GetBall();
 if (!ball) { return; }
-```
+{{< /highlight >}}
 
 And we get the car. As this is freeplay we only have one to worry about, but in any mode this will select your car. And we nullcheck it. If this seems redundant, it isn't
-```cpp
+{{< highlight cpp "linenos=table" >}}
 CarWrapper car = gameWrapper->GetLocalCar();
 if (!car) { return; }
-```
+{{< /highlight >}}
 
 Next we can start manipulating things. We can grab the car's velocity and assign it to the ball so they match. If the ball is going slower or faster than the car, it'll just fly off by itself
-```cpp
+{{< highlight cpp "linenos=table" >}}
 Vector carVelocity = car.GetVelocity();
 ball.SetVelocity(carVelocity);
-```
+{{< /highlight >}}
 
 Next we'll actually move the ball. A Vector is a 3 dimensional point in space. The Z axis is up and down in Rocket League, so we can put the ball above the car by using the car's location and adding distance on the Z axis.
-```cpp
+{{< highlight cpp "linenos=table" >}}
 Vector carLocation = car.GetLocation();
 float ballRadius = ball.GetRadius();
 ball.SetLocation(carLocation + Vector{0, 0, ballRadius * 2});
-```
+{{< /highlight >}}
 
 We've now defined `CoolPlugin::ballOnTop()`
 In full:
-```cpp
+{{< highlight cpp "linenos=table" >}}
 void CoolPlugin::ballOnTop() {
   if (!gameWrapper->IsInFreeplay()) { return; }
   ServerWrapper server = gameWrapper->GetCurrentGameState();
@@ -131,7 +131,7 @@ void CoolPlugin::ballOnTop() {
   float ballRadius = ball.GetRadius();
   ball.SetLocation(carLocation + Vector{0, 0, ballRadius * 2});
 }
-```
+{{< /highlight >}}
 
 Now we need to call the function
 
@@ -140,14 +140,14 @@ When it's called, it takes a vector (basically a list) of command arguments that
 The code is called in a lambda `[](){}`. You can just copy the syntax here.
 Next is the notifier description, which does nothing, so it'll be `""`.
 Finally is the permissions, which should usually be `PERMISSION_ALL`. If you want to restrict it you can use the list LINKED HERE
-```cpp
+{{< highlight cpp "linenos=table" >}}
 cvarManager->registerNotifier("CoolerBallOnTop", [this](std::vector<std::string> args) {
     ballOnTop();
 }, "", PERMISSION_ALL);
-```
+{{< /highlight >}}
 
 Now we'll put it all together.
-```cpp
+{{< highlight cpp "linenos=table" >}}
 // CoolPlugin.h
 #pragma once
 
@@ -160,8 +160,8 @@ class CoolPlugin : public BakkesMod::Plugin::BakkesModPlugin
     virtual void onUnload();
     void ballOnTop();
 };
-```
-```cpp
+{{< /highlight >}}
+{{< highlight cpp "linenos=table" >}}
 // CoolPlugin.cpp
 #include "pch.h"
 #include "CoolPlugin.h"
@@ -198,7 +198,7 @@ void CoolPlugin::ballOnTop() {
   float ballRadius = ball.GetRadius();
   ball.SetLocation(carLocation + Vector{ 0, 0, ballRadius * 2 });
 }
-```
+{{< /highlight >}}
 
 Finally build the plugin with ctrl + b. Then start freeplay, load the plugin with `plugin load CoolPlugin` and call `CoolerBallOnTop` from the f6 console. The ball should teleport above you!
 

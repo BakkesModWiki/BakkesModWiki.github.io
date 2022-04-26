@@ -22,10 +22,10 @@ There are 2-9 arguments. The first 2 are required, but the others are not
 9. Whether the CVar's value is stored between sessions. Defaults to `true`
 
 To create an enable/disable CVar for the plugin and a ball distance CVar
-```cpp
+{{< highlight cpp "linenos=table" >}}
 cvarManager->registerCvar("cool_enabled", "0", "Enable Cool", true, true, 0, true, 1);
 cvarManager->registerCvar("cool_distance", "200.0", "Distance to place the ball above");
-```
+{{< /highlight >}}
 
 A user can use these by typing into the f6 console `cool_enabled 1` to enable cool, or `cool_distance 300` to move the ball away
 
@@ -36,20 +36,20 @@ This creates a function that is called when the value is changed. Quite simple. 
 The `[](){}` is called a lambda, and is basically just a helper function. We put `[this]` so we can access our global variables inside the lambda. `(std::string oldValue, CVarWrapper cvar)` are the values passed to the lambda by the `addOnValueChanged` function. Every time the value changes and the lambda is called, the code inside `{}` happens.
 The most common use is to change the value of a global variable.
 If I had a variable `bool coolEnabled`, I could call `coolEnabled = cvar.getBoolValue();` inside the brackets to change its value
-```cpp
+{{< highlight cpp "linenos=table" >}}
 cvarManager->registerCvar("cool_enabled", "0", "Enable Cool", true, true, 0, true, 1)
         .addOnValueChanged([this](std::string oldValue, CVarWrapper cvar) {
             coolEnabled = cvar.getBoolValue();
         });
-```
+{{< /highlight >}}
 
 The second is by getting the CVar and then its value in another function. We can call
 `cvarManager->getCvar()` with the name of any CVar to get and/or set the value of that CVar, even ones that aren't from our plugin.
-```cpp
+{{< highlight cpp "linenos=table" >}}
 CVarWrapper distanceCVar = cvarManager->getCvar("cool_distance");
 if (!distanceCVar) { return; }
 float distance = distanceCVar.getFloatValue();
-```
+{{< /highlight >}}
 
 We can put together this knowledge to add to `CoolPlugin.cpp`  
 [https://github.com/ubelhj/BakkesModStarterPlugin/blob/plugin-settings/CoolPlugin/CoolPlugin.cpp](https://github.com/ubelhj/BakkesModStarterPlugin/blob/plugin-settings/CoolPlugin/CoolPlugin.cpp)

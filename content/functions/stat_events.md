@@ -15,7 +15,7 @@ You need to hook some events to use stat events. This depends on your use case.
 The stat ticker catches stat events from all players, but fails to see first touches, clears, and centers. 
 HandleStatEvent catches all stats, but only for the primary player. Depending on your use case you may need to only hook one or both
 
-``` cpp
+{{< highlight cpp "linenos=table" >}}
 // The ServerWrappers here are placeholders and should not be used. 
 //  We need the params so we hook with caller, but there is no wrapper for the HUD
 gameWrapper->HookEventWithCallerPost<ServerWrapper>("Function TAGame.GFxHUD_TA.HandleStatTickerMessage",
@@ -28,10 +28,10 @@ gameWrapper->HookEventWithCallerPost<ServerWrapper>("Function TAGame.GFxHUD_TA.H
     [this](ServerWrapper caller, void* params, std::string eventname) {
         onStatEvent(params);
     });
-```
+{{< /highlight>}}
 
 Now we have the functions hooked, and we need the parameters. Either define these in your .h or right before using them in your .cpp
-```cpp
+{{< highlight cpp "linenos=table" >}}
 // The structure of a ticker stat event
 struct StatTickerParams {
     // person who got a stat
@@ -49,10 +49,10 @@ struct StatEventParams {
     // wrapper for the stat event
     uintptr_t StatEvent;
 };
-```
+{{< /highlight>}}
 
 Now you can use them. For reference see [StatEventWrapper](/bakkesmod_api/Classes/Wrappers/GameObject/Stats/StatEventWrapper/) and [PriWrapper](/bakkesmod_api/Classes/Wrappers/GameObject/PriWrapper/)
-```cpp
+{{< highlight cpp "linenos=table" >}}
 void ClassName::onStatTickerMessage(void* params) {
     StatTickerParams pStruct = (StatTickerParams*)params;
     PriWrapper receiver = PriWrapper(pStruct->Receiver);
@@ -65,10 +65,10 @@ void ClassName::onStatEvent(void* params) {
     PriWrapper receiver = PriWrapper(pStruct->Receiver);
     StatEventWrapper statEvent = StatEventWrapper(pStruct->StatEvent);
 }
-```
+{{< /highlight>}}
 
 Now you probably want to do something special with a specific event. Get the event's name with `StatEventWrapper.GetEventName()`. This gets the stat's internal names regardless of game language. This is safest to use for string comparisons. For logging or displaying in the game's current language you can use `StatEventWrapper.GetLabel()`. Here's a list of all the `GetEventName`s. The only confusing one is that a "Demolish" is one demolition and a "Demolition" is an extermination. OwnGoal is a fun ticker event that does exactly what you'd expect, yet is never displayed anywhere in game
-```
+```cpp
 "Demolish"
 "Demolition"
 "Goal"
@@ -101,14 +101,15 @@ Now you probably want to do something special with a specific event. Get the eve
 ```
 
 Now I'll just put together a simple example to track if the main player is demoed. As always this is assuming this is using the template
-```cpp
+{{< highlight cpp "linenos=table" >}}
 // add to onload 
 gameWrapper->HookEventWithCallerPost<ServerWrapper>("Function TAGame.GFxHUD_TA.HandleStatTickerMessage",
     [this](ServerWrapper caller, void* params, std::string eventname) {
         onStatTickerMessage(params);
     });
-```
-```cpp
+{{< /highlight>}}
+
+{{< highlight cpp "linenos=table" >}}
 // defined elsewhere in .cpp
 void ClassName::onStatTickerMessage(void* params) {
     struct StatTickerParams {
@@ -142,6 +143,6 @@ void ClassName::onStatTickerMessage(void* params) {
         LOG("I was demoed!!! {} is toxic I'm uninstalling", receiver.GetPlayerName().ToString());
     }
 }
-```
+{{< /highlight>}}
 
 Hopefully all of this is useful to someone using stat events in the future!

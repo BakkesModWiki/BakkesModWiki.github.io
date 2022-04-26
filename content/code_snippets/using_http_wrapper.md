@@ -6,7 +6,7 @@ author: Martinn
 ## [HttpWrapper](/bakkesmod_api/Classes/Wrappers/Http/HttpWrapper/)
 
 ## Sending a simple http request with a string body
-```cpp
+{{< highlight cpp "linenos=table" >}}
 CurlRequest req;
 req.url = "https://httpbin.org/anything";
 req.body = "testing with body";
@@ -16,9 +16,9 @@ HttpWrapper::SendCurlRequest(req, [this](int code, std::string result)
 {
     LOG("Body result{}", result);
 });
-```
+{{< /highlight >}}
 ## Perform an HTTP/S JSON request
-```cpp
+{{< highlight cpp "linenos=table" >}}
 CurlRequest req;
 req.url = "https://httpbin.org/anything";
 req.body = R"T({
@@ -32,9 +32,9 @@ HttpWrapper::SendCurlJsonRequest(req, [this](int code, std::string result)
 {
     LOG("Json result{}", result);
 });
-```
+{{< /highlight >}}
 ## Sending a file over HTTP/S
-```cpp
+{{< highlight cpp "linenos=table" >}}
 {
 CurlRequest req;
 req.url = "https://httpbin.org/anything";
@@ -45,9 +45,9 @@ HttpWrapper::SendCurlRequest(req, L"file_output_test.txt", [this](int code, std:
 {
     LOG("sending file output body request: returned");
 });
-```
+{{< /highlight >}}
 ## Downloading a file with download progress callbacks and reading the raw downloaded data
-```cpp
+{{< highlight cpp "linenos=table" >}}
 CurlRequest req;
 req.url = "url";
 req.progress_function = [](double file_size, double downloaded, ...)
@@ -62,9 +62,9 @@ HttpWrapper::SendCurlRequest(req, [this](int code, char* data, size_t size)
     if (out_file)
         out_file.write(data, size);
 });
-```
+{{< /highlight >}}
 ## Downloading a file to the filesystem
-```cpp
+{{< highlight cpp "linenos=table" >}}
 CurlRequest req;
 req.url = "url";
 
@@ -73,4 +73,4 @@ HttpWrapper::SendCurlRequest(req, L"test_image.jpeg", [this](int code, std::wstr
 {
     LOG("file image download code: {}", code);
 });
-```
+{{< /highlight >}}

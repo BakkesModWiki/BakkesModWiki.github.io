@@ -6,7 +6,7 @@ author: Martinn
 
 Add this to your plugin header and you can hook with caller for "anything". This will do a blind cast, so make absolutely sure you're hooking the right function or you will crash. There are no type checks here!
 
-```cpp
+{{< highlight cpp "linenos=table" >}}
 template <typename T, typename std::enable_if<std::is_base_of<ObjectWrapper, T>::value>::type*>
 void GameWrapper::HookEventWithCaller(std::string eventName,
                                       std::function<void(T caller, void* params, std::string eventName)> callback)
@@ -17,10 +17,10 @@ void GameWrapper::HookEventWithCaller(std::string eventName,
     };
     HookEventWithCaller<ActorWrapper>(eventName, wrapped_callback);
 }
-```
+{{< /highlight >}}
 
 And this for Post
-```cpp
+{{< highlight cpp "linenos=table" >}}
 template <typename T, typename std::enable_if<std::is_base_of<ObjectWrapper, T>::value>::type*>
 void GameWrapper::HookEventWithCallerPost(std::string eventName,
                                       std::function<void(T caller, void* params, std::string eventName)> callback)
@@ -31,4 +31,4 @@ void GameWrapper::HookEventWithCallerPost(std::string eventName,
     };
     HookEventWithCallerPost<ActorWrapper>(eventName, wrapped_callback);
 }
-```
+{{< /highlight >}}
