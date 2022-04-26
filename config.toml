@@ -8,6 +8,7 @@ pluralizeListTitles = false
 pygmentsUseClasses = true
 pygmentsCodeFences = true
 disablePathToLower = true
+enableGitInfo = true
 
 # Needed for mermaid shortcodes
 [markup]
