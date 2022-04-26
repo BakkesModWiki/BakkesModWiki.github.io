@@ -21,7 +21,7 @@ enableGitInfo = true
 
 [params]
     geekdocRepo = "https://github.com/BakkesModWiki/BakkesModWiki.github.io"
-    geekdocEditPath = "blob/main/content"
+    geekdocEditPath = "blob/main"
     geekdocSearch = true
     geekdocSearchShowParent = true
     geekdocBackToTop = true
