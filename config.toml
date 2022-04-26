@@ -25,3 +25,4 @@ enableGitInfo = true
     geekdocSearch = true
     geekdocSearchShowParent = true
     geekdocBackToTop = true
+    geekdocLogo = "/img/bmbird.png"
