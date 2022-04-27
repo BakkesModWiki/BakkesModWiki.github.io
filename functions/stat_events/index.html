@@ -46,7 +46,7 @@ You need to hook some events to use stat events. This depends on your use case."
 <meta property="article:section" content="Functions" />
     <meta
       property="article:modified_time"
-      content="2022-04-25T23:40:20-07:00"
+      content="2022-04-26T19:21:53-07:00"
     />
 
 
@@ -67,7 +67,7 @@ You need to hook some events to use stat events. This depends on your use case."
       "url" : "https://bakkesmodwiki.github.io/functions/stat_events/",
       "headline": "Stat Events",
       "description": "Stat events are a great way to show a slightly more complicated plugin logic. They are fairly common to use, use multiple wrappers, event hooks, and have some unique caveats. Also I made a plugin with them so I know how they work. Hopefully this helps someone\nFirst add this include to the top of your .h\n#include \u0022bakkesmod\/wrappers\/GameObject\/Stats\/StatEventWrapper.h\u0022\nYou need to hook some events to use stat events. This depends on your use case.",
-      "wordCount" : "741",
+      "wordCount" : "765",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -78,7 +78,7 @@ You need to hook some events to use stat events. This depends on your use case."
       "copyrightYear" : "0001",
       "dateCreated": "0001-01-01T00:00:00.00Z",
       "datePublished": "0001-01-01T00:00:00.00Z",
-      "dateModified": "2022-04-25T23:40:20.00Z",
+      "dateModified": "2022-04-26T19:21:53.00Z",
       "publisher":{
           "@type":"Organization",
           "name": "BakkesMod Programming Wiki",
@@ -15444,7 +15444,7 @@ HandleStatEvent catches all stats, but only for the primary player. Depending on
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
 </div>
 </div></p>
-<p>Now you probably want to do something special with a specific event. Get the event&rsquo;s name with <code>StatEventWrapper.GetEventName()</code>. This gets the stat&rsquo;s internal names regardless of game language. This is safest to use for string comparisons. For logging or displaying in the game&rsquo;s current language you can use <code>StatEventWrapper.GetLabel()</code>. Here&rsquo;s a list of all the <code>GetEventName</code>s. The only confusing one is that a &ldquo;Demolish&rdquo; is one demolition and a &ldquo;Demolition&rdquo; is an extermination. OwnGoal is a fun ticker event that does exactly what you&rsquo;d expect, yet is never displayed anywhere in game</p>
+<p>Now you probably want to do something special with a specific event. Get the event&rsquo;s name with <code>StatEventWrapper.GetEventName()</code>. This gets the stat&rsquo;s internal names regardless of game language. This is safest to use for string comparisons. For logging or displaying in the game&rsquo;s current language you can use <code>StatEventWrapper.GetLabel()</code>. Here&rsquo;s a list of all the <code>GetEventName</code>s. The only confusing one is that a &ldquo;Demolish&rdquo; is one demolition and a &ldquo;Demolition&rdquo; is an extermination. OwnGoal is a fun ticker event that does exactly what you&rsquo;d expect, yet is never displayed anywhere in game. KO_ stats belong to the Knockout gamemode</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="s">&#34;Demolish&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="s">&#34;Demolition&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="s">&#34;Goal&#34;</span>
@@ -15474,6 +15474,23 @@ HandleStatEvent catches all stats, but only for the primary player. Depending on
 </span></span><span class="line"><span class="cl"><span class="s">&#34;HoopsSwishGoal&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="s">&#34;BicycleHit&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="s">&#34;OwnGoal&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;KO_Winner&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;KO_Knockout&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;KO_DoubleKO&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;KO_TripleKO&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;KO_Death&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;KO_LightHit&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;KO_HeavyHit&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;KO_AerialLightHit&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;KO_AerialHeavyHit&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;KO_HitTaken&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;KO_BlockTaken&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;KO_Grabbed&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;KO_Thrown&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;KO_LightBlock&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;KO_HeavyBlock&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;KO_PlayerGrabbed&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;KO_PlayerThrown&#34;</span>
 </span></span></code></pre></div><p>Now I&rsquo;ll just put together a simple example to track if the main player is demoed. As always this is assuming this is using the template
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
