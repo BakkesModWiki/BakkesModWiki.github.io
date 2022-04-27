@@ -67,7 +67,7 @@ void ClassName::onStatEvent(void* params) {
 }
 {{< /highlight>}}
 
-Now you probably want to do something special with a specific event. Get the event's name with `StatEventWrapper.GetEventName()`. This gets the stat's internal names regardless of game language. This is safest to use for string comparisons. For logging or displaying in the game's current language you can use `StatEventWrapper.GetLabel()`. Here's a list of all the `GetEventName`s. The only confusing one is that a "Demolish" is one demolition and a "Demolition" is an extermination. OwnGoal is a fun ticker event that does exactly what you'd expect, yet is never displayed anywhere in game
+Now you probably want to do something special with a specific event. Get the event's name with `StatEventWrapper.GetEventName()`. This gets the stat's internal names regardless of game language. This is safest to use for string comparisons. For logging or displaying in the game's current language you can use `StatEventWrapper.GetLabel()`. Here's a list of all the `GetEventName`s. The only confusing one is that a "Demolish" is one demolition and a "Demolition" is an extermination. OwnGoal is a fun ticker event that does exactly what you'd expect, yet is never displayed anywhere in game. KO_ stats belong to the Knockout gamemode
 ```cpp
 "Demolish"
 "Demolition"
@@ -98,6 +98,23 @@ Now you probably want to do something special with a specific event. Get the eve
 "HoopsSwishGoal"
 "BicycleHit"
 "OwnGoal"
+"KO_Winner"
+"KO_Knockout"
+"KO_DoubleKO"
+"KO_TripleKO"
+"KO_Death"
+"KO_LightHit"
+"KO_HeavyHit"
+"KO_AerialLightHit"
+"KO_AerialHeavyHit"
+"KO_HitTaken"
+"KO_BlockTaken"
+"KO_Grabbed"
+"KO_Thrown"
+"KO_LightBlock"
+"KO_HeavyBlock"
+"KO_PlayerGrabbed"
+"KO_PlayerThrown"
 ```
 
 Now I'll just put together a simple example to track if the main player is demoed. As always this is assuming this is using the template
