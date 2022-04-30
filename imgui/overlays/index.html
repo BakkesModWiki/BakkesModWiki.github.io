@@ -46,7 +46,7 @@ Some useful flags for an overlay are:" />
 <meta property="article:section" content="Imgui" />
     <meta
       property="article:modified_time"
-      content="2022-04-29T22:33:57-07:00"
+      content="2022-04-29T23:13:37-07:00"
     />
 
 
@@ -67,7 +67,7 @@ Some useful flags for an overlay are:" />
       "url" : "https://bakkesmodwiki.github.io/imgui/overlays/",
       "headline": "Overlays",
       "description": "Want the powerful flexibility of ImGui for a simple text overlay? Here’s how.\nFirst make sure you’ve uncommented all of the plugin window code in the template’s .h file. Then in your GUI file go to the render() function. For a custom overlay, you’ll need to prepare flags for it to appear the way you want it to.\nThese are found at line 744 of imgui.h\nSome useful flags for an overlay are:",
-      "wordCount" : "238",
+      "wordCount" : "252",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -78,7 +78,7 @@ Some useful flags for an overlay are:" />
       "copyrightYear" : "0001",
       "dateCreated": "0001-01-01T00:00:00.00Z",
       "datePublished": "0001-01-01T00:00:00.00Z",
-      "dateModified": "2022-04-29T22:33:57.00Z",
+      "dateModified": "2022-04-29T23:13:37.00Z",
       "publisher":{
           "@type":"Organization",
           "name": "BakkesMod Programming Wiki",
@@ -15432,14 +15432,18 @@ These are found at <a
 </span><span class="lnt">14
 </span><span class="lnt">15
 </span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">ImGuiWindowFlags</span> <span class="n">WindowFlags</span> <span class="o">=</span> <span class="n">ImGuiWindowFlags_NoTitleBar</span> <span class="o">|</span> <span class="n">ImGuiWindowFlags_NoScrollbar</span>
-</span></span><span class="line"><span class="cl">    <span class="o">|</span> <span class="n">ImGuiWindowFlags_AlwaysAutoResize</span> <span class="o">|</span> <span class="n">ImGuiWindowFlags_NoFocusOnAppearing</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="c1">// If moveOverlay is true, the user can move the overlay, when false the window no longer accepts input
-</span></span></span><span class="line"><span class="cl"><span class="c1">//  I find this useful to connect to a CVar and checkbox in the plugin&#39;s settings
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">ImGuiWindowFlags</span> <span class="n">WindowFlags</span> <span class="o">=</span> <span class="n">ImGuiWindowFlags_NoDecoration</span> <span class="o">|</span> <span class="n">ImGuiWindowFlags_AlwaysAutoResize</span> 
+</span></span><span class="line"><span class="cl">    <span class="o">|</span> <span class="n">ImGuiWindowFlags_NoFocusOnAppearing</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// If moveOverlay is true, the user can move the overlay 
+</span></span></span><span class="line"><span class="cl"><span class="c1">//  When false the overlay window no longer accepts input
+</span></span></span><span class="line"><span class="cl"><span class="c1">// I find this useful to connect to a CVar and checkbox in the plugin&#39;s settings
+</span></span></span><span class="line"><span class="cl"><span class="c1">//  You can allow a user to move the overlay only when they want
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">moveOverlay</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="n">WindowFlags</span> <span class="o">|=</span> <span class="n">ImGuiWindowFlags_NoDecoration</span> <span class="o">|</span> <span class="n">ImGuiWindowFlags_NoInputs</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">WindowFlags</span> <span class="o">|=</span> <span class="n">ImGuiWindowFlags_NoInputs</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// creates the window with the given flags
