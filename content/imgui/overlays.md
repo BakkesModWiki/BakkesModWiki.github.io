@@ -20,12 +20,14 @@ Some useful flags for an overlay are:
 
 Here's an example of starting a window with some flags
 {{< highlight cpp "linenos=table" >}}
-ImGuiWindowFlags WindowFlags = ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoScrollbar
-    | ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_NoFocusOnAppearing;
-// If moveOverlay is true, the user can move the overlay, when false the window no longer accepts input
-//  I find this useful to connect to a CVar and checkbox in the plugin's settings
+ImGuiWindowFlags WindowFlags = ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_AlwaysAutoResize 
+    | ImGuiWindowFlags_NoFocusOnAppearing;
+// If moveOverlay is true, the user can move the overlay 
+//  When false the overlay window no longer accepts input
+// I find this useful to connect to a CVar and checkbox in the plugin's settings
+//  You can allow a user to move the overlay only when they want
 if (!moveOverlay) {
-    WindowFlags |= ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoInputs;
+    WindowFlags |= ImGuiWindowFlags_NoInputs;
 }
 
 // creates the window with the given flags
