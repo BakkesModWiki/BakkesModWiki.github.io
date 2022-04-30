@@ -16,6 +16,7 @@ This is a temporary development repo for the new BakkesMod Programming Wiki!
 1. Replace the files in /themes/hugo-geekdoc with the new version
 1. Remove the svg favicon option from  
 /themes/hugo-geekdoc/layouts/partials/head/favicons.html
+1. Ensure that the page author markdown is untouched in themes\hugo-geekdoc\layouts\_default\single.html
 1. Check for any breaking changes in previous releases and fix accordingly
 1. Update the version listed in this README
 1. Push new version

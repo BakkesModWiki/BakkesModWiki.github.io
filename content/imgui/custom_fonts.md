@@ -2,7 +2,7 @@
 title: Custom Fonts
 weight: 1
 author: ubelhj
-collaborators: martinn
+collaborators: Martinn
 ---
 
 Want to add a custom fancy font to your plugin? It's really easy! You can use any .ttf font, although many have copyrights. Check out [https://fonts.google.com/](https://fonts.google.com/) for a bunch of free fonts to use.
