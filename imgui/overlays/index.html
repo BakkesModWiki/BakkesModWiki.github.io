@@ -46,7 +46,7 @@ Some useful flags for an overlay are:" />
 <meta property="article:section" content="Imgui" />
     <meta
       property="article:modified_time"
-      content="2022-04-29T23:13:37-07:00"
+      content="2022-05-02T12:49:02-07:00"
     />
 
 
@@ -67,7 +67,7 @@ Some useful flags for an overlay are:" />
       "url" : "https://bakkesmodwiki.github.io/imgui/overlays/",
       "headline": "Overlays",
       "description": "Want the powerful flexibility of ImGui for a simple text overlay? Here’s how.\nFirst make sure you’ve uncommented all of the plugin window code in the template’s .h file. Then in your GUI file go to the render() function. For a custom overlay, you’ll need to prepare flags for it to appear the way you want it to.\nThese are found at line 744 of imgui.h\nSome useful flags for an overlay are:",
-      "wordCount" : "252",
+      "wordCount" : "280",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -78,7 +78,7 @@ Some useful flags for an overlay are:" />
       "copyrightYear" : "0001",
       "dateCreated": "0001-01-01T00:00:00.00Z",
       "datePublished": "0001-01-01T00:00:00.00Z",
-      "dateModified": "2022-04-29T23:13:37.00Z",
+      "dateModified": "2022-05-02T12:49:02.00Z",
       "publisher":{
           "@type":"Organization",
           "name": "BakkesMod Programming Wiki",
@@ -15455,6 +15455,19 @@ These are found at <a
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// Do your overlay rendering with full ImGui here!
 </span></span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<p>If you don&rsquo;t want the overlay to close when a user presses esc, change this function to return false
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">bool</span> <span class="n">PluginName</span><span class="o">::</span><span class="n">IsActiveOverlay</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
 </div>
 </div></p>
 
