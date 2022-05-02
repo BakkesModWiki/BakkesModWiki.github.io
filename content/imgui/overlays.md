@@ -39,3 +39,10 @@ if (!ImGui::Begin(menuTitle_.c_str(), &isWindowOpen_, WindowFlags))
 
 // Do your overlay rendering with full ImGui here!
 {{< /highlight >}}
+
+If you don't want the overlay to close when a user presses esc, change this function to return false 
+{{< highlight cpp "linenos=table" >}}
+bool PluginName::IsActiveOverlay() {
+    return false;
+}
+{{< /highlight >}}
