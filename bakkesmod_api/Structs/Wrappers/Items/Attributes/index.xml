@@ -11,10 +11,10 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/Items/Attributes/SpecialEdition/</guid>
-      <description>View Implementation   Info on an item&#39;s special edition. Not sure where to obtain
- int productId      Default value: none
-int editionId      Default value: none
-std::string label      Default value: none</description>
+      <description>View Implementation Info on an item&#39;s special edition. Not sure where to obtain
+int productId Default value: none
+int editionId Default value: none
+std::string label Default value: none</description>
     </item>
     
   </channel>

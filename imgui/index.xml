@@ -13,7 +13,7 @@
       <guid>https://bakkesmodwiki.github.io/imgui/color_picker/</guid>
       <description>You&amp;rsquo;ve got a super cool looking overlay, but you want the user to change the color. Here&amp;rsquo;s some code for a super nice color picker!
 First, you need to be rendering something on the canvas. Let&amp;rsquo;s say it&amp;rsquo;s a single chunk of text. Like this example.
-Next, make a cvar for color. This is really simple. The default value can be encoded with hex 1  cvarManager-&amp;gt;registerCvar(&amp;#34;cool_color&amp;#34;, &amp;#34;#FFFFFF&amp;#34;, &amp;#34;color of overlay&amp;#34;);   Now in the canvas render, use the new color 1 2 3 4 5 6 7  CVarWrapper textColorVar = cvarManager-&amp;gt;getCvar(&amp;#34;cool_color&amp;#34;); if (!</description>
+Next, make a cvar for color. This is really simple. The default value can be encoded with hex 1 cvarManager-&amp;gt;registerCvar(&amp;#34;cool_color&amp;#34;, &amp;#34;#FFFFFF&amp;#34;, &amp;#34;color of overlay&amp;#34;); Now in the canvas render, use the new color 1 2 3 4 5 6 7 CVarWrapper textColorVar = cvarManager-&amp;gt;getCvar(&amp;#34;cool_color&amp;#34;); if (!</description>
     </item>
     
     <item>
@@ -23,8 +23,7 @@ Next, make a cvar for color. This is really simple. The default value can be enc
       
       <guid>https://bakkesmodwiki.github.io/imgui/custom_fonts/</guid>
       <description>Want to add a custom fancy font to your plugin? It&amp;rsquo;s really easy! You can use any .ttf font, although many have copyrights. Check out https://fonts.google.com/ for a bunch of free fonts to use.
-First, make a pointer to save your font. Do this in your .h as a variable 1  ImFont* myFont;  
-Next load the font using the GUIManager. This can be done pretty much anywhere, but I recommend using your OnLoad or SetImGuiContext functions.</description>
+First, make a pointer to save your font. Do this in your .h as a variable 1 ImFont* myFont; Next load the font using the GUIManager. This can be done pretty much anywhere, but I recommend using your OnLoad or SetImGuiContext functions.</description>
     </item>
     
     <item>

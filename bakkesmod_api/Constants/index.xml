@@ -11,8 +11,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Constants/BAKKESMOD_PLUGIN_API_VERSION/</guid>
-      <description>View Implementation   Current plugin API Version
- BAKKESMOD_PLUGIN_API_VERSION = 95</description>
+      <description>View Implementation Current plugin API Version
+BAKKESMOD_PLUGIN_API_VERSION = 95</description>
     </item>
     
     <item>
@@ -21,8 +21,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Constants/CONST_DegToUnrRot/</guid>
-      <description>View Implementation   Multiply a degree (from 0-360°) by this value to get a rotation value to pass to a Rotator
- CONST_DegToUnrRot = 182.0444f</description>
+      <description>View Implementation Multiply a degree (from 0-360°) by this value to get a rotation value to pass to a Rotator
+CONST_DegToUnrRot = 182.0444f</description>
     </item>
     
     <item>
@@ -31,8 +31,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Constants/CONST_PI_D/</guid>
-      <description>View Implementation   The value of Pi as a double
- CONST_PI_D = 3.14159265358979323846</description>
+      <description>View Implementation The value of Pi as a double
+CONST_PI_D = 3.14159265358979323846</description>
     </item>
     
     <item>
@@ -41,8 +41,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Constants/CONST_PI_F/</guid>
-      <description>View Implementation   The value of Pi as a float
- CONST_PI_F = 3.1415926f</description>
+      <description>View Implementation The value of Pi as a float
+CONST_PI_F = 3.1415926f</description>
     </item>
     
     <item>
@@ -51,8 +51,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Constants/CONST_RadToUnrRot/</guid>
-      <description>View Implementation   Multiply a radian (from 0-2π) by this value to get a rotation value to pass to a Rotator
- CONST_RadToUnrRot = 10430.3783504704527f</description>
+      <description>View Implementation Multiply a radian (from 0-2π) by this value to get a rotation value to pass to a Rotator
+CONST_RadToUnrRot = 10430.3783504704527f</description>
     </item>
     
     <item>
@@ -61,8 +61,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Constants/CONST_UnrRotToRad/</guid>
-      <description>View Implementation   Multiply a rotation value from a Rotator by this value to get radians (from 0-2π)
- CONST_UnrRotToRad = 0.00009587379924285f</description>
+      <description>View Implementation Multiply a rotation value from a Rotator by this value to get radians (from 0-2π)
+CONST_UnrRotToRad = 0.00009587379924285f</description>
     </item>
     
     <item>
@@ -71,8 +71,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Constants/quat_norm/</guid>
-      <description>View Implementation   Used in linmath.h
- quat_norm = vec4_norm</description>
+      <description>View Implementation Used in linmath.h
+quat_norm = vec4_norm</description>
     </item>
     
   </channel>

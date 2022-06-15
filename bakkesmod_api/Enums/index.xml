@@ -11,11 +11,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/CARBODY/</guid>
-      <description>View Implementation   A list of car body IDs. This is really outdated (early 2017?), so you&#39;ll likely need to find or write a new one for any plugins you make. If you make one make a code snippet and we&#39;ll link to it from here
-   CAR_BACKFIRE = 21
-  CAR_BREAKOUT = 22
-  CAR_BREAKOUTTYPES = 1416
-  CAR_OCTANE = 23</description>
+      <description>View Implementation A list of car body IDs. This is really outdated (early 2017?), so you&#39;ll likely need to find or write a new one for any plugins you make. If you make one make a code snippet and we&#39;ll link to it from here
+CAR_BACKFIRE = 21
+CAR_BREAKOUT = 22
+CAR_BREAKOUTTYPES = 1416
+CAR_OCTANE = 23
+CAR_OCTANEZSR = 1568
+CAR_PALADIN = 24
+CAR_ROADHOG = 25
+CAR_ROADHOGXL = 1300</description>
     </item>
     
     <item>
@@ -24,16 +28,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/NOTIFIER_PERMISSION/</guid>
-      <description>  View Implementation      PERMISSION_ALL = 0
-  PERMISSION_MENU = (1 &amp;lt;&amp;lt; 0)
-  PERMISSION_SOCCAR = (1 &amp;lt;&amp;lt; 1)
-  PERMISSION_FREEPLAY = (1 &amp;lt;&amp;lt; 2)
-  PERMISSION_CUSTOM_TRAINING = (1 &amp;lt;&amp;lt; 3)
-  PERMISSION_ONLINE = (1 &amp;lt;&amp;lt; 4)
-  PERMISSION_PAUSEMENU_CLOSED = (1 &amp;lt;&amp;lt; 5)
-  PERMISSION_REPLAY = (1 &amp;lt;&amp;lt; 6)
-  PERMISSION_OFFLINE = (1 &amp;lt;&amp;lt; 7)
-  </description>
+      <description>View Implementation PERMISSION_ALL = 0
+PERMISSION_MENU = (1 &amp;lt;&amp;lt; 0)
+PERMISSION_SOCCAR = (1 &amp;lt;&amp;lt; 1)
+PERMISSION_FREEPLAY = (1 &amp;lt;&amp;lt; 2)
+PERMISSION_CUSTOM_TRAINING = (1 &amp;lt;&amp;lt; 3)
+PERMISSION_ONLINE = (1 &amp;lt;&amp;lt; 4)
+PERMISSION_PAUSEMENU_CLOSED = (1 &amp;lt;&amp;lt; 5)
+PERMISSION_REPLAY = (1 &amp;lt;&amp;lt; 6)
+PERMISSION_OFFLINE = (1 &amp;lt;&amp;lt; 7)</description>
     </item>
     
     <item>
@@ -42,18 +45,20 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/OnlinePlatform/</guid>
-      <description>View Implementation   Ids for platforms players can be playing on
-   OnlinePlatform_Unknown = 0
-  OnlinePlatform_Steam = 1
-  OnlinePlatform_PS4 = 2
-  OnlinePlatform_PS3 = 3
-  OnlinePlatform_Dingo = 4
-  OnlinePlatform_QQ = 5
-  OnlinePlatform_OldNNX = 6
-  OnlinePlatform_NNX = 7
-  OnlinePlatform_PsyNet = 8
-  OnlinePlatform_Deleted = 9
-  OnlinePlatform_WeGame = 10</description>
+      <description>View Implementation Ids for platforms players can be playing on
+OnlinePlatform_Unknown = 0
+OnlinePlatform_Steam = 1
+OnlinePlatform_PS4 = 2
+OnlinePlatform_PS3 = 3
+OnlinePlatform_Dingo = 4
+OnlinePlatform_QQ = 5
+OnlinePlatform_OldNNX = 6
+OnlinePlatform_NNX = 7
+OnlinePlatform_PsyNet = 8
+OnlinePlatform_Deleted = 9
+OnlinePlatform_WeGame = 10
+OnlinePlatform_Epic = 11
+OnlinePlatform_MAX = 12</description>
     </item>
     
     <item>
@@ -62,19 +67,18 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/Playlist/</guid>
-      <description>  View Implementation      CASUAL_STANDARD = 0
-  CASUAL_DOUBLES = 1
-  CASUAL_DUELS = 2
-  CASUAL_CHAOS = 3
-  RANKED_STANDARD = 4
-  RANKED_DOUBLES = 5
-  RANKED_DUELS = 6
-  AUTO_TOURNAMENT = 12
-  EXTRAS_RUMBLE = 13
-  EXTRAS_DROPSHOT = 14
-  EXTRAS_HOOPS = 15
-  EXTRAS_SNOWDAY = 16
-  </description>
+      <description>View Implementation CASUAL_STANDARD = 0
+CASUAL_DOUBLES = 1
+CASUAL_DUELS = 2
+CASUAL_CHAOS = 3
+RANKED_STANDARD = 4
+RANKED_DOUBLES = 5
+RANKED_DUELS = 6
+AUTO_TOURNAMENT = 12
+EXTRAS_RUMBLE = 13
+EXTRAS_DROPSHOT = 14
+EXTRAS_HOOPS = 15
+EXTRAS_SNOWDAY = 16</description>
     </item>
     
     <item>
@@ -83,10 +87,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/PlaylistCategory/</guid>
-      <description>  View Implementation      CASUAL = 0
-  RANKED = 1
-  EXTRAS = 2
-  </description>
+      <description>View Implementation CASUAL = 0
+RANKED = 1
+EXTRAS = 2</description>
     </item>
     
     <item>
@@ -95,19 +98,29 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/PlaylistIds/</guid>
-      <description>View Implementation      Unknown = -1337
-  Casual = 0
-  Duel = 1
-  Doubles = 2
-  Standard = 3
-  Chaos = 4
-  PrivateMatch = 6
-  Season = 7
-  OfflineSplitscreen = 8
-  Training = 9
-  RankedSoloDuel = 10
-  RankedTeamDoubles = 11
-  RankedStandard = 13</description>
+      <description>View Implementation Unknown = -1337
+Casual = 0
+Duel = 1
+Doubles = 2
+Standard = 3
+Chaos = 4
+PrivateMatch = 6
+Season = 7
+OfflineSplitscreen = 8
+Training = 9
+RankedSoloDuel = 10
+RankedTeamDoubles = 11
+RankedStandard = 13
+SnowDayPromotion = 15
+Experimental = 16
+BasketballDoubles = 17
+Rumble = 18
+Workshop = 19
+UGCTrainingEditor = 20
+UGCTraining = 21
+Tournament = 22
+Breakout = 23
+FaceIt = 26</description>
     </item>
     
     <item>
@@ -116,14 +129,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/PLUGINTYPE/</guid>
-      <description>  View Implementation      PLUGINTYPE_FREEPLAY = 0x01
-  PLUGINTYPE_CUSTOM_TRAINING = 0x02
-  PLUGINTYPE_SPECTATOR = 0x04
-  PLUGINTYPE_BOTAI = 0x08
-  PLUGINTYPE_REPLAY = 0x10
-  PLUGINTYPE_THREADED = 0x20
-  PLUGINTYPE_THREADEDUNLOAD = 0x40
-  </description>
+      <description>View Implementation PLUGINTYPE_FREEPLAY = 0x01
+PLUGINTYPE_CUSTOM_TRAINING = 0x02
+PLUGINTYPE_SPECTATOR = 0x04
+PLUGINTYPE_BOTAI = 0x08
+PLUGINTYPE_REPLAY = 0x10
+PLUGINTYPE_THREADED = 0x20
+PLUGINTYPE_THREADEDUNLOAD = 0x40</description>
     </item>
     
     <item>
@@ -132,19 +144,18 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/PRODUCTQUALITY/</guid>
-      <description>  View Implementation   Possible item rarities
-   Common = 0
-  Uncommon = 1
-  Rare = 2
-  VeryRare = 3
-  Import = 4
-  Exotic = 5
-  BlackMarket = 6
-  Premium = 7
-  Limited = 8
-  Legacy = 9
-  MAX = 10
-  </description>
+      <description>View Implementation Possible item rarities
+Common = 0
+Uncommon = 1
+Rare = 2
+VeryRare = 3
+Import = 4
+Exotic = 5
+BlackMarket = 6
+Premium = 7
+Limited = 8
+Legacy = 9
+MAX = 10</description>
     </item>
     
     <item>
@@ -153,18 +164,17 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/Region/</guid>
-      <description>  View Implementation      USE = 0
-  EU = 1
-  USW = 2
-  ASC = 3
-  ASM = 4
-  JPN = 5
-  ME = 6
-  OCE = 7
-  SAF = 8
-  SAM = 9
-  IND = 10
-  </description>
+      <description>View Implementation USE = 0
+EU = 1
+USW = 2
+ASC = 3
+ASM = 4
+JPN = 5
+ME = 6
+OCE = 7
+SAF = 8
+SAM = 9
+IND = 10</description>
     </item>
     
     <item>
@@ -173,13 +183,12 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/ToastType/</guid>
-      <description>  View Implementation   Possible colors for Toasts.
+      <description>View Implementation Possible colors for Toasts.
 ToastType_Info is black, ToastType_OK is green, ToastType_Warning is orange, and ToastType_Error is red
-   ToastType_Info = 0
-  ToastType_OK = 1
-  ToastType_Warning = 2
-  ToastType_Error = 3
-  </description>
+ToastType_Info = 0
+ToastType_OK = 1
+ToastType_Warning = 2
+ToastType_Error = 3</description>
     </item>
     
     <item>
@@ -188,10 +197,9 @@ ToastType_Info is black, ToastType_OK is green, ToastType_Warning is orange, and
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/TRADEHOLD/</guid>
-      <description>  View Implementation      TRADEHOLD_P2P = -2
-  TRADEHOLD_ALL = -1
-  TRADEHOLD_NONE = 0
-  </description>
+      <description>View Implementation TRADEHOLD_P2P = -2
+TRADEHOLD_ALL = -1
+TRADEHOLD_NONE = 0</description>
     </item>
     
     <item>
@@ -200,15 +208,14 @@ ToastType_Info is black, ToastType_OK is green, ToastType_Warning is orange, and
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/UNLOCKMETHOD/</guid>
-      <description>  View Implementation   Ways an item can be earned
-   Default = 0
-  Drop = 1
-  Special = 2
-  Reward = 3
-  DLC = 4
-  Never = 5
-  MAX_ = 6
-  </description>
+      <description>View Implementation Ways an item can be earned
+Default = 0
+Drop = 1
+Special = 2
+Reward = 3
+DLC = 4
+Never = 5
+MAX_ = 6</description>
     </item>
     
   </channel>

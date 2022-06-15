@@ -52,8 +52,8 @@ Yet again we have the CoolPlugin from Plugin Variables and we want to add a butt
       
       <guid>https://bakkesmodwiki.github.io/plugin_tutorial/best_practices/</guid>
       <description>These practices are super important to follow to make sure you don&amp;rsquo;t accidentally crash the game.
- Nullchecking
-Any BakkesMod wrapper is a pointer under the hood, and that pointer could be null! If you try and use a null wrapper, you&amp;rsquo;ll crash. This is super simple, just make sure you nullcheck every time you obtain a new wrapper.  1 2 3 4 5 6 7 8 9 10 11 12  ServerWrapper server = gameWrapper-&amp;gt;GetCurrentGameState(); // Just check if the server is null if (!</description>
+Nullchecking
+Any BakkesMod wrapper is a pointer under the hood, and that pointer could be null! If you try and use a null wrapper, you&amp;rsquo;ll crash. This is super simple, just make sure you nullcheck every time you obtain a new wrapper. 1 2 3 4 5 6 7 8 9 10 11 12 ServerWrapper server = gameWrapper-&amp;gt;GetCurrentGameState(); // Just check if the server is null if (!</description>
     </item>
     
   </channel>

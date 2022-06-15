@@ -5,11 +5,11 @@
 <meta name="referrer" content="no-referrer" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="color-scheme" content="light dark" />
-<meta name="generator" content="Hugo 0.98.0" />
+<meta name="generator" content="Hugo 0.100.2" />
 
 
   <meta name="description" content="Add this to your plugin header and you can hook with caller for &ldquo;anything&rdquo;. This will do a blind cast, so make absolutely sure you&rsquo;re hooking the right function or you will crash. There are no type checks here!
-1 2 3 4 5 6 7 8 9 10  template &lt;typename T, typename std::enable_if&lt;std::is_base_of&lt;ObjectWrapper, T&gt;::value&gt;::type*&gt; void GameWrapper::HookEventWithCaller(std::string eventName, std::function&lt;void(T caller, void* params, std::string eventName)&gt; callback) { auto wrapped_callback = [callback](ActorWrapper caller, void* params, std::string eventName) { callback(T(caller." />
+1 2 3 4 5 6 7 8 9 10 template &lt;typename T, typename std::enable_if&lt;std::is_base_of&lt;ObjectWrapper, T&gt;::value&gt;::type*&gt; void GameWrapper::HookEventWithCaller(std::string eventName, std::function&lt;void(T caller, void* params, std::string eventName)&gt; callback) { auto wrapped_callback = [callback](ActorWrapper caller, void* params, std::string eventName) { callback(T(caller." />
 
     <title>Hook Event With Any Caller | BakkesMod Programming Wiki</title>
 
@@ -35,7 +35,7 @@
   />
   <meta property="og:site_name" content="BakkesMod Programming Wiki" />
   <meta property="og:description" content="Add this to your plugin header and you can hook with caller for “anything”. This will do a blind cast, so make absolutely sure you’re hooking the right function or you will crash. There are no type checks here!
-1 2 3 4 5 6 7 8 9 10  template &lt;typename T, typename std::enable_if&lt;std::is_base_of&lt;ObjectWrapper, T&gt;::value&gt;::type*&gt; void GameWrapper::HookEventWithCaller(std::string eventName, std::function&lt;void(T caller, void* params, std::string eventName)&gt; callback) { auto wrapped_callback = [callback](ActorWrapper caller, void* params, std::string eventName) { callback(T(caller." />
+1 2 3 4 5 6 7 8 9 10 template &lt;typename T, typename std::enable_if&lt;std::is_base_of&lt;ObjectWrapper, T&gt;::value&gt;::type*&gt; void GameWrapper::HookEventWithCaller(std::string eventName, std::function&lt;void(T caller, void* params, std::string eventName)&gt; callback) { auto wrapped_callback = [callback](ActorWrapper caller, void* params, std::string eventName) { callback(T(caller." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bakkesmodwiki.github.io/functions/hook_event_with_any_caller/" />
 
@@ -49,7 +49,7 @@
   <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Hook Event With Any Caller" />
   <meta name="twitter:description" content="Add this to your plugin header and you can hook with caller for “anything”. This will do a blind cast, so make absolutely sure you’re hooking the right function or you will crash. There are no type checks here!
-1 2 3 4 5 6 7 8 9 10  template &lt;typename T, typename std::enable_if&lt;std::is_base_of&lt;ObjectWrapper, T&gt;::value&gt;::type*&gt; void GameWrapper::HookEventWithCaller(std::string eventName, std::function&lt;void(T caller, void* params, std::string eventName)&gt; callback) { auto wrapped_callback = [callback](ActorWrapper caller, void* params, std::string eventName) { callback(T(caller." />
+1 2 3 4 5 6 7 8 9 10 template &lt;typename T, typename std::enable_if&lt;std::is_base_of&lt;ObjectWrapper, T&gt;::value&gt;::type*&gt; void GameWrapper::HookEventWithCaller(std::string eventName, std::function&lt;void(T caller, void* params, std::string eventName)&gt; callback) { auto wrapped_callback = [callback](ActorWrapper caller, void* params, std::string eventName) { callback(T(caller." />
 
 
   <script type="application/ld+json">
@@ -60,7 +60,7 @@
       "name": "Hook Event With Any Caller",
       "url" : "https://bakkesmodwiki.github.io/functions/hook_event_with_any_caller/",
       "headline": "Hook Event With Any Caller",
-      "description": "Add this to your plugin header and you can hook with caller for “anything”. This will do a blind cast, so make absolutely sure you’re hooking the right function or you will crash. There are no type checks here!\n1 2 3 4 5 6 7 8 9 10  template \u003ctypename T, typename std::enable_if\u003cstd::is_base_of\u003cObjectWrapper, T\u003e::value\u003e::type*\u003e void GameWrapper::HookEventWithCaller(std::string eventName, std::function\u003cvoid(T caller, void* params, std::string eventName)\u003e callback) { auto wrapped_callback = [callback](ActorWrapper caller, void* params, std::string eventName) { callback(T(caller.",
+      "description": "Add this to your plugin header and you can hook with caller for “anything”. This will do a blind cast, so make absolutely sure you’re hooking the right function or you will crash. There are no type checks here!\n1 2 3 4 5 6 7 8 9 10 template \u003ctypename T, typename std::enable_if\u003cstd::is_base_of\u003cObjectWrapper, T\u003e::value\u003e::type*\u003e void GameWrapper::HookEventWithCaller(std::string eventName, std::function\u003cvoid(T caller, void* params, std::string eventName)\u003e callback) { auto wrapped_callback = [callback](ActorWrapper caller, void* params, std::string eventName) { callback(T(caller.",
       "wordCount" : "131",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
