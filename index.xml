@@ -79,8 +79,8 @@ Note these instructions are designed for Windows 10 (and presumably 11). Rocket 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/functions/using_function_hooks/</guid>
-      <description>Function hooks are a powerful part of BakkesMod. After a function is hooked, any time it is called by Rocket League, your code is called as well.
-There are multiple types of hooks. First are the two simpler ones. gameWrapper is a GameWrapper and will be accessible from any point in your code. 1 2 3 4 5 6 7 8 9 10 gameWrapper-&amp;gt;HookEvent(&amp;#34;Function TAGame.Car_TA.SetVehicleInput&amp;#34;, [this](std::string eventName) { // Your Code here // Call another function or just do your things here }); gameWrapper-&amp;gt;HookEventPost(&amp;#34;Function TAGame.</description>
+      <description>Function hooks are a powerful part of BakkesMod. After a function is hooked, any time it is called by Rocket League, your code is called as well. Many useful ones are documented in Commonly Hooked Functions. If you want to better understand them or hook a function that&amp;rsquo;s undocumented, hopefully this page will help.
+There are multiple types of hooks. First are the two simpler ones. gameWrapper is a GameWrapper and will be accessible from any point in your code.</description>
     </item>
     
     <item>

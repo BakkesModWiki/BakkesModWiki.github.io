@@ -5,11 +5,11 @@
 <meta name="referrer" content="no-referrer" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="color-scheme" content="light dark" />
-<meta name="generator" content="Hugo 0.100.2" />
+<meta name="generator" content="Hugo 0.101.0" />
 
 
-  <meta name="description" content="Function hooks are a powerful part of BakkesMod. After a function is hooked, any time it is called by Rocket League, your code is called as well.
-There are multiple types of hooks. First are the two simpler ones. gameWrapper is a GameWrapper and will be accessible from any point in your code. 1 2 3 4 5 6 7 8 9 10 gameWrapper-&gt;HookEvent(&#34;Function TAGame.Car_TA.SetVehicleInput&#34;, [this](std::string eventName) { // Your Code here // Call another function or just do your things here }); gameWrapper-&gt;HookEventPost(&#34;Function TAGame." />
+  <meta name="description" content="Function hooks are a powerful part of BakkesMod. After a function is hooked, any time it is called by Rocket League, your code is called as well. Many useful ones are documented in Commonly Hooked Functions. If you want to better understand them or hook a function that&rsquo;s undocumented, hopefully this page will help.
+There are multiple types of hooks. First are the two simpler ones. gameWrapper is a GameWrapper and will be accessible from any point in your code." />
 
     <title>Using Function Hooks | BakkesMod Programming Wiki</title>
 
@@ -34,22 +34,22 @@ There are multiple types of hooks. First are the two simpler ones. gameWrapper i
     content="Using Function Hooks"
   />
   <meta property="og:site_name" content="BakkesMod Programming Wiki" />
-  <meta property="og:description" content="Function hooks are a powerful part of BakkesMod. After a function is hooked, any time it is called by Rocket League, your code is called as well.
-There are multiple types of hooks. First are the two simpler ones. gameWrapper is a GameWrapper and will be accessible from any point in your code. 1 2 3 4 5 6 7 8 9 10 gameWrapper-&gt;HookEvent(&#34;Function TAGame.Car_TA.SetVehicleInput&#34;, [this](std::string eventName) { // Your Code here // Call another function or just do your things here }); gameWrapper-&gt;HookEventPost(&#34;Function TAGame." />
+  <meta property="og:description" content="Function hooks are a powerful part of BakkesMod. After a function is hooked, any time it is called by Rocket League, your code is called as well. Many useful ones are documented in Commonly Hooked Functions. If you want to better understand them or hook a function that’s undocumented, hopefully this page will help.
+There are multiple types of hooks. First are the two simpler ones. gameWrapper is a GameWrapper and will be accessible from any point in your code." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bakkesmodwiki.github.io/functions/using_function_hooks/" />
 
 <meta property="article:section" content="Functions" />
     <meta
       property="article:modified_time"
-      content="2022-04-25T23:40:20-07:00"
+      content="2022-06-29T13:48:58-07:00"
     />
 
 
   <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Using Function Hooks" />
-  <meta name="twitter:description" content="Function hooks are a powerful part of BakkesMod. After a function is hooked, any time it is called by Rocket League, your code is called as well.
-There are multiple types of hooks. First are the two simpler ones. gameWrapper is a GameWrapper and will be accessible from any point in your code. 1 2 3 4 5 6 7 8 9 10 gameWrapper-&gt;HookEvent(&#34;Function TAGame.Car_TA.SetVehicleInput&#34;, [this](std::string eventName) { // Your Code here // Call another function or just do your things here }); gameWrapper-&gt;HookEventPost(&#34;Function TAGame." />
+  <meta name="twitter:description" content="Function hooks are a powerful part of BakkesMod. After a function is hooked, any time it is called by Rocket League, your code is called as well. Many useful ones are documented in Commonly Hooked Functions. If you want to better understand them or hook a function that’s undocumented, hopefully this page will help.
+There are multiple types of hooks. First are the two simpler ones. gameWrapper is a GameWrapper and will be accessible from any point in your code." />
 
 
   <script type="application/ld+json">
@@ -60,8 +60,8 @@ There are multiple types of hooks. First are the two simpler ones. gameWrapper i
       "name": "Using Function Hooks",
       "url" : "https://bakkesmodwiki.github.io/functions/using_function_hooks/",
       "headline": "Using Function Hooks",
-      "description": "Function hooks are a powerful part of BakkesMod. After a function is hooked, any time it is called by Rocket League, your code is called as well.\nThere are multiple types of hooks. First are the two simpler ones. gameWrapper is a GameWrapper and will be accessible from any point in your code. 1 2 3 4 5 6 7 8 9 10 gameWrapper-\u003eHookEvent(\u0022Function TAGame.Car_TA.SetVehicleInput\u0022, [this](std::string eventName) { \/\/ Your Code here \/\/ Call another function or just do your things here }); gameWrapper-\u003eHookEventPost(\u0022Function TAGame.",
-      "wordCount" : "392",
+      "description": "Function hooks are a powerful part of BakkesMod. After a function is hooked, any time it is called by Rocket League, your code is called as well. Many useful ones are documented in Commonly Hooked Functions. If you want to better understand them or hook a function that’s undocumented, hopefully this page will help.\nThere are multiple types of hooks. First are the two simpler ones. gameWrapper is a GameWrapper and will be accessible from any point in your code.",
+      "wordCount" : "454",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -72,7 +72,7 @@ There are multiple types of hooks. First are the two simpler ones. gameWrapper i
       "copyrightYear" : "0001",
       "dateCreated": "0001-01-01T00:00:00.00Z",
       "datePublished": "0001-01-01T00:00:00.00Z",
-      "dateModified": "2022-04-25T23:40:20.00Z",
+      "dateModified": "2022-06-29T13:48:58.00Z",
       "publisher":{
           "@type":"Organization",
           "name": "BakkesMod Programming Wiki",
@@ -15392,7 +15392,11 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
     class="gdoc-markdown gdoc-markdown__align--left"
   >
     <h1>Using Function Hooks</h1>
-    <p>Function hooks are a powerful part of BakkesMod. After a function is hooked, any time it is called by Rocket League, your code is called as well.</p>
+    <p>Function hooks are a powerful part of BakkesMod. After a function is hooked, any time it is called by Rocket League, your code is called as well. Many useful ones are documented in <a
+  class="gdoc-markdown__link"
+  href="/functions/commonly_hooked_functions/"
+  
+>Commonly Hooked Functions</a>. If you want to better understand them or hook a function that&rsquo;s undocumented, hopefully this page will help.</p>
 <p>There are multiple types of hooks. First are the two simpler ones. <code>gameWrapper</code> is a <a
   class="gdoc-markdown__link"
   href="/bakkesmod_api/Classes/Wrappers/GameWrapper/"
@@ -15456,8 +15460,21 @@ They return a <code>std::string</code> which is the name of the calling function
   class="gdoc-markdown__link"
   href="/bakkesmod_api/Classes/Wrappers/GameObject/CarWrapper/"
   
->CarWrapper</a> for example
-They also provide a <code>void *</code> pointer. This points at the location of any parameters provided to the function. These aren&rsquo;t well documented, and are hard to guess, so feel free to ask about them if you think you need them.</p>
+>CarWrapper</a> for example. The image below breaks up a function call into parts. The class is GameEvent_TA, which can be cast to a <a
+  class="gdoc-markdown__link"
+  href="/bakkesmod_api/Classes/Wrappers/GameEvent/ServerWrapper/"
+  
+>ServerWrapper</a>.<br>
+<img
+  src="/img/functionnaming.png"
+  alt="Function naming convention"
+  
+/><br>
+The hook also provides a <code>void *</code> pointer. This points at the location of any parameters provided to the function. These aren&rsquo;t well documented, and are hard to guess, so feel free to ask about them if you think you need them. A couple useful functions and parameters can be found in <a
+  class="gdoc-markdown__link"
+  href="/functions/commonly_hooked_functions/"
+  
+>Commonly Hooked Functions</a></p>
 <p>For example <code>Function TAGame.Car_TA.OnHitBall</code> has a <a
   class="gdoc-markdown__link"
   href="/bakkesmod_api/Classes/Wrappers/GameObject/BallWrapper/"

@@ -5,7 +5,7 @@
 <meta name="referrer" content="no-referrer" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="color-scheme" content="light dark" />
-<meta name="generator" content="Hugo 0.100.2" />
+<meta name="generator" content="Hugo 0.101.0" />
 
 
   <meta name="description" content="Stat events are a great way to show a slightly more complicated plugin logic. They are fairly common to use, use multiple wrappers, event hooks, and have some unique caveats. Also I made a plugin with them so I know how they work. Hopefully this helps someone
@@ -46,7 +46,7 @@ You need to hook some events to use stat events. This depends on your use case."
 <meta property="article:section" content="Functions" />
     <meta
       property="article:modified_time"
-      content="2022-04-26T19:21:53-07:00"
+      content="2022-06-29T13:34:29-07:00"
     />
 
 
@@ -67,7 +67,7 @@ You need to hook some events to use stat events. This depends on your use case."
       "url" : "https://bakkesmodwiki.github.io/functions/stat_events/",
       "headline": "Stat Events",
       "description": "Stat events are a great way to show a slightly more complicated plugin logic. They are fairly common to use, use multiple wrappers, event hooks, and have some unique caveats. Also I made a plugin with them so I know how they work. Hopefully this helps someone\nFirst add this include to the top of your .h\n#include \u0022bakkesmod\/wrappers\/GameObject\/Stats\/StatEventWrapper.h\u0022\nYou need to hook some events to use stat events. This depends on your use case.",
-      "wordCount" : "765",
+      "wordCount" : "778",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -78,7 +78,7 @@ You need to hook some events to use stat events. This depends on your use case."
       "copyrightYear" : "0001",
       "dateCreated": "0001-01-01T00:00:00.00Z",
       "datePublished": "0001-01-01T00:00:00.00Z",
-      "dateModified": "2022-04-26T19:21:53.00Z",
+      "dateModified": "2022-06-29T13:34:29.00Z",
       "publisher":{
           "@type":"Organization",
           "name": "BakkesMod Programming Wiki",
@@ -15405,7 +15405,11 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <code>&quot;Function TAGame.GFxHUD_TA.HandleStatTickerMessage&quot;</code> is called any time a stat should appear on the top right ticker, even if it&rsquo;s disabled.<br>
 <code>&quot;Function TAGame.GFxHUD_TA.HandleStatEvent&quot;</code> is called any time a stat should appear in the center of the screen, even if it&rsquo;s disabled.<br>
 The stat ticker catches stat events from all players, but fails to see first touches, clears, and centers.
-HandleStatEvent catches all stats, but only for the primary player. Depending on your use case you may need to only hook one or both</p>
+HandleStatEvent catches all stats, but only for the primary player. Depending on your use case you may need to only hook one or both. The ServerWrappers in these hooks are placeholders and we won&rsquo;t use them, as there is no GFxHUD_TA wrapper. Check <a
+  class="gdoc-markdown__link"
+  href="/functions/using_function_hooks/"
+  
+>using function hooks for more details</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -15419,11 +15423,9 @@ HandleStatEvent catches all stats, but only for the primary player. Depending on
 </span><span class="lnt"> 9
 </span><span class="lnt">10
 </span><span class="lnt">11
-</span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// The ServerWrappers here are placeholders and should not be used. 
-</span></span></span><span class="line"><span class="cl"><span class="c1">//  We need the params so we hook with caller, but there is no wrapper for the HUD
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">//  We need the params so we hook with caller, but there is no wrapper for the HUD
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">HookEventWithCallerPost</span><span class="o">&lt;</span><span class="n">ServerWrapper</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&#34;Function TAGame.GFxHUD_TA.HandleStatTickerMessage&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="n">ServerWrapper</span> <span class="n">caller</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="n">params</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">eventname</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="n">onStatTickerMessage</span><span class="p">(</span><span class="n">params</span><span class="p">);</span>
@@ -15503,14 +15505,14 @@ HandleStatEvent catches all stats, but only for the primary player. Depending on
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">ClassName</span><span class="o">::</span><span class="n">onStatTickerMessage</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">params</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="n">StatTickerParams</span> <span class="n">pStruct</span> <span class="o">=</span> <span class="p">(</span><span class="n">StatTickerParams</span><span class="o">*</span><span class="p">)</span><span class="n">params</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">StatTickerParams</span><span class="o">*</span> <span class="n">pStruct</span> <span class="o">=</span> <span class="p">(</span><span class="n">StatTickerParams</span><span class="o">*</span><span class="p">)</span><span class="n">params</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="n">PriWrapper</span> <span class="n">receiver</span> <span class="o">=</span> <span class="n">PriWrapper</span><span class="p">(</span><span class="n">pStruct</span><span class="o">-&gt;</span><span class="n">Receiver</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="n">PriWrapper</span> <span class="n">victim</span> <span class="o">=</span> <span class="n">PriWrapper</span><span class="p">(</span><span class="n">pStruct</span><span class="o">-&gt;</span><span class="n">Victim</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="n">StatEventWrapper</span> <span class="n">statEvent</span> <span class="o">=</span> <span class="n">StatEventWrapper</span><span class="p">(</span><span class="n">pStruct</span><span class="o">-&gt;</span><span class="n">StatEvent</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">ClassName</span><span class="o">::</span><span class="n">onStatEvent</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">params</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="n">StatEventParams</span> <span class="n">pStruct</span> <span class="o">=</span> <span class="p">(</span><span class="n">StatEventParams</span><span class="o">*</span><span class="p">)</span><span class="n">params</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">StatEventParams</span><span class="o">*</span> <span class="n">pStruct</span> <span class="o">=</span> <span class="p">(</span><span class="n">StatEventParams</span><span class="o">*</span><span class="p">)</span><span class="n">params</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="n">PriWrapper</span> <span class="n">receiver</span> <span class="o">=</span> <span class="n">PriWrapper</span><span class="p">(</span><span class="n">pStruct</span><span class="o">-&gt;</span><span class="n">Receiver</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="n">StatEventWrapper</span> <span class="n">statEvent</span> <span class="o">=</span> <span class="n">StatEventWrapper</span><span class="p">(</span><span class="n">pStruct</span><span class="o">-&gt;</span><span class="n">StatEvent</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
