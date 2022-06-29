@@ -13,10 +13,9 @@ You need to hook some events to use stat events. This depends on your use case.
 `"Function TAGame.GFxHUD_TA.HandleStatTickerMessage"` is called any time a stat should appear on the top right ticker, even if it's disabled.  
 `"Function TAGame.GFxHUD_TA.HandleStatEvent"` is called any time a stat should appear in the center of the screen, even if it's disabled.  
 The stat ticker catches stat events from all players, but fails to see first touches, clears, and centers. 
-HandleStatEvent catches all stats, but only for the primary player. Depending on your use case you may need to only hook one or both
+HandleStatEvent catches all stats, but only for the primary player. Depending on your use case you may need to only hook one or both. The ServerWrappers in these hooks are placeholders and we won't use them, as there is no GFxHUD_TA wrapper. Check [using function hooks for more details](/functions/using_function_hooks/)
 
 {{< highlight cpp "linenos=table" >}}
-// The ServerWrappers here are placeholders and should not be used. 
 //  We need the params so we hook with caller, but there is no wrapper for the HUD
 gameWrapper->HookEventWithCallerPost<ServerWrapper>("Function TAGame.GFxHUD_TA.HandleStatTickerMessage",
     [this](ServerWrapper caller, void* params, std::string eventname) {
@@ -54,14 +53,14 @@ struct StatEventParams {
 Now you can use them. For reference see [StatEventWrapper](/bakkesmod_api/Classes/Wrappers/GameObject/Stats/StatEventWrapper/) and [PriWrapper](/bakkesmod_api/Classes/Wrappers/GameObject/PriWrapper/)
 {{< highlight cpp "linenos=table" >}}
 void ClassName::onStatTickerMessage(void* params) {
-    StatTickerParams pStruct = (StatTickerParams*)params;
+    StatTickerParams* pStruct = (StatTickerParams*)params;
     PriWrapper receiver = PriWrapper(pStruct->Receiver);
     PriWrapper victim = PriWrapper(pStruct->Victim);
     StatEventWrapper statEvent = StatEventWrapper(pStruct->StatEvent);
 }
 
 void ClassName::onStatEvent(void* params) {
-    StatEventParams pStruct = (StatEventParams*)params;
+    StatEventParams* pStruct = (StatEventParams*)params;
     PriWrapper receiver = PriWrapper(pStruct->Receiver);
     StatEventWrapper statEvent = StatEventWrapper(pStruct->StatEvent);
 }
