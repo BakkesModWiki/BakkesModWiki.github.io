@@ -8,7 +8,11 @@
 <meta name="generator" content="Hugo 0.101.0" />
 
 
-  <meta name="description" content="All Plugin Types 1 2 3 4 5 6 7 PLUGINTYPE_FREEPLAY = 0x01, // Does nothing PLUGINTYPE_CUSTOM_TRAINING = 0x02, // see above PLUGINTYPE_SPECTATOR = 0x04, // see above PLUGINTYPE_BOTAI = 0x08, // see above PLUGINTYPE_REPLAY = 0x10, // see above PLUGINTYPE_THREADED = 0x20, // OnLoad is called in it&#39;s own thread PLUGINTYPE_THREADEDUNLOAD = 0x40 // Unload is called in it&#39;s own thread " />
+  <meta name="description" content="BAKKESMOD_PLUGIN(CoolPlugin, &#34;Cool Plugin&#34;, plugin_version, PLUGINTYPE_FREEPLAY) These are a relic of an unrealized feature. Most do nothing.
+It&rsquo;s easiest to just leave it as PLUGINTYPE_FREEPLAY from the template, but you can use any of the non-threaded options interchangeably.
+PLUGINTYPE_FREEPLAY through PLUGINTYPE_REPLAY plugins all work in any gamemode or playlist
+PLUGINTYPE_THREADED means that the plugin&rsquo;s onLoad() is called in its own thread
+PLUGINTYPE_THREADEDUNLOAD means that the plugin&rsquo;s onUnload() is called in its own thread" />
 
     <title>Plugin Types | BakkesMod Programming Wiki</title>
 
@@ -33,20 +37,28 @@
     content="Plugin Types"
   />
   <meta property="og:site_name" content="BakkesMod Programming Wiki" />
-  <meta property="og:description" content="All Plugin Types 1 2 3 4 5 6 7 PLUGINTYPE_FREEPLAY = 0x01, // Does nothing PLUGINTYPE_CUSTOM_TRAINING = 0x02, // see above PLUGINTYPE_SPECTATOR = 0x04, // see above PLUGINTYPE_BOTAI = 0x08, // see above PLUGINTYPE_REPLAY = 0x10, // see above PLUGINTYPE_THREADED = 0x20, // OnLoad is called in it&#39;s own thread PLUGINTYPE_THREADEDUNLOAD = 0x40 // Unload is called in it&#39;s own thread " />
+  <meta property="og:description" content="BAKKESMOD_PLUGIN(CoolPlugin, &#34;Cool Plugin&#34;, plugin_version, PLUGINTYPE_FREEPLAY) These are a relic of an unrealized feature. Most do nothing.
+It’s easiest to just leave it as PLUGINTYPE_FREEPLAY from the template, but you can use any of the non-threaded options interchangeably.
+PLUGINTYPE_FREEPLAY through PLUGINTYPE_REPLAY plugins all work in any gamemode or playlist
+PLUGINTYPE_THREADED means that the plugin’s onLoad() is called in its own thread
+PLUGINTYPE_THREADEDUNLOAD means that the plugin’s onUnload() is called in its own thread" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bakkesmodwiki.github.io/code_snippets/plugin_types/" />
 
 <meta property="article:section" content="Code Snippets" />
     <meta
       property="article:modified_time"
-      content="2022-04-25T23:40:20-07:00"
+      content="2022-07-07T17:22:24-07:00"
     />
 
 
   <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Plugin Types" />
-  <meta name="twitter:description" content="All Plugin Types 1 2 3 4 5 6 7 PLUGINTYPE_FREEPLAY = 0x01, // Does nothing PLUGINTYPE_CUSTOM_TRAINING = 0x02, // see above PLUGINTYPE_SPECTATOR = 0x04, // see above PLUGINTYPE_BOTAI = 0x08, // see above PLUGINTYPE_REPLAY = 0x10, // see above PLUGINTYPE_THREADED = 0x20, // OnLoad is called in it&#39;s own thread PLUGINTYPE_THREADEDUNLOAD = 0x40 // Unload is called in it&#39;s own thread " />
+  <meta name="twitter:description" content="BAKKESMOD_PLUGIN(CoolPlugin, &#34;Cool Plugin&#34;, plugin_version, PLUGINTYPE_FREEPLAY) These are a relic of an unrealized feature. Most do nothing.
+It’s easiest to just leave it as PLUGINTYPE_FREEPLAY from the template, but you can use any of the non-threaded options interchangeably.
+PLUGINTYPE_FREEPLAY through PLUGINTYPE_REPLAY plugins all work in any gamemode or playlist
+PLUGINTYPE_THREADED means that the plugin’s onLoad() is called in its own thread
+PLUGINTYPE_THREADEDUNLOAD means that the plugin’s onUnload() is called in its own thread" />
 
 
   <script type="application/ld+json">
@@ -57,8 +69,8 @@
       "name": "Plugin Types",
       "url" : "https://bakkesmodwiki.github.io/code_snippets/plugin_types/",
       "headline": "Plugin Types",
-      "description": "All Plugin Types 1 2 3 4 5 6 7 PLUGINTYPE_FREEPLAY = 0x01, \/\/ Does nothing PLUGINTYPE_CUSTOM_TRAINING = 0x02, \/\/ see above PLUGINTYPE_SPECTATOR = 0x04, \/\/ see above PLUGINTYPE_BOTAI = 0x08, \/\/ see above PLUGINTYPE_REPLAY = 0x10, \/\/ see above PLUGINTYPE_THREADED = 0x20, \/\/ OnLoad is called in it\u0027s own thread PLUGINTYPE_THREADEDUNLOAD = 0x40 \/\/ Unload is called in it\u0027s own thread ",
-      "wordCount" : "62",
+      "description": "BAKKESMOD_PLUGIN(CoolPlugin, \u0022Cool Plugin\u0022, plugin_version, PLUGINTYPE_FREEPLAY) These are a relic of an unrealized feature. Most do nothing.\nIt’s easiest to just leave it as PLUGINTYPE_FREEPLAY from the template, but you can use any of the non-threaded options interchangeably.\nPLUGINTYPE_FREEPLAY through PLUGINTYPE_REPLAY plugins all work in any gamemode or playlist\nPLUGINTYPE_THREADED means that the plugin’s onLoad() is called in its own thread\nPLUGINTYPE_THREADEDUNLOAD means that the plugin’s onUnload() is called in its own thread",
+      "wordCount" : "168",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -69,7 +81,7 @@
       "copyrightYear" : "0001",
       "dateCreated": "0001-01-01T00:00:00.00Z",
       "datePublished": "0001-01-01T00:00:00.00Z",
-      "dateModified": "2022-04-25T23:40:20.00Z",
+      "dateModified": "2022-07-07T17:22:24.00Z",
       "publisher":{
           "@type":"Organization",
           "name": "BakkesMod Programming Wiki",
@@ -15389,7 +15401,14 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
     class="gdoc-markdown gdoc-markdown__align--left"
   >
     <h1>Plugin Types</h1>
-    <p>All Plugin Types
+    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">BAKKESMOD_PLUGIN</span><span class="p">(</span><span class="n">CoolPlugin</span><span class="p">,</span> <span class="s">&#34;Cool Plugin&#34;</span><span class="p">,</span> <span class="n">plugin_version</span><span class="p">,</span> <span class="n">PLUGINTYPE_FREEPLAY</span><span class="p">)</span>
+</span></span></code></pre></div><p>These are a relic of an unrealized feature. Most do nothing.</p>
+<p>It&rsquo;s easiest to just leave it as <code>PLUGINTYPE_FREEPLAY</code> from the template, but you can use any of the non-threaded options interchangeably.<br>
+<code>PLUGINTYPE_FREEPLAY</code> through <code>PLUGINTYPE_REPLAY</code> plugins all work in any gamemode or playlist</p>
+<p><code>PLUGINTYPE_THREADED</code> means that the plugin&rsquo;s <code>onLoad()</code> is called in its own thread<br>
+<code>PLUGINTYPE_THREADEDUNLOAD</code> means that the plugin&rsquo;s <code>onUnload()</code> is called in its own thread<br>
+These are only necessary if you have something very complicated and time consuming in your onload or unload.<br>
+All of the others do nothing.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -15401,17 +15420,20 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">PLUGINTYPE_FREEPLAY</span> <span class="o">=</span> <span class="mh">0x01</span><span class="p">,</span> <span class="c1">// Does nothing
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">PLUGINTYPE_CUSTOM_TRAINING</span> <span class="o">=</span> <span class="mh">0x02</span><span class="p">,</span> <span class="c1">// see above
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">PLUGINTYPE_SPECTATOR</span> <span class="o">=</span> <span class="mh">0x04</span><span class="p">,</span> <span class="c1">// see above
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">PLUGINTYPE_BOTAI</span> <span class="o">=</span> <span class="mh">0x08</span><span class="p">,</span> <span class="c1">// see above
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">PLUGINTYPE_REPLAY</span> <span class="o">=</span> <span class="mh">0x10</span><span class="p">,</span> <span class="c1">// see above
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">PLUGINTYPE_THREADED</span> <span class="o">=</span> <span class="mh">0x20</span><span class="p">,</span> <span class="c1">// OnLoad is called in it&#39;s own thread
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">PLUGINTYPE_THREADEDUNLOAD</span> <span class="o">=</span> <span class="mh">0x40</span> <span class="c1">// Unload is called in it&#39;s own thread
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">PLUGINTYPE_FREEPLAY</span> <span class="o">=</span> <span class="mh">0x01</span><span class="p">,</span> <span class="c1">// Plugin works everywhere
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">PLUGINTYPE_CUSTOM_TRAINING</span> <span class="o">=</span> <span class="mh">0x02</span><span class="p">,</span> <span class="c1">// Plugin works everywhere
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">PLUGINTYPE_SPECTATOR</span> <span class="o">=</span> <span class="mh">0x04</span><span class="p">,</span> <span class="c1">// Plugin works everywhere
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">PLUGINTYPE_BOTAI</span> <span class="o">=</span> <span class="mh">0x08</span><span class="p">,</span> <span class="c1">// Plugin works everywhere
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">PLUGINTYPE_REPLAY</span> <span class="o">=</span> <span class="mh">0x10</span><span class="p">,</span> <span class="c1">// Plugin works everywhere
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">PLUGINTYPE_THREADED</span> <span class="o">=</span> <span class="mh">0x20</span><span class="p">,</span> <span class="c1">// Plugin works everywhere and onLoad() is called in its own thread
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">PLUGINTYPE_THREADEDUNLOAD</span> <span class="o">=</span> <span class="mh">0x40</span> <span class="c1">// Plugin works everywhere and onUnload() is called in its own thread
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div></p>
+</div>
 
+    
+    <hr>
+    <div>Written by <b>ubelhj</b></div>
     
   </article>
 

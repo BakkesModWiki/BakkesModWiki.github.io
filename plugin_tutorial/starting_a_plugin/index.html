@@ -42,7 +42,7 @@ The template has a lot of commented out code that is designed to help you learn 
 <meta property="article:section" content="Plugin Tutorial" />
     <meta
       property="article:modified_time"
-      content="2022-04-25T23:40:20-07:00"
+      content="2022-07-07T17:22:24-07:00"
     />
 
 
@@ -61,7 +61,7 @@ The template has a lot of commented out code that is designed to help you learn 
       "url" : "https://bakkesmodwiki.github.io/plugin_tutorial/starting_a_plugin/",
       "headline": "Starting a plugin",
       "description": "It will assume you’re using the template as linked in Setting Up. You can of course make a plugin without it, but it gives an easier basis to work off of. You can name it anything, but here we’ll be using a demo plugin named CoolPlugin\nThe template has a lot of commented out code that is designed to help you learn how to use the syntax, but is ignored for the purposes of this tutorial",
-      "wordCount" : "1292",
+      "wordCount" : "1319",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -72,7 +72,7 @@ The template has a lot of commented out code that is designed to help you learn 
       "copyrightYear" : "0001",
       "dateCreated": "0001-01-01T00:00:00.00Z",
       "datePublished": "0001-01-01T00:00:00.00Z",
-      "dateModified": "2022-04-25T23:40:20.00Z",
+      "dateModified": "2022-07-07T17:22:24.00Z",
       "publisher":{
           "@type":"Organization",
           "name": "BakkesMod Programming Wiki",
@@ -15398,7 +15398,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
   
 >Setting Up</a>. You can of course make a plugin without it, but it gives an easier basis to work off of. You can name it anything, but here we&rsquo;ll be using a demo plugin named CoolPlugin</p>
 <p>The template has a lot of commented out code that is designed to help you learn how to use the syntax, but is ignored for the purposes of this tutorial</p>
-<p>First we&rsquo;ll look at your <code>CoolPlugin.h</code> file. It describes any functions your code will use
+<p>First we&rsquo;ll look at your <code>CoolPlugin.h</code> file. It describes any functions your code will use.
 At the top are two lines that are required for plugins, and allow you to call BakkesMod SDK functions
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -15409,8 +15409,8 @@ At the top are two lines that are required for plugins, and allow you to call Ba
 <pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#pragma once
 </span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;bakkesmod/plugin/bakkesmodplugin.h&#34;</span></span></span></code></pre></td></tr></table>
 </div>
-</div>
-Next is the declaration of your class. Here you describe any functions you will be using.
+</div></p>
+<p>Next is the declaration of your class. Here you describe any functions you will be using.
 <code>onLoad()</code> is automatically called by BakkesMod when the plugin is loaded, and <code>onUnload()</code> is called when it is unloaded
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -15428,8 +15428,8 @@ Next is the declaration of your class. Here you describe any functions you will 
 </span></span><span class="line"><span class="cl"><span class="p">};</span></span></span></code></pre></td></tr></table>
 </div>
 </div></p>
-<p>Now we will look at the <code>CoolPlugin.cpp</code> file. Here you write the code that will define the functions
-First it includes your header so it can define the functions described above
+<p>Now we will look at the <code>CoolPlugin.cpp</code> file. Here you write the code that will define the functions<br>
+First it includes your header so it can define the functions described above</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -15440,11 +15440,7 @@ First it includes your header so it can define the functions described above
 </span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;CoolPlugin.h&#34;</span></span></span></code></pre></td></tr></table>
 </div>
 </div>
-Next it declares the plugin. The string in &quot;&quot; will be used in the plugin manager to describe the plugin, but it needs to be a short description. Keep it to 1 or two words. You can also define a plugin version, although the template handles that automatically. Finally is the plugin type described <a
-  class="gdoc-markdown__link"
-  href="/code_snippets/plugin_types/"
-  
->here</a>. If you don&rsquo;t know what it is, just use <code>PLUGINTYPE_FREEPLAY</code>.
+<p>Next it declares the plugin. The string in &quot;&quot; will be used in the plugin manager to describe the plugin, but it needs to be a short description. Keep it to 1 or two words. You can also define a plugin version, although the template handles that automatically. Finally is the plugin type. These don&rsquo;t do anything, so just use <code>PLUGINTYPE_FREEPLAY</code>. Your plugin will still work in any playlist and mode.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -15452,7 +15448,7 @@ Next it declares the plugin. The string in &quot;&quot; will be used in the plug
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">BAKKESMOD_PLUGIN</span><span class="p">(</span><span class="n">CoolPlugin</span><span class="p">,</span> <span class="s">&#34;Cool Plugin&#34;</span><span class="p">,</span> <span class="n">plugin_version</span><span class="p">,</span> <span class="n">PLUGINTYPE_FREEPLAY</span><span class="p">)</span></span></span></code></pre></td></tr></table>
 </div>
-</div></p>
+</div>
 <p>Next you define your functions, starting with <code>onLoad()</code>. As this is a demo, we&rsquo;ll just do a hello world.
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -15526,8 +15522,8 @@ The next lines of code are all going to be within <code>CoolPlugin::ballOnTop()<
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">IsInFreeplay</span><span class="p">())</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span></span></span></code></pre></td></tr></table>
 </div>
-</div>
-There are also <code>gameWrapper-&gt;IsInGame()</code> and <code>gameWrapper-&gt;IsInOnlineGame()</code> if you&rsquo;d rather your plugin run elsewhere</p>
+</div></p>
+<p>There are also <code>gameWrapper-&gt;IsInGame()</code> and <code>gameWrapper-&gt;IsInOnlineGame()</code> if you&rsquo;d rather your plugin run elsewhere</p>
 <p>The next line will be getting the <code>ServerWrapper</code>.  This is what controls pretty much everything in the current game. You can get players, cars, the ball, the goals, and other things from it so it&rsquo;s incredibly useful. <strong><a
   class="gdoc-markdown__link"
   href="/plugin_tutorial/best_practices/"
@@ -15554,7 +15550,7 @@ There are also <code>gameWrapper-&gt;IsInGame()</code> and <code>gameWrapper-&gt
 </span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">ball</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span></span></span></code></pre></td></tr></table>
 </div>
 </div></p>
-<p>And we get the car. As this is freeplay we only have one to worry about, but in any mode this will select your car. And we nullcheck it. If this seems redundant, it isn&rsquo;t
+<p>And we get the car. As this is freeplay we only have one to worry about, but in any mode this will select your car. And we nullcheck it. If this seems redundant, it isn&rsquo;t. What if your car was demolished? Without this nullcheck, you&rsquo;d crash your game if you ran the command before the respawn.
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -15679,7 +15675,7 @@ Finally is the permissions, which should usually be <code>PERMISSION_ALL</code>.
 </span></span><span class="line"><span class="cl">    <span class="kt">void</span> <span class="nf">ballOnTop</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl"><span class="p">};</span></span></span></code></pre></td></tr></table>
 </div>
-</div>
+</div></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -15757,7 +15753,7 @@ Finally is the permissions, which should usually be <code>PERMISSION_ALL</code>.
 </span></span><span class="line"><span class="cl">  <span class="n">ball</span><span class="p">.</span><span class="n">SetLocation</span><span class="p">(</span><span class="n">carLocation</span> <span class="o">+</span> <span class="n">Vector</span><span class="p">{</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ballRadius</span> <span class="o">*</span> <span class="mi">2</span> <span class="p">});</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
 </div>
-</div></p>
+</div>
 <p>Finally build the plugin with ctrl + b. Then start freeplay, load the plugin with <code>plugin load CoolPlugin</code> and call <code>CoolerBallOnTop</code> from the f6 console. The ball should teleport above you!</p>
 <p>You can find the final code here!
 <a

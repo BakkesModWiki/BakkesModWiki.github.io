@@ -129,7 +129,8 @@ FaceIt = 26</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/PLUGINTYPE/</guid>
-      <description>View Implementation PLUGINTYPE_FREEPLAY = 0x01
+      <description>View Implementation Plugin types for plugin declaration. Explained here
+PLUGINTYPE_FREEPLAY = 0x01
 PLUGINTYPE_CUSTOM_TRAINING = 0x02
 PLUGINTYPE_SPECTATOR = 0x04
 PLUGINTYPE_BOTAI = 0x08
