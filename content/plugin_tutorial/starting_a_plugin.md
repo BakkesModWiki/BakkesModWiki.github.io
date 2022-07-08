@@ -8,12 +8,13 @@ It will assume you're using the template as linked in [Setting Up](/plugin_tutor
 
 The template has a lot of commented out code that is designed to help you learn how to use the syntax, but is ignored for the purposes of this tutorial
 
-First we'll look at your `CoolPlugin.h` file. It describes any functions your code will use
+First we'll look at your `CoolPlugin.h` file. It describes any functions your code will use. 
 At the top are two lines that are required for plugins, and allow you to call BakkesMod SDK functions
 {{< highlight cpp "linenos=table" >}}
 #pragma once
 #include "bakkesmod/plugin/bakkesmodplugin.h"
 {{< /highlight >}}
+
 Next is the declaration of your class. Here you describe any functions you will be using.
 `onLoad()` is automatically called by BakkesMod when the plugin is loaded, and `onUnload()` is called when it is unloaded
 {{< highlight cpp "linenos=table" >}}
@@ -24,13 +25,16 @@ class CoolPlugin: public BakkesMod::Plugin::BakkesModPlugin
 };
 {{< /highlight >}}
 
-Now we will look at the `CoolPlugin.cpp` file. Here you write the code that will define the functions
+Now we will look at the `CoolPlugin.cpp` file. Here you write the code that will define the functions  
 First it includes your header so it can define the functions described above
+
 {{< highlight cpp "linenos=table" >}}
 #include "pch.h"
 #include "CoolPlugin.h"
 {{< /highlight >}}
-Next it declares the plugin. The string in "" will be used in the plugin manager to describe the plugin, but it needs to be a short description. Keep it to 1 or two words. You can also define a plugin version, although the template handles that automatically. Finally is the plugin type described [here](/code_snippets/plugin_types/). If you don't know what it is, just use `PLUGINTYPE_FREEPLAY`.
+
+Next it declares the plugin. The string in "" will be used in the plugin manager to describe the plugin, but it needs to be a short description. Keep it to 1 or two words. You can also define a plugin version, although the template handles that automatically. Finally is the plugin type. These don't do anything, so just use `PLUGINTYPE_FREEPLAY`. Your plugin will still work in any playlist and mode.
+
 {{< highlight cpp "linenos=table" >}}
 BAKKESMOD_PLUGIN(CoolPlugin, "Cool Plugin", plugin_version, PLUGINTYPE_FREEPLAY)
 {{< /highlight >}}
@@ -78,6 +82,7 @@ First we need to make sure we should be running the plugin. We only want it to w
 {{< highlight cpp "linenos=table" >}}
 if (!gameWrapper->IsInFreeplay()) { return; }
 {{< /highlight >}}
+
 There are also `gameWrapper->IsInGame()` and `gameWrapper->IsInOnlineGame()` if you'd rather your plugin run elsewhere
 
 The next line will be getting the `ServerWrapper`.  This is what controls pretty much everything in the current game. You can get players, cars, the ball, the goals, and other things from it so it's incredibly useful. **[We also nullcheck it](/plugin_tutorial/best_practices/)**. If you call functions on a null server Rocket League will crash
@@ -92,7 +97,7 @@ BallWrapper ball = server.GetBall();
 if (!ball) { return; }
 {{< /highlight >}}
 
-And we get the car. As this is freeplay we only have one to worry about, but in any mode this will select your car. And we nullcheck it. If this seems redundant, it isn't
+And we get the car. As this is freeplay we only have one to worry about, but in any mode this will select your car. And we nullcheck it. If this seems redundant, it isn't. What if your car was demolished? Without this nullcheck, you'd crash your game if you ran the command before the respawn.
 {{< highlight cpp "linenos=table" >}}
 CarWrapper car = gameWrapper->GetLocalCar();
 if (!car) { return; }
@@ -161,6 +166,7 @@ class CoolPlugin : public BakkesMod::Plugin::BakkesModPlugin
     void ballOnTop();
 };
 {{< /highlight >}}
+
 {{< highlight cpp "linenos=table" >}}
 // CoolPlugin.cpp
 #include "pch.h"

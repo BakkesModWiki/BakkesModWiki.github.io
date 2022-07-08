@@ -46,7 +46,8 @@
         "OnlinePlatform": "Ids for platforms players can be playing on",
         "PRODUCTQUALITY": "Possible item rarities",
         "ToastType": "Possible colors for [Toasts](/code_snippets/toasts/).\n\n`ToastType_Info` is black, `ToastType_OK` is green, `ToastType_Warning` is orange, and `ToastType_Error` is red",
-        "UNLOCKMETHOD": "Ways an item can be earned"
+        "UNLOCKMETHOD": "Ways an item can be earned",
+        "PLUGINTYPE": "Plugin types for plugin declaration. [Explained here](/code_snippets/plugin_types/)"
     },
     "Structs": {
         "BotLoadoutData": "Info on a bot's items. Unsure how to obtain",
