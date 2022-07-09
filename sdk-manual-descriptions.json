@@ -47,7 +47,8 @@
         "PRODUCTQUALITY": "Possible item rarities",
         "ToastType": "Possible colors for [Toasts](/code_snippets/toasts/).\n\n`ToastType_Info` is black, `ToastType_OK` is green, `ToastType_Warning` is orange, and `ToastType_Error` is red",
         "UNLOCKMETHOD": "Ways an item can be earned",
-        "PLUGINTYPE": "Plugin types for plugin declaration. [Explained here](/code_snippets/plugin_types/)"
+        "PLUGINTYPE": "Plugin types for plugin declaration. [Explained here](/code_snippets/plugin_types/)",
+        "NOTIFIER_PERMISSION": "When a notifier should be usable. Most of the time `PERMISSION_ALL` works best, but any of these can be used depending on your usecase.\n\nFor example, when a notifier is set to `PERMISSION_MENU`, your notifier code is only run when the command is used in the main menu"
     },
     "Structs": {
         "BotLoadoutData": "Info on a bot's items. Unsure how to obtain",

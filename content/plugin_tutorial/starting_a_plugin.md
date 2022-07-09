@@ -144,7 +144,7 @@ This can be done with a notifier. These can be called with a console command to 
 When it's called, it takes a vector (basically a list) of command arguments that were provided by the command. Here we don't care about those, so they are unused.
 The code is called in a lambda `[](){}`. You can just copy the syntax here.
 Next is the notifier description, which does nothing, so it'll be `""`.
-Finally is the permissions, which should usually be `PERMISSION_ALL`. If you want to restrict it you can use the list LINKED HERE
+Finally is the permissions, which decides when the notifier works. It should usually be `PERMISSION_ALL`, as that works anywhere. If you want to restrict the use to specific modes or game states, you can use any of the [permissions listed here](/bakkesmod_api/Enums/NOTIFIER_PERMISSION/)
 {{< highlight cpp "linenos=table" >}}
 cvarManager->registerNotifier("CoolerBallOnTop", [this](std::vector<std::string> args) {
     ballOnTop();
