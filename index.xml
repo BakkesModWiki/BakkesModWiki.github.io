@@ -994,15 +994,13 @@ unsigned long long token Default value: none</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/NOTIFIER_PERMISSION/</guid>
-      <description>View Implementation PERMISSION_ALL = 0
+      <description>View Implementation When a notifier should be usable. Most of the time PERMISSION_ALL works best, but any of these can be used depending on your usecase.
+For example, when a notifier is set to PERMISSION_MENU, your notifier code is only run when the command is used in the main menu
+PERMISSION_ALL = 0
 PERMISSION_MENU = (1 &amp;lt;&amp;lt; 0)
 PERMISSION_SOCCAR = (1 &amp;lt;&amp;lt; 1)
 PERMISSION_FREEPLAY = (1 &amp;lt;&amp;lt; 2)
-PERMISSION_CUSTOM_TRAINING = (1 &amp;lt;&amp;lt; 3)
-PERMISSION_ONLINE = (1 &amp;lt;&amp;lt; 4)
-PERMISSION_PAUSEMENU_CLOSED = (1 &amp;lt;&amp;lt; 5)
-PERMISSION_REPLAY = (1 &amp;lt;&amp;lt; 6)
-PERMISSION_OFFLINE = (1 &amp;lt;&amp;lt; 7)</description>
+PERMISSION_CUSTOM_TRAINING = (1 &amp;lt;&amp;lt; 3)</description>
     </item>
     
     <item>
