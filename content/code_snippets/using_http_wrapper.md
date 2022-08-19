@@ -74,3 +74,17 @@ HttpWrapper::SendCurlRequest(req, L"test_image.jpeg", [this](int code, std::wstr
     LOG("file image download code: {}", code);
 });
 {{< /highlight >}}
+
+## Sending a request with FormData
+{{< highlight cpp "linenos=table" >}}
+CurlRequest req;
+req.url = "url";
+req.form_data.push_back(FormField{FormField::Type::kString, "some data", "test_field"});
+req.form_data.push_back(FormField{FormField::Type::kFile, "test_file.txt", "test_file"});
+
+LOG("sending post request with fields (both file and string)");
+HttpWrapper::SendCurlRequest(req, [this](int code, std::string res)
+{
+    LOG("Post result: {}", res);
+});
+{{< /highlight >}}
