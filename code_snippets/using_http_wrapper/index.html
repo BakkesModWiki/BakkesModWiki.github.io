@@ -40,7 +40,7 @@
 <meta property="article:section" content="Code Snippets" />
     <meta
       property="article:modified_time"
-      content="2022-04-25T23:40:20-07:00"
+      content="2022-08-19T17:04:50-04:00"
     />
 
 
@@ -58,7 +58,7 @@
       "url" : "https://bakkesmodwiki.github.io/code_snippets/using_http_wrapper/",
       "headline": "Using HttpWrapper",
       "description": "HttpWrapper Sending a simple http request with a string body 1 2 3 4 5 6 7 8 9 CurlRequest req; req.url = \u0022https:\/\/httpbin.org\/anything\u0022; req.body = \u0022testing with body\u0022; LOG(\u0022sending body request\u0022); HttpWrapper::SendCurlRequest(req, [this](int code, std::string result) { LOG(\u0022Body result{}\u0022, result); }); Perform an HTTP\/S JSON request 1 2 3 4 5 6 7 8 9 10 11 12 13 CurlRequest req; req.url = \u0022https:\/\/httpbin.org\/anything\u0022; req.body = R\u0022T({ \u0022userId\u0022: 1, \u0022id\u0022: 1, \u0022title\u0022: \u0022delectus aut autem\u0022, \u0022completed\u0022: false })T\u0022; HttpWrapper::SendCurlJsonRequest(req, [this](int code, std::string result) { LOG(\u0022Json result{}\u0022, result); }); Sending a file over HTTP\/S 1 2 3 4 5 6 7 8 9 10 { CurlRequest req; req.",
-      "wordCount" : "245",
+      "wordCount" : "292",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -69,7 +69,7 @@
       "copyrightYear" : "0001",
       "dateCreated": "0001-01-01T00:00:00.00Z",
       "datePublished": "0001-01-01T00:00:00.00Z",
-      "dateModified": "2022-04-25T23:40:20.00Z",
+      "dateModified": "2022-08-19T17:04:50.00Z",
       "publisher":{
           "@type":"Organization",
           "name": "BakkesMod Programming Wiki",
@@ -15576,6 +15576,40 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 </span></span><span class="line"><span class="cl"><span class="n">HttpWrapper</span><span class="o">::</span><span class="n">SendCurlRequest</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="sa">L</span><span class="s">&#34;test_image.jpeg&#34;</span><span class="p">,</span> <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="kt">int</span> <span class="n">code</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">wstring</span> <span class="n">out_path</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;file image download code: {}&#34;</span><span class="p">,</span> <span class="n">code</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+<div class="gdoc-page__anchorwrap">
+    <h2 id="sending-a-request-with-formdata">
+        Sending a request with FormData
+        <a data-clipboard-text="https://bakkesmodwiki.github.io/code_snippets/using_http_wrapper/#sending-a-request-with-formdata" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: Sending a request with FormData" aria-label="Anchor to: Sending a request with FormData" href="#sending-a-request-with-formdata">
+            <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">CurlRequest</span> <span class="n">req</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">req</span><span class="p">.</span><span class="n">url</span> <span class="o">=</span> <span class="s">&#34;url&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">req</span><span class="p">.</span><span class="n">form_data</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">FormField</span><span class="p">{</span><span class="n">FormField</span><span class="o">::</span><span class="n">Type</span><span class="o">::</span><span class="n">kString</span><span class="p">,</span> <span class="s">&#34;some data&#34;</span><span class="p">,</span> <span class="s">&#34;test_field&#34;</span><span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="n">req</span><span class="p">.</span><span class="n">form_data</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">FormField</span><span class="p">{</span><span class="n">FormField</span><span class="o">::</span><span class="n">Type</span><span class="o">::</span><span class="n">kFile</span><span class="p">,</span> <span class="s">&#34;test_file.txt&#34;</span><span class="p">,</span> <span class="s">&#34;test_file&#34;</span><span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">LOG</span><span class="p">(</span><span class="s">&#34;sending post request with fields (both file and string)&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">HttpWrapper</span><span class="o">::</span><span class="n">SendCurlRequest</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="kt">int</span> <span class="n">code</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">res</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;Post result: {}&#34;</span><span class="p">,</span> <span class="n">res</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">});</span></span></span></code></pre></td></tr></table>
 </div>
 </div>
