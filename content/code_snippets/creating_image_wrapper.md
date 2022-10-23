@@ -3,7 +3,7 @@ title: Creating an ImageWrapper
 author: Martinn
 ---
 
-## Creating an [ImageWrapper](/bakkesmod_api/Classes/Wrappers/ImageWrapper/)
+## Creating an  [ImageWrapper](/bakkesmod_api/Classes/Wrappers/ImageWrapper/)
 * You should use some kind of reference type that manages the memory. `std::shared_ptr<ImageWrapper>` is my recommendation.
 * Put the declaration in your .h file so it can be used anywhere
 * The constructor takes 3 arguments (2 are optional)
@@ -13,7 +13,7 @@ author: Martinn
 * Stick to `std::shared_ptr` and you almost can't mess up.
 
 
-## Using a [ImageWrapper](/bakkesmod_api/Classes/Wrappers/ImageWrapper/)
+## Using an  [ImageWrapper](/bakkesmod_api/Classes/Wrappers/ImageWrapper/)
  1. Use the constructor with the second or third argument true (or both).
 {{< highlight cpp "linenos=table" >}}
 // ImageWrapper(std::string path, bool canvasLoad = false, bool ImGuiLoad = false);
