@@ -68,8 +68,12 @@ void CanvasImageExample::RenderCanvas(CanvasWrapper canvas) {
 Finally, add this code to the RenderCanvas
 
 {{< highlight cpp "linenos=table" >}}
+// Sets the canvas' color to white
+// This is necessary to display images correctly. Without setting the color to white, images will be darker.
+// Changing the alpha (last value) can be used to make the image more/less transparent
+// Changing the RGB values can be used to give the image different tints
 LinearColor color = { 255, 255, 255, 255 };
-canvas.SetColor(color); //this is necessary to display images correctly. Without setting the color to white, images will be darker. Changing the alpha (last value) can be used to make the image more/less transparent
+canvas.SetColor(color); 
   
 myImage->LoadForCanvas();
 if (myImage->IsLoadedForCanvas()) {	
