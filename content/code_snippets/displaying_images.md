@@ -1,6 +1,6 @@
 ---
-title Displaying Images
-author Adam Gerhant
+title: Displaying Images
+author: Adam Gerhant
 ---
 
 This page will cover how to display an image with ImGui and canvas. The difference between the two methods is that canvas provides better drawing tools, while ImGui provides widgets which can be used interactively. It is possible to use both ImGui and canvas together for a combination of custom shapes and interactive controls.
