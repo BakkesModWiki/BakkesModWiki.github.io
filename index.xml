@@ -2232,7 +2232,7 @@ Unfortunately sometimes there is no .dmp file. That often means you crashed in a
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/code_snippets/creating_image_wrapper/</guid>
-      <description>Creating an ImageWrapper You should use some kind of reference type that manages the memory. std::shared_ptr&amp;lt;ImageWrapper&amp;gt; is my recommendation. The constructor takes 3 arguments (2 are optional) The optional arguments are two bools that decide if the core will preload the images for use in the canvas\imgui. The ImageWrapper is a resource managing class. This means that you have to keep this object &amp;ldquo;alive&amp;rdquo; as long as you want to use the image.</description>
+      <description>Creating an ImageWrapper You should use some kind of reference type that manages the memory. std::shared_ptr&amp;lt;ImageWrapper&amp;gt; is my recommendation. Put the declaration in your .h file so it can be used anywhere The constructor takes 3 arguments (2 are optional) The optional arguments are two bools that decide if the core will preload the images for use in the canvas\imgui. The ImageWrapper is a resource managing class. This means that you have to keep this object &amp;ldquo;alive&amp;rdquo; as long as you want to use the image.</description>
     </item>
     
     <item>
