@@ -13,7 +13,6 @@ To start, create a clear window by using these flags in the begin function, as w
 
 {{< highlight cpp "linenos=table" >}}
 ImGuiWindowFlags WindowFlags = ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_NoFocusOnAppearing | ImGuiWindowFlags_NoBackground | ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoScrollbar;
-ImGui::SetNextWindowPos(ImVec2(1000.0f, 800.0f));
 if (!ImGuiBegin(menuTitle_.c_str(), &isWindowOpen_, WindowFlags))
 	{
 		 Early out if the window is collapsed, as an optimization.
