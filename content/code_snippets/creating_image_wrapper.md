@@ -1,27 +1,29 @@
 ---
 title: Creating an ImageWrapper
 author: Martinn
+collaborators: ubelhj
 ---
 
 ## Creating an ImageWrapper
 * You should use some kind of reference type that manages the memory. `std::shared_ptr<ImageWrapper>` is my recommendation.
-* Put the declaration in your .h file so it can be used anywhere
-* The constructor takes 3 arguments (2 are optional)
-* The optional arguments are two bools that decide if the core will preload the images for use in the canvas\imgui.
 * The [ImageWrapper](/bakkesmod_api/Classes/Wrappers/ImageWrapper/) is a resource managing class. This means that you have to keep this object "alive" as long as you want to use the image. When the object goes out of scope \ gets destructed it cleans up the resource it manages.
-* I have tried to delete the constructors that could cause issues (copy constructor).
 * Stick to `std::shared_ptr` and you almost can't mess up.
 * [See all ImageWrapper functions here](/bakkesmod_api/Classes/Wrappers/ImageWrapper/)
 
+0. Add the declaration to your .h
+{{< highlight cpp "linenos=table" >}}
+ std::shared_ptr<ImageWrapper> myImage;
+{{< / highlight >}}
+
 
 ## Using an ImageWrapper
- 1. Use the constructor with the second or third argument true (or both).
+ 1. Use the constructor with the second or third argument true (or both). This can cause stuttering based on the size of the image. This is best done in your plugin's onLoad. You only need to load the image once, and onLoad is expected to be a bit stuttery already
 {{< highlight cpp "linenos=table" >}}
 // ImageWrapper(std::string path, bool canvasLoad = false, bool ImGuiLoad = false);
 myImage = std::make_shared<ImageWrapper>(gameWrapper->GetDataFolder() / "MyPluginFolder" / "MyImage.png", true, true);
 {{< / highlight >}}
 
-2. Load the resource if you didn't use the optional args.
+2. Load the resource if you didn't use the optional args. This also causes lag so it's best to do this in onLoad or in a place that isn't called often
 {{< highlight cpp "linenos=table" >}}
 myImage->LoadForCanvas();
 myImage->LoadForImGui();
