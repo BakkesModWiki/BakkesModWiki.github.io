@@ -37,11 +37,11 @@ if (shouldRenderImGui) {
  
 {{< highlight cpp "linenos=table" >}}
 if (myImage->IsLoadedForImGui()) {
-			if (ImTextureID myImageTexture = myImage -> GetImGuiTex()) {
-				auto rect = myImage -> GetSizeF();
-				ImGui::Image(myImageTexture, ImVec2(rect.X, rect.Y));
-			}
-		}
+	if (ImTextureID myImageTexture = myImage -> GetImGuiTex()) {
+		auto rect = myImage -> GetSizeF();
+		ImGui::Image(myImageTexture, ImVec2(rect.X, rect.Y));
+	}
+}
 {{< / highlight >}}
 
 View the code for the entire project here: https://github.com/adamgerhant/BakkesmodImageExample/tree/main/ImGuiImageExample/ImGuiImageExample
