@@ -9,7 +9,19 @@ This page will cover how to display an image with ImGui and canvas. The differen
 
 The main concept behind displaying an image with ImGui is to create a window with a clear background and no border. The image can then be displayed on this window.
 
-To start, create a clear window by using these flags in the begin function, as well as setting the position. This code should be in your Render() function.
+In your .h, declare your image
+
+`private std::shared_ptr<ImageWrapper> myImage;`
+
+In your onLoad, load your image
+
+{{< highlight cpp "linenos=table" >}}
+
+myImage = std::make_shared<ImageWrapper>(gameWrapper->GetDataFolder() / "myimage.png", true, true);
+	
+{{< / highlight >}}
+	
+Create a clear window by using these flags in the begin function, as well as setting the position. This code should be in your Render() function.
 
 {{< highlight cpp "linenos=table" >}}
 ImGuiWindowFlags WindowFlags = ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_NoFocusOnAppearing | ImGuiWindowFlags_NoBackground | ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoScrollbar;
@@ -25,7 +37,7 @@ if (!ImGuiBegin(menuTitle_.c_str(), &isWindowOpen_, WindowFlags))
 ImGuiEnd();
 {{< / highlight >}}
 
-Since the image takes a few second to load from when the window is opened, it is best to always leave the window open and use an if statement to display your image.
+Since the image takes a few second to load from when the window is opened, an optional optimization is to always leave the window open and use an if statement to display your image.
 
 {{< highlight cpp "linenos=table" >}}
 if (shouldRenderImGui) {
@@ -33,7 +45,7 @@ if (shouldRenderImGui) {
 }
 {{< / highlight >}}
 
- After defining your ImageWrapper pointer in OnLoad(), use the following code to display the image.
+ After defining your ImageWrapper pointer in OnLoad(), use the following code to display the image. You can also show images in your plugin settings window with this same snippet!
  
 {{< highlight cpp "linenos=table" >}}
 if (myImage->IsLoadedForImGui()) {
@@ -48,7 +60,11 @@ View the code for the entire project here: https://github.com/adamgerhant/Bakkes
 
 ## Displaying with Canvas
 
-First, start by intializing the canvas. Add this code to OnLoad()
+First, start by intializing the canvas. In your .h, define the function that will take a canvas.
+ 
+`void RenderCanvas(CanvasWrapper canvas);`
+
+Add this code to OnLoad()
 
 {{< highlight cpp "linenos=table" >}}
 gameWrapper->RegisterDrawable([this](CanvasWrapper canvas) {
@@ -65,6 +81,8 @@ void CanvasImageExample::RenderCanvas(CanvasWrapper canvas) {
 }
 {{< / highlight >}}
 
+
+
 Finally, add this code to the RenderCanvas
 
 {{< highlight cpp "linenos=table" >}}
@@ -74,8 +92,7 @@ Finally, add this code to the RenderCanvas
 // Changing the RGB values can be used to give the image different tints
 LinearColor color = { 255, 255, 255, 255 };
 canvas.SetColor(color); 
-  
-myImage->LoadForCanvas();
+ 
 if (myImage->IsLoadedForCanvas()) {	
 		canvas.SetPosition(Vector2F{200.0f, 300.0f});
 		canvas.DrawTexture(myImage.get(), 1); //the 1 represents the scale of the image
