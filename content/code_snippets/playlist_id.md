@@ -5,6 +5,8 @@ author: CinderBlock
 
 All (known) playlist IDs - 2020
 ``` javascript 
+-2: Intermission // Used internally to indicate to the server the client is switching playlists.
+0: Casual // Generic id to indicate ALL casual playlists, commonly used in API responses related to player skill/mmr. 
 1: Duel
 2: Doubles
 3: Standard
@@ -43,7 +45,12 @@ All (known) playlist IDs - 2020
 44: Winter Breakaway
 46: Gridiron
 47: Super Cube
-48: TacticalRumble
+48: Tactical Rumble
+49: Spring Loaded
+50: Speed Demon
+52: Gotham City Rumble
+54: Knockout
+55: confidential_thirdwheel_test
 ```
 
 Find the ID of the current playlist with this code. [Click here for GameSettingPlaylistWrapper reference](/bakkesmod_api/Classes/Wrappers/GameEvent/GameSettingPlaylistWrapper/)  
