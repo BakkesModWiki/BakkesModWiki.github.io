@@ -8,7 +8,7 @@
 <meta name="generator" content="Hugo 0.104.3" />
 
 
-  <meta name="description" content="Creating an ImageWrapper You should use some kind of reference type that manages the memory. std::shared_ptr&lt;ImageWrapper&gt; is my recommendation. Put the declaration in your .h file so it can be used anywhere The constructor takes 3 arguments (2 are optional) The optional arguments are two bools that decide if the core will preload the images for use in the canvas\imgui. The ImageWrapper is a resource managing class. This means that you have to keep this object &ldquo;alive&rdquo; as long as you want to use the image." />
+  <meta name="description" content="Creating an ImageWrapper You should use some kind of reference type that manages the memory. std::shared_ptr&lt;ImageWrapper&gt; is my recommendation. The ImageWrapper is a resource managing class. This means that you have to keep this object &ldquo;alive&rdquo; as long as you want to use the image. When the object goes out of scope \ gets destructed it cleans up the resource it manages. Stick to std::shared_ptr and you almost can&rsquo;t mess up." />
 
     <title>Creating an ImageWrapper | BakkesMod Programming Wiki</title>
 
@@ -33,20 +33,20 @@
     content="Creating an ImageWrapper"
   />
   <meta property="og:site_name" content="BakkesMod Programming Wiki" />
-  <meta property="og:description" content="Creating an ImageWrapper You should use some kind of reference type that manages the memory. std::shared_ptr&lt;ImageWrapper&gt; is my recommendation. Put the declaration in your .h file so it can be used anywhere The constructor takes 3 arguments (2 are optional) The optional arguments are two bools that decide if the core will preload the images for use in the canvas\imgui. The ImageWrapper is a resource managing class. This means that you have to keep this object “alive” as long as you want to use the image." />
+  <meta property="og:description" content="Creating an ImageWrapper You should use some kind of reference type that manages the memory. std::shared_ptr&lt;ImageWrapper&gt; is my recommendation. The ImageWrapper is a resource managing class. This means that you have to keep this object “alive” as long as you want to use the image. When the object goes out of scope \ gets destructed it cleans up the resource it manages. Stick to std::shared_ptr and you almost can’t mess up." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bakkesmodwiki.github.io/code_snippets/creating_image_wrapper/" />
 
 <meta property="article:section" content="Code Snippets" />
     <meta
       property="article:modified_time"
-      content="2022-10-22T20:29:11-07:00"
+      content="2022-10-22T21:16:43-07:00"
     />
 
 
   <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Creating an ImageWrapper" />
-  <meta name="twitter:description" content="Creating an ImageWrapper You should use some kind of reference type that manages the memory. std::shared_ptr&lt;ImageWrapper&gt; is my recommendation. Put the declaration in your .h file so it can be used anywhere The constructor takes 3 arguments (2 are optional) The optional arguments are two bools that decide if the core will preload the images for use in the canvas\imgui. The ImageWrapper is a resource managing class. This means that you have to keep this object “alive” as long as you want to use the image." />
+  <meta name="twitter:description" content="Creating an ImageWrapper You should use some kind of reference type that manages the memory. std::shared_ptr&lt;ImageWrapper&gt; is my recommendation. The ImageWrapper is a resource managing class. This means that you have to keep this object “alive” as long as you want to use the image. When the object goes out of scope \ gets destructed it cleans up the resource it manages. Stick to std::shared_ptr and you almost can’t mess up." />
 
 
   <script type="application/ld+json">
@@ -57,8 +57,8 @@
       "name": "Creating an ImageWrapper",
       "url" : "https://bakkesmodwiki.github.io/code_snippets/creating_image_wrapper/",
       "headline": "Creating an ImageWrapper",
-      "description": "Creating an ImageWrapper You should use some kind of reference type that manages the memory. std::shared_ptr\u003cImageWrapper\u003e is my recommendation. Put the declaration in your .h file so it can be used anywhere The constructor takes 3 arguments (2 are optional) The optional arguments are two bools that decide if the core will preload the images for use in the canvas\\imgui. The ImageWrapper is a resource managing class. This means that you have to keep this object “alive” as long as you want to use the image.",
-      "wordCount" : "306",
+      "description": "Creating an ImageWrapper You should use some kind of reference type that manages the memory. std::shared_ptr\u003cImageWrapper\u003e is my recommendation. The ImageWrapper is a resource managing class. This means that you have to keep this object “alive” as long as you want to use the image. When the object goes out of scope \\ gets destructed it cleans up the resource it manages. Stick to std::shared_ptr and you almost can’t mess up.",
+      "wordCount" : "318",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -69,7 +69,7 @@
       "copyrightYear" : "0001",
       "dateCreated": "0001-01-01T00:00:00.00Z",
       "datePublished": "0001-01-01T00:00:00.00Z",
-      "dateModified": "2022-10-22T20:29:11.00Z",
+      "dateModified": "2022-10-22T21:16:43.00Z",
       "publisher":{
           "@type":"Organization",
           "name": "BakkesMod Programming Wiki",
@@ -15399,15 +15399,11 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 </div>
 <ul>
 <li>You should use some kind of reference type that manages the memory. <code>std::shared_ptr&lt;ImageWrapper&gt;</code> is my recommendation.</li>
-<li>Put the declaration in your .h file so it can be used anywhere</li>
-<li>The constructor takes 3 arguments (2 are optional)</li>
-<li>The optional arguments are two bools that decide if the core will preload the images for use in the canvas\imgui.</li>
 <li>The <a
   class="gdoc-markdown__link"
   href="/bakkesmod_api/Classes/Wrappers/ImageWrapper/"
   
 >ImageWrapper</a> is a resource managing class. This means that you have to keep this object &ldquo;alive&rdquo; as long as you want to use the image. When the object goes out of scope \ gets destructed it cleans up the resource it manages.</li>
-<li>I have tried to delete the constructors that could cause issues (copy constructor).</li>
 <li>Stick to <code>std::shared_ptr</code> and you almost can&rsquo;t mess up.</li>
 <li><a
   class="gdoc-markdown__link"
@@ -15415,6 +15411,17 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
   
 >See all ImageWrapper functions here</a></li>
 </ul>
+<ol start="0">
+<li>Add the declaration to your .h
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">ImageWrapper</span><span class="o">&gt;</span> <span class="n">myImage</span><span class="p">;</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
 <div class="gdoc-page__anchorwrap">
     <h2 id="using-an-imagewrapper">
         Using an ImageWrapper
@@ -15425,7 +15432,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 </div>
 <ol>
 <li>
-<p>Use the constructor with the second or third argument true (or both).
+<p>Use the constructor with the second or third argument true (or both). This can cause stuttering based on the size of the image. This is best done in your plugin&rsquo;s onLoad. You only need to load the image once, and onLoad is expected to be a bit stuttery already
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -15438,7 +15445,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 </div></p>
 </li>
 <li>
-<p>Load the resource if you didn&rsquo;t use the optional args.
+<p>Load the resource if you didn&rsquo;t use the optional args. This also causes lag so it&rsquo;s best to do this in onLoad or in a place that isn&rsquo;t called often
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -15489,7 +15496,7 @@ So it&rsquo;s better to do it during loading the plugin -  when such behaviour c
 
     
     <hr>
-    <div>Written by <b>Martinn</b></div>
+    <div>Written by <b>Martinn</b>.&nbsp;<i>Collaborations from ubelhj</i></div>
     
   </article>
 
