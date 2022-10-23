@@ -40,7 +40,7 @@
 <meta property="article:section" content="Code Snippets" />
     <meta
       property="article:modified_time"
-      content="2022-10-22T20:17:42-07:00"
+      content="2022-10-22T20:29:11-07:00"
     />
 
 
@@ -58,7 +58,7 @@
       "url" : "https://bakkesmodwiki.github.io/code_snippets/creating_image_wrapper/",
       "headline": "Creating an ImageWrapper",
       "description": "Creating an ImageWrapper You should use some kind of reference type that manages the memory. std::shared_ptr\u003cImageWrapper\u003e is my recommendation. Put the declaration in your .h file so it can be used anywhere The constructor takes 3 arguments (2 are optional) The optional arguments are two bools that decide if the core will preload the images for use in the canvas\\imgui. The ImageWrapper is a resource managing class. This means that you have to keep this object “alive” as long as you want to use the image.",
-      "wordCount" : "301",
+      "wordCount" : "306",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -69,7 +69,7 @@
       "copyrightYear" : "0001",
       "dateCreated": "0001-01-01T00:00:00.00Z",
       "datePublished": "0001-01-01T00:00:00.00Z",
-      "dateModified": "2022-10-22T20:17:42.00Z",
+      "dateModified": "2022-10-22T20:29:11.00Z",
       "publisher":{
           "@type":"Organization",
           "name": "BakkesMod Programming Wiki",
@@ -15390,13 +15390,9 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
   >
     <h1>Creating an ImageWrapper</h1>
     <div class="gdoc-page__anchorwrap">
-    <h2 id="creating-an--imagewrapperbakkesmod_apiclasseswrappersimagewrapper">
-        Creating an  <a
-  class="gdoc-markdown__link"
-  href="/bakkesmod_api/Classes/Wrappers/ImageWrapper/"
-  
->ImageWrapper</a>
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/code_snippets/creating_image_wrapper/#creating-an--imagewrapperbakkesmod_apiclasseswrappersimagewrapper" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: Creating an  ImageWrapper" aria-label="Anchor to: Creating an  ImageWrapper" href="#creating-an--imagewrapperbakkesmod_apiclasseswrappersimagewrapper">
+    <h2 id="creating-an-imagewrapper">
+        Creating an ImageWrapper
+        <a data-clipboard-text="https://bakkesmodwiki.github.io/code_snippets/creating_image_wrapper/#creating-an-imagewrapper" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: Creating an ImageWrapper" aria-label="Anchor to: Creating an ImageWrapper" href="#creating-an-imagewrapper">
             <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
         </a>
     </h2>
@@ -15406,18 +15402,23 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <li>Put the declaration in your .h file so it can be used anywhere</li>
 <li>The constructor takes 3 arguments (2 are optional)</li>
 <li>The optional arguments are two bools that decide if the core will preload the images for use in the canvas\imgui.</li>
-<li>The ImageWrapper is a resource managing class. This means that you have to keep this object &ldquo;alive&rdquo; as long as you want to use the image. When the object goes out of scope \ gets destructed it cleans up the resource it manages.</li>
-<li>I have tried to delete the constructors that could cause issues (copy constructor).</li>
-<li>Stick to <code>std::shared_ptr</code> and you almost can&rsquo;t mess up.</li>
-</ul>
-<div class="gdoc-page__anchorwrap">
-    <h2 id="using-an--imagewrapperbakkesmod_apiclasseswrappersimagewrapper">
-        Using an  <a
+<li>The <a
   class="gdoc-markdown__link"
   href="/bakkesmod_api/Classes/Wrappers/ImageWrapper/"
   
->ImageWrapper</a>
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/code_snippets/creating_image_wrapper/#using-an--imagewrapperbakkesmod_apiclasseswrappersimagewrapper" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: Using an  ImageWrapper" aria-label="Anchor to: Using an  ImageWrapper" href="#using-an--imagewrapperbakkesmod_apiclasseswrappersimagewrapper">
+>ImageWrapper</a> is a resource managing class. This means that you have to keep this object &ldquo;alive&rdquo; as long as you want to use the image. When the object goes out of scope \ gets destructed it cleans up the resource it manages.</li>
+<li>I have tried to delete the constructors that could cause issues (copy constructor).</li>
+<li>Stick to <code>std::shared_ptr</code> and you almost can&rsquo;t mess up.</li>
+<li><a
+  class="gdoc-markdown__link"
+  href="/bakkesmod_api/Classes/Wrappers/ImageWrapper/"
+  
+>See all ImageWrapper functions here</a></li>
+</ul>
+<div class="gdoc-page__anchorwrap">
+    <h2 id="using-an-imagewrapper">
+        Using an ImageWrapper
+        <a data-clipboard-text="https://bakkesmodwiki.github.io/code_snippets/creating_image_wrapper/#using-an-imagewrapper" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: Using an ImageWrapper" aria-label="Anchor to: Using an ImageWrapper" href="#using-an-imagewrapper">
             <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
         </a>
     </h2>
