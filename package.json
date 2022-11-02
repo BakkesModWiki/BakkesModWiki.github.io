@@ -8,7 +8,7 @@
     "sdkgen": "node ./sdk-document-gen.js --unhandled-rejections=strict",
     "static": "hugo -D",
     "dev": "hugo server -D",
-    "get-doxygen": "curl https://sourceforge.net/projects/doxygen/files/rel-1.9.2/doxygen-1.9.2.linux.bin.tar.gz/download | tar -xz"
+    "get-doxygen": "curl https://nyc3.digitaloceanspaces.com/bp-prod/wiki-assets/c245144c7bf3260434434a5c02e9c454bfe42ec910ff9abbd1/doxygen-1.9.2.linux.bin.tar.gz | tar -xz"
   },
   "repository": {
     "type": "git",
