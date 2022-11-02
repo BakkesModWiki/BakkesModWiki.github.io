@@ -289,6 +289,17 @@ float Wall Default value: none</description>
     </item>
     
     <item>
+      <title>TrainingRoundProgress</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/TrainingRoundProgress/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/TrainingRoundProgress/</guid>
+      <description>View Implementation int RoundNumber Default value: none
+unsigned char Status Default value: none
+unsigned char Padding Default value: none</description>
+    </item>
+    
+    <item>
       <title>UnrealColor</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/UnrealColor/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

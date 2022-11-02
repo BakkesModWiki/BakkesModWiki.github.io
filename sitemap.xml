@@ -25,6 +25,8 @@
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/Stats/</loc>
   </url><url>
+    <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Gfx/</loc>
+  </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Http/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/</loc>
@@ -215,6 +217,8 @@
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/GameSettingPlaylistWrapper/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameWrapper/</loc>
+  </url><url>
+    <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Gfx/GfxDataTrainingWrapper/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/GoalHoopsWrapper/</loc>
   </url><url>
@@ -434,6 +438,8 @@
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/SaveData/TrainingEditorSaveDataWrapper/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TrainingEditorWrapper/</loc>
+  </url><url>
+    <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/TrainingRoundProgress/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/TutorialWrapper/</loc>
   </url><url>
