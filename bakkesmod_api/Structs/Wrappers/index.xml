@@ -164,6 +164,16 @@ unsigned long bHitGround Default value: none</description>
     </item>
     
     <item>
+      <title>ProductInstanceID</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/ProductInstanceID/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/ProductInstanceID/</guid>
+      <description>View Implementation unsigned long long upper_bits Default value: none
+unsigned long long lower_bits Default value: none</description>
+    </item>
+    
+    <item>
       <title>ProfileCameraSettings</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/ProfileCameraSettings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

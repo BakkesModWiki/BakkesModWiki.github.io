@@ -15,12 +15,30 @@
     </item>
     
     <item>
+      <title>LoadoutSaveWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/LoadoutSaveWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/LoadoutSaveWrapper/</guid>
+      <description> View Implementation _NODISCARD bool IsNull() const operator bool() const LoadoutSetWrapper GetPreset(int index) const Parameter Type Description index int &amp;mdash; ArrayWrapper GetPresets() const void SetPreviewTeam(int team) Parameter Type Description team int &amp;mdash; _NODISCARD int GetPreviewTeam() const LoadoutSetWrapper GetEquippedLoadout() const void RenamePreset(const LoadoutSetWrapper &amp;amp;preset_wrapper, const std::string &amp;amp;new_name) Parameter Type Description preset_wrapper LoadoutSetWrapper &amp;mdash; new_name const std::string &amp;amp; &amp;mdash; void EquipPreset(const LoadoutSetWrapper &amp;amp;preset) const Parameter Type Description preset LoadoutSetWrapper &amp;mdash; void DeletePreset(const LoadoutSetWrapper &amp;amp;preset_wrapper) Parameter Type Description preset_wrapper LoadoutSetWrapper &amp;mdash; LoadoutSetWrapper AddPreset() void SwapPreset(const LoadoutSetWrapper &amp;amp;a, const LoadoutSetWrapper &amp;amp;b) Parameter Type Description a LoadoutSetWrapper &amp;mdash; b LoadoutSetWrapper &amp;mdash; _NODISCARD int GetIndex(const LoadoutSetWrapper &amp;amp;preset_wrapper) const Parameter Type Description preset_wrapper LoadoutSetWrapper &amp;mdash; </description>
+    </item>
+    
+    <item>
+      <title>LoadoutSetWrapper</title>
+      <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/LoadoutSetWrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/LoadoutSetWrapper/</guid>
+      <description> View Implementation _NODISCARD bool IsNull() const operator bool() const void CopyFrom(const LoadoutSetWrapper &amp;amp;other) Parameter Type Description other LoadoutSetWrapper &amp;mdash; _NODISCARD std::string GetName() const void Rename(const std::string &amp;amp;new_name) Parameter Type Description new_name const std::string &amp;amp; &amp;mdash; void EquipProduct(const ProductInstanceID &amp;amp;instance_id, int slot_id, int team) Parameter Type Description instance_id ProductInstanceID &amp;mdash; slot_id int &amp;mdash; team int &amp;mdash; LoadoutSetData GetLoadoutData() const </description>
+    </item>
+    
+    <item>
       <title>LoadoutWrapper</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/LoadoutWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/LoadoutWrapper/</guid>
-      <description> View Implementation _NODISCARD bool IsNull() const operator bool() const ArrayWrapper GetLoadout() ArrayWrapper GetOnlineLoadout() unsigned char GetPrimaryPaintColorId() unsigned char GetAccentPaintColorId() int GetPrimaryFinishId() int GetAccentFinishId() </description>
+      <description> View Implementation _NODISCARD bool IsNull() const operator bool() const ArrayWrapper GetLoadout() ArrayWrapper GetOnlineLoadout() ProductInstanceID GetOnlineLoadoutV2() const unsigned char GetPrimaryPaintColorId() unsigned char GetAccentPaintColorId() int GetPrimaryFinishId() int GetAccentFinishId() </description>
     </item>
     
     <item>
@@ -29,7 +47,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/OnlineProductWrapper/</guid>
-      <description> View Implementation _NODISCARD bool IsNull() const operator bool() const std::string SeriesIdToSeriesName(int seriesID) Parameter Type Description seriesID int &amp;mdash; _NODISCARD bool IsFavorited() const int GetProductID() int GetSeriesID() int GetTradeHold() std::string GetProductSeries() unsigned char GetQuality() ArrayWrapper GetAttributes() UnrealStringWrapper GetLongLabel() int GetBlueprintSeriesID() unsigned char GetBlueprintType() bool IsBlueprint() ProductWrapper GetProduct() bool GetIsUntradable() unsigned long long GetInstanceID() </description>
+      <description> View Implementation _NODISCARD bool IsNull() const operator bool() const std::string SeriesIdToSeriesName(int seriesID) Parameter Type Description seriesID int &amp;mdash; _NODISCARD bool IsFavorited() const int GetProductID() int GetSeriesID() int GetTradeHold() std::string GetProductSeries() unsigned char GetQuality() ArrayWrapper GetAttributes() UnrealStringWrapper GetLongLabel() int GetBlueprintSeriesID() unsigned char GetBlueprintType() bool IsBlueprint() ProductWrapper GetProduct() bool GetIsUntradable() unsigned long long GetInstanceID() ProductInstanceID GetInstanceIDV2() </description>
     </item>
     
     <item>

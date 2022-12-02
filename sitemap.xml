@@ -248,6 +248,12 @@
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/LinearColor/</loc>
   </url><url>
+    <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/LoadoutSaveWrapper/</loc>
+  </url><url>
+    <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/Items/LoadoutSetData/</loc>
+  </url><url>
+    <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/LoadoutSetWrapper/</loc>
+  </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/LoadoutWrapper/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/MatchmakingWrapper/</loc>
@@ -327,6 +333,8 @@
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttribute_UnlockMethodWrapper/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Attributes/ProductAttributeWrapper/</loc>
+  </url><url>
+    <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/ProductInstanceID/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Enums/PRODUCTQUALITY/</loc>
   </url><url>
