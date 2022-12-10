@@ -5,7 +5,7 @@
 <meta name="referrer" content="no-referrer" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="color-scheme" content="light dark" />
-<meta name="generator" content="Hugo 0.107.0">
+<meta name="generator" content="Hugo 0.108.0">
 
 
   <meta name="description" content="Stat events are a great way to show a slightly more complicated plugin logic. They are fairly common to use, use multiple wrappers, event hooks, and have some unique caveats. Also I made a plugin with them so I know how they work. Hopefully this helps someone
@@ -46,7 +46,7 @@ You need to hook some events to use stat events. This depends on your use case."
 <meta property="article:section" content="Functions" />
     <meta
       property="article:modified_time"
-      content="2022-06-29T13:34:29-07:00"
+      content="2022-12-10T11:25:13-08:00"
     />
 
 
@@ -78,7 +78,7 @@ You need to hook some events to use stat events. This depends on your use case."
       "copyrightYear" : "0001",
       "dateCreated": "0001-01-01T00:00:00.00Z",
       "datePublished": "0001-01-01T00:00:00.00Z",
-      "dateModified": "2022-06-29T13:34:29.00Z",
+      "dateModified": "2022-12-10T11:25:13.00Z",
       "publisher":{
           "@type":"Organization",
           "name": "BakkesMod Programming Wiki",
@@ -15794,7 +15794,7 @@ HandleStatEvent catches all stats, but only for the primary player. Depending on
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">ClassName</span><span class="o">::</span><span class="n">onStatEvent</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">params</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="n">StatEventParams</span><span class="o">*</span> <span class="n">pStruct</span> <span class="o">=</span> <span class="p">(</span><span class="n">StatEventParams</span><span class="o">*</span><span class="p">)</span><span class="n">params</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">PriWrapper</span> <span class="n">receiver</span> <span class="o">=</span> <span class="n">PriWrapper</span><span class="p">(</span><span class="n">pStruct</span><span class="o">-&gt;</span><span class="n">Receiver</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">PriWrapper</span> <span class="n">playerPRI</span> <span class="o">=</span> <span class="n">PriWrapper</span><span class="p">(</span><span class="n">pStruct</span><span class="o">-&gt;</span><span class="n">PRI</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="n">StatEventWrapper</span> <span class="n">statEvent</span> <span class="o">=</span> <span class="n">StatEventWrapper</span><span class="p">(</span><span class="n">pStruct</span><span class="o">-&gt;</span><span class="n">StatEvent</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
 </div>
