@@ -61,7 +61,7 @@ void ClassName::onStatTickerMessage(void* params) {
 
 void ClassName::onStatEvent(void* params) {
     StatEventParams* pStruct = (StatEventParams*)params;
-    PriWrapper receiver = PriWrapper(pStruct->Receiver);
+    PriWrapper playerPRI = PriWrapper(pStruct->PRI);
     StatEventWrapper statEvent = StatEventWrapper(pStruct->StatEvent);
 }
 {{< /highlight>}}
