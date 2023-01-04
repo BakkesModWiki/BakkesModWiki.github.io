@@ -249,9 +249,8 @@ unsigned char ScoreTeam Default value: none</description>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/Rotator/</guid>
       <description>View Implementation A description of the orientation of an object. This github page describes what 3D space is in Rocket League
-int Pitch Default value: none
-int Yaw Default value: none
-int Roll Default value: none</description>
+Some additional notes:
+Rotator applies rotations in the order yaw-pitch-roll. The identity rotation for a car (i.e. P=Y=R=0) corresponds to the car being upright with its nose pointing towards the positive x-axis. If the car were at the center of the field, its nose would face towards the left mid-boost, from the blue team&#39;s perspective.</description>
     </item>
     
     <item>

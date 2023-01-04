@@ -54,7 +54,7 @@
       "url" : "https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/Rotator/",
       "headline": "Rotator",
       "description": "Rotator",
-      "wordCount" : "36",
+      "wordCount" : "142",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -15711,6 +15711,12 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
   href="https://github.com/RLBot/RLBot/wiki/Useful-Game-Values"
   
 >This github page describes what 3D space is in Rocket League</a></p>
+<p>Some additional notes:</p>
+<ul>
+<li>Rotator applies rotations in the order yaw-pitch-roll.</li>
+<li>The identity rotation for a car (i.e. P=Y=R=0) corresponds to the car being upright with its nose pointing towards the positive x-axis. If the car were at the center of the field, its nose would face towards the left mid-boost, from the blue team's perspective.</li>
+<li>Example: to get a car facing straight up, wheels toward the orange goal, you could yaw 90 degrees right, then pitch up 90 degrees. This corresponds to P=16383, Y=16383, R=0. You could also yaw 90 degrees left, pitch 90 degrees up, then roll 180 degrees. This corresponds to P=16383, Y=-16384, R=32767.</li>
+</ul>
 <hr>
 <div class="gdoc-page__anchorwrap">
     <h3 id="inthttpsencppreferencecomwcpplanguagetypessigned_and_unsigned_integer_typesnbsppitch">
