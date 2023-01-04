@@ -5,12 +5,10 @@
 <meta name="referrer" content="no-referrer" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="color-scheme" content="light dark" />
-<meta name="generator" content="Hugo 0.108.0">
+<meta name="generator" content="Hugo 0.109.0">
 
 
-  <meta name="description" content="In plugin onLoad(), registerCVar is called and the cvar will have default values
-cvar values are only changed when a config file is executed, or a console command is fired. It doesn&rsquo;t magically &ldquo;remember&rdquo; values from previous runs or anything.
-On BM startup, it&rsquo;ll execute plugins.cfg first to load all plugins, causing all cvars for these plugins to be created. Then once this is done it will execute config.cfg, which will set the actual saved value." />
+  <meta name="description" content="Cvars are the global variables of the mod. Bakkesmod has many pre-defined CVars that your plugin can also set/unset. Cvars are strings, but can represent bool/float values in string form. The declaration of a CVar is: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 // in include\bakkesmod\wrappers\cvarmanagerwrapper.h // &lt;summary&gt;Register a CVar.&lt;/summary&gt; // &lt;param name=&#34;cvar&#34;&gt;The string name of your CVar&lt;/param&gt; // &lt;param name=&#34;defaultValue&#34;&gt;The default value of your CVar&lt;/param&gt; // &lt;param name=&#34;desc&#34;&gt;A description of your Cvar which is logged&lt;/param&gt; // &lt;param name=&#34;searchAble&#34;&gt;If the cvar will pop-up when entering values in the console." />
 
     <title>How CVars Work | BakkesMod Programming Wiki</title>
 
@@ -35,24 +33,20 @@ On BM startup, it&rsquo;ll execute plugins.cfg first to load all plugins, causin
     content="How CVars Work"
   />
   <meta property="og:site_name" content="BakkesMod Programming Wiki" />
-  <meta property="og:description" content="In plugin onLoad(), registerCVar is called and the cvar will have default values
-cvar values are only changed when a config file is executed, or a console command is fired. It doesn’t magically “remember” values from previous runs or anything.
-On BM startup, it’ll execute plugins.cfg first to load all plugins, causing all cvars for these plugins to be created. Then once this is done it will execute config.cfg, which will set the actual saved value." />
+  <meta property="og:description" content="Cvars are the global variables of the mod. Bakkesmod has many pre-defined CVars that your plugin can also set/unset. Cvars are strings, but can represent bool/float values in string form. The declaration of a CVar is: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 // in include\bakkesmod\wrappers\cvarmanagerwrapper.h // &lt;summary&gt;Register a CVar.&lt;/summary&gt; // &lt;param name=&#34;cvar&#34;&gt;The string name of your CVar&lt;/param&gt; // &lt;param name=&#34;defaultValue&#34;&gt;The default value of your CVar&lt;/param&gt; // &lt;param name=&#34;desc&#34;&gt;A description of your Cvar which is logged&lt;/param&gt; // &lt;param name=&#34;searchAble&#34;&gt;If the cvar will pop-up when entering values in the console." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bakkesmodwiki.github.io/code_snippets/how_cvars_work/" />
 
 <meta property="article:section" content="Code Snippets" />
     <meta
       property="article:modified_time"
-      content="2022-04-25T23:40:20-07:00"
+      content="2022-12-28T18:38:37-05:00"
     />
 
 
   <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="How CVars Work" />
-  <meta name="twitter:description" content="In plugin onLoad(), registerCVar is called and the cvar will have default values
-cvar values are only changed when a config file is executed, or a console command is fired. It doesn’t magically “remember” values from previous runs or anything.
-On BM startup, it’ll execute plugins.cfg first to load all plugins, causing all cvars for these plugins to be created. Then once this is done it will execute config.cfg, which will set the actual saved value." />
+  <meta name="twitter:description" content="Cvars are the global variables of the mod. Bakkesmod has many pre-defined CVars that your plugin can also set/unset. Cvars are strings, but can represent bool/float values in string form. The declaration of a CVar is: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 // in include\bakkesmod\wrappers\cvarmanagerwrapper.h // &lt;summary&gt;Register a CVar.&lt;/summary&gt; // &lt;param name=&#34;cvar&#34;&gt;The string name of your CVar&lt;/param&gt; // &lt;param name=&#34;defaultValue&#34;&gt;The default value of your CVar&lt;/param&gt; // &lt;param name=&#34;desc&#34;&gt;A description of your Cvar which is logged&lt;/param&gt; // &lt;param name=&#34;searchAble&#34;&gt;If the cvar will pop-up when entering values in the console." />
 
 
   <script type="application/ld+json">
@@ -63,8 +57,8 @@ On BM startup, it’ll execute plugins.cfg first to load all plugins, causing al
       "name": "How CVars Work",
       "url" : "https://bakkesmodwiki.github.io/code_snippets/how_cvars_work/",
       "headline": "How CVars Work",
-      "description": "In plugin onLoad(), registerCVar is called and the cvar will have default values\ncvar values are only changed when a config file is executed, or a console command is fired. It doesn’t magically “remember” values from previous runs or anything.\nOn BM startup, it’ll execute plugins.cfg first to load all plugins, causing all cvars for these plugins to be created. Then once this is done it will execute config.cfg, which will set the actual saved value.",
-      "wordCount" : "242",
+      "description": "Cvars are the global variables of the mod. Bakkesmod has many pre-defined CVars that your plugin can also set\/unset. Cvars are strings, but can represent bool\/float values in string form. The declaration of a CVar is: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 \/\/ in include\\bakkesmod\\wrappers\\cvarmanagerwrapper.h \/\/ \u003csummary\u003eRegister a CVar.\u003c\/summary\u003e \/\/ \u003cparam name=\u0022cvar\u0022\u003eThe string name of your CVar\u003c\/param\u003e \/\/ \u003cparam name=\u0022defaultValue\u0022\u003eThe default value of your CVar\u003c\/param\u003e \/\/ \u003cparam name=\u0022desc\u0022\u003eA description of your Cvar which is logged\u003c\/param\u003e \/\/ \u003cparam name=\u0022searchAble\u0022\u003eIf the cvar will pop-up when entering values in the console.",
+      "wordCount" : "681",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -75,7 +69,7 @@ On BM startup, it’ll execute plugins.cfg first to load all plugins, causing al
       "copyrightYear" : "0001",
       "dateCreated": "0001-01-01T00:00:00.00Z",
       "datePublished": "0001-01-01T00:00:00.00Z",
-      "dateModified": "2022-04-25T23:40:20.00Z",
+      "dateModified": "2022-12-28T18:38:37.00Z",
       "publisher":{
           "@type":"Organization",
           "name": "BakkesMod Programming Wiki",
@@ -15676,31 +15670,146 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
     class="gdoc-markdown gdoc-markdown__align--left"
   >
     <h1>How CVars Work</h1>
-    <p>In plugin onLoad(), registerCVar is called and the cvar will have default values</p>
-<p>cvar values are only changed when a config file is executed, or a console command is fired. It doesn&rsquo;t magically &ldquo;remember&rdquo; values from previous runs or anything.</p>
-<p>On BM startup, it&rsquo;ll execute plugins.cfg first to load all plugins, causing all cvars for these plugins to be created. Then once this is done it will execute config.cfg, which will set the actual saved value.</p>
-<p>If you want to reload a plugin while BM is running already but keep its values, make sure you use writeconfig before the plugin is unloaded, then unload/load or reload the plugin, now the plugin will have registered it cvars, but with default values. Then execute config.cfg to get your stored values back</p>
+    <p>Cvars are the global variables of the mod. Bakkesmod has many <a
+  class="gdoc-markdown__link"
+  href="https://bakkesmod.fandom.com/wiki/Category:Cvars#List_of_all_cvars"
+  
+>pre-defined CVars</a> that your plugin can also set/unset.
+Cvars are strings, but can represent bool/float values in string form. The declaration of a CVar is:
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// in include\bakkesmod\wrappers\cvarmanagerwrapper.h
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// &lt;summary&gt;Register a CVar.&lt;/summary&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c1">// &lt;param name=&#34;cvar&#34;&gt;The string name of your CVar&lt;/param&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c1">// &lt;param name=&#34;defaultValue&#34;&gt;The default value of your CVar&lt;/param&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c1">// &lt;param name=&#34;desc&#34;&gt;A description of your Cvar which is logged&lt;/param&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c1">// &lt;param name=&#34;searchAble&#34;&gt;If the cvar will pop-up when entering values in the console.&lt;/param&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c1">// &lt;param name=&#34;hasMin&#34;&gt;If there is a minumum value (i.e. a float slider)&lt;/param&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c1">// &lt;param name=&#34;min&#34;&gt;if hasMin=true, this is the value.&lt;/param&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c1">// &lt;param name=&#34;hasMax&#34;&gt;If there is a maximum value&lt;/param&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c1">// &lt;param name=&#34;max&#34;&gt;if hasmax=true, this is the value.&lt;/param&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c1">// &lt;param name=&#34;saveToCfg&#34;&gt;If true, will add the Cvar and default value to config.cfg&lt;/param&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c1">// &lt;returns&gt; Vector of std::string keybinds.&lt;/returns&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">registerCvar</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">cvar</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">defaultValue</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">desc</span> <span class="o">=</span> <span class="s">&#34;&#34;</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">searchAble</span> <span class="o">=</span> <span class="nb">true</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">hasMin</span> <span class="o">=</span> <span class="nb">false</span><span class="p">,</span> <span class="kt">float</span> <span class="n">min</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">hasMax</span> <span class="o">=</span> <span class="nb">false</span><span class="p">,</span> <span class="kt">float</span> <span class="n">max</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">saveToCfg</span> <span class="o">=</span> <span class="nb">true</span><span class="p">);</span></span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<p>Notice the min/max arguments. The BM rebound plugin uses this i.e. &ldquo;rebound_shotspeed&rdquo; as a value between 0-2000.</p>
+<p>In plugin onLoad(), cvarManager-&gt;registerCVar() is called, this is where you tell bakkesmod details about your CVar and give it a default string values.</p>
+<p>When bakkesmod loads, it&rsquo;ll execute plugins.cfg which loads each plugin. This is where onLoad() is fired, CVars are created and default values are set for each plugin. Then config.cfg will execute, which will set saved-values.</p>
+<p>To save a value, you need to call &lsquo;writeconfig&rsquo; in the console, or programmatically with:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span> <span class="n">enabledOverlay</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">executeCommand</span><span class="p">(</span><span class="s">&#34;writeconfig&#34;</span><span class="p">,</span> <span class="nb">false</span><span class="p">);</span> <span class="c1">//false just means don&#39;t log the writeconfig
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+<p>The config.cfg file containes all cvars/alias. Find this file in bakkesmod/cfg/config.cfg. This file is your route to easily saving CVars across sessions.
+Note that &lsquo;writeconfig&rsquo; will also execute binds.cfg, and save current keybinds.</p>
+<p>If you want to reload a plugin while BM is running already but keep its values, make sure you use writeconfig before the plugin is unloaded, then unload/load or reload the plugin, now the plugin will have registered it cvars, but with default values. Then execute config.cfg to get your stored values back. In the console: &rsquo;exec config.cfg&rsquo;.</p>
+<p>Here is a typical example changing a CVar with ImGui checkbox:
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// myplugin.h
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">class</span> <span class="nc">MyPlugin</span> <span class="o">:</span> <span class="k">public</span> <span class="n">BakkesMod</span><span class="o">::</span><span class="n">Plugin</span><span class="o">::</span><span class="n">BakkesModPlugin</span><span class="p">,</span> <span class="k">public</span> <span class="n">BakkesMod</span><span class="o">::</span><span class="n">Plugin</span><span class="o">::</span><span class="n">PluginWindow</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span> <span class="n">enabled</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">onLoad</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">onUnload</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">private</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">auto</span> <span class="n">overlayEnableVar</span> <span class="o">=</span> <span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">registerCvar</span><span class="p">(</span><span class="s">&#34;counter_enable_ingame&#34;</span><span class="p">,</span> <span class="s">&#34;0&#34;</span><span class="p">,</span> <span class="s">&#34;enables in game overlay&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">overlayEnableVar</span><span class="p">.</span><span class="n">bindTo</span><span class="p">(</span><span class="n">enabledOverlay</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">overlayEnableVar</span><span class="p">.</span><span class="n">addOnValueChanged</span><span class="p">([</span><span class="k">this</span><span class="p">](</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">CVarWrapper</span> <span class="n">cvar</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="n">doSomethingWhenCounterEnabledChanged</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl"><span class="p">});</span></span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl"><span class="c1">// myplugin.cpp
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">enabled</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="p">(</span><span class="nb">true</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">registerCvar</span><span class="p">(</span><span class="s">&#34;plugin_enabled&#34;</span><span class="p">,</span> <span class="s">&#34;0&#34;</span><span class="p">,</span> <span class="s">&#34;Enable/Disable the plugin. 0 = false = disabled, 1 = true = enabled&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="n">bindTo</span><span class="p">(</span><span class="n">enabled</span><span class="p">);</span> <span class="c1">// bind the global shared pointer to this CVar
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">getCvar</span><span class="p">(</span><span class="s">&#34;plugin_enabled&#34;</span><span class="p">).</span><span class="n">addOnValueChanged</span><span class="p">([</span><span class="k">this</span><span class="p">](</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">oldValue</span><span class="p">,</span> <span class="n">CVarWrapper</span> <span class="n">cvar</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//addOnValueChanged is a callback, where everything in this block will be called whenever the cvar value is changed. You can call functions, or just log information.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">if</span> <span class="p">(</span><span class="n">cvar</span><span class="p">.</span><span class="n">getStringValue</span><span class="p">()</span> <span class="o">==</span> <span class="s">&#34;1&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;Plugin Enabled&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">};</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">cvar</span><span class="p">.</span><span class="n">getStringValue</span><span class="p">()</span> <span class="o">==</span> <span class="s">&#34;0&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;Plugin Disabled&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">};</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// mypluginGUI.cpp
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">static</span> <span class="k">auto</span> <span class="n">pluginCvar</span> <span class="o">=</span> <span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">getCvar</span><span class="p">(</span><span class="s">&#34;plugin_enabled&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">auto</span> <span class="n">pluginEnabled</span> <span class="o">=</span> <span class="n">pluginCvar</span><span class="p">.</span><span class="n">getBoolValue</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">ImGui</span><span class="o">::</span><span class="n">Checkbox</span><span class="p">(</span><span class="s">&#34;Enable Plugin&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">pluginEnabled</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="n">pluginCvar</span><span class="p">.</span><span class="n">setValue</span><span class="p">(</span><span class="n">pluginEnabled</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">executeCommand</span><span class="p">(</span><span class="s">&#34;writeconfig&#34;</span><span class="p">,</span> <span class="nb">false</span><span class="p">);</span> <span class="c1">// save CVar to config.cfg
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span></span></span></code></pre></td></tr></table>
 </div>
-</div>
-<p>also bindTo is pretty much just a wrapper for
+</div></p>
+<p>After registering the CVar, we bind it to the global bool. Bind to is pretty much a wrapper for:
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -15713,13 +15822,13 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">bindTo</span><span class="p">(</span><span class="n">CVar</span> <span class="n">cvar</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">abc</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="n">cvar</span><span class="p">.</span><span class="n">addOnValueChanged</span><span class="p">([</span><span class="k">this</span><span class="p">](</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">CVarWrapper</span> <span class="n">cvar</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="o">*</span><span class="n">abc</span> <span class="o">=</span> <span class="n">cvar</span><span class="p">.</span><span class="n">getTValue</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cvar</span><span class="p">.</span><span class="n">addOnValueChanged</span><span class="p">([</span><span class="k">this</span><span class="p">](</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">CVarWrapper</span> <span class="n">cvar</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="o">*</span><span class="n">abc</span> <span class="o">=</span> <span class="n">cvar</span><span class="p">.</span><span class="n">getTValue</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
 </div>
 </div></p>
-<p>these std::shared_ptrs only work one way though, cvar -&gt; shared_ptrs. if you alter the shared_ptr directly it will NOT update the actual cvar value. To do that:
+<p>Here&rsquo;s another way:
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -15728,20 +15837,24 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span><span class="lnt">6
+</span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">auto</span> <span class="n">cvar</span> <span class="o">=</span> <span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">getCvar</span><span class="p">(</span><span class="s">&#34;counter_enable_ingame&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">cvar</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">// CVarWrappers can be null if the cvar doesn&#39;t exit!
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">return</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="k">auto</span> <span class="n">overlayEnableVar</span> <span class="o">=</span> <span class="n">cvar</span><span class="p">.</span><span class="n">setValue</span><span class="p">(</span><span class="n">enabledOverlay</span><span class="p">.</span><span class="n">get</span><span class="p">());</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// myplugin.h:
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">static</span> <span class="k">constexpr</span> <span class="k">const</span> <span class="kt">char</span><span class="err">\</span><span class="o">*</span> <span class="n">pluginEnabled</span> <span class="o">=</span> <span class="s">&#34;1&#34;</span><span class="p">;</span> <span class="c1">// 1 is the default value here
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// myplugin.cpp
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">registerCvar</span><span class="p">(</span><span class="n">pluginEnabled</span><span class="p">,</span> <span class="s">&#34;1&#34;</span><span class="p">,</span> <span class="s">&#34;Enable/Disable the plugin. 0 = false = disabled, 1 = true = enabled&#34;</span><span class="p">,</span> <span class="nb">true</span><span class="p">,</span> <span class="nb">true</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">true</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// all default values for registerCvar are used as arguments here, but not needed if they&#39;re just defaults
+</span></span></span><span class="line"><span class="cl"><span class="c1">// usage would be the same.
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div></p>
+<p>In addition to these methods, you can just make functions to call within .addOnValueChanged() to set Cvar values.</p>
 
     
     <hr>
-    <div>Written by <b>Bakkes</b>.&nbsp;<i>Collaborations from ubelhj</i></div>
+    <div>Written by <b>Bakkes, NeuroPyPy</b></div>
     
   </article>
 

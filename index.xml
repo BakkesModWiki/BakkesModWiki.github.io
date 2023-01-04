@@ -2310,9 +2310,7 @@ Create a repository from this template Click the big green button Use this templ
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/code_snippets/how_cvars_work/</guid>
-      <description>In plugin onLoad(), registerCVar is called and the cvar will have default values
-cvar values are only changed when a config file is executed, or a console command is fired. It doesn&amp;rsquo;t magically &amp;ldquo;remember&amp;rdquo; values from previous runs or anything.
-On BM startup, it&amp;rsquo;ll execute plugins.cfg first to load all plugins, causing all cvars for these plugins to be created. Then once this is done it will execute config.cfg, which will set the actual saved value.</description>
+      <description>Cvars are the global variables of the mod. Bakkesmod has many pre-defined CVars that your plugin can also set/unset. Cvars are strings, but can represent bool/float values in string form. The declaration of a CVar is: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 // in include\bakkesmod\wrappers\cvarmanagerwrapper.h // &amp;lt;summary&amp;gt;Register a CVar.&amp;lt;/summary&amp;gt; // &amp;lt;param name=&amp;#34;cvar&amp;#34;&amp;gt;The string name of your CVar&amp;lt;/param&amp;gt; // &amp;lt;param name=&amp;#34;defaultValue&amp;#34;&amp;gt;The default value of your CVar&amp;lt;/param&amp;gt; // &amp;lt;param name=&amp;#34;desc&amp;#34;&amp;gt;A description of your Cvar which is logged&amp;lt;/param&amp;gt; // &amp;lt;param name=&amp;#34;searchAble&amp;#34;&amp;gt;If the cvar will pop-up when entering values in the console.</description>
     </item>
     
     <item>
