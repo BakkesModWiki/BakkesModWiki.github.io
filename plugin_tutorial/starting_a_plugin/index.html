@@ -42,7 +42,7 @@ The template has a lot of commented out code that is designed to help you learn 
 <meta property="article:section" content="Plugin Tutorial" />
     <meta
       property="article:modified_time"
-      content="2022-07-08T17:28:46-07:00"
+      content="2023-01-04T22:11:44-08:00"
     />
 
 
@@ -61,7 +61,7 @@ The template has a lot of commented out code that is designed to help you learn 
       "url" : "https://bakkesmodwiki.github.io/plugin_tutorial/starting_a_plugin/",
       "headline": "Starting a plugin",
       "description": "It will assume you’re using the template as linked in Setting Up. You can of course make a plugin without it, but it gives an easier basis to work off of. You can name it anything, but here we’ll be using a demo plugin named CoolPlugin\nThe template has a lot of commented out code that is designed to help you learn how to use the syntax, but is ignored for the purposes of this tutorial",
-      "wordCount" : "1338",
+      "wordCount" : "1356",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -72,7 +72,7 @@ The template has a lot of commented out code that is designed to help you learn 
       "copyrightYear" : "0001",
       "dateCreated": "0001-01-01T00:00:00.00Z",
       "datePublished": "0001-01-01T00:00:00.00Z",
-      "dateModified": "2022-07-08T17:28:46.00Z",
+      "dateModified": "2023-01-04T22:11:44.00Z",
       "publisher":{
           "@type":"Organization",
           "name": "BakkesMod Programming Wiki",
@@ -15737,9 +15737,13 @@ First it includes your header so it can define the functions described above</p>
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">CoolPlugin</span><span class="o">::</span><span class="n">onLoad</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// This line is required for LOG to work
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="n">_globalCvarManager</span> <span class="o">=</span> <span class="n">cvarManager</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="c1">// do something when it loads
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;Hello I&#39;m CoolPlugin B)&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
@@ -15999,6 +16003,7 @@ Finally is the permissions, which decides when the notifier works. It should usu
 </span><span class="lnt">34
 </span><span class="lnt">35
 </span><span class="lnt">36
+</span><span class="lnt">37
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// CoolPlugin.cpp
@@ -16009,7 +16014,8 @@ Finally is the permissions, which decides when the notifier works. It should usu
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">CoolPlugin</span><span class="o">::</span><span class="n">onLoad</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">_globalCvarManager</span> <span class="o">=</span> <span class="n">cvarManager</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  
 </span></span><span class="line"><span class="cl">  <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;Hello I&#39;m CoolPlugin B)&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">  <span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">registerNotifier</span><span class="p">(</span><span class="s">&#34;CoolerBallOnTop&#34;</span><span class="p">,</span> <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="n">ballOnTop</span><span class="p">();</span>
