@@ -220,6 +220,8 @@
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Gfx/GfxDataTrainingWrapper/</loc>
   </url><url>
+    <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/GfxProductsWrapper/</loc>
+  </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/GoalHoopsWrapper/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/GoalWrapper/</loc>
@@ -247,6 +249,8 @@
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CarComponent/JumpComponentWrapper/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/LinearColor/</loc>
+  </url><url>
+    <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/LoadingProductWrapper/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/LoadoutSaveWrapper/</loc>
   </url><url>
