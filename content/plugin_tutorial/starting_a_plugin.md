@@ -42,6 +42,8 @@ BAKKESMOD_PLUGIN(CoolPlugin, "Cool Plugin", plugin_version, PLUGINTYPE_FREEPLAY)
 Next you define your functions, starting with `onLoad()`. As this is a demo, we'll just do a hello world.
 {{< highlight cpp "linenos=table" >}}
 void CoolPlugin::onLoad() {
+  // This line is required for LOG to work
+  _globalCvarManager = cvarManager;
   // do something when it loads
   LOG("Hello I'm CoolPlugin B)");
 }
@@ -176,7 +178,8 @@ BAKKESMOD_PLUGIN(CoolPlugin, "Cool Plugin", plugin_version, PLUGINTYPE_FREEPLAY)
 
 void CoolPlugin::onLoad()
 {
-
+  _globalCvarManager = cvarManager;
+  
   LOG("Hello I'm CoolPlugin B)");
   cvarManager->registerNotifier("CoolerBallOnTop", [this](std::vector<std::string> args) {
     ballOnTop();

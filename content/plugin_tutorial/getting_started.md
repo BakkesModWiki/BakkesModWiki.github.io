@@ -8,7 +8,7 @@ Trying to get into making plugins for the first time? There's some super useful 
 Note these instructions are designed for **Windows 10 (and presumably 11)**. Rocket League is Windows exclusive, so this is the easiest way to develop for it. If you really want to use linux, it will be harder but may still be possible
 1. Make sure you have bakkesmod installed and run it at least once
 [https://bakkesmod.com/](https://bakkesmod.com/)
-2. Download Visual Studio (any version should work although most devs use VS19). Note that this is not the same as Visual Studio Code
+2. Download Visual Studio 2022. Note that this is not the same as Visual Studio Code.
 [https://visualstudio.microsoft.com/](https://visualstudio.microsoft.com/)
 3. During Visual Studio's install, make sure you select and download `Desktop development with C++`  
 To add it to an existing install open Visual Studio, hit `Tools`, then `Get Tools and Features...`  
