@@ -6,7 +6,7 @@ author: ubelhj
 
 It will assume you're using the template as linked in [Setting Up](/plugin_tutorial/getting_started). You can of course make a plugin without it, but it gives an easier basis to work off of. You can name it anything, but here we'll be using a demo plugin named CoolPlugin
 
-The template has a lot of commented out code that is designed to help you learn how to use the syntax, but is ignored for the purposes of this tutorial
+The template has a lot of commented out code that is designed to help you learn how to use the syntax. We'll uncomment some of this as we go along.
 
 First we'll look at your `CoolPlugin.h` file. It describes any functions your code will use. 
 At the top are two lines that are required for plugins, and allow you to call BakkesMod SDK functions
@@ -16,12 +16,12 @@ At the top are two lines that are required for plugins, and allow you to call Ba
 {{< /highlight >}}
 
 Next is the declaration of your class. Here you describe any functions you will be using.
-`onLoad()` is automatically called by BakkesMod when the plugin is loaded, and `onUnload()` is called when it is unloaded
+`onLoad()` is automatically called by BakkesMod when the plugin is loaded, and `onUnload()` is called when it is unloaded. The unLoad isn't totally necessary, but we'll uncomment it to demonstrate
 {{< highlight cpp "linenos=table" >}}
 class CoolPlugin: public BakkesMod::Plugin::BakkesModPlugin
 {
-  virtual void onLoad();
-  virtual void onUnload();
+  void onLoad() override;
+  void onUnload() override;
 };
 {{< /highlight >}}
 
@@ -39,17 +39,17 @@ Next it declares the plugin. The string in "" will be used in the plugin manager
 BAKKESMOD_PLUGIN(CoolPlugin, "Cool Plugin", plugin_version, PLUGINTYPE_FREEPLAY)
 {{< /highlight >}}
 
-Next you define your functions, starting with `onLoad()`. As this is a demo, we'll just do a hello world.
+Next you define your functions, starting with `onLoad()`. The template already has an onload. As this is a demo, we'll just do a hello world.
 {{< highlight cpp "linenos=table" >}}
 void CoolPlugin::onLoad() {
-  // This line is required for LOG to work
+  // This line is required for LOG to work and must be before any use of LOG()
   _globalCvarManager = cvarManager;
   // do something when it loads
   LOG("Hello I'm CoolPlugin B)");
 }
 {{< /highlight >}}
 
-Next is `onUnload()`. Bakkesmod handles most of unloading, so only worry about this if your code is using some 3rd party library that needs unloading to be handled specially. For now this can just log that it unloaded
+Next is `onUnload()`. Bakkesmod handles most of unloading, so only worry about this if your code is using some 3rd party library that needs unloading to be handled specially. For now this can just add the new function to the bottom of CoolPlugin.cpp and log that it unloaded
 {{< highlight cpp "linenos=table" >}}
 void CoolPlugin::onUnload() {
   LOG("I was too cool for this world B'(");
@@ -153,20 +153,36 @@ cvarManager->registerNotifier("CoolerBallOnTop", [this](std::vector<std::string>
 }, "", PERMISSION_ALL);
 {{< /highlight >}}
 
-Now we'll put it all together.
+Now we'll put it all together
 {{< highlight cpp "linenos=table" >}}
 // CoolPlugin.h
 #pragma once
 
 #include "bakkesmod/plugin/bakkesmodplugin.h"
 #include "bakkesmod/plugin/pluginwindow.h"
+#include "bakkesmod/plugin/PluginSettingsWindow.h"
 
-class CoolPlugin : public BakkesMod::Plugin::BakkesModPlugin
+#include "version.h"
+constexpr auto plugin_version = stringify(VERSION_MAJOR) "." stringify(VERSION_MINOR) "." stringify(VERSION_PATCH) "." stringify(VERSION_BUILD);
+
+
+class CoolPlugin: public BakkesMod::Plugin::BakkesModPlugin
+	//,public SettingsWindowBase
+	//,public PluginWindowBase
 {
-    virtual void onLoad();
-    virtual void onUnload();
-    void ballOnTop();
+
+	//std::shared_ptr<bool> enabled;
+
+	//Boilerplate
+	void onLoad() override;
+	void onUnload() override;
+	void ballOnTop();
+
+public:
+	//void RenderSettings() override;
+	//void RenderWindow() override;
 };
+
 {{< /highlight >}}
 
 {{< highlight cpp "linenos=table" >}}
@@ -174,44 +190,49 @@ class CoolPlugin : public BakkesMod::Plugin::BakkesModPlugin
 #include "pch.h"
 #include "CoolPlugin.h"
 
+
 BAKKESMOD_PLUGIN(CoolPlugin, "Cool Plugin", plugin_version, PLUGINTYPE_FREEPLAY)
+
+std::shared_ptr<CVarManagerWrapper> _globalCvarManager;
 
 void CoolPlugin::onLoad()
 {
-  _globalCvarManager = cvarManager;
-  
-  LOG("Hello I'm CoolPlugin B)");
-  cvarManager->registerNotifier("CoolerBallOnTop", [this](std::vector<std::string> args) {
-    ballOnTop();
-  }, "", PERMISSION_ALL);
+	// This line is required for LOG to work and must be before any use of LOG()
+	_globalCvarManager = cvarManager;
+	// do something when it loads
+	LOG("Hello I'm CoolPlugin B)");
+
+	cvarManager->registerNotifier("CoolerBallOnTop", [this](std::vector<std::string> args) {
+		ballOnTop();
+		}, "", PERMISSION_ALL);
 }
 
 void CoolPlugin::onUnload() {
-  LOG("I was too cool for this world B'(");
+	LOG("I was too cool for this world B'(");
 }
 
 void CoolPlugin::ballOnTop() {
-  if (!gameWrapper->IsInFreeplay()) { return; }
-  ServerWrapper server = gameWrapper->GetCurrentGameState();
-  if (!server) { return; }
+	if (!gameWrapper->IsInFreeplay()) { return; }
+	ServerWrapper server = gameWrapper->GetCurrentGameState();
+	if (!server) { return; }
 
-  BallWrapper ball = server.GetBall();
-  if (!ball) { return; }
-  CarWrapper car = gameWrapper->GetLocalCar();
-  if (!car) { return; }
+	BallWrapper ball = server.GetBall();
+	if (!ball) { return; }
+	CarWrapper car = gameWrapper->GetLocalCar();
+	if (!car) { return; }
 
-  Vector carVelocity = car.GetVelocity();
-  ball.SetVelocity(carVelocity);
+	Vector carVelocity = car.GetVelocity();
+	ball.SetVelocity(carVelocity);
 
-  Vector carLocation = car.GetLocation();
-  float ballRadius = ball.GetRadius();
-  ball.SetLocation(carLocation + Vector{ 0, 0, ballRadius * 2 });
+	Vector carLocation = car.GetLocation();
+	float ballRadius = ball.GetRadius();
+	ball.SetLocation(carLocation + Vector{ 0, 0, ballRadius * 2 });
 }
 {{< /highlight >}}
 
 Finally build the plugin with ctrl + b. Then start freeplay, load the plugin with `plugin load CoolPlugin` and call `CoolerBallOnTop` from the f6 console. The ball should teleport above you!
 
 You can find the final code here!
-[https://github.com/ubelhj/BakkesModStarterPlugin/tree/starter-tutorial](https://github.com/ubelhj/BakkesModStarterPlugin/tree/starter-tutorial)
+[https://github.com/ubelhj/BakkesModStarterPlugin/tree/new-starter-tutorial](https://github.com/ubelhj/BakkesModStarterPlugin/tree/new-starter-tutorial)
 
 Now what if you wanted a user to be able to modify plugin behavior on the fly? [Next are Plugin Variables](/plugin_tutorial/plugin_variables)
