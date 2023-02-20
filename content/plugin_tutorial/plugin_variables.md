@@ -52,7 +52,7 @@ float distance = distanceCVar.getFloatValue();
 {{< /highlight >}}
 
 We can put together this knowledge to add to `CoolPlugin.cpp`  
-[https://github.com/ubelhj/BakkesModStarterPlugin/blob/plugin-settings/CoolPlugin/CoolPlugin.cpp](https://github.com/ubelhj/BakkesModStarterPlugin/blob/plugin-settings/CoolPlugin/CoolPlugin.cpp)
+[https://github.com/ubelhj/BakkesModStarterPlugin/blob/plugin-variables/CoolPlugin/CoolPlugin.cpp](https://github.com/ubelhj/BakkesModStarterPlugin/blob/plugin-variables/CoolPlugin/CoolPlugin.cpp)
 
 This isn't enough though. Who wants to be changing an integer value with a console command? Gross. What if we had sliders? Checkboxes? Buttons? Next we'll add a simple GUI  
 [Plugin Interface](/plugin_tutorial/plugin_interface)
