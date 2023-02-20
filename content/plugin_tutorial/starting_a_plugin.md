@@ -167,20 +167,20 @@ constexpr auto plugin_version = stringify(VERSION_MAJOR) "." stringify(VERSION_M
 
 
 class CoolPlugin: public BakkesMod::Plugin::BakkesModPlugin
-	//,public SettingsWindowBase
-	//,public PluginWindowBase
+  //,public SettingsWindowBase
+  //,public PluginWindowBase
 {
 
-	//std::shared_ptr<bool> enabled;
+  //std::shared_ptr<bool> enabled;
 
-	//Boilerplate
-	void onLoad() override;
-	void onUnload() override;
-	void ballOnTop();
+  //Boilerplate
+  void onLoad() override;
+  void onUnload() override;
+  void ballOnTop();
 
 public:
-	//void RenderSettings() override;
-	//void RenderWindow() override;
+  //void RenderSettings() override;
+  //void RenderWindow() override;
 };
 
 {{< /highlight >}}
@@ -197,36 +197,36 @@ std::shared_ptr<CVarManagerWrapper> _globalCvarManager;
 
 void CoolPlugin::onLoad()
 {
-	// This line is required for LOG to work and must be before any use of LOG()
-	_globalCvarManager = cvarManager;
-	// do something when it loads
-	LOG("Hello I'm CoolPlugin B)");
+  // This line is required for LOG to work and must be before any use of LOG()
+  _globalCvarManager = cvarManager;
+  // do something when it loads
+  LOG("Hello I'm CoolPlugin B)");
 
-	cvarManager->registerNotifier("CoolerBallOnTop", [this](std::vector<std::string> args) {
-		ballOnTop();
-		}, "", PERMISSION_ALL);
+  cvarManager->registerNotifier("CoolerBallOnTop", [this](std::vector<std::string> args) {
+    ballOnTop();
+    }, "", PERMISSION_ALL);
 }
 
 void CoolPlugin::onUnload() {
-	LOG("I was too cool for this world B'(");
+  LOG("I was too cool for this world B'(");
 }
 
 void CoolPlugin::ballOnTop() {
-	if (!gameWrapper->IsInFreeplay()) { return; }
-	ServerWrapper server = gameWrapper->GetCurrentGameState();
-	if (!server) { return; }
+  if (!gameWrapper->IsInFreeplay()) { return; }
+  ServerWrapper server = gameWrapper->GetCurrentGameState();
+  if (!server) { return; }
 
-	BallWrapper ball = server.GetBall();
-	if (!ball) { return; }
-	CarWrapper car = gameWrapper->GetLocalCar();
-	if (!car) { return; }
+  BallWrapper ball = server.GetBall();
+  if (!ball) { return; }
+  CarWrapper car = gameWrapper->GetLocalCar();
+  if (!car) { return; }
 
-	Vector carVelocity = car.GetVelocity();
-	ball.SetVelocity(carVelocity);
+  Vector carVelocity = car.GetVelocity();
+  ball.SetVelocity(carVelocity);
 
-	Vector carLocation = car.GetLocation();
-	float ballRadius = ball.GetRadius();
-	ball.SetLocation(carLocation + Vector{ 0, 0, ballRadius * 2 });
+  Vector carLocation = car.GetLocation();
+  float ballRadius = ball.GetRadius();
+  ball.SetLocation(carLocation + Vector{ 0, 0, ballRadius * 2 });
 }
 {{< /highlight >}}
 
