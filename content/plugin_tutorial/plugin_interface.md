@@ -4,43 +4,37 @@ weight: 4
 author: ubelhj
 ---
 
-This channel will go over creating a user-friendly interface. There's buttons, sliders, checkboxes, dropdowns, and all sorts of options. It also assumes you're using the template, as the template automatically includes the ImGui GUI library we'll be using. It will ignore the fact that there is some commented out code in `CoolPluginGUI.cpp`.
+This channel will go over creating a user-friendly interface. There's buttons, sliders, checkboxes, dropdowns, and all sorts of options. It also assumes you're using the template, as the template automatically includes the ImGui GUI library we'll be using. It also adds a file we'll be editing
 
 Yet again we have the `CoolPlugin` from [Plugin Variables](/plugin_tutorial/plugin-variables) and we want to add a button to activate our cooler ball on top, a checkbox to enable cool, and a slider to choose the distance that the ball is placed from your car
 
-First we need to extend a class and declare 3 functions in `CoolPlugin.h`
+First we need to uncomment some code in `CoolPlugin.h`
 
-At the top of the file, add the line to your list of includes
-`#include "bakkesmod/plugin/PluginSettingsWindow.h"`
-
-At the class declaration, add `PluginSettingsWindow`
+At the class declaration, uncomment `SettingsWindowBase` and `RenderSettings`
 {{< highlight cpp "linenos=table" >}}
 class CoolPlugin: public BakkesMod::Plugin::BakkesModPlugin, public BakkesMod::Plugin::PluginSettingsWindow
-{{< /highlight >}}
 
-And inside the plugin `{}` add these 3 lines
-{{< highlight cpp "linenos=table" >}}
+// ...
+
 void RenderSettings() override;
-std::string GetPluginName() override;
-void SetImGuiContext(uintptr_t ctx) override;
 {{< /highlight >}}
 
-Now we can define those 3 functions to create the interface. We will put these in `CoolPluginGUI.cpp` but they can be in any `.cpp` file that includes `CoolPlugin.h`, such as `CoolPlugin.cpp`
+Now we can define those 3 functions to create the interface. We will put these in a new file `CoolPluginSettings.cpp` but they can be in any `.cpp` file that includes `CoolPlugin.h`, such as `CoolPlugin.cpp`
 
-The first is simple and should be copied and pasted. Never call this function, just assume it works
+To add a file, right click the src (or any other) folder in the solution explorer, then add a new item  
+![Adding a new item to the solution](/img/solution_explorer_new_item.png)  
+
+Add a .cpp file with the name of your choice.  
+![Naming the cpp file](/img/solution_explorer_add_cpp.png)
+
+In the file, make sure to include `pch.h` and `CoolPlugin.h` at the top
 {{< highlight cpp "linenos=table" >}}
-void CoolPlugin::SetImGuiContext(uintptr_t ctx) {
-  ImGui::SetCurrentContext(reinterpret_cast<ImGuiContext*>(ctx));
-}
+#include "pch.h"
+#include "CoolPlugin.h"
 {{< /highlight >}}
-The second is also simple. Put whatever the name of the plugin is as the return value. This'll be what the plugin will be called in the f2 -> Plugins menu
-{{< highlight cpp "linenos=table" >}}
-std::string CoolPlugin::GetPluginName() {
-  return "Cool Plugin";
-}
-{{< /highlight >}}
-The third and final actually creates the interface. We'll start with simple text but this is what we'll be modifying in the rest of this channel
-There's a hugely important thing to consider with this function. Never call on or change any Rocket League / Bakkesmod values here. If you do, you will crash. It's happening outside of the game, and cannot safely alter it. That means that if you have a `CVarWrapper.addOnValueChanged()` that alters the state of the game, it will be unsafe to use here
+
+Now you can create the interface. We'll start with simple text but this is what we'll be modifying in the rest of this page  
+There's a hugely important thing to consider with this function. Never call on or change any Rocket League / Bakkesmod values here. If you do, you will crash. It's happening outside of the game, and cannot safely alter it. That means that if you have a `CVarWrapper.addOnValueChanged()` that alters the state of the game, it will be unsafe to use here  
 {{< highlight cpp "linenos=table" >}}
 void CoolPlugin::RenderSettings() {
     ImGui::TextUnformatted("A really cool plugin");
@@ -94,8 +88,8 @@ if (ImGui::IsItemHovered()) {
 We finally have a settings file using all of our CVars. There's a load more things you can do with ImGui, but hopefully this is enough to get the right idea and get started. I hope that by covering these three elements I covered most of what plugins need to use. ImGui is complicated and most plugins don't use it yet. Feel free to ask questions
 
 Here's the final code  
-[https://github.com/ubelhj/BakkesModStarterPlugin/blob/plugin-settings/CoolPlugin/CoolPlugin.h](https://github.com/ubelhj/BakkesModStarterPlugin/blob/plugin-settings/CoolPlugin/CoolPlugin.h)
-[https://github.com/ubelhj/BakkesModStarterPlugin/blob/plugin-settings/CoolPlugin/CoolPluginGUI.cpp](https://github.com/ubelhj/BakkesModStarterPlugin/blob/plugin-settings/CoolPlugin/CoolPluginGUI.cpp)
+[https://github.com/ubelhj/BakkesModStarterPlugin/blob/plugin-interface/CoolPlugin/CoolPluginSettings.cpp](https://github.com/ubelhj/BakkesModStarterPlugin/blob/plugin-interface/CoolPlugin/CoolPluginSettings.cpp)  
+[https://github.com/ubelhj/BakkesModStarterPlugin/tree/plugin-interface/](https://github.com/ubelhj/BakkesModStarterPlugin/tree/plugin-interface/)  
 
 And here's a useful interactable imgui demo  
 [https://pthom.github.io/imgui_manual_online/manual/imgui_manual.html](https://pthom.github.io/imgui_manual_online/manual/imgui_manual.html)
