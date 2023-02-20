@@ -9,7 +9,7 @@
 
 
   <meta name="description" content="It will assume you&rsquo;re using the template as linked in Setting Up. You can of course make a plugin without it, but it gives an easier basis to work off of. You can name it anything, but here we&rsquo;ll be using a demo plugin named CoolPlugin
-The template has a lot of commented out code that is designed to help you learn how to use the syntax, but is ignored for the purposes of this tutorial" />
+The template has a lot of commented out code that is designed to help you learn how to use the syntax. We&rsquo;ll uncomment some of this as we go along." />
 
     <title>Starting a plugin | BakkesMod Programming Wiki</title>
 
@@ -35,21 +35,21 @@ The template has a lot of commented out code that is designed to help you learn 
   />
   <meta property="og:site_name" content="BakkesMod Programming Wiki" />
   <meta property="og:description" content="It will assume you’re using the template as linked in Setting Up. You can of course make a plugin without it, but it gives an easier basis to work off of. You can name it anything, but here we’ll be using a demo plugin named CoolPlugin
-The template has a lot of commented out code that is designed to help you learn how to use the syntax, but is ignored for the purposes of this tutorial" />
+The template has a lot of commented out code that is designed to help you learn how to use the syntax. We’ll uncomment some of this as we go along." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bakkesmodwiki.github.io/plugin_tutorial/starting_a_plugin/" />
 
 <meta property="article:section" content="Plugin Tutorial" />
     <meta
       property="article:modified_time"
-      content="2023-01-04T22:11:44-08:00"
+      content="2023-02-19T20:08:46-08:00"
     />
 
 
   <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Starting a plugin" />
   <meta name="twitter:description" content="It will assume you’re using the template as linked in Setting Up. You can of course make a plugin without it, but it gives an easier basis to work off of. You can name it anything, but here we’ll be using a demo plugin named CoolPlugin
-The template has a lot of commented out code that is designed to help you learn how to use the syntax, but is ignored for the purposes of this tutorial" />
+The template has a lot of commented out code that is designed to help you learn how to use the syntax. We’ll uncomment some of this as we go along." />
 
 
   <script type="application/ld+json">
@@ -60,8 +60,8 @@ The template has a lot of commented out code that is designed to help you learn 
       "name": "Starting a plugin",
       "url" : "https://bakkesmodwiki.github.io/plugin_tutorial/starting_a_plugin/",
       "headline": "Starting a plugin",
-      "description": "It will assume you’re using the template as linked in Setting Up. You can of course make a plugin without it, but it gives an easier basis to work off of. You can name it anything, but here we’ll be using a demo plugin named CoolPlugin\nThe template has a lot of commented out code that is designed to help you learn how to use the syntax, but is ignored for the purposes of this tutorial",
-      "wordCount" : "1356",
+      "description": "It will assume you’re using the template as linked in Setting Up. You can of course make a plugin without it, but it gives an easier basis to work off of. You can name it anything, but here we’ll be using a demo plugin named CoolPlugin\nThe template has a lot of commented out code that is designed to help you learn how to use the syntax. We’ll uncomment some of this as we go along.",
+      "wordCount" : "1464",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -72,7 +72,7 @@ The template has a lot of commented out code that is designed to help you learn 
       "copyrightYear" : "0001",
       "dateCreated": "0001-01-01T00:00:00.00Z",
       "datePublished": "0001-01-01T00:00:00.00Z",
-      "dateModified": "2023-01-04T22:11:44.00Z",
+      "dateModified": "2023-02-19T20:08:46.00Z",
       "publisher":{
           "@type":"Organization",
           "name": "BakkesMod Programming Wiki",
@@ -15750,7 +15750,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
   href="/plugin_tutorial/getting_started"
   
 >Setting Up</a>. You can of course make a plugin without it, but it gives an easier basis to work off of. You can name it anything, but here we&rsquo;ll be using a demo plugin named CoolPlugin</p>
-<p>The template has a lot of commented out code that is designed to help you learn how to use the syntax, but is ignored for the purposes of this tutorial</p>
+<p>The template has a lot of commented out code that is designed to help you learn how to use the syntax. We&rsquo;ll uncomment some of this as we go along.</p>
 <p>First we&rsquo;ll look at your <code>CoolPlugin.h</code> file. It describes any functions your code will use.
 At the top are two lines that are required for plugins, and allow you to call BakkesMod SDK functions
 <div class="highlight"><div class="chroma">
@@ -15764,7 +15764,7 @@ At the top are two lines that are required for plugins, and allow you to call Ba
 </div>
 </div></p>
 <p>Next is the declaration of your class. Here you describe any functions you will be using.
-<code>onLoad()</code> is automatically called by BakkesMod when the plugin is loaded, and <code>onUnload()</code> is called when it is unloaded
+<code>onLoad()</code> is automatically called by BakkesMod when the plugin is loaded, and <code>onUnload()</code> is called when it is unloaded. The unLoad isn&rsquo;t totally necessary, but we&rsquo;ll uncomment it to demonstrate
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -15776,8 +15776,8 @@ At the top are two lines that are required for plugins, and allow you to call Ba
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">CoolPlugin</span><span class="o">:</span> <span class="k">public</span> <span class="n">BakkesMod</span><span class="o">::</span><span class="n">Plugin</span><span class="o">::</span><span class="n">BakkesModPlugin</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">onLoad</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">onUnload</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">void</span> <span class="nf">onLoad</span><span class="p">()</span> <span class="k">override</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">void</span> <span class="nf">onUnload</span><span class="p">()</span> <span class="k">override</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">};</span></span></span></code></pre></td></tr></table>
 </div>
 </div></p>
@@ -15802,7 +15802,7 @@ First it includes your header so it can define the functions described above</p>
 <pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">BAKKESMOD_PLUGIN</span><span class="p">(</span><span class="n">CoolPlugin</span><span class="p">,</span> <span class="s">&#34;Cool Plugin&#34;</span><span class="p">,</span> <span class="n">plugin_version</span><span class="p">,</span> <span class="n">PLUGINTYPE_FREEPLAY</span><span class="p">)</span></span></span></code></pre></td></tr></table>
 </div>
 </div>
-<p>Next you define your functions, starting with <code>onLoad()</code>. As this is a demo, we&rsquo;ll just do a hello world.
+<p>Next you define your functions, starting with <code>onLoad()</code>. The template already has an onload. As this is a demo, we&rsquo;ll just do a hello world.
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -15814,14 +15814,14 @@ First it includes your header so it can define the functions described above</p>
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">CoolPlugin</span><span class="o">::</span><span class="n">onLoad</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="c1">// This line is required for LOG to work
+</span></span><span class="line"><span class="cl">  <span class="c1">// This line is required for LOG to work and must be before any use of LOG()
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="n">_globalCvarManager</span> <span class="o">=</span> <span class="n">cvarManager</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="c1">// do something when it loads
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;Hello I&#39;m CoolPlugin B)&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
 </div>
 </div></p>
-<p>Next is <code>onUnload()</code>. Bakkesmod handles most of unloading, so only worry about this if your code is using some 3rd party library that needs unloading to be handled specially. For now this can just log that it unloaded
+<p>Next is <code>onUnload()</code>. Bakkesmod handles most of unloading, so only worry about this if your code is using some 3rd party library that needs unloading to be handled specially. For now this can just add the new function to the bottom of CoolPlugin.cpp and log that it unloaded
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -16006,7 +16006,7 @@ Finally is the permissions, which decides when the notifier works. It should usu
 </span></span><span class="line"><span class="cl"><span class="p">},</span> <span class="s">&#34;&#34;</span><span class="p">,</span> <span class="n">PERMISSION_ALL</span><span class="p">);</span></span></span></code></pre></td></tr></table>
 </div>
 </div></p>
-<p>Now we&rsquo;ll put it all together.
+<p>Now we&rsquo;ll put it all together
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -16021,6 +16021,21 @@ Finally is the permissions, which decides when the notifier works. It should usu
 </span><span class="lnt">10
 </span><span class="lnt">11
 </span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// CoolPlugin.h
@@ -16028,13 +16043,28 @@ Finally is the permissions, which decides when the notifier works. It should usu
 </span></span></span><span class="line"><span class="cl"><span class="cp"></span>
 </span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;bakkesmod/plugin/bakkesmodplugin.h&#34;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;bakkesmod/plugin/pluginwindow.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;bakkesmod/plugin/PluginSettingsWindow.h&#34;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp"></span>
-</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">CoolPlugin</span> <span class="o">:</span> <span class="k">public</span> <span class="n">BakkesMod</span><span class="o">::</span><span class="n">Plugin</span><span class="o">::</span><span class="n">BakkesModPlugin</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">onLoad</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">    <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">onUnload</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">void</span> <span class="nf">ballOnTop</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span></span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;version.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">constexpr</span> <span class="k">auto</span> <span class="n">plugin_version</span> <span class="o">=</span> <span class="n">stringify</span><span class="p">(</span><span class="n">VERSION_MAJOR</span><span class="p">)</span> <span class="s">&#34;.&#34;</span> <span class="n">stringify</span><span class="p">(</span><span class="n">VERSION_MINOR</span><span class="p">)</span> <span class="s">&#34;.&#34;</span> <span class="n">stringify</span><span class="p">(</span><span class="n">VERSION_PATCH</span><span class="p">)</span> <span class="s">&#34;.&#34;</span> <span class="n">stringify</span><span class="p">(</span><span class="n">VERSION_BUILD</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">CoolPlugin</span><span class="o">:</span> <span class="k">public</span> <span class="n">BakkesMod</span><span class="o">::</span><span class="n">Plugin</span><span class="o">::</span><span class="n">BakkesModPlugin</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">//,public SettingsWindowBase
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="c1">//,public PluginWindowBase
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">//std::shared_ptr&lt;bool&gt; enabled;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">  <span class="c1">//Boilerplate
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kt">void</span> <span class="nf">onLoad</span><span class="p">()</span> <span class="k">override</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">void</span> <span class="nf">onUnload</span><span class="p">()</span> <span class="k">override</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">void</span> <span class="nf">ballOnTop</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">//void RenderSettings() override;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="c1">//void RenderWindow() override;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">};</span></span></span></code></pre></td></tr></table>
 </div>
 </div></p>
 <div class="highlight"><div class="chroma">
@@ -16076,22 +16106,32 @@ Finally is the permissions, which decides when the notifier works. It should usu
 </span><span class="lnt">35
 </span><span class="lnt">36
 </span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// CoolPlugin.cpp
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="cp">#include</span> <span class="cpf">&#34;pch.h&#34;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;CoolPlugin.h&#34;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">BAKKESMOD_PLUGIN</span><span class="p">(</span><span class="n">CoolPlugin</span><span class="p">,</span> <span class="s">&#34;Cool Plugin&#34;</span><span class="p">,</span> <span class="n">plugin_version</span><span class="p">,</span> <span class="n">PLUGINTYPE_FREEPLAY</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">CVarManagerWrapper</span><span class="o">&gt;</span> <span class="n">_globalCvarManager</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">CoolPlugin</span><span class="o">::</span><span class="n">onLoad</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="n">_globalCvarManager</span> <span class="o">=</span> <span class="n">cvarManager</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  
-</span></span><span class="line"><span class="cl">  <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;Hello I&#39;m CoolPlugin B)&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// This line is required for LOG to work and must be before any use of LOG()
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="n">_globalCvarManager</span> <span class="o">=</span> <span class="n">cvarManager</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// do something when it loads
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;Hello I&#39;m CoolPlugin B)&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="n">cvarManager</span><span class="o">-&gt;</span><span class="n">registerNotifier</span><span class="p">(</span><span class="s">&#34;CoolerBallOnTop&#34;</span><span class="p">,</span> <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="n">ballOnTop</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">  <span class="p">},</span> <span class="s">&#34;&#34;</span><span class="p">,</span> <span class="n">PERMISSION_ALL</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span> <span class="s">&#34;&#34;</span><span class="p">,</span> <span class="n">PERMISSION_ALL</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">CoolPlugin</span><span class="o">::</span><span class="n">onUnload</span><span class="p">()</span> <span class="p">{</span>
@@ -16121,9 +16161,9 @@ Finally is the permissions, which decides when the notifier works. It should usu
 <p>You can find the final code here!
 <a
   class="gdoc-markdown__link"
-  href="https://github.com/ubelhj/BakkesModStarterPlugin/tree/starter-tutorial"
+  href="https://github.com/ubelhj/BakkesModStarterPlugin/tree/new-starter-tutorial"
   
->https://github.com/ubelhj/BakkesModStarterPlugin/tree/starter-tutorial</a></p>
+>https://github.com/ubelhj/BakkesModStarterPlugin/tree/new-starter-tutorial</a></p>
 <p>Now what if you wanted a user to be able to modify plugin behavior on the fly? <a
   class="gdoc-markdown__link"
   href="/plugin_tutorial/plugin_variables"

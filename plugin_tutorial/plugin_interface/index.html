@@ -8,7 +8,7 @@
 <meta name="generator" content="Hugo 0.110.0">
 
 
-  <meta name="description" content="This channel will go over creating a user-friendly interface. There&rsquo;s buttons, sliders, checkboxes, dropdowns, and all sorts of options. It also assumes you&rsquo;re using the template, as the template automatically includes the ImGui GUI library we&rsquo;ll be using. It will ignore the fact that there is some commented out code in CoolPluginGUI.cpp.
+  <meta name="description" content="This channel will go over creating a user-friendly interface. There&rsquo;s buttons, sliders, checkboxes, dropdowns, and all sorts of options. It also assumes you&rsquo;re using the template, as the template automatically includes the ImGui GUI library we&rsquo;ll be using. It also adds a file we&rsquo;ll be editing
 Yet again we have the CoolPlugin from Plugin Variables and we want to add a button to activate our cooler ball on top, a checkbox to enable cool, and a slider to choose the distance that the ball is placed from your car" />
 
     <title>Plugin Interface | BakkesMod Programming Wiki</title>
@@ -34,7 +34,7 @@ Yet again we have the CoolPlugin from Plugin Variables and we want to add a butt
     content="Plugin Interface"
   />
   <meta property="og:site_name" content="BakkesMod Programming Wiki" />
-  <meta property="og:description" content="This channel will go over creating a user-friendly interface. There’s buttons, sliders, checkboxes, dropdowns, and all sorts of options. It also assumes you’re using the template, as the template automatically includes the ImGui GUI library we’ll be using. It will ignore the fact that there is some commented out code in CoolPluginGUI.cpp.
+  <meta property="og:description" content="This channel will go over creating a user-friendly interface. There’s buttons, sliders, checkboxes, dropdowns, and all sorts of options. It also assumes you’re using the template, as the template automatically includes the ImGui GUI library we’ll be using. It also adds a file we’ll be editing
 Yet again we have the CoolPlugin from Plugin Variables and we want to add a button to activate our cooler ball on top, a checkbox to enable cool, and a slider to choose the distance that the ball is placed from your car" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bakkesmodwiki.github.io/plugin_tutorial/plugin_interface/" />
@@ -42,13 +42,13 @@ Yet again we have the CoolPlugin from Plugin Variables and we want to add a butt
 <meta property="article:section" content="Plugin Tutorial" />
     <meta
       property="article:modified_time"
-      content="2022-04-25T23:40:20-07:00"
+      content="2023-02-19T20:57:29-08:00"
     />
 
 
   <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Plugin Interface" />
-  <meta name="twitter:description" content="This channel will go over creating a user-friendly interface. There’s buttons, sliders, checkboxes, dropdowns, and all sorts of options. It also assumes you’re using the template, as the template automatically includes the ImGui GUI library we’ll be using. It will ignore the fact that there is some commented out code in CoolPluginGUI.cpp.
+  <meta name="twitter:description" content="This channel will go over creating a user-friendly interface. There’s buttons, sliders, checkboxes, dropdowns, and all sorts of options. It also assumes you’re using the template, as the template automatically includes the ImGui GUI library we’ll be using. It also adds a file we’ll be editing
 Yet again we have the CoolPlugin from Plugin Variables and we want to add a button to activate our cooler ball on top, a checkbox to enable cool, and a slider to choose the distance that the ball is placed from your car" />
 
 
@@ -60,8 +60,8 @@ Yet again we have the CoolPlugin from Plugin Variables and we want to add a butt
       "name": "Plugin Interface",
       "url" : "https://bakkesmodwiki.github.io/plugin_tutorial/plugin_interface/",
       "headline": "Plugin Interface",
-      "description": "This channel will go over creating a user-friendly interface. There’s buttons, sliders, checkboxes, dropdowns, and all sorts of options. It also assumes you’re using the template, as the template automatically includes the ImGui GUI library we’ll be using. It will ignore the fact that there is some commented out code in CoolPluginGUI.cpp.\nYet again we have the CoolPlugin from Plugin Variables and we want to add a button to activate our cooler ball on top, a checkbox to enable cool, and a slider to choose the distance that the ball is placed from your car",
-      "wordCount" : "689",
+      "description": "This channel will go over creating a user-friendly interface. There’s buttons, sliders, checkboxes, dropdowns, and all sorts of options. It also assumes you’re using the template, as the template automatically includes the ImGui GUI library we’ll be using. It also adds a file we’ll be editing\nYet again we have the CoolPlugin from Plugin Variables and we want to add a button to activate our cooler ball on top, a checkbox to enable cool, and a slider to choose the distance that the ball is placed from your car",
+      "wordCount" : "635",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -72,7 +72,7 @@ Yet again we have the CoolPlugin from Plugin Variables and we want to add a butt
       "copyrightYear" : "0001",
       "dateCreated": "0001-01-01T00:00:00.00Z",
       "datePublished": "0001-01-01T00:00:00.00Z",
-      "dateModified": "2022-04-25T23:40:20.00Z",
+      "dateModified": "2023-02-19T20:57:29.00Z",
       "publisher":{
           "@type":"Organization",
           "name": "BakkesMod Programming Wiki",
@@ -15745,66 +15745,56 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
     class="gdoc-markdown gdoc-markdown__align--left"
   >
     <h1>Plugin Interface</h1>
-    <p>This channel will go over creating a user-friendly interface. There&rsquo;s buttons, sliders, checkboxes, dropdowns, and all sorts of options. It also assumes you&rsquo;re using the template, as the template automatically includes the ImGui GUI library we&rsquo;ll be using. It will ignore the fact that there is some commented out code in <code>CoolPluginGUI.cpp</code>.</p>
+    <p>This channel will go over creating a user-friendly interface. There&rsquo;s buttons, sliders, checkboxes, dropdowns, and all sorts of options. It also assumes you&rsquo;re using the template, as the template automatically includes the ImGui GUI library we&rsquo;ll be using. It also adds a file we&rsquo;ll be editing</p>
 <p>Yet again we have the <code>CoolPlugin</code> from <a
   class="gdoc-markdown__link"
   href="/plugin_tutorial/plugin-variables"
   
 >Plugin Variables</a> and we want to add a button to activate our cooler ball on top, a checkbox to enable cool, and a slider to choose the distance that the ball is placed from your car</p>
-<p>First we need to extend a class and declare 3 functions in <code>CoolPlugin.h</code></p>
-<p>At the top of the file, add the line to your list of includes
-<code>#include &quot;bakkesmod/plugin/PluginSettingsWindow.h&quot;</code></p>
-<p>At the class declaration, add <code>PluginSettingsWindow</code>
+<p>First we need to uncomment some code in <code>CoolPlugin.h</code></p>
+<p>At the class declaration, uncomment <code>SettingsWindowBase</code> and <code>RenderSettings</code>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">CoolPlugin</span><span class="o">:</span> <span class="k">public</span> <span class="n">BakkesMod</span><span class="o">::</span><span class="n">Plugin</span><span class="o">::</span><span class="n">BakkesModPlugin</span><span class="p">,</span> <span class="k">public</span> <span class="n">BakkesMod</span><span class="o">::</span><span class="n">Plugin</span><span class="o">::</span><span class="n">PluginSettingsWindow</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">CoolPlugin</span><span class="o">:</span> <span class="k">public</span> <span class="n">BakkesMod</span><span class="o">::</span><span class="n">Plugin</span><span class="o">::</span><span class="n">BakkesModPlugin</span><span class="p">,</span> <span class="k">public</span> <span class="n">BakkesMod</span><span class="o">::</span><span class="n">Plugin</span><span class="o">::</span><span class="n">PluginSettingsWindow</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">RenderSettings</span><span class="p">()</span> <span class="k">override</span><span class="p">;</span></span></span></code></pre></td></tr></table>
 </div>
 </div></p>
-<p>And inside the plugin <code>{}</code> add these 3 lines
+<p>Now we can define those 3 functions to create the interface. We will put these in a new file <code>CoolPluginSettings.cpp</code> but they can be in any <code>.cpp</code> file that includes <code>CoolPlugin.h</code>, such as <code>CoolPlugin.cpp</code></p>
+<p>To add a file, right click the src (or any other) folder in the solution explorer, then add a new item<br>
+<img
+  src="/img/solution_explorer_new_item.png"
+  alt="Adding a new item to the solution"
+  
+/></p>
+<p>Add a .cpp file with the name of your choice.<br>
+<img
+  src="/img/solution_explorer_add_cpp.png"
+  alt="Naming the cpp file"
+  
+/></p>
+<p>In the file, make sure to include <code>pch.h</code> and <code>CoolPlugin.h</code> at the top
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">RenderSettings</span><span class="p">()</span> <span class="k">override</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">GetPluginName</span><span class="p">()</span> <span class="k">override</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">SetImGuiContext</span><span class="p">(</span><span class="n">uintptr_t</span> <span class="n">ctx</span><span class="p">)</span> <span class="k">override</span><span class="p">;</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;pch.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;CoolPlugin.h&#34;</span></span></span></code></pre></td></tr></table>
 </div>
 </div></p>
-<p>Now we can define those 3 functions to create the interface. We will put these in <code>CoolPluginGUI.cpp</code> but they can be in any <code>.cpp</code> file that includes <code>CoolPlugin.h</code>, such as <code>CoolPlugin.cpp</code></p>
-<p>The first is simple and should be copied and pasted. Never call this function, just assume it works
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">CoolPlugin</span><span class="o">::</span><span class="n">SetImGuiContext</span><span class="p">(</span><span class="n">uintptr_t</span> <span class="n">ctx</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="n">ImGui</span><span class="o">::</span><span class="n">SetCurrentContext</span><span class="p">(</span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="n">ImGuiContext</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">ctx</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
-The second is also simple. Put whatever the name of the plugin is as the return value. This&rsquo;ll be what the plugin will be called in the f2 -&gt; Plugins menu
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">CoolPlugin</span><span class="o">::</span><span class="n">GetPluginName</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="s">&#34;Cool Plugin&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
-The third and final actually creates the interface. We&rsquo;ll start with simple text but this is what we&rsquo;ll be modifying in the rest of this channel
-There&rsquo;s a hugely important thing to consider with this function. Never call on or change any Rocket League / Bakkesmod values here. If you do, you will crash. It&rsquo;s happening outside of the game, and cannot safely alter it. That means that if you have a <code>CVarWrapper.addOnValueChanged()</code> that alters the state of the game, it will be unsafe to use here
+<p>Now you can create the interface. We&rsquo;ll start with simple text but this is what we&rsquo;ll be modifying in the rest of this page<br>
+There&rsquo;s a hugely important thing to consider with this function. Never call on or change any Rocket League / Bakkesmod values here. If you do, you will crash. It&rsquo;s happening outside of the game, and cannot safely alter it. That means that if you have a <code>CVarWrapper.addOnValueChanged()</code> that alters the state of the game, it will be unsafe to use here<br>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -15908,14 +15898,14 @@ You can easily convert between with <code>std::string.c_str()</code> and <code>s
 <p>Here&rsquo;s the final code<br>
 <a
   class="gdoc-markdown__link"
-  href="https://github.com/ubelhj/BakkesModStarterPlugin/blob/plugin-settings/CoolPlugin/CoolPlugin.h"
+  href="https://github.com/ubelhj/BakkesModStarterPlugin/blob/plugin-interface/CoolPlugin/CoolPluginSettings.cpp"
   
->https://github.com/ubelhj/BakkesModStarterPlugin/blob/plugin-settings/CoolPlugin/CoolPlugin.h</a>
+>https://github.com/ubelhj/BakkesModStarterPlugin/blob/plugin-interface/CoolPlugin/CoolPluginSettings.cpp</a><br>
 <a
   class="gdoc-markdown__link"
-  href="https://github.com/ubelhj/BakkesModStarterPlugin/blob/plugin-settings/CoolPlugin/CoolPluginGUI.cpp"
+  href="https://github.com/ubelhj/BakkesModStarterPlugin/tree/plugin-interface/"
   
->https://github.com/ubelhj/BakkesModStarterPlugin/blob/plugin-settings/CoolPlugin/CoolPluginGUI.cpp</a></p>
+>https://github.com/ubelhj/BakkesModStarterPlugin/tree/plugin-interface/</a></p>
 <p>And here&rsquo;s a useful interactable imgui demo<br>
 <a
   class="gdoc-markdown__link"
