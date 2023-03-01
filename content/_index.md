@@ -1,7 +1,6 @@
 ---
 title: Welcome to the BakkesMod Programming Wiki!
 description: Welcome to the BakkesMod Programming Wiki! Find helpful code to get started and an API reference
-geekdocNav: false
 geekdocAlign: center
 geekdocAnchor: false
 ---
