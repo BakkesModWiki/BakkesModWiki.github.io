@@ -231,6 +231,8 @@ void CoolPlugin::ballOnTop() {
 {{< /highlight >}}
 
 Finally build the plugin with ctrl + b. Then start freeplay, load the plugin with `plugin load CoolPlugin` and call `CoolerBallOnTop` from the f6 console. The ball should teleport above you!
+  
+If you want your plugin to load automatically on startup, you can use the plugin manager in game (under the "Plugins" tab in the BakkesMod menu) and toggle the "Loaded" checkbox for your plugin.
 
 You can find the final code here!
 [https://github.com/ubelhj/BakkesModStarterPlugin/tree/new-starter-tutorial](https://github.com/ubelhj/BakkesModStarterPlugin/tree/new-starter-tutorial)
