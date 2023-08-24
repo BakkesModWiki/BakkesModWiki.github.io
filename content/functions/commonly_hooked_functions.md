@@ -57,9 +57,6 @@ Happens when a goal replay shows a goal's scorer, assister, speed, and other inf
 `"Function TAGame.GameEvent_Soccar_TA.EventMatchEnded"`  
 Happens at the end of a match when the podium is shown. If someone quits early it is not called
 
-`"Function TAGame.GameEvent_Soccar_TA.Destroyed"`  
-Happens when the user quits an active game
-
 `"Function TAGame.GameEvent_Soccar_TA.OnGameTimeUpdated"`  
 Happens when the time on the game clock changes. Note that this is not real time. At 0:00 with the ball up it won't be called
 
@@ -79,7 +76,7 @@ Happens when all players are set for a kickoff. This happens at every single kic
 Happens at the start of a kickoff countdown or at the beginning/reset of freeplay
 
 `"Function TAGame.GameEvent_Soccar_TA.Destroyed"`  
-Happens when a match is left by the player. The caller may be null or unsafe to use as the match is destroyed
+Happens when a match is left or quit by the player. The caller may be null or unsafe to use as the match is destroyed
 
 `"Function TAGame.GameEvent_TA.AddCar"`
 Happens whenenever a car spawns. Useful if modifying car physics that may reset after a respawn
