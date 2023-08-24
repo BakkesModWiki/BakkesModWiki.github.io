@@ -4,7 +4,8 @@
     <title>BakkesMod Programming Wiki</title>
     <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Dbs/</link>
     <description>Recent content on BakkesMod Programming Wiki</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Dbs/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Dbs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CertifiedStatDatabaseWrapper</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Dbs/CertifiedStatDatabaseWrapper/</link>
@@ -38,7 +39,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Dbs/PaintDatabaseWrapper/</guid>
-      <description> View Implementation _NODISCARD bool IsNull() const operator bool() const std::string GetPaintName(int PaintID) Parameter Type Description PaintID int &amp;mdash; int GetPaintID(std::string &amp;amp;PaintName) Parameter Type Description PaintName std::string &amp;amp; &amp;mdash; </description>
+      <description> View Implementation _NODISCARD bool IsNull() const operator bool() const ArrayWrapper GetPaints() const _NODISCARD bool AddCustomPaintColor(const std::string &amp;amp;name, const LinearColor &amp;amp;color) Parameter Type Description name const std::string &amp;amp; &amp;mdash; color LinearColor &amp;mdash; _NODISCARD bool UpdateCustomPaintColor(const std::string &amp;amp;name, const LinearColor &amp;amp;color) Parameter Type Description name const std::string &amp;amp; &amp;mdash; color LinearColor &amp;mdash; std::string GetPaintName(int PaintID) Parameter Type Description PaintID int &amp;mdash; int GetPaintID(std::string &amp;amp;PaintName) Parameter Type Description PaintName std::string &amp;amp; &amp;mdash; </description>
     </item>
     
     <item>
