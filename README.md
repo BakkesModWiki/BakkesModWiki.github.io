@@ -1,5 +1,5 @@
 # BakkesModWiki-Hugo
-This is a temporary development repo for the new BakkesMod Programming Wiki!
+This is the development repo for the BakkesMod Programming Wiki!
 
 ## Developer installation
 1. Clone the repo
