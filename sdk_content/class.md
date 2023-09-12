@@ -15,9 +15,9 @@ baseClass: "<a href=\"{{PathMap[BaseClass]}}\">{{BaseClass}}</a>"{% endif %}
 
 {% for FieldName, Field in Fields %}
 {% if PathMap[Field.Type] %}
-### [{{Field.Type | trim}}]({{PathMap[Field.Type]}})&nbsp;{{FieldName | trim}}{{Field.ArgsString}}
+### [{{Field.Type | trim}}]({{PathMap[Field.Type]}})&nbsp;<div>{{((FieldName | trim) + Field.ArgsString) | breakify | safe}}</div> 
 {% else %}
-### {%if Field.Type %}{{Field.Type | trim}}&nbsp;{%endif%}{{FieldName | trim}}{{Field.ArgsString}}
+### {%if Field.Type %}{{Field.Type | trim}}&nbsp;{%endif%}<div>{{((FieldName | trim) + Field.ArgsString) | breakify | safe}}</div>
 {% endif %}
 {%if Field.Description | length > 0 %}{{Field.Description}}
 
