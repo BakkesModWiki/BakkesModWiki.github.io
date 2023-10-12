@@ -9,8 +9,14 @@ const child_process = require('child_process');
 const nunjucks = require('nunjucks');
 const xml2js = require('xml2js');
 
+function breakify(fieldName) {
+    const camels = fieldName.replace(/([a-z])([A-Z])/g,'$1<wbr />$2');
+    return camels.replace(/[a-zA-Z]\(/g,'$&<wbr />');
+}
+
 let timeStart = +(Date.now());
-nunjucks.configure("sdk_content");
+let env = nunjucks.configure("sdk_content");
+env.addFilter('breakify', breakify);
 
 let excludeConstants = ["BAKKESMOD_PLUGIN", "BAKKESMOD_PLUGIN_EXPORT", "BAKKESMOD_PLUGIN_IMPORT", "BAKKESMOD_STANDARD_PLUGIN_STUFF", "CONSTRUCTORS", "PIMPL",
     "GETH", "GETSETH"];
@@ -368,13 +374,13 @@ function createHugoPages() {
             let content = "";
             itemData.PathMap = pathsMap;
             if (defTopName === "Enums") {
-                content = nunjucks.render("enum.md", itemData);
+                content = env.render("enum.md", itemData);
             } else if (defTopName === "Constants") {
-                content = nunjucks.render("constant.md", itemData);
+                content = env.render("constant.md", itemData);
             } else if (defTopName === "Classes") {
-                content = nunjucks.render("class.md", itemData);
+                content = env.render("class.md", itemData);
             } else if (defTopName === "Structs") {
-                content = nunjucks.render("struct.md", itemData);
+                content = env.render("struct.md", itemData);
             }
             content = content.replace(/\\{/g, "{").replace(/\\}/g, "}");
             fs.writeFileSync(fullPath + `/${itemName}.md`, content);
