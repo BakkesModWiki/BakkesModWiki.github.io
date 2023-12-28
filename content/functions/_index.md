@@ -1,6 +1,6 @@
 ---
 title: Functions
 geekdocCollapseSection: true
-weight: 4
+weight: 400
 geekdocProtected: true
 ---

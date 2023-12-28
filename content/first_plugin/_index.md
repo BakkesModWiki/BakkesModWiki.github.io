@@ -1,6 +1,5 @@
 ---
-title: Useful Info
+weight: 100
 geekdocCollapseSection: true
-weight: 300
 geekdocProtected: true
 ---

@@ -1,6 +1,6 @@
 ---
 title: Code Snippets
 geekdocCollapseSection: true
-weight: 2
+weight: 200
 geekdocProtected: true
 ---
