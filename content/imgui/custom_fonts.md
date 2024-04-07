@@ -48,6 +48,6 @@ if (myFont) {
 {{< /highlight >}}
 
 Here's an example using the open source Ubuntu font, as compared to the ImGui default
-![An example of custom font](https://cdn.discordapp.com/attachments/862081441080410143/969035235561992212/unknown.png)
+![An example of custom font](/img/font-comparison.png)
 
 The code for this is taken from [Martinn's awesome custom font example](https://github.com/Martinii89/BakkesmodPluginCustomFontExamle). I just made this page to get more visibility for it.
