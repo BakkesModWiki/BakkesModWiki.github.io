@@ -5,16 +5,14 @@
     <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/Stats/</link>
     <description>Recent content on BakkesMod Programming Wiki</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/Stats/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <atom:link href="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/Stats/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>StatEventWrapper</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/Stats/StatEventWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/Stats/StatEventWrapper/</guid>
-      <description> View Implementation A stat that was just recorded. Use this guide to hook them
-_NODISCARD bool IsNull() const operator bool() const int GetPoints() float GetCooldownSeconds() unsigned long GetbAddToScore() unsigned long GetbIsLeaderboardStat() unsigned long GetbNotifyTicker() unsigned long GetbShowOnHUD() unsigned long GetbPrimaryStat() unsigned long GetbSkipReplication() unsigned long GetbCanMute() unsigned long GetbCountMultiplied() UnrealStringWrapper GetLabel() UnrealStringWrapper GetPluralLabel() UnrealStringWrapper GetDescription() float GetNextCooldownTime() std::string GetGroupName() std::string GetEventName() </description>
+      <description> View Implementation A stat that was just recorded. Use this guide to hook them&#xA;_NODISCARD bool IsNull() const operator bool() const int GetPoints() float GetCooldownSeconds() unsigned long GetbAddToScore() unsigned long GetbIsLeaderboardStat() unsigned long GetbNotifyTicker() unsigned long GetbShowOnHUD() unsigned long GetbPrimaryStat() unsigned long GetbSkipReplication() unsigned long GetbCanMute() unsigned long GetbCountMultiplied() UnrealStringWrapper GetLabel() UnrealStringWrapper GetPluralLabel() UnrealStringWrapper GetDescription() float GetNextCooldownTime() std::string GetGroupName() std::string GetEventName() </description>
     </item>
-    
   </channel>
 </rss>

@@ -5,24 +5,21 @@
     <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Utilities/</link>
     <description>Recent content on BakkesMod Programming Wiki</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Utilities/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <atom:link href="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Utilities/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DecalUtilities</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Utilities/DecalUtilities/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Utilities/DecalUtilities/</guid>
       <description> View Implementation ApplyDecalToCarResult ApplyDecalToCar(const CarWrapper &amp;amp;car_wrapper, const pluginsdk::BodyShaderOverride &amp;amp;custom_body_decal) Parameter Type Description car_wrapper CarWrapper &amp;mdash; custom_body_decal pluginsdk::BodyShaderOverride &amp;mdash; BodyAssetIdsCheckResult GetBodyAssetIds(const CarWrapper &amp;amp;car_wrapper) Parameter Type Description car_wrapper CarWrapper &amp;mdash; _NODISCARD tl::expected&amp;lt; bool, std::string &amp;gt; ApplyDecalToBall(const BallWrapper &amp;amp;ball_wrapper, const pluginsdk::ShaderOverride &amp;amp;shader_override) Parameter Type Description ball_wrapper BallWrapper &amp;mdash; shader_override pluginsdk::ShaderOverride &amp;mdash; </description>
     </item>
-    
     <item>
       <title>LoadoutUtilities</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Utilities/LoadoutUtilities/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Utilities/LoadoutUtilities/</guid>
       <description> View Implementation void SetLoadoutItems(const PriWrapper &amp;amp;pri_wrapper, const pluginsdk::ItemDataMap &amp;amp;loadout) Parameter Type Description pri_wrapper PriWrapper &amp;mdash; loadout pluginsdk::ItemDataMap &amp;mdash; void SetCarProductAttributes(const CarWrapper &amp;amp;car_wrapper, const pluginsdk::ItemDataMap &amp;amp;loadout) Parameter Type Description car_wrapper CarWrapper &amp;mdash; loadout pluginsdk::ItemDataMap &amp;mdash; void SetLoadoutPaintFinishColors(const CarWrapper &amp;amp;car_wrapper, const pluginsdk::CarColors &amp;amp;paint_finish) Parameter Type Description car_wrapper CarWrapper &amp;mdash; paint_finish pluginsdk::CarColors &amp;mdash; void ForceSetLoadout(const PriWrapper &amp;amp;pri_wrapper, const pluginsdk::Loadout &amp;amp;loadout) Parameter Type Description pri_wrapper PriWrapper &amp;mdash; loadout pluginsdk::Loadout &amp;mdash; pluginsdk::CarColors GetPaintFinishColors(const CarWrapper &amp;amp;car_wrapper) Parameter Type Description car_wrapper CarWrapper &amp;mdash; pluginsdk::Loadout GetLoadoutFromPri(const PriWrapper &amp;amp;pri_wrapper, int team_index) Parameter Type Description pri_wrapper PriWrapper &amp;mdash; team_index int &amp;mdash; pluginsdk::PaintFinishColor GetBlueColorSet() pluginsdk::PaintFinishColor GetOrangeColorSet() pluginsdk::PaintFinishColor GetCustomColorSet() </description>
     </item>
-    
   </channel>
 </rss>

@@ -5,120 +5,77 @@
     <link>https://bakkesmodwiki.github.io/code_snippets/</link>
     <description>Recent content in Code Snippets on BakkesMod Programming Wiki</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://bakkesmodwiki.github.io/code_snippets/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <atom:link href="https://bakkesmodwiki.github.io/code_snippets/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Code Snippet Example</title>
       <link>https://bakkesmodwiki.github.io/code_snippets/code_snippet_example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/code_snippets/code_snippet_example/</guid>
-      <description>If you want to add a new snippet to the page, simply make a code snippet in this folder like this
-Give your snippet a unique name and send the pull request!
-Make sure to fill out the fields in the top, but do not include a weight
-Everything is written in Markdown, but you can add html inside of {{}}
-Make code blocks using highlights
-{{&amp;lt; highlight cpp &amp;#34;linenos=table&amp;#34; &amp;gt;}} // Wow look at this code int a = 1; int b = 1; if (a + b == 11) { LOG(&amp;#34;Success&amp;#34;); } else { LOG(&amp;#34;Failure&amp;#34;); } {{&amp;lt; /highlight &amp;gt;}} becomes 1 2 3 4 5 6 7 8 // Wow look at this code int a = 1; int b = 1; if (a + b == 11) { LOG(&amp;#34;Success&amp;#34;); } else { LOG(&amp;#34;Failure&amp;#34;); } If you don&amp;rsquo;t want the line numbers or highlighting, just use a normal Markdown code block</description>
+      <description>If you want to add a new snippet to the page, simply make a code snippet in this folder like this&#xA;Give your snippet a unique name and send the pull request!&#xA;Make sure to fill out the fields in the top, but do not include a weight&#xA;Everything is written in Markdown, but you can add html inside of {{}}&#xA;Make code blocks using highlights&#xA;{{&amp;lt; highlight cpp &amp;#34;linenos=table&amp;#34; &amp;gt;}} // Wow look at this code int a = 1; int b = 1; if (a + b == 11) { LOG(&amp;#34;Success&amp;#34;); } else { LOG(&amp;#34;Failure&amp;#34;); } {{&amp;lt; /highlight &amp;gt;}} becomes 1 2 3 4 5 6 7 8 // Wow look at this code int a = 1; int b = 1; if (a + b == 11) { LOG(&amp;#34;Success&amp;#34;); } else { LOG(&amp;#34;Failure&amp;#34;); } If you don&amp;rsquo;t want the line numbers or highlighting, just use a normal Markdown code block</description>
     </item>
-    
     <item>
       <title>Canvas</title>
       <link>https://bakkesmodwiki.github.io/code_snippets/canvas/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/code_snippets/canvas/</guid>
-      <description>The CanvasWrapper is a powerful tool that allows you to draw GUI elements on the screen
-For example this is used by the Hitbox Plugin by mega and HalfwayDead/Rocket Science
-You can also do more basic things, like text in my stat counter plugin OBSCounter
-First in your .h, define a function that will take a canvas.
-void Render(CanvasWrapper canvas);
-Then you need to register the function in your .cpp code.</description>
+      <description>The CanvasWrapper is a powerful tool that allows you to draw GUI elements on the screen&#xA;For example this is used by the Hitbox Plugin by mega and HalfwayDead/Rocket Science&#xA;You can also do more basic things, like text in my stat counter plugin OBSCounter&#xA;First in your .h, define a function that will take a canvas.&#xA;void Render(CanvasWrapper canvas);&#xA;Then you need to register the function in your .cpp code.</description>
     </item>
-    
     <item>
       <title>Creating an ImageWrapper</title>
       <link>https://bakkesmodwiki.github.io/code_snippets/creating_image_wrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/code_snippets/creating_image_wrapper/</guid>
       <description>Creating an ImageWrapper You should use some kind of reference type that manages the memory. std::shared_ptr&amp;lt;ImageWrapper&amp;gt; is my recommendation. The ImageWrapper is a resource managing class. This means that you have to keep this object &amp;ldquo;alive&amp;rdquo; as long as you want to use the image. When the object goes out of scope \ gets destructed it cleans up the resource it manages. Stick to std::shared_ptr and you almost can&amp;rsquo;t mess up.</description>
     </item>
-    
     <item>
       <title>How CVars Work</title>
       <link>https://bakkesmodwiki.github.io/code_snippets/how_cvars_work/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/code_snippets/how_cvars_work/</guid>
       <description>Cvars are the global variables of the mod. Bakkesmod has many pre-defined CVars that your plugin can also set/unset. Cvars are strings, but can represent bool/float values in string form. The declaration of a CVar is: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 // in include\bakkesmod\wrappers\cvarmanagerwrapper.h // &amp;lt;summary&amp;gt;Register a CVar.&amp;lt;/summary&amp;gt; // &amp;lt;param name=&amp;#34;cvar&amp;#34;&amp;gt;The string name of your CVar&amp;lt;/param&amp;gt; // &amp;lt;param name=&amp;#34;defaultValue&amp;#34;&amp;gt;The default value of your CVar&amp;lt;/param&amp;gt; // &amp;lt;param name=&amp;#34;desc&amp;#34;&amp;gt;A description of your Cvar which is logged&amp;lt;/param&amp;gt; // &amp;lt;param name=&amp;#34;searchAble&amp;#34;&amp;gt;If the cvar will pop-up when entering values in the console.</description>
     </item>
-    
     <item>
       <title>Known Playlist IDs</title>
       <link>https://bakkesmodwiki.github.io/code_snippets/playlist_id/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/code_snippets/playlist_id/</guid>
-      <description>All (known) playlist IDs - 2020
--2: Intermission // Used internally to indicate to the server the client is switching playlists. 0: Casual // Generic id to indicate ALL casual playlists, commonly used in API responses related to player skill/mmr. 1: Duel 2: Doubles 3: Standard 4: Chaos 6: Private Match 7: Season 8: Exhibition 9: Training 10: Duel (Ranked) 11: Doubles (Ranked) 13: Standard (Ranked) 15: Snow Day 16: Rocket Labs 17: Hoops 18: Rumble 19: Workshop 20: Custom Training Editor 21: Custom Training 22: Tournament Match (Custom) 23: Dropshot 24: Local Match 26: External Match (Ranked) 27: Hoops (Ranked) 28: Rumble (Ranked) 29: Dropshot (Ranked) 30: Snow Day (Ranked) 31: Ghost Hunt 32: Beach Ball 33: Spike Rush 34: Tournament Match (Automatic) 35: Rocket Labs 37: Dropshot Rumble 38: Heatseeker 41: Boomer Ball 43: Heatseeker Doubles 44: Winter Breakaway 46: Gridiron 47: Super Cube 48: Tactical Rumble 49: Spring Loaded 50: Speed Demon 52: Gotham City Rumble 54: Knockout 55: confidential_thirdwheel_test Find the ID of the current playlist with this code.</description>
+      <description>All (known) playlist IDs - 2020&#xA;-2: Intermission // Used internally to indicate to the server the client is switching playlists. 0: Casual // Generic id to indicate ALL casual playlists, commonly used in API responses related to player skill/mmr. 1: Duel 2: Doubles 3: Standard 4: Chaos 6: Private Match 7: Season 8: Exhibition 9: Training 10: Duel (Ranked) 11: Doubles (Ranked) 13: Standard (Ranked) 15: Snow Day 16: Rocket Labs 17: Hoops 18: Rumble 19: Workshop 20: Custom Training Editor 21: Custom Training 22: Tournament Match (Custom) 23: Dropshot 24: Local Match 26: External Match (Ranked) 27: Hoops (Ranked) 28: Rumble (Ranked) 29: Dropshot (Ranked) 30: Snow Day (Ranked) 31: Ghost Hunt 32: Beach Ball 33: Spike Rush 34: Tournament Match (Automatic) 35: Rocket Labs 37: Dropshot Rumble 38: Heatseeker 41: Boomer Ball 43: Heatseeker Doubles 44: Winter Breakaway 46: Gridiron 47: Super Cube 48: Tactical Rumble 49: Spring Loaded 50: Speed Demon 52: Gotham City Rumble 54: Knockout 55: confidential_thirdwheel_test Find the ID of the current playlist with this code.</description>
     </item>
-    
     <item>
       <title>Persistent Storage</title>
       <link>https://bakkesmodwiki.github.io/code_snippets/persistent_storage/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/code_snippets/persistent_storage/</guid>
-      <description>Use these files in your plugin files to store persistent data with cvars but without risking the cvars being cleared
-Usage 1 2 3 4 5 // preferably in onload but at least before you use it (genious advice) persistent_storage_ = std::make_shared&amp;lt;PersistentStorage&amp;gt;(this, &amp;#34;Hats&amp;#34;, true, true); //register the cvar like &amp;#34;normal&amp;#34; auto cvar = persistent_storage_-&amp;gt;RegisterPersistentCvar(&amp;#34;hats_preset&amp;#34;, &amp;#34;&amp;#34;, &amp;#34;The selected preset&amp;#34;, true); Download these files to use
-PersistentStorage.h
-PersistentStorage.cpp</description>
+      <description>Use these files in your plugin files to store persistent data with cvars but without risking the cvars being cleared&#xA;Usage 1 2 3 4 5 // preferably in onload but at least before you use it (genious advice) persistent_storage_ = std::make_shared&amp;lt;PersistentStorage&amp;gt;(this, &amp;#34;Hats&amp;#34;, true, true); //register the cvar like &amp;#34;normal&amp;#34; auto cvar = persistent_storage_-&amp;gt;RegisterPersistentCvar(&amp;#34;hats_preset&amp;#34;, &amp;#34;&amp;#34;, &amp;#34;The selected preset&amp;#34;, true); Download these files to use&#xA;PersistentStorage.h&#xA;PersistentStorage.cpp</description>
     </item>
-    
     <item>
       <title>Plugin Exclusive Logging</title>
       <link>https://bakkesmodwiki.github.io/code_snippets/plugin_exclusive_logging/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/code_snippets/plugin_exclusive_logging/</guid>
-      <description>Want to see the console logging from just your plugin? Open a new PowerShell window and use this command
-1 Get-Content (-join($env:APPDATA, &amp;#34;\bakkesmod\bakkesmod\bakkesmod.log&amp;#34;)) -wait -tail 1 | select-string -pattern &amp;#34;PLUGIN_NAME&amp;#34; </description>
+      <description>Want to see the console logging from just your plugin? Open a new PowerShell window and use this command&#xA;1 Get-Content (-join($env:APPDATA, &amp;#34;\bakkesmod\bakkesmod\bakkesmod.log&amp;#34;)) -wait -tail 1 | select-string -pattern &amp;#34;PLUGIN_NAME&amp;#34; </description>
     </item>
-    
     <item>
       <title>Plugin Types</title>
       <link>https://bakkesmodwiki.github.io/code_snippets/plugin_types/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/code_snippets/plugin_types/</guid>
-      <description>BAKKESMOD_PLUGIN(CoolPlugin, &amp;#34;Cool Plugin&amp;#34;, plugin_version, PLUGINTYPE_FREEPLAY) These are a relic of an unrealized feature. Most do nothing.
-It&amp;rsquo;s easiest to just leave it as PLUGINTYPE_FREEPLAY from the template, but you can use any of the non-threaded options interchangeably.
-PLUGINTYPE_FREEPLAY through PLUGINTYPE_REPLAY plugins all work in any gamemode or playlist
-PLUGINTYPE_THREADED means that the plugin&amp;rsquo;s onLoad() is called in its own thread
-PLUGINTYPE_THREADEDUNLOAD means that the plugin&amp;rsquo;s onUnload() is called in its own thread</description>
+      <description>BAKKESMOD_PLUGIN(CoolPlugin, &amp;#34;Cool Plugin&amp;#34;, plugin_version, PLUGINTYPE_FREEPLAY) These are a relic of an unrealized feature. Most do nothing.&#xA;It&amp;rsquo;s easiest to just leave it as PLUGINTYPE_FREEPLAY from the template, but you can use any of the non-threaded options interchangeably.&#xA;PLUGINTYPE_FREEPLAY through PLUGINTYPE_REPLAY plugins all work in any gamemode or playlist&#xA;PLUGINTYPE_THREADED means that the plugin&amp;rsquo;s onLoad() is called in its own thread&#xA;PLUGINTYPE_THREADEDUNLOAD means that the plugin&amp;rsquo;s onUnload() is called in its own thread</description>
     </item>
-    
     <item>
       <title>Toasts</title>
       <link>https://bakkesmodwiki.github.io/code_snippets/toasts/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/code_snippets/toasts/</guid>
-      <description>Toasts are cool little popups that show on the top right of your game
-These are useful for quick notifications that you want to disappear quickly
-First you need to enable them in f2 - Misc - Enable notifications
-Watch out though! Every user also has to enable this, so make sure your plugin page or interface is quite clear that this is necessary
-Now to the code
-Make a toast pop up with GameWrapper.</description>
+      <description>Toasts are cool little popups that show on the top right of your game&#xA;These are useful for quick notifications that you want to disappear quickly&#xA;First you need to enable them in f2 - Misc - Enable notifications&#xA;Watch out though! Every user also has to enable this, so make sure your plugin page or interface is quite clear that this is necessary&#xA;Now to the code&#xA;Make a toast pop up with GameWrapper.</description>
     </item>
-    
     <item>
       <title>Using HttpWrapper</title>
       <link>https://bakkesmodwiki.github.io/code_snippets/using_http_wrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/code_snippets/using_http_wrapper/</guid>
       <description>HttpWrapper Sending a simple http request with a string body 1 2 3 4 5 6 7 8 9 CurlRequest req; req.url = &amp;#34;https://httpbin.org/anything&amp;#34;; req.body = &amp;#34;testing with body&amp;#34;; LOG(&amp;#34;sending body request&amp;#34;); HttpWrapper::SendCurlRequest(req, [this](int code, std::string result) { LOG(&amp;#34;Body result{}&amp;#34;, result); }); Perform an HTTP/S JSON request 1 2 3 4 5 6 7 8 9 10 11 12 13 CurlRequest req; req.url = &amp;#34;https://httpbin.org/anything&amp;#34;; req.body = R&amp;#34;T({ &amp;#34;userId&amp;#34;: 1, &amp;#34;id&amp;#34;: 1, &amp;#34;title&amp;#34;: &amp;#34;delectus aut autem&amp;#34;, &amp;#34;completed&amp;#34;: false })T&amp;#34;; HttpWrapper::SendCurlJsonRequest(req, [this](int code, std::string result) { LOG(&amp;#34;Json result{}&amp;#34;, result); }); Sending a file over HTTP/S 1 2 3 4 5 6 7 8 9 10 { CurlRequest req; req.</description>
     </item>
-    
   </channel>
 </rss>

@@ -5,61 +5,42 @@
     <link>https://bakkesmodwiki.github.io/imgui/</link>
     <description>Recent content on BakkesMod Programming Wiki</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://bakkesmodwiki.github.io/imgui/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <atom:link href="https://bakkesmodwiki.github.io/imgui/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Color Picker</title>
       <link>https://bakkesmodwiki.github.io/imgui/color_picker/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/imgui/color_picker/</guid>
-      <description>You&amp;rsquo;ve got a super cool looking overlay, but you want the user to change the color. Here&amp;rsquo;s some code for a super nice color picker!
-First, you need to be rendering something on the canvas. Let&amp;rsquo;s say it&amp;rsquo;s a single chunk of text. Like this example.
-Next, make a cvar for color. This is really simple. The default value can be encoded with hex 1 cvarManager-&amp;gt;registerCvar(&amp;#34;cool_color&amp;#34;, &amp;#34;#FFFFFF&amp;#34;, &amp;#34;color of overlay&amp;#34;); Now in the canvas render, use the new color 1 2 3 4 5 6 7 CVarWrapper textColorVar = cvarManager-&amp;gt;getCvar(&amp;#34;cool_color&amp;#34;); if (!</description>
+      <description>You&amp;rsquo;ve got a super cool looking overlay, but you want the user to change the color. Here&amp;rsquo;s some code for a super nice color picker!&#xA;First, you need to be rendering something on the canvas. Let&amp;rsquo;s say it&amp;rsquo;s a single chunk of text. Like this example.&#xA;Next, make a cvar for color. This is really simple. The default value can be encoded with hex 1 cvarManager-&amp;gt;registerCvar(&amp;#34;cool_color&amp;#34;, &amp;#34;#FFFFFF&amp;#34;, &amp;#34;color of overlay&amp;#34;); Now in the canvas render, use the new color 1 2 3 4 5 6 7 CVarWrapper textColorVar = cvarManager-&amp;gt;getCvar(&amp;#34;cool_color&amp;#34;); if (!</description>
     </item>
-    
     <item>
       <title>Custom Fonts</title>
       <link>https://bakkesmodwiki.github.io/imgui/custom_fonts/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/imgui/custom_fonts/</guid>
-      <description>Want to add a custom fancy font to your plugin? It&amp;rsquo;s really easy! You can use any .ttf font, although many have copyrights. Check out https://fonts.google.com/ for a bunch of free fonts to use.
-First, make a pointer to save your font. Do this in your .h as a variable 1 ImFont* myFont; Next load the font using the GUIManager. This can be done pretty much anywhere, but I recommend using your OnLoad or SetImGuiContext functions.</description>
+      <description>Want to add a custom fancy font to your plugin? It&amp;rsquo;s really easy! You can use any .ttf font, although many have copyrights. Check out https://fonts.google.com/ for a bunch of free fonts to use.&#xA;First, make a pointer to save your font. Do this in your .h as a variable 1 ImFont* myFont; Next load the font using the GUIManager. This can be done pretty much anywhere, but I recommend using your OnLoad or SetImGuiContext functions.</description>
     </item>
-    
     <item>
       <title>Draggable location</title>
       <link>https://bakkesmodwiki.github.io/imgui/draggable_location/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/imgui/draggable_location/</guid>
-      <description>Imagine you have a plugin that renders something on the screen. Users might want to move it to a different location. Dragging&amp;rsquo;s a great way to make it move, and here&amp;rsquo;s how to get it to work!
-First, you need to be rendering something on the canvas. Let&amp;rsquo;s say it&amp;rsquo;s a single chunk of text, with its location defined at the top left. Like this example.
-Next we&amp;rsquo;ll add a simple level of customizability with location cvars.</description>
+      <description>Imagine you have a plugin that renders something on the screen. Users might want to move it to a different location. Dragging&amp;rsquo;s a great way to make it move, and here&amp;rsquo;s how to get it to work!&#xA;First, you need to be rendering something on the canvas. Let&amp;rsquo;s say it&amp;rsquo;s a single chunk of text, with its location defined at the top left. Like this example.&#xA;Next we&amp;rsquo;ll add a simple level of customizability with location cvars.</description>
     </item>
-    
     <item>
       <title>Overlays</title>
       <link>https://bakkesmodwiki.github.io/imgui/overlays/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/imgui/overlays/</guid>
-      <description>Want the powerful flexibility of ImGui for a simple text overlay? Here&amp;rsquo;s how.
-First make sure you&amp;rsquo;ve uncommented all of the plugin window code in the template&amp;rsquo;s .h file. Then in your GUI file go to the render() function. For a custom overlay, you&amp;rsquo;ll need to prepare flags for it to appear the way you want it to.
-These are found at line 744 of imgui.h
-Some useful flags for an overlay are:</description>
+      <description>Want the powerful flexibility of ImGui for a simple text overlay? Here&amp;rsquo;s how.&#xA;First make sure you&amp;rsquo;ve uncommented all of the plugin window code in the template&amp;rsquo;s .h file. Then in your GUI file go to the render() function. For a custom overlay, you&amp;rsquo;ll need to prepare flags for it to appear the way you want it to.&#xA;These are found at line 744 of imgui.h&#xA;Some useful flags for an overlay are:</description>
     </item>
-    
     <item>
       <title>ImGui Basics</title>
       <link>https://bakkesmodwiki.github.io/imgui/imgui_begin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/imgui/imgui_begin/</guid>
-      <description>This section is dedicated to ImGui, a library used for creating a user-friendly interface. There&amp;rsquo;s buttons, sliders, checkboxes, dropdowns, and all sorts of options. It also assumes you&amp;rsquo;re using the template, as the template automatically includes the ImGui library.
-And here&amp;rsquo;s a useful interactable imgui demo to see what these look like in action
-https://pthom.github.io/imgui_manual_online/manual/imgui_manual.html</description>
+      <description>This section is dedicated to ImGui, a library used for creating a user-friendly interface. There&amp;rsquo;s buttons, sliders, checkboxes, dropdowns, and all sorts of options. It also assumes you&amp;rsquo;re using the template, as the template automatically includes the ImGui library.&#xA;And here&amp;rsquo;s a useful interactable imgui demo to see what these look like in action&#xA;https://pthom.github.io/imgui_manual_online/manual/imgui_manual.html</description>
     </item>
-    
   </channel>
 </rss>

@@ -5,33 +5,28 @@
     <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/SaveData/</link>
     <description>Recent content on BakkesMod Programming Wiki</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/SaveData/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <atom:link href="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/SaveData/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GameEditorSaveDataWrapper</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/SaveData/GameEditorSaveDataWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/SaveData/GameEditorSaveDataWrapper/</guid>
       <description> View Implementation UnrealStringWrapper GetLoadedSaveName() TrainingEditorSaveDataWrapper GetTrainingData() void SetTrainingData(TrainingEditorSaveDataWrapper newTrainingData) Parameter Type Description newTrainingData TrainingEditorSaveDataWrapper &amp;mdash; int GetPlayerTeamNumber() void SetPlayerTeamNumber(int newPlayerTeamNumber) Parameter Type Description newPlayerTeamNumber int &amp;mdash; unsigned long GetbUnowned() void SetbUnowned(unsigned long newbUnowned) Parameter Type Description newbUnowned unsigned long &amp;mdash; int GetShotsCompleted() void SetShotsCompleted(int newShotsCompleted) Parameter Type Description newShotsCompleted int &amp;mdash; UnrealStringWrapper GetFavoritesFolderPath() UnrealStringWrapper GetMyTrainingFolderPath() UnrealStringWrapper GetDownloadedFolderPath() unsigned char GetTrainingSaveType(unsigned long bOwned, unsigned long bFavorited) Parameter Type Description bOwned unsigned long &amp;mdash; bFavorited unsigned long &amp;mdash; void Init() </description>
     </item>
-    
     <item>
       <title>SaveDataWrapper</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/SaveData/SaveDataWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/SaveData/SaveDataWrapper/</guid>
       <description> View Implementation _NODISCARD bool IsNull() const operator bool() const UnrealStringWrapper GetDirectoryPath() UnrealStringWrapper GetSaveType() UnrealStringWrapper GetSaveExt() unsigned long GetbExactFileMatch() void SetbExactFileMatch(unsigned long newbExactFileMatch) Parameter Type Description newbExactFileMatch unsigned long &amp;mdash; void Init() </description>
     </item>
-    
     <item>
       <title>TrainingEditorSaveDataWrapper</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/SaveData/TrainingEditorSaveDataWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/SaveData/TrainingEditorSaveDataWrapper/</guid>
       <description> View Implementation _NODISCARD bool IsNull() const operator bool() const UnrealStringWrapper GetCode() UnrealStringWrapper GetTM_Name() unsigned char GetType() void SetType(unsigned char newType) Parameter Type Description newType unsigned char &amp;mdash; unsigned char GetDifficulty() void SetDifficulty(unsigned char newDifficulty) Parameter Type Description newDifficulty unsigned char &amp;mdash; UnrealStringWrapper GetCreatorName() UnrealStringWrapper GetDescription() int GetNumRounds() void SetNumRounds(int newNumRounds) Parameter Type Description newNumRounds int &amp;mdash; unsigned long long GetCreatedAt() void SetCreatedAt(unsigned long long newCreatedAt) Parameter Type Description newCreatedAt unsigned long long &amp;mdash; unsigned long long GetUpdatedAt() void SetUpdatedAt(unsigned long long newUpdatedAt) Parameter Type Description newUpdatedAt unsigned long long &amp;mdash; SteamID GetCreatorPlayerID() void SetCreatorPlayerID(SteamID newCreatorPlayerID) Parameter Type Description newCreatorPlayerID SteamID &amp;mdash; void Init() UniqueIDWrapper GetCreatorPlayerUniqueID() </description>
     </item>
-    
   </channel>
 </rss>

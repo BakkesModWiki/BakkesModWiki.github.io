@@ -5,51 +5,42 @@
     <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Dbs/</link>
     <description>Recent content on BakkesMod Programming Wiki</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Dbs/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <atom:link href="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Dbs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CertifiedStatDatabaseWrapper</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Dbs/CertifiedStatDatabaseWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Dbs/CertifiedStatDatabaseWrapper/</guid>
       <description> View Implementation _NODISCARD bool IsNull() const operator bool() const std::string GetStatName(int StatId) Parameter Type Description StatId int &amp;mdash; int GetStatId(std::string &amp;amp;StatName) Parameter Type Description StatName std::string &amp;amp; &amp;mdash; </description>
     </item>
-    
     <item>
       <title>DataAssetDatabase_ESportsTeamWrapper</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Dbs/DataAssetDatabase_ESportsTeamWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Dbs/DataAssetDatabase_ESportsTeamWrapper/</guid>
       <description> View Implementation </description>
     </item>
-    
     <item>
       <title>DataAssetDatabaseWrapper</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Dbs/DataAssetDatabaseWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Dbs/DataAssetDatabaseWrapper/</guid>
       <description> View Implementation _NODISCARD bool IsNull() const operator bool() const std::string GetName(int DataAssetID) Parameter Type Description DataAssetID int &amp;mdash; int GetID(std::string &amp;amp;DataAssetName) Parameter Type Description DataAssetName std::string &amp;amp; &amp;mdash; </description>
     </item>
-    
     <item>
       <title>PaintDatabaseWrapper</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Dbs/PaintDatabaseWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Dbs/PaintDatabaseWrapper/</guid>
       <description> View Implementation _NODISCARD bool IsNull() const operator bool() const ArrayWrapper GetPaints() const _NODISCARD bool AddCustomPaintColor(const std::string &amp;amp;name, const LinearColor &amp;amp;color) Parameter Type Description name const std::string &amp;amp; &amp;mdash; color LinearColor &amp;mdash; _NODISCARD bool UpdateCustomPaintColor(const std::string &amp;amp;name, const LinearColor &amp;amp;color) Parameter Type Description name const std::string &amp;amp; &amp;mdash; color LinearColor &amp;mdash; std::string GetPaintName(int PaintID) Parameter Type Description PaintID int &amp;mdash; int GetPaintID(std::string &amp;amp;PaintName) Parameter Type Description PaintName std::string &amp;amp; &amp;mdash; </description>
     </item>
-    
     <item>
       <title>SpecialEditionDatabaseWrapper</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Dbs/SpecialEditionDatabaseWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Dbs/SpecialEditionDatabaseWrapper/</guid>
       <description> View Implementation _NODISCARD bool IsNull() const operator bool() const std::string GetSpecialEditionName(int EditionID) Parameter Type Description EditionID int &amp;mdash; int GetSpecialEditionId(std::string &amp;amp;EditionName) Parameter Type Description EditionName std::string &amp;amp; &amp;mdash; </description>
     </item>
-    
   </channel>
 </rss>

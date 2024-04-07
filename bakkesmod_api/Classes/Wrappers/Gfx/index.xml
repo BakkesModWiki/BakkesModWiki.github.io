@@ -5,15 +5,14 @@
     <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Gfx/</link>
     <description>Recent content on BakkesMod Programming Wiki</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Gfx/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <atom:link href="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Gfx/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GfxDataTrainingWrapper</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Gfx/GfxDataTrainingWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Gfx/GfxDataTrainingWrapper/</guid>
       <description> View Implementation operator bool() bool IsNull() bool CanUseMirroring() bool CanUsePlaylistOverride() bool CanUseShuffle() bool CanUseTrainingUIV2() bool HasCompletedTraining(const std::string &amp;amp;inType, const std::string &amp;amp;inDifficulty) Parameter Type Description inType const std::string &amp;amp; &amp;mdash; inDifficulty const std::string &amp;amp; &amp;mdash; bool HasCompletedTutorial(int InType) Parameter Type Description InType int &amp;mdash; bool HasPerfectedTraining(const std::string &amp;amp;inType, const std::string &amp;amp;inDifficulty) Parameter Type Description inType const std::string &amp;amp; &amp;mdash; inDifficulty const std::string &amp;amp; &amp;mdash; bool UpdateDataFromProgress() void EndTrainingEditorPlaytest() void eventOnRemoved() void eventOnShellSet() void PlayFreeplayMap(const std::string &amp;amp;Map) Parameter Type Description Map const std::string &amp;amp; &amp;mdash; void PlayTraining(const std::string &amp;amp;Type, const std::string &amp;amp;trainingDifficulty) Parameter Type Description Type const std::string &amp;amp; &amp;mdash; trainingDifficulty const std::string &amp;amp; &amp;mdash; void PlayTutorial(bool bAdvanced) Parameter Type Description bAdvanced bool &amp;mdash; void PlayV2Tutorial(int type, bool bAutoEntered) Parameter Type Description type int &amp;mdash; bAutoEntered bool &amp;mdash; void ResetTrainingProgress() void SetCurrentPlaylist(const std::string &amp;amp;playlist) Parameter Type Description playlist const std::string &amp;amp; &amp;mdash; void SetTrainingEditorGameEvent(TrainingEditorWrapper inGameEvent) Parameter Type Description inGameEvent TrainingEditorWrapper &amp;mdash; void SetTrainingGameEvent(TutorialWrapper inGameEvent) Parameter Type Description inGameEvent TutorialWrapper &amp;mdash; void StartAtPlaylistIndex(int inPlaylistIndex) Parameter Type Description inPlaylistIndex int &amp;mdash; std::string GetTrainingType() int GetCurrentScore() int GetCurrentRound() int GetTotalRounds() UnrealStringWrapper GetDifficulty() std::string GetSelectedFreeplayMap() UnrealStringWrapper GetTutorialTip() StructArrayWrapper GetProgressPerShot() int GetCurrentPlaylistindex() </description>
     </item>
-    
   </channel>
 </rss>

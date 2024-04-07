@@ -5,33 +5,28 @@
     <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Assets/</link>
     <description>Recent content on BakkesMod Programming Wiki</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Assets/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <atom:link href="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Assets/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ProductAssetBodyWrapper</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Assets/ProductAssetBodyWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Assets/ProductAssetBodyWrapper/</guid>
       <description> View Implementation _NODISCARD bool IsNull() const operator bool() const ProductEquipProfileWrapper GetEquipProfile() const _NODISCARD bool CanEquip(const ProductWrapper &amp;amp;product_wrappper) const Parameter Type Description product_wrappper ProductWrapper &amp;mdash; </description>
     </item>
-    
     <item>
       <title>ProductAssetWrapper</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Assets/ProductAssetWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Assets/ProductAssetWrapper/</guid>
       <description> View Implementation _NODISCARD bool IsNull() const operator bool() const ProductWrapper GetProduct() const </description>
     </item>
-    
     <item>
       <title>ProductEquipProfileWrapper</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Assets/ProductEquipProfileWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Assets/ProductEquipProfileWrapper/</guid>
       <description> View Implementation _NODISCARD bool IsNull() const operator bool() const _NODISCARD std::vector&amp;lt; int &amp;gt; GetForcedProducts() const _NODISCARD std::vector&amp;lt; int &amp;gt; GetDefaultProducts() const _NODISCARD bool CanEquip(const ProductWrapper &amp;amp;product_wrappper) const Parameter Type Description product_wrappper ProductWrapper &amp;mdash; </description>
     </item>
-    
   </channel>
 </rss>

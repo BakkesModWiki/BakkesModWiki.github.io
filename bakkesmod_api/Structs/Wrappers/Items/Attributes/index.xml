@@ -5,18 +5,14 @@
     <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/Items/Attributes/</link>
     <description>Recent content on BakkesMod Programming Wiki</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/Items/Attributes/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <atom:link href="https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/Items/Attributes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SpecialEdition</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/Items/Attributes/SpecialEdition/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/Items/Attributes/SpecialEdition/</guid>
-      <description>View Implementation Info on an item&#39;s special edition. Not sure where to obtain
-int productId Default value: none
-int editionId Default value: none
-std::string label Default value: none</description>
+      <description>View Implementation Info on an item&#39;s special edition. Not sure where to obtain&#xA;int productId Default value: none&#xA;int editionId Default value: none&#xA;std::string label Default value: none</description>
     </item>
-    
   </channel>
 </rss>

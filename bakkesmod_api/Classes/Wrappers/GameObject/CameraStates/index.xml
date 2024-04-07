@@ -5,51 +5,42 @@
     <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CameraStates/</link>
     <description>Recent content on BakkesMod Programming Wiki</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CameraStates/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <atom:link href="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CameraStates/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CameraStateBlenderWrapper</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CameraStates/CameraStateBlenderWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CameraStates/CameraStateBlenderWrapper/</guid>
       <description> View Implementation _NODISCARD bool IsNull() const operator bool() const CameraStateXWrapper GetCameraState() const CameraTransition GetTransition() const _NODISCARD void SetTransition(const CameraTransition &amp;amp;transition) const Parameter Type Description transition CameraTransition &amp;mdash; </description>
     </item>
-    
     <item>
       <title>CameraStateCarRefWrapper</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CameraStates/CameraStateCarRefWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CameraStates/CameraStateCarRefWrapper/</guid>
       <description> View Implementation _NODISCARD bool IsNull() const operator bool() const </description>
     </item>
-    
     <item>
       <title>CameraStateCarWrapper</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CameraStates/CameraStateCarWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CameraStates/CameraStateCarWrapper/</guid>
       <description> View Implementation _NODISCARD bool IsNull() const operator bool() const _NODISCARD float GetInterpToGroundRate() const _NODISCARD float GetInterpToAirRate() const _NODISCARD float GetGroundRotationInterpRate() const _NODISCARD float GetGroundRotationInterpRateWall() const _NODISCARD float GetFOVInterpSpeed() const _NODISCARD float GetSupersonicFOVInterpSpeed() const _NODISCARD float GetGroundNormalInterpRate() const void SetInterpToGroundRate(float value) Parameter Type Description value float &amp;mdash; void SetInterpToAirRate(float value) Parameter Type Description value float &amp;mdash; void SetGroundRotationInterpRate(float value) Parameter Type Description value float &amp;mdash; void SetGroundRotationInterpRateWall(float value) Parameter Type Description value float &amp;mdash; void SetFOVInterpSpeed(float value) Parameter Type Description value float &amp;mdash; void SetSupersonicFOVInterpSpeed(float value) Parameter Type Description value float &amp;mdash; void SetGroundNormalInterpRate(float value) Parameter Type Description value float &amp;mdash; CameraStateCarWrapper GetInstanceWithDefaultValues() </description>
     </item>
-    
     <item>
       <title>CameraStateWrapper</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CameraStates/CameraStateWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CameraStates/CameraStateWrapper/</guid>
       <description> View Implementation _NODISCARD bool IsNull() const operator bool() const </description>
     </item>
-    
     <item>
       <title>CameraStateXWrapper</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CameraStates/CameraStateXWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CameraStates/CameraStateXWrapper/</guid>
       <description> View Implementation _NODISCARD bool IsNull() const operator bool() const _NODISCARD std::string GetStateType() const </description>
     </item>
-    
   </channel>
 </rss>

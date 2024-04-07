@@ -5,57 +5,42 @@
     <link>https://bakkesmodwiki.github.io/plugin_tutorial/</link>
     <description>Recent content on BakkesMod Programming Wiki</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://bakkesmodwiki.github.io/plugin_tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <atom:link href="https://bakkesmodwiki.github.io/plugin_tutorial/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Setup your installs</title>
       <link>https://bakkesmodwiki.github.io/plugin_tutorial/getting_started/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/plugin_tutorial/getting_started/</guid>
-      <description>Trying to get into making plugins for the first time? There&amp;rsquo;s some super useful tools out there! These steps should get you started on the path towards development.
-Note these instructions are designed for Windows 10 (and presumably 11). Rocket League is Windows exclusive, so this is the easiest way to develop for it. If you really want to use linux, it will be harder but may still be possible</description>
+      <description>Trying to get into making plugins for the first time? There&amp;rsquo;s some super useful tools out there! These steps should get you started on the path towards development.&#xA;Note these instructions are designed for Windows 10 (and presumably 11). Rocket League is Windows exclusive, so this is the easiest way to develop for it. If you really want to use linux, it will be harder but may still be possible</description>
     </item>
-    
     <item>
       <title>Starting a plugin</title>
       <link>https://bakkesmodwiki.github.io/plugin_tutorial/starting_a_plugin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/plugin_tutorial/starting_a_plugin/</guid>
-      <description>It will assume you&amp;rsquo;re using the template as linked in Setting Up. You can of course make a plugin without it, but it gives an easier basis to work off of. You can name it anything, but here we&amp;rsquo;ll be using a demo plugin named CoolPlugin
-The template has a lot of commented out code that is designed to help you learn how to use the syntax. We&amp;rsquo;ll uncomment some of this as we go along.</description>
+      <description>It will assume you&amp;rsquo;re using the template as linked in Setting Up. You can of course make a plugin without it, but it gives an easier basis to work off of. You can name it anything, but here we&amp;rsquo;ll be using a demo plugin named CoolPlugin&#xA;The template has a lot of commented out code that is designed to help you learn how to use the syntax. We&amp;rsquo;ll uncomment some of this as we go along.</description>
     </item>
-    
     <item>
       <title>Plugin Variables</title>
       <link>https://bakkesmodwiki.github.io/plugin_tutorial/plugin_variables/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/plugin_tutorial/plugin_variables/</guid>
-      <description>Next we will make your plugin alterable by a user. They might want to enable/disable the plugin, change how it acts, and pretty much infinite options. I&amp;rsquo;ll be using a fairly simple plugin I&amp;rsquo;ve made as an example. I&amp;rsquo;ll only be focusing on the settings, not the actual code that makes it work. We&amp;rsquo;ll continue the CoolPlugin from Starting a Plugin
-We give the users control with the Console Variables, CVars.</description>
+      <description>Next we will make your plugin alterable by a user. They might want to enable/disable the plugin, change how it acts, and pretty much infinite options. I&amp;rsquo;ll be using a fairly simple plugin I&amp;rsquo;ve made as an example. I&amp;rsquo;ll only be focusing on the settings, not the actual code that makes it work. We&amp;rsquo;ll continue the CoolPlugin from Starting a Plugin&#xA;We give the users control with the Console Variables, CVars.</description>
     </item>
-    
     <item>
       <title>Plugin Interface</title>
       <link>https://bakkesmodwiki.github.io/plugin_tutorial/plugin_interface/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/plugin_tutorial/plugin_interface/</guid>
-      <description>This channel will go over creating a user-friendly interface. There&amp;rsquo;s buttons, sliders, checkboxes, dropdowns, and all sorts of options. It also assumes you&amp;rsquo;re using the template, as the template automatically includes the ImGui GUI library we&amp;rsquo;ll be using. It also adds a file we&amp;rsquo;ll be editing
-Yet again we have the CoolPlugin from Plugin Variables and we want to add a button to activate our cooler ball on top, a checkbox to enable cool, and a slider to choose the distance that the ball is placed from your car</description>
+      <description>This channel will go over creating a user-friendly interface. There&amp;rsquo;s buttons, sliders, checkboxes, dropdowns, and all sorts of options. It also assumes you&amp;rsquo;re using the template, as the template automatically includes the ImGui GUI library we&amp;rsquo;ll be using. It also adds a file we&amp;rsquo;ll be editing&#xA;Yet again we have the CoolPlugin from Plugin Variables and we want to add a button to activate our cooler ball on top, a checkbox to enable cool, and a slider to choose the distance that the ball is placed from your car</description>
     </item>
-    
     <item>
       <title>Best Practices</title>
       <link>https://bakkesmodwiki.github.io/plugin_tutorial/best_practices/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/plugin_tutorial/best_practices/</guid>
-      <description>These practices are super important to follow to make sure you don&amp;rsquo;t accidentally crash the game.
-Nullchecking
-Any BakkesMod wrapper is a pointer under the hood, and that pointer could be null! If you try and use a null wrapper, you&amp;rsquo;ll crash. This is super simple, just make sure you nullcheck every time you obtain a new wrapper. 1 2 3 4 5 6 7 8 9 10 11 12 ServerWrapper server = gameWrapper-&amp;gt;GetCurrentGameState(); // Just check if the server is null if (!</description>
+      <description>These practices are super important to follow to make sure you don&amp;rsquo;t accidentally crash the game.&#xA;Nullchecking&#xA;Any BakkesMod wrapper is a pointer under the hood, and that pointer could be null! If you try and use a null wrapper, you&amp;rsquo;ll crash. This is super simple, just make sure you nullcheck every time you obtain a new wrapper. 1 2 3 4 5 6 7 8 9 10 11 12 ServerWrapper server = gameWrapper-&amp;gt;GetCurrentGameState(); // Just check if the server is null if (!</description>
     </item>
-    
   </channel>
 </rss>

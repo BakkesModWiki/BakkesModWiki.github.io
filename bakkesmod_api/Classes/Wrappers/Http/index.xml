@@ -5,15 +5,14 @@
     <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Http/</link>
     <description>Recent content on BakkesMod Programming Wiki</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Http/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <atom:link href="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Http/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HttpWrapper</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Http/HttpWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Http/HttpWrapper/</guid>
       <description> View Implementation void SendCurlRequest(CurlRequest request_data, const std::wstring &amp;amp;file_output, CurlRequestDoneFileReturn on_complete) Parameter Type Description request_data CurlRequest &amp;mdash; file_output const std::wstring &amp;amp; &amp;mdash; on_complete CurlRequestDoneFileReturn &amp;mdash; void SendCurlJsonRequest(CurlRequest request_data, CurlRequestDoneStringReturn on_complete) Parameter Type Description request_data CurlRequest &amp;mdash; on_complete CurlRequestDoneStringReturn &amp;mdash; </description>
     </item>
-    
   </channel>
 </rss>

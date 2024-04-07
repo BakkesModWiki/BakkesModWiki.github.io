@@ -5,92 +5,49 @@
     <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Core/</link>
     <description>Recent content on BakkesMod Programming Wiki</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Core/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <atom:link href="https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Core/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>BotLoadoutData</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Core/BotLoadoutData/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Core/BotLoadoutData/</guid>
-      <description>View Implementation Info on a bot&#39;s items. Unsure how to obtain
-std::map&amp;lt; int, int &amp;gt; products Default value: none
-Attribute product_attributes Default value: none
-unsigned char team Default value = 0
-int team_finish_id Default value = 0
-int custom_finish_id Default value = 0
-unsigned char team_color_id Default value = 0
-unsigned char custom_color_id Default value = 0</description>
+      <description>View Implementation Info on a bot&#39;s items. Unsure how to obtain&#xA;std::map&amp;lt; int, int &amp;gt; products Default value: none&#xA;Attribute product_attributes Default value: none&#xA;unsigned char team Default value = 0&#xA;int team_finish_id Default value = 0&#xA;int custom_finish_id Default value = 0&#xA;unsigned char team_color_id Default value = 0&#xA;unsigned char custom_color_id Default value = 0</description>
     </item>
-    
     <item>
       <title>CurlRequest</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Core/CurlRequest/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Core/CurlRequest/</guid>
-      <description>View Implementation Used to make a request with the HTTPWrapper. Info on using that here
-std::string url Default value: none
-std::string verb Default value: none
-std::map&amp;lt; std::string, std::string &amp;gt; headers Default value: none
-std::string body Default value: none
-FormField form_data Default value: none
-CurlProgressFunction progress_function Default value: none</description>
+      <description>View Implementation Used to make a request with the HTTPWrapper. Info on using that here&#xA;std::string url Default value: none&#xA;std::string verb Default value: none&#xA;std::map&amp;lt; std::string, std::string &amp;gt; headers Default value: none&#xA;std::string body Default value: none&#xA;FormField form_data Default value: none&#xA;CurlProgressFunction progress_function Default value: none</description>
     </item>
-    
     <item>
       <title>FormField</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Core/FormField/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Core/FormField/</guid>
-      <description>View Implementation Part of a CurlRequest. Info on using HttpWrapper here
-Type kString
-kFile
-Type field_type Default value: none
-std::string data Default value: none
-std::string name Default value: none</description>
+      <description>View Implementation Part of a CurlRequest. Info on using HttpWrapper here&#xA;Type kString&#xA;kFile&#xA;Type field_type Default value: none&#xA;std::string data Default value: none&#xA;std::string name Default value: none</description>
     </item>
-    
     <item>
       <title>Highlight</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Core/Highlight/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Core/Highlight/</guid>
-      <description>View Implementation int frame Default value: none
-int car_name_index Default value: none
-int ball_name_index Default value: none
-int goal_actor_name_index Default value: none</description>
+      <description>View Implementation int frame Default value: none&#xA;int car_name_index Default value: none&#xA;int ball_name_index Default value: none&#xA;int goal_actor_name_index Default value: none</description>
     </item>
-    
     <item>
       <title>ReplayPlayerStats</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Core/ReplayPlayerStats/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Core/ReplayPlayerStats/</guid>
-      <description>View Implementation std::string name Default value: none
-unsigned char platform Default value {}
-unsigned long long online_id Default value {}
-int team Default value {}
-int score Default value {}
-int goals Default value {}
-int assists Default value {}
-int saves Default value {}
-int shots Default value {}
-bool is_bot Default value {}</description>
+      <description>View Implementation std::string name Default value: none&#xA;unsigned char platform Default value {}&#xA;unsigned long long online_id Default value {}&#xA;int team Default value {}&#xA;int score Default value {}&#xA;int goals Default value {}&#xA;int assists Default value {}&#xA;int saves Default value {}&#xA;int shots Default value {}&#xA;bool is_bot Default value {}</description>
     </item>
-    
     <item>
       <title>ScoredGoal</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Core/ScoredGoal/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Core/ScoredGoal/</guid>
-      <description>View Implementation int frame Default value {}
-std::string player_name Default value: none
-int player_team Default value {}</description>
+      <description>View Implementation int frame Default value {}&#xA;std::string player_name Default value: none&#xA;int player_team Default value {}</description>
     </item>
-    
   </channel>
 </rss>

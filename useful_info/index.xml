@@ -5,128 +5,84 @@
     <link>https://bakkesmodwiki.github.io/useful_info/</link>
     <description>Recent content in Useful Info on BakkesMod Programming Wiki</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://bakkesmodwiki.github.io/useful_info/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <atom:link href="https://bakkesmodwiki.github.io/useful_info/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Crash Dumps</title>
       <link>https://bakkesmodwiki.github.io/useful_info/crash_dumps/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/useful_info/crash_dumps/</guid>
-      <description>Modding RL is finnicky. You&amp;rsquo;re going to crash the game at some point. This will tell you how to learn from a crash and solve your issue.
-Crashes are often logged in .dmp files. They are found at My Documents/My Games/rocketleague/TAGame/Logs
-Unfortunately sometimes there is no .dmp file. That often means you crashed in a non-game thread, like rendering or websockets. For those you might just need to do some logging to find out where you crashed</description>
+      <description>Modding RL is finnicky. You&amp;rsquo;re going to crash the game at some point. This will tell you how to learn from a crash and solve your issue.&#xA;Crashes are often logged in .dmp files. They are found at My Documents/My Games/rocketleague/TAGame/Logs&#xA;Unfortunately sometimes there is no .dmp file. That often means you crashed in a non-game thread, like rendering or websockets. For those you might just need to do some logging to find out where you crashed</description>
     </item>
-    
     <item>
       <title>GitHub Plugin Template</title>
       <link>https://bakkesmodwiki.github.io/useful_info/github_plugin_template/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/useful_info/github_plugin_template/</guid>
-      <description>As an easier alternative to the traditional Visual Studio template, you can use this other template to make a plugin. https://github.com/Martinii89/BakkesmodPluginTemplateV2
-Instructions copied from the README:
-Create a repository from this template Click the big green button Use this template or click here. Enter a Repository name and click Create repository from template Head over to the created repository and complete the setup. Complete setup In the a new repository, complete the project setup by editing the cookiecutter.</description>
+      <description>As an easier alternative to the traditional Visual Studio template, you can use this other template to make a plugin. https://github.com/Martinii89/BakkesmodPluginTemplateV2&#xA;Instructions copied from the README:&#xA;Create a repository from this template Click the big green button Use this template or click here. Enter a Repository name and click Create repository from template Head over to the created repository and complete the setup. Complete setup In the a new repository, complete the project setup by editing the cookiecutter.</description>
     </item>
-    
     <item>
       <title>Live Debugging</title>
       <link>https://bakkesmodwiki.github.io/useful_info/live_debugging/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/useful_info/live_debugging/</guid>
-      <description>You can live debug your code by attaching Rocket League to visual studio and stepping through it
-This page explains how
-https://github.com/MicrosoftDocs/visualstudio-docs/blob/main/docs/debugger/attach-to-running-processes-with-the-visual-studio-debugger.md
-For rocket league, you need to attach to the process &amp;ldquo;RocketLeague.exe&amp;rdquo; (see capture, sorry for the french UI ^^) If you&amp;rsquo;re in an infinte loop (which never happens to me 😏), you can press the &amp;ldquo;interrupt&amp;rdquo; button, and Visual Studio will jump to the part of the code that is currently being executed</description>
+      <description>You can live debug your code by attaching Rocket League to visual studio and stepping through it&#xA;This page explains how&#xA;https://github.com/MicrosoftDocs/visualstudio-docs/blob/main/docs/debugger/attach-to-running-processes-with-the-visual-studio-debugger.md&#xA;For rocket league, you need to attach to the process &amp;ldquo;RocketLeague.exe&amp;rdquo; (see capture, sorry for the french UI ^^) If you&amp;rsquo;re in an infinte loop (which never happens to me 😏), you can press the &amp;ldquo;interrupt&amp;rdquo; button, and Visual Studio will jump to the part of the code that is currently being executed</description>
     </item>
-    
     <item>
       <title>Logging</title>
       <link>https://bakkesmodwiki.github.io/useful_info/logging/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/useful_info/logging/</guid>
-      <description>Hitting f6 in Rocket League with BakkesMod running opens the console. You can log to this with a helpful template function, LOG().
-LOG uses a really smart formatting library to make your life easier called fmt
-Here&amp;rsquo;s an example. Simply put, it replaces any {} in the string with whatever arguments you put after 1 2 3 4 5 6 7 float a = 10.10; int b = 11; std::string c = &amp;#34;12&amp;#34;; bool d = false; LOG(&amp;#34;a = {}, b = {}, c = {}, d = {}&amp;#34;, a, b, c, d); // outputs [class OBSCounter] a = 10.</description>
+      <description>Hitting f6 in Rocket League with BakkesMod running opens the console. You can log to this with a helpful template function, LOG().&#xA;LOG uses a really smart formatting library to make your life easier called fmt&#xA;Here&amp;rsquo;s an example. Simply put, it replaces any {} in the string with whatever arguments you put after 1 2 3 4 5 6 7 float a = 10.10; int b = 11; std::string c = &amp;#34;12&amp;#34;; bool d = false; LOG(&amp;#34;a = {}, b = {}, c = {}, d = {}&amp;#34;, a, b, c, d); // outputs [class OBSCounter] a = 10.</description>
     </item>
-    
     <item>
       <title>MMR</title>
       <link>https://bakkesmodwiki.github.io/useful_info/mmr/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/useful_info/mmr/</guid>
-      <description>These code snippets will help you track a player&amp;rsquo;s MMR. BakkesMod only gets player MMR in matches you&amp;rsquo;re in, so it&amp;rsquo;s best used for the primary player or any players in your party. You can&amp;rsquo;t get any arbitrary player&amp;rsquo;s MMR.
-In yourplugin.h, create a smart pointer for the token. Even if you don&amp;rsquo;t use the token, BakkesMod uses it to ensure that MMR is still being tracked. If you don&amp;rsquo;t declare it using a C++ pointer, you might not get any MMR updates.</description>
+      <description>These code snippets will help you track a player&amp;rsquo;s MMR. BakkesMod only gets player MMR in matches you&amp;rsquo;re in, so it&amp;rsquo;s best used for the primary player or any players in your party. You can&amp;rsquo;t get any arbitrary player&amp;rsquo;s MMR.&#xA;In yourplugin.h, create a smart pointer for the token. Even if you don&amp;rsquo;t use the token, BakkesMod uses it to ensure that MMR is still being tracked. If you don&amp;rsquo;t declare it using a C++ pointer, you might not get any MMR updates.</description>
     </item>
-    
     <item>
       <title>Multiplayer Plugins</title>
       <link>https://bakkesmodwiki.github.io/useful_info/multiplayer_plugins/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/useful_info/multiplayer_plugins/</guid>
-      <description>Netcode plugins are a powerful way to handle asymmetrical multiplayer plugins. It can allow clients to control the match, when normally only the host can. This is much better described in this video by CinderBlock
-https://youtu.be/jyFuN8k2uIs
-If you want to make your own netcode plugin, there&amp;rsquo;s a template for it just like normal plugins. It does all the setup shown in the above video automatically. Follow the README to install it</description>
+      <description>Netcode plugins are a powerful way to handle asymmetrical multiplayer plugins. It can allow clients to control the match, when normally only the host can. This is much better described in this video by CinderBlock&#xA;https://youtu.be/jyFuN8k2uIs&#xA;If you want to make your own netcode plugin, there&amp;rsquo;s a template for it just like normal plugins. It does all the setup shown in the above video automatically. Follow the README to install it</description>
     </item>
-    
     <item>
       <title>Other Languages</title>
       <link>https://bakkesmodwiki.github.io/useful_info/other_languages/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/useful_info/other_languages/</guid>
       <description>There&amp;rsquo;s a couple super useful libraries that let you write plugins in other programming languages. We can&amp;rsquo;t really guarantee any tutorials in this server as we don&amp;rsquo;t have anyone with much experience in them. If you use them feel free to add help and make a pull request. You&amp;rsquo;re still welcome to ask for help with them in the discord, but most people here use the standard C++ library and it may be hard to get specific help</description>
     </item>
-    
     <item>
       <title>Submitting to Bakkesplugins</title>
       <link>https://bakkesmodwiki.github.io/useful_info/submitting_to_bakkesplugins/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/useful_info/submitting_to_bakkesplugins/</guid>
-      <description>You&amp;rsquo;ve looked through the docs in desperation, angrily screamed at your computer, crashed a couple times, but it&amp;rsquo;s all worth it! You have made a super cool plugin that you want to share! Nice job!
-First open your DMs in the Programming or BakkesMod server. This will allow moderators to contact you through our bot. If you plugin is denied, this is how you&amp;rsquo;ll find out why.
-Plugins are officially hosted at https://bakkesplugins.</description>
+      <description>You&amp;rsquo;ve looked through the docs in desperation, angrily screamed at your computer, crashed a couple times, but it&amp;rsquo;s all worth it! You have made a super cool plugin that you want to share! Nice job!&#xA;First open your DMs in the Programming or BakkesMod server. This will allow moderators to contact you through our bot. If you plugin is denied, this is how you&amp;rsquo;ll find out why.&#xA;Plugins are officially hosted at https://bakkesplugins.</description>
     </item>
-    
     <item>
       <title>Troubleshooting Bakkesmod</title>
       <link>https://bakkesmodwiki.github.io/useful_info/troubleshooting_bakkesmod/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/useful_info/troubleshooting_bakkesmod/</guid>
-      <description>Made it here because your BakkesMod isn&amp;rsquo;t working? No worries, check this other wiki here
-https://bakkesmod.fandom.com/wiki/Troubleshooting</description>
+      <description>Made it here because your BakkesMod isn&amp;rsquo;t working? No worries, check this other wiki here&#xA;https://bakkesmod.fandom.com/wiki/Troubleshooting</description>
     </item>
-    
     <item>
       <title>Useful Links</title>
       <link>https://bakkesmodwiki.github.io/useful_info/useful_links/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/useful_info/useful_links/</guid>
-      <description>Here&amp;rsquo;s some links that we couldn&amp;rsquo;t find a good place for
-Creating a .set file https://bakkesmod.fandom.com/wiki/Plugin_settings_files
-ImGui demo https://pthom.github.io/imgui_manual_online/manual/imgui_manual.html
-ImGui builder program https://github.com/Code-Building/ImGuiBuilder
-Useful game values (map size, boost locations, etc.) https://github.com/RLBot/RLBot/wiki/Useful-Game-Values
-UDK site for canvas. The BM CanvasWrapper has some of these features https://docs.unrealengine.com/udk/Three/CanvasTechnicalGuide.html
-CanvasWrapper library for improved tools https://github.com/CinderBlocc/RenderingTools
-Unreal Command https://bakkesmod.fandom.com/wiki/Unreal_command</description>
+      <description>Here&amp;rsquo;s some links that we couldn&amp;rsquo;t find a good place for&#xA;Creating a .set file https://bakkesmod.fandom.com/wiki/Plugin_settings_files&#xA;ImGui demo https://pthom.github.io/imgui_manual_online/manual/imgui_manual.html&#xA;ImGui builder program https://github.com/Code-Building/ImGuiBuilder&#xA;Useful game values (map size, boost locations, etc.) https://github.com/RLBot/RLBot/wiki/Useful-Game-Values&#xA;UDK site for canvas. The BM CanvasWrapper has some of these features https://docs.unrealengine.com/udk/Three/CanvasTechnicalGuide.html&#xA;CanvasWrapper library for improved tools https://github.com/CinderBlocc/RenderingTools&#xA;Unreal Command https://bakkesmod.fandom.com/wiki/Unreal_command</description>
     </item>
-    
     <item>
       <title>Writing Files</title>
       <link>https://bakkesmodwiki.github.io/useful_info/writing_files/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/useful_info/writing_files/</guid>
-      <description>Use gameWrapper-&amp;gt;GetBakkesModPath() and use that as the base path to write to (this will be %appdata%/bakkesmod/bakkesmod). This works for both Epic and Steam installs
-Make sure you&amp;rsquo;ve included fstream 1 #include &amp;lt;fstream&amp;gt; C++17 1 2 3 4 std::ofstream stream( gameWrapper-&amp;gt;GetBakkesModPath() / &amp;#34;data&amp;#34; / &amp;#34;abc.txt&amp;#34; ); std::ofstream stream( gameWrapper-&amp;gt;GetDataFolder() / &amp;#34;abc.txt&amp;#34; ); //Note the removal of &amp;#34;data&amp;#34; stream &amp;lt;&amp;lt; &amp;#34;def&amp;#34;; // %appdata%/bakkesmod/bakkesmod/data/abc.txt now includes &amp;#34;def&amp;#34; Older C++ 1 2 3 //Note that windows paths require wide strings, so need to use the L to indicate a wide string std::ofstream stream( gameWrapper-&amp;gt;GetBakkesModPathW() + L&amp;#34;data/abc.</description>
+      <description>Use gameWrapper-&amp;gt;GetBakkesModPath() and use that as the base path to write to (this will be %appdata%/bakkesmod/bakkesmod). This works for both Epic and Steam installs&#xA;Make sure you&amp;rsquo;ve included fstream 1 #include &amp;lt;fstream&amp;gt; C++17 1 2 3 4 std::ofstream stream( gameWrapper-&amp;gt;GetBakkesModPath() / &amp;#34;data&amp;#34; / &amp;#34;abc.txt&amp;#34; ); std::ofstream stream( gameWrapper-&amp;gt;GetDataFolder() / &amp;#34;abc.txt&amp;#34; ); //Note the removal of &amp;#34;data&amp;#34; stream &amp;lt;&amp;lt; &amp;#34;def&amp;#34;; // %appdata%/bakkesmod/bakkesmod/data/abc.txt now includes &amp;#34;def&amp;#34; Older C++ 1 2 3 //Note that windows paths require wide strings, so need to use the L to indicate a wide string std::ofstream stream( gameWrapper-&amp;gt;GetBakkesModPathW() + L&amp;#34;data/abc.</description>
     </item>
-    
   </channel>
 </rss>

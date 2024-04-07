@@ -5,33 +5,28 @@
     <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/MeshComponents/</link>
     <description>Recent content on BakkesMod Programming Wiki</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/MeshComponents/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <atom:link href="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/MeshComponents/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CarMeshComponentBaseWrapper</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/MeshComponents/CarMeshComponentBaseWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/MeshComponents/CarMeshComponentBaseWrapper/</guid>
       <description> View Implementation _NODISCARD bool IsNull() const operator bool() const CarWrapper GetCar() const </description>
     </item>
-    
     <item>
       <title>MeshComponentWrapper</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/MeshComponents/MeshComponentWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/MeshComponents/MeshComponentWrapper/</guid>
       <description> View Implementation _NODISCARD bool IsNull() const operator bool() const </description>
     </item>
-    
     <item>
       <title>SkeletalMeshComponentWrapper</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/MeshComponents/SkeletalMeshComponentWrapper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/MeshComponents/SkeletalMeshComponentWrapper/</guid>
       <description> View Implementation _NODISCARD bool IsNull() const operator bool() const </description>
     </item>
-    
   </channel>
 </rss>
