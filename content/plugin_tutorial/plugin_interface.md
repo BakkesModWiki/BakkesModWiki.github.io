@@ -53,7 +53,7 @@ if (ImGui::IsItemHovered()) {
 }
 {{< /highlight >}}
 
-![The button](https://cdn.discordapp.com/attachments/863320309834186762/863537895444709416/unknown.png)
+![The button](/img/button-example.png)
 
 Now let's do a checkbox for `cool_enabled`. First we need to get the CVar, then use it. The `bool enabled` is necessary, as the checkbox uses that to store whether or not the checkbox should be checked. You can't just use the CVar
 {{< highlight cpp "linenos=table" >}}
@@ -83,7 +83,7 @@ if (ImGui::IsItemHovered()) {
 }
 {{< /highlight >}}
 
-![The slider](https://cdn.discordapp.com/attachments/863320309834186762/863541774324203540/unknown.png)
+![The slider](/img/slider-example.png)
 
 We finally have a settings file using all of our CVars. There's a load more things you can do with ImGui, but hopefully this is enough to get the right idea and get started. I hope that by covering these three elements I covered most of what plugins need to use. ImGui is complicated and most plugins don't use it yet. Feel free to ask questions
 

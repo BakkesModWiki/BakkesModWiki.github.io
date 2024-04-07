@@ -5,13 +5,13 @@ author: ubelhj
 
 Toasts are cool little popups that show on the top right of your game
 
-![toast example](https://cdn.discordapp.com/attachments/327430448596779019/829086265386467367/unknown.png)
+![toast example](/img/toast-example.png)
 
 These are useful for quick notifications that you want to disappear quickly
 
 First you need to enable them in f2 - Misc - Enable notifications
 
-![enable notifications](https://cdn.discordapp.com/attachments/873081105090215957/879205725266649168/unknown.png)
+![enable notifications](/img/enable-notifications.png)
 
 Watch out though! Every user also has to enable this, so make sure your plugin page or [interface](/plugin_tutorial/plugin_interface/) is quite clear that this is necessary
 
@@ -32,7 +32,7 @@ If you want to have a custom image, load it in your onLoad() using [GameWrapper]
 
 Toasts can be one of 4 colors based on the ToastType
 
-![https://cdn.discordapp.com/attachments/873081105090215957/879215077654417469/unknown.png](https://cdn.discordapp.com/attachments/873081105090215957/879215077654417469/unknown.png)
+![Image of 4 toast colors](/img/toast-colors.png)
 
 I've made an example using CoolPlugin. I put this code in the onLoad() in CoolPlugin.cpp and cool.png in the `bakkesmod/data` folder
 {{< highlight cpp "linenos=table" >}}
@@ -45,11 +45,11 @@ cvarManager->registerNotifier("cool_toast", [this](std::vector<std::string> args
 
 The result when I call `cool_toast` from the f6 console
 
-![https://cdn.discordapp.com/attachments/873081105090215957/879210871946088508/unknown.png](https://cdn.discordapp.com/attachments/873081105090215957/879210871946088508/unknown.png)
+![toast in action](/img/toast-in-action.png)
 
 For perspective, it's quite small but still legible
 
-![https://cdn.discordapp.com/attachments/873081105090215957/879213832696909864/unknown.png](https://cdn.discordapp.com/attachments/873081105090215957/879213832696909864/unknown.png)
+![image of toast zoomed in](/img/toast-example.png)
 
 Full code here
 [https://github.com/ubelhj/BakkesModStarterPlugin/tree/toasts](https://github.com/ubelhj/BakkesModStarterPlugin/tree/toasts)

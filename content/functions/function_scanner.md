@@ -14,22 +14,22 @@ Trying to hook an event but don't know what event to use? There's way more event
 On Steam:
 Right click the game and hit properties
 Then add the option  
-![properties](https://cdn.discordapp.com/attachments/862084617385672754/862092780369084456/unknown.png)
-![added option](https://media.discordapp.net/attachments/862084617385672754/862092894797955074/unknown.png)
+![properties](/img/steam-context-menu.png)  
+![added option](/img/steam-launch-options.png)
 
-On Epic: (They've moved this before so @ me if it's in a new place)
+On Epic: 
 
 Hit Settings
 Scroll down to Rocket League, enable Additional Command Line arguments, then add -dev  
-![epic settings](https://cdn.discordapp.com/attachments/862084617385672754/862093871483715614/unknown.png)
-![epic added option](https://cdn.discordapp.com/attachments/862084617385672754/862093958296895499/unknown.png)
+![epic settings](/img/epic-settings.png)  
+![epic added option](/img/epic-launch-options.png)
 
 ## Reboot and open scanner
 
 Now that you've enabled -dev, reboot rocket league with bakkesmod open
 Once injected, open the console with f6 and type `togglemenu devtools`
 The scanner will now open  
-![scanner](https://media.discordapp.net/attachments/448093289137307658/564475718344638464/unknown.png)
+![scanner](/img/function-scanner.png)
 
 ## Use the scanner
 
