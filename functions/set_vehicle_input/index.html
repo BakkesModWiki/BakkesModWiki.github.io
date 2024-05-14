@@ -8,9 +8,11 @@
 <meta name="generator" content="Hugo 0.125.7">
 
 
-  <meta name="description" content="HttpWrapper" />
+  <meta name="description" content="Modifying vehicle input in BMSDK is only possible in offline modes or local games. Since this is a frequent ask, here is a resource page on how to do it.
+The trap: don&rsquo;t use SetInput Many aspiring programmers find the CarWrapper::SetInput function and think that their prayers are answered. Unfortunately, this function does not work particularly well. It is best to steer clear of this one entirely.
+The good-enough: consider PlayerControllerWrapper::SetVehicleInput The function PlayerControllerWrapper::SetVehicleInput is simple to use and works well enough for most purposes." />
 
-    <title>HttpWrapper | BakkesMod Programming Wiki</title>
+    <title>Modify vehicle inputs | BakkesMod Programming Wiki</title>
 
     <link
   rel="icon"
@@ -30,42 +32,50 @@
     
   <meta
     property="og:title"
-    content="HttpWrapper"
+    content="Modify vehicle inputs"
   />
   <meta property="og:site_name" content="BakkesMod Programming Wiki" />
-  <meta property="og:description" content="HttpWrapper" />
+  <meta property="og:description" content="Modifying vehicle input in BMSDK is only possible in offline modes or local games. Since this is a frequent ask, here is a resource page on how to do it.
+The trap: don’t use SetInput Many aspiring programmers find the CarWrapper::SetInput function and think that their prayers are answered. Unfortunately, this function does not work particularly well. It is best to steer clear of this one entirely.
+The good-enough: consider PlayerControllerWrapper::SetVehicleInput The function PlayerControllerWrapper::SetVehicleInput is simple to use and works well enough for most purposes." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Http/HttpWrapper/" />
+<meta property="og:url" content="https://bakkesmodwiki.github.io/functions/set_vehicle_input/" />
 
-<meta property="article:section" content="Bakkesmod API" />
+<meta property="article:section" content="Functions" />
+    <meta
+      property="article:modified_time"
+      content="2024-05-11T20:46:43-04:00"
+    />
 
 
   <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="HttpWrapper" />
-  <meta name="twitter:description" content="HttpWrapper" />
+<meta name="twitter:title" content="Modify vehicle inputs" />
+  <meta name="twitter:description" content="Modifying vehicle input in BMSDK is only possible in offline modes or local games. Since this is a frequent ask, here is a resource page on how to do it.
+The trap: don’t use SetInput Many aspiring programmers find the CarWrapper::SetInput function and think that their prayers are answered. Unfortunately, this function does not work particularly well. It is best to steer clear of this one entirely.
+The good-enough: consider PlayerControllerWrapper::SetVehicleInput The function PlayerControllerWrapper::SetVehicleInput is simple to use and works well enough for most purposes." />
 
 
   <script type="application/ld+json">
   {
       "@context": "http://schema.org",
       "@type": "TechArticle",
-      "articleSection": "Bakkesmod API",
-      "name": "HttpWrapper",
-      "url" : "https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Http/HttpWrapper/",
-      "headline": "HttpWrapper",
-      "description": "HttpWrapper",
-      "wordCount" : "38",
+      "articleSection": "Functions",
+      "name": "Modify vehicle inputs",
+      "url" : "https://bakkesmodwiki.github.io/functions/set_vehicle_input/",
+      "headline": "Modify vehicle inputs",
+      "description": "Modifying vehicle input in BMSDK is only possible in offline modes or local games. Since this is a frequent ask, here is a resource page on how to do it.\nThe trap: don’t use SetInput Many aspiring programmers find the CarWrapper::SetInput function and think that their prayers are answered. Unfortunately, this function does not work particularly well. It is best to steer clear of this one entirely.\nThe good-enough: consider PlayerControllerWrapper::SetVehicleInput The function PlayerControllerWrapper::SetVehicleInput is simple to use and works well enough for most purposes.",
+      "wordCount" : "188",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Http/HttpWrapper/"
+          "@id": "https://bakkesmodwiki.github.io/functions/set_vehicle_input/"
       },
       "copyrightHolder" : "BakkesMod Programming Wiki",
       "copyrightYear" : "0001",
       "dateCreated": "0001-01-01T00:00:00.00Z",
       "datePublished": "0001-01-01T00:00:00.00Z",
-      "dateModified": "0001-01-01T00:00:00.00Z",
+      "dateModified": "2024-05-11T20:46:43.00Z",
       "publisher":{
           "@type":"Organization",
           "name": "BakkesMod Programming Wiki",
@@ -141,7 +151,7 @@
   href="/custom.css"
   media="all"
 />
-  <link href="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Http/HttpWrapper/" rel="canonical" type="text/html" />
+  <link href="https://bakkesmodwiki.github.io/functions/set_vehicle_input/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
@@ -6578,7 +6588,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
               type="checkbox"
               
                 class="gdoc-nav__toggle" id="navtree-6e3aa38d"
-                
+                checked
               
             />
             <label
@@ -6805,7 +6815,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
                 <span class="flex">
                   <a
                     href="/functions/set_vehicle_input/"
-                    class="gdoc-nav__entry"
+                    class="gdoc-nav__entry is-active"
                   >
                     Modify vehicle inputs
                   </a>
@@ -6883,7 +6893,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
               type="checkbox"
               
                 class="gdoc-nav__toggle" id="navtree-fabdf7e2"
-                checked
+                
               
             />
             <label
@@ -6940,7 +6950,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
               type="checkbox"
               
                 class="gdoc-nav__toggle" id="navtree-7a2cafd9"
-                checked
+                
               
             />
             <label
@@ -7119,7 +7129,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
               type="checkbox"
               
                 class="gdoc-nav__toggle" id="navtree-1c182f07"
-                checked
+                
               
             />
             <label
@@ -11340,7 +11350,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
               type="checkbox"
               
                 class="gdoc-nav__toggle" id="navtree-864ee175"
-                checked
+                
               
             />
             <label
@@ -11399,7 +11409,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
                 <span class="flex">
                   <a
                     href="/bakkesmod_api/Classes/Wrappers/Http/HttpWrapper/"
-                    class="gdoc-nav__entry is-active"
+                    class="gdoc-nav__entry"
                   >
                     HttpWrapper
                   </a>
@@ -17030,31 +17040,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
     
   
   
-    
-    
-    
-    
-  
-  
-    
-    
-    
-    
-  
-  
-    
-    
-    
-    
-  
-  
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/' href='/'><span itemprop='name'>Welcome to the BakkesMod Programming Wiki!</span></a><meta itemprop='position' content='1' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/bakkesmod_api/' href='/bakkesmod_api/'><span itemprop='name'>BakkesMod API</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/bakkesmod_api/Classes/' href='/bakkesmod_api/Classes/'><span itemprop='name'>Classes</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/bakkesmod_api/Classes/Wrappers/' href='/bakkesmod_api/Classes/Wrappers/'><span itemprop='name'>Wrappers</span></a><meta itemprop='position' content='4' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/bakkesmod_api/Classes/Wrappers/Http/' href='/bakkesmod_api/Classes/Wrappers/Http/'><span itemprop='name'>HTTP</span></a><meta itemprop='position' content='5' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>HttpWrapper</span><meta itemprop='position' content='6' /></li>
-  
-
-  
-
-  
-
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/' href='/'><span itemprop='name'>Welcome to the BakkesMod Programming Wiki!</span></a><meta itemprop='position' content='1' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/functions/' href='/functions/'><span itemprop='name'>Functions</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>Modify vehicle inputs</span><meta itemprop='position' content='3' /></li>
   
 
   
@@ -17069,7 +17055,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
       <span class="editpage">
         <svg class="gdoc-icon gdoc_code"><use xlink:href="#gdoc_code"></use></svg>
         <a
-          href="https://github.com/BakkesModWiki/BakkesModWiki.github.io/blob/main/content/bakkesmod_api/Classes/Wrappers/Http/HttpWrapper.md"
+          href="https://github.com/BakkesModWiki/BakkesModWiki.github.io/blob/main/content/functions/set_vehicle_input.md"
         >
           Edit page
         </a>
@@ -17083,116 +17069,77 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
   <article
     class="gdoc-markdown gdoc-markdown__align--left"
   >
-    <h1>HttpWrapper</h1>
+    <h1>Modify vehicle inputs</h1>
+    <p>Modifying vehicle input in BMSDK is only possible in offline modes or local games.
+Since this is a frequent ask, here is a resource page on how to do it.</p>
+<div class="gdoc-page__anchorwrap">
+    <h1 id="the-trap-dont-use-setinput">
+        The trap: don&rsquo;t use SetInput
+        <a data-clipboard-text="https://bakkesmodwiki.github.io/functions/set_vehicle_input/#the-trap-dont-use-setinput" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: The trap: don&rsquo;t use SetInput" aria-label="Anchor to: The trap: don&rsquo;t use SetInput" href="#the-trap-dont-use-setinput">
+            <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h1>
+</div>
+<p>Many aspiring programmers find the
+<a
+  class="gdoc-markdown__link"
+  href="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/CarWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspdivsetwbr-inputwbr-controllerwbr-input-inputdiv"
+  
+>CarWrapper::SetInput</a>
+function and think that their prayers are answered.
+Unfortunately, this function does not work particularly well.
+It is best to steer clear of this one entirely.</p>
+<div class="gdoc-page__anchorwrap">
+    <h1 id="the-good-enough-consider-playercontrollerwrappersetvehicleinput">
+        The good-enough: consider PlayerControllerWrapper::SetVehicleInput
+        <a data-clipboard-text="https://bakkesmodwiki.github.io/functions/set_vehicle_input/#the-good-enough-consider-playercontrollerwrappersetvehicleinput" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: The good-enough: consider PlayerControllerWrapper::SetVehicleInput" aria-label="Anchor to: The good-enough: consider PlayerControllerWrapper::SetVehicleInput" href="#the-good-enough-consider-playercontrollerwrappersetvehicleinput">
+            <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h1>
+</div>
+<p>The function <a
+  class="gdoc-markdown__link"
+  href="https://wiki.bakkesplugins.com/bakkesmod_api/Classes/Wrappers/PlayerControllerWrapper/"
+  
+>PlayerControllerWrapper::SetVehicleInput</a>
+is simple to use and works well enough for most purposes.
+However, some users have noticed that it does have minor inconsistencies,
+which can compound in sensitive cases like a TAS tool.
+If that is something you care about, you can use the hook (described below) instead.</p>
+<div class="gdoc-page__anchorwrap">
+    <h1 id="the-best-setvehicleinput-hook">
+        The best: SetVehicleInput hook
+        <a data-clipboard-text="https://bakkesmodwiki.github.io/functions/set_vehicle_input/#the-best-setvehicleinput-hook" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: The best: SetVehicleInput hook" aria-label="Anchor to: The best: SetVehicleInput hook" href="#the-best-setvehicleinput-hook">
+            <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h1>
+</div>
+<p>The hook SetVehicleInput is the best way to control car inputs,
+but it also requires some more work than the above function.
+This code snippet shows a working example:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">gameWrapper</span><span class="p">.</span><span class="n">HookEventWithCaller</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="s">&#34;Function TAGame.Car_TA.SetVehicleInput&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[]</span> <span class="p">(</span><span class="n">CarWrapper</span> <span class="n">caller</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="n">params</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">eventName</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ControllerInput</span><span class="o">*</span> <span class="n">input</span> <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="n">ControllerInput</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">params</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">input</span><span class="o">-&gt;</span><span class="n">jump</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+<p>This hook runs once per car, every physics tick.</p>
+
     
-
-
-
-
-
-
-  
-  
-
-
-
-
-
-<span class="gdoc-button gdoc-button--regular">
-  <a
-    href="https://github.com/bakkesmodorg/BakkesModSDK/blob/master/include/bakkesmod/wrappers/http/HttpWrapper.h"
-    target="_blank"
-    class="gdoc-button__link"
-  >
-    <svg class="gdoc-icon github"><use xlink:href="#github"></use></svg> View Implementation
-  </a>
-</span>
-
-<hr>
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspdivsendwbr-curlwbr-requestwbr-curlwbr-request-request_data-const-stdwstring-file_output-curlwbr-requestwbr-donewbr-filewbr-return-on_completediv">
-        <a
-  class="gdoc-markdown__link"
-  href="https://en.cppreference.com/w/cpp/language/types#Void_type"
-  
->void</a> <div>Send<wbr />Curl<wbr />Request(<wbr />Curl<wbr />Request request_data, const std::wstring &amp;file_output, Curl<wbr />Request<wbr />Done<wbr />File<wbr />Return on_complete)</div>
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Http/HttpWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspdivsendwbr-curlwbr-requestwbr-curlwbr-request-request_data-const-stdwstring-file_output-curlwbr-requestwbr-donewbr-filewbr-return-on_completediv" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: void SendCurlRequest(CurlRequest request_data, const std::wstring &amp;file_output, CurlRequestDoneFileReturn on_complete)" aria-label="Anchor to: void SendCurlRequest(CurlRequest request_data, const std::wstring &amp;file_output, CurlRequestDoneFileReturn on_complete)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspdivsendwbr-curlwbr-requestwbr-curlwbr-request-request_data-const-stdwstring-file_output-curlwbr-requestwbr-donewbr-filewbr-return-on_completediv">
-            <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div>
-<hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>request_data</td>
-<td><a
-  class="gdoc-markdown__link"
-  href="/bakkesmod_api/Structs/Core/CurlRequest"
-  
->CurlRequest</a></td>
-<td>&mdash;</td>
-</tr>
-<tr>
-<td>file_output</td>
-<td>const std::wstring &amp;</td>
-<td>&mdash;</td>
-</tr>
-<tr>
-<td>on_complete</td>
-<td>CurlRequestDoneFileReturn</td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-<div class="gdoc-page__anchorwrap">
-    <h3 id="voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspdivsendwbr-curlwbr-jsonwbr-requestwbr-curlwbr-request-request_data-curlwbr-requestwbr-donewbr-stringwbr-return-on_completediv">
-        <a
-  class="gdoc-markdown__link"
-  href="https://en.cppreference.com/w/cpp/language/types#Void_type"
-  
->void</a> <div>Send<wbr />Curl<wbr />Json<wbr />Request(<wbr />Curl<wbr />Request request_data, Curl<wbr />Request<wbr />Done<wbr />String<wbr />Return on_complete)</div>
-        <a data-clipboard-text="https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Http/HttpWrapper/#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspdivsendwbr-curlwbr-jsonwbr-requestwbr-curlwbr-request-request_data-curlwbr-requestwbr-donewbr-stringwbr-return-on_completediv" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: void SendCurlJsonRequest(CurlRequest request_data, CurlRequestDoneStringReturn on_complete)" aria-label="Anchor to: void SendCurlJsonRequest(CurlRequest request_data, CurlRequestDoneStringReturn on_complete)" href="#voidhttpsencppreferencecomwcpplanguagetypesvoid_typenbspdivsendwbr-curlwbr-jsonwbr-requestwbr-curlwbr-request-request_data-curlwbr-requestwbr-donewbr-stringwbr-return-on_completediv">
-            <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h3>
-</div>
-<hr>
-<div class=table-wrap> <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>request_data</td>
-<td><a
-  class="gdoc-markdown__link"
-  href="/bakkesmod_api/Structs/Core/CurlRequest"
-  
->CurlRequest</a></td>
-<td>&mdash;</td>
-</tr>
-<tr>
-<td>on_complete</td>
-<td>CurlRequestDoneStringReturn</td>
-<td>&mdash;</td>
-</tr>
-</tbody>
-</table> </div>
-<br />
-
+    <hr>
+    <div>Written by <b>book</b></div>
     
   </article>
 

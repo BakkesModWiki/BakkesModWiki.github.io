@@ -5,7 +5,7 @@
 <meta name="referrer" content="no-referrer" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="color-scheme" content="light dark" />
-<meta name="generator" content="Hugo 0.124.1">
+<meta name="generator" content="Hugo 0.125.7">
 
 
   <meta name="description" content="HttpWrapper Sending a simple http request with a string body 1 2 3 4 5 6 7 8 9 CurlRequest req; req.url = &#34;https://httpbin.org/anything&#34;; req.body = &#34;testing with body&#34;; LOG(&#34;sending body request&#34;); HttpWrapper::SendCurlRequest(req, [this](int code, std::string result) { LOG(&#34;Body result{}&#34;, result); }); Perform an HTTP/S JSON request 1 2 3 4 5 6 7 8 9 10 11 12 13 CurlRequest req; req.url = &#34;https://httpbin.org/anything&#34;; req.body = R&#34;T({ &#34;userId&#34;: 1, &#34;id&#34;: 1, &#34;title&#34;: &#34;delectus aut autem&#34;, &#34;completed&#34;: false })T&#34;; HttpWrapper::SendCurlJsonRequest(req, [this](int code, std::string result) { LOG(&#34;Json result{}&#34;, result); }); Sending a file over HTTP/S 1 2 3 4 5 6 7 8 9 10 { CurlRequest req; req." />
@@ -6776,6 +6776,42 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
                     class="gdoc-nav__entry"
                   >
                     Hook Event With Any Caller
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/functions/set_vehicle_input/"
+                    class="gdoc-nav__entry"
+                  >
+                    Modify vehicle inputs
                   </a>
                 </span>
               

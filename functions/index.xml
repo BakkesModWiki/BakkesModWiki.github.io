@@ -4,7 +4,7 @@
     <title>Functions on BakkesMod Programming Wiki</title>
     <link>https://bakkesmodwiki.github.io/functions/</link>
     <description>Recent content in Functions on BakkesMod Programming Wiki</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <atom:link href="https://bakkesmodwiki.github.io/functions/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -34,6 +34,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://bakkesmodwiki.github.io/functions/hook_event_with_any_caller/</guid>
       <description>Add this to your plugin header and you can hook with caller for &amp;ldquo;anything&amp;rdquo;. This will do a blind cast, so make absolutely sure you&amp;rsquo;re hooking the right function or you will crash. There are no type checks here!&#xA;1 2 3 4 5 6 7 8 9 10 template &amp;lt;typename T, typename std::enable_if&amp;lt;std::is_base_of&amp;lt;ObjectWrapper, T&amp;gt;::value&amp;gt;::type*&amp;gt; void GameWrapper::HookEventWithCaller(std::string eventName, std::function&amp;lt;void(T caller, void* params, std::string eventName)&amp;gt; callback) { auto wrapped_callback = [callback](ActorWrapper caller, void* params, std::string eventName) { callback(T(caller.</description>
+    </item>
+    <item>
+      <title>Modify vehicle inputs</title>
+      <link>https://bakkesmodwiki.github.io/functions/set_vehicle_input/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://bakkesmodwiki.github.io/functions/set_vehicle_input/</guid>
+      <description>Modifying vehicle input in BMSDK is only possible in offline modes or local games. Since this is a frequent ask, here is a resource page on how to do it.&#xA;The trap: don&amp;rsquo;t use SetInput Many aspiring programmers find the CarWrapper::SetInput function and think that their prayers are answered. Unfortunately, this function does not work particularly well. It is best to steer clear of this one entirely.&#xA;The good-enough: consider PlayerControllerWrapper::SetVehicleInput The function PlayerControllerWrapper::SetVehicleInput is simple to use and works well enough for most purposes.</description>
     </item>
     <item>
       <title>Stat Events</title>
