@@ -1681,6 +1681,13 @@
       <description>Next we will make your plugin alterable by a user. They might want to enable/disable the plugin, change how it acts, and pretty much infinite options. I&amp;rsquo;ll be using a fairly simple plugin I&amp;rsquo;ve made as an example. I&amp;rsquo;ll only be focusing on the settings, not the actual code that makes it work. We&amp;rsquo;ll continue the CoolPlugin from Starting a Plugin&#xA;We give the users control with the Console Variables, CVars.</description>
     </item>
     <item>
+      <title>Third party dependencies</title>
+      <link>https://bakkesmodwiki.github.io/useful_info/3rdparty_dependencies/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://bakkesmodwiki.github.io/useful_info/3rdparty_dependencies/</guid>
+      <description>For all submitted plugins that are using other libraries. We require the use of vcpkg for installing and building these.&#xA;Why should I bother? When submitting a plugin to bakkesplugins.com for review. The review process involves a human beeing reading every single line of the code you&amp;rsquo;ve submitted. Since we don&amp;rsquo;t accept pinky promises on whether or not there&amp;rsquo;s any &amp;lsquo;surprises&amp;rsquo; in the library code you&amp;rsquo;ve attached. Every line of code submitted has to be verified.</description>
+    </item>
+    <item>
       <title>Hook Event With Any Caller</title>
       <link>https://bakkesmodwiki.github.io/functions/hook_event_with_any_caller/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
