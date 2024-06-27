@@ -12,7 +12,7 @@ First we need to uncomment some code in `CoolPlugin.h`
 
 At the class declaration, uncomment `SettingsWindowBase` and `RenderSettings`
 {{< highlight cpp "linenos=table" >}}
-class CoolPlugin: public BakkesMod::Plugin::BakkesModPlugin, public BakkesMod::Plugin::PluginSettingsWindow
+class CoolPlugin: public BakkesMod::Plugin::BakkesModPlugin, public SettingsWindowBase
 
 // ...
 
