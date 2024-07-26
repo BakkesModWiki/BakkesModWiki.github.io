@@ -16,5 +16,5 @@ To add it to an existing install open Visual Studio, hit `Tools`, then `Get Tool
 Either through the installer or with an existing install you'll eventually get to this menu. Ensure `Desktop development with C++` is checked. It may appear in a different location in different Visual Studio versions  
 ![/img/cppsetupstep2.png](/img/cppsetupstep2.png)  
 If it's not checked, check it and then hit `Install` in the bottom right  
-4. Get Martinn's template set up. Either [add the template to your Visual Studio](https://github.com/Martinii89/BakkesmodPluginTemplate) or [make a new repo using the GitHub template](/useful_info/github_plugin_template/)
+4. Get Martinn's template set up. [Add the template to your Visual Studio](https://github.com/Martinii89/BakkesmodPluginTemplate) with the instructions in its README
 5. Start coding! When you build, your plugin will automatically be moved into your plugins folder, and it will load in Rocket League. If you're having trouble understanding how to start the code, try looking at [Starting A Plugin](/plugin_tutorial/starting_a_plugin/) and the code snippets for some examples on how Bakkesmod SDK is used
