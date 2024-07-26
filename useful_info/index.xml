@@ -22,13 +22,6 @@
       <description>Modding RL is finnicky. You&amp;rsquo;re going to crash the game at some point. This will tell you how to learn from a crash and solve your issue.&#xA;Crashes are often logged in .dmp files. They are found at My Documents/My Games/rocketleague/TAGame/Logs&#xA;Unfortunately sometimes there is no .dmp file. That often means you crashed in a non-game thread, like rendering or websockets. For those you might just need to do some logging to find out where you crashed</description>
     </item>
     <item>
-      <title>GitHub Plugin Template</title>
-      <link>https://bakkesmodwiki.github.io/useful_info/github_plugin_template/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://bakkesmodwiki.github.io/useful_info/github_plugin_template/</guid>
-      <description>As an easier alternative to the traditional Visual Studio template, you can use this other template to make a plugin. https://github.com/Martinii89/BakkesmodPluginTemplateV2&#xA;Instructions copied from the README:&#xA;Create a repository from this template Click the big green button Use this template or click here. Enter a Repository name and click Create repository from template Head over to the created repository and complete the setup. Complete setup In the a new repository, complete the project setup by editing the cookiecutter.</description>
-    </item>
-    <item>
       <title>Live Debugging</title>
       <link>https://bakkesmodwiki.github.io/useful_info/live_debugging/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
