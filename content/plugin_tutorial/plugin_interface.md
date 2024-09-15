@@ -1,10 +1,10 @@
 ---
-title: Plugin Interface
+title: 4. Plugin Interface
 weight: 4
 author: ubelhj
 ---
 
-This channel will go over creating a user-friendly interface. There's buttons, sliders, checkboxes, dropdowns, and all sorts of options. It also assumes you're using the template, as the template automatically includes the ImGui GUI library we'll be using. It also adds a file we'll be editing
+This will go over creating a user-friendly interface. There's buttons, sliders, checkboxes, dropdowns, and all sorts of options. It also assumes you're using the template, as the template automatically includes the ImGui GUI library we'll be using. It also adds a file we'll be editing
 
 Yet again we have the `CoolPlugin` from [Plugin Variables](/plugin_tutorial/plugin-variables) and we want to add a button to activate our cooler ball on top, a checkbox to enable cool, and a slider to choose the distance that the ball is placed from your car
 

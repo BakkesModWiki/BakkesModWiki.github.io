@@ -1,5 +1,5 @@
 ---
-title: Starting a plugin
+title: 2. Starting a plugin
 weight: 2
 author: ubelhj
 ---

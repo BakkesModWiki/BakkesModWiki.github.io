@@ -1,5 +1,5 @@
 ---
-title: Plugin Variables
+title: 3. Plugin Variables
 weight: 3
 author: ubelhj
 ---

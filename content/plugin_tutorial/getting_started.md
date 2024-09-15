@@ -1,5 +1,5 @@
 ---
-title: Setup your installs
+title: 1. Setup your installs
 weight: 1
 ---
 

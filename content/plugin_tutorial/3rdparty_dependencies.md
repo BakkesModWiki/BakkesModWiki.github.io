@@ -1,6 +1,6 @@
 ---
-title: Third party dependencies
-weight: 3
+title: 5. Third party dependencies
+weight: 5
 author: Martinn
 ---
 
