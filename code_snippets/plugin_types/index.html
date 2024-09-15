@@ -5,14 +5,16 @@
 <meta name="referrer" content="no-referrer" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="color-scheme" content="light dark" />
-<meta name="generator" content="Hugo 0.129.0">
+<meta name="generator" content="Hugo 0.134.2">
 
 
   <meta name="description" content="BAKKESMOD_PLUGIN(CoolPlugin, &#34;Cool Plugin&#34;, plugin_version, PLUGINTYPE_FREEPLAY) These are a relic of an unrealized feature. Most do nothing.
 It&rsquo;s easiest to just leave it as PLUGINTYPE_FREEPLAY from the template, but you can use any of the non-threaded options interchangeably.
 PLUGINTYPE_FREEPLAY through PLUGINTYPE_REPLAY plugins all work in any gamemode or playlist
 PLUGINTYPE_THREADED means that the plugin&rsquo;s onLoad() is called in its own thread
-PLUGINTYPE_THREADEDUNLOAD means that the plugin&rsquo;s onUnload() is called in its own thread" />
+PLUGINTYPE_THREADEDUNLOAD means that the plugin&rsquo;s onUnload() is called in its own thread
+These are only necessary if you have something very complicated and time consuming in your onload or unload.
+All of the others do nothing." />
 
     <title>Plugin Types | BakkesMod Programming Wiki</title>
 
@@ -41,7 +43,9 @@ PLUGINTYPE_THREADEDUNLOAD means that the plugin&rsquo;s onUnload() is called in 
 It’s easiest to just leave it as PLUGINTYPE_FREEPLAY from the template, but you can use any of the non-threaded options interchangeably.
 PLUGINTYPE_FREEPLAY through PLUGINTYPE_REPLAY plugins all work in any gamemode or playlist
 PLUGINTYPE_THREADED means that the plugin’s onLoad() is called in its own thread
-PLUGINTYPE_THREADEDUNLOAD means that the plugin’s onUnload() is called in its own thread" />
+PLUGINTYPE_THREADEDUNLOAD means that the plugin’s onUnload() is called in its own thread
+These are only necessary if you have something very complicated and time consuming in your onload or unload.
+All of the others do nothing." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bakkesmodwiki.github.io/code_snippets/plugin_types/" />
 
@@ -58,7 +62,9 @@ PLUGINTYPE_THREADEDUNLOAD means that the plugin’s onUnload() is called in its 
 It’s easiest to just leave it as PLUGINTYPE_FREEPLAY from the template, but you can use any of the non-threaded options interchangeably.
 PLUGINTYPE_FREEPLAY through PLUGINTYPE_REPLAY plugins all work in any gamemode or playlist
 PLUGINTYPE_THREADED means that the plugin’s onLoad() is called in its own thread
-PLUGINTYPE_THREADEDUNLOAD means that the plugin’s onUnload() is called in its own thread" />
+PLUGINTYPE_THREADEDUNLOAD means that the plugin’s onUnload() is called in its own thread
+These are only necessary if you have something very complicated and time consuming in your onload or unload.
+All of the others do nothing." />
 
 
   <script type="application/ld+json">
@@ -69,7 +75,7 @@ PLUGINTYPE_THREADEDUNLOAD means that the plugin’s onUnload() is called in its 
       "name": "Plugin Types",
       "url" : "https://bakkesmodwiki.github.io/code_snippets/plugin_types/",
       "headline": "Plugin Types",
-      "description": "BAKKESMOD_PLUGIN(CoolPlugin, \u0022Cool Plugin\u0022, plugin_version, PLUGINTYPE_FREEPLAY) These are a relic of an unrealized feature. Most do nothing.\nIt’s easiest to just leave it as PLUGINTYPE_FREEPLAY from the template, but you can use any of the non-threaded options interchangeably.\nPLUGINTYPE_FREEPLAY through PLUGINTYPE_REPLAY plugins all work in any gamemode or playlist\nPLUGINTYPE_THREADED means that the plugin’s onLoad() is called in its own thread\nPLUGINTYPE_THREADEDUNLOAD means that the plugin’s onUnload() is called in its own thread",
+      "description": "BAKKESMOD_PLUGIN(CoolPlugin, \u0022Cool Plugin\u0022, plugin_version, PLUGINTYPE_FREEPLAY) These are a relic of an unrealized feature. Most do nothing.\nIt’s easiest to just leave it as PLUGINTYPE_FREEPLAY from the template, but you can use any of the non-threaded options interchangeably.\nPLUGINTYPE_FREEPLAY through PLUGINTYPE_REPLAY plugins all work in any gamemode or playlist\nPLUGINTYPE_THREADED means that the plugin’s onLoad() is called in its own thread\nPLUGINTYPE_THREADEDUNLOAD means that the plugin’s onUnload() is called in its own thread\nThese are only necessary if you have something very complicated and time consuming in your onload or unload.\nAll of the others do nothing.",
       "wordCount" : "168",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
@@ -5338,6 +5344,42 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
           </li>
         
       
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/plugin_tutorial/3rdparty_dependencies/"
+                    class="gdoc-nav__entry"
+                  >
+                    Third party dependencies
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
     
       
 
@@ -6519,50 +6561,6 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
                     class="gdoc-nav__entry"
                   >
                     Writing Files
-                  </a>
-                </span>
-              
-              
-            </label>
-
-            
-          </li>
-        
-      
-    
-      
-
-      
-        
-      
-
-      
-        
-          
-          
-          
-          
-          
-          
-
-
-          <li>
-            <input
-              type="checkbox"
-              
-                class="hidden"
-              
-            />
-            <label
-              
-            >
-              
-                <span class="flex">
-                  <a
-                    href="/useful_info/3rdparty_dependencies/"
-                    class="gdoc-nav__entry"
-                  >
-                    Third party dependencies
                   </a>
                 </span>
               

@@ -5,12 +5,12 @@
 <meta name="referrer" content="no-referrer" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="color-scheme" content="light dark" />
-<meta name="generator" content="Hugo 0.129.0">
+<meta name="generator" content="Hugo 0.134.2">
 
 
   <meta name="description" content="You&rsquo;ve got a super cool looking overlay, but you want the user to change the color. Here&rsquo;s some code for a super nice color picker!
 First, you need to be rendering something on the canvas. Let&rsquo;s say it&rsquo;s a single chunk of text. Like this example.
-Next, make a cvar for color. This is really simple. The default value can be encoded with hex 1 cvarManager-&gt;registerCvar(&#34;cool_color&#34;, &#34;#FFFFFF&#34;, &#34;color of overlay&#34;); Now in the canvas render, use the new color 1 2 3 4 5 6 7 CVarWrapper textColorVar = cvarManager-&gt;getCvar(&#34;cool_color&#34;); if (!" />
+Next, make a cvar for color. This is really simple. The default value can be encoded with hex 1 cvarManager-&gt;registerCvar(&#34;cool_color&#34;, &#34;#FFFFFF&#34;, &#34;color of overlay&#34;); Now in the canvas render, use the new color 1 2 3 4 5 6 7 CVarWrapper textColorVar = cvarManager-&gt;getCvar(&#34;cool_color&#34;); if (!textColorVar) { return; } LinearColor textColor = textColorVar.getColorValue(); canvas.SetColor(textColor); // render text after setting the color " />
 
     <title>Color Picker | BakkesMod Programming Wiki</title>
 
@@ -37,7 +37,7 @@ Next, make a cvar for color. This is really simple. The default value can be enc
   <meta property="og:site_name" content="BakkesMod Programming Wiki" />
   <meta property="og:description" content="You’ve got a super cool looking overlay, but you want the user to change the color. Here’s some code for a super nice color picker!
 First, you need to be rendering something on the canvas. Let’s say it’s a single chunk of text. Like this example.
-Next, make a cvar for color. This is really simple. The default value can be encoded with hex 1 cvarManager-&gt;registerCvar(&#34;cool_color&#34;, &#34;#FFFFFF&#34;, &#34;color of overlay&#34;); Now in the canvas render, use the new color 1 2 3 4 5 6 7 CVarWrapper textColorVar = cvarManager-&gt;getCvar(&#34;cool_color&#34;); if (!" />
+Next, make a cvar for color. This is really simple. The default value can be encoded with hex 1 cvarManager-&gt;registerCvar(&#34;cool_color&#34;, &#34;#FFFFFF&#34;, &#34;color of overlay&#34;); Now in the canvas render, use the new color 1 2 3 4 5 6 7 CVarWrapper textColorVar = cvarManager-&gt;getCvar(&#34;cool_color&#34;); if (!textColorVar) { return; } LinearColor textColor = textColorVar.getColorValue(); canvas.SetColor(textColor); // render text after setting the color " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bakkesmodwiki.github.io/imgui/color_picker/" />
 
@@ -52,7 +52,7 @@ Next, make a cvar for color. This is really simple. The default value can be enc
 <meta name="twitter:title" content="Color Picker" />
   <meta name="twitter:description" content="You’ve got a super cool looking overlay, but you want the user to change the color. Here’s some code for a super nice color picker!
 First, you need to be rendering something on the canvas. Let’s say it’s a single chunk of text. Like this example.
-Next, make a cvar for color. This is really simple. The default value can be encoded with hex 1 cvarManager-&gt;registerCvar(&#34;cool_color&#34;, &#34;#FFFFFF&#34;, &#34;color of overlay&#34;); Now in the canvas render, use the new color 1 2 3 4 5 6 7 CVarWrapper textColorVar = cvarManager-&gt;getCvar(&#34;cool_color&#34;); if (!" />
+Next, make a cvar for color. This is really simple. The default value can be encoded with hex 1 cvarManager-&gt;registerCvar(&#34;cool_color&#34;, &#34;#FFFFFF&#34;, &#34;color of overlay&#34;); Now in the canvas render, use the new color 1 2 3 4 5 6 7 CVarWrapper textColorVar = cvarManager-&gt;getCvar(&#34;cool_color&#34;); if (!textColorVar) { return; } LinearColor textColor = textColorVar.getColorValue(); canvas.SetColor(textColor); // render text after setting the color " />
 
 
   <script type="application/ld+json">
@@ -63,7 +63,7 @@ Next, make a cvar for color. This is really simple. The default value can be enc
       "name": "Color Picker",
       "url" : "https://bakkesmodwiki.github.io/imgui/color_picker/",
       "headline": "Color Picker",
-      "description": "You’ve got a super cool looking overlay, but you want the user to change the color. Here’s some code for a super nice color picker!\nFirst, you need to be rendering something on the canvas. Let’s say it’s a single chunk of text. Like this example.\nNext, make a cvar for color. This is really simple. The default value can be encoded with hex 1 cvarManager-\u003eregisterCvar(\u0022cool_color\u0022, \u0022#FFFFFF\u0022, \u0022color of overlay\u0022); Now in the canvas render, use the new color 1 2 3 4 5 6 7 CVarWrapper textColorVar = cvarManager-\u003egetCvar(\u0022cool_color\u0022); if (!",
+      "description": "You’ve got a super cool looking overlay, but you want the user to change the color. Here’s some code for a super nice color picker!\nFirst, you need to be rendering something on the canvas. Let’s say it’s a single chunk of text. Like this example.\nNext, make a cvar for color. This is really simple. The default value can be encoded with hex 1 cvarManager-\u003eregisterCvar(\u0022cool_color\u0022, \u0022#FFFFFF\u0022, \u0022color of overlay\u0022); Now in the canvas render, use the new color 1 2 3 4 5 6 7 CVarWrapper textColorVar = cvarManager-\u003egetCvar(\u0022cool_color\u0022); if (!textColorVar) { return; } LinearColor textColor = textColorVar.getColorValue(); canvas.SetColor(textColor); \/\/ render text after setting the color ",
       "wordCount" : "240",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
@@ -5332,6 +5332,42 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
           </li>
         
       
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/plugin_tutorial/3rdparty_dependencies/"
+                    class="gdoc-nav__entry"
+                  >
+                    Third party dependencies
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
     
       
 
@@ -6513,50 +6549,6 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
                     class="gdoc-nav__entry"
                   >
                     Writing Files
-                  </a>
-                </span>
-              
-              
-            </label>
-
-            
-          </li>
-        
-      
-    
-      
-
-      
-        
-      
-
-      
-        
-          
-          
-          
-          
-          
-          
-
-
-          <li>
-            <input
-              type="checkbox"
-              
-                class="hidden"
-              
-            />
-            <label
-              
-            >
-              
-                <span class="flex">
-                  <a
-                    href="/useful_info/3rdparty_dependencies/"
-                    class="gdoc-nav__entry"
-                  >
-                    Third party dependencies
                   </a>
                 </span>
               

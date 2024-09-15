@@ -5,12 +5,16 @@
 <meta name="referrer" content="no-referrer" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="color-scheme" content="light dark" />
-<meta name="generator" content="Hugo 0.129.0">
+<meta name="generator" content="Hugo 0.134.2">
 
 
   <meta name="description" content="These practices are super important to follow to make sure you don&rsquo;t accidentally crash the game.
 Nullchecking
-Any BakkesMod wrapper is a pointer under the hood, and that pointer could be null! If you try and use a null wrapper, you&rsquo;ll crash. This is super simple, just make sure you nullcheck every time you obtain a new wrapper. 1 2 3 4 5 6 7 8 9 10 11 12 ServerWrapper server = gameWrapper-&gt;GetCurrentGameState(); // Just check if the server is null if (!" />
+Any BakkesMod wrapper is a pointer under the hood, and that pointer could be null! If you try and use a null wrapper, you&rsquo;ll crash. This is super simple, just make sure you nullcheck every time you obtain a new wrapper. 1 2 3 4 5 6 7 8 9 10 11 12 ServerWrapper server = gameWrapper-&gt;GetCurrentGameState(); // Just check if the server is null if (!server) { // The server is null! Maybe you want to log here // LOG(&#34;Null Server!&#34;); // Otherwise just return out of the function return; } // Now you&#39;re safe and the server is valid Don&rsquo;t store wrappers
+As the game is played, the pointers underneath wrappers might become invalid or point to unexpected memory locations. Imagine you stored a ServerWrapper for use later, but by the time you use it you&rsquo;re in a new match.
+Solve this by obtaining wrappers as you use them.
+Wrappers are safe to pass to functions or lambdas for immediate use, but should never be stored as class variables.
+Also don&rsquo;t pass them to any callbacks or timeouts where the wrappers will be used later in time " />
 
     <title>Best Practices | BakkesMod Programming Wiki</title>
 
@@ -37,7 +41,11 @@ Any BakkesMod wrapper is a pointer under the hood, and that pointer could be nul
   <meta property="og:site_name" content="BakkesMod Programming Wiki" />
   <meta property="og:description" content="These practices are super important to follow to make sure you don’t accidentally crash the game.
 Nullchecking
-Any BakkesMod wrapper is a pointer under the hood, and that pointer could be null! If you try and use a null wrapper, you’ll crash. This is super simple, just make sure you nullcheck every time you obtain a new wrapper. 1 2 3 4 5 6 7 8 9 10 11 12 ServerWrapper server = gameWrapper-&gt;GetCurrentGameState(); // Just check if the server is null if (!" />
+Any BakkesMod wrapper is a pointer under the hood, and that pointer could be null! If you try and use a null wrapper, you’ll crash. This is super simple, just make sure you nullcheck every time you obtain a new wrapper. 1 2 3 4 5 6 7 8 9 10 11 12 ServerWrapper server = gameWrapper-&gt;GetCurrentGameState(); // Just check if the server is null if (!server) { // The server is null! Maybe you want to log here // LOG(&#34;Null Server!&#34;); // Otherwise just return out of the function return; } // Now you&#39;re safe and the server is valid Don’t store wrappers
+As the game is played, the pointers underneath wrappers might become invalid or point to unexpected memory locations. Imagine you stored a ServerWrapper for use later, but by the time you use it you’re in a new match.
+Solve this by obtaining wrappers as you use them.
+Wrappers are safe to pass to functions or lambdas for immediate use, but should never be stored as class variables.
+Also don’t pass them to any callbacks or timeouts where the wrappers will be used later in time " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bakkesmodwiki.github.io/plugin_tutorial/best_practices/" />
 
@@ -52,7 +60,11 @@ Any BakkesMod wrapper is a pointer under the hood, and that pointer could be nul
 <meta name="twitter:title" content="Best Practices" />
   <meta name="twitter:description" content="These practices are super important to follow to make sure you don’t accidentally crash the game.
 Nullchecking
-Any BakkesMod wrapper is a pointer under the hood, and that pointer could be null! If you try and use a null wrapper, you’ll crash. This is super simple, just make sure you nullcheck every time you obtain a new wrapper. 1 2 3 4 5 6 7 8 9 10 11 12 ServerWrapper server = gameWrapper-&gt;GetCurrentGameState(); // Just check if the server is null if (!" />
+Any BakkesMod wrapper is a pointer under the hood, and that pointer could be null! If you try and use a null wrapper, you’ll crash. This is super simple, just make sure you nullcheck every time you obtain a new wrapper. 1 2 3 4 5 6 7 8 9 10 11 12 ServerWrapper server = gameWrapper-&gt;GetCurrentGameState(); // Just check if the server is null if (!server) { // The server is null! Maybe you want to log here // LOG(&#34;Null Server!&#34;); // Otherwise just return out of the function return; } // Now you&#39;re safe and the server is valid Don’t store wrappers
+As the game is played, the pointers underneath wrappers might become invalid or point to unexpected memory locations. Imagine you stored a ServerWrapper for use later, but by the time you use it you’re in a new match.
+Solve this by obtaining wrappers as you use them.
+Wrappers are safe to pass to functions or lambdas for immediate use, but should never be stored as class variables.
+Also don’t pass them to any callbacks or timeouts where the wrappers will be used later in time " />
 
 
   <script type="application/ld+json">
@@ -63,7 +75,7 @@ Any BakkesMod wrapper is a pointer under the hood, and that pointer could be nul
       "name": "Best Practices",
       "url" : "https://bakkesmodwiki.github.io/plugin_tutorial/best_practices/",
       "headline": "Best Practices",
-      "description": "These practices are super important to follow to make sure you don’t accidentally crash the game.\nNullchecking\nAny BakkesMod wrapper is a pointer under the hood, and that pointer could be null! If you try and use a null wrapper, you’ll crash. This is super simple, just make sure you nullcheck every time you obtain a new wrapper. 1 2 3 4 5 6 7 8 9 10 11 12 ServerWrapper server = gameWrapper-\u003eGetCurrentGameState(); \/\/ Just check if the server is null if (!",
+      "description": "These practices are super important to follow to make sure you don’t accidentally crash the game.\nNullchecking\nAny BakkesMod wrapper is a pointer under the hood, and that pointer could be null! If you try and use a null wrapper, you’ll crash. This is super simple, just make sure you nullcheck every time you obtain a new wrapper. 1 2 3 4 5 6 7 8 9 10 11 12 ServerWrapper server = gameWrapper-\u003eGetCurrentGameState(); \/\/ Just check if the server is null if (!server) { \/\/ The server is null! Maybe you want to log here \/\/ LOG(\u0022Null Server!\u0022); \/\/ Otherwise just return out of the function return; } \/\/ Now you\u0027re safe and the server is valid Don’t store wrappers\nAs the game is played, the pointers underneath wrappers might become invalid or point to unexpected memory locations. Imagine you stored a ServerWrapper for use later, but by the time you use it you’re in a new match.\nSolve this by obtaining wrappers as you use them.\nWrappers are safe to pass to functions or lambdas for immediate use, but should never be stored as class variables.\nAlso don’t pass them to any callbacks or timeouts where the wrappers will be used later in time ",
       "wordCount" : "206",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
@@ -5332,6 +5344,42 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
           </li>
         
       
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/plugin_tutorial/3rdparty_dependencies/"
+                    class="gdoc-nav__entry"
+                  >
+                    Third party dependencies
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
     
       
 
@@ -6513,50 +6561,6 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
                     class="gdoc-nav__entry"
                   >
                     Writing Files
-                  </a>
-                </span>
-              
-              
-            </label>
-
-            
-          </li>
-        
-      
-    
-      
-
-      
-        
-      
-
-      
-        
-          
-          
-          
-          
-          
-          
-
-
-          <li>
-            <input
-              type="checkbox"
-              
-                class="hidden"
-              
-            />
-            <label
-              
-            >
-              
-                <span class="flex">
-                  <a
-                    href="/useful_info/3rdparty_dependencies/"
-                    class="gdoc-nav__entry"
-                  >
-                    Third party dependencies
                   </a>
                 </span>
               

@@ -5,13 +5,20 @@
 <meta name="referrer" content="no-referrer" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="color-scheme" content="light dark" />
-<meta name="generator" content="Hugo 0.129.0">
+<meta name="generator" content="Hugo 0.134.2">
 
 
   <meta name="description" content="Want the powerful flexibility of ImGui for a simple text overlay? Here&rsquo;s how.
 First make sure you&rsquo;ve uncommented all of the plugin window code in the template&rsquo;s .h file. Then in your GUI file go to the render() function. For a custom overlay, you&rsquo;ll need to prepare flags for it to appear the way you want it to.
 These are found at line 744 of imgui.h
-Some useful flags for an overlay are:" />
+Some useful flags for an overlay are:
+ImGuiWindowFlags_NoTitleBar removes the title bar
+ImGuiWindowFlags_NoScrollbar disables a scroll bar from appearing
+ImGuiWindowFlags_AlwaysAutoResize automatically resizes the window to fit the content
+ImGuiWindowFlags_NoDecoration removes the scrollbar, title bar, and disables manual resizing
+ImGuiWindowFlags_NoFocusOnAppearing prevents the overlay from stealing focus from other ImGui windows
+ImGuiWindowFlags_NoInputs makes the mouse pass right through the window to RL
+ImGuiWindowFlags_NoBackground disables the background of the window" />
 
     <title>Overlays | BakkesMod Programming Wiki</title>
 
@@ -39,7 +46,14 @@ Some useful flags for an overlay are:" />
   <meta property="og:description" content="Want the powerful flexibility of ImGui for a simple text overlay? Here’s how.
 First make sure you’ve uncommented all of the plugin window code in the template’s .h file. Then in your GUI file go to the render() function. For a custom overlay, you’ll need to prepare flags for it to appear the way you want it to.
 These are found at line 744 of imgui.h
-Some useful flags for an overlay are:" />
+Some useful flags for an overlay are:
+ImGuiWindowFlags_NoTitleBar removes the title bar
+ImGuiWindowFlags_NoScrollbar disables a scroll bar from appearing
+ImGuiWindowFlags_AlwaysAutoResize automatically resizes the window to fit the content
+ImGuiWindowFlags_NoDecoration removes the scrollbar, title bar, and disables manual resizing
+ImGuiWindowFlags_NoFocusOnAppearing prevents the overlay from stealing focus from other ImGui windows
+ImGuiWindowFlags_NoInputs makes the mouse pass right through the window to RL
+ImGuiWindowFlags_NoBackground disables the background of the window" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bakkesmodwiki.github.io/imgui/overlays/" />
 
@@ -55,7 +69,14 @@ Some useful flags for an overlay are:" />
   <meta name="twitter:description" content="Want the powerful flexibility of ImGui for a simple text overlay? Here’s how.
 First make sure you’ve uncommented all of the plugin window code in the template’s .h file. Then in your GUI file go to the render() function. For a custom overlay, you’ll need to prepare flags for it to appear the way you want it to.
 These are found at line 744 of imgui.h
-Some useful flags for an overlay are:" />
+Some useful flags for an overlay are:
+ImGuiWindowFlags_NoTitleBar removes the title bar
+ImGuiWindowFlags_NoScrollbar disables a scroll bar from appearing
+ImGuiWindowFlags_AlwaysAutoResize automatically resizes the window to fit the content
+ImGuiWindowFlags_NoDecoration removes the scrollbar, title bar, and disables manual resizing
+ImGuiWindowFlags_NoFocusOnAppearing prevents the overlay from stealing focus from other ImGui windows
+ImGuiWindowFlags_NoInputs makes the mouse pass right through the window to RL
+ImGuiWindowFlags_NoBackground disables the background of the window" />
 
 
   <script type="application/ld+json">
@@ -66,7 +87,7 @@ Some useful flags for an overlay are:" />
       "name": "Overlays",
       "url" : "https://bakkesmodwiki.github.io/imgui/overlays/",
       "headline": "Overlays",
-      "description": "Want the powerful flexibility of ImGui for a simple text overlay? Here’s how.\nFirst make sure you’ve uncommented all of the plugin window code in the template’s .h file. Then in your GUI file go to the render() function. For a custom overlay, you’ll need to prepare flags for it to appear the way you want it to.\nThese are found at line 744 of imgui.h\nSome useful flags for an overlay are:",
+      "description": "Want the powerful flexibility of ImGui for a simple text overlay? Here’s how.\nFirst make sure you’ve uncommented all of the plugin window code in the template’s .h file. Then in your GUI file go to the render() function. For a custom overlay, you’ll need to prepare flags for it to appear the way you want it to.\nThese are found at line 744 of imgui.h\nSome useful flags for an overlay are:\nImGuiWindowFlags_NoTitleBar removes the title bar\nImGuiWindowFlags_NoScrollbar disables a scroll bar from appearing\nImGuiWindowFlags_AlwaysAutoResize automatically resizes the window to fit the content\nImGuiWindowFlags_NoDecoration removes the scrollbar, title bar, and disables manual resizing\nImGuiWindowFlags_NoFocusOnAppearing prevents the overlay from stealing focus from other ImGui windows\nImGuiWindowFlags_NoInputs makes the mouse pass right through the window to RL\nImGuiWindowFlags_NoBackground disables the background of the window",
       "wordCount" : "280",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
@@ -5335,6 +5356,42 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
           </li>
         
       
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/plugin_tutorial/3rdparty_dependencies/"
+                    class="gdoc-nav__entry"
+                  >
+                    Third party dependencies
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
     
       
 
@@ -6516,50 +6573,6 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
                     class="gdoc-nav__entry"
                   >
                     Writing Files
-                  </a>
-                </span>
-              
-              
-            </label>
-
-            
-          </li>
-        
-      
-    
-      
-
-      
-        
-      
-
-      
-        
-          
-          
-          
-          
-          
-          
-
-
-          <li>
-            <input
-              type="checkbox"
-              
-                class="hidden"
-              
-            />
-            <label
-              
-            >
-              
-                <span class="flex">
-                  <a
-                    href="/useful_info/3rdparty_dependencies/"
-                    class="gdoc-nav__entry"
-                  >
-                    Third party dependencies
                   </a>
                 </span>
               

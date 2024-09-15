@@ -5,7 +5,7 @@
 <meta name="referrer" content="no-referrer" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="color-scheme" content="light dark" />
-<meta name="generator" content="Hugo 0.129.0">
+<meta name="generator" content="Hugo 0.134.2">
 
 
   <meta name="description" content="The CanvasWrapper is a powerful tool that allows you to draw GUI elements on the screen
@@ -13,7 +13,7 @@ For example this is used by the Hitbox Plugin by mega and HalfwayDead/Rocket Sci
 You can also do more basic things, like text in my stat counter plugin OBSCounter
 First in your .h, define a function that will take a canvas.
 void Render(CanvasWrapper canvas);
-Then you need to register the function in your .cpp code." />
+Then you need to register the function in your .cpp code. This can be done in OnLoad or any other place where you want to start the rendering loop 1 2 3 gameWrapper-&gt;RegisterDrawable([this](CanvasWrapper canvas) { Render(canvas); }); Now every single frame, the Render function is called with a valid canvas to draw on." />
 
     <title>Canvas | BakkesMod Programming Wiki</title>
 
@@ -43,7 +43,7 @@ For example this is used by the Hitbox Plugin by mega and HalfwayDead/Rocket Sci
 You can also do more basic things, like text in my stat counter plugin OBSCounter
 First in your .h, define a function that will take a canvas.
 void Render(CanvasWrapper canvas);
-Then you need to register the function in your .cpp code." />
+Then you need to register the function in your .cpp code. This can be done in OnLoad or any other place where you want to start the rendering loop 1 2 3 gameWrapper-&gt;RegisterDrawable([this](CanvasWrapper canvas) { Render(canvas); }); Now every single frame, the Render function is called with a valid canvas to draw on." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bakkesmodwiki.github.io/code_snippets/canvas/" />
 
@@ -61,7 +61,7 @@ For example this is used by the Hitbox Plugin by mega and HalfwayDead/Rocket Sci
 You can also do more basic things, like text in my stat counter plugin OBSCounter
 First in your .h, define a function that will take a canvas.
 void Render(CanvasWrapper canvas);
-Then you need to register the function in your .cpp code." />
+Then you need to register the function in your .cpp code. This can be done in OnLoad or any other place where you want to start the rendering loop 1 2 3 gameWrapper-&gt;RegisterDrawable([this](CanvasWrapper canvas) { Render(canvas); }); Now every single frame, the Render function is called with a valid canvas to draw on." />
 
 
   <script type="application/ld+json">
@@ -72,7 +72,7 @@ Then you need to register the function in your .cpp code." />
       "name": "Canvas",
       "url" : "https://bakkesmodwiki.github.io/code_snippets/canvas/",
       "headline": "Canvas",
-      "description": "The CanvasWrapper is a powerful tool that allows you to draw GUI elements on the screen\nFor example this is used by the Hitbox Plugin by mega and HalfwayDead\/Rocket Science\nYou can also do more basic things, like text in my stat counter plugin OBSCounter\nFirst in your .h, define a function that will take a canvas.\nvoid Render(CanvasWrapper canvas);\nThen you need to register the function in your .cpp code.",
+      "description": "The CanvasWrapper is a powerful tool that allows you to draw GUI elements on the screen\nFor example this is used by the Hitbox Plugin by mega and HalfwayDead\/Rocket Science\nYou can also do more basic things, like text in my stat counter plugin OBSCounter\nFirst in your .h, define a function that will take a canvas.\nvoid Render(CanvasWrapper canvas);\nThen you need to register the function in your .cpp code. This can be done in OnLoad or any other place where you want to start the rendering loop 1 2 3 gameWrapper-\u003eRegisterDrawable([this](CanvasWrapper canvas) { Render(canvas); }); Now every single frame, the Render function is called with a valid canvas to draw on.",
       "wordCount" : "312",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
@@ -5341,6 +5341,42 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
           </li>
         
       
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/plugin_tutorial/3rdparty_dependencies/"
+                    class="gdoc-nav__entry"
+                  >
+                    Third party dependencies
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
     
       
 
@@ -6522,50 +6558,6 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
                     class="gdoc-nav__entry"
                   >
                     Writing Files
-                  </a>
-                </span>
-              
-              
-            </label>
-
-            
-          </li>
-        
-      
-    
-      
-
-      
-        
-      
-
-      
-        
-          
-          
-          
-          
-          
-          
-
-
-          <li>
-            <input
-              type="checkbox"
-              
-                class="hidden"
-              
-            />
-            <label
-              
-            >
-              
-                <span class="flex">
-                  <a
-                    href="/useful_info/3rdparty_dependencies/"
-                    class="gdoc-nav__entry"
-                  >
-                    Third party dependencies
                   </a>
                 </span>
               

@@ -5,11 +5,11 @@
 <meta name="referrer" content="no-referrer" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="color-scheme" content="light dark" />
-<meta name="generator" content="Hugo 0.129.0">
+<meta name="generator" content="Hugo 0.134.2">
 
 
   <meta name="description" content="Use gameWrapper-&gt;GetBakkesModPath() and use that as the base path to write to (this will be %appdata%/bakkesmod/bakkesmod). This works for both Epic and Steam installs
-Make sure you&rsquo;ve included fstream 1 #include &lt;fstream&gt; C&#43;&#43;17 1 2 3 4 std::ofstream stream( gameWrapper-&gt;GetBakkesModPath() / &#34;data&#34; / &#34;abc.txt&#34; ); std::ofstream stream( gameWrapper-&gt;GetDataFolder() / &#34;abc.txt&#34; ); //Note the removal of &#34;data&#34; stream &lt;&lt; &#34;def&#34;; // %appdata%/bakkesmod/bakkesmod/data/abc.txt now includes &#34;def&#34; Older C&#43;&#43; 1 2 3 //Note that windows paths require wide strings, so need to use the L to indicate a wide string std::ofstream stream( gameWrapper-&gt;GetBakkesModPathW() &#43; L&#34;data/abc." />
+Make sure you&rsquo;ve included fstream 1 #include &lt;fstream&gt; C&#43;&#43;17 1 2 3 4 std::ofstream stream( gameWrapper-&gt;GetBakkesModPath() / &#34;data&#34; / &#34;abc.txt&#34; ); std::ofstream stream( gameWrapper-&gt;GetDataFolder() / &#34;abc.txt&#34; ); //Note the removal of &#34;data&#34; stream &lt;&lt; &#34;def&#34;; // %appdata%/bakkesmod/bakkesmod/data/abc.txt now includes &#34;def&#34; Older C&#43;&#43; 1 2 3 //Note that windows paths require wide strings, so need to use the L to indicate a wide string std::ofstream stream( gameWrapper-&gt;GetBakkesModPathW() &#43; L&#34;data/abc.txt&#34; ); std::ofstream stream( gameWrapper-&gt;GetDataFolderW() &#43; L&#34;abc.txt&#34; ); " />
 
     <title>Writing Files | BakkesMod Programming Wiki</title>
 
@@ -35,7 +35,7 @@ Make sure you&rsquo;ve included fstream 1 #include &lt;fstream&gt; C&#43;&#43;17
   />
   <meta property="og:site_name" content="BakkesMod Programming Wiki" />
   <meta property="og:description" content="Use gameWrapper-&gt;GetBakkesModPath() and use that as the base path to write to (this will be %appdata%/bakkesmod/bakkesmod). This works for both Epic and Steam installs
-Make sure you’ve included fstream 1 #include &lt;fstream&gt; C&#43;&#43;17 1 2 3 4 std::ofstream stream( gameWrapper-&gt;GetBakkesModPath() / &#34;data&#34; / &#34;abc.txt&#34; ); std::ofstream stream( gameWrapper-&gt;GetDataFolder() / &#34;abc.txt&#34; ); //Note the removal of &#34;data&#34; stream &lt;&lt; &#34;def&#34;; // %appdata%/bakkesmod/bakkesmod/data/abc.txt now includes &#34;def&#34; Older C&#43;&#43; 1 2 3 //Note that windows paths require wide strings, so need to use the L to indicate a wide string std::ofstream stream( gameWrapper-&gt;GetBakkesModPathW() &#43; L&#34;data/abc." />
+Make sure you’ve included fstream 1 #include &lt;fstream&gt; C&#43;&#43;17 1 2 3 4 std::ofstream stream( gameWrapper-&gt;GetBakkesModPath() / &#34;data&#34; / &#34;abc.txt&#34; ); std::ofstream stream( gameWrapper-&gt;GetDataFolder() / &#34;abc.txt&#34; ); //Note the removal of &#34;data&#34; stream &lt;&lt; &#34;def&#34;; // %appdata%/bakkesmod/bakkesmod/data/abc.txt now includes &#34;def&#34; Older C&#43;&#43; 1 2 3 //Note that windows paths require wide strings, so need to use the L to indicate a wide string std::ofstream stream( gameWrapper-&gt;GetBakkesModPathW() &#43; L&#34;data/abc.txt&#34; ); std::ofstream stream( gameWrapper-&gt;GetDataFolderW() &#43; L&#34;abc.txt&#34; ); " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bakkesmodwiki.github.io/useful_info/writing_files/" />
 
@@ -49,7 +49,7 @@ Make sure you’ve included fstream 1 #include &lt;fstream&gt; C&#43;&#43;17 1 2
   <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Writing Files" />
   <meta name="twitter:description" content="Use gameWrapper-&gt;GetBakkesModPath() and use that as the base path to write to (this will be %appdata%/bakkesmod/bakkesmod). This works for both Epic and Steam installs
-Make sure you’ve included fstream 1 #include &lt;fstream&gt; C&#43;&#43;17 1 2 3 4 std::ofstream stream( gameWrapper-&gt;GetBakkesModPath() / &#34;data&#34; / &#34;abc.txt&#34; ); std::ofstream stream( gameWrapper-&gt;GetDataFolder() / &#34;abc.txt&#34; ); //Note the removal of &#34;data&#34; stream &lt;&lt; &#34;def&#34;; // %appdata%/bakkesmod/bakkesmod/data/abc.txt now includes &#34;def&#34; Older C&#43;&#43; 1 2 3 //Note that windows paths require wide strings, so need to use the L to indicate a wide string std::ofstream stream( gameWrapper-&gt;GetBakkesModPathW() &#43; L&#34;data/abc." />
+Make sure you’ve included fstream 1 #include &lt;fstream&gt; C&#43;&#43;17 1 2 3 4 std::ofstream stream( gameWrapper-&gt;GetBakkesModPath() / &#34;data&#34; / &#34;abc.txt&#34; ); std::ofstream stream( gameWrapper-&gt;GetDataFolder() / &#34;abc.txt&#34; ); //Note the removal of &#34;data&#34; stream &lt;&lt; &#34;def&#34;; // %appdata%/bakkesmod/bakkesmod/data/abc.txt now includes &#34;def&#34; Older C&#43;&#43; 1 2 3 //Note that windows paths require wide strings, so need to use the L to indicate a wide string std::ofstream stream( gameWrapper-&gt;GetBakkesModPathW() &#43; L&#34;data/abc.txt&#34; ); std::ofstream stream( gameWrapper-&gt;GetDataFolderW() &#43; L&#34;abc.txt&#34; ); " />
 
 
   <script type="application/ld+json">
@@ -60,7 +60,7 @@ Make sure you’ve included fstream 1 #include &lt;fstream&gt; C&#43;&#43;17 1 2
       "name": "Writing Files",
       "url" : "https://bakkesmodwiki.github.io/useful_info/writing_files/",
       "headline": "Writing Files",
-      "description": "Use gameWrapper-\u003eGetBakkesModPath() and use that as the base path to write to (this will be %appdata%\/bakkesmod\/bakkesmod). This works for both Epic and Steam installs\nMake sure you’ve included fstream 1 #include \u003cfstream\u003e C\u002b\u002b17 1 2 3 4 std::ofstream stream( gameWrapper-\u003eGetBakkesModPath() \/ \u0022data\u0022 \/ \u0022abc.txt\u0022 ); std::ofstream stream( gameWrapper-\u003eGetDataFolder() \/ \u0022abc.txt\u0022 ); \/\/Note the removal of \u0022data\u0022 stream \u003c\u003c \u0022def\u0022; \/\/ %appdata%\/bakkesmod\/bakkesmod\/data\/abc.txt now includes \u0022def\u0022 Older C\u002b\u002b 1 2 3 \/\/Note that windows paths require wide strings, so need to use the L to indicate a wide string std::ofstream stream( gameWrapper-\u003eGetBakkesModPathW() \u002b L\u0022data\/abc.",
+      "description": "Use gameWrapper-\u003eGetBakkesModPath() and use that as the base path to write to (this will be %appdata%\/bakkesmod\/bakkesmod). This works for both Epic and Steam installs\nMake sure you’ve included fstream 1 #include \u003cfstream\u003e C\u002b\u002b17 1 2 3 4 std::ofstream stream( gameWrapper-\u003eGetBakkesModPath() \/ \u0022data\u0022 \/ \u0022abc.txt\u0022 ); std::ofstream stream( gameWrapper-\u003eGetDataFolder() \/ \u0022abc.txt\u0022 ); \/\/Note the removal of \u0022data\u0022 stream \u003c\u003c \u0022def\u0022; \/\/ %appdata%\/bakkesmod\/bakkesmod\/data\/abc.txt now includes \u0022def\u0022 Older C\u002b\u002b 1 2 3 \/\/Note that windows paths require wide strings, so need to use the L to indicate a wide string std::ofstream stream( gameWrapper-\u003eGetBakkesModPathW() \u002b L\u0022data\/abc.txt\u0022 ); std::ofstream stream( gameWrapper-\u003eGetDataFolderW() \u002b L\u0022abc.txt\u0022 ); ",
       "wordCount" : "171",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
@@ -5329,6 +5329,42 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
           </li>
         
       
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/plugin_tutorial/3rdparty_dependencies/"
+                    class="gdoc-nav__entry"
+                  >
+                    Third party dependencies
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
     
       
 
@@ -6510,50 +6546,6 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
                     class="gdoc-nav__entry is-active"
                   >
                     Writing Files
-                  </a>
-                </span>
-              
-              
-            </label>
-
-            
-          </li>
-        
-      
-    
-      
-
-      
-        
-      
-
-      
-        
-          
-          
-          
-          
-          
-          
-
-
-          <li>
-            <input
-              type="checkbox"
-              
-                class="hidden"
-              
-            />
-            <label
-              
-            >
-              
-                <span class="flex">
-                  <a
-                    href="/useful_info/3rdparty_dependencies/"
-                    class="gdoc-nav__entry"
-                  >
-                    Third party dependencies
                   </a>
                 </span>
               

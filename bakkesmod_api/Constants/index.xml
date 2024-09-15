@@ -12,49 +12,49 @@
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Constants/BAKKESMOD_PLUGIN_API_VERSION/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Constants/BAKKESMOD_PLUGIN_API_VERSION/</guid>
-      <description>View Implementation Current plugin API Version&#xA;BAKKESMOD_PLUGIN_API_VERSION = 95</description>
+      <description>&lt;span class=&#34;gdoc-button gdoc-button--regular&#34;&gt;&#xA;  &lt;a&#xA;    href=&#34;https://github.com/bakkesmodorg/BakkesModSDK/blob/master/include/bakkesmod/plugin/bakkesmodsdk.h#L33&#34;&#xA;    target=&#34;_blank&#34;&#xA;    class=&#34;gdoc-button__link&#34;&#xA;  &gt;&#xA;    &lt;svg class=&#34;gdoc-icon github&#34;&gt;&lt;use xlink:href=&#34;#github&#34;&gt;&lt;/use&gt;&lt;/svg&gt; View Implementation&#xA;  &lt;/a&gt;&#xA;&lt;/span&gt;&#xA;&#xA;&lt;p&gt;Current plugin API Version&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;BAKKESMOD_PLUGIN_API_VERSION &lt;code&gt;= 95&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>CONST_DegToUnrRot</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Constants/CONST_DegToUnrRot/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Constants/CONST_DegToUnrRot/</guid>
-      <description>View Implementation Multiply a degree (from 0-360°) by this value to get a rotation value to pass to a Rotator&#xA;CONST_DegToUnrRot = 182.0444f</description>
+      <description>&lt;span class=&#34;gdoc-button gdoc-button--regular&#34;&gt;&#xA;  &lt;a&#xA;    href=&#34;https://github.com/bakkesmodorg/BakkesModSDK/blob/master/include/bakkesmod/wrappers/wrapperstructs.h#L21&#34;&#xA;    target=&#34;_blank&#34;&#xA;    class=&#34;gdoc-button__link&#34;&#xA;  &gt;&#xA;    &lt;svg class=&#34;gdoc-icon github&#34;&gt;&lt;use xlink:href=&#34;#github&#34;&gt;&lt;/use&gt;&lt;/svg&gt; View Implementation&#xA;  &lt;/a&gt;&#xA;&lt;/span&gt;&#xA;&#xA;&lt;p&gt;Multiply a degree (from 0-360°) by this value to get a rotation value to pass to a Rotator&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;CONST_DegToUnrRot &lt;code&gt;= 182.0444f&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>CONST_PI_D</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Constants/CONST_PI_D/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Constants/CONST_PI_D/</guid>
-      <description>View Implementation The value of Pi as a double&#xA;CONST_PI_D = 3.14159265358979323846</description>
+      <description>&lt;span class=&#34;gdoc-button gdoc-button--regular&#34;&gt;&#xA;  &lt;a&#xA;    href=&#34;https://github.com/bakkesmodorg/BakkesModSDK/blob/master/include/bakkesmod/wrappers/wrapperstructs.h#L25&#34;&#xA;    target=&#34;_blank&#34;&#xA;    class=&#34;gdoc-button__link&#34;&#xA;  &gt;&#xA;    &lt;svg class=&#34;gdoc-icon github&#34;&gt;&lt;use xlink:href=&#34;#github&#34;&gt;&lt;/use&gt;&lt;/svg&gt; View Implementation&#xA;  &lt;/a&gt;&#xA;&lt;/span&gt;&#xA;&#xA;&lt;p&gt;The value of Pi as a double&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;CONST_PI_D &lt;code&gt;= 3.14159265358979323846&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>CONST_PI_F</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Constants/CONST_PI_F/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Constants/CONST_PI_F/</guid>
-      <description>View Implementation The value of Pi as a float&#xA;CONST_PI_F = 3.1415926f</description>
+      <description>&lt;span class=&#34;gdoc-button gdoc-button--regular&#34;&gt;&#xA;  &lt;a&#xA;    href=&#34;https://github.com/bakkesmodorg/BakkesModSDK/blob/master/include/bakkesmod/wrappers/wrapperstructs.h#L29&#34;&#xA;    target=&#34;_blank&#34;&#xA;    class=&#34;gdoc-button__link&#34;&#xA;  &gt;&#xA;    &lt;svg class=&#34;gdoc-icon github&#34;&gt;&lt;use xlink:href=&#34;#github&#34;&gt;&lt;/use&gt;&lt;/svg&gt; View Implementation&#xA;  &lt;/a&gt;&#xA;&lt;/span&gt;&#xA;&#xA;&lt;p&gt;The value of Pi as a float&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;CONST_PI_F &lt;code&gt;= 3.1415926f&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>CONST_RadToUnrRot</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Constants/CONST_RadToUnrRot/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Constants/CONST_RadToUnrRot/</guid>
-      <description>View Implementation Multiply a radian (from 0-2π) by this value to get a rotation value to pass to a Rotator&#xA;CONST_RadToUnrRot = 10430.3783504704527f</description>
+      <description>&lt;span class=&#34;gdoc-button gdoc-button--regular&#34;&gt;&#xA;  &lt;a&#xA;    href=&#34;https://github.com/bakkesmodorg/BakkesModSDK/blob/master/include/bakkesmod/wrappers/wrapperstructs.h#L13&#34;&#xA;    target=&#34;_blank&#34;&#xA;    class=&#34;gdoc-button__link&#34;&#xA;  &gt;&#xA;    &lt;svg class=&#34;gdoc-icon github&#34;&gt;&lt;use xlink:href=&#34;#github&#34;&gt;&lt;/use&gt;&lt;/svg&gt; View Implementation&#xA;  &lt;/a&gt;&#xA;&lt;/span&gt;&#xA;&#xA;&lt;p&gt;Multiply a radian (from 0-2π) by this value to get a rotation value to pass to a Rotator&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;CONST_RadToUnrRot &lt;code&gt;= 10430.3783504704527f&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>CONST_UnrRotToRad</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Constants/CONST_UnrRotToRad/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Constants/CONST_UnrRotToRad/</guid>
-      <description>View Implementation Multiply a rotation value from a Rotator by this value to get radians (from 0-2π)&#xA;CONST_UnrRotToRad = 0.00009587379924285f</description>
+      <description>&lt;span class=&#34;gdoc-button gdoc-button--regular&#34;&gt;&#xA;  &lt;a&#xA;    href=&#34;https://github.com/bakkesmodorg/BakkesModSDK/blob/master/include/bakkesmod/wrappers/wrapperstructs.h#L17&#34;&#xA;    target=&#34;_blank&#34;&#xA;    class=&#34;gdoc-button__link&#34;&#xA;  &gt;&#xA;    &lt;svg class=&#34;gdoc-icon github&#34;&gt;&lt;use xlink:href=&#34;#github&#34;&gt;&lt;/use&gt;&lt;/svg&gt; View Implementation&#xA;  &lt;/a&gt;&#xA;&lt;/span&gt;&#xA;&#xA;&lt;p&gt;Multiply a rotation value from a Rotator by this value to get radians (from 0-2π)&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;CONST_UnrRotToRad &lt;code&gt;= 0.00009587379924285f&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>quat_norm</title>
       <link>https://bakkesmodwiki.github.io/bakkesmod_api/Constants/quat_norm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://bakkesmodwiki.github.io/bakkesmod_api/Constants/quat_norm/</guid>
-      <description>View Implementation Used in linmath.h&#xA;quat_norm = vec4_norm</description>
+      <description>&lt;span class=&#34;gdoc-button gdoc-button--regular&#34;&gt;&#xA;  &lt;a&#xA;    href=&#34;https://github.com/bakkesmodorg/BakkesModSDK/blob/master/include/bakkesmod/wrappers/linmath.h#L493&#34;&#xA;    target=&#34;_blank&#34;&#xA;    class=&#34;gdoc-button__link&#34;&#xA;  &gt;&#xA;    &lt;svg class=&#34;gdoc-icon github&#34;&gt;&lt;use xlink:href=&#34;#github&#34;&gt;&lt;/use&gt;&lt;/svg&gt; View Implementation&#xA;  &lt;/a&gt;&#xA;&lt;/span&gt;&#xA;&#xA;&lt;p&gt;Used in linmath.h&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;quat_norm &lt;code&gt;= vec4_norm&lt;/code&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

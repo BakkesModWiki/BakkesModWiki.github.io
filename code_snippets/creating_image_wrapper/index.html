@@ -5,10 +5,10 @@
 <meta name="referrer" content="no-referrer" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="color-scheme" content="light dark" />
-<meta name="generator" content="Hugo 0.129.0">
+<meta name="generator" content="Hugo 0.134.2">
 
 
-  <meta name="description" content="Creating an ImageWrapper You should use some kind of reference type that manages the memory. std::shared_ptr&lt;ImageWrapper&gt; is my recommendation. The ImageWrapper is a resource managing class. This means that you have to keep this object &ldquo;alive&rdquo; as long as you want to use the image. When the object goes out of scope \ gets destructed it cleans up the resource it manages. Stick to std::shared_ptr and you almost can&rsquo;t mess up." />
+  <meta name="description" content=" Creating an ImageWrapper You should use some kind of reference type that manages the memory. std::shared_ptr&lt;ImageWrapper&gt; is my recommendation. The ImageWrapper is a resource managing class. This means that you have to keep this object &ldquo;alive&rdquo; as long as you want to use the image. When the object goes out of scope \ gets destructed it cleans up the resource it manages. Stick to std::shared_ptr and you almost can&rsquo;t mess up. See all ImageWrapper functions here Add the declaration to your .h 1 std::shared_ptr&lt;ImageWrapper&gt; myImage; Using an ImageWrapper Use the constructor with the second or third argument true (or both). This can cause stuttering based on the size of the image. This is best done in your plugin&rsquo;s onLoad. You only need to load the image once, and onLoad is expected to be a bit stuttery already 1 2 // ImageWrapper(std::string path, bool canvasLoad = false, bool ImGuiLoad = false); myImage = std::make_shared&lt;ImageWrapper&gt;(gameWrapper-&gt;GetDataFolder() / &#34;MyPluginFolder&#34; / &#34;MyImage.png&#34;, true, true); " />
 
     <title>Creating an ImageWrapper | BakkesMod Programming Wiki</title>
 
@@ -33,7 +33,7 @@
     content="Creating an ImageWrapper"
   />
   <meta property="og:site_name" content="BakkesMod Programming Wiki" />
-  <meta property="og:description" content="Creating an ImageWrapper You should use some kind of reference type that manages the memory. std::shared_ptr&lt;ImageWrapper&gt; is my recommendation. The ImageWrapper is a resource managing class. This means that you have to keep this object “alive” as long as you want to use the image. When the object goes out of scope \ gets destructed it cleans up the resource it manages. Stick to std::shared_ptr and you almost can’t mess up." />
+  <meta property="og:description" content=" Creating an ImageWrapper You should use some kind of reference type that manages the memory. std::shared_ptr&lt;ImageWrapper&gt; is my recommendation. The ImageWrapper is a resource managing class. This means that you have to keep this object “alive” as long as you want to use the image. When the object goes out of scope \ gets destructed it cleans up the resource it manages. Stick to std::shared_ptr and you almost can’t mess up. See all ImageWrapper functions here Add the declaration to your .h 1 std::shared_ptr&lt;ImageWrapper&gt; myImage; Using an ImageWrapper Use the constructor with the second or third argument true (or both). This can cause stuttering based on the size of the image. This is best done in your plugin’s onLoad. You only need to load the image once, and onLoad is expected to be a bit stuttery already 1 2 // ImageWrapper(std::string path, bool canvasLoad = false, bool ImGuiLoad = false); myImage = std::make_shared&lt;ImageWrapper&gt;(gameWrapper-&gt;GetDataFolder() / &#34;MyPluginFolder&#34; / &#34;MyImage.png&#34;, true, true); " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bakkesmodwiki.github.io/code_snippets/creating_image_wrapper/" />
 
@@ -46,7 +46,7 @@
 
   <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Creating an ImageWrapper" />
-  <meta name="twitter:description" content="Creating an ImageWrapper You should use some kind of reference type that manages the memory. std::shared_ptr&lt;ImageWrapper&gt; is my recommendation. The ImageWrapper is a resource managing class. This means that you have to keep this object “alive” as long as you want to use the image. When the object goes out of scope \ gets destructed it cleans up the resource it manages. Stick to std::shared_ptr and you almost can’t mess up." />
+  <meta name="twitter:description" content=" Creating an ImageWrapper You should use some kind of reference type that manages the memory. std::shared_ptr&lt;ImageWrapper&gt; is my recommendation. The ImageWrapper is a resource managing class. This means that you have to keep this object “alive” as long as you want to use the image. When the object goes out of scope \ gets destructed it cleans up the resource it manages. Stick to std::shared_ptr and you almost can’t mess up. See all ImageWrapper functions here Add the declaration to your .h 1 std::shared_ptr&lt;ImageWrapper&gt; myImage; Using an ImageWrapper Use the constructor with the second or third argument true (or both). This can cause stuttering based on the size of the image. This is best done in your plugin’s onLoad. You only need to load the image once, and onLoad is expected to be a bit stuttery already 1 2 // ImageWrapper(std::string path, bool canvasLoad = false, bool ImGuiLoad = false); myImage = std::make_shared&lt;ImageWrapper&gt;(gameWrapper-&gt;GetDataFolder() / &#34;MyPluginFolder&#34; / &#34;MyImage.png&#34;, true, true); " />
 
 
   <script type="application/ld+json">
@@ -57,7 +57,7 @@
       "name": "Creating an ImageWrapper",
       "url" : "https://bakkesmodwiki.github.io/code_snippets/creating_image_wrapper/",
       "headline": "Creating an ImageWrapper",
-      "description": "Creating an ImageWrapper You should use some kind of reference type that manages the memory. std::shared_ptr\u003cImageWrapper\u003e is my recommendation. The ImageWrapper is a resource managing class. This means that you have to keep this object “alive” as long as you want to use the image. When the object goes out of scope \\ gets destructed it cleans up the resource it manages. Stick to std::shared_ptr and you almost can’t mess up.",
+      "description": " Creating an ImageWrapper You should use some kind of reference type that manages the memory. std::shared_ptr\u003cImageWrapper\u003e is my recommendation. The ImageWrapper is a resource managing class. This means that you have to keep this object “alive” as long as you want to use the image. When the object goes out of scope \\ gets destructed it cleans up the resource it manages. Stick to std::shared_ptr and you almost can’t mess up. See all ImageWrapper functions here Add the declaration to your .h 1 std::shared_ptr\u003cImageWrapper\u003e myImage; Using an ImageWrapper Use the constructor with the second or third argument true (or both). This can cause stuttering based on the size of the image. This is best done in your plugin’s onLoad. You only need to load the image once, and onLoad is expected to be a bit stuttery already 1 2 \/\/ ImageWrapper(std::string path, bool canvasLoad = false, bool ImGuiLoad = false); myImage = std::make_shared\u003cImageWrapper\u003e(gameWrapper-\u003eGetDataFolder() \/ \u0022MyPluginFolder\u0022 \/ \u0022MyImage.png\u0022, true, true); ",
       "wordCount" : "318",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
@@ -5326,6 +5326,42 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
           </li>
         
       
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/plugin_tutorial/3rdparty_dependencies/"
+                    class="gdoc-nav__entry"
+                  >
+                    Third party dependencies
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
     
       
 
@@ -6507,50 +6543,6 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
                     class="gdoc-nav__entry"
                   >
                     Writing Files
-                  </a>
-                </span>
-              
-              
-            </label>
-
-            
-          </li>
-        
-      
-    
-      
-
-      
-        
-      
-
-      
-        
-          
-          
-          
-          
-          
-          
-
-
-          <li>
-            <input
-              type="checkbox"
-              
-                class="hidden"
-              
-            />
-            <label
-              
-            >
-              
-                <span class="flex">
-                  <a
-                    href="/useful_info/3rdparty_dependencies/"
-                    class="gdoc-nav__entry"
-                  >
-                    Third party dependencies
                   </a>
                 </span>
               

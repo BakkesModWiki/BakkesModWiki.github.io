@@ -5,12 +5,12 @@
 <meta name="referrer" content="no-referrer" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="color-scheme" content="light dark" />
-<meta name="generator" content="Hugo 0.129.0">
+<meta name="generator" content="Hugo 0.134.2">
 
 
   <meta name="description" content="Imagine you have a plugin that renders something on the screen. Users might want to move it to a different location. Dragging&rsquo;s a great way to make it move, and here&rsquo;s how to get it to work!
 First, you need to be rendering something on the canvas. Let&rsquo;s say it&rsquo;s a single chunk of text, with its location defined at the top left. Like this example.
-Next we&rsquo;ll add a simple level of customizability with location cvars." />
+Next we&rsquo;ll add a simple level of customizability with location cvars. X is the left to right axis, and Y is top to bottom. (0, 0) is the top left of the screen 1 2 cvarManager-&gt;registerCvar(&#34;cool_x_location&#34;, &#34;0&#34;, &#34;set x location of the overlay&#34;); cvarManager-&gt;registerCvar(&#34;cool_y_location&#34;, &#34;0&#34;, &#34;set y location of the overlay&#34;); Now in the canvas render, just use those new locations 1 2 3 4 5 6 7 8 9 10 CVarWrapper xLocCvar = cvarManager-&gt;getCvar(&#34;cool_x_location&#34;); if (!xLocCvar) { return; } float xLoc = xLocCvar.getFloatValue(); CVarWrapper yLocCvar = cvarManager-&gt;getCvar(&#34;cool_y_location&#34;); if (!yLocCvar) { return; } float yLoc = yLocCvar.getFloatValue(); canvas.SetPosition(Vector2F{ xLoc, yLoc }); // now render everything else " />
 
     <title>Draggable location | BakkesMod Programming Wiki</title>
 
@@ -37,7 +37,7 @@ Next we&rsquo;ll add a simple level of customizability with location cvars." />
   <meta property="og:site_name" content="BakkesMod Programming Wiki" />
   <meta property="og:description" content="Imagine you have a plugin that renders something on the screen. Users might want to move it to a different location. Dragging’s a great way to make it move, and here’s how to get it to work!
 First, you need to be rendering something on the canvas. Let’s say it’s a single chunk of text, with its location defined at the top left. Like this example.
-Next we’ll add a simple level of customizability with location cvars." />
+Next we’ll add a simple level of customizability with location cvars. X is the left to right axis, and Y is top to bottom. (0, 0) is the top left of the screen 1 2 cvarManager-&gt;registerCvar(&#34;cool_x_location&#34;, &#34;0&#34;, &#34;set x location of the overlay&#34;); cvarManager-&gt;registerCvar(&#34;cool_y_location&#34;, &#34;0&#34;, &#34;set y location of the overlay&#34;); Now in the canvas render, just use those new locations 1 2 3 4 5 6 7 8 9 10 CVarWrapper xLocCvar = cvarManager-&gt;getCvar(&#34;cool_x_location&#34;); if (!xLocCvar) { return; } float xLoc = xLocCvar.getFloatValue(); CVarWrapper yLocCvar = cvarManager-&gt;getCvar(&#34;cool_y_location&#34;); if (!yLocCvar) { return; } float yLoc = yLocCvar.getFloatValue(); canvas.SetPosition(Vector2F{ xLoc, yLoc }); // now render everything else " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bakkesmodwiki.github.io/imgui/draggable_location/" />
 
@@ -52,7 +52,7 @@ Next we’ll add a simple level of customizability with location cvars." />
 <meta name="twitter:title" content="Draggable location" />
   <meta name="twitter:description" content="Imagine you have a plugin that renders something on the screen. Users might want to move it to a different location. Dragging’s a great way to make it move, and here’s how to get it to work!
 First, you need to be rendering something on the canvas. Let’s say it’s a single chunk of text, with its location defined at the top left. Like this example.
-Next we’ll add a simple level of customizability with location cvars." />
+Next we’ll add a simple level of customizability with location cvars. X is the left to right axis, and Y is top to bottom. (0, 0) is the top left of the screen 1 2 cvarManager-&gt;registerCvar(&#34;cool_x_location&#34;, &#34;0&#34;, &#34;set x location of the overlay&#34;); cvarManager-&gt;registerCvar(&#34;cool_y_location&#34;, &#34;0&#34;, &#34;set y location of the overlay&#34;); Now in the canvas render, just use those new locations 1 2 3 4 5 6 7 8 9 10 CVarWrapper xLocCvar = cvarManager-&gt;getCvar(&#34;cool_x_location&#34;); if (!xLocCvar) { return; } float xLoc = xLocCvar.getFloatValue(); CVarWrapper yLocCvar = cvarManager-&gt;getCvar(&#34;cool_y_location&#34;); if (!yLocCvar) { return; } float yLoc = yLocCvar.getFloatValue(); canvas.SetPosition(Vector2F{ xLoc, yLoc }); // now render everything else " />
 
 
   <script type="application/ld+json">
@@ -63,7 +63,7 @@ Next we’ll add a simple level of customizability with location cvars." />
       "name": "Draggable location",
       "url" : "https://bakkesmodwiki.github.io/imgui/draggable_location/",
       "headline": "Draggable location",
-      "description": "Imagine you have a plugin that renders something on the screen. Users might want to move it to a different location. Dragging’s a great way to make it move, and here’s how to get it to work!\nFirst, you need to be rendering something on the canvas. Let’s say it’s a single chunk of text, with its location defined at the top left. Like this example.\nNext we’ll add a simple level of customizability with location cvars.",
+      "description": "Imagine you have a plugin that renders something on the screen. Users might want to move it to a different location. Dragging’s a great way to make it move, and here’s how to get it to work!\nFirst, you need to be rendering something on the canvas. Let’s say it’s a single chunk of text, with its location defined at the top left. Like this example.\nNext we’ll add a simple level of customizability with location cvars. X is the left to right axis, and Y is top to bottom. (0, 0) is the top left of the screen 1 2 cvarManager-\u003eregisterCvar(\u0022cool_x_location\u0022, \u00220\u0022, \u0022set x location of the overlay\u0022); cvarManager-\u003eregisterCvar(\u0022cool_y_location\u0022, \u00220\u0022, \u0022set y location of the overlay\u0022); Now in the canvas render, just use those new locations 1 2 3 4 5 6 7 8 9 10 CVarWrapper xLocCvar = cvarManager-\u003egetCvar(\u0022cool_x_location\u0022); if (!xLocCvar) { return; } float xLoc = xLocCvar.getFloatValue(); CVarWrapper yLocCvar = cvarManager-\u003egetCvar(\u0022cool_y_location\u0022); if (!yLocCvar) { return; } float yLoc = yLocCvar.getFloatValue(); canvas.SetPosition(Vector2F{ xLoc, yLoc }); \/\/ now render everything else ",
       "wordCount" : "438",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
@@ -5332,6 +5332,42 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
           </li>
         
       
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/plugin_tutorial/3rdparty_dependencies/"
+                    class="gdoc-nav__entry"
+                  >
+                    Third party dependencies
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
     
       
 
@@ -6513,50 +6549,6 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
                     class="gdoc-nav__entry"
                   >
                     Writing Files
-                  </a>
-                </span>
-              
-              
-            </label>
-
-            
-          </li>
-        
-      
-    
-      
-
-      
-        
-      
-
-      
-        
-          
-          
-          
-          
-          
-          
-
-
-          <li>
-            <input
-              type="checkbox"
-              
-                class="hidden"
-              
-            />
-            <label
-              
-            >
-              
-                <span class="flex">
-                  <a
-                    href="/useful_info/3rdparty_dependencies/"
-                    class="gdoc-nav__entry"
-                  >
-                    Third party dependencies
                   </a>
                 </span>
               

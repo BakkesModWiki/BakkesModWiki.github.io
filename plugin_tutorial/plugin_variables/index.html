@@ -5,11 +5,11 @@
 <meta name="referrer" content="no-referrer" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="color-scheme" content="light dark" />
-<meta name="generator" content="Hugo 0.129.0">
+<meta name="generator" content="Hugo 0.134.2">
 
 
   <meta name="description" content="Next we will make your plugin alterable by a user. They might want to enable/disable the plugin, change how it acts, and pretty much infinite options. I&rsquo;ll be using a fairly simple plugin I&rsquo;ve made as an example. I&rsquo;ll only be focusing on the settings, not the actual code that makes it work. We&rsquo;ll continue the CoolPlugin from Starting a Plugin
-We give the users control with the Console Variables, CVars." />
+We give the users control with the Console Variables, CVars. They allow a user to set a variable&rsquo;s value, and for our code to know when those values are changed. These can be used for string, int, bool, float, or color values. They also can persist across multiple sessions, so user settings are saved. If something being changed to the wrong value can break your plugin, don&rsquo;t use a CVar. Any internal plugin logic that can do unintended things if modified should be stored and controlled with class variables declared in your .cpp or .h files." />
 
     <title>Plugin Variables | BakkesMod Programming Wiki</title>
 
@@ -35,7 +35,7 @@ We give the users control with the Console Variables, CVars." />
   />
   <meta property="og:site_name" content="BakkesMod Programming Wiki" />
   <meta property="og:description" content="Next we will make your plugin alterable by a user. They might want to enable/disable the plugin, change how it acts, and pretty much infinite options. I’ll be using a fairly simple plugin I’ve made as an example. I’ll only be focusing on the settings, not the actual code that makes it work. We’ll continue the CoolPlugin from Starting a Plugin
-We give the users control with the Console Variables, CVars." />
+We give the users control with the Console Variables, CVars. They allow a user to set a variable’s value, and for our code to know when those values are changed. These can be used for string, int, bool, float, or color values. They also can persist across multiple sessions, so user settings are saved. If something being changed to the wrong value can break your plugin, don’t use a CVar. Any internal plugin logic that can do unintended things if modified should be stored and controlled with class variables declared in your .cpp or .h files." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bakkesmodwiki.github.io/plugin_tutorial/plugin_variables/" />
 
@@ -49,7 +49,7 @@ We give the users control with the Console Variables, CVars." />
   <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Plugin Variables" />
   <meta name="twitter:description" content="Next we will make your plugin alterable by a user. They might want to enable/disable the plugin, change how it acts, and pretty much infinite options. I’ll be using a fairly simple plugin I’ve made as an example. I’ll only be focusing on the settings, not the actual code that makes it work. We’ll continue the CoolPlugin from Starting a Plugin
-We give the users control with the Console Variables, CVars." />
+We give the users control with the Console Variables, CVars. They allow a user to set a variable’s value, and for our code to know when those values are changed. These can be used for string, int, bool, float, or color values. They also can persist across multiple sessions, so user settings are saved. If something being changed to the wrong value can break your plugin, don’t use a CVar. Any internal plugin logic that can do unintended things if modified should be stored and controlled with class variables declared in your .cpp or .h files." />
 
 
   <script type="application/ld+json">
@@ -60,7 +60,7 @@ We give the users control with the Console Variables, CVars." />
       "name": "Plugin Variables",
       "url" : "https://bakkesmodwiki.github.io/plugin_tutorial/plugin_variables/",
       "headline": "Plugin Variables",
-      "description": "Next we will make your plugin alterable by a user. They might want to enable\/disable the plugin, change how it acts, and pretty much infinite options. I’ll be using a fairly simple plugin I’ve made as an example. I’ll only be focusing on the settings, not the actual code that makes it work. We’ll continue the CoolPlugin from Starting a Plugin\nWe give the users control with the Console Variables, CVars.",
+      "description": "Next we will make your plugin alterable by a user. They might want to enable\/disable the plugin, change how it acts, and pretty much infinite options. I’ll be using a fairly simple plugin I’ve made as an example. I’ll only be focusing on the settings, not the actual code that makes it work. We’ll continue the CoolPlugin from Starting a Plugin\nWe give the users control with the Console Variables, CVars. They allow a user to set a variable’s value, and for our code to know when those values are changed. These can be used for string, int, bool, float, or color values. They also can persist across multiple sessions, so user settings are saved. If something being changed to the wrong value can break your plugin, don’t use a CVar. Any internal plugin logic that can do unintended things if modified should be stored and controlled with class variables declared in your .cpp or .h files.",
       "wordCount" : "667",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
@@ -5329,6 +5329,42 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
           </li>
         
       
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/plugin_tutorial/3rdparty_dependencies/"
+                    class="gdoc-nav__entry"
+                  >
+                    Third party dependencies
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
     
       
 
@@ -6510,50 +6546,6 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
                     class="gdoc-nav__entry"
                   >
                     Writing Files
-                  </a>
-                </span>
-              
-              
-            </label>
-
-            
-          </li>
-        
-      
-    
-      
-
-      
-        
-      
-
-      
-        
-          
-          
-          
-          
-          
-          
-
-
-          <li>
-            <input
-              type="checkbox"
-              
-                class="hidden"
-              
-            />
-            <label
-              
-            >
-              
-                <span class="flex">
-                  <a
-                    href="/useful_info/3rdparty_dependencies/"
-                    class="gdoc-nav__entry"
-                  >
-                    Third party dependencies
                   </a>
                 </span>
               

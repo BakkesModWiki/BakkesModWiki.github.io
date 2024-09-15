@@ -5,11 +5,11 @@
 <meta name="referrer" content="no-referrer" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="color-scheme" content="light dark" />
-<meta name="generator" content="Hugo 0.129.0">
+<meta name="generator" content="Hugo 0.134.2">
 
 
   <meta name="description" content="These code snippets will help you track a player&rsquo;s MMR. BakkesMod only gets player MMR in matches you&rsquo;re in, so it&rsquo;s best used for the primary player or any players in your party. You can&rsquo;t get any arbitrary player&rsquo;s MMR.
-In yourplugin.h, create a smart pointer for the token. Even if you don&rsquo;t use the token, BakkesMod uses it to ensure that MMR is still being tracked. If you don&rsquo;t declare it using a C&#43;&#43; pointer, you might not get any MMR updates." />
+In yourplugin.h, create a smart pointer for the token. Even if you don&rsquo;t use the token, BakkesMod uses it to ensure that MMR is still being tracked. If you don&rsquo;t declare it using a C&#43;&#43; pointer, you might not get any MMR updates. 1 std::unique_ptr&lt;MMRNotifierToken&gt; notifierToken; " />
 
     <title>MMR | BakkesMod Programming Wiki</title>
 
@@ -35,7 +35,7 @@ In yourplugin.h, create a smart pointer for the token. Even if you don&rsquo;t u
   />
   <meta property="og:site_name" content="BakkesMod Programming Wiki" />
   <meta property="og:description" content="These code snippets will help you track a player’s MMR. BakkesMod only gets player MMR in matches you’re in, so it’s best used for the primary player or any players in your party. You can’t get any arbitrary player’s MMR.
-In yourplugin.h, create a smart pointer for the token. Even if you don’t use the token, BakkesMod uses it to ensure that MMR is still being tracked. If you don’t declare it using a C&#43;&#43; pointer, you might not get any MMR updates." />
+In yourplugin.h, create a smart pointer for the token. Even if you don’t use the token, BakkesMod uses it to ensure that MMR is still being tracked. If you don’t declare it using a C&#43;&#43; pointer, you might not get any MMR updates. 1 std::unique_ptr&lt;MMRNotifierToken&gt; notifierToken; " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bakkesmodwiki.github.io/useful_info/mmr/" />
 
@@ -49,7 +49,7 @@ In yourplugin.h, create a smart pointer for the token. Even if you don’t use t
   <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="MMR" />
   <meta name="twitter:description" content="These code snippets will help you track a player’s MMR. BakkesMod only gets player MMR in matches you’re in, so it’s best used for the primary player or any players in your party. You can’t get any arbitrary player’s MMR.
-In yourplugin.h, create a smart pointer for the token. Even if you don’t use the token, BakkesMod uses it to ensure that MMR is still being tracked. If you don’t declare it using a C&#43;&#43; pointer, you might not get any MMR updates." />
+In yourplugin.h, create a smart pointer for the token. Even if you don’t use the token, BakkesMod uses it to ensure that MMR is still being tracked. If you don’t declare it using a C&#43;&#43; pointer, you might not get any MMR updates. 1 std::unique_ptr&lt;MMRNotifierToken&gt; notifierToken; " />
 
 
   <script type="application/ld+json">
@@ -60,7 +60,7 @@ In yourplugin.h, create a smart pointer for the token. Even if you don’t use t
       "name": "MMR",
       "url" : "https://bakkesmodwiki.github.io/useful_info/mmr/",
       "headline": "MMR",
-      "description": "These code snippets will help you track a player’s MMR. BakkesMod only gets player MMR in matches you’re in, so it’s best used for the primary player or any players in your party. You can’t get any arbitrary player’s MMR.\nIn yourplugin.h, create a smart pointer for the token. Even if you don’t use the token, BakkesMod uses it to ensure that MMR is still being tracked. If you don’t declare it using a C\u002b\u002b pointer, you might not get any MMR updates.",
+      "description": "These code snippets will help you track a player’s MMR. BakkesMod only gets player MMR in matches you’re in, so it’s best used for the primary player or any players in your party. You can’t get any arbitrary player’s MMR.\nIn yourplugin.h, create a smart pointer for the token. Even if you don’t use the token, BakkesMod uses it to ensure that MMR is still being tracked. If you don’t declare it using a C\u002b\u002b pointer, you might not get any MMR updates. 1 std::unique_ptr\u003cMMRNotifierToken\u003e notifierToken; ",
       "wordCount" : "245",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
@@ -5329,6 +5329,42 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
           </li>
         
       
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/plugin_tutorial/3rdparty_dependencies/"
+                    class="gdoc-nav__entry"
+                  >
+                    Third party dependencies
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
     
       
 
@@ -6510,50 +6546,6 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
                     class="gdoc-nav__entry"
                   >
                     Writing Files
-                  </a>
-                </span>
-              
-              
-            </label>
-
-            
-          </li>
-        
-      
-    
-      
-
-      
-        
-      
-
-      
-        
-          
-          
-          
-          
-          
-          
-
-
-          <li>
-            <input
-              type="checkbox"
-              
-                class="hidden"
-              
-            />
-            <label
-              
-            >
-              
-                <span class="flex">
-                  <a
-                    href="/useful_info/3rdparty_dependencies/"
-                    class="gdoc-nav__entry"
-                  >
-                    Third party dependencies
                   </a>
                 </span>
               

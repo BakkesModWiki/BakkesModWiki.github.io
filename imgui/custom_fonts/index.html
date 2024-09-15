@@ -5,11 +5,11 @@
 <meta name="referrer" content="no-referrer" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="color-scheme" content="light dark" />
-<meta name="generator" content="Hugo 0.129.0">
+<meta name="generator" content="Hugo 0.134.2">
 
 
   <meta name="description" content="Want to add a custom fancy font to your plugin? It&rsquo;s really easy! You can use any .ttf font, although many have copyrights. Check out https://fonts.google.com/ for a bunch of free fonts to use.
-First, make a pointer to save your font. Do this in your .h as a variable 1 ImFont* myFont; Next load the font using the GUIManager. This can be done pretty much anywhere, but I recommend using your OnLoad or SetImGuiContext functions." />
+First, make a pointer to save your font. Do this in your .h as a variable 1 ImFont* myFont; Next load the font using the GUIManager. This can be done pretty much anywhere, but I recommend using your OnLoad or SetImGuiContext functions. OnLoad happens at startup of the plugin, and SetImGuiContext happens when the plugin&rsquo;s ImGui is initialized. Either will hopefully ensure your font is loaded before you use it (barring any errors) 1 2 3 4 5 6 7 8 9 10 11 12 13 auto gui = gameWrapper-&gt;GetGUIManager(); // This syntax requires c&#43;&#43;17 // Pick any name you want for the font here auto [res, font] = gui.LoadFont(&#34;font.tff 40px&#34;, &#34;font.ttf&#34;, 40); if (res == 0) { LOG(&#34;Failed to load the font!&#34;); } else if (res == 1) { LOG(&#34;The font will be loaded&#34;); } else if (res == 2 &amp;&amp; font) { myFont = font; } " />
 
     <title>Custom Fonts | BakkesMod Programming Wiki</title>
 
@@ -35,7 +35,7 @@ First, make a pointer to save your font. Do this in your .h as a variable 1 ImFo
   />
   <meta property="og:site_name" content="BakkesMod Programming Wiki" />
   <meta property="og:description" content="Want to add a custom fancy font to your plugin? It’s really easy! You can use any .ttf font, although many have copyrights. Check out https://fonts.google.com/ for a bunch of free fonts to use.
-First, make a pointer to save your font. Do this in your .h as a variable 1 ImFont* myFont; Next load the font using the GUIManager. This can be done pretty much anywhere, but I recommend using your OnLoad or SetImGuiContext functions." />
+First, make a pointer to save your font. Do this in your .h as a variable 1 ImFont* myFont; Next load the font using the GUIManager. This can be done pretty much anywhere, but I recommend using your OnLoad or SetImGuiContext functions. OnLoad happens at startup of the plugin, and SetImGuiContext happens when the plugin’s ImGui is initialized. Either will hopefully ensure your font is loaded before you use it (barring any errors) 1 2 3 4 5 6 7 8 9 10 11 12 13 auto gui = gameWrapper-&gt;GetGUIManager(); // This syntax requires c&#43;&#43;17 // Pick any name you want for the font here auto [res, font] = gui.LoadFont(&#34;font.tff 40px&#34;, &#34;font.ttf&#34;, 40); if (res == 0) { LOG(&#34;Failed to load the font!&#34;); } else if (res == 1) { LOG(&#34;The font will be loaded&#34;); } else if (res == 2 &amp;&amp; font) { myFont = font; } " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bakkesmodwiki.github.io/imgui/custom_fonts/" />
 
@@ -49,7 +49,7 @@ First, make a pointer to save your font. Do this in your .h as a variable 1 ImFo
   <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Custom Fonts" />
   <meta name="twitter:description" content="Want to add a custom fancy font to your plugin? It’s really easy! You can use any .ttf font, although many have copyrights. Check out https://fonts.google.com/ for a bunch of free fonts to use.
-First, make a pointer to save your font. Do this in your .h as a variable 1 ImFont* myFont; Next load the font using the GUIManager. This can be done pretty much anywhere, but I recommend using your OnLoad or SetImGuiContext functions." />
+First, make a pointer to save your font. Do this in your .h as a variable 1 ImFont* myFont; Next load the font using the GUIManager. This can be done pretty much anywhere, but I recommend using your OnLoad or SetImGuiContext functions. OnLoad happens at startup of the plugin, and SetImGuiContext happens when the plugin’s ImGui is initialized. Either will hopefully ensure your font is loaded before you use it (barring any errors) 1 2 3 4 5 6 7 8 9 10 11 12 13 auto gui = gameWrapper-&gt;GetGUIManager(); // This syntax requires c&#43;&#43;17 // Pick any name you want for the font here auto [res, font] = gui.LoadFont(&#34;font.tff 40px&#34;, &#34;font.ttf&#34;, 40); if (res == 0) { LOG(&#34;Failed to load the font!&#34;); } else if (res == 1) { LOG(&#34;The font will be loaded&#34;); } else if (res == 2 &amp;&amp; font) { myFont = font; } " />
 
 
   <script type="application/ld+json">
@@ -60,7 +60,7 @@ First, make a pointer to save your font. Do this in your .h as a variable 1 ImFo
       "name": "Custom Fonts",
       "url" : "https://bakkesmodwiki.github.io/imgui/custom_fonts/",
       "headline": "Custom Fonts",
-      "description": "Want to add a custom fancy font to your plugin? It’s really easy! You can use any .ttf font, although many have copyrights. Check out https:\/\/fonts.google.com\/ for a bunch of free fonts to use.\nFirst, make a pointer to save your font. Do this in your .h as a variable 1 ImFont* myFont; Next load the font using the GUIManager. This can be done pretty much anywhere, but I recommend using your OnLoad or SetImGuiContext functions.",
+      "description": "Want to add a custom fancy font to your plugin? It’s really easy! You can use any .ttf font, although many have copyrights. Check out https:\/\/fonts.google.com\/ for a bunch of free fonts to use.\nFirst, make a pointer to save your font. Do this in your .h as a variable 1 ImFont* myFont; Next load the font using the GUIManager. This can be done pretty much anywhere, but I recommend using your OnLoad or SetImGuiContext functions. OnLoad happens at startup of the plugin, and SetImGuiContext happens when the plugin’s ImGui is initialized. Either will hopefully ensure your font is loaded before you use it (barring any errors) 1 2 3 4 5 6 7 8 9 10 11 12 13 auto gui = gameWrapper-\u003eGetGUIManager(); \/\/ This syntax requires c\u002b\u002b17 \/\/ Pick any name you want for the font here auto [res, font] = gui.LoadFont(\u0022font.tff 40px\u0022, \u0022font.ttf\u0022, 40); if (res == 0) { LOG(\u0022Failed to load the font!\u0022); } else if (res == 1) { LOG(\u0022The font will be loaded\u0022); } else if (res == 2 \u0026\u0026 font) { myFont = font; } ",
       "wordCount" : "304",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
@@ -5329,6 +5329,42 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
           </li>
         
       
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/plugin_tutorial/3rdparty_dependencies/"
+                    class="gdoc-nav__entry"
+                  >
+                    Third party dependencies
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
     
       
 
@@ -6510,50 +6546,6 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
                     class="gdoc-nav__entry"
                   >
                     Writing Files
-                  </a>
-                </span>
-              
-              
-            </label>
-
-            
-          </li>
-        
-      
-    
-      
-
-      
-        
-      
-
-      
-        
-          
-          
-          
-          
-          
-          
-
-
-          <li>
-            <input
-              type="checkbox"
-              
-                class="hidden"
-              
-            />
-            <label
-              
-            >
-              
-                <span class="flex">
-                  <a
-                    href="/useful_info/3rdparty_dependencies/"
-                    class="gdoc-nav__entry"
-                  >
-                    Third party dependencies
                   </a>
                 </span>
               
