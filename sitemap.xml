@@ -70,6 +70,9 @@
     <loc>https://bakkesmodwiki.github.io/plugin_tutorial/</loc>
     <lastmod>2021-08-20T14:48:46-07:00</lastmod>
   </url><url>
+    <loc>https://bakkesmodwiki.github.io/plugin_tutorial/getting_started/</loc>
+    <lastmod>2024-09-14T22:51:03-04:00</lastmod>
+  </url><url>
     <loc>https://bakkesmodwiki.github.io/imgui/color_picker/</loc>
     <lastmod>2022-04-25T23:40:20-07:00</lastmod>
   </url><url>
@@ -82,11 +85,11 @@
     <loc>https://bakkesmodwiki.github.io/imgui/overlays/</loc>
     <lastmod>2022-05-02T12:49:02-07:00</lastmod>
   </url><url>
-    <loc>https://bakkesmodwiki.github.io/plugin_tutorial/getting_started/</loc>
-    <lastmod>2024-07-26T14:15:07-04:00</lastmod>
-  </url><url>
     <loc>https://bakkesmodwiki.github.io/functions/using_function_hooks/</loc>
     <lastmod>2022-06-29T13:48:58-07:00</lastmod>
+  </url><url>
+    <loc>https://bakkesmodwiki.github.io/plugin_tutorial/starting_a_plugin/</loc>
+    <lastmod>2024-09-14T22:51:03-04:00</lastmod>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Engine/ActorWrapper/</loc>
   </url><url>
@@ -472,9 +475,6 @@
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PerformanceStats/StartGraphSystemWrapper/</loc>
   </url><url>
-    <loc>https://bakkesmodwiki.github.io/plugin_tutorial/starting_a_plugin/</loc>
-    <lastmod>2023-02-28T21:19:07-05:00</lastmod>
-  </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/Stats/StatEventWrapper/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PerformanceStats/StatGraphSystemWrapper/</loc>
@@ -556,17 +556,17 @@
     <loc>https://bakkesmodwiki.github.io/imgui/</loc>
     <lastmod>2022-01-17T21:46:31-08:00</lastmod>
   </url><url>
+    <loc>https://bakkesmodwiki.github.io/plugin_tutorial/plugin_variables/</loc>
+    <lastmod>2024-09-14T22:51:03-04:00</lastmod>
+  </url><url>
     <loc>https://bakkesmodwiki.github.io/functions/commonly_hooked_functions/</loc>
     <lastmod>2023-08-15T18:19:32-07:00</lastmod>
   </url><url>
-    <loc>https://bakkesmodwiki.github.io/plugin_tutorial/plugin_variables/</loc>
-    <lastmod>2023-01-29T14:55:57-08:00</lastmod>
-  </url><url>
-    <loc>https://bakkesmodwiki.github.io/plugin_tutorial/3rdparty_dependencies/</loc>
-    <lastmod>2024-09-14T22:44:08-04:00</lastmod>
-  </url><url>
     <loc>https://bakkesmodwiki.github.io/useful_info/</loc>
     <lastmod>2021-08-20T14:48:46-07:00</lastmod>
+  </url><url>
+    <loc>https://bakkesmodwiki.github.io/plugin_tutorial/plugin_interface/</loc>
+    <lastmod>2024-09-14T22:51:03-04:00</lastmod>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/functions/</loc>
     <lastmod>2021-08-20T14:48:46-07:00</lastmod>
@@ -577,11 +577,11 @@
     <loc>https://bakkesmodwiki.github.io/functions/set_vehicle_input/</loc>
     <lastmod>2024-05-11T20:46:43-04:00</lastmod>
   </url><url>
-    <loc>https://bakkesmodwiki.github.io/plugin_tutorial/plugin_interface/</loc>
-    <lastmod>2024-04-06T23:09:19-07:00</lastmod>
-  </url><url>
     <loc>https://bakkesmodwiki.github.io/functions/stat_events/</loc>
     <lastmod>2022-12-10T11:25:13-08:00</lastmod>
+  </url><url>
+    <loc>https://bakkesmodwiki.github.io/plugin_tutorial/3rdparty_dependencies/</loc>
+    <lastmod>2024-09-14T22:51:03-04:00</lastmod>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/</loc>
     <lastmod>2021-08-27T03:19:32-04:00</lastmod>
