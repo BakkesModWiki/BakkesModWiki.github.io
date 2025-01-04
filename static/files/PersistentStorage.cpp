@@ -35,7 +35,7 @@ void PersistentStorage::WritePersistentStorage()
 	//LOG("PersistentStorage: Writing to file");
 	for (const auto& [cvar, cvar_cache_item] : cvar_cache_)
 	{
-		out << fmt::format("{} \"{}\" //{}\n", cvar, cvar_cache_item.value, cvar_cache_item.description);
+		out << cvar << " \"" << cvar_cache_item.value << "\" //" << cvar_cache_item.description << "\n";
 	}
 }
 
