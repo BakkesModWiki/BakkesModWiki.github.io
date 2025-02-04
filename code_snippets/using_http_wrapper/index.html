@@ -5,7 +5,7 @@
 <meta name="referrer" content="no-referrer" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="color-scheme" content="light dark" />
-<meta name="generator" content="Hugo 0.134.2">
+<meta name="generator" content="Hugo 0.143.0">
 
 
   <meta name="description" content=" HttpWrapper Sending a simple http request with a string body 1 2 3 4 5 6 7 8 9 CurlRequest req; req.url = &#34;https://httpbin.org/anything&#34;; req.body = &#34;testing with body&#34;; LOG(&#34;sending body request&#34;); HttpWrapper::SendCurlRequest(req, [this](int code, std::string result) { LOG(&#34;Body result{}&#34;, result); }); Perform an HTTP/S JSON request 1 2 3 4 5 6 7 8 9 10 11 12 13 CurlRequest req; req.url = &#34;https://httpbin.org/anything&#34;; req.body = R&#34;T({ &#34;userId&#34;: 1, &#34;id&#34;: 1, &#34;title&#34;: &#34;delectus aut autem&#34;, &#34;completed&#34;: false })T&#34;; HttpWrapper::SendCurlJsonRequest(req, [this](int code, std::string result) { LOG(&#34;Json result{}&#34;, result); }); Sending a file over HTTP/S 1 2 3 4 5 6 7 8 9 10 { CurlRequest req; req.url = &#34;https://httpbin.org/anything&#34;; req.body = &#34;testing body with file output&#34;; LOG(&#34;sending file output body request&#34;); HttpWrapper::SendCurlRequest(req, L&#34;file_output_test.txt&#34;, [this](int code, std::wstring result) { LOG(&#34;sending file output body request: returned&#34;); }); Downloading a file with download progress callbacks and reading the raw downloaded data 1 2 3 4 5 6 7 8 9 10 11 12 13 14 CurlRequest req; req.url = &#34;url&#34;; req.progress_function = [](double file_size, double downloaded, ...) { if (file_size != 0) LOG(&#34;Download progress {:.2f}%&#34;, downloaded / file_size * 100); }; HttpWrapper::SendCurlRequest(req, [this](int code, char* data, size_t size) { std::ofstream out_file {&#34;test_image_raw.jpeg&#34;, std::ios_base::binary}; if (out_file) out_file.write(data, size); }); Downloading a file to the filesystem 1 2 3 4 5 6 7 8 CurlRequest req; req.url = &#34;url&#34;; LOG(&#34;sending raw output image download request&#34;); HttpWrapper::SendCurlRequest(req, L&#34;test_image.jpeg&#34;, [this](int code, std::wstring out_path) { LOG(&#34;file image download code: {}&#34;, code); }); Sending a request with FormData 1 2 3 4 5 6 7 8 9 10 CurlRequest req; req.url = &#34;url&#34;; req.form_data.push_back(FormField{FormField::Type::kString, &#34;some data&#34;, &#34;test_field&#34;}); req.form_data.push_back(FormField{FormField::Type::kFile, &#34;test_file.txt&#34;, &#34;test_file&#34;}); LOG(&#34;sending post request with fields (both file and string)&#34;); HttpWrapper::SendCurlRequest(req, [this](int code, std::string res) { LOG(&#34;Post result: {}&#34;, res); }); " />
@@ -5086,7 +5086,6 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
         </span>
 
         
-
 
 
         <span class="gdoc-menu-header__control">
