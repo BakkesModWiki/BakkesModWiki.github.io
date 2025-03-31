@@ -61,3 +61,17 @@ gameWrapper->HookEventWithCallerPost<CarWrapper>("Function TAGame.Car_TA.OnHitBa
 {{< /highlight >}}
 
 Find functions with the [function scanner](/functions/function_scanner/)
+
+Note that hooking the same function multiple times does not work properly.
+Only the first callback will be executed. The others are silently ignored.
+
+{{< highlight cpp "linenos=table" >}}
+/* Called  */ gameWrapper->HookEvent(eventName, [this](...) { LOG("Initial HookEvent"); });
+/* Ignored */ gameWrapper->HookEvent(eventName, [this](...) { LOG("Another HookEvent"); });
+/* Called  */ gameWrapper->HookEventPost(eventName, [this](...) { LOG("Initial HookEventPost"); });
+/* Ignored */ gameWrapper->HookEventPost(eventName, [this](...) { LOG("Another HookEventPost"); });
+/* Ignored */ gameWrapper->HookEventWithCaller<ActorWrapper>(eventName, [this](...) { LOG("Initial HookEventWithCaller"); });
+/* Ignored */ gameWrapper->HookEventWithCaller<ActorWrapper>(eventName, [this](...) { LOG("Another HookEventWithCaller"); });
+/* Ignored */ gameWrapper->HookEventWithCallerPost<ActorWrapper>(eventName, [this](...) { LOG("Initial HookEventWithCallerPost"); });
+/* Ignored */ gameWrapper->HookEventWithCallerPost<ActorWrapper>(eventName, [this](...) { LOG("Another HookEventWithCallerPost"); });
+{{< /highlight >}}
