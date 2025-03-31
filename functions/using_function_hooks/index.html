@@ -42,7 +42,7 @@ There are multiple types of hooks. First are the two simpler ones. gameWrapper i
 <meta property="article:section" content="Functions" />
     <meta
       property="article:modified_time"
-      content="2022-06-29T13:48:58-07:00"
+      content="2025-03-24T00:42:41+01:00"
     />
 
 
@@ -61,7 +61,7 @@ There are multiple types of hooks. First are the two simpler ones. gameWrapper i
       "url" : "https://bakkesmodwiki.github.io/functions/using_function_hooks/",
       "headline": "Using Function Hooks",
       "description": "Function hooks are a powerful part of BakkesMod. After a function is hooked, any time it is called by Rocket League, your code is called as well. Many useful ones are documented in Commonly Hooked Functions. If you want to better understand them or hook a function that’s undocumented, hopefully this page will help.\nThere are multiple types of hooks. First are the two simpler ones. gameWrapper is a GameWrapper and will be accessible from any point in your code. 1 2 3 4 5 6 7 8 9 10 gameWrapper-\u003eHookEvent(\u0022Function TAGame.Car_TA.SetVehicleInput\u0022, [this](std::string eventName) { \/\/ Your Code here \/\/ Call another function or just do your things here }); gameWrapper-\u003eHookEventPost(\u0022Function TAGame.Car_TA.SetVehicleInput\u0022, [this](std::string eventName) { \/\/ Your Code here }); ",
-      "wordCount" : "454",
+      "wordCount" : "558",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -72,7 +72,7 @@ There are multiple types of hooks. First are the two simpler ones. gameWrapper i
       "copyrightYear" : "0001",
       "dateCreated": "0001-01-01T00:00:00.00Z",
       "datePublished": "0001-01-01T00:00:00.00Z",
-      "dateModified": "2022-06-29T13:48:58.00Z",
+      "dateModified": "2025-03-24T00:42:41.00Z",
       "publisher":{
           "@type":"Organization",
           "name": "BakkesMod Programming Wiki",
@@ -17199,6 +17199,30 @@ The hook also provides a <code>void *</code> pointer. This points at the locatio
   href="/functions/function_scanner/"
   
 >function scanner</a></p>
+<p>Note that hooking the same function multiple times does not work properly.
+Only the first callback will be executed. The others are silently ignored.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cm">/* Called  */</span> <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">HookEvent</span><span class="p">(</span><span class="n">eventName</span><span class="p">,</span> <span class="p">[</span><span class="k">this</span><span class="p">](...)</span> <span class="p">{</span> <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;Initial HookEvent&#34;</span><span class="p">);</span> <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="cm">/* Ignored */</span> <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">HookEvent</span><span class="p">(</span><span class="n">eventName</span><span class="p">,</span> <span class="p">[</span><span class="k">this</span><span class="p">](...)</span> <span class="p">{</span> <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;Another HookEvent&#34;</span><span class="p">);</span> <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="cm">/* Called  */</span> <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">HookEventPost</span><span class="p">(</span><span class="n">eventName</span><span class="p">,</span> <span class="p">[</span><span class="k">this</span><span class="p">](...)</span> <span class="p">{</span> <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;Initial HookEventPost&#34;</span><span class="p">);</span> <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="cm">/* Ignored */</span> <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">HookEventPost</span><span class="p">(</span><span class="n">eventName</span><span class="p">,</span> <span class="p">[</span><span class="k">this</span><span class="p">](...)</span> <span class="p">{</span> <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;Another HookEventPost&#34;</span><span class="p">);</span> <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="cm">/* Ignored */</span> <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">HookEventWithCaller</span><span class="o">&lt;</span><span class="n">ActorWrapper</span><span class="o">&gt;</span><span class="p">(</span><span class="n">eventName</span><span class="p">,</span> <span class="p">[</span><span class="k">this</span><span class="p">](...)</span> <span class="p">{</span> <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;Initial HookEventWithCaller&#34;</span><span class="p">);</span> <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="cm">/* Ignored */</span> <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">HookEventWithCaller</span><span class="o">&lt;</span><span class="n">ActorWrapper</span><span class="o">&gt;</span><span class="p">(</span><span class="n">eventName</span><span class="p">,</span> <span class="p">[</span><span class="k">this</span><span class="p">](...)</span> <span class="p">{</span> <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;Another HookEventWithCaller&#34;</span><span class="p">);</span> <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="cm">/* Ignored */</span> <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">HookEventWithCallerPost</span><span class="o">&lt;</span><span class="n">ActorWrapper</span><span class="o">&gt;</span><span class="p">(</span><span class="n">eventName</span><span class="p">,</span> <span class="p">[</span><span class="k">this</span><span class="p">](...)</span> <span class="p">{</span> <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;Initial HookEventWithCallerPost&#34;</span><span class="p">);</span> <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="cm">/* Ignored */</span> <span class="n">gameWrapper</span><span class="o">-&gt;</span><span class="n">HookEventWithCallerPost</span><span class="o">&lt;</span><span class="n">ActorWrapper</span><span class="o">&gt;</span><span class="p">(</span><span class="n">eventName</span><span class="p">,</span> <span class="p">[</span><span class="k">this</span><span class="p">](...)</span> <span class="p">{</span> <span class="n">LOG</span><span class="p">(</span><span class="s">&#34;Another HookEventWithCallerPost&#34;</span><span class="p">);</span> <span class="p">});</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 
     
     <hr>
