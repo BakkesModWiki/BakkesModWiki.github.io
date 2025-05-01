@@ -167,7 +167,7 @@ async function main() {
         if (process.platform === "win32") {
             child_process.execSync(`"C:\\Program Files\\doxygen\\bin\\doxygen.exe" Doxyfile_2`);
         } else {
-            child_process.execSync(`./doxygen-1.9.2/bin/doxygen Doxyfile_2`);
+            child_process.execSync(`./doxygen-1.13.2/bin/doxygen Doxyfile_2`);
         }
     }
 
