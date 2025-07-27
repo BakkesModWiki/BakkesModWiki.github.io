@@ -5,7 +5,7 @@
 <meta name="referrer" content="no-referrer" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="color-scheme" content="light dark" />
-<meta name="generator" content="Hugo 0.147.1">
+<meta name="generator" content="Hugo 0.148.2">
 
 
   <meta name="description" content=" Creating an ImageWrapper You should use some kind of reference type that manages the memory. std::shared_ptr&lt;ImageWrapper&gt; is my recommendation. The ImageWrapper is a resource managing class. This means that you have to keep this object &ldquo;alive&rdquo; as long as you want to use the image. When the object goes out of scope \ gets destructed it cleans up the resource it manages. Stick to std::shared_ptr and you almost can&rsquo;t mess up. See all ImageWrapper functions here Add the declaration to your .h 1 std::shared_ptr&lt;ImageWrapper&gt; myImage; Using an ImageWrapper Use the constructor with the second or third argument true (or both). This can cause stuttering based on the size of the image. This is best done in your plugin&rsquo;s onLoad. You only need to load the image once, and onLoad is expected to be a bit stuttery already 1 2 // ImageWrapper(std::string path, bool canvasLoad = false, bool ImGuiLoad = false); myImage = std::make_shared&lt;ImageWrapper&gt;(gameWrapper-&gt;GetDataFolder() / &#34;MyPluginFolder&#34; / &#34;MyImage.png&#34;, true, true); " />
@@ -6226,6 +6226,42 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
                     class="gdoc-nav__entry"
                   >
                     Crash Dumps
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/useful_info/github_actions_build/"
+                    class="gdoc-nav__entry"
+                  >
+                    GitHub Action Build
                   </a>
                 </span>
               
@@ -13682,6 +13718,150 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
               
                 <span class="flex">
                   <a
+                    href="/bakkesmod_api/Classes/Wrappers/HUDTABaseWrapper/"
+                    class="gdoc-nav__entry"
+                  >
+                    HUDTABaseWrapper
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/bakkesmod_api/Classes/Wrappers/HUDTAWrapper/"
+                    class="gdoc-nav__entry"
+                  >
+                    HUDTAWrapper
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/bakkesmod_api/Classes/Wrappers/HudWrapper/"
+                    class="gdoc-nav__entry"
+                  >
+                    HudWrapper
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/bakkesmod_api/Classes/Wrappers/HUDXWrapper/"
+                    class="gdoc-nav__entry"
+                  >
+                    HUDXWrapper
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
                     href="/bakkesmod_api/Classes/Wrappers/ImageWrapper/"
                     class="gdoc-nav__entry"
                   >
@@ -13934,10 +14114,82 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
               
                 <span class="flex">
                   <a
+                    href="/bakkesmod_api/Classes/Wrappers/ReplayViewerDataWrapper/"
+                    class="gdoc-nav__entry"
+                  >
+                    ReplayViewerDataWrapper
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
                     href="/bakkesmod_api/Classes/Wrappers/SettingsWrapper/"
                     class="gdoc-nav__entry"
                   >
                     SettingsWrapper
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/bakkesmod_api/Classes/Wrappers/SpectatorHUDWrapper/"
+                    class="gdoc-nav__entry"
+                  >
+                    SpectatorHUDWrapper
                   </a>
                 </span>
               
@@ -16152,6 +16404,42 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
                     class="gdoc-nav__entry"
                   >
                     LinearColor
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
+        
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/bakkesmod_api/Structs/Wrappers/LocalizedCameraMode/"
+                    class="gdoc-nav__entry"
+                  >
+                    LocalizedCameraMode
                   </a>
                 </span>
               

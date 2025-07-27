@@ -281,6 +281,14 @@
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Http/HttpWrapper/</loc>
   </url><url>
+    <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/HUDTABaseWrapper/</loc>
+  </url><url>
+    <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/HUDTAWrapper/</loc>
+  </url><url>
+    <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/HudWrapper/</loc>
+  </url><url>
+    <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/HUDXWrapper/</loc>
+  </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/ImageWrapper/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/PerformanceStats/InputBufferGraphWrapper/</loc>
@@ -302,6 +310,8 @@
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Utilities/LoadoutUtilities/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/LoadoutWrapper/</loc>
+  </url><url>
+    <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/LocalizedCameraMode/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/MapDataWrapper/</loc>
   </url><url>
@@ -433,6 +443,8 @@
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/ReplaySoccarWrapper/</loc>
   </url><url>
+    <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/ReplayViewerDataWrapper/</loc>
+  </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameEvent/ReplayWrapper/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/Rotator/</loc>
@@ -470,6 +482,8 @@
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Structs/Wrappers/Items/Attributes/SpecialEdition/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/Items/Dbs/SpecialEditionDatabaseWrapper/</loc>
+  </url><url>
+    <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/SpectatorHUDWrapper/</loc>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/bakkesmod_api/Classes/Wrappers/GameObject/RumbleComponent/SpringPickup/</loc>
   </url><url>
@@ -599,6 +613,9 @@
   </url><url>
     <loc>https://bakkesmodwiki.github.io/code_snippets/creating_image_wrapper/</loc>
     <lastmod>2022-10-22T21:16:43-07:00</lastmod>
+  </url><url>
+    <loc>https://bakkesmodwiki.github.io/useful_info/github_actions_build/</loc>
+    <lastmod>2025-07-27T15:31:29+02:00</lastmod>
   </url><url>
     <loc>https://bakkesmodwiki.github.io/code_snippets/how_cvars_work/</loc>
     <lastmod>2022-12-28T18:38:37-05:00</lastmod>
