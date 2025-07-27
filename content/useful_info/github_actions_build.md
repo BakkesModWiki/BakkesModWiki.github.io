@@ -106,7 +106,7 @@ jobs:
       run: |
         # Create zip file with timestamp
         $timestamp = Get-Date -Format "yyyyMMdd-HHmmss"
-        $zipName = "WindowDemo-$timestamp.zip"
+        $zipName = "${{ github.event.repository.name }}-$timestamp.zip"
         
         if (Test-Path "artifacts") {
           Compress-Archive -Path "artifacts\*" -DestinationPath $zipName
@@ -119,7 +119,7 @@ jobs:
     - name: Upload build artifacts
       uses: actions/upload-artifact@v4
       with:
-        name: WindowDemo-Plugin
+        name: ${{ github.event.repository.name }}
         path: ${{ env.RELEASE_ZIP }}
         retention-days: 30
 ```
