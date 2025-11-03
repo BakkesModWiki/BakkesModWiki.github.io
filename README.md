@@ -1,5 +1,9 @@
-# BakkesModWiki-Hugo
-This is the development repo for the BakkesMod Programming Wiki!
+# This repo has been archived
+With a new update to bakkesplugins.com, the wiki has gone through an overhaul. If you want to contribute, please do so through the edit buttons on the website!
+
+[wiki.bakkesplugins.com](https://wiki.bakkesplugins.com)
+
+# Legacy instructions
 
 ## Developer installation
 1. Clone the repo
